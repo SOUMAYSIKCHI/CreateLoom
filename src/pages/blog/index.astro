@@ -1,13 +1,1097 @@
 ---
-import Layout from '../../layouts/Layout.astro'; import blogs from '../../data/blogs.json';
-const cats=[...new Set(blogs.map(b=>b.category))].sort();
+import Layout from '../../layouts/Layout.astro';
+import blogs from '../../data/blogs.json';
+
+const cats = [...new Set(blogs.map((b) => b.category))].sort();
+
+const featured = blogs.slice(0, 3);
+
+const categoryDescriptions = {
+  AI:
+    'Practical guides for writing better AI image prompts, creating consistent visuals and getting stronger generations.',
+
+  Instagram:
+    'Instagram content ideas, Reel strategies and practical tips for creators who want to improve their content.',
+
+  'Creator Growth':
+    'Practical creator-growth advice covering reach, content strategy, audience building and brand opportunities.',
+
+  Brands:
+    'Guides for creators who want to understand brand collaborations, sponsorships and professional outreach.'
+};
+
+const getCategoryDescription = (category) =>
+  categoryDescriptions[category] ||
+  `Explore ${category.toLowerCase()} guides and resources from CreateLoom.`;
 ---
-<Layout title="CreateLoom Blog — AI & Instagram Creator Guides" description="AI, Instagram, creator growth and brand collaboration guides from CreateLoom." active="Blog">
-<section class="hero hero-compact"><div class="container"><div class="eyebrow">Guides & ideas</div><h1>CreateLoom <span class="gradient-text">Blog</span></h1><p>AI, Instagram and creator resources to help you create better content and grow.</p><form class="search" id="blogSearchForm"><input id="blogSearch" name="q" placeholder="Search articles..." autocomplete="off"/><button>Search</button></form></div></section>
-<section class="section"><div class="container"><div class="toolbar"><div class="filters" id="blogFilters"><button type="button" class="small-btn active-filter" data-cat="All">All</button>{cats.map(c=><button type="button" class="small-btn" data-cat={c}>{c}</button>)}</div><span class="results-note" id="blogCount"></span></div><div class="grid" id="blogGrid">{blogs.map(b=><a class="card blog-card" data-title={b.title} data-cat={b.category} data-tags={b.tags.join(' ')} data-content={b.content.join(' ')} href={`/blog/${b.id}/`}><span class="eyebrow">{b.category}</span><h3>{b.title}</h3><p>{b.excerpt}</p><div class="muted" style="margin-top:14px;font-size:13px">{b.readTime} · {b.date}</div></a>)}</div><div class="empty-state" id="blogEmpty">No articles found. Try another search or category.</div></div></section>
+
+<Layout
+  title="CreateLoom Blog — AI, Instagram & Creator Guides"
+  description="Explore detailed AI image, Instagram, creator growth and brand collaboration guides from CreateLoom. Practical advice, examples and workflows for creators."
+  active="Blog"
+>
+
+  <!-- Hero -->
+  <section class="hero hero-compact blog-hero">
+
+    <div class="container">
+
+      <div class="eyebrow">
+        CreateLoom Resources
+      </div>
+
+      <h1>
+        CreateLoom
+        <span class="gradient-text">Blog</span>
+      </h1>
+
+      <p class="hero-description">
+        Practical guides for AI image creation, Instagram content,
+        creator growth and brand collaborations.
+      </p>
+
+      <form
+        class="search"
+        id="blogSearchForm"
+      >
+        <input
+          id="blogSearch"
+          name="q"
+          placeholder="Search AI, Instagram, prompts, brands..."
+          autocomplete="off"
+          aria-label="Search CreateLoom articles"
+        />
+
+        <button type="submit">
+          Search
+        </button>
+      </form>
+
+      <div class="hero-stats">
+
+        <div>
+          <strong>{blogs.length}+</strong>
+          <span>Guides</span>
+        </div>
+
+        <div>
+          <strong>{cats.length}</strong>
+          <span>Topics</span>
+        </div>
+
+        <div>
+          <strong>Free</strong>
+          <span>To Read</span>
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- Featured -->
+  <section class="section">
+
+    <div class="container">
+
+      <div class="section-heading">
+
+        <div>
+          <div class="eyebrow">
+            Start here
+          </div>
+
+          <h2>
+            Featured Creator Guides
+          </h2>
+
+          <p>
+            Practical articles to help you create better content.
+          </p>
+        </div>
+
+        <a
+          href="#all-articles"
+          class="text-link"
+        >
+          Browse all →
+        </a>
+
+      </div>
+
+
+      <div class="featured-grid">
+
+        {featured.map((blog, index) => (
+
+          <a
+            class:list={[
+              'featured-card',
+              index === 0 && 'featured-main'
+            ]}
+            href={`/blog/${blog.id}/`}
+          >
+
+            <div class="featured-top">
+
+              <span class="eyebrow">
+                {blog.category}
+              </span>
+
+              <span class="featured-number">
+                0{index + 1}
+              </span>
+
+            </div>
+
+            <h3>
+              {blog.title}
+            </h3>
+
+            <p>
+              {blog.excerpt}
+            </p>
+
+            <div class="featured-meta">
+              {blog.readTime} · {blog.date}
+            </div>
+
+            <strong>
+              Read guide →
+            </strong>
+
+          </a>
+
+        ))}
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- Topics -->
+  <section class="section topics-section">
+
+    <div class="container">
+
+      <div class="section-heading">
+
+        <div>
+          <div class="eyebrow">
+            Explore by topic
+          </div>
+
+          <h2>
+            Creator Resources
+          </h2>
+
+          <p>
+            Find articles based on what you're trying to learn.
+          </p>
+        </div>
+
+      </div>
+
+
+      <div class="topic-grid">
+
+        {cats.map((category) => (
+
+          <button
+            type="button"
+            class="topic-card"
+            data-topic={category}
+          >
+
+            <span class="topic-name">
+              {category}
+            </span>
+
+            <span class="topic-count">
+              {blogs.filter((b) => b.category === category).length}
+              {blogs.filter((b) => b.category === category).length === 1
+                ? ' article'
+                : ' articles'}
+            </span>
+
+            <p>
+              {getCategoryDescription(category)}
+            </p>
+
+            <span class="topic-link">
+              View articles →
+            </span>
+
+          </button>
+
+        ))}
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- All Articles -->
+  <section
+    class="section"
+    id="all-articles"
+  >
+
+    <div class="container">
+
+      <div class="section-heading">
+
+        <div>
+          <div class="eyebrow">
+            Full library
+          </div>
+
+          <h2>
+            All Creator Guides
+          </h2>
+
+          <p>
+            Search the complete CreateLoom article library.
+          </p>
+        </div>
+
+        <span
+          class="results-note"
+          id="blogCount"
+          aria-live="polite"
+        >
+          {blogs.length} articles
+        </span>
+
+      </div>
+
+
+      <!-- Filters -->
+      <div class="toolbar">
+
+        <div
+          class="filters"
+          id="blogFilters"
+          aria-label="Blog categories"
+        >
+
+          <button
+            type="button"
+            class="small-btn active-filter"
+            data-cat="All"
+          >
+            All
+          </button>
+
+          {cats.map((category) => (
+
+            <button
+              type="button"
+              class="small-btn"
+              data-cat={category}
+            >
+              {category}
+            </button>
+
+          ))}
+
+        </div>
+
+      </div>
+
+
+      <!-- Article Grid -->
+      <div
+        class="grid blog-grid"
+        id="blogGrid"
+      >
+
+        {blogs.map((blog) => (
+
+          <a
+            class="card blog-card"
+            data-title={blog.title}
+            data-cat={blog.category}
+            data-tags={blog.tags.join(' ')}
+            data-content={blog.content.join(' ')}
+            href={`/blog/${blog.id}/`}
+          >
+
+            <div class="blog-card-top">
+
+              <span class="eyebrow">
+                {blog.category}
+              </span>
+
+              <span class="blog-arrow">
+                ↗
+              </span>
+
+            </div>
+
+            <h3>
+              {blog.title}
+            </h3>
+
+            <p>
+              {blog.excerpt}
+            </p>
+
+            <div class="blog-card-bottom">
+
+              <span>
+                {blog.readTime}
+              </span>
+
+              <span>
+                {blog.date}
+              </span>
+
+            </div>
+
+          </a>
+
+        ))}
+
+      </div>
+
+
+      <!-- Empty -->
+      <div
+        class="empty-state"
+        id="blogEmpty"
+        hidden
+      >
+
+        <div class="empty-icon">
+          ⌕
+        </div>
+
+        <h3>
+          No articles found
+        </h3>
+
+        <p>
+          Try another keyword or choose a different topic.
+        </p>
+
+        <button
+          type="button"
+          class="small-btn"
+          id="clearBlogSearch"
+        >
+          Clear Search
+        </button>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- Why CreateLoom -->
+  <section class="section editorial-section">
+
+    <div class="container narrow">
+
+      <div class="eyebrow">
+        What you'll find here
+      </div>
+
+      <h2>
+        Practical ideas for modern creators
+      </h2>
+
+      <p>
+        The CreateLoom blog focuses on practical problems creators
+        encounter while making AI-assisted visual content and growing
+        on social platforms. The goal is not simply to give you another
+        list of generic tips, but to provide usable workflows,
+        examples and ideas that you can adapt to your own content.
+      </p>
+
+      <p>
+        Our AI-focused guides cover prompt structure, visual direction,
+        reference-image workflows and ways to make generated images
+        more consistent. Instagram-focused articles explore content
+        ideas, Reel strategy and ways to think about audience growth.
+      </p>
+
+      <p>
+        We also cover the business side of being a creator, including
+        brand collaborations, sponsorship opportunities and practical
+        steps for presenting your work professionally.
+      </p>
+
+      <p>
+        If you're looking for ready-to-use prompts rather than articles,
+        you can also explore the
+        <a href="/prompts/">CreateLoom AI Prompt Library</a>.
+      </p>
+
+    </div>
+
+  </section>
+
+
+  <!-- CTA -->
+  <section class="section">
+
+    <div class="container">
+
+      <div class="blog-cta">
+
+        <div class="eyebrow">
+          Need a prompt?
+        </div>
+
+        <h2>
+          Turn an idea into an image.
+        </h2>
+
+        <p>
+          Browse detailed AI image prompts for couples, selfies,
+          portraits, fashion, vintage photography and more.
+        </p>
+
+        <a
+          href="/prompts/"
+          class="primary"
+        >
+          Explore AI Prompts →
+        </a>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <script is:inline>
+
+    const input = document.querySelector('#blogSearch');
+    const form = document.querySelector('#blogSearchForm');
+    const cards = [...document.querySelectorAll('.blog-card')];
+    const buttons = [...document.querySelectorAll('[data-cat]')];
+    const topicButtons = [...document.querySelectorAll('[data-topic]')];
+
+    const count = document.querySelector('#blogCount');
+    const empty = document.querySelector('#blogEmpty');
+    const clearButton = document.querySelector('#clearBlogSearch');
+
+    const params = new URLSearchParams(location.search);
+
+    let cat = params.get('category') || 'All';
+
+    if (
+      cat !== 'All' &&
+      !buttons.some((button) => button.dataset.cat === cat)
+    ) {
+      cat = 'All';
+    }
+
+    input.value = params.get('q') || '';
+
+
+    function updateUrl() {
+
+      const url = new URL(location.href);
+
+      url.search = '';
+
+      const query = input.value.trim();
+
+      if (query) {
+        url.searchParams.set('q', query);
+      }
+
+      if (cat !== 'All') {
+        url.searchParams.set('category', cat);
+      }
+
+      history.replaceState({}, '', url);
+
+    }
+
+
+    function filterArticles() {
+
+      const query = input.value
+        .trim()
+        .toLowerCase();
+
+      let visible = 0;
+
+
+      cards.forEach((card) => {
+
+        const searchableText = (
+          card.dataset.title +
+          ' ' +
+          card.dataset.cat +
+          ' ' +
+          card.dataset.tags +
+          ' ' +
+          card.dataset.content
+        ).toLowerCase();
+
+
+        const matchesCategory =
+          cat === 'All' ||
+          card.dataset.cat === cat;
+
+
+        const matchesSearch =
+          !query ||
+          searchableText.includes(query);
+
+
+        const show =
+          matchesCategory &&
+          matchesSearch;
+
+
+        card.hidden = !show;
+
+        if (show) {
+          visible++;
+        }
+
+      });
+
+
+      buttons.forEach((button) => {
+
+        button.classList.toggle(
+          'active-filter',
+          button.dataset.cat === cat
+        );
+
+      });
+
+
+      count.textContent =
+        `${visible} article${visible === 1 ? '' : 's'}`;
+
+      empty.hidden = visible !== 0;
+
+    }
+
+
+    form.addEventListener(
+      'submit',
+      (event) => {
+
+        event.preventDefault();
+
+        updateUrl();
+        filterArticles();
+
+        document
+          .querySelector('#all-articles')
+          ?.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+          });
+
+      }
+    );
+
+
+    input.addEventListener(
+      'input',
+      () => {
+
+        updateUrl();
+        filterArticles();
+
+      }
+    );
+
+
+    buttons.forEach((button) => {
+
+      button.addEventListener(
+        'click',
+        () => {
+
+          cat = button.dataset.cat;
+
+          updateUrl();
+          filterArticles();
+
+          document
+            .querySelector('#all-articles')
+            ?.scrollIntoView({
+              behavior: 'smooth',
+              block: 'start'
+            });
+
+        }
+      );
+
+    });
+
+
+    topicButtons.forEach((button) => {
+
+      button.addEventListener(
+        'click',
+        () => {
+
+          cat = button.dataset.topic;
+
+          input.value = '';
+
+          updateUrl();
+          filterArticles();
+
+          document
+            .querySelector('#all-articles')
+            ?.scrollIntoView({
+              behavior: 'smooth',
+              block: 'start'
+            });
+
+        }
+      );
+
+    });
+
+
+    clearButton?.addEventListener(
+      'click',
+      () => {
+
+        input.value = '';
+        cat = 'All';
+
+        updateUrl();
+        filterArticles();
+
+      }
+    );
+
+
+    filterArticles();
+
+  </script>
+
 </Layout>
-<script is:inline>
-const input=document.querySelector('#blogSearch'),form=document.querySelector('#blogSearchForm'),cards=[...document.querySelectorAll('.blog-card')],buttons=[...document.querySelectorAll('[data-cat]')],count=document.querySelector('#blogCount');const params=new URLSearchParams(location.search);let cat=params.get('category')||'All';input.value=params.get('q')||'';
-function filter(){const q=input.value.trim().toLowerCase();let n=0;cards.forEach(c=>{const text=(c.dataset.title+' '+c.dataset.cat+' '+c.dataset.tags+' '+c.dataset.content).toLowerCase();const ok=(cat==='All'||c.dataset.cat===cat)&&(!q||text.includes(q));c.hidden=!ok;if(ok)n++});buttons.forEach(b=>b.classList.toggle('active-filter',b.dataset.cat===cat));count.textContent=`${n} article${n===1?'':'s'}`;document.querySelector('#blogEmpty').style.display=n?'none':'block'}
-form.addEventListener('submit',e=>{e.preventDefault();history.replaceState({},'',`/blog/${input.value.trim()?`?q=${encodeURIComponent(input.value.trim())}`:''}${cat!=='All'?(input.value.trim()?'&':'?')+`category=${encodeURIComponent(cat)}`:''}`);filter()});input.addEventListener('input',filter);buttons.forEach(b=>b.addEventListener('click',()=>{cat=b.dataset.cat;const q=input.value.trim();const qs=[];if(q)qs.push(`q=${encodeURIComponent(q)}`);if(cat!=='All')qs.push(`category=${encodeURIComponent(cat)}`);history.replaceState({},'',`/blog/${qs.length?'?'+qs.join('&'):''}`);filter()}));filter();
-</script>
+
+
+<style>
+
+  .blog-hero {
+    padding-bottom: 55px;
+  }
+
+
+  .hero-description {
+    max-width: 720px;
+    margin: 0 auto;
+    color: var(--muted, #a1a1aa);
+    line-height: 1.8;
+  }
+
+
+  .hero-stats {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 40px;
+    margin-top: 30px;
+  }
+
+
+  .hero-stats div {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    text-align: center;
+  }
+
+
+  .hero-stats strong {
+    color: #fff;
+    font-size: 1.15rem;
+  }
+
+
+  .hero-stats span {
+    color: var(--muted, #a1a1aa);
+    font-size: 0.75rem;
+  }
+
+
+  .section-heading {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 20px;
+    margin-bottom: 25px;
+  }
+
+
+  .section-heading h2 {
+    margin: 7px 0 5px;
+  }
+
+
+  .section-heading p {
+    margin: 0;
+    color: var(--muted, #a1a1aa);
+    line-height: 1.6;
+  }
+
+
+  .text-link {
+    color: #c4b5fd;
+    text-decoration: none;
+    font-weight: 700;
+    white-space: nowrap;
+  }
+
+
+  .featured-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 15px;
+  }
+
+
+  .featured-card {
+    display: flex;
+    flex-direction: column;
+    min-height: 285px;
+    padding: 24px;
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 18px;
+    background:
+      linear-gradient(
+        145deg,
+        rgba(139,92,246,0.09),
+        rgba(255,255,255,0.025)
+      );
+    color: inherit;
+    text-decoration: none;
+    transition:
+      transform 0.2s ease,
+      border-color 0.2s ease;
+  }
+
+
+  .featured-card:hover {
+    transform: translateY(-4px);
+    border-color: rgba(139,92,246,0.4);
+  }
+
+
+  .featured-main {
+    background:
+      linear-gradient(
+        145deg,
+        rgba(139,92,246,0.16),
+        rgba(255,255,255,0.025)
+      );
+  }
+
+
+  .featured-top,
+  .blog-card-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+  }
+
+
+  .featured-number {
+    color: rgba(255,255,255,0.25);
+    font-size: 1.2rem;
+    font-weight: 900;
+  }
+
+
+  .featured-card h3 {
+    margin: 22px 0 10px;
+    color: #fff;
+    font-size: 1.25rem;
+    line-height: 1.35;
+  }
+
+
+  .featured-card p {
+    margin: 0;
+    color: var(--muted, #a1a1aa);
+    line-height: 1.7;
+    font-size: 0.88rem;
+  }
+
+
+  .featured-meta {
+    margin-top: auto;
+    padding-top: 20px;
+    margin-bottom: 12px;
+    color: rgba(255,255,255,0.45);
+    font-size: 0.75rem;
+  }
+
+
+  .featured-card > strong {
+    color: #c4b5fd;
+    font-size: 0.82rem;
+  }
+
+
+  .topics-section {
+    background: rgba(255,255,255,0.015);
+  }
+
+
+  .topic-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 12px;
+  }
+
+
+  .topic-card {
+    width: 100%;
+    padding: 20px;
+    border: 1px solid rgba(255,255,255,0.07);
+    border-radius: 16px;
+    background: rgba(255,255,255,0.02);
+    color: inherit;
+    text-align: left;
+    cursor: pointer;
+    transition:
+      transform 0.2s ease,
+      border-color 0.2s ease,
+      background 0.2s ease;
+  }
+
+
+  .topic-card:hover {
+    transform: translateY(-2px);
+    border-color: rgba(139,92,246,0.35);
+    background: rgba(139,92,246,0.05);
+  }
+
+
+  .topic-name {
+    display: block;
+    color: #fff;
+    font-weight: 800;
+  }
+
+
+  .topic-count {
+    display: block;
+    margin-top: 3px;
+    color: #a78bfa;
+    font-size: 0.72rem;
+  }
+
+
+  .topic-card p {
+    margin: 12px 0;
+    color: var(--muted, #a1a1aa);
+    font-size: 0.78rem;
+    line-height: 1.6;
+  }
+
+
+  .topic-link {
+    color: #c4b5fd;
+    font-size: 0.78rem;
+    font-weight: 700;
+  }
+
+
+  .toolbar {
+    margin-bottom: 24px;
+  }
+
+
+  .filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+
+  .active-filter {
+    border-color: rgba(139,92,246,0.5) !important;
+    background: rgba(139,92,246,0.13) !important;
+    color: #c4b5fd !important;
+  }
+
+
+  .results-note {
+    color: var(--muted, #a1a1aa);
+    font-size: 0.82rem;
+  }
+
+
+  .blog-card {
+    display: flex;
+    flex-direction: column;
+    min-height: 245px;
+    text-decoration: none;
+  }
+
+
+  .blog-card h3 {
+    margin: 14px 0 10px;
+    line-height: 1.4;
+  }
+
+
+  .blog-card p {
+    color: var(--muted, #a1a1aa);
+    line-height: 1.7;
+  }
+
+
+  .blog-arrow {
+    color: #a78bfa;
+    font-size: 1rem;
+  }
+
+
+  .blog-card-bottom {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    margin-top: auto;
+    padding-top: 18px;
+    color: rgba(255,255,255,0.45);
+    font-size: 0.75rem;
+  }
+
+
+  .empty-state {
+    padding: 65px 20px;
+    text-align: center;
+  }
+
+
+  .empty-icon {
+    color: #a78bfa;
+    font-size: 2rem;
+  }
+
+
+  .empty-state h3 {
+    margin: 10px 0 5px;
+  }
+
+
+  .empty-state p {
+    margin-bottom: 18px;
+    color: var(--muted, #a1a1aa);
+  }
+
+
+  .narrow {
+    max-width: 850px;
+  }
+
+
+  .editorial-section {
+    background: rgba(255,255,255,0.015);
+  }
+
+
+  .editorial-section h2 {
+    margin: 8px 0 20px;
+  }
+
+
+  .editorial-section p {
+    color: #c7c7cf;
+    line-height: 1.85;
+  }
+
+
+  .editorial-section a {
+    color: #c4b5fd;
+    font-weight: 700;
+  }
+
+
+  .blog-cta {
+    padding: 45px 25px;
+    text-align: center;
+    border: 1px solid rgba(139,92,246,0.2);
+    border-radius: 22px;
+    background:
+      linear-gradient(
+        145deg,
+        rgba(139,92,246,0.12),
+        rgba(255,255,255,0.025)
+      );
+  }
+
+
+  .blog-cta h2 {
+    margin: 8px 0 10px;
+  }
+
+
+  .blog-cta p {
+    max-width: 620px;
+    margin: 0 auto;
+    color: var(--muted, #a1a1aa);
+    line-height: 1.7;
+  }
+
+
+  .blog-cta .primary {
+    display: inline-flex;
+    margin-top: 20px;
+    text-decoration: none;
+  }
+
+
+  @media (max-width: 900px) {
+
+    .featured-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .topic-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+  }
+
+
+  @media (max-width: 600px) {
+
+    .hero-stats {
+      gap: 25px;
+    }
+
+    .section-heading {
+      align-items: flex-start;
+      flex-direction: column;
+    }
+
+    .featured-grid,
+    .topic-grid {
+      grid-template-columns: 1fr;
+    }
+
+  }
+
+</style>
