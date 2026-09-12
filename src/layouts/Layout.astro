@@ -1,61 +1,414 @@
 ---
 import '../styles/global.css';
-const { title='CreateLoom', description='AI prompts and creator resources for your next idea.', active='' } = Astro.props;
-const nav=[['Home','/'],['Prompts','/prompts/'],['Creator Hub','/creator-hub/'],['Blog','/blog/'],['Brands','/brands/']];
-const canonical = new URL(Astro.url.pathname, Astro.site || 'https://createloom.vercel.app');
+
+const {
+  title = 'CreateLoom — AI Prompts & Creator Resources',
+  description = 'Discover AI image prompts, Instagram creator resources, Reel ideas, growth guides and more with CreateLoom.',
+  active = ''
+} = Astro.props;
+
+const nav = [
+  ['Home', '/'],
+  ['Prompts', '/prompts/'],
+  ['Creator Hub', '/creator-hub/'],
+  ['Blog', '/blog/'],
+  ['Brands', '/brands/']
+];
+
+const canonical = new URL(
+  Astro.url.pathname,
+  Astro.site || 'https://createloom.vercel.app'
+);
+
+const siteName = 'CreateLoom';
+const siteUrl = 'https://createloom.vercel.app';
 ---
+
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1"
+  />
+
   <title>{title}</title>
-  <meta name="description" content={description} />
+
+  <meta
+    name="description"
+    content={description}
+  />
+
+  <meta name="robots" content="index, follow" />
+
   <meta name="theme-color" content="#08070d" />
+
   <link rel="canonical" href={canonical} />
+
+  <!-- Open Graph -->
   <meta property="og:type" content="website" />
-  <meta property="og:site_name" content="CreateLoom" />
+  <meta property="og:site_name" content={siteName} />
   <meta property="og:title" content={title} />
   <meta property="og:description" content={description} />
   <meta property="og:url" content={canonical} />
+
+  <!-- Twitter / X -->
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content={title} />
+  <meta name="twitter:description" content={description} />
+
+  <!-- Search engines -->
+  <meta
+    name="googlebot"
+    content="index, follow, max-image-preview:large"
+  />
+
+  <!-- Sitemap -->
+  <link
+    rel="sitemap"
+    type="application/xml"
+    href="/sitemap.xml"
+  />
 </head>
+
 <body>
+
 <header class="site-header">
   <div class="container nav">
-    <a class="brand" href="/" aria-label="CreateLoom home">
-      <span class="logo" aria-hidden="true"><svg viewBox="0 0 32 32" fill="none"><path d="M23.5 8.5a10.5 10.5 0 1 0 0 15" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/><path d="M8.5 11h15M8.5 21h15" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></svg></span>
+
+    <a
+      class="brand"
+      href="/"
+      aria-label="CreateLoom home"
+    >
+      <span
+        class="logo"
+        aria-hidden="true"
+      >
+        <svg
+          viewBox="0 0 32 32"
+          fill="none"
+        >
+          <path
+            d="M23.5 8.5a10.5 10.5 0 1 0 0 15"
+            stroke="currentColor"
+            stroke-width="2.4"
+            stroke-linecap="round"
+          />
+          <path
+            d="M8.5 11h15M8.5 21h15"
+            stroke="currentColor"
+            stroke-width="2.4"
+            stroke-linecap="round"
+          />
+        </svg>
+      </span>
+
       <span>CreateLoom</span>
     </a>
-    <nav class="nav-links" aria-label="Main navigation">{nav.map(([label,url])=><a class:list={{active:active===label}} href={url}>{label}</a>)}</nav>
-    <form class="header-search" action="/search/" role="search"><span>⌕</span><input name="q" placeholder="Search" aria-label="Search CreateLoom" /></form>
-    <button class="mobile-menu" type="button" aria-label="Open navigation" aria-expanded="false">☰</button>
+
+    <nav
+      class="nav-links"
+      aria-label="Main navigation"
+    >
+      {
+        nav.map(([label, url]) => (
+          <a
+            class:list={{ active: active === label }}
+            href={url}
+          >
+            {label}
+          </a>
+        ))
+      }
+    </nav>
+
+    <form
+      class="header-search"
+      action="/search/"
+      role="search"
+    >
+      <span aria-hidden="true">⌕</span>
+
+      <input
+        name="q"
+        placeholder="Search"
+        aria-label="Search CreateLoom"
+      />
+    </form>
+
+    <button
+      class="mobile-menu"
+      type="button"
+      aria-label="Open navigation"
+      aria-expanded="false"
+    >
+      ☰
+    </button>
+
   </div>
-  <div class="mobile-nav" hidden><div class="container">{nav.map(([label,url])=><a class:list={{active:active===label}} href={url}>{label}</a>)}<a href="/search/">Search everything</a></div></div>
+
+  <div
+    class="mobile-nav"
+    hidden
+  >
+    <div class="container">
+
+      {
+        nav.map(([label, url]) => (
+          <a
+            class:list={{ active: active === label }}
+            href={url}
+          >
+            {label}
+          </a>
+        ))
+      }
+
+      <a href="/search/">
+        Search everything
+      </a>
+
+    </div>
+  </div>
 </header>
-<main><slot /></main>
+
+<main>
+  <slot />
+</main>
+
 <footer class="footer">
+
   <div class="container footer-grid">
-    <div class="footer-brand"><a class="brand" href="/"><span class="logo"><svg viewBox="0 0 32 32" fill="none"><path d="M23.5 8.5a10.5 10.5 0 1 0 0 15" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/><path d="M8.5 11h15M8.5 21h15" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></svg></span><span>CreateLoom</span></a><p>AI prompts and creator resources for your next idea.</p></div>
-    <div><h4>Prompts</h4><a href="/prompts/">All Prompts</a><a href="/prompts/#categories">Categories</a><a href="/prompts/#latest">Latest</a></div>
-    <div><h4>Creator Hub</h4><a href="/creator-hub/">Reels & Growth</a><a href="/creator-hub/#brand-deals">Brand Deals</a><a href="/brands/">Work With Us</a></div>
-    <div><h4>Company</h4><a href="/about/">About</a><a href="/contact/">Contact</a><a href="/privacy/">Privacy</a><a href="/terms/">Terms</a></div>
+
+    <div class="footer-brand">
+
+      <a
+        class="brand"
+        href="/"
+      >
+        <span class="logo">
+
+          <svg
+            viewBox="0 0 32 32"
+            fill="none"
+          >
+            <path
+              d="M23.5 8.5a10.5 10.5 0 1 0 0 15"
+              stroke="currentColor"
+              stroke-width="2.4"
+              stroke-linecap="round"
+            />
+
+            <path
+              d="M8.5 11h15M8.5 21h15"
+              stroke="currentColor"
+              stroke-width="2.4"
+              stroke-linecap="round"
+            />
+          </svg>
+
+        </span>
+
+        <span>CreateLoom</span>
+      </a>
+
+      <p>
+        AI prompts and creator resources for your next idea.
+      </p>
+
+    </div>
+
+    <div>
+      <h4>Prompts</h4>
+      <a href="/prompts/">All Prompts</a>
+      <a href="/prompts/#categories">Categories</a>
+      <a href="/prompts/#latest">Latest</a>
+    </div>
+
+    <div>
+      <h4>Creator Hub</h4>
+      <a href="/creator-hub/">Reels & Growth</a>
+      <a href="/creator-hub/#brand-deals">Brand Deals</a>
+      <a href="/brands/">Work With Us</a>
+    </div>
+
+    <div>
+      <h4>Company</h4>
+      <a href="/about/">About</a>
+      <a href="/contact/">Contact</a>
+      <a href="/privacy/">Privacy</a>
+      <a href="/terms/">Terms</a>
+    </div>
+
   </div>
-  <div class="container footer-bottom"><span>© 2026 CreateLoom. All rights reserved.</span><span>Built for creators.</span></div>
+
+  <div class="container footer-bottom">
+    <span>
+      © 2026 CreateLoom. All rights reserved.
+    </span>
+
+    <span>
+      Built for creators.
+    </span>
+  </div>
+
 </footer>
+
 <script is:inline>
-  const menu=document.querySelector('.mobile-menu'); const mobileNav=document.querySelector('.mobile-nav');
-  menu?.addEventListener('click',()=>{const open=menu.getAttribute('aria-expanded')==='true';menu.setAttribute('aria-expanded',String(!open));mobileNav.hidden=open;document.body.classList.toggle('menu-open',!open)});
-  const favKey='createloom:favorites';
-  const readFavs=()=>{try{return JSON.parse(localStorage.getItem(favKey)||'[]')}catch{return[]}};
-  const syncFavs=()=>{const favs=readFavs();document.querySelectorAll('.fav-btn').forEach(b=>{const saved=favs.includes(b.dataset.fav);b.textContent=saved?'♥':'♡';b.setAttribute('aria-pressed',String(saved));b.classList.toggle('saved',saved)})};
-  const flash=(el,text,delay=1400)=>{const old=el.textContent;el.textContent=text;setTimeout(()=>el.textContent=old,delay)};
-  document.addEventListener('click',async e=>{
-    const copy=e.target.closest('.copy-btn');
-    if(copy){try{await navigator.clipboard.writeText(copy.dataset.copy||'');flash(copy,'✓ Copied')}catch{flash(copy,'Copy failed')}}
-    const share=e.target.closest('.share-btn');
-    if(share){const url=new URL(share.dataset.url||location.href,location.origin).href;try{if(navigator.share){await navigator.share({title:document.title,url})}else{await navigator.clipboard.writeText(url);flash(share,'✓ Link Copied')}}catch{}}
-    const fav=e.target.closest('.fav-btn');
-    if(fav){const favs=readFavs();const id=fav.dataset.fav;const i=favs.indexOf(id);if(i>=0)favs.splice(i,1);else favs.push(id);localStorage.setItem(favKey,JSON.stringify(favs));syncFavs()}
+  const menu = document.querySelector('.mobile-menu');
+  const mobileNav = document.querySelector('.mobile-nav');
+
+  menu?.addEventListener('click', () => {
+    const open =
+      menu.getAttribute('aria-expanded') === 'true';
+
+    menu.setAttribute(
+      'aria-expanded',
+      String(!open)
+    );
+
+    mobileNav.hidden = open;
+
+    document.body.classList.toggle(
+      'menu-open',
+      !open
+    );
   });
+
+  const favKey = 'createloom:favorites';
+
+  const readFavs = () => {
+    try {
+      return JSON.parse(
+        localStorage.getItem(favKey) || '[]'
+      );
+    } catch {
+      return [];
+    }
+  };
+
+  const syncFavs = () => {
+    const favs = readFavs();
+
+    document
+      .querySelectorAll('.fav-btn')
+      .forEach(button => {
+
+        const saved =
+          favs.includes(button.dataset.fav);
+
+        button.textContent =
+          saved ? '♥' : '♡';
+
+        button.setAttribute(
+          'aria-pressed',
+          String(saved)
+        );
+
+        button.classList.toggle(
+          'saved',
+          saved
+        );
+      });
+  };
+
+  const flash = (
+    element,
+    text,
+    delay = 1400
+  ) => {
+    const old = element.textContent;
+
+    element.textContent = text;
+
+    setTimeout(
+      () => element.textContent = old,
+      delay
+    );
+  };
+
+  document.addEventListener(
+    'click',
+    async event => {
+
+      const copy =
+        event.target.closest('.copy-btn');
+
+      if (copy) {
+        try {
+          await navigator.clipboard.writeText(
+            copy.dataset.copy || ''
+          );
+
+          flash(copy, '✓ Copied');
+        } catch {
+          flash(copy, 'Copy failed');
+        }
+      }
+
+      const share =
+        event.target.closest('.share-btn');
+
+      if (share) {
+
+        const url = new URL(
+          share.dataset.url || location.href,
+          location.origin
+        ).href;
+
+        try {
+
+          if (navigator.share) {
+
+            await navigator.share({
+              title: document.title,
+              url
+            });
+
+          } else {
+
+            await navigator.clipboard.writeText(url);
+
+            flash(
+              share,
+              '✓ Link Copied'
+            );
+
+          }
+
+        } catch {}
+      }
+
+      const fav =
+        event.target.closest('.fav-btn');
+
+      if (fav) {
+
+        const favs = readFavs();
+        const id = fav.dataset.fav;
+        const index = favs.indexOf(id);
+
+        if (index >= 0) {
+          favs.splice(index, 1);
+        } else {
+          favs.push(id);
+        }
+
+        localStorage.setItem(
+          favKey,
+          JSON.stringify(favs)
+        );
+
+        syncFavs();
+      }
+
+    }
+  );
+
   syncFavs();
 </script>
-</body></html>
+
+</body>
+</html>
