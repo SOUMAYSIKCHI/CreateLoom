@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://createloom.vercel.app/sitemap.xml
