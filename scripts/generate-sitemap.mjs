@@ -4,15 +4,94 @@ import { fileURLToPath } from 'node:url';
 
 const root = path.dirname(fileURLToPath(import.meta.url));
 const project = path.resolve(root, '..');
-const prompts = JSON.parse(fs.readFileSync(path.join(project, 'src/data/prompts.json'), 'utf8'));
-const blogs = JSON.parse(fs.readFileSync(path.join(project, 'src/data/blogs.json'), 'utf8'));
-const site = (process.env.SITE_URL || 'https://createloom.vercel.app').replace(/\/$/, '');
-const urls = [
-  '/', '/prompts/', '/blog/', '/creator-hub/', '/brands/', '/about/', '/contact/', '/privacy/', '/terms/',
-  ...prompts.map(p => `/prompt/${p.id}/`),
-  ...blogs.map(b => `/blog/${b.id}/`),
-  ...[...new Set(prompts.map(p => p.category))].map(c => `/prompts/${encodeURIComponent(c.toLowerCase())}/`)
+
+const prompts = JSON.parse(
+  fs.readFileSync(
+    path.join(project, 'src/data/prompts.json'),
+    'utf8'
+  )
+);
+
+const blogs = JSON.parse(
+  fs.readFileSync(
+    path.join(project, 'src/data/blogs.json'),
+    'utf8'
+  )
+);
+
+const site = (
+  process.env.SITE_URL || 'https://createloom.vercel.app'
+).replace(/\/$/, '');
+
+const staticUrls = [
+  '/',
+  '/prompts/',
+  '/blog/',
+  '/creator-hub/',
+  '/brands/',
+  '/about/',
+  '/contact/',
+  '/privacy/',
+  '/terms/',
 ];
-const xml = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${urls.map(u => `  <url><loc>${site}${u}</loc></url>`).join('\n')}\n</urlset>\n`;
-fs.mkdirSync(path.join(project, 'public'), { recursive: true });
-fs.writeFileSync(path.join(project, 'public/sitemap.xml'), xml);
+
+const promptUrls = prompts.map(
+  (p) => `/prompt/${encodeURIComponent(p.id)}/`
+);
+
+const blogUrls = blogs.map(
+  (b) => `/blog/${encodeURIComponent(b.id)}/`
+);
+
+const categoryUrls = [
+  ...new Set(
+    prompts
+      .map((p) => p.category)
+      .filter(Boolean)
+  ),
+].map(
+  (category) =>
+    `/prompts/${encodeURIComponent(category.toLowerCase())}/`
+);
+
+const urls = [
+  ...staticUrls,
+  ...promptUrls,
+  ...blogUrls,
+  ...categoryUrls,
+];
+
+const uniqueUrls = [...new Set(urls)];
+
+const escapeXml = (value) =>
+  String(value)
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&apos;');
+
+const xml = `<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+${uniqueUrls
+  .map(
+    (url) =>
+      `  <url><loc>${escapeXml(`${site}${url}`)}</loc></url>`
+  )
+  .join('\n')}
+</urlset>
+`;
+
+const publicDir = path.join(project, 'public');
+
+fs.mkdirSync(publicDir, { recursive: true });
+
+fs.writeFileSync(
+  path.join(publicDir, 'sitemap.xml'),
+  xml,
+  'utf8'
+);
+
+console.log(
+  `Generated sitemap.xml with ${uniqueUrls.length} URLs.`
+);
