@@ -1,42 +1,682 @@
 [
-  {"id":"couple-mirror-selfie","title":"Couple Mirror Selfie Prompt","category":"Couple","tags":["couple","selfie","mirror"],"prompt":"Create an ultra-realistic mirror selfie of a couple standing together, preserving their natural facial identity, facial structure, proportions, expressions, skin tones and hairstyles. Use realistic smartphone photography, natural lighting, authentic details and believable anatomy."},
-  {"id":"cinematic-couple","title":"Cinematic Couple Prompt","category":"Couple","tags":["couple","cinematic","romantic"],"prompt":"Create an ultra-realistic cinematic photograph of a couple in a beautiful atmospheric setting, with natural expressions, realistic skin texture, authentic proportions, soft cinematic lighting, subtle depth of field and a premium photographic look."},
-  {"id":"80s-vintage-couple","title":"80s Vintage Couple Prompt","category":"Vintage","tags":["80s","vintage","couple"],"prompt":"Create an authentic 1980s-inspired photograph of a couple with period-appropriate clothing, hairstyles and styling, direct flash photography, realistic skin texture, subtle film grain and nostalgic analog color characteristics."},
-  {"id":"romantic-sunset-couple","title":"Romantic Sunset Couple Prompt","category":"Couple","tags":["couple","sunset","romantic"],"prompt":"Create a photorealistic romantic sunset portrait of a couple standing close together, warm golden-hour backlight, natural expressions, realistic skin texture, soft atmospheric depth and authentic photography."},
-  {"id":"couple-rain-photo","title":"Cinematic Couple in Rain Prompt","category":"Cinematic","tags":["couple","rain","cinematic"],"prompt":"Create a cinematic photorealistic photograph of a couple walking together in gentle rain at night, realistic wet surfaces, subtle reflections, natural body language, soft practical lights and detailed realistic skin and clothing."},
-  {"id":"wedding-couple-portrait","title":"Wedding Couple Portrait Prompt","category":"Wedding","tags":["wedding","couple","portrait"],"prompt":"Create an elegant photorealistic wedding portrait of a couple, preserving their identities and natural facial proportions, with refined formal clothing, soft venue lighting, realistic skin texture, authentic expressions and professional editorial photography."},
-  {"id":"couple-beach-sunset","title":"Couple Beach Sunset Prompt","category":"Travel","tags":["couple","beach","sunset"],"prompt":"Create a natural photorealistic beach photograph of a couple during golden hour, gentle ocean waves, warm sunlight, relaxed body language, realistic skin and clothing texture, natural expressions and premium travel photography."},
-  {"id":"couple-cafe-date","title":"Cozy Couple Cafe Prompt","category":"Aesthetic","tags":["couple","cafe","cozy"],"prompt":"Create a photorealistic cozy cafe date scene with a couple sitting together, warm window light, natural candid expressions, realistic hands and anatomy, detailed cafe surroundings and an understated lifestyle photography aesthetic."},
-  {"id":"best-friends-selfie","title":"Best Friends Selfie Prompt","category":"Friends","tags":["friends","selfie","portrait"],"prompt":"Create a natural photorealistic smartphone selfie of two best friends laughing together, preserving both identities, facial proportions and skin tones, with realistic lighting, casual styling, authentic expressions and believable camera perspective."},
-  {"id":"group-friends-photo","title":"Friends Group Photo Prompt","category":"Friends","tags":["friends","group","photo"],"prompt":"Create a realistic group photograph of close friends together, with natural poses, varied expressions, accurate anatomy, authentic clothing, realistic lighting and a candid editorial photography feel."},
-  {"id":"aesthetic-mirror-selfie","title":"Aesthetic Mirror Selfie Prompt","category":"Selfie","tags":["selfie","mirror","aesthetic"],"prompt":"Create an ultra-realistic aesthetic mirror selfie using the reference person without changing facial structure or identity, with natural proportions, realistic smartphone perspective, tasteful styling, soft ambient lighting and detailed surroundings."},
-  {"id":"streetwear-fashion-portrait","title":"Streetwear Fashion Portrait Prompt","category":"Fashion","tags":["fashion","streetwear","portrait"],"prompt":"Create a high-end photorealistic streetwear fashion portrait of the reference person, preserving identity and facial structure, with contemporary styling, realistic fabric texture, urban surroundings, natural pose and editorial lighting."},
-  {"id":"luxury-fashion-editorial","title":"Luxury Fashion Editorial Prompt","category":"Fashion","tags":["fashion","luxury","editorial"],"prompt":"Create a sophisticated high-fashion editorial portrait of the reference person while preserving identity, facial structure and natural proportions, with premium wardrobe styling, controlled studio lighting, realistic fabric details and magazine-quality photography."},
-  {"id":"studio-portrait","title":"Professional Studio Portrait Prompt","category":"Portrait","tags":["portrait","studio","professional"],"prompt":"Create a clean professional studio portrait of the reference person, preserving their exact identity, facial structure, skin tone and natural proportions, with soft key lighting, realistic skin texture, subtle background separation and authentic photographic detail."},
-  {"id":"dramatic-black-white-portrait","title":"Black and White Portrait Prompt","category":"Portrait","tags":["portrait","blackwhite","dramatic"],"prompt":"Create a dramatic black-and-white photographic portrait of the reference person, preserving identity and facial structure, with directional studio light, natural skin texture, rich tonal contrast, realistic detail and timeless editorial composition."},
-  {"id":"passport-style-portrait","title":"Clean ID Photo Prompt","category":"Portrait","tags":["portrait","idphoto","clean"],"prompt":"Create a clean, realistic identification-style portrait of the reference person, preserving facial identity, proportions, skin tone and natural appearance, with even neutral lighting, a simple background and straightforward camera perspective."},
-  {"id":"anime-portrait","title":"Anime Portrait Prompt","category":"Anime","tags":["anime","portrait","illustration"],"prompt":"Transform the reference person into a polished anime-inspired portrait while preserving recognizable facial structure, hairstyle, expression and overall identity, with clean linework, expressive eyes, refined shading and a cohesive illustrated finish."},
-  {"id":"chibi-character","title":"Cute Chibi Character Prompt","category":"Anime","tags":["chibi","cute","character"],"prompt":"Create a cute chibi illustration based on the reference person, preserving recognizable hairstyle, clothing cues and expression, with charming proportions, clean outlines, soft shading and a polished sticker-like finish."},
-  {"id":"retro-film-selfie","title":"Retro Film Selfie Prompt","category":"Vintage","tags":["retro","film","selfie"],"prompt":"Create a realistic retro film selfie of the reference person, preserving facial identity and natural proportions, with compact-camera flash, subtle grain, imperfect analog texture, slightly muted colors and authentic early-digital photography character."},
-  {"id":"2000s-digital-photo","title":"2000s Digital Camera Photo Prompt","category":"Vintage","tags":["2000s","digital","retro"],"prompt":"Create an authentic early-2000s digital camera photograph of the reference person, preserving identity and facial structure, with direct flash, realistic low-light noise, compact-camera framing, casual styling and nostalgic digital color."},
-  {"id":"old-money-portrait","title":"Old Money Aesthetic Portrait Prompt","category":"Aesthetic","tags":["oldmoney","portrait","luxury"],"prompt":"Create a refined photorealistic old-money aesthetic portrait of the reference person, preserving identity and natural facial proportions, with understated elegant clothing, classic architecture, soft natural light and sophisticated editorial composition."},
-  {"id":"quiet-luxury-selfie","title":"Quiet Luxury Selfie Prompt","category":"Aesthetic","tags":["quietluxury","selfie","fashion"],"prompt":"Create a premium photorealistic selfie of the reference person with a quiet-luxury aesthetic, preserving exact facial identity, natural proportions and skin tone, with understated clothing, elegant surroundings and soft realistic lighting."},
-  {"id":"night-city-portrait","title":"Night City Portrait Prompt","category":"Cinematic","tags":["night","city","portrait"],"prompt":"Create a cinematic night-city portrait of the reference person, preserving facial identity and structure, with realistic street lights, subtle reflections, natural skin texture, believable depth of field and premium urban photography."},
-  {"id":"neon-cinematic-portrait","title":"Neon Cinematic Portrait Prompt","category":"Cinematic","tags":["neon","cinematic","portrait"],"prompt":"Create a photorealistic cinematic portrait of the reference person under tasteful neon city lighting, preserving identity and facial structure, with realistic skin texture, controlled highlights, natural expression and professional color depth."},
-  {"id":"rainy-window-portrait","title":"Rainy Window Portrait Prompt","category":"Cinematic","tags":["rain","window","portrait"],"prompt":"Create an intimate photorealistic portrait of the reference person beside a rain-covered window, preserving facial identity and proportions, with soft natural light, realistic reflections, detailed skin texture and a cinematic atmosphere."},
-  {"id":"travel-airport-photo","title":"Airport Travel Photo Prompt","category":"Travel","tags":["travel","airport","lifestyle"],"prompt":"Create a realistic candid travel photograph of the reference person in a modern airport, preserving identity, facial structure and natural proportions, with authentic luggage, casual travel clothing, realistic ambient lighting and documentary photography."},
-  {"id":"paris-street-portrait","title":"Paris Street Portrait Prompt","category":"Travel","tags":["paris","travel","street"],"prompt":"Create a photorealistic street portrait of the reference person in Paris, preserving exact identity and natural facial proportions, with realistic architecture, authentic street details, soft daylight and an elegant travel-photography composition."},
-  {"id":"festive-portrait","title":"Festive Traditional Portrait Prompt","category":"Festival","tags":["festival","traditional","portrait"],"prompt":"Create a vibrant photorealistic festive portrait of the reference person, preserving facial identity and natural proportions, with tasteful traditional clothing, realistic decorative lighting, authentic details and a celebratory atmosphere."},
-  {"id":"diwali-portrait","title":"Diwali Portrait Prompt","category":"Festival","tags":["diwali","festival","portrait"],"prompt":"Create an elegant photorealistic Diwali portrait of the reference person, preserving identity and facial structure, with refined traditional styling, warm diya lights, realistic skin texture, subtle festive decoration and natural expression."},
-  {"id":"birthday-portrait","title":"Birthday Celebration Portrait Prompt","category":"Celebration","tags":["birthday","portrait","celebration"],"prompt":"Create a joyful photorealistic birthday portrait of the reference person, preserving their identity and facial proportions, with tasteful decorations, natural expression, realistic cake details, warm lighting and candid celebration energy."},
-  {"id":"couple-birthday-photo","title":"Couple Birthday Celebration Prompt","category":"Celebration","tags":["birthday","couple","celebration"],"prompt":"Create a warm photorealistic birthday celebration photograph of a couple, preserving both identities and natural proportions, with a realistic cake, subtle decorations, candid expressions, soft ambient lighting and authentic details."},
-  {"id":"rainy-street-selfie","title":"Rainy Street Selfie Prompt","category":"Selfie","tags":["rain","selfie","street"],"prompt":"Create a realistic smartphone selfie of the reference person on a rainy city street, preserving facial identity, structure and skin tone, with believable wet surfaces, natural expression, soft street lighting and authentic camera perspective."},
-  {"id":"car-selfie","title":"Luxury Car Selfie Prompt","category":"Selfie","tags":["selfie","car","luxury"],"prompt":"Create an ultra-realistic interior car selfie of the reference person, preserving exact facial identity and natural proportions, with believable reflections, premium interior details, realistic smartphone perspective and natural daylight."},
-  {"id":"college-friends-photo","title":"College Friends Photo Prompt","category":"Friends","tags":["college","friends","lifestyle"],"prompt":"Create a natural photorealistic photograph of college friends together, preserving each reference identity, with casual outfits, authentic body language, realistic campus surroundings, candid expressions and documentary-style lighting."},
-  {"id":"couple-traditional-outfit","title":"Traditional Couple Portrait Prompt","category":"Wedding","tags":["couple","traditional","portrait"],"prompt":"Create an elegant photorealistic portrait of a couple wearing tasteful traditional outfits, preserving both identities, facial structures and proportions, with realistic fabric details, warm lighting and authentic expressions."},
-  {"id":"polaroid-couple","title":"Polaroid Couple Photo Prompt","category":"Vintage","tags":["polaroid","couple","vintage"],"prompt":"Create a realistic instant-film photograph of a couple, preserving their identities and natural proportions, with soft flash, subtle film grain, slightly imperfect exposure, authentic colors and a genuine nostalgic snapshot feeling."},
-  {"id":"mirror-fashion-selfie","title":"Fashion Mirror Selfie Prompt","category":"Fashion","tags":["fashion","mirror","selfie"],"prompt":"Create a high-quality photorealistic fashion mirror selfie of the reference person, preserving exact facial identity and body proportions, with stylish clothing, realistic mirror reflections, natural indoor lighting and authentic smartphone photography."},
-  {"id":"soft-aesthetic-portrait","title":"Soft Aesthetic Portrait Prompt","category":"Aesthetic","tags":["soft","aesthetic","portrait"],"prompt":"Create a soft photorealistic portrait of the reference person, preserving facial identity, structure and natural skin tone, with diffused daylight, gentle background blur, subtle colors and an authentic editorial lifestyle mood."},
-  {"id":"dramatic-studio-fashion","title":"Dramatic Studio Fashion Prompt","category":"Fashion","tags":["fashion","studio","dramatic"],"prompt":"Create a dramatic high-end studio fashion photograph of the reference person, preserving identity and natural proportions, with sculpted lighting, realistic clothing texture, controlled shadows and premium editorial composition."},
-  {"id":"cozy-winter-portrait","title":"Cozy Winter Portrait Prompt","category":"Aesthetic","tags":["winter","cozy","portrait"],"prompt":"Create a cozy photorealistic winter portrait of the reference person, preserving exact identity and facial structure, with warm knit clothing, natural cold-weather surroundings, soft overcast light and realistic texture."}
+  {
+    "id": "couple-mirror-selfie",
+    "title": "Couple Mirror Selfie Prompt",
+    "category": "Couple",
+    "tags": [
+      "couple",
+      "selfie",
+      "mirror"
+    ],
+    "prompt": "Two people standing naturally in front of a full-length bedroom or hotel mirror, one holding a modern smartphone at chest-to-face height while the other leans slightly closer; believable mirror geometry, realistic reflections, subtle room clutter, casual coordinated outfits, natural posture and genuine relaxed expressions. If one or more reference photos are provided, preserve each person's recognizable identity: facial structure, eyes, nose, lips, jawline, skin tone, hairstyle and natural proportions. Do not merge faces, beautify facial features, change age, or replace distinctive features. Keep every person anatomically consistent from head to hands. Use a realistic full-frame or modern smartphone photographic look, with a believable focal length, natural perspective, controlled depth of field and accurate scale between people and the environment. Photorealistic where the concept is photographic; for illustrated concepts, keep the illustration style coherent. Use realistic lighting direction, physically plausible shadows, natural skin and fabric texture, believable hands and fingers, correct anatomy, realistic hair strands and subtle lens behavior. Avoid plastic skin, over-smoothed faces, warped hands, duplicate fingers, extra limbs, floating objects, distorted jewelry, fake text, excessive HDR, oversharpening, extreme bokeh or an obviously AI-generated look. Do not add watermarks, logos or random text unless the scene specifically requires it. Compose the image with a clear visual hierarchy, natural subject placement and enough environmental detail to establish the setting without distracting from the subject. Aim for a polished final result that feels intentionally photographed or illustrated rather than generically generated.",
+    "best_for": "Couple photos, relationship posts and romantic AI image generation.",
+    "prompt_tips": [
+      "Use a clear reference image when identity consistency matters.",
+      "Describe any clothing, location or prop you want to change before generating.",
+      "If your generator supports image references, keep the reference strength high enough to preserve recognizable features."
+    ]
+  },
+  {
+    "id": "cinematic-couple",
+    "title": "Cinematic Couple Prompt",
+    "category": "Couple",
+    "tags": [
+      "couple",
+      "cinematic",
+      "romantic"
+    ],
+    "prompt": "A couple sharing a quiet moment in an atmospheric evening location, framed like a still from a contemporary romantic film; layered foreground and background depth, practical lights in the environment, restrained color grading, natural interaction rather than a posed fashion shoot. If one or more reference photos are provided, preserve each person's recognizable identity: facial structure, eyes, nose, lips, jawline, skin tone, hairstyle and natural proportions. Do not merge faces, beautify facial features, change age, or replace distinctive features. Keep every person anatomically consistent from head to hands. Use a realistic full-frame or modern smartphone photographic look, with a believable focal length, natural perspective, controlled depth of field and accurate scale between people and the environment. Photorealistic where the concept is photographic; for illustrated concepts, keep the illustration style coherent. Use realistic lighting direction, physically plausible shadows, natural skin and fabric texture, believable hands and fingers, correct anatomy, realistic hair strands and subtle lens behavior. Avoid plastic skin, over-smoothed faces, warped hands, duplicate fingers, extra limbs, floating objects, distorted jewelry, fake text, excessive HDR, oversharpening, extreme bokeh or an obviously AI-generated look. Do not add watermarks, logos or random text unless the scene specifically requires it. Compose the image with a clear visual hierarchy, natural subject placement and enough environmental detail to establish the setting without distracting from the subject. Aim for a polished final result that feels intentionally photographed or illustrated rather than generically generated.",
+    "best_for": "Couple photos, relationship posts and romantic AI image generation.",
+    "prompt_tips": [
+      "Use a clear reference image when identity consistency matters.",
+      "Describe any clothing, location or prop you want to change before generating.",
+      "If your generator supports image references, keep the reference strength high enough to preserve recognizable features."
+    ]
+  },
+  {
+    "id": "80s-vintage-couple",
+    "title": "80s Vintage Couple Prompt",
+    "category": "Vintage",
+    "tags": [
+      "80s",
+      "vintage",
+      "couple"
+    ],
+    "prompt": "A couple photographed as if captured on consumer film in the 1980s, with period-appropriate silhouettes, denim, knitwear or patterned shirts, era-appropriate hair and accessories, direct on-camera flash, slight lens softness and authentic analog imperfections. If a reference photo is provided, preserve the person's recognizable identity exactly: facial structure, eyes, nose, lips, jawline, skin tone, hairstyle and natural proportions. Do not reshape, beautify, age, de-age or replace distinctive facial features. Keep the person consistent from face to hands and avoid identity drift. Use period-appropriate optical character and exposure behavior rather than a modern image with a generic vintage filter. Photorealistic where the concept is photographic; for illustrated concepts, keep the illustration style coherent. Use realistic lighting direction, physically plausible shadows, natural skin and fabric texture, believable hands and fingers, correct anatomy, realistic hair strands and subtle lens behavior. Avoid plastic skin, over-smoothed faces, warped hands, duplicate fingers, extra limbs, floating objects, distorted jewelry, fake text, excessive HDR, oversharpening, extreme bokeh or an obviously AI-generated look. Do not add watermarks, logos or random text unless the scene specifically requires it. Compose the image with a clear visual hierarchy, natural subject placement and enough environmental detail to establish the setting without distracting from the subject. Aim for a polished final result that feels intentionally photographed or illustrated rather than generically generated.",
+    "best_for": "Retro edits, nostalgic social posts and period-inspired portraits.",
+    "prompt_tips": [
+      "Use a clear reference image when identity consistency matters.",
+      "Describe any clothing, location or prop you want to change before generating.",
+      "If your generator supports image references, keep the reference strength high enough to preserve recognizable features."
+    ]
+  },
+  {
+    "id": "romantic-sunset-couple",
+    "title": "Romantic Sunset Couple Prompt",
+    "category": "Couple",
+    "tags": [
+      "couple",
+      "sunset",
+      "romantic"
+    ],
+    "prompt": "A couple standing close during golden hour near an open landscape, with the sun low behind them, warm rim light around hair and shoulders, gentle breeze moving clothing, natural eye contact and an intimate but believable pose. If one or more reference photos are provided, preserve each person's recognizable identity: facial structure, eyes, nose, lips, jawline, skin tone, hairstyle and natural proportions. Do not merge faces, beautify facial features, change age, or replace distinctive features. Keep every person anatomically consistent from head to hands. Use a realistic full-frame or modern smartphone photographic look, with a believable focal length, natural perspective, controlled depth of field and accurate scale between people and the environment. Photorealistic where the concept is photographic; for illustrated concepts, keep the illustration style coherent. Use realistic lighting direction, physically plausible shadows, natural skin and fabric texture, believable hands and fingers, correct anatomy, realistic hair strands and subtle lens behavior. Avoid plastic skin, over-smoothed faces, warped hands, duplicate fingers, extra limbs, floating objects, distorted jewelry, fake text, excessive HDR, oversharpening, extreme bokeh or an obviously AI-generated look. Do not add watermarks, logos or random text unless the scene specifically requires it. Compose the image with a clear visual hierarchy, natural subject placement and enough environmental detail to establish the setting without distracting from the subject. Aim for a polished final result that feels intentionally photographed or illustrated rather than generically generated.",
+    "best_for": "Couple photos, relationship posts and romantic AI image generation.",
+    "prompt_tips": [
+      "Use a clear reference image when identity consistency matters.",
+      "Describe any clothing, location or prop you want to change before generating.",
+      "If your generator supports image references, keep the reference strength high enough to preserve recognizable features."
+    ]
+  },
+  {
+    "id": "couple-rain-photo",
+    "title": "Cinematic Couple in Rain Prompt",
+    "category": "Cinematic",
+    "tags": [
+      "couple",
+      "rain",
+      "cinematic"
+    ],
+    "prompt": "A couple walking together on a rain-soaked city street after dark, sharing an umbrella or walking shoulder-to-shoulder, puddles reflecting storefront and street lights, droplets visible on hair and fabric, wet pavement and subdued practical lighting. If a reference photo is provided, preserve the person's recognizable identity exactly: facial structure, eyes, nose, lips, jawline, skin tone, hairstyle and natural proportions. Do not reshape, beautify, age, de-age or replace distinctive facial features. Keep the person consistent from face to hands and avoid identity drift. Use a cinematic full-frame look with realistic depth of field, controlled highlights, subtle contrast and layered environmental depth. Photorealistic where the concept is photographic; for illustrated concepts, keep the illustration style coherent. Use realistic lighting direction, physically plausible shadows, natural skin and fabric texture, believable hands and fingers, correct anatomy, realistic hair strands and subtle lens behavior. Avoid plastic skin, over-smoothed faces, warped hands, duplicate fingers, extra limbs, floating objects, distorted jewelry, fake text, excessive HDR, oversharpening, extreme bokeh or an obviously AI-generated look. Do not add watermarks, logos or random text unless the scene specifically requires it. Compose the image with a clear visual hierarchy, natural subject placement and enough environmental detail to establish the setting without distracting from the subject. Aim for a polished final result that feels intentionally photographed or illustrated rather than generically generated.",
+    "best_for": "Moody portraits, storytelling visuals and film-inspired social content.",
+    "prompt_tips": [
+      "Use a clear reference image when identity consistency matters.",
+      "Describe any clothing, location or prop you want to change before generating.",
+      "If your generator supports image references, keep the reference strength high enough to preserve recognizable features."
+    ]
+  },
+  {
+    "id": "wedding-couple-portrait",
+    "title": "Wedding Couple Portrait Prompt",
+    "category": "Wedding",
+    "tags": [
+      "wedding",
+      "couple",
+      "portrait"
+    ],
+    "prompt": "A newlywed couple in an elegant wedding venue with refined formal clothing, subtle floral details, realistic fabric folds and a softly illuminated architectural background; pose them close together with relaxed expressions rather than exaggerated smiles. If one or more reference photos are provided, preserve each person's recognizable identity: facial structure, eyes, nose, lips, jawline, skin tone, hairstyle and natural proportions. Do not merge faces, beautify facial features, change age, or replace distinctive features. Keep every person anatomically consistent from head to hands. Use polished professional portrait photography with realistic depth, refined exposure and accurate clothing texture. Photorealistic where the concept is photographic; for illustrated concepts, keep the illustration style coherent. Use realistic lighting direction, physically plausible shadows, natural skin and fabric texture, believable hands and fingers, correct anatomy, realistic hair strands and subtle lens behavior. Avoid plastic skin, over-smoothed faces, warped hands, duplicate fingers, extra limbs, floating objects, distorted jewelry, fake text, excessive HDR, oversharpening, extreme bokeh or an obviously AI-generated look. Do not add watermarks, logos or random text unless the scene specifically requires it. Compose the image with a clear visual hierarchy, natural subject placement and enough environmental detail to establish the setting without distracting from the subject. Aim for a polished final result that feels intentionally photographed or illustrated rather than generically generated.",
+    "best_for": "Wedding portraits, traditional couple photos and formal celebrations.",
+    "prompt_tips": [
+      "Use a clear reference image when identity consistency matters.",
+      "Describe any clothing, location or prop you want to change before generating.",
+      "If your generator supports image references, keep the reference strength high enough to preserve recognizable features."
+    ]
+  },
+  {
+    "id": "couple-beach-sunset",
+    "title": "Couple Beach Sunset Prompt",
+    "category": "Travel",
+    "tags": [
+      "couple",
+      "beach",
+      "sunset"
+    ],
+    "prompt": "A couple near the shoreline during late golden hour, barefoot or in relaxed travel clothing, small waves approaching the beach, warm side light, wind moving hair and fabric, natural candid interaction and a wide environmental composition. If a reference photo is provided, preserve the person's recognizable identity exactly: facial structure, eyes, nose, lips, jawline, skin tone, hairstyle and natural proportions. Do not reshape, beautify, age, de-age or replace distinctive facial features. Keep the person consistent from face to hands and avoid identity drift. Use a documentary travel-photography perspective with realistic environmental scale and natural depth. Photorealistic where the concept is photographic; for illustrated concepts, keep the illustration style coherent. Use realistic lighting direction, physically plausible shadows, natural skin and fabric texture, believable hands and fingers, correct anatomy, realistic hair strands and subtle lens behavior. Avoid plastic skin, over-smoothed faces, warped hands, duplicate fingers, extra limbs, floating objects, distorted jewelry, fake text, excessive HDR, oversharpening, extreme bokeh or an obviously AI-generated look. Do not add watermarks, logos or random text unless the scene specifically requires it. Compose the image with a clear visual hierarchy, natural subject placement and enough environmental detail to establish the setting without distracting from the subject. Aim for a polished final result that feels intentionally photographed or illustrated rather than generically generated.",
+    "best_for": "Travel posts, destination portraits and lifestyle photography.",
+    "prompt_tips": [
+      "Use a clear reference image when identity consistency matters.",
+      "Describe any clothing, location or prop you want to change before generating.",
+      "If your generator supports image references, keep the reference strength high enough to preserve recognizable features."
+    ]
+  },
+  {
+    "id": "couple-cafe-date",
+    "title": "Cozy Couple Cafe Prompt",
+    "category": "Aesthetic",
+    "tags": [
+      "couple",
+      "cafe",
+      "cozy"
+    ],
+    "prompt": "A couple seated at a cozy independent cafe beside a large window, coffee cups and small table details visible, warm interior materials, soft daylight crossing the table, candid conversation and subtle smiles rather than a staged pose. If a reference photo is provided, preserve the person's recognizable identity exactly: facial structure, eyes, nose, lips, jawline, skin tone, hairstyle and natural proportions. Do not reshape, beautify, age, de-age or replace distinctive facial features. Keep the person consistent from face to hands and avoid identity drift. Use a refined lifestyle-photography look with soft depth of field, natural light falloff and restrained color grading. Photorealistic where the concept is photographic; for illustrated concepts, keep the illustration style coherent. Use realistic lighting direction, physically plausible shadows, natural skin and fabric texture, believable hands and fingers, correct anatomy, realistic hair strands and subtle lens behavior. Avoid plastic skin, over-smoothed faces, warped hands, duplicate fingers, extra limbs, floating objects, distorted jewelry, fake text, excessive HDR, oversharpening, extreme bokeh or an obviously AI-generated look. Do not add watermarks, logos or random text unless the scene specifically requires it. Compose the image with a clear visual hierarchy, natural subject placement and enough environmental detail to establish the setting without distracting from the subject. Aim for a polished final result that feels intentionally photographed or illustrated rather than generically generated.",
+    "best_for": "Lifestyle portraits, fashion posts and polished social content.",
+    "prompt_tips": [
+      "Use a clear reference image when identity consistency matters.",
+      "Describe any clothing, location or prop you want to change before generating.",
+      "If your generator supports image references, keep the reference strength high enough to preserve recognizable features."
+    ]
+  },
+  {
+    "id": "best-friends-selfie",
+    "title": "Best Friends Selfie Prompt",
+    "category": "Friends",
+    "tags": [
+      "friends",
+      "selfie",
+      "portrait"
+    ],
+    "prompt": "Two best friends taking a spontaneous smartphone selfie while laughing, heads slightly overlapping in a natural way, casual everyday outfits, realistic arm and hand positions, believable front-camera perspective and a background that feels like a real outing rather than a studio. If one or more reference photos are provided, preserve each person's recognizable identity: facial structure, eyes, nose, lips, jawline, skin tone, hairstyle and natural proportions. Do not merge faces, beautify facial features, change age, or replace distinctive features. Keep every person anatomically consistent from head to hands. Use a realistic smartphone or documentary camera perspective, with enough depth of field to keep the group readable and natural separation from the background. Photorealistic where the concept is photographic; for illustrated concepts, keep the illustration style coherent. Use realistic lighting direction, physically plausible shadows, natural skin and fabric texture, believable hands and fingers, correct anatomy, realistic hair strands and subtle lens behavior. Avoid plastic skin, over-smoothed faces, warped hands, duplicate fingers, extra limbs, floating objects, distorted jewelry, fake text, excessive HDR, oversharpening, extreme bokeh or an obviously AI-generated look. Do not add watermarks, logos or random text unless the scene specifically requires it. Compose the image with a clear visual hierarchy, natural subject placement and enough environmental detail to establish the setting without distracting from the subject. Aim for a polished final result that feels intentionally photographed or illustrated rather than generically generated.",
+    "best_for": "Friendship posts, group photos and candid social memories.",
+    "prompt_tips": [
+      "Use a clear reference image when identity consistency matters.",
+      "Describe any clothing, location or prop you want to change before generating.",
+      "If your generator supports image references, keep the reference strength high enough to preserve recognizable features."
+    ]
+  },
+  {
+    "id": "group-friends-photo",
+    "title": "Friends Group Photo Prompt",
+    "category": "Friends",
+    "tags": [
+      "friends",
+      "group",
+      "photo"
+    ],
+    "prompt": "A close group of friends gathered together for a candid photograph, with different heights, poses and expressions so the group does not look duplicated; relaxed shoulders, believable hand placement, varied casual outfits and a real-world social setting. If one or more reference photos are provided, preserve each person's recognizable identity: facial structure, eyes, nose, lips, jawline, skin tone, hairstyle and natural proportions. Do not merge faces, beautify facial features, change age, or replace distinctive features. Keep every person anatomically consistent from head to hands. Use a realistic smartphone or documentary camera perspective, with enough depth of field to keep the group readable and natural separation from the background. Photorealistic where the concept is photographic; for illustrated concepts, keep the illustration style coherent. Use realistic lighting direction, physically plausible shadows, natural skin and fabric texture, believable hands and fingers, correct anatomy, realistic hair strands and subtle lens behavior. Avoid plastic skin, over-smoothed faces, warped hands, duplicate fingers, extra limbs, floating objects, distorted jewelry, fake text, excessive HDR, oversharpening, extreme bokeh or an obviously AI-generated look. Do not add watermarks, logos or random text unless the scene specifically requires it. Compose the image with a clear visual hierarchy, natural subject placement and enough environmental detail to establish the setting without distracting from the subject. Aim for a polished final result that feels intentionally photographed or illustrated rather than generically generated.",
+    "best_for": "Friendship posts, group photos and candid social memories.",
+    "prompt_tips": [
+      "Use a clear reference image when identity consistency matters.",
+      "Describe any clothing, location or prop you want to change before generating.",
+      "If your generator supports image references, keep the reference strength high enough to preserve recognizable features."
+    ]
+  },
+  {
+    "id": "aesthetic-mirror-selfie",
+    "title": "Aesthetic Mirror Selfie Prompt",
+    "category": "Selfie",
+    "tags": [
+      "selfie",
+      "mirror",
+      "aesthetic"
+    ],
+    "prompt": "The reference person taking a tasteful full or three-quarter mirror selfie in a clean bedroom, dressing room or minimalist interior; coordinated outfit, subtle accessories, soft window light, realistic mirror edges and reflections, phone naturally positioned without hiding important facial features. If a reference photo is provided, preserve the person's recognizable identity exactly: facial structure, eyes, nose, lips, jawline, skin tone, hairstyle and natural proportions. Do not reshape, beautify, age, de-age or replace distinctive facial features. Keep the person consistent from face to hands and avoid identity drift. Use a believable front-camera or mirror-camera perspective, including realistic lens distortion and phone distance without making faces unnaturally wide. Photorealistic where the concept is photographic; for illustrated concepts, keep the illustration style coherent. Use realistic lighting direction, physically plausible shadows, natural skin and fabric texture, believable hands and fingers, correct anatomy, realistic hair strands and subtle lens behavior. Avoid plastic skin, over-smoothed faces, warped hands, duplicate fingers, extra limbs, floating objects, distorted jewelry, fake text, excessive HDR, oversharpening, extreme bokeh or an obviously AI-generated look. Do not add watermarks, logos or random text unless the scene specifically requires it. Compose the image with a clear visual hierarchy, natural subject placement and enough environmental detail to establish the setting without distracting from the subject. Aim for a polished final result that feels intentionally photographed or illustrated rather than generically generated.",
+    "best_for": "Profile photos, mirror selfies and casual social posts.",
+    "prompt_tips": [
+      "Use a clear reference image when identity consistency matters.",
+      "Describe any clothing, location or prop you want to change before generating.",
+      "If your generator supports image references, keep the reference strength high enough to preserve recognizable features."
+    ]
+  },
+  {
+    "id": "streetwear-fashion-portrait",
+    "title": "Streetwear Fashion Portrait Prompt",
+    "category": "Fashion",
+    "tags": [
+      "fashion",
+      "streetwear",
+      "portrait"
+    ],
+    "prompt": "The reference person in a contemporary urban environment with layered streetwear, textured jacket or overshirt, sneakers and understated accessories; strong architectural lines, natural stance, realistic fabric drape and a fashion-editorial framing that still feels wearable. If a reference photo is provided, preserve the person's recognizable identity exactly: facial structure, eyes, nose, lips, jawline, skin tone, hairstyle and natural proportions. Do not reshape, beautify, age, de-age or replace distinctive facial features. Keep the person consistent from face to hands and avoid identity drift. Use a professional editorial camera look with accurate garment proportions, controlled perspective and crisp but natural detail. Photorealistic where the concept is photographic; for illustrated concepts, keep the illustration style coherent. Use realistic lighting direction, physically plausible shadows, natural skin and fabric texture, believable hands and fingers, correct anatomy, realistic hair strands and subtle lens behavior. Avoid plastic skin, over-smoothed faces, warped hands, duplicate fingers, extra limbs, floating objects, distorted jewelry, fake text, excessive HDR, oversharpening, extreme bokeh or an obviously AI-generated look. Do not add watermarks, logos or random text unless the scene specifically requires it. Compose the image with a clear visual hierarchy, natural subject placement and enough environmental detail to establish the setting without distracting from the subject. Aim for a polished final result that feels intentionally photographed or illustrated rather than generically generated.",
+    "best_for": "Fashion posts, outfit showcases and editorial portraits.",
+    "prompt_tips": [
+      "Use a clear reference image when identity consistency matters.",
+      "Describe any clothing, location or prop you want to change before generating.",
+      "If your generator supports image references, keep the reference strength high enough to preserve recognizable features."
+    ]
+  },
+  {
+    "id": "luxury-fashion-editorial",
+    "title": "Luxury Fashion Editorial Prompt",
+    "category": "Fashion",
+    "tags": [
+      "fashion",
+      "luxury",
+      "editorial"
+    ],
+    "prompt": "The reference person styled for a premium fashion editorial in a sophisticated interior or minimalist architectural location, with tailored clothing, restrained accessories, elegant posture, controlled studio-quality light and carefully separated foreground, subject and background. If a reference photo is provided, preserve the person's recognizable identity exactly: facial structure, eyes, nose, lips, jawline, skin tone, hairstyle and natural proportions. Do not reshape, beautify, age, de-age or replace distinctive facial features. Keep the person consistent from face to hands and avoid identity drift. Use a professional editorial camera look with accurate garment proportions, controlled perspective and crisp but natural detail. Photorealistic where the concept is photographic; for illustrated concepts, keep the illustration style coherent. Use realistic lighting direction, physically plausible shadows, natural skin and fabric texture, believable hands and fingers, correct anatomy, realistic hair strands and subtle lens behavior. Avoid plastic skin, over-smoothed faces, warped hands, duplicate fingers, extra limbs, floating objects, distorted jewelry, fake text, excessive HDR, oversharpening, extreme bokeh or an obviously AI-generated look. Do not add watermarks, logos or random text unless the scene specifically requires it. Compose the image with a clear visual hierarchy, natural subject placement and enough environmental detail to establish the setting without distracting from the subject. Aim for a polished final result that feels intentionally photographed or illustrated rather than generically generated.",
+    "best_for": "Fashion posts, outfit showcases and editorial portraits.",
+    "prompt_tips": [
+      "Use a clear reference image when identity consistency matters.",
+      "Describe any clothing, location or prop you want to change before generating.",
+      "If your generator supports image references, keep the reference strength high enough to preserve recognizable features."
+    ]
+  },
+  {
+    "id": "studio-portrait",
+    "title": "Professional Studio Portrait Prompt",
+    "category": "Portrait",
+    "tags": [
+      "portrait",
+      "studio",
+      "professional"
+    ],
+    "prompt": "The reference person centered in a professional portrait studio against a simple neutral backdrop, photographed with a large soft key light and gentle fill, realistic catchlights, subtle shadow under the chin, natural skin texture and a clean head-and-shoulders or half-body composition. If a reference photo is provided, preserve the person's recognizable identity exactly: facial structure, eyes, nose, lips, jawline, skin tone, hairstyle and natural proportions. Do not reshape, beautify, age, de-age or replace distinctive facial features. Keep the person consistent from face to hands and avoid identity drift. Use a realistic portrait-lens perspective, accurate facial geometry, natural depth of field and professional exposure. Photorealistic where the concept is photographic; for illustrated concepts, keep the illustration style coherent. Use realistic lighting direction, physically plausible shadows, natural skin and fabric texture, believable hands and fingers, correct anatomy, realistic hair strands and subtle lens behavior. Avoid plastic skin, over-smoothed faces, warped hands, duplicate fingers, extra limbs, floating objects, distorted jewelry, fake text, excessive HDR, oversharpening, extreme bokeh or an obviously AI-generated look. Do not add watermarks, logos or random text unless the scene specifically requires it. Compose the image with a clear visual hierarchy, natural subject placement and enough environmental detail to establish the setting without distracting from the subject. Aim for a polished final result that feels intentionally photographed or illustrated rather than generically generated.",
+    "best_for": "Professional portraits, profile images and clean photography.",
+    "prompt_tips": [
+      "Use a clear reference image when identity consistency matters.",
+      "Describe any clothing, location or prop you want to change before generating.",
+      "If your generator supports image references, keep the reference strength high enough to preserve recognizable features."
+    ]
+  },
+  {
+    "id": "dramatic-black-white-portrait",
+    "title": "Black and White Portrait Prompt",
+    "category": "Portrait",
+    "tags": [
+      "portrait",
+      "blackwhite",
+      "dramatic"
+    ],
+    "prompt": "The reference person photographed in monochrome with directional side lighting, deep but recoverable shadows, bright facial highlights, strong tonal separation and a simple editorial background; preserve pores, hair texture and natural expression rather than creating plastic skin. If a reference photo is provided, preserve the person's recognizable identity exactly: facial structure, eyes, nose, lips, jawline, skin tone, hairstyle and natural proportions. Do not reshape, beautify, age, de-age or replace distinctive facial features. Keep the person consistent from face to hands and avoid identity drift. Use a realistic portrait-lens perspective, accurate facial geometry, natural depth of field and professional exposure. Photorealistic where the concept is photographic; for illustrated concepts, keep the illustration style coherent. Use realistic lighting direction, physically plausible shadows, natural skin and fabric texture, believable hands and fingers, correct anatomy, realistic hair strands and subtle lens behavior. Avoid plastic skin, over-smoothed faces, warped hands, duplicate fingers, extra limbs, floating objects, distorted jewelry, fake text, excessive HDR, oversharpening, extreme bokeh or an obviously AI-generated look. Do not add watermarks, logos or random text unless the scene specifically requires it. Compose the image with a clear visual hierarchy, natural subject placement and enough environmental detail to establish the setting without distracting from the subject. Aim for a polished final result that feels intentionally photographed or illustrated rather than generically generated.",
+    "best_for": "Professional portraits, profile images and clean photography.",
+    "prompt_tips": [
+      "Use a clear reference image when identity consistency matters.",
+      "Describe any clothing, location or prop you want to change before generating.",
+      "If your generator supports image references, keep the reference strength high enough to preserve recognizable features."
+    ]
+  },
+  {
+    "id": "passport-style-portrait",
+    "title": "Clean ID Photo Prompt",
+    "category": "Portrait",
+    "tags": [
+      "portrait",
+      "idphoto",
+      "clean"
+    ],
+    "prompt": "The reference person facing the camera in a clean neutral setting, centered head-and-shoulders framing, even front lighting, plain light background, natural expression, tidy appearance and accurate facial proportions; keep the result photographic and straightforward rather than beauty-retouched. If a reference photo is provided, preserve the person's recognizable identity exactly: facial structure, eyes, nose, lips, jawline, skin tone, hairstyle and natural proportions. Do not reshape, beautify, age, de-age or replace distinctive facial features. Keep the person consistent from face to hands and avoid identity drift. Use a realistic portrait-lens perspective, accurate facial geometry, natural depth of field and professional exposure. Photorealistic where the concept is photographic; for illustrated concepts, keep the illustration style coherent. Use realistic lighting direction, physically plausible shadows, natural skin and fabric texture, believable hands and fingers, correct anatomy, realistic hair strands and subtle lens behavior. Avoid plastic skin, over-smoothed faces, warped hands, duplicate fingers, extra limbs, floating objects, distorted jewelry, fake text, excessive HDR, oversharpening, extreme bokeh or an obviously AI-generated look. Do not add watermarks, logos or random text unless the scene specifically requires it. Compose the image with a clear visual hierarchy, natural subject placement and enough environmental detail to establish the setting without distracting from the subject. Aim for a polished final result that feels intentionally photographed or illustrated rather than generically generated.",
+    "best_for": "Professional portraits, profile images and clean photography.",
+    "prompt_tips": [
+      "Use a clear reference image when identity consistency matters.",
+      "Describe any clothing, location or prop you want to change before generating.",
+      "If your generator supports image references, keep the reference strength high enough to preserve recognizable features."
+    ]
+  },
+  {
+    "id": "anime-portrait",
+    "title": "Anime Portrait Prompt",
+    "category": "Anime",
+    "tags": [
+      "anime",
+      "portrait",
+      "illustration"
+    ],
+    "prompt": "The reference person reimagined as a polished anime character in a modern illustrated portrait, keeping recognizable hairstyle, face shape, expression cues and clothing colors; use clean linework, controlled cel shading, expressive but proportionate eyes and a cohesive background that supports the character. If a reference photo is provided, preserve the person's recognizable identity exactly: facial structure, eyes, nose, lips, jawline, skin tone, hairstyle and natural proportions. Do not reshape, beautify, age, de-age or replace distinctive facial features. Keep the person consistent from face to hands and avoid identity drift. Use a cohesive illustrated camera/composition language rather than photorealistic textures; keep linework, shading and anatomy internally consistent. Keep the illustration polished and internally consistent: clean linework, coherent anatomy, controlled cel or soft shading, consistent facial features, natural-looking hair and clothing folds, and a deliberate background. Avoid photorealistic skin pores, messy outlines, duplicated features, malformed hands, random lettering or inconsistent character proportions. Compose the image with a clear visual hierarchy, natural subject placement and enough environmental detail to establish the setting without distracting from the subject. Aim for a polished final result that feels intentionally photographed or illustrated rather than generically generated.",
+    "best_for": "Anime transformations, illustrated portraits and character art.",
+    "prompt_tips": [
+      "Use a clear reference image when identity consistency matters.",
+      "Describe any clothing, location or prop you want to change before generating.",
+      "If your generator supports image references, keep the reference strength high enough to preserve recognizable features."
+    ]
+  },
+  {
+    "id": "chibi-character",
+    "title": "Cute Chibi Character Prompt",
+    "category": "Anime",
+    "tags": [
+      "chibi",
+      "cute",
+      "character"
+    ],
+    "prompt": "The reference person transformed into a cute chibi character with a large expressive head, compact body and simplified hands and feet; retain recognizable hairstyle, glasses, clothing colors or other distinctive cues, with clean outlines, soft shading and a polished collectible-sticker feel. If a reference photo is provided, preserve the person's recognizable identity exactly: facial structure, eyes, nose, lips, jawline, skin tone, hairstyle and natural proportions. Do not reshape, beautify, age, de-age or replace distinctive facial features. Keep the person consistent from face to hands and avoid identity drift. Use a cohesive illustrated camera/composition language rather than photorealistic textures; keep linework, shading and anatomy internally consistent. Keep the illustration polished and internally consistent: clean linework, coherent anatomy, controlled cel or soft shading, consistent facial features, natural-looking hair and clothing folds, and a deliberate background. Avoid photorealistic skin pores, messy outlines, duplicated features, malformed hands, random lettering or inconsistent character proportions. Compose the image with a clear visual hierarchy, natural subject placement and enough environmental detail to establish the setting without distracting from the subject. Aim for a polished final result that feels intentionally photographed or illustrated rather than generically generated.",
+    "best_for": "Anime transformations, illustrated portraits and character art.",
+    "prompt_tips": [
+      "Use a clear reference image when identity consistency matters.",
+      "Describe any clothing, location or prop you want to change before generating.",
+      "If your generator supports image references, keep the reference strength high enough to preserve recognizable features."
+    ]
+  },
+  {
+    "id": "retro-film-selfie",
+    "title": "Retro Film Selfie Prompt",
+    "category": "Vintage",
+    "tags": [
+      "retro",
+      "film",
+      "selfie"
+    ],
+    "prompt": "The reference person taking a casual selfie with the visual character of a compact 35mm or disposable camera, direct flash, slightly uneven exposure, fine grain, mild color shifts, imperfect framing and authentic everyday surroundings; keep the face sharp enough to remain recognizable. If a reference photo is provided, preserve the person's recognizable identity exactly: facial structure, eyes, nose, lips, jawline, skin tone, hairstyle and natural proportions. Do not reshape, beautify, age, de-age or replace distinctive facial features. Keep the person consistent from face to hands and avoid identity drift. Use period-appropriate optical character and exposure behavior rather than a modern image with a generic vintage filter. Photorealistic where the concept is photographic; for illustrated concepts, keep the illustration style coherent. Use realistic lighting direction, physically plausible shadows, natural skin and fabric texture, believable hands and fingers, correct anatomy, realistic hair strands and subtle lens behavior. Avoid plastic skin, over-smoothed faces, warped hands, duplicate fingers, extra limbs, floating objects, distorted jewelry, fake text, excessive HDR, oversharpening, extreme bokeh or an obviously AI-generated look. Do not add watermarks, logos or random text unless the scene specifically requires it. Compose the image with a clear visual hierarchy, natural subject placement and enough environmental detail to establish the setting without distracting from the subject. Aim for a polished final result that feels intentionally photographed or illustrated rather than generically generated.",
+    "best_for": "Retro edits, nostalgic social posts and period-inspired portraits.",
+    "prompt_tips": [
+      "Use a clear reference image when identity consistency matters.",
+      "Describe any clothing, location or prop you want to change before generating.",
+      "If your generator supports image references, keep the reference strength high enough to preserve recognizable features."
+    ]
+  },
+  {
+    "id": "2000s-digital-photo",
+    "title": "2000s Digital Camera Photo Prompt",
+    "category": "Vintage",
+    "tags": [
+      "2000s",
+      "digital",
+      "retro"
+    ],
+    "prompt": "The reference person photographed like an early-2000s compact digital camera snapshot, with direct flash, modest sensor noise, slightly cool or warm digital color, casual framing and everyday indoor or nightlife surroundings; preserve realistic facial proportions and avoid modern smartphone processing. If a reference photo is provided, preserve the person's recognizable identity exactly: facial structure, eyes, nose, lips, jawline, skin tone, hairstyle and natural proportions. Do not reshape, beautify, age, de-age or replace distinctive facial features. Keep the person consistent from face to hands and avoid identity drift. Use period-appropriate optical character and exposure behavior rather than a modern image with a generic vintage filter. Photorealistic where the concept is photographic; for illustrated concepts, keep the illustration style coherent. Use realistic lighting direction, physically plausible shadows, natural skin and fabric texture, believable hands and fingers, correct anatomy, realistic hair strands and subtle lens behavior. Avoid plastic skin, over-smoothed faces, warped hands, duplicate fingers, extra limbs, floating objects, distorted jewelry, fake text, excessive HDR, oversharpening, extreme bokeh or an obviously AI-generated look. Do not add watermarks, logos or random text unless the scene specifically requires it. Compose the image with a clear visual hierarchy, natural subject placement and enough environmental detail to establish the setting without distracting from the subject. Aim for a polished final result that feels intentionally photographed or illustrated rather than generically generated.",
+    "best_for": "Retro edits, nostalgic social posts and period-inspired portraits.",
+    "prompt_tips": [
+      "Use a clear reference image when identity consistency matters.",
+      "Describe any clothing, location or prop you want to change before generating.",
+      "If your generator supports image references, keep the reference strength high enough to preserve recognizable features."
+    ]
+  },
+  {
+    "id": "old-money-portrait",
+    "title": "Old Money Aesthetic Portrait Prompt",
+    "category": "Aesthetic",
+    "tags": [
+      "oldmoney",
+      "portrait",
+      "luxury"
+    ],
+    "prompt": "The reference person in understated tailored clothing inside a classic architectural setting such as a library, heritage hotel or elegant courtyard, with neutral colors, natural materials, restrained accessories and soft daylight; the result should feel timeless and affluent without oversized logos or exaggerated luxury. If a reference photo is provided, preserve the person's recognizable identity exactly: facial structure, eyes, nose, lips, jawline, skin tone, hairstyle and natural proportions. Do not reshape, beautify, age, de-age or replace distinctive facial features. Keep the person consistent from face to hands and avoid identity drift. Use a refined lifestyle-photography look with soft depth of field, natural light falloff and restrained color grading. Photorealistic where the concept is photographic; for illustrated concepts, keep the illustration style coherent. Use realistic lighting direction, physically plausible shadows, natural skin and fabric texture, believable hands and fingers, correct anatomy, realistic hair strands and subtle lens behavior. Avoid plastic skin, over-smoothed faces, warped hands, duplicate fingers, extra limbs, floating objects, distorted jewelry, fake text, excessive HDR, oversharpening, extreme bokeh or an obviously AI-generated look. Do not add watermarks, logos or random text unless the scene specifically requires it. Compose the image with a clear visual hierarchy, natural subject placement and enough environmental detail to establish the setting without distracting from the subject. Aim for a polished final result that feels intentionally photographed or illustrated rather than generically generated.",
+    "best_for": "Lifestyle portraits, fashion posts and polished social content.",
+    "prompt_tips": [
+      "Use a clear reference image when identity consistency matters.",
+      "Describe any clothing, location or prop you want to change before generating.",
+      "If your generator supports image references, keep the reference strength high enough to preserve recognizable features."
+    ]
+  },
+  {
+    "id": "quiet-luxury-selfie",
+    "title": "Quiet Luxury Selfie Prompt",
+    "category": "Aesthetic",
+    "tags": [
+      "quietluxury",
+      "selfie",
+      "fashion"
+    ],
+    "prompt": "The reference person taking a polished but believable selfie in a refined hotel, apartment or boutique interior, wearing simple high-quality clothing in neutral tones; use soft window light, realistic skin, minimal accessories and an uncluttered background, avoiding obvious logos and excessive glamour. If a reference photo is provided, preserve the person's recognizable identity exactly: facial structure, eyes, nose, lips, jawline, skin tone, hairstyle and natural proportions. Do not reshape, beautify, age, de-age or replace distinctive facial features. Keep the person consistent from face to hands and avoid identity drift. Use a refined lifestyle-photography look with soft depth of field, natural light falloff and restrained color grading. Photorealistic where the concept is photographic; for illustrated concepts, keep the illustration style coherent. Use realistic lighting direction, physically plausible shadows, natural skin and fabric texture, believable hands and fingers, correct anatomy, realistic hair strands and subtle lens behavior. Avoid plastic skin, over-smoothed faces, warped hands, duplicate fingers, extra limbs, floating objects, distorted jewelry, fake text, excessive HDR, oversharpening, extreme bokeh or an obviously AI-generated look. Do not add watermarks, logos or random text unless the scene specifically requires it. Compose the image with a clear visual hierarchy, natural subject placement and enough environmental detail to establish the setting without distracting from the subject. Aim for a polished final result that feels intentionally photographed or illustrated rather than generically generated.",
+    "best_for": "Lifestyle portraits, fashion posts and polished social content.",
+    "prompt_tips": [
+      "Use a clear reference image when identity consistency matters.",
+      "Describe any clothing, location or prop you want to change before generating.",
+      "If your generator supports image references, keep the reference strength high enough to preserve recognizable features."
+    ]
+  },
+  {
+    "id": "night-city-portrait",
+    "title": "Night City Portrait Prompt",
+    "category": "Cinematic",
+    "tags": [
+      "night",
+      "city",
+      "portrait"
+    ],
+    "prompt": "The reference person on a lively city street after dark, with distant headlights, storefronts and subtle reflections creating layered bokeh; use realistic mixed lighting on the face, natural skin color, shallow but believable depth of field and a candid urban posture. If a reference photo is provided, preserve the person's recognizable identity exactly: facial structure, eyes, nose, lips, jawline, skin tone, hairstyle and natural proportions. Do not reshape, beautify, age, de-age or replace distinctive facial features. Keep the person consistent from face to hands and avoid identity drift. Use a cinematic full-frame look with realistic depth of field, controlled highlights, subtle contrast and layered environmental depth. Photorealistic where the concept is photographic; for illustrated concepts, keep the illustration style coherent. Use realistic lighting direction, physically plausible shadows, natural skin and fabric texture, believable hands and fingers, correct anatomy, realistic hair strands and subtle lens behavior. Avoid plastic skin, over-smoothed faces, warped hands, duplicate fingers, extra limbs, floating objects, distorted jewelry, fake text, excessive HDR, oversharpening, extreme bokeh or an obviously AI-generated look. Do not add watermarks, logos or random text unless the scene specifically requires it. Compose the image with a clear visual hierarchy, natural subject placement and enough environmental detail to establish the setting without distracting from the subject. Aim for a polished final result that feels intentionally photographed or illustrated rather than generically generated.",
+    "best_for": "Moody portraits, storytelling visuals and film-inspired social content.",
+    "prompt_tips": [
+      "Use a clear reference image when identity consistency matters.",
+      "Describe any clothing, location or prop you want to change before generating.",
+      "If your generator supports image references, keep the reference strength high enough to preserve recognizable features."
+    ]
+  },
+  {
+    "id": "neon-cinematic-portrait",
+    "title": "Neon Cinematic Portrait Prompt",
+    "category": "Cinematic",
+    "tags": [
+      "neon",
+      "cinematic",
+      "portrait"
+    ],
+    "prompt": "The reference person standing in a modern night setting with tasteful cyan, magenta or warm neon sources placed naturally in the environment; light the face with controlled colored spill, retain realistic skin texture and eye detail, and use cinematic contrast without crushing the shadows. If a reference photo is provided, preserve the person's recognizable identity exactly: facial structure, eyes, nose, lips, jawline, skin tone, hairstyle and natural proportions. Do not reshape, beautify, age, de-age or replace distinctive facial features. Keep the person consistent from face to hands and avoid identity drift. Use a cinematic full-frame look with realistic depth of field, controlled highlights, subtle contrast and layered environmental depth. Photorealistic where the concept is photographic; for illustrated concepts, keep the illustration style coherent. Use realistic lighting direction, physically plausible shadows, natural skin and fabric texture, believable hands and fingers, correct anatomy, realistic hair strands and subtle lens behavior. Avoid plastic skin, over-smoothed faces, warped hands, duplicate fingers, extra limbs, floating objects, distorted jewelry, fake text, excessive HDR, oversharpening, extreme bokeh or an obviously AI-generated look. Do not add watermarks, logos or random text unless the scene specifically requires it. Compose the image with a clear visual hierarchy, natural subject placement and enough environmental detail to establish the setting without distracting from the subject. Aim for a polished final result that feels intentionally photographed or illustrated rather than generically generated.",
+    "best_for": "Moody portraits, storytelling visuals and film-inspired social content.",
+    "prompt_tips": [
+      "Use a clear reference image when identity consistency matters.",
+      "Describe any clothing, location or prop you want to change before generating.",
+      "If your generator supports image references, keep the reference strength high enough to preserve recognizable features."
+    ]
+  },
+  {
+    "id": "rainy-window-portrait",
+    "title": "Rainy Window Portrait Prompt",
+    "category": "Cinematic",
+    "tags": [
+      "rain",
+      "window",
+      "portrait"
+    ],
+    "prompt": "The reference person beside a large rain-covered window, photographed from inside a quiet room; droplets and soft exterior lights create reflections in the glass, while diffused window light shapes the face; keep the mood intimate and natural with restrained expression and realistic skin detail. If a reference photo is provided, preserve the person's recognizable identity exactly: facial structure, eyes, nose, lips, jawline, skin tone, hairstyle and natural proportions. Do not reshape, beautify, age, de-age or replace distinctive facial features. Keep the person consistent from face to hands and avoid identity drift. Use a cinematic full-frame look with realistic depth of field, controlled highlights, subtle contrast and layered environmental depth. Photorealistic where the concept is photographic; for illustrated concepts, keep the illustration style coherent. Use realistic lighting direction, physically plausible shadows, natural skin and fabric texture, believable hands and fingers, correct anatomy, realistic hair strands and subtle lens behavior. Avoid plastic skin, over-smoothed faces, warped hands, duplicate fingers, extra limbs, floating objects, distorted jewelry, fake text, excessive HDR, oversharpening, extreme bokeh or an obviously AI-generated look. Do not add watermarks, logos or random text unless the scene specifically requires it. Compose the image with a clear visual hierarchy, natural subject placement and enough environmental detail to establish the setting without distracting from the subject. Aim for a polished final result that feels intentionally photographed or illustrated rather than generically generated.",
+    "best_for": "Moody portraits, storytelling visuals and film-inspired social content.",
+    "prompt_tips": [
+      "Use a clear reference image when identity consistency matters.",
+      "Describe any clothing, location or prop you want to change before generating.",
+      "If your generator supports image references, keep the reference strength high enough to preserve recognizable features."
+    ]
+  },
+  {
+    "id": "travel-airport-photo",
+    "title": "Airport Travel Photo Prompt",
+    "category": "Travel",
+    "tags": [
+      "travel",
+      "airport",
+      "lifestyle"
+    ],
+    "prompt": "The reference person moving through a modern airport with a carry-on suitcase and practical travel clothing, photographed candidly near a departure board or terminal window; include believable signage shapes without invented readable brand names, realistic luggage proportions and ambient overhead lighting. If a reference photo is provided, preserve the person's recognizable identity exactly: facial structure, eyes, nose, lips, jawline, skin tone, hairstyle and natural proportions. Do not reshape, beautify, age, de-age or replace distinctive facial features. Keep the person consistent from face to hands and avoid identity drift. Use a documentary travel-photography perspective with realistic environmental scale and natural depth. Photorealistic where the concept is photographic; for illustrated concepts, keep the illustration style coherent. Use realistic lighting direction, physically plausible shadows, natural skin and fabric texture, believable hands and fingers, correct anatomy, realistic hair strands and subtle lens behavior. Avoid plastic skin, over-smoothed faces, warped hands, duplicate fingers, extra limbs, floating objects, distorted jewelry, fake text, excessive HDR, oversharpening, extreme bokeh or an obviously AI-generated look. Do not add watermarks, logos or random text unless the scene specifically requires it. Compose the image with a clear visual hierarchy, natural subject placement and enough environmental detail to establish the setting without distracting from the subject. Aim for a polished final result that feels intentionally photographed or illustrated rather than generically generated.",
+    "best_for": "Travel posts, destination portraits and lifestyle photography.",
+    "prompt_tips": [
+      "Use a clear reference image when identity consistency matters.",
+      "Describe any clothing, location or prop you want to change before generating.",
+      "If your generator supports image references, keep the reference strength high enough to preserve recognizable features."
+    ]
+  },
+  {
+    "id": "paris-street-portrait",
+    "title": "Paris Street Portrait Prompt",
+    "category": "Travel",
+    "tags": [
+      "paris",
+      "travel",
+      "street"
+    ],
+    "prompt": "The reference person walking through a parisian-style street with classic facades, sidewalk cafes and subtle architectural details, photographed in soft daylight; keep the environment believable and uncluttered, with natural posture, elegant but realistic clothing and documentary travel-photography composition. If a reference photo is provided, preserve the person's recognizable identity exactly: facial structure, eyes, nose, lips, jawline, skin tone, hairstyle and natural proportions. Do not reshape, beautify, age, de-age or replace distinctive facial features. Keep the person consistent from face to hands and avoid identity drift. Use a documentary travel-photography perspective with realistic environmental scale and natural depth. Photorealistic where the concept is photographic; for illustrated concepts, keep the illustration style coherent. Use realistic lighting direction, physically plausible shadows, natural skin and fabric texture, believable hands and fingers, correct anatomy, realistic hair strands and subtle lens behavior. Avoid plastic skin, over-smoothed faces, warped hands, duplicate fingers, extra limbs, floating objects, distorted jewelry, fake text, excessive HDR, oversharpening, extreme bokeh or an obviously AI-generated look. Do not add watermarks, logos or random text unless the scene specifically requires it. Compose the image with a clear visual hierarchy, natural subject placement and enough environmental detail to establish the setting without distracting from the subject. Aim for a polished final result that feels intentionally photographed or illustrated rather than generically generated.",
+    "best_for": "Travel posts, destination portraits and lifestyle photography.",
+    "prompt_tips": [
+      "Use a clear reference image when identity consistency matters.",
+      "Describe any clothing, location or prop you want to change before generating.",
+      "If your generator supports image references, keep the reference strength high enough to preserve recognizable features."
+    ]
+  },
+  {
+    "id": "festive-portrait",
+    "title": "Festive Traditional Portrait Prompt",
+    "category": "Festival",
+    "tags": [
+      "festival",
+      "traditional",
+      "portrait"
+    ],
+    "prompt": "The reference person dressed for a festive celebration in tasteful traditional or contemporary festive clothing, surrounded by warm decorative lights, subtle floral or textile details and a softly blurred celebration setting; preserve a natural expression and realistic skin texture. If a reference photo is provided, preserve the person's recognizable identity exactly: facial structure, eyes, nose, lips, jawline, skin tone, hairstyle and natural proportions. Do not reshape, beautify, age, de-age or replace distinctive facial features. Keep the person consistent from face to hands and avoid identity drift. Use realistic portrait photography with warm practical lighting and believable environmental shadows. Photorealistic where the concept is photographic; for illustrated concepts, keep the illustration style coherent. Use realistic lighting direction, physically plausible shadows, natural skin and fabric texture, believable hands and fingers, correct anatomy, realistic hair strands and subtle lens behavior. Avoid plastic skin, over-smoothed faces, warped hands, duplicate fingers, extra limbs, floating objects, distorted jewelry, fake text, excessive HDR, oversharpening, extreme bokeh or an obviously AI-generated look. Do not add watermarks, logos or random text unless the scene specifically requires it. Compose the image with a clear visual hierarchy, natural subject placement and enough environmental detail to establish the setting without distracting from the subject. Aim for a polished final result that feels intentionally photographed or illustrated rather than generically generated.",
+    "best_for": "Festival portraits, cultural celebrations and seasonal posts.",
+    "prompt_tips": [
+      "Use a clear reference image when identity consistency matters.",
+      "Describe any clothing, location or prop you want to change before generating.",
+      "If your generator supports image references, keep the reference strength high enough to preserve recognizable features."
+    ]
+  },
+  {
+    "id": "diwali-portrait",
+    "title": "Diwali Portrait Prompt",
+    "category": "Festival",
+    "tags": [
+      "diwali",
+      "festival",
+      "portrait"
+    ],
+    "prompt": "The reference person in an elegant diwali setting with tasteful traditional clothing, warm diyas, subtle rangoli-inspired floor decoration and soft golden practical lighting; keep the festive elements refined rather than overcrowded, with realistic shadows, skin texture and natural expression. If a reference photo is provided, preserve the person's recognizable identity exactly: facial structure, eyes, nose, lips, jawline, skin tone, hairstyle and natural proportions. Do not reshape, beautify, age, de-age or replace distinctive facial features. Keep the person consistent from face to hands and avoid identity drift. Use realistic portrait photography with warm practical lighting and believable environmental shadows. Photorealistic where the concept is photographic; for illustrated concepts, keep the illustration style coherent. Use realistic lighting direction, physically plausible shadows, natural skin and fabric texture, believable hands and fingers, correct anatomy, realistic hair strands and subtle lens behavior. Avoid plastic skin, over-smoothed faces, warped hands, duplicate fingers, extra limbs, floating objects, distorted jewelry, fake text, excessive HDR, oversharpening, extreme bokeh or an obviously AI-generated look. Do not add watermarks, logos or random text unless the scene specifically requires it. Compose the image with a clear visual hierarchy, natural subject placement and enough environmental detail to establish the setting without distracting from the subject. Aim for a polished final result that feels intentionally photographed or illustrated rather than generically generated.",
+    "best_for": "Festival portraits, cultural celebrations and seasonal posts.",
+    "prompt_tips": [
+      "Use a clear reference image when identity consistency matters.",
+      "Describe any clothing, location or prop you want to change before generating.",
+      "If your generator supports image references, keep the reference strength high enough to preserve recognizable features."
+    ]
+  },
+  {
+    "id": "birthday-portrait",
+    "title": "Birthday Celebration Portrait Prompt",
+    "category": "Celebration",
+    "tags": [
+      "birthday",
+      "portrait",
+      "celebration"
+    ],
+    "prompt": "The reference person celebrating a birthday in a warm indoor setting with a simple decorated cake, balloons or tasteful party details; capture a candid smile or quiet celebratory moment, realistic candlelight mixed with ambient room light and natural skin and fabric texture. If one or more reference photos are provided, preserve each person's recognizable identity: facial structure, eyes, nose, lips, jawline, skin tone, hairstyle and natural proportions. Do not merge faces, beautify facial features, change age, or replace distinctive features. Keep every person anatomically consistent from head to hands. Use candid event photography with natural perspective, believable indoor or evening exposure and realistic interaction. Photorealistic where the concept is photographic; for illustrated concepts, keep the illustration style coherent. Use realistic lighting direction, physically plausible shadows, natural skin and fabric texture, believable hands and fingers, correct anatomy, realistic hair strands and subtle lens behavior. Avoid plastic skin, over-smoothed faces, warped hands, duplicate fingers, extra limbs, floating objects, distorted jewelry, fake text, excessive HDR, oversharpening, extreme bokeh or an obviously AI-generated look. Do not add watermarks, logos or random text unless the scene specifically requires it. Compose the image with a clear visual hierarchy, natural subject placement and enough environmental detail to establish the setting without distracting from the subject. Aim for a polished final result that feels intentionally photographed or illustrated rather than generically generated.",
+    "best_for": "Birthday and celebration posts, party memories and event portraits.",
+    "prompt_tips": [
+      "Use a clear reference image when identity consistency matters.",
+      "Describe any clothing, location or prop you want to change before generating.",
+      "If your generator supports image references, keep the reference strength high enough to preserve recognizable features."
+    ]
+  },
+  {
+    "id": "couple-birthday-photo",
+    "title": "Couple Birthday Celebration Prompt",
+    "category": "Celebration",
+    "tags": [
+      "birthday",
+      "couple",
+      "celebration"
+    ],
+    "prompt": "A couple celebrating a birthday together around a realistic cake and restrained decorations, with one person presenting the cake or both sharing a candid moment; preserve both identities, believable hand placement, realistic candle glow and warm indoor ambience. If one or more reference photos are provided, preserve each person's recognizable identity: facial structure, eyes, nose, lips, jawline, skin tone, hairstyle and natural proportions. Do not merge faces, beautify facial features, change age, or replace distinctive features. Keep every person anatomically consistent from head to hands. Use candid event photography with natural perspective, believable indoor or evening exposure and realistic interaction. Photorealistic where the concept is photographic; for illustrated concepts, keep the illustration style coherent. Use realistic lighting direction, physically plausible shadows, natural skin and fabric texture, believable hands and fingers, correct anatomy, realistic hair strands and subtle lens behavior. Avoid plastic skin, over-smoothed faces, warped hands, duplicate fingers, extra limbs, floating objects, distorted jewelry, fake text, excessive HDR, oversharpening, extreme bokeh or an obviously AI-generated look. Do not add watermarks, logos or random text unless the scene specifically requires it. Compose the image with a clear visual hierarchy, natural subject placement and enough environmental detail to establish the setting without distracting from the subject. Aim for a polished final result that feels intentionally photographed or illustrated rather than generically generated.",
+    "best_for": "Birthday and celebration posts, party memories and event portraits.",
+    "prompt_tips": [
+      "Use a clear reference image when identity consistency matters.",
+      "Describe any clothing, location or prop you want to change before generating.",
+      "If your generator supports image references, keep the reference strength high enough to preserve recognizable features."
+    ]
+  },
+  {
+    "id": "rainy-street-selfie",
+    "title": "Rainy Street Selfie Prompt",
+    "category": "Selfie",
+    "tags": [
+      "rain",
+      "selfie",
+      "street"
+    ],
+    "prompt": "The reference person taking a smartphone selfie on a rainy urban street, with a few droplets on the phone or nearby surfaces, wet pavement and soft storefront lights behind them; use a believable front-camera perspective, natural expression and realistic mixed street lighting. If a reference photo is provided, preserve the person's recognizable identity exactly: facial structure, eyes, nose, lips, jawline, skin tone, hairstyle and natural proportions. Do not reshape, beautify, age, de-age or replace distinctive facial features. Keep the person consistent from face to hands and avoid identity drift. Use a believable front-camera or mirror-camera perspective, including realistic lens distortion and phone distance without making faces unnaturally wide. Photorealistic where the concept is photographic; for illustrated concepts, keep the illustration style coherent. Use realistic lighting direction, physically plausible shadows, natural skin and fabric texture, believable hands and fingers, correct anatomy, realistic hair strands and subtle lens behavior. Avoid plastic skin, over-smoothed faces, warped hands, duplicate fingers, extra limbs, floating objects, distorted jewelry, fake text, excessive HDR, oversharpening, extreme bokeh or an obviously AI-generated look. Do not add watermarks, logos or random text unless the scene specifically requires it. Compose the image with a clear visual hierarchy, natural subject placement and enough environmental detail to establish the setting without distracting from the subject. Aim for a polished final result that feels intentionally photographed or illustrated rather than generically generated.",
+    "best_for": "Profile photos, mirror selfies and casual social posts.",
+    "prompt_tips": [
+      "Use a clear reference image when identity consistency matters.",
+      "Describe any clothing, location or prop you want to change before generating.",
+      "If your generator supports image references, keep the reference strength high enough to preserve recognizable features."
+    ]
+  },
+  {
+    "id": "car-selfie",
+    "title": "Luxury Car Selfie Prompt",
+    "category": "Selfie",
+    "tags": [
+      "selfie",
+      "car",
+      "luxury"
+    ],
+    "prompt": "The reference person taking a selfie from the front passenger or driver area of a premium but believable car, with visible dashboard or seat details, natural daylight entering through the windows and realistic reflections in glass; keep the phone perspective authentic and avoid exaggerated luxury cues. If a reference photo is provided, preserve the person's recognizable identity exactly: facial structure, eyes, nose, lips, jawline, skin tone, hairstyle and natural proportions. Do not reshape, beautify, age, de-age or replace distinctive facial features. Keep the person consistent from face to hands and avoid identity drift. Use a believable front-camera or mirror-camera perspective, including realistic lens distortion and phone distance without making faces unnaturally wide. Photorealistic where the concept is photographic; for illustrated concepts, keep the illustration style coherent. Use realistic lighting direction, physically plausible shadows, natural skin and fabric texture, believable hands and fingers, correct anatomy, realistic hair strands and subtle lens behavior. Avoid plastic skin, over-smoothed faces, warped hands, duplicate fingers, extra limbs, floating objects, distorted jewelry, fake text, excessive HDR, oversharpening, extreme bokeh or an obviously AI-generated look. Do not add watermarks, logos or random text unless the scene specifically requires it. Compose the image with a clear visual hierarchy, natural subject placement and enough environmental detail to establish the setting without distracting from the subject. Aim for a polished final result that feels intentionally photographed or illustrated rather than generically generated.",
+    "best_for": "Profile photos, mirror selfies and casual social posts.",
+    "prompt_tips": [
+      "Use a clear reference image when identity consistency matters.",
+      "Describe any clothing, location or prop you want to change before generating.",
+      "If your generator supports image references, keep the reference strength high enough to preserve recognizable features."
+    ]
+  },
+  {
+    "id": "college-friends-photo",
+    "title": "College Friends Photo Prompt",
+    "category": "Friends",
+    "tags": [
+      "college",
+      "friends",
+      "lifestyle"
+    ],
+    "prompt": "A group of college friends photographed casually on a real campus walkway, courtyard or cafe area, with backpacks, notebooks or everyday student details; vary poses and expressions, keep anatomy believable and capture the spontaneous feeling of a friend taking the photo. If one or more reference photos are provided, preserve each person's recognizable identity: facial structure, eyes, nose, lips, jawline, skin tone, hairstyle and natural proportions. Do not merge faces, beautify facial features, change age, or replace distinctive features. Keep every person anatomically consistent from head to hands. Use a realistic smartphone or documentary camera perspective, with enough depth of field to keep the group readable and natural separation from the background. Photorealistic where the concept is photographic; for illustrated concepts, keep the illustration style coherent. Use realistic lighting direction, physically plausible shadows, natural skin and fabric texture, believable hands and fingers, correct anatomy, realistic hair strands and subtle lens behavior. Avoid plastic skin, over-smoothed faces, warped hands, duplicate fingers, extra limbs, floating objects, distorted jewelry, fake text, excessive HDR, oversharpening, extreme bokeh or an obviously AI-generated look. Do not add watermarks, logos or random text unless the scene specifically requires it. Compose the image with a clear visual hierarchy, natural subject placement and enough environmental detail to establish the setting without distracting from the subject. Aim for a polished final result that feels intentionally photographed or illustrated rather than generically generated.",
+    "best_for": "Friendship posts, group photos and candid social memories.",
+    "prompt_tips": [
+      "Use a clear reference image when identity consistency matters.",
+      "Describe any clothing, location or prop you want to change before generating.",
+      "If your generator supports image references, keep the reference strength high enough to preserve recognizable features."
+    ]
+  },
+  {
+    "id": "couple-traditional-outfit",
+    "title": "Traditional Couple Portrait Prompt",
+    "category": "Wedding",
+    "tags": [
+      "couple",
+      "traditional",
+      "portrait"
+    ],
+    "prompt": "A couple dressed in tasteful traditional outfits for a portrait in a refined cultural or architectural setting, with realistic textile textures, jewelry kept proportionate, natural posture and warm directional light; emphasize authentic expressions and coordinated but not identical styling. If one or more reference photos are provided, preserve each person's recognizable identity: facial structure, eyes, nose, lips, jawline, skin tone, hairstyle and natural proportions. Do not merge faces, beautify facial features, change age, or replace distinctive features. Keep every person anatomically consistent from head to hands. Use polished professional portrait photography with realistic depth, refined exposure and accurate clothing texture. Photorealistic where the concept is photographic; for illustrated concepts, keep the illustration style coherent. Use realistic lighting direction, physically plausible shadows, natural skin and fabric texture, believable hands and fingers, correct anatomy, realistic hair strands and subtle lens behavior. Avoid plastic skin, over-smoothed faces, warped hands, duplicate fingers, extra limbs, floating objects, distorted jewelry, fake text, excessive HDR, oversharpening, extreme bokeh or an obviously AI-generated look. Do not add watermarks, logos or random text unless the scene specifically requires it. Compose the image with a clear visual hierarchy, natural subject placement and enough environmental detail to establish the setting without distracting from the subject. Aim for a polished final result that feels intentionally photographed or illustrated rather than generically generated.",
+    "best_for": "Wedding portraits, traditional couple photos and formal celebrations.",
+    "prompt_tips": [
+      "Use a clear reference image when identity consistency matters.",
+      "Describe any clothing, location or prop you want to change before generating.",
+      "If your generator supports image references, keep the reference strength high enough to preserve recognizable features."
+    ]
+  },
+  {
+    "id": "polaroid-couple",
+    "title": "Polaroid Couple Photo Prompt",
+    "category": "Vintage",
+    "tags": [
+      "polaroid",
+      "couple",
+      "vintage"
+    ],
+    "prompt": "A couple captured as an instant-film snapshot, with soft direct flash, slight exposure variation, gentle grain, modest color fading and the unmistakable framing of a physical instant photograph; keep the pose affectionate and spontaneous, like a real memory rather than a commercial campaign. If a reference photo is provided, preserve the person's recognizable identity exactly: facial structure, eyes, nose, lips, jawline, skin tone, hairstyle and natural proportions. Do not reshape, beautify, age, de-age or replace distinctive facial features. Keep the person consistent from face to hands and avoid identity drift. Use period-appropriate optical character and exposure behavior rather than a modern image with a generic vintage filter. Photorealistic where the concept is photographic; for illustrated concepts, keep the illustration style coherent. Use realistic lighting direction, physically plausible shadows, natural skin and fabric texture, believable hands and fingers, correct anatomy, realistic hair strands and subtle lens behavior. Avoid plastic skin, over-smoothed faces, warped hands, duplicate fingers, extra limbs, floating objects, distorted jewelry, fake text, excessive HDR, oversharpening, extreme bokeh or an obviously AI-generated look. Do not add watermarks, logos or random text unless the scene specifically requires it. Compose the image with a clear visual hierarchy, natural subject placement and enough environmental detail to establish the setting without distracting from the subject. Aim for a polished final result that feels intentionally photographed or illustrated rather than generically generated.",
+    "best_for": "Retro edits, nostalgic social posts and period-inspired portraits.",
+    "prompt_tips": [
+      "Use a clear reference image when identity consistency matters.",
+      "Describe any clothing, location or prop you want to change before generating.",
+      "If your generator supports image references, keep the reference strength high enough to preserve recognizable features."
+    ]
+  },
+  {
+    "id": "mirror-fashion-selfie",
+    "title": "Fashion Mirror Selfie Prompt",
+    "category": "Fashion",
+    "tags": [
+      "fashion",
+      "mirror",
+      "selfie"
+    ],
+    "prompt": "The reference person taking a fashion-focused mirror selfie in a clean dressing room or modern interior, showing the outfit clearly while keeping the face recognizable; use realistic mirror reflections, accurate clothing folds, natural indoor light and an authentic smartphone camera angle. If a reference photo is provided, preserve the person's recognizable identity exactly: facial structure, eyes, nose, lips, jawline, skin tone, hairstyle and natural proportions. Do not reshape, beautify, age, de-age or replace distinctive facial features. Keep the person consistent from face to hands and avoid identity drift. Use a professional editorial camera look with accurate garment proportions, controlled perspective and crisp but natural detail. Photorealistic where the concept is photographic; for illustrated concepts, keep the illustration style coherent. Use realistic lighting direction, physically plausible shadows, natural skin and fabric texture, believable hands and fingers, correct anatomy, realistic hair strands and subtle lens behavior. Avoid plastic skin, over-smoothed faces, warped hands, duplicate fingers, extra limbs, floating objects, distorted jewelry, fake text, excessive HDR, oversharpening, extreme bokeh or an obviously AI-generated look. Do not add watermarks, logos or random text unless the scene specifically requires it. Compose the image with a clear visual hierarchy, natural subject placement and enough environmental detail to establish the setting without distracting from the subject. Aim for a polished final result that feels intentionally photographed or illustrated rather than generically generated.",
+    "best_for": "Fashion posts, outfit showcases and editorial portraits.",
+    "prompt_tips": [
+      "Use a clear reference image when identity consistency matters.",
+      "Describe any clothing, location or prop you want to change before generating.",
+      "If your generator supports image references, keep the reference strength high enough to preserve recognizable features."
+    ]
+  },
+  {
+    "id": "soft-aesthetic-portrait",
+    "title": "Soft Aesthetic Portrait Prompt",
+    "category": "Aesthetic",
+    "tags": [
+      "soft",
+      "aesthetic",
+      "portrait"
+    ],
+    "prompt": "The reference person photographed in diffused daylight near a large window or bright outdoor shade, with gentle background separation, muted complementary colors and a calm lifestyle-editorial mood; preserve natural pores, fine hair strands and subtle facial expression. If a reference photo is provided, preserve the person's recognizable identity exactly: facial structure, eyes, nose, lips, jawline, skin tone, hairstyle and natural proportions. Do not reshape, beautify, age, de-age or replace distinctive facial features. Keep the person consistent from face to hands and avoid identity drift. Use a refined lifestyle-photography look with soft depth of field, natural light falloff and restrained color grading. Photorealistic where the concept is photographic; for illustrated concepts, keep the illustration style coherent. Use realistic lighting direction, physically plausible shadows, natural skin and fabric texture, believable hands and fingers, correct anatomy, realistic hair strands and subtle lens behavior. Avoid plastic skin, over-smoothed faces, warped hands, duplicate fingers, extra limbs, floating objects, distorted jewelry, fake text, excessive HDR, oversharpening, extreme bokeh or an obviously AI-generated look. Do not add watermarks, logos or random text unless the scene specifically requires it. Compose the image with a clear visual hierarchy, natural subject placement and enough environmental detail to establish the setting without distracting from the subject. Aim for a polished final result that feels intentionally photographed or illustrated rather than generically generated.",
+    "best_for": "Lifestyle portraits, fashion posts and polished social content.",
+    "prompt_tips": [
+      "Use a clear reference image when identity consistency matters.",
+      "Describe any clothing, location or prop you want to change before generating.",
+      "If your generator supports image references, keep the reference strength high enough to preserve recognizable features."
+    ]
+  },
+  {
+    "id": "dramatic-studio-fashion",
+    "title": "Dramatic Studio Fashion Prompt",
+    "category": "Fashion",
+    "tags": [
+      "fashion",
+      "studio",
+      "dramatic"
+    ],
+    "prompt": "The reference person in a controlled studio fashion setup with a sculpted key light, deliberate shadow pattern and a premium editorial backdrop; preserve natural body proportions and identity, show realistic garment construction and texture, and keep the pose confident but physically believable. If a reference photo is provided, preserve the person's recognizable identity exactly: facial structure, eyes, nose, lips, jawline, skin tone, hairstyle and natural proportions. Do not reshape, beautify, age, de-age or replace distinctive facial features. Keep the person consistent from face to hands and avoid identity drift. Use a professional editorial camera look with accurate garment proportions, controlled perspective and crisp but natural detail. Photorealistic where the concept is photographic; for illustrated concepts, keep the illustration style coherent. Use realistic lighting direction, physically plausible shadows, natural skin and fabric texture, believable hands and fingers, correct anatomy, realistic hair strands and subtle lens behavior. Avoid plastic skin, over-smoothed faces, warped hands, duplicate fingers, extra limbs, floating objects, distorted jewelry, fake text, excessive HDR, oversharpening, extreme bokeh or an obviously AI-generated look. Do not add watermarks, logos or random text unless the scene specifically requires it. Compose the image with a clear visual hierarchy, natural subject placement and enough environmental detail to establish the setting without distracting from the subject. Aim for a polished final result that feels intentionally photographed or illustrated rather than generically generated.",
+    "best_for": "Fashion posts, outfit showcases and editorial portraits.",
+    "prompt_tips": [
+      "Use a clear reference image when identity consistency matters.",
+      "Describe any clothing, location or prop you want to change before generating.",
+      "If your generator supports image references, keep the reference strength high enough to preserve recognizable features."
+    ]
+  },
+  {
+    "id": "cozy-winter-portrait",
+    "title": "Cozy Winter Portrait Prompt",
+    "category": "Aesthetic",
+    "tags": [
+      "winter",
+      "cozy",
+      "portrait"
+    ],
+    "prompt": "The reference person outdoors or beside a winter window wearing a textured knit sweater, scarf or coat, with subtle cool-weather atmosphere and warm skin tones; use soft overcast light or gentle window light, visible fabric texture and a candid expression rather than a heavily posed fashion shot. If a reference photo is provided, preserve the person's recognizable identity exactly: facial structure, eyes, nose, lips, jawline, skin tone, hairstyle and natural proportions. Do not reshape, beautify, age, de-age or replace distinctive facial features. Keep the person consistent from face to hands and avoid identity drift. Use a refined lifestyle-photography look with soft depth of field, natural light falloff and restrained color grading. Photorealistic where the concept is photographic; for illustrated concepts, keep the illustration style coherent. Use realistic lighting direction, physically plausible shadows, natural skin and fabric texture, believable hands and fingers, correct anatomy, realistic hair strands and subtle lens behavior. Avoid plastic skin, over-smoothed faces, warped hands, duplicate fingers, extra limbs, floating objects, distorted jewelry, fake text, excessive HDR, oversharpening, extreme bokeh or an obviously AI-generated look. Do not add watermarks, logos or random text unless the scene specifically requires it. Compose the image with a clear visual hierarchy, natural subject placement and enough environmental detail to establish the setting without distracting from the subject. Aim for a polished final result that feels intentionally photographed or illustrated rather than generically generated.",
+    "best_for": "Lifestyle portraits, fashion posts and polished social content.",
+    "prompt_tips": [
+      "Use a clear reference image when identity consistency matters.",
+      "Describe any clothing, location or prop you want to change before generating.",
+      "If your generator supports image references, keep the reference strength high enough to preserve recognizable features."
+    ]
+  }
 ]
