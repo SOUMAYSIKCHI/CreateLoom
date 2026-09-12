@@ -1,25 +1,1310 @@
 ---
 import Layout from '../../layouts/Layout.astro';
-const resources=[
-['reels','🎬','Reel Ideas','Content','Find repeatable concepts for AI and creator-focused Reels.'],
-['hooks','⚡','Hooks','Content','Strong opening ideas that make the subject clear quickly.'],
-['captions','✍️','Captions','Writing','Caption frameworks and ideas for different creator formats.'],
-['content','💡','Content Ideas','Content','Build a consistent stream of posts without starting from zero.'],
-['growth','📈','Instagram Growth','Growth','Practical profile, content and retention principles for creators.'],
-['planning','🗓️','Content Planning','Growth','Simple ways to turn ideas into a repeatable publishing workflow.'],
-['brand-deals','🤝','Brand Deals','Business','Position your profile and prepare for brand collaborations.'],
-['media-kit','📊','Media Kit','Business','What to include when presenting your creator profile to brands.']
+
+const resources = [
+  {
+    id: 'reels',
+    icon: '🎬',
+    title: 'Instagram Reel Ideas',
+    category: 'Content',
+    description: 'Repeatable Reel concepts for AI creators, prompt pages, tutorials, transformations and creator-focused content.',
+    link: '/blog/instagram-reel-ideas/'
+  },
+  {
+    id: 'hooks',
+    icon: '⚡',
+    title: 'Hooks',
+    category: 'Content',
+    description: 'Opening ideas designed to communicate the value of your Reel quickly and create a reason to keep watching.'
+  },
+  {
+    id: 'captions',
+    icon: '✍️',
+    title: 'Captions',
+    category: 'Writing',
+    description: 'Simple caption structures for educational posts, prompt content, transformations, tutorials and creator stories.'
+  },
+  {
+    id: 'content',
+    icon: '💡',
+    title: 'Content Ideas',
+    category: 'Content',
+    description: 'Turn one creative concept into multiple posts, Reels, tutorials, comparisons and experiments.'
+  },
+  {
+    id: 'growth',
+    icon: '📈',
+    title: 'Instagram Growth',
+    category: 'Growth',
+    description: 'Understand the content patterns that can help improve retention, shares, saves, profile visits and consistency.'
+  },
+  {
+    id: 'planning',
+    icon: '🗓️',
+    title: 'Content Planning',
+    category: 'Growth',
+    description: 'Build a practical content workflow so you can publish consistently without relying on daily inspiration.'
+  },
+  {
+    id: 'brand-deals',
+    icon: '🤝',
+    title: 'Brand Deals',
+    category: 'Business',
+    description: 'Learn how to position your creator profile, develop collaboration ideas and approach potential brand partners.'
+  },
+  {
+    id: 'media-kit',
+    icon: '📊',
+    title: 'Media Kit',
+    category: 'Business',
+    description: 'Understand the information, metrics and examples that make a creator media kit useful to potential partners.'
+  }
+];
+
+const stats = [
+  ['40+', 'AI prompts'],
+  ['8', 'Creator topics'],
+  ['6', 'In-depth guides'],
+  ['100%', 'Free resources']
+];
+
+const reelIdeas = [
+  ['Prompt reveal', 'Show the finished AI image first, then reveal the prompt used to create it.'],
+  ['Before vs after', 'Start with an ordinary image and show the transformed result with a clear visual transition.'],
+  ['Prompt tutorial', 'Teach viewers how to create one specific style instead of trying to explain everything at once.'],
+  ['3 variations', 'Use one concept and demonstrate three different visual directions, outfits, locations or aesthetics.'],
+  ['Trend adaptation', 'Take a visual trend and adapt it into your own niche rather than copying another creator exactly.'],
+  ['Prompt mistakes', 'Show common prompt problems and demonstrate how changing specific instructions improves the result.']
+];
+
+const hookIdeas = [
+  '“I used this prompt to create this…”',
+  '“Save this prompt for your next Reel.”',
+  '“Your AI images look basic because of this.”',
+  '“Try this before generating your next image.”',
+  '“One prompt. Three completely different results.”',
+  '“Here is the exact prompt behind this image.”'
+];
+
+const planningSteps = [
+  ['01', 'Capture', 'Keep a running list of prompt ideas, trends, questions and experiments instead of relying on memory.'],
+  ['02', 'Create', 'Batch similar tasks together: generate images, record demonstrations, write captions and prepare covers.'],
+  ['03', 'Publish', 'Use a consistent format so viewers quickly understand what your account provides.'],
+  ['04', 'Review', 'Look at retention, shares, saves, comments and profile actions to identify what deserves another version.']
+];
+
+const brandChecklist = [
+  'Clear creator positioning',
+  'Consistent visual identity',
+  'Strong examples of your content',
+  'Useful audience and performance metrics',
+  'Simple collaboration formats',
+  'Professional contact information',
+  'Specific campaign ideas',
+  'Clear expectations for deliverables'
 ];
 ---
-<Layout title="Instagram Creator Hub | CreateLoom" description="Instagram Reel ideas, growth resources, creator tips and brand collaboration guidance." active="Creator Hub">
-<section class="hero hero-compact"><div class="container"><div class="eyebrow">Create smarter</div><h1>The Creator <span class="gradient-text">Hub</span></h1><p>Practical resources for creating content, growing on Instagram and building brand opportunities.</p></div></section>
-<section class="section"><div class="container"><div class="resource-grid">{resources.map(([id,icon,title,cat,desc])=><a class="resource" href={`#${id}`}><div class="eyebrow">{cat}</div><h3>{icon} {title}</h3><p>{desc}</p></a>)}</div></div></section>
-<section class="section" id="reels"><div class="container"><div class="card"><div class="eyebrow">Reels</div><h2>Build repeatable short-form formats.</h2><p>Show the result first, reveal the prompt, compare variations or turn one idea into a series.</p></div></div></section>
-<section class="section" id="hooks"><div class="container"><div class="card"><div class="eyebrow">Hooks</div><h2>Make the first seconds clear.</h2><p>Lead with the outcome, transformation or curiosity gap so viewers understand why they should keep watching.</p></div></div></section>
-<section class="section" id="captions"><div class="container"><div class="card"><div class="eyebrow">Captions</div><h2>Give the post a clear next action.</h2><p>Use a short context line, a useful takeaway and a simple call to action when appropriate.</p></div></div></section>
-<section class="section" id="content"><div class="container"><div class="card"><div class="eyebrow">Content ideas</div><h2>Turn one concept into a series.</h2><p>Build themes around prompts, transformations, tutorials, comparisons and creator experiments.</p></div></div></section>
-<section class="section" id="growth"><div class="container"><div class="card"><div class="eyebrow">Growth</div><h2>Optimize around patterns, not one post.</h2><p>Review retention, shares, saves and profile actions to identify formats worth repeating and improving.</p></div></div></section>
-<section class="section" id="planning"><div class="container"><div class="card"><div class="eyebrow">Planning</div><h2>Keep a simple publishing pipeline.</h2><p>Capture ideas, batch similar content and keep a small backlog so consistency does not depend on inspiration every day.</p></div></div></section>
-<section class="section" id="brand-deals"><div class="container"><div class="card"><div class="eyebrow">Brand deals</div><h2>Turn your creator profile into a business asset.</h2><p>Prepare a clear profile, define collaboration formats and make it easy for potential partners to understand your audience and content.</p><div class="resource-grid" style="margin-top:22px"><div class="resource"><h3>Pitching</h3><p>Keep outreach concise, specific and relevant to the brand.</p></div><div class="resource"><h3>Media Kit</h3><p>Present audience, performance, content examples and collaboration options.</p></div><div class="resource"><h3>Rate Card</h3><p>Organize deliverables so brands can understand what they are buying.</p></div><div class="resource"><h3>Campaign Ideas</h3><p>Propose a concrete creative concept instead of sending a generic pitch.</p></div></div></div></div></section>
-<section class="section"><div class="container"><div class="card cta"><div class="eyebrow">Need a collaboration?</div><h2>Want to work with CreateLoom?</h2><p class="muted">See our partnership options and get in touch.</p><a class="primary" href="/brands/">Work With Us →</a></div></div></section>
+
+<Layout
+  title="Instagram Creator Hub | Reel Ideas, Growth & Brand Tips | CreateLoom"
+  description="Explore CreateLoom's Instagram Creator Hub for Reel ideas, hooks, captions, content planning, Instagram growth, brand deals and creator resources."
+  active="Creator Hub"
+>
+
+<!-- HERO -->
+<section class="hero creator-hero">
+  <div class="container">
+    <div class="eyebrow">Create smarter. Grow intentionally.</div>
+
+    <h1>
+      The Creator
+      <span class="gradient-text">Hub</span>
+    </h1>
+
+    <p class="hero-copy">
+      A practical resource center for Instagram creators who want better
+      content ideas, stronger Reels, a repeatable workflow and more
+      professional brand opportunities.
+    </p>
+
+    <div class="hero-actions">
+      <a class="primary" href="/prompts/">Explore AI Prompts →</a>
+      <a class="secondary" href="/blog/">Read Creator Guides</a>
+    </div>
+
+    <div class="stats">
+      {stats.map(([value, label]) => (
+        <div class="stat">
+          <strong>{value}</strong>
+          <span>{label}</span>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+<!-- RESOURCE DIRECTORY -->
+<section class="section">
+  <div class="container">
+    <div class="section-heading">
+      <div>
+        <div class="eyebrow">Creator resources</div>
+        <h2>Everything starts with a better system.</h2>
+      </div>
+
+      <p>
+        Choose a topic and build one part of your creator workflow at a time.
+      </p>
+    </div>
+
+    <div class="resource-grid">
+      {resources.map((resource) => (
+        <a
+          class="resource"
+          href={resource.link || `#${resource.id}`}
+          aria-label={`Learn about ${resource.title}`}
+        >
+          <div class="resource-icon">{resource.icon}</div>
+
+          <div class="eyebrow">{resource.category}</div>
+
+          <h3>{resource.title}</h3>
+
+          <p>{resource.description}</p>
+
+          <span class="resource-link">
+            {resource.link ? 'Read guide →' : 'Explore →'}
+          </span>
+        </a>
+      ))}
+    </div>
+  </div>
+</section>
+
+<!-- REELS -->
+<section class="section" id="reels">
+  <div class="container">
+    <div class="split">
+      <div>
+        <div class="eyebrow">01 · Reels</div>
+        <h2>Build Reel formats you can repeat.</h2>
+
+        <p class="lead">
+          A strong creator workflow does not require a completely new idea
+          every day. Instead, develop a small number of repeatable formats
+          and keep changing the subject, prompt, visual style or lesson.
+        </p>
+
+        <p>
+          For AI-focused creators, the visual result itself can become the
+          hook. Show the transformation, reveal the prompt, demonstrate the
+          process or compare several generations. The goal is to make the
+          format recognizable while keeping each individual post useful.
+        </p>
+
+        <a class="secondary" href="/blog/instagram-reel-ideas/">
+          Read the Reel Ideas Guide →
+        </a>
+      </div>
+
+      <div class="idea-list">
+        {reelIdeas.map(([title, description], index) => (
+          <div class="idea">
+            <span>{String(index + 1).padStart(2, '0')}</span>
+            <div>
+              <h3>{title}</h3>
+              <p>{description}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HOOKS -->
+<section class="section section-alt" id="hooks">
+  <div class="container">
+    <div class="center-heading">
+      <div class="eyebrow">02 · Hooks</div>
+      <h2>Give viewers a reason to stop.</h2>
+
+      <p>
+        Your opening should immediately establish the result, problem,
+        curiosity or benefit behind the Reel. Avoid spending the first
+        seconds on unnecessary introductions.
+      </p>
+    </div>
+
+    <div class="hook-grid">
+      {hookIdeas.map((hook, index) => (
+        <div class="hook">
+          <span>0{index + 1}</span>
+          <p>{hook}</p>
+        </div>
+      ))}
+    </div>
+
+    <div class="tip-box">
+      <strong>Creator tip</strong>
+      <p>
+        A hook is not required to be loud or clickbait-heavy. A clear promise
+        such as showing the exact prompt behind an image can be more useful
+        than an exaggerated claim.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- CAPTIONS -->
+<section class="section" id="captions">
+  <div class="container narrow">
+    <div class="eyebrow">03 · Captions</div>
+    <h2>Make the caption support the content.</h2>
+
+    <p class="lead">
+      Your caption should add context rather than simply repeat everything
+      viewers already saw in the Reel.
+    </p>
+
+    <div class="framework">
+      <div>
+        <span>01</span>
+        <h3>Context</h3>
+        <p>Explain what the viewer is looking at or why you created it.</p>
+      </div>
+
+      <div>
+        <span>02</span>
+        <h3>Value</h3>
+        <p>Add a useful tip, prompt, explanation or takeaway.</p>
+      </div>
+
+      <div>
+        <span>03</span>
+        <h3>Action</h3>
+        <p>Give the audience one clear next step when a CTA makes sense.</p>
+      </div>
+    </div>
+
+    <div class="inline-links">
+      <a href="/blog/ai-selfie-prompts/">AI Selfie Prompt Guide →</a>
+      <a href="/blog/how-to-write-ai-image-prompts/">How to Write AI Prompts →</a>
+    </div>
+  </div>
+</section>
+
+<!-- CONTENT IDEAS -->
+<section class="section section-alt" id="content">
+  <div class="container">
+    <div class="split reverse">
+      <div class="content-card">
+        <div class="eyebrow">Content engine</div>
+        <h2>Turn one idea into multiple pieces of content.</h2>
+
+        <p>
+          Instead of treating every post as an isolated project, build a
+          content system around your strongest ideas.
+        </p>
+
+        <div class="content-flow">
+          <div>One prompt</div>
+          <span>→</span>
+          <div>Reel</div>
+          <span>→</span>
+          <div>Tutorial</div>
+          <span>→</span>
+          <div>Carousel</div>
+          <span>→</span>
+          <div>Blog</div>
+        </div>
+      </div>
+
+      <div>
+        <h3>Five ways to repurpose a successful idea</h3>
+
+        <ul class="check-list">
+          <li>Create a shorter version focused on the result.</li>
+          <li>Turn the process into a step-by-step tutorial.</li>
+          <li>Compare the original result with improved versions.</li>
+          <li>Answer the most common question in a follow-up Reel.</li>
+          <li>Turn the concept into an evergreen written guide.</li>
+        </ul>
+
+        <a class="secondary" href="/prompts/">
+          Browse the Prompt Library →
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GROWTH -->
+<section class="section" id="growth">
+  <div class="container">
+    <div class="center-heading">
+      <div class="eyebrow">04 · Growth</div>
+      <h2>Look for patterns, not one viral post.</h2>
+
+      <p>
+        One post can outperform your average for many reasons. A stronger
+        growth process is to compare multiple posts and identify the formats,
+        topics and openings that repeatedly perform well.
+      </p>
+    </div>
+
+    <div class="growth-grid">
+      <div class="metric-card">
+        <span>Retention</span>
+        <h3>Did people keep watching?</h3>
+        <p>
+          Compare where viewers drop off and test different openings,
+          pacing and presentation.
+        </p>
+      </div>
+
+      <div class="metric-card">
+        <span>Shares</span>
+        <h3>Was it worth passing on?</h3>
+        <p>
+          Useful, relatable or entertaining content can give viewers a reason
+          to share it with someone else.
+        </p>
+      </div>
+
+      <div class="metric-card">
+        <span>Saves</span>
+        <h3>Was it worth returning to?</h3>
+        <p>
+          Tutorials, prompts, checklists and references can naturally create
+          stronger save intent.
+        </p>
+      </div>
+
+      <div class="metric-card">
+        <span>Profile actions</span>
+        <h3>Did the content create curiosity?</h3>
+        <p>
+          Track profile visits and follows to understand whether your content
+          gives viewers a reason to explore more.
+        </p>
+      </div>
+    </div>
+
+    <div class="tip-box">
+      <strong>Think in experiments.</strong>
+      <p>
+        Change one major variable at a time when possible. If you change the
+        topic, hook, editing style and CTA simultaneously, it becomes harder
+        to understand what actually affected the result.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- PLANNING -->
+<section class="section section-alt" id="planning">
+  <div class="container">
+    <div class="section-heading">
+      <div>
+        <div class="eyebrow">05 · Planning</div>
+        <h2>A simple content pipeline beats random inspiration.</h2>
+      </div>
+
+      <p>
+        Keep your workflow small enough to maintain even when you are busy.
+      </p>
+    </div>
+
+    <div class="pipeline">
+      {planningSteps.map(([number, title, description]) => (
+        <div class="pipeline-step">
+          <span>{number}</span>
+          <h3>{title}</h3>
+          <p>{description}</p>
+        </div>
+      ))}
+    </div>
+
+    <div class="planning-board">
+      <div>
+        <span>Idea bank</span>
+        <strong>10–20 ideas</strong>
+        <p>Keep enough ideas ready so you never start completely from zero.</p>
+      </div>
+
+      <div>
+        <span>Production</span>
+        <strong>Batch similar work</strong>
+        <p>Reduce context switching by creating several related pieces together.</p>
+      </div>
+
+      <div>
+        <span>Review</span>
+        <strong>Weekly patterns</strong>
+        <p>Review your content regularly instead of reacting emotionally to one post.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BRAND DEALS -->
+<section class="section" id="brand-deals">
+  <div class="container">
+    <div class="split">
+      <div>
+        <div class="eyebrow">06 · Brand business</div>
+        <h2>Turn your creator profile into a professional asset.</h2>
+
+        <p class="lead">
+          Brand collaborations become easier to discuss when your profile,
+          content examples and offer are clear.
+        </p>
+
+        <p>
+          You do not need a complicated business operation to start presenting
+          yourself professionally. A focused niche, consistent content,
+          useful performance information and a clear way to contact you can
+          create a much stronger first impression.
+        </p>
+
+        <a class="primary" href="/brands/">
+          Explore Brand Partnerships →
+        </a>
+      </div>
+
+      <div class="business-card">
+        <div class="eyebrow">Brand-ready checklist</div>
+
+        <ul class="check-list">
+          {brandChecklist.map((item) => (
+            <li>{item}</li>
+          ))}
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MEDIA KIT -->
+<section class="section section-alt" id="media-kit">
+  <div class="container narrow">
+    <div class="eyebrow">07 · Media Kit</div>
+    <h2>Make it easy for brands to understand your value.</h2>
+
+    <p class="lead">
+      A media kit should answer the basic questions a potential partner has
+      before starting a collaboration conversation.
+    </p>
+
+    <div class="media-kit-grid">
+      <div>
+        <span>01</span>
+        <h3>About you</h3>
+        <p>
+          Explain who you are, what you create and what makes your audience
+          relevant.
+        </p>
+      </div>
+
+      <div>
+        <span>02</span>
+        <h3>Audience</h3>
+        <p>
+          Include useful audience information and relevant demographic or
+          geographic insights when available.
+        </p>
+      </div>
+
+      <div>
+        <span>03</span>
+        <h3>Performance</h3>
+        <p>
+          Include meaningful metrics such as reach, views, engagement or
+          campaign performance where appropriate.
+        </p>
+      </div>
+
+      <div>
+        <span>04</span>
+        <h3>Examples</h3>
+        <p>
+          Show your strongest content and explain the type of collaboration
+          you can produce.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CREATOR GUIDES -->
+<section class="section">
+  <div class="container">
+    <div class="section-heading">
+      <div>
+        <div class="eyebrow">Continue learning</div>
+        <h2>Creator guides worth reading.</h2>
+      </div>
+
+      <a class="secondary" href="/blog/">View All Guides →</a>
+    </div>
+
+    <div class="guide-grid">
+      <a class="guide" href="/blog/best-ai-couple-prompts/">
+        <span>AI Prompts</span>
+        <h3>Best AI Couple Prompts</h3>
+        <p>
+          Learn how to structure detailed couple-image prompts for more
+          controlled and consistent generations.
+        </p>
+        <strong>Read guide →</strong>
+      </a>
+
+      <a class="guide" href="/blog/ai-selfie-prompts/">
+        <span>Selfies</span>
+        <h3>AI Selfie Prompts</h3>
+        <p>
+          Explore prompt structures for realistic, aesthetic and creative
+          selfie concepts.
+        </p>
+        <strong>Read guide →</strong>
+      </a>
+
+      <a class="guide" href="/blog/how-to-write-ai-image-prompts/">
+        <span>Prompt Writing</span>
+        <h3>How to Write AI Image Prompts</h3>
+        <p>
+          Understand the components that make an image prompt more specific,
+          controllable and useful.
+        </p>
+        <strong>Read guide →</strong>
+      </a>
+
+      <a class="guide" href="/blog/how-to-get-more-reel-views/">
+        <span>Growth</span>
+        <h3>How to Get More Reel Views</h3>
+        <p>
+          Build a better Reel testing process instead of relying entirely on
+          luck or one-off trends.
+        </p>
+        <strong>Read guide →</strong>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="section section-alt">
+  <div class="container narrow">
+    <div class="center-heading">
+      <div class="eyebrow">Creator Hub FAQ</div>
+      <h2>Common creator questions.</h2>
+    </div>
+
+    <div class="faq">
+      <details>
+        <summary>What should I post on Instagram as an AI creator?</summary>
+        <p>
+          Start with a small number of repeatable formats such as prompt
+          reveals, image transformations, tutorials, comparisons, experiments
+          and visual storytelling. Your strongest format should be easy to
+          recognize and useful enough to make viewers want another post.
+        </p>
+      </details>
+
+      <details>
+        <summary>How often should I post Reels?</summary>
+        <p>
+          There is no universal posting frequency that guarantees growth.
+          Choose a schedule you can maintain while preserving content quality,
+          then use your performance data to improve the formats you publish.
+        </p>
+      </details>
+
+      <details>
+        <summary>What makes an Instagram Reel hook effective?</summary>
+        <p>
+          A useful hook quickly communicates the result, problem, curiosity or
+          benefit behind the video. For prompt content, showing the finished
+          result and explaining what viewers are about to learn can work well.
+        </p>
+      </details>
+
+      <details>
+        <summary>What should I include in a creator media kit?</summary>
+        <p>
+          Include a short creator introduction, niche, audience information,
+          relevant performance metrics, examples of your work, collaboration
+          formats and professional contact information.
+        </p>
+      </details>
+
+      <details>
+        <summary>How can I approach brands for collaborations?</summary>
+        <p>
+          Research brands that genuinely fit your content, identify a useful
+          campaign concept and keep your outreach concise. A specific idea is
+          generally more informative than a generic message asking whether a
+          brand wants to collaborate.
+        </p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section class="section">
+  <div class="container">
+    <div class="final-cta">
+      <div class="eyebrow">Create your next idea</div>
+
+      <h2>
+        From prompt
+        <span class="gradient-text">to post.</span>
+      </h2>
+
+      <p>
+        Explore the CreateLoom prompt library, find an idea worth creating and
+        turn it into your next piece of content.
+      </p>
+
+      <div class="hero-actions">
+        <a class="primary" href="/prompts/">Browse Prompts →</a>
+        <a class="secondary" href="/contact/">Contact CreateLoom</a>
+      </div>
+    </div>
+  </div>
+</section>
+
 </Layout>
+
+<style>
+  .creator-hero {
+    padding-bottom: 50px;
+  }
+
+  .hero-copy {
+    max-width: 760px;
+  }
+
+  .hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 26px;
+  }
+
+  .stats {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    max-width: 850px;
+    margin-top: 46px;
+    border: 1px solid var(--border);
+    border-radius: 18px;
+    overflow: hidden;
+    background: rgba(255,255,255,.025);
+  }
+
+  .stat {
+    padding: 22px;
+    border-right: 1px solid var(--border);
+  }
+
+  .stat:last-child {
+    border-right: 0;
+  }
+
+  .stat strong {
+    display: block;
+    font-size: 28px;
+    letter-spacing: -.04em;
+  }
+
+  .stat span {
+    display: block;
+    margin-top: 4px;
+    color: var(--muted);
+    font-size: 13px;
+  }
+
+  .section-heading {
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+    gap: 30px;
+    margin-bottom: 30px;
+  }
+
+  .section-heading > p {
+    max-width: 430px;
+    color: var(--muted);
+    margin: 0;
+  }
+
+  .resource-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+  }
+
+  .resource {
+    display: block;
+    padding: 24px;
+    border: 1px solid var(--border);
+    border-radius: 18px;
+    background: rgba(255,255,255,.025);
+    color: inherit;
+    text-decoration: none;
+    transition: transform .2s ease, border-color .2s ease, background .2s ease;
+  }
+
+  .resource:hover {
+    transform: translateY(-4px);
+    border-color: rgba(160,110,255,.5);
+    background: rgba(160,110,255,.055);
+  }
+
+  .resource-icon {
+    font-size: 28px;
+    margin-bottom: 22px;
+  }
+
+  .resource h3 {
+    margin: 7px 0 10px;
+    font-size: 19px;
+  }
+
+  .resource p {
+    color: var(--muted);
+    line-height: 1.65;
+    margin: 0;
+    font-size: 14px;
+  }
+
+  .resource-link {
+    display: inline-block;
+    margin-top: 18px;
+    font-size: 13px;
+    font-weight: 700;
+  }
+
+  .split {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: start;
+  }
+
+  .split.reverse {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .lead {
+    font-size: 18px;
+    line-height: 1.75;
+    color: var(--text);
+  }
+
+  .split > div > p:not(.lead) {
+    color: var(--muted);
+    line-height: 1.75;
+  }
+
+  .idea-list {
+    border-top: 1px solid var(--border);
+  }
+
+  .idea {
+    display: grid;
+    grid-template-columns: 45px 1fr;
+    gap: 18px;
+    padding: 20px 0;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .idea > span {
+    font-size: 12px;
+    font-weight: 800;
+    color: var(--muted);
+    padding-top: 4px;
+  }
+
+  .idea h3 {
+    margin: 0 0 5px;
+    font-size: 17px;
+  }
+
+  .idea p {
+    margin: 0;
+    color: var(--muted);
+    line-height: 1.6;
+    font-size: 14px;
+  }
+
+  .section-alt {
+    background: rgba(255,255,255,.018);
+    border-top: 1px solid rgba(255,255,255,.025);
+    border-bottom: 1px solid rgba(255,255,255,.025);
+  }
+
+  .center-heading {
+    max-width: 720px;
+    margin: 0 auto 35px;
+    text-align: center;
+  }
+
+  .center-heading p {
+    color: var(--muted);
+    line-height: 1.75;
+  }
+
+  .hook-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 14px;
+  }
+
+  .hook {
+    min-height: 145px;
+    padding: 24px;
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    background: rgba(255,255,255,.025);
+  }
+
+  .hook span {
+    font-size: 11px;
+    font-weight: 800;
+    color: var(--muted);
+  }
+
+  .hook p {
+    margin: 22px 0 0;
+    font-size: 16px;
+    line-height: 1.5;
+  }
+
+  .tip-box {
+    margin-top: 25px;
+    padding: 22px 24px;
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    background: rgba(255,255,255,.025);
+  }
+
+  .tip-box strong {
+    display: block;
+    margin-bottom: 6px;
+  }
+
+  .tip-box p {
+    margin: 0;
+    color: var(--muted);
+    line-height: 1.65;
+  }
+
+  .narrow {
+    max-width: 900px;
+  }
+
+  .framework {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    margin: 30px 0;
+  }
+
+  .framework > div {
+    padding: 24px;
+    border: 1px solid var(--border);
+    border-radius: 16px;
+  }
+
+  .framework span,
+  .media-kit-grid span {
+    font-size: 12px;
+    font-weight: 800;
+    color: var(--muted);
+  }
+
+  .framework h3 {
+    margin: 14px 0 7px;
+  }
+
+  .framework p {
+    color: var(--muted);
+    line-height: 1.6;
+    margin: 0;
+    font-size: 14px;
+  }
+
+  .inline-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  .inline-links a {
+    padding: 10px 14px;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    text-decoration: none;
+    color: inherit;
+    font-size: 13px;
+    font-weight: 700;
+  }
+
+  .content-card {
+    padding: 30px;
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    background: rgba(255,255,255,.025);
+  }
+
+  .content-flow {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 8px;
+    margin-top: 28px;
+  }
+
+  .content-flow div {
+    padding: 9px 12px;
+    border: 1px solid var(--border);
+    border-radius: 9px;
+    font-size: 12px;
+    font-weight: 700;
+  }
+
+  .content-flow span {
+    color: var(--muted);
+  }
+
+  .check-list {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0 28px;
+  }
+
+  .check-list li {
+    position: relative;
+    padding: 9px 0 9px 27px;
+    color: var(--muted);
+    line-height: 1.55;
+  }
+
+  .check-list li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    top: 9px;
+    font-weight: 800;
+  }
+
+  .growth-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+  }
+
+  .metric-card {
+    padding: 24px;
+    border: 1px solid var(--border);
+    border-radius: 16px;
+  }
+
+  .metric-card > span {
+    font-size: 12px;
+    font-weight: 800;
+    color: var(--muted);
+  }
+
+  .metric-card h3 {
+    margin: 14px 0 9px;
+    font-size: 17px;
+  }
+
+  .metric-card p {
+    margin: 0;
+    color: var(--muted);
+    line-height: 1.6;
+    font-size: 14px;
+  }
+
+  .pipeline {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+  }
+
+  .pipeline-step {
+    padding: 25px;
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    background: rgba(255,255,255,.025);
+  }
+
+  .pipeline-step > span {
+    font-size: 12px;
+    font-weight: 800;
+    color: var(--muted);
+  }
+
+  .pipeline-step h3 {
+    margin: 18px 0 8px;
+  }
+
+  .pipeline-step p {
+    margin: 0;
+    color: var(--muted);
+    line-height: 1.6;
+    font-size: 14px;
+  }
+
+  .planning-board {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    margin-top: 18px;
+  }
+
+  .planning-board > div {
+    padding: 22px;
+    border: 1px solid var(--border);
+    border-radius: 15px;
+  }
+
+  .planning-board span {
+    display: block;
+    font-size: 11px;
+    color: var(--muted);
+    text-transform: uppercase;
+    letter-spacing: .08em;
+  }
+
+  .planning-board strong {
+    display: block;
+    margin: 8px 0;
+  }
+
+  .planning-board p {
+    margin: 0;
+    color: var(--muted);
+    font-size: 13px;
+    line-height: 1.6;
+  }
+
+  .business-card {
+    padding: 30px;
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    background: rgba(255,255,255,.025);
+  }
+
+  .media-kit-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    margin-top: 30px;
+  }
+
+  .media-kit-grid > div {
+    padding: 25px;
+    border: 1px solid var(--border);
+    border-radius: 16px;
+  }
+
+  .media-kit-grid h3 {
+    margin: 13px 0 8px;
+  }
+
+  .media-kit-grid p {
+    margin: 0;
+    color: var(--muted);
+    line-height: 1.65;
+    font-size: 14px;
+  }
+
+  .guide-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+  }
+
+  .guide {
+    display: block;
+    padding: 25px;
+    border: 1px solid var(--border);
+    border-radius: 17px;
+    text-decoration: none;
+    color: inherit;
+    background: rgba(255,255,255,.025);
+    transition: transform .2s ease, border-color .2s ease;
+  }
+
+  .guide:hover {
+    transform: translateY(-3px);
+    border-color: rgba(160,110,255,.45);
+  }
+
+  .guide > span {
+    font-size: 11px;
+    font-weight: 800;
+    color: var(--muted);
+  }
+
+  .guide h3 {
+    margin: 14px 0 9px;
+    font-size: 17px;
+  }
+
+  .guide p {
+    margin: 0;
+    color: var(--muted);
+    line-height: 1.6;
+    font-size: 14px;
+  }
+
+  .guide strong {
+    display: inline-block;
+    margin-top: 18px;
+    font-size: 13px;
+  }
+
+  .faq {
+    border-top: 1px solid var(--border);
+  }
+
+  .faq details {
+    border-bottom: 1px solid var(--border);
+  }
+
+  .faq summary {
+    cursor: pointer;
+    padding: 21px 4px;
+    font-weight: 700;
+    list-style: none;
+  }
+
+  .faq summary::-webkit-details-marker {
+    display: none;
+  }
+
+  .faq summary::after {
+    content: "+";
+    float: right;
+    color: var(--muted);
+    font-size: 20px;
+  }
+
+  .faq details[open] summary::after {
+    content: "−";
+  }
+
+  .faq details p {
+    max-width: 760px;
+    margin: 0;
+    padding: 0 4px 22px;
+    color: var(--muted);
+    line-height: 1.75;
+  }
+
+  .final-cta {
+    padding: 65px 35px;
+    text-align: center;
+    border: 1px solid var(--border);
+    border-radius: 24px;
+    background:
+      radial-gradient(circle at 50% 0%, rgba(150,90,255,.12), transparent 45%),
+      rgba(255,255,255,.025);
+  }
+
+  .final-cta p {
+    max-width: 650px;
+    margin: 15px auto 0;
+    color: var(--muted);
+    line-height: 1.7;
+  }
+
+  .final-cta .hero-actions {
+    justify-content: center;
+  }
+
+  @media (max-width: 1000px) {
+    .resource-grid,
+    .guide-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .growth-grid,
+    .pipeline {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (max-width: 760px) {
+    .stats {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .stat:nth-child(2) {
+      border-right: 0;
+    }
+
+    .stat:nth-child(-n+2) {
+      border-bottom: 1px solid var(--border);
+    }
+
+    .section-heading,
+    .split,
+    .split.reverse {
+      display: block;
+    }
+
+    .section-heading > p {
+      margin-top: 12px;
+    }
+
+    .split > div + div {
+      margin-top: 35px;
+    }
+
+    .resource-grid,
+    .hook-grid,
+    .framework,
+    .growth-grid,
+    .pipeline,
+    .planning-board,
+    .media-kit-grid,
+    .guide-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .content-flow {
+      justify-content: flex-start;
+    }
+
+    .final-cta {
+      padding: 45px 22px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .stats {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    .stat {
+      padding: 16px;
+    }
+
+    .stat strong {
+      font-size: 23px;
+    }
+
+    .resource {
+      padding: 20px;
+    }
+  }
+</style>
