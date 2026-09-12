@@ -5,7 +5,10 @@ import Layout from '../layouts/Layout.astro'; import prompts from '../data/promp
 <section class="hero hero-compact"><div class="container"><div class="eyebrow">Everything in one place</div><h1>Search <span class="gradient-text">CreateLoom</span></h1><p>Find prompts, articles and creator resources.</p><form class="search" id="globalSearch"><input id="q" name="q" placeholder="Search CreateLoom..."/><button>Search</button></form></div></section>
 <section class="section"><div class="container"><div id="results"></div></div></section>
 <script is:inline>
-const data={prompts:{JSON.stringify(prompts)},blogs:{JSON.stringify(blogs)}};
+const data = {
+  prompts: JSON.stringify(prompts),
+  blogs: JSON.stringify(blogs)
+};
 const q=new URLSearchParams(location.search).get('q')||'';const input=document.querySelector('#q');input.value=q;const results=document.querySelector('#results');
 function render(){const term=input.value.trim().toLowerCase();if(!term){results.innerHTML='<div class="card"><h2>Start searching</h2><p>Try “couple”, “reels”, “selfie”, “brand deals” or any topic.</p></div>';return}const ps=data.prompts.filter(x=>(x.title+' '+x.category+' '+x.tags.join(' ')+' '+x.prompt).toLowerCase().includes(term)).slice(0,8);const bs=data.blogs.filter(x=>(x.title+' '+x.category+' '+x.tags.join(' ')+' '+x.excerpt+' '+x.content.join(' ')).toLowerCase().includes(term)).slice(0,8);let html=`<div class="section-head"><div><div class="eyebrow">Search results</div><h2>Results for “${term.replaceAll('"','&quot;')}”</h2></div></div>`;if(ps.length)html+=`<h3>Prompts</h3><div class="grid">${ps.map(p=>`<a class="card" href="/prompt/${p.id}/"><span class="eyebrow">${p.category}</span><h3>${p.title}</h3><p>${p.prompt.slice(0,150)}…</p></a>`).join('')}</div>`;if(bs.length)html+=`<h3 style="margin-top:42px">Blog</h3><div class="grid">${bs.map(b=>`<a class="card" href="/blog/${b.id}/"><span class="eyebrow">${b.category}</span><h3>${b.title}</h3><p>${b.excerpt}</p></a>`).join('')}</div>`;if(!ps.length&&!bs.length)html+='<div class="empty-state" style="display:block">No matching content found.</div>';results.innerHTML=html}
 document.querySelector('#globalSearch').addEventListener('submit',e=>{e.preventDefault();history.replaceState({},'',`/search/?q=${encodeURIComponent(input.value.trim())}`);render()});render();
