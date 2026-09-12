@@ -1,25 +1,31 @@
 ---
 const { p } = Astro.props;
 
-const preview = p.prompt.length > 190
-  ? `${p.prompt.slice(0, 190)}…`
-  : p.prompt;
+const preview =
+  p.prompt.length > 190
+    ? `${p.prompt.slice(0, 190).trim()}…`
+    : p.prompt;
 
-const bestFor = p.best_for || `AI ${p.category.toLowerCase()} image creation`;
+const bestFor =
+  p.best_for ||
+  `AI ${p.category.toLowerCase()} image creation`;
+
+const tags = Array.isArray(p.tags) ? p.tags.slice(0, 3) : [];
 ---
 
 <article
   class="card prompt-card"
   data-title={p.title}
   data-category={p.category}
-  data-tags={p.tags.join(' ')}
+  data-tags={Array.isArray(p.tags) ? p.tags.join(' ') : ''}
   data-prompt={p.prompt}
 >
+  <!-- Card top -->
   <div class="prompt-top">
     <a
       class="category-link"
       href={`/prompts/${p.category.toLowerCase()}/`}
-      aria-label={`Browse ${p.category} prompts`}
+      aria-label={`Browse ${p.category} AI prompts`}
     >
       {p.category}
     </a>
@@ -27,20 +33,25 @@ const bestFor = p.best_for || `AI ${p.category.toLowerCase()} image creation`;
     <button
       class="icon-btn fav-btn"
       data-fav={p.id}
-      aria-label={`Favorite ${p.title}`}
-      aria-pressed="false"
       type="button"
+      aria-label={`Save ${p.title} to favorites`}
+      aria-pressed="false"
+      title="Save to favorites"
     >
-      ♡
+      <span aria-hidden="true">♡</span>
     </button>
   </div>
 
+  <!-- Main card content -->
   <a
     class="prompt-card-main"
     href={`/prompt/${p.id}/`}
     aria-label={`Open ${p.title}`}
   >
-    <h3>{p.title}</h3>
+    <div class="title-row">
+      <h3>{p.title}</h3>
+      <span class="open-arrow" aria-hidden="true">↗</span>
+    </div>
 
     <p class="prompt-preview">
       {preview}
@@ -51,29 +62,35 @@ const bestFor = p.best_for || `AI ${p.category.toLowerCase()} image creation`;
       <strong>{bestFor}</strong>
     </div>
 
-    <div class="tags">
-      {p.tags.slice(0, 3).map((tag) => (
-        <span class="tag">#{tag}</span>
-      ))}
-    </div>
+    {tags.length > 0 && (
+      <div class="tags" aria-label="Prompt tags">
+        {tags.map((tag) => (
+          <span class="tag">#{tag}</span>
+        ))}
+      </div>
+    )}
   </a>
 
+  <!-- Actions -->
   <div class="card-actions">
-
     <button
       class="small-btn copy-btn"
       data-copy={p.prompt}
       type="button"
+      aria-label={`Copy ${p.title} prompt`}
     >
-      📋 Copy
+      <span aria-hidden="true">📋</span>
+      Copy
     </button>
 
     <button
       class="small-btn share-btn"
       data-url={`/prompt/${p.id}/`}
       type="button"
+      aria-label={`Share ${p.title}`}
     >
-      🔗 Share
+      <span aria-hidden="true">🔗</span>
+      Share
     </button>
 
     <a
@@ -81,9 +98,9 @@ const bestFor = p.best_for || `AI ${p.category.toLowerCase()} image creation`;
       href={`/prompt/${p.id}/`}
       aria-label={`Open ${p.title}`}
     >
-      ↗ Open
+      Open
+      <span aria-hidden="true">↗</span>
     </a>
-
   </div>
 </article>
 
@@ -94,28 +111,70 @@ const bestFor = p.best_for || `AI ${p.category.toLowerCase()} image creation`;
     flex-direction: column;
     min-width: 0;
     overflow: hidden;
+    height: 100%;
+    padding: 20px;
+    border: 1px solid rgba(255,255,255,.075);
+    border-radius: 18px;
+    background:
+      linear-gradient(
+        145deg,
+        rgba(255,255,255,.035),
+        rgba(255,255,255,.018)
+      );
+    transition:
+      transform .22s ease,
+      border-color .22s ease,
+      box-shadow .22s ease;
   }
+
+  .prompt-card:hover {
+    transform: translateY(-3px);
+    border-color: rgba(139,92,246,.32);
+    box-shadow: 0 14px 40px rgba(0,0,0,.18);
+  }
+
+  /* Top */
 
   .prompt-top {
     display: flex;
     align-items: center;
     justify-content: space-between;
     gap: 12px;
+    min-height: 34px;
   }
 
   .category-link {
     display: inline-flex;
+    align-items: center;
+    width: fit-content;
     color: #a78bfa;
     text-decoration: none;
-    font-size: 0.72rem;
-    font-weight: 800;
-    letter-spacing: 0.08em;
+    font-size: .69rem;
+    font-weight: 850;
+    letter-spacing: .09em;
     text-transform: uppercase;
   }
 
   .category-link:hover {
-    color: #c4b5fd;
+    color: #ddd6fe;
   }
+
+  .category-link::after {
+    content: "→";
+    margin-left: 5px;
+    opacity: 0;
+    transform: translateX(-3px);
+    transition:
+      opacity .18s ease,
+      transform .18s ease;
+  }
+
+  .category-link:hover::after {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  /* Favorite */
 
   .icon-btn {
     flex: 0 0 auto;
@@ -123,46 +182,84 @@ const bestFor = p.best_for || `AI ${p.category.toLowerCase()} image creation`;
     height: 34px;
     display: grid;
     place-items: center;
-    border: 1px solid rgba(255,255,255,0.08);
+    border: 1px solid rgba(255,255,255,.08);
     border-radius: 10px;
-    background: rgba(255,255,255,0.03);
-    color: #a1a1aa;
+    background: rgba(255,255,255,.025);
+    color: #8f8f98;
     cursor: pointer;
-    font-size: 1.05rem;
+    font: inherit;
     transition:
-      background 0.2s ease,
-      border-color 0.2s ease,
-      color 0.2s ease,
-      transform 0.2s ease;
+      background .2s ease,
+      border-color .2s ease,
+      color .2s ease,
+      transform .2s ease;
   }
 
   .icon-btn:hover {
-    border-color: rgba(139,92,246,0.4);
-    background: rgba(139,92,246,0.08);
+    border-color: rgba(139,92,246,.38);
+    background: rgba(139,92,246,.08);
     color: #c4b5fd;
     transform: scale(1.04);
   }
 
+  .icon-btn[aria-pressed="true"] {
+    border-color: rgba(139,92,246,.38);
+    background: rgba(139,92,246,.11);
+    color: #c4b5fd;
+  }
+
+  /* Main */
+
   .prompt-card-main {
     display: block;
     flex: 1;
+    min-width: 0;
+    margin-top: 2px;
     color: inherit;
     text-decoration: none;
   }
 
+  .title-row {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
   .prompt-card h3 {
-    margin: 15px 0 10px;
+    flex: 1;
+    margin: 15px 0 9px;
     color: #fff;
-    font-size: 1.12rem;
-    line-height: 1.35;
+    font-size: 1.08rem;
+    line-height: 1.38;
+    letter-spacing: -.012em;
+  }
+
+  .open-arrow {
+    margin-top: 17px;
+    color: #71717a;
+    font-size: .9rem;
+    opacity: 0;
+    transform: translate(-3px, 3px);
+    transition:
+      opacity .2s ease,
+      transform .2s ease,
+      color .2s ease;
+  }
+
+  .prompt-card:hover .open-arrow {
+    opacity: 1;
+    color: #a78bfa;
+    transform: translate(0, 0);
   }
 
   .prompt-preview {
     margin: 0;
     color: var(--muted, #a1a1aa);
-    font-size: 0.9rem;
-    line-height: 1.7;
+    font-size: .87rem;
+    line-height: 1.68;
   }
+
+  /* Best for */
 
   .best-for {
     display: flex;
@@ -170,93 +267,148 @@ const bestFor = p.best_for || `AI ${p.category.toLowerCase()} image creation`;
     gap: 4px;
     margin-top: 16px;
     padding: 11px 12px;
+    border: 1px solid rgba(139,92,246,.11);
     border-radius: 10px;
-    background: rgba(139,92,246,0.055);
-    border: 1px solid rgba(139,92,246,0.11);
+    background: rgba(139,92,246,.045);
   }
 
   .best-for span {
-    color: #8f8f99;
-    font-size: 0.68rem;
-    font-weight: 800;
-    letter-spacing: 0.07em;
+    color: #85858f;
+    font-size: .65rem;
+    font-weight: 850;
+    letter-spacing: .08em;
     text-transform: uppercase;
   }
 
   .best-for strong {
-    color: #cfcfd6;
-    font-size: 0.78rem;
+    color: #d2d2d8;
+    font-size: .77rem;
     font-weight: 500;
     line-height: 1.45;
   }
+
+  /* Tags */
 
   .tags {
     display: flex;
     flex-wrap: wrap;
     gap: 6px;
-    margin-top: 15px;
+    margin-top: 14px;
   }
 
   .tag {
     padding: 5px 8px;
-    border: 1px solid rgba(255,255,255,0.07);
+    border: 1px solid rgba(255,255,255,.065);
     border-radius: 999px;
-    background: rgba(255,255,255,0.025);
-    color: #a1a1aa;
-    font-size: 0.7rem;
+    background: rgba(255,255,255,.022);
+    color: #9999a3;
+    font-size: .68rem;
+    line-height: 1;
   }
 
+  /* Actions */
+
   .card-actions {
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 1fr auto;
     gap: 7px;
-    flex-wrap: wrap;
     margin-top: 18px;
     padding-top: 14px;
-    border-top: 1px solid rgba(255,255,255,0.06);
+    border-top: 1px solid rgba(255,255,255,.055);
   }
 
   .small-btn {
     display: inline-flex;
     align-items: center;
     justify-content: center;
+    gap: 5px;
     min-height: 34px;
     padding: 7px 10px;
-    border: 1px solid rgba(255,255,255,0.08);
+    border: 1px solid rgba(255,255,255,.075);
     border-radius: 9px;
-    background: rgba(255,255,255,0.025);
-    color: #c4c4cc;
+    background: rgba(255,255,255,.022);
+    color: #bdbdc6;
     font: inherit;
-    font-size: 0.75rem;
+    font-size: .72rem;
     font-weight: 700;
     text-decoration: none;
+    white-space: nowrap;
     cursor: pointer;
     transition:
-      background 0.2s ease,
-      border-color 0.2s ease,
-      color 0.2s ease;
+      background .2s ease,
+      border-color .2s ease,
+      color .2s ease,
+      transform .2s ease;
   }
 
   .small-btn:hover {
-    border-color: rgba(139,92,246,0.35);
-    background: rgba(139,92,246,0.08);
+    border-color: rgba(139,92,246,.34);
+    background: rgba(139,92,246,.075);
     color: #fff;
+    transform: translateY(-1px);
   }
 
   .open-btn {
-    margin-left: auto;
-    border-color: rgba(139,92,246,0.25);
+    border-color: rgba(139,92,246,.22);
     color: #c4b5fd;
   }
 
-  @media (max-width: 500px) {
+  /* Keyboard accessibility */
+
+  .category-link:focus-visible,
+  .prompt-card-main:focus-visible,
+  .small-btn:focus-visible,
+  .icon-btn:focus-visible {
+    outline: 2px solid #a78bfa;
+    outline-offset: 3px;
+    border-radius: 8px;
+  }
+
+  /* Mobile */
+
+  @media (max-width: 650px) {
+    .prompt-card {
+      padding: 18px;
+    }
+
     .card-actions {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
+      grid-template-columns: 1fr 1fr;
     }
 
     .open-btn {
-      margin-left: 0;
       grid-column: 1 / -1;
+    }
+  }
+
+  @media (max-width: 380px) {
+    .prompt-card {
+      padding: 16px;
+    }
+
+    .card-actions {
+      grid-template-columns: 1fr;
+    }
+
+    .open-btn {
+      grid-column: auto;
+    }
+
+    .small-btn {
+      width: 100%;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .prompt-card,
+    .icon-btn,
+    .small-btn,
+    .open-arrow,
+    .category-link::after {
+      transition: none;
+    }
+
+    .prompt-card:hover {
+      transform: none;
     }
   }
 </style>
