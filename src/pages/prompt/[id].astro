@@ -1,20 +1,818 @@
+```astro
 ---
-import Layout from '../../layouts/Layout.astro'; import PromptCard from '../../components/PromptCard.astro'; import prompts from '../../data/prompts.json';
-export function getStaticPaths(){return prompts.map(p=>({params:{id:p.id},props:{p}}))}
-const {p}=Astro.props;
-const related=prompts.filter(x=>x.id!==p.id && (x.category===p.category || x.tags.some(t=>p.tags.includes(t)))).slice(0,3);
+import Layout from '../../layouts/Layout.astro';
+import PromptCard from '../../components/PromptCard.astro';
+import prompts from '../../data/prompts.json';
+import blogs from '../../data/blogs.json';
+
+export function getStaticPaths() {
+  return prompts.map((p) => ({
+    params: { id: p.id },
+    props: { p }
+  }));
+}
+
+const { p } = Astro.props;
+
+const related = prompts
+  .filter(
+    (x) =>
+      x.id !== p.id &&
+      (x.category === p.category ||
+        x.tags.some((t) => p.tags.includes(t)))
+  )
+  .slice(0, 4);
+
+const relatedBlogs = blogs
+  .filter(
+    (b) =>
+      b.category === p.category ||
+      b.tags.some((t) => p.tags.includes(t))
+  )
+  .slice(0, 3);
+
+const bestFor =
+  p.best_for ||
+  `AI image creation, ${p.category.toLowerCase()} photography and creative social media content`;
+
+const promptTips = p.prompt_tips || [
+  'Upload a clear reference image when identity preservation is important.',
+  'Change one major visual variable at a time when refining the result.',
+  'Keep the main subject and composition instructions clear and specific.'
+];
+
+const canonicalUrl = new URL(
+  `/prompt/${p.id}/`,
+  Astro.site || 'https://createloom.vercel.app'
+);
+
+const pageDescription =
+  `Copy the ${p.title} for your next AI image creation. ` +
+  `A detailed ${p.category.toLowerCase()} prompt from CreateLoom.`;
+
+const webPageSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'WebPage',
+  name: p.title,
+  description: pageDescription,
+  url: canonicalUrl.href,
+  isPartOf: {
+    '@type': 'WebSite',
+    name: 'CreateLoom',
+    url: 'https://createloom.vercel.app/'
+  }
+};
+
+const breadcrumbSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    {
+      '@type': 'ListItem',
+      position: 1,
+      name: 'Home',
+      item: 'https://createloom.vercel.app/'
+    },
+    {
+      '@type': 'ListItem',
+      position: 2,
+      name: 'AI Prompts',
+      item: 'https://createloom.vercel.app/prompts/'
+    },
+    {
+      '@type': 'ListItem',
+      position: 3,
+      name: p.category,
+      item: `https://createloom.vercel.app/prompts/${p.category.toLowerCase()}/`
+    },
+    {
+      '@type': 'ListItem',
+      position: 4,
+      name: p.title,
+      item: canonicalUrl.href
+    }
+  ]
+};
 ---
-<Layout title={`${p.title} | CreateLoom`} description={`Copy the ${p.title} for your next AI image creation. Ready-to-use ${p.category.toLowerCase()} prompt from CreateLoom.`} active="Prompts">
-<article class="prompt-page container">
-  <nav class="breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a><span>/</span><a href="/prompts/">Prompts</a><span>/</span><a href={`/prompts/${p.category.toLowerCase()}/`}>{p.category}</a><span>/</span><span>{p.title}</span></nav>
-  <div class="eyebrow" style="margin-top:28px">{p.category}</div>
-  <h1>{p.title}</h1>
-  <div class="tags">{p.tags.map(t=><span class="tag">#{t}</span>)}</div>
-  <div class="prompt-box" aria-label="Prompt text">{p.prompt}</div>
-  <div class="wide-actions"><button class="primary copy-btn" data-copy={p.prompt}>📋 Copy Prompt</button><button class="secondary share-btn" data-url={`/prompt/${p.id}/`}>🔗 Share</button><button class="secondary fav-btn" data-fav={p.id} aria-pressed="false">♡ Favorite</button></div>
-  <div class="ad">Advertisement</div>
-  <section><h2>How to use this prompt</h2><ol><li>Copy the prompt.</li><li>Open your preferred AI image generator.</li><li>Upload a reference image if your workflow requires one.</li><li>Paste the prompt, adjust details if needed, and generate your image.</li></ol></section>
-  {related.length>0 && <section><h2>You might also like</h2><div class="grid">{related.map(x=><PromptCard p={x}/>)}</div></section>}
-</article>
-<script type="application/ld+json" set:html={JSON.stringify({"@context":"https://schema.org","@type":"WebPage","name":p.title,"description":`Copy the ${p.title} on CreateLoom.`,"url":new URL(`/prompt/${p.id}/`,Astro.site||Astro.url).href})}></script>
+
+<Layout
+  title={`${p.title} | CreateLoom`}
+  description={pageDescription}
+  active="Prompts"
+>
+  <!-- Structured data -->
+  <script
+    type="application/ld+json"
+    set:html={JSON.stringify(webPageSchema)}
+  />
+
+  <script
+    type="application/ld+json"
+    set:html={JSON.stringify(breadcrumbSchema)}
+  />
+
+  <article class="prompt-page container">
+
+    <!-- Breadcrumb -->
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <a href="/">Home</a>
+      <span>/</span>
+      <a href="/prompts/">Prompts</a>
+      <span>/</span>
+      <a href={`/prompts/${p.category.toLowerCase()}/`}>
+        {p.category}
+      </a>
+      <span>/</span>
+      <span>{p.title}</span>
+    </nav>
+
+    <!-- Header -->
+    <header class="prompt-header">
+
+      <div class="eyebrow">{p.category}</div>
+
+      <h1>{p.title}</h1>
+
+      <p class="prompt-intro">
+        A detailed, ready-to-use AI image prompt designed for
+        realistic and creative image generation.
+      </p>
+
+      <div class="tags">
+        {p.tags.map((tag) => (
+          <span class="tag">#{tag}</span>
+        ))}
+      </div>
+
+    </header>
+
+    <!-- Prompt -->
+    <section class="prompt-section">
+
+      <div class="section-label">
+        <span>✦</span>
+        Exact Prompt
+      </div>
+
+      <div
+        class="prompt-box"
+        aria-label="Full AI image prompt"
+      >
+        {p.prompt}
+      </div>
+
+      <div class="wide-actions">
+
+        <button
+          class="primary copy-btn"
+          data-copy={p.prompt}
+        >
+          📋 Copy Prompt
+        </button>
+
+        <button
+          class="secondary share-btn"
+          data-url={`/prompt/${p.id}/`}
+        >
+          🔗 Share
+        </button>
+
+        <button
+          class="secondary fav-btn"
+          data-fav={p.id}
+          aria-pressed="false"
+        >
+          ♡ Favorite
+        </button>
+
+      </div>
+
+    </section>
+
+    <!-- Advertisement -->
+    <div class="ad">
+      Advertisement
+    </div>
+
+    <!-- Best For -->
+    <section class="info-section">
+
+      <div class="eyebrow">Best for</div>
+
+      <h2>What this prompt is useful for</h2>
+
+      <p class="best-for">
+        {bestFor}
+      </p>
+
+    </section>
+
+    <!-- Prompt Tips -->
+    <section class="info-section">
+
+      <div class="eyebrow">Prompt tips</div>
+
+      <h2>Get better results from this prompt</h2>
+
+      <div class="tips-list">
+
+        {promptTips.map((tip, index) => (
+          <div class="tip">
+
+            <span class="tip-number">
+              {index + 1}
+            </span>
+
+            <p>{tip}</p>
+
+          </div>
+        ))}
+
+      </div>
+
+    </section>
+
+    <!-- How to Use -->
+    <section class="info-section">
+
+      <div class="eyebrow">Quick guide</div>
+
+      <h2>How to use this AI image prompt</h2>
+
+      <ol class="how-to-list">
+        <li>
+          <strong>Copy the prompt.</strong>
+          Use the Copy Prompt button above to copy the complete prompt.
+        </li>
+
+        <li>
+          <strong>Choose your image generator.</strong>
+          Open the AI image generation tool you normally use.
+        </li>
+
+        <li>
+          <strong>Add reference images when needed.</strong>
+          If the prompt is designed around a person's identity,
+          upload a clear reference image when supported by your tool.
+        </li>
+
+        <li>
+          <strong>Paste and generate.</strong>
+          Paste the prompt and generate your first result.
+        </li>
+
+        <li>
+          <strong>Refine one detail at a time.</strong>
+          Adjust lighting, pose, clothing, location or composition
+          instead of changing everything simultaneously.
+        </li>
+      </ol>
+
+    </section>
+
+    <!-- Mid-page Advertisement -->
+    <div class="ad">
+      Advertisement
+    </div>
+
+    <!-- Related Prompts -->
+    {related.length > 0 && (
+      <section class="related-section">
+
+        <div class="eyebrow">More like this</div>
+
+        <h2>Related AI Prompts</h2>
+
+        <p class="section-description">
+          Explore more CreateLoom prompts with similar styles,
+          categories and visual concepts.
+        </p>
+
+        <div class="grid">
+
+          {related.map((x) => (
+            <PromptCard p={x} />
+          ))}
+
+        </div>
+
+        <div class="center-link">
+          <a href="/prompts/">
+            Explore all prompts →
+          </a>
+        </div>
+
+      </section>
+    )}
+
+    <!-- Related Blogs -->
+    {relatedBlogs.length > 0 && (
+      <section class="related-section">
+
+        <div class="eyebrow">Learn more</div>
+
+        <h2>Creator Guides</h2>
+
+        <p class="section-description">
+          Learn how to write better prompts, create AI content
+          and grow your creator workflow.
+        </p>
+
+        <div class="blog-grid">
+
+          {relatedBlogs.map((blog) => (
+            <a
+              class="blog-card"
+              href={`/blog/${blog.id}/`}
+            >
+
+              <span class="card-category">
+                {blog.category}
+              </span>
+
+              <h3>{blog.title}</h3>
+
+              <p>{blog.excerpt}</p>
+
+              <span class="card-link">
+                Read guide →
+              </span>
+
+            </a>
+          ))}
+
+        </div>
+
+      </section>
+    )}
+
+    <!-- Bottom CTA -->
+    <section class="prompt-cta">
+
+      <div class="eyebrow">CreateLoom</div>
+
+      <h2>Looking for more AI image prompts?</h2>
+
+      <p>
+        Explore the full CreateLoom library of ready-to-use
+        prompts for couples, selfies, portraits, fashion,
+        vintage photography, anime and more.
+      </p>
+
+      <a
+        class="primary cta-button"
+        href="/prompts/"
+      >
+        Browse All Prompts →
+      </a>
+
+    </section>
+
+  </article>
+
+  <!-- Copy / Share / Favorite functionality -->
+  <script is:inline>
+    document.addEventListener('click', async (event) => {
+
+      const copyButton = event.target.closest('.copy-btn');
+
+      if (copyButton) {
+        try {
+          await navigator.clipboard.writeText(
+            copyButton.dataset.copy || ''
+          );
+
+          const oldText = copyButton.textContent;
+
+          copyButton.textContent = '✓ Copied';
+
+          setTimeout(() => {
+            copyButton.textContent = oldText;
+          }, 1400);
+
+        } catch {
+          copyButton.textContent = 'Copy failed';
+
+          setTimeout(() => {
+            copyButton.textContent = '📋 Copy Prompt';
+          }, 1400);
+        }
+      }
+
+      const shareButton = event.target.closest('.share-btn');
+
+      if (shareButton) {
+
+        const url = new URL(
+          shareButton.dataset.url,
+          location.origin
+        ).href;
+
+        if (navigator.share) {
+
+          try {
+            await navigator.share({
+              title: document.title,
+              url
+            });
+          } catch {
+            // User cancelled sharing.
+          }
+
+        } else {
+
+          try {
+            await navigator.clipboard.writeText(url);
+
+            const oldText = shareButton.textContent;
+
+            shareButton.textContent = '✓ Link Copied';
+
+            setTimeout(() => {
+              shareButton.textContent = oldText;
+            }, 1400);
+
+          } catch {
+            // Clipboard unavailable.
+          }
+        }
+      }
+
+      const favoriteButton = event.target.closest('.fav-btn');
+
+      if (favoriteButton) {
+
+        const storageKey = 'cl-favorites';
+
+        const favorites = JSON.parse(
+          localStorage.getItem(storageKey) || '[]'
+        );
+
+        const id = favoriteButton.dataset.fav;
+
+        const index = favorites.indexOf(id);
+
+        if (index >= 0) {
+
+          favorites.splice(index, 1);
+
+          favoriteButton.textContent = '♡ Favorite';
+          favoriteButton.setAttribute('aria-pressed', 'false');
+
+        } else {
+
+          favorites.push(id);
+
+          favoriteButton.textContent = '♥ Saved';
+          favoriteButton.setAttribute('aria-pressed', 'true');
+        }
+
+        localStorage.setItem(
+          storageKey,
+          JSON.stringify(favorites)
+        );
+      }
+
+    });
+  </script>
 </Layout>
+
+<style>
+  .prompt-page {
+    max-width: 1080px;
+    margin: 0 auto;
+    padding: 38px 20px 90px;
+  }
+
+  .breadcrumb {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    align-items: center;
+    color: var(--muted, #9ca3af);
+    font-size: 0.86rem;
+  }
+
+  .breadcrumb a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  .breadcrumb a:hover {
+    color: #c4b5fd;
+  }
+
+  .prompt-header {
+    text-align: center;
+    max-width: 850px;
+    margin: 42px auto 35px;
+  }
+
+  .prompt-header h1 {
+    margin: 12px 0 18px;
+    font-size: clamp(2.2rem, 5vw, 4rem);
+    line-height: 1.05;
+    letter-spacing: -0.045em;
+  }
+
+  .prompt-intro {
+    max-width: 720px;
+    margin: 0 auto;
+    color: var(--muted, #a1a1aa);
+    line-height: 1.75;
+    font-size: 1.05rem;
+  }
+
+  .tags {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 20px;
+  }
+
+  .tag {
+    padding: 6px 10px;
+    border: 1px solid rgba(139, 92, 246, 0.25);
+    border-radius: 999px;
+    background: rgba(139, 92, 246, 0.08);
+    color: #c4b5fd;
+    font-size: 0.78rem;
+  }
+
+  .prompt-section {
+    max-width: 920px;
+    margin: 0 auto;
+  }
+
+  .section-label {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    margin-bottom: 10px;
+    color: #c4b5fd;
+    font-size: 0.82rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+  }
+
+  .prompt-box {
+    padding: 28px;
+    border: 1px solid rgba(139, 92, 246, 0.25);
+    border-radius: 18px;
+    background:
+      linear-gradient(
+        145deg,
+        rgba(139, 92, 246, 0.09),
+        rgba(255,255,255,0.025)
+      );
+    color: #e8e8ed;
+    font-size: 1rem;
+    line-height: 1.85;
+    white-space: pre-wrap;
+    overflow-wrap: anywhere;
+  }
+
+  .wide-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 14px;
+  }
+
+  .wide-actions button {
+    cursor: pointer;
+  }
+
+  .ad {
+    min-height: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 38px auto;
+    border: 1px dashed rgba(255,255,255,0.08);
+    border-radius: 14px;
+    color: #71717a;
+    font-size: 0.75rem;
+    max-width: 920px;
+  }
+
+  .info-section {
+    max-width: 920px;
+    margin: 55px auto 0;
+  }
+
+  .info-section h2,
+  .related-section h2 {
+    margin: 8px 0 14px;
+    font-size: clamp(1.5rem, 3vw, 2.15rem);
+    letter-spacing: -0.025em;
+  }
+
+  .best-for {
+    padding: 20px;
+    border-left: 3px solid #8b5cf6;
+    border-radius: 0 12px 12px 0;
+    background: rgba(139,92,246,0.07);
+    color: #d4d4d8;
+    line-height: 1.75;
+  }
+
+  .tips-list {
+    display: grid;
+    gap: 12px;
+  }
+
+  .tip {
+    display: flex;
+    gap: 14px;
+    align-items: flex-start;
+    padding: 16px;
+    border: 1px solid rgba(255,255,255,0.07);
+    border-radius: 14px;
+    background: rgba(255,255,255,0.025);
+  }
+
+  .tip-number {
+    flex: 0 0 30px;
+    height: 30px;
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+    background: rgba(139,92,246,0.15);
+    color: #c4b5fd;
+    font-weight: 800;
+    font-size: 0.85rem;
+  }
+
+  .tip p {
+    margin: 3px 0 0;
+    color: #c9c9d1;
+    line-height: 1.7;
+  }
+
+  .how-to-list {
+    display: grid;
+    gap: 15px;
+    padding-left: 22px;
+    color: #c9c9d1;
+    line-height: 1.75;
+  }
+
+  .how-to-list li {
+    padding-left: 6px;
+  }
+
+  .how-to-list strong {
+    color: #fff;
+  }
+
+  .related-section {
+    max-width: 920px;
+    margin: 70px auto 0;
+    padding-top: 45px;
+    border-top: 1px solid rgba(255,255,255,0.08);
+  }
+
+  .section-description {
+    max-width: 720px;
+    color: var(--muted, #a1a1aa);
+    line-height: 1.7;
+  }
+
+  .center-link {
+    text-align: center;
+    margin-top: 25px;
+  }
+
+  .center-link a {
+    color: #c4b5fd;
+    text-decoration: none;
+    font-weight: 700;
+  }
+
+  .blog-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 15px;
+    margin-top: 24px;
+  }
+
+  .blog-card {
+    display: block;
+    padding: 20px;
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 16px;
+    background: rgba(255,255,255,0.025);
+    color: inherit;
+    text-decoration: none;
+    transition:
+      transform 0.2s ease,
+      border-color 0.2s ease;
+  }
+
+  .blog-card:hover {
+    transform: translateY(-3px);
+    border-color: rgba(139,92,246,0.4);
+  }
+
+  .card-category {
+    color: #a78bfa;
+    font-size: 0.72rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+  }
+
+  .blog-card h3 {
+    margin: 9px 0;
+    color: #fff;
+    line-height: 1.35;
+  }
+
+  .blog-card p {
+    color: var(--muted, #a1a1aa);
+    font-size: 0.88rem;
+    line-height: 1.65;
+  }
+
+  .card-link {
+    display: inline-block;
+    margin-top: 7px;
+    color: #c4b5fd;
+    font-size: 0.84rem;
+    font-weight: 700;
+  }
+
+  .prompt-cta {
+    max-width: 920px;
+    margin: 70px auto 0;
+    padding: 38px;
+    text-align: center;
+    border: 1px solid rgba(139,92,246,0.2);
+    border-radius: 22px;
+    background:
+      linear-gradient(
+        145deg,
+        rgba(139,92,246,0.12),
+        rgba(255,255,255,0.025)
+      );
+  }
+
+  .prompt-cta h2 {
+    margin: 8px 0 12px;
+    font-size: 1.8rem;
+  }
+
+  .prompt-cta p {
+    max-width: 650px;
+    margin: 0 auto;
+    color: var(--muted, #a1a1aa);
+    line-height: 1.7;
+  }
+
+  .cta-button {
+    display: inline-flex;
+    margin-top: 20px;
+    text-decoration: none;
+  }
+
+  @media (max-width: 760px) {
+    .prompt-page {
+      padding-top: 25px;
+    }
+
+    .prompt-header {
+      margin-top: 32px;
+    }
+
+    .prompt-header h1 {
+      font-size: 2.25rem;
+    }
+
+    .prompt-box {
+      padding: 20px;
+      font-size: 0.95rem;
+      line-height: 1.75;
+    }
+
+    .wide-actions {
+      display: grid;
+      grid-template-columns: 1fr;
+    }
+
+    .wide-actions button {
+      width: 100%;
+    }
+
+    .blog-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .prompt-cta {
+      padding: 28px 20px;
+    }
+  }
+</style>
+```
