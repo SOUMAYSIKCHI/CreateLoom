@@ -15,13 +15,17 @@ const nav = [
   ['Brands', '/brands/']
 ];
 
-const canonical = new URL(
-  Astro.url.pathname,
-  Astro.site || 'https://createloom.vercel.app'
-);
-
 const siteName = 'CreateLoom';
 const siteUrl = 'https://createloom.vercel.app';
+
+const canonical = new URL(
+  Astro.url.pathname,
+  Astro.site || siteUrl
+);
+
+const canonicalHref = canonical.href;
+
+const year = new Date().getFullYear();
 ---
 
 <html lang="en">
@@ -32,8 +36,11 @@ const siteUrl = 'https://createloom.vercel.app';
     name="viewport"
     content="width=device-width, initial-scale=1"
   />
-  
-  <meta name="google-site-verification" content="xGY9a0sGJrY8z7fgWek6AN0Y5K0FjYj47oOj3r-_RCw" />
+
+  <meta
+    name="google-site-verification"
+    content="xGY9a0sGJrY8z7fgWek6AN0Y5K0FjYj47oOj3r-_RCw"
+  />
 
   <title>{title}</title>
 
@@ -42,159 +49,139 @@ const siteUrl = 'https://createloom.vercel.app';
     content={description}
   />
 
-  <meta name="robots" content="index, follow" />
-
-  <meta name="theme-color" content="#08070d" />
-
-  <link rel="canonical" href={canonical} />
-
-  <!-- Open Graph -->
-  <meta property="og:type" content="website" />
-  <meta property="og:site_name" content={siteName} />
-  <meta property="og:title" content={title} />
-  <meta property="og:description" content={description} />
-  <meta property="og:url" content={canonical} />
-
-  <!-- Twitter / X -->
-  <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content={title} />
-  <meta name="twitter:description" content={description} />
-
-  <!-- Search engines -->
   <meta
-    name="googlebot"
-    content="index, follow, max-image-preview:large"
+    name="robots"
+    content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"
   />
 
-  <!-- Sitemap -->
+  <meta
+    name="googlebot"
+    content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"
+  />
+
+  <meta
+    name="theme-color"
+    content="#08070d"
+  />
+
+  <meta
+    name="color-scheme"
+    content="dark"
+  />
+
+  <link
+    rel="canonical"
+    href={canonicalHref}
+  />
+
   <link
     rel="sitemap"
     type="application/xml"
     href="/sitemap.xml"
   />
+
+  <!-- Open Graph -->
+  <meta
+    property="og:type"
+    content="website"
+  />
+
+  <meta
+    property="og:site_name"
+    content={siteName}
+  />
+
+  <meta
+    property="og:locale"
+    content="en_US"
+  />
+
+  <meta
+    property="og:title"
+    content={title}
+  />
+
+  <meta
+    property="og:description"
+    content={description}
+  />
+
+  <meta
+    property="og:url"
+    content={canonicalHref}
+  />
+
+  <!-- Twitter / X -->
+  <meta
+    name="twitter:card"
+    content="summary"
+  />
+
+  <meta
+    name="twitter:title"
+    content={title}
+  />
+
+  <meta
+    name="twitter:description"
+    content={description}
+  />
+
+  <!-- Performance -->
+  <link
+    rel="dns-prefetch"
+    href="//www.google.com"
+  />
+
+  <!-- Global site identity -->
+  <script
+    type="application/ld+json"
+    set:html={JSON.stringify({
+      '@context': 'https://schema.org',
+      '@type': 'WebSite',
+      name: siteName,
+      url: `${siteUrl}/`,
+      description:
+        'AI image prompts and creator resources for Instagram creators.',
+      potentialAction: {
+        '@type': 'SearchAction',
+        target: `${siteUrl}/search/?q={search_term_string}`,
+        'query-input':
+          'required name=search_term_string'
+      }
+    })}
+  />
 </head>
 
 <body>
 
-<header class="site-header">
-  <div class="container nav">
-
-    <a
-      class="brand"
-      href="/"
-      aria-label="CreateLoom home"
-    >
-      <span
-        class="logo"
-        aria-hidden="true"
-      >
-        <svg
-          viewBox="0 0 32 32"
-          fill="none"
-        >
-          <path
-            d="M23.5 8.5a10.5 10.5 0 1 0 0 15"
-            stroke="currentColor"
-            stroke-width="2.4"
-            stroke-linecap="round"
-          />
-          <path
-            d="M8.5 11h15M8.5 21h15"
-            stroke="currentColor"
-            stroke-width="2.4"
-            stroke-linecap="round"
-          />
-        </svg>
-      </span>
-
-      <span>CreateLoom</span>
-    </a>
-
-    <nav
-      class="nav-links"
-      aria-label="Main navigation"
-    >
-      {
-        nav.map(([label, url]) => (
-          <a
-            class:list={{ active: active === label }}
-            href={url}
-          >
-            {label}
-          </a>
-        ))
-      }
-    </nav>
-
-    <form
-      class="header-search"
-      action="/search/"
-      role="search"
-    >
-      <span aria-hidden="true">⌕</span>
-
-      <input
-        name="q"
-        placeholder="Search"
-        aria-label="Search CreateLoom"
-      />
-    </form>
-
-    <button
-      class="mobile-menu"
-      type="button"
-      aria-label="Open navigation"
-      aria-expanded="false"
-    >
-      ☰
-    </button>
-
-  </div>
-
-  <div
-    class="mobile-nav"
-    hidden
+  <!-- Accessibility -->
+  <a
+    class="skip-link"
+    href="#main-content"
   >
-    <div class="container">
+    Skip to content
+  </a>
 
-      {
-        nav.map(([label, url]) => (
-          <a
-            class:list={{ active: active === label }}
-            href={url}
-          >
-            {label}
-          </a>
-        ))
-      }
+  <!-- Header -->
+  <header class="site-header">
 
-      <a href="/search/">
-        Search everything
-      </a>
+    <div class="container nav">
 
-    </div>
-  </div>
-</header>
-
-<main>
-  <slot />
-</main>
-
-<footer class="footer">
-
-  <div class="container footer-grid">
-
-    <div class="footer-brand">
-
+      <!-- Brand -->
       <a
         class="brand"
         href="/"
+        aria-label="CreateLoom home"
       >
-        <span class="logo">
-
+        <span
+          class="logo"
+          aria-hidden="true"
+        >
           <svg
             viewBox="0 0 32 32"
             fill="none"
+            focusable="false"
           >
             <path
               d="M23.5 8.5a10.5 10.5 0 1 0 0 15"
@@ -210,207 +197,811 @@ const siteUrl = 'https://createloom.vercel.app';
               stroke-linecap="round"
             />
           </svg>
-
         </span>
 
         <span>CreateLoom</span>
       </a>
 
-      <p>
-        AI prompts and creator resources for your next idea.
-      </p>
-
-    </div>
-
-    <div>
-      <h4>Prompts</h4>
-      <a href="/prompts/">All Prompts</a>
-      <a href="/prompts/#categories">Categories</a>
-      <a href="/prompts/#latest">Latest</a>
-    </div>
-
-    <div>
-      <h4>Creator Hub</h4>
-      <a href="/creator-hub/">Reels & Growth</a>
-      <a href="/creator-hub/#brand-deals">Brand Deals</a>
-      <a href="/brands/">Work With Us</a>
-    </div>
-
-    <div>
-      <h4>Company</h4>
-      <a href="/about/">About</a>
-      <a href="/contact/">Contact</a>
-      <a href="/privacy/">Privacy</a>
-      <a href="/terms/">Terms</a>
-    </div>
-
-  </div>
-
-  <div class="container footer-bottom">
-    <span>
-      © 2026 CreateLoom. All rights reserved.
-    </span>
-
-    <span>
-      Built for creators.
-    </span>
-  </div>
-
-</footer>
-
-<script is:inline>
-  const menu = document.querySelector('.mobile-menu');
-  const mobileNav = document.querySelector('.mobile-nav');
-
-  menu?.addEventListener('click', () => {
-    const open =
-      menu.getAttribute('aria-expanded') === 'true';
-
-    menu.setAttribute(
-      'aria-expanded',
-      String(!open)
-    );
-
-    mobileNav.hidden = open;
-
-    document.body.classList.toggle(
-      'menu-open',
-      !open
-    );
-  });
-
-  const favKey = 'createloom:favorites';
-
-  const readFavs = () => {
-    try {
-      return JSON.parse(
-        localStorage.getItem(favKey) || '[]'
-      );
-    } catch {
-      return [];
-    }
-  };
-
-  const syncFavs = () => {
-    const favs = readFavs();
-
-    document
-      .querySelectorAll('.fav-btn')
-      .forEach(button => {
-
-        const saved =
-          favs.includes(button.dataset.fav);
-
-        button.textContent =
-          saved ? '♥' : '♡';
-
-        button.setAttribute(
-          'aria-pressed',
-          String(saved)
-        );
-
-        button.classList.toggle(
-          'saved',
-          saved
-        );
-      });
-  };
-
-  const flash = (
-    element,
-    text,
-    delay = 1400
-  ) => {
-    const old = element.textContent;
-
-    element.textContent = text;
-
-    setTimeout(
-      () => element.textContent = old,
-      delay
-    );
-  };
-
-  document.addEventListener(
-    'click',
-    async event => {
-
-      const copy =
-        event.target.closest('.copy-btn');
-
-      if (copy) {
-        try {
-          await navigator.clipboard.writeText(
-            copy.dataset.copy || ''
-          );
-
-          flash(copy, '✓ Copied');
-        } catch {
-          flash(copy, 'Copy failed');
+      <!-- Desktop navigation -->
+      <nav
+        class="nav-links"
+        aria-label="Main navigation"
+      >
+        {
+          nav.map(([label, url]) => (
+            <a
+              class:list={{ active: active === label }}
+              href={url}
+              aria-current={
+                active === label
+                  ? 'page'
+                  : undefined
+              }
+            >
+              {label}
+            </a>
+          ))
         }
-      }
+      </nav>
 
-      const share =
-        event.target.closest('.share-btn');
+      <!-- Header search -->
+      <form
+        class="header-search"
+        action="/search/"
+        role="search"
+      >
+        <span
+          aria-hidden="true"
+          class="search-icon"
+        >
+          ⌕
+        </span>
 
-      if (share) {
+        <input
+          name="q"
+          placeholder="Search"
+          aria-label="Search CreateLoom"
+          autocomplete="off"
+        />
+      </form>
 
-        const url = new URL(
-          share.dataset.url || location.href,
-          location.origin
-        ).href;
+      <!-- Mobile menu -->
+      <button
+        class="mobile-menu"
+        type="button"
+        aria-label="Open navigation"
+        aria-controls="mobile-navigation"
+        aria-expanded="false"
+      >
+        <span aria-hidden="true">☰</span>
+      </button>
 
-        try {
+    </div>
 
-          if (navigator.share) {
+    <!-- Mobile navigation -->
+    <div
+      class="mobile-nav"
+      id="mobile-navigation"
+      hidden
+    >
+      <div class="container">
 
-            await navigator.share({
-              title: document.title,
-              url
-            });
-
-          } else {
-
-            await navigator.clipboard.writeText(url);
-
-            flash(
-              share,
-              '✓ Link Copied'
-            );
-
+        <nav
+          aria-label="Mobile navigation"
+        >
+          {
+            nav.map(([label, url]) => (
+              <a
+                class:list={{ active: active === label }}
+                href={url}
+                aria-current={
+                  active === label
+                    ? 'page'
+                    : undefined
+                }
+              >
+                {label}
+              </a>
+            ))
           }
 
-        } catch {}
-      }
+          <a href="/search/">
+            Search everything
+          </a>
+        </nav>
 
-      const fav =
-        event.target.closest('.fav-btn');
+      </div>
+    </div>
 
-      if (fav) {
+  </header>
 
-        const favs = readFavs();
-        const id = fav.dataset.fav;
-        const index = favs.indexOf(id);
+  <!-- Main -->
+  <main id="main-content">
+    <slot />
+  </main>
 
-        if (index >= 0) {
-          favs.splice(index, 1);
-        } else {
-          favs.push(id);
-        }
+  <!-- Screen-reader announcements -->
+  <div
+    id="site-status"
+    class="sr-only"
+    aria-live="polite"
+    aria-atomic="true"
+  ></div>
 
-        localStorage.setItem(
-          favKey,
-          JSON.stringify(favs)
+  <!-- Footer -->
+  <footer class="footer">
+
+    <div class="container footer-grid">
+
+      <!-- Brand -->
+      <div class="footer-brand">
+
+        <a
+          class="brand"
+          href="/"
+          aria-label="CreateLoom home"
+        >
+          <span
+            class="logo"
+            aria-hidden="true"
+          >
+            <svg
+              viewBox="0 0 32 32"
+              fill="none"
+              focusable="false"
+            >
+              <path
+                d="M23.5 8.5a10.5 10.5 0 1 0 0 15"
+                stroke="currentColor"
+                stroke-width="2.4"
+                stroke-linecap="round"
+              />
+
+              <path
+                d="M8.5 11h15M8.5 21h15"
+                stroke="currentColor"
+                stroke-width="2.4"
+                stroke-linecap="round"
+              />
+            </svg>
+          </span>
+
+          <span>CreateLoom</span>
+        </a>
+
+        <p>
+          AI prompts and creator resources for your next idea.
+        </p>
+
+      </div>
+
+      <!-- Prompts -->
+      <div>
+        <h4>Prompts</h4>
+
+        <a href="/prompts/">
+          All Prompts
+        </a>
+
+        <a href="/prompts/#categories">
+          Categories
+        </a>
+
+        <a href="/prompts/#latest">
+          Latest
+        </a>
+      </div>
+
+      <!-- Creator Hub -->
+      <div>
+        <h4>Creator Hub</h4>
+
+        <a href="/creator-hub/">
+          Reels & Growth
+        </a>
+
+        <a href="/creator-hub/#brand-deals">
+          Brand Deals
+        </a>
+
+        <a href="/brands/">
+          Work With Us
+        </a>
+      </div>
+
+      <!-- Company -->
+      <div>
+        <h4>Company</h4>
+
+        <a href="/about/">
+          About
+        </a>
+
+        <a href="/contact/">
+          Contact
+        </a>
+
+        <a href="/privacy/">
+          Privacy
+        </a>
+
+        <a href="/terms/">
+          Terms
+        </a>
+      </div>
+
+    </div>
+
+    <div class="container footer-bottom">
+
+      <span>
+        © {year} CreateLoom. All rights reserved.
+      </span>
+
+      <span>
+        Built for creators.
+      </span>
+
+    </div>
+
+  </footer>
+
+  <script is:inline>
+    (() => {
+      const menu =
+        document.querySelector('.mobile-menu');
+
+      const mobileNav =
+        document.querySelector('.mobile-nav');
+
+      const status =
+        document.querySelector('#site-status');
+
+      /*
+       * Mobile navigation
+       */
+      const setMenu = (open) => {
+        if (!menu || !mobileNav) return;
+
+        menu.setAttribute(
+          'aria-expanded',
+          String(open)
         );
 
-        syncFavs();
-      }
+        menu.setAttribute(
+          'aria-label',
+          open
+            ? 'Close navigation'
+            : 'Open navigation'
+        );
 
-    }
-  );
+        mobileNav.hidden = !open;
 
-  syncFavs();
-</script>
+        document.body.classList.toggle(
+          'menu-open',
+          open
+        );
+      };
+
+      menu?.addEventListener(
+        'click',
+        () => {
+          const open =
+            menu.getAttribute(
+              'aria-expanded'
+            ) === 'true';
+
+          setMenu(!open);
+        }
+      );
+
+      mobileNav?.addEventListener(
+        'click',
+        (event) => {
+          const link =
+            event.target.closest('a');
+
+          if (link) {
+            setMenu(false);
+          }
+        }
+      );
+
+      document.addEventListener(
+        'keydown',
+        (event) => {
+          if (
+            event.key === 'Escape' &&
+            menu?.getAttribute(
+              'aria-expanded'
+            ) === 'true'
+          ) {
+            setMenu(false);
+            menu.focus();
+          }
+        }
+      );
+
+      /*
+       * Announcements
+       */
+      const announce = (message) => {
+        if (!status) return;
+
+        status.textContent = '';
+
+        requestAnimationFrame(() => {
+          status.textContent = message;
+        });
+      };
+
+      /*
+       * Favorites
+       *
+       * Keep this key compatible with the
+       * prompt detail pages.
+       */
+      const favKey =
+        'createloom:favorites';
+
+      const readFavs = () => {
+        try {
+          const value =
+            localStorage.getItem(favKey);
+
+          const parsed =
+            JSON.parse(value || '[]');
+
+          return Array.isArray(parsed)
+            ? parsed
+            : [];
+        } catch {
+          return [];
+        }
+      };
+
+      const writeFavs = (favorites) => {
+        try {
+          localStorage.setItem(
+            favKey,
+            JSON.stringify(favorites)
+          );
+
+          return true;
+        } catch {
+          return false;
+        }
+      };
+
+      const syncFavs = () => {
+        const favs = readFavs();
+
+        document
+          .querySelectorAll('.fav-btn')
+          .forEach((button) => {
+
+            const saved =
+              favs.includes(
+                button.dataset.fav
+              );
+
+            const icon =
+              button.querySelector(
+                '[aria-hidden="true"]'
+              );
+
+            if (icon) {
+              icon.textContent =
+                saved ? '♥' : '♡';
+            } else {
+              button.textContent =
+                saved ? '♥' : '♡';
+            }
+
+            button.setAttribute(
+              'aria-pressed',
+              String(saved)
+            );
+
+            button.classList.toggle(
+              'saved',
+              saved
+            );
+
+            button.setAttribute(
+              'title',
+              saved
+                ? 'Remove from favorites'
+                : 'Save to favorites'
+            );
+          });
+      };
+
+      /*
+       * Temporary button feedback
+       */
+      const flash = (
+        element,
+        text,
+        delay = 1400
+      ) => {
+        if (!element) return;
+
+        const original =
+          element.dataset.originalText ||
+          element.textContent;
+
+        element.dataset.originalText =
+          original;
+
+        element.textContent = text;
+
+        window.setTimeout(() => {
+          element.textContent =
+            original;
+
+          delete element.dataset.originalText;
+        }, delay);
+      };
+
+      /*
+       * Clipboard fallback
+       */
+      const copyText = async (text) => {
+        if (!text) return false;
+
+        try {
+          if (
+            navigator.clipboard &&
+            window.isSecureContext
+          ) {
+            await navigator.clipboard.writeText(
+              text
+            );
+
+            return true;
+          }
+        } catch {}
+
+        try {
+          const textarea =
+            document.createElement('textarea');
+
+          textarea.value = text;
+
+          textarea.setAttribute(
+            'readonly',
+            ''
+          );
+
+          textarea.style.position =
+            'fixed';
+
+          textarea.style.opacity = '0';
+
+          document.body.appendChild(
+            textarea
+          );
+
+          textarea.select();
+
+          const success =
+            document.execCommand('copy');
+
+          textarea.remove();
+
+          return success;
+        } catch {
+          return false;
+        }
+      };
+
+      /*
+       * Global actions
+       */
+      document.addEventListener(
+        'click',
+        async (event) => {
+
+          /*
+           * Copy prompt
+           */
+          const copy =
+            event.target.closest(
+              '.copy-btn'
+            );
+
+          if (copy) {
+            const success =
+              await copyText(
+                copy.dataset.copy || ''
+              );
+
+            if (success) {
+              flash(copy, '✓ Copied');
+              announce(
+                'Prompt copied to clipboard.'
+              );
+            } else {
+              flash(
+                copy,
+                'Copy failed'
+              );
+
+              announce(
+                'Unable to copy the prompt.'
+              );
+            }
+
+            return;
+          }
+
+          /*
+           * Share
+           */
+          const share =
+            event.target.closest(
+              '.share-btn'
+            );
+
+          if (share) {
+
+            const url =
+              new URL(
+                share.dataset.url ||
+                  location.href,
+                location.origin
+              ).href;
+
+            try {
+
+              if (
+                typeof navigator.share ===
+                'function'
+              ) {
+
+                await navigator.share({
+                  title:
+                    document.title,
+                  url
+                });
+
+                announce(
+                  'Share dialog opened.'
+                );
+
+              } else {
+
+                const success =
+                  await copyText(url);
+
+                if (success) {
+                  flash(
+                    share,
+                    '✓ Link Copied'
+                  );
+
+                  announce(
+                    'Page link copied to clipboard.'
+                  );
+                } else {
+                  flash(
+                    share,
+                    'Copy failed'
+                  );
+                }
+              }
+
+            } catch {
+              /*
+               * Sharing can be cancelled
+               * by the user. No action needed.
+               */
+            }
+
+            return;
+          }
+
+          /*
+           * Favorite
+           */
+          const fav =
+            event.target.closest(
+              '.fav-btn'
+            );
+
+          if (fav) {
+
+            const id =
+              fav.dataset.fav;
+
+            if (!id) return;
+
+            const favorites =
+              readFavs();
+
+            const index =
+              favorites.indexOf(id);
+
+            const saving =
+              index === -1;
+
+            if (saving) {
+              favorites.push(id);
+            } else {
+              favorites.splice(
+                index,
+                1
+              );
+            }
+
+            const saved =
+              writeFavs(favorites);
+
+            if (!saved) {
+              announce(
+                'Favorites could not be saved in this browser.'
+              );
+
+              return;
+            }
+
+            syncFavs();
+
+            announce(
+              saving
+                ? 'Prompt saved to favorites.'
+                : 'Prompt removed from favorites.'
+            );
+          }
+        }
+      );
+
+      /*
+       * Initial favorite state
+       */
+      syncFavs();
+    })();
+  </script>
 
 </body>
 </html>
+
+<style>
+  /*
+   * Accessibility
+   */
+
+  .skip-link {
+    position: fixed;
+    left: 16px;
+    top: 10px;
+    z-index: 9999;
+    padding: 10px 14px;
+    border-radius: 9px;
+    background: #fff;
+    color: #09090b;
+    font-size: .85rem;
+    font-weight: 800;
+    text-decoration: none;
+    transform: translateY(-150%);
+    transition: transform .2s ease;
+  }
+
+  .skip-link:focus {
+    transform: translateY(0);
+  }
+
+  .sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+  }
+
+  /*
+   * Search
+   */
+
+  .header-search {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+  }
+
+  .search-icon {
+    color: var(--muted, #a1a1aa);
+    font-size: 1.05rem;
+    line-height: 1;
+  }
+
+  /*
+   * Mobile menu
+   */
+
+  .mobile-menu {
+    display: none;
+  }
+
+  .mobile-nav {
+    border-top: 1px solid rgba(255,255,255,.06);
+    background: rgba(8,7,13,.97);
+  }
+
+  .mobile-nav .container {
+    display: grid;
+    gap: 5px;
+    padding-top: 12px;
+    padding-bottom: 15px;
+  }
+
+  .mobile-nav a {
+    display: block;
+    padding: 12px 4px;
+    color: var(--muted, #a1a1aa);
+    text-decoration: none;
+    font-size: .92rem;
+  }
+
+  .mobile-nav a:hover,
+  .mobile-nav a.active {
+    color: #fff;
+  }
+
+  /*
+   * Saved favorite
+   */
+
+  .fav-btn.saved {
+    color: #c4b5fd;
+    border-color: rgba(139,92,246,.35);
+    background: rgba(139,92,246,.09);
+  }
+
+  /*
+   * Menu state
+   */
+
+  body.menu-open {
+    overflow-x: hidden;
+  }
+
+  /*
+   * Reduced motion
+   */
+
+  @media (prefers-reduced-motion: reduce) {
+    .skip-link {
+      transition: none;
+    }
+  }
+
+  /*
+   * Mobile header
+   */
+
+  @media (max-width: 850px) {
+    .nav-links {
+      display: none;
+    }
+
+    .header-search {
+      display: none;
+    }
+
+    .mobile-menu {
+      width: 40px;
+      height: 40px;
+      display: grid;
+      place-items: center;
+      border: 1px solid rgba(255,255,255,.08);
+      border-radius: 10px;
+      background: rgba(255,255,255,.025);
+      color: #d4d4d8;
+      cursor: pointer;
+      font-size: 1.05rem;
+    }
+
+    .mobile-menu:hover {
+      border-color: rgba(139,92,246,.35);
+      background: rgba(139,92,246,.08);
+      color: #fff;
+    }
+
+    .mobile-menu:focus-visible {
+      outline: 2px solid #a78bfa;
+      outline-offset: 3px;
+    }
+  }
+
+  @media (min-width: 851px) {
+    .mobile-nav {
+      display: none !important;
+    }
+  }
+</style>
