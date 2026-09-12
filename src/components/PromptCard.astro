@@ -1,10 +1,262 @@
 ---
-const {p}=Astro.props;
+const { p } = Astro.props;
+
+const preview = p.prompt.length > 190
+  ? `${p.prompt.slice(0, 190)}…`
+  : p.prompt;
+
+const bestFor = p.best_for || `AI ${p.category.toLowerCase()} image creation`;
 ---
-<article class="card prompt-card" data-title={p.title} data-category={p.category} data-tags={p.tags.join(' ')} data-prompt={p.prompt}>
-  <div class="prompt-top"><span class="eyebrow">{p.category}</span><button class="icon-btn fav-btn" data-fav={p.id} aria-label={`Favorite ${p.title}`} aria-pressed="false">♡</button></div>
-  <h3>{p.title}</h3>
-  <p>{p.prompt.slice(0,175)}{p.prompt.length>175?'…':''}</p>
-  <div class="tags">{p.tags.slice(0,3).map(t=><span class="tag">#{t}</span>)}</div>
-  <div class="card-actions"><button class="small-btn copy-btn" data-copy={p.prompt}>📋 Copy</button><button class="small-btn share-btn" data-url={`/prompt/${p.id}/`}>🔗 Share</button><a class="small-btn" href={`/prompt/${p.id}/`}>↗ Open</a></div>
+
+<article
+  class="card prompt-card"
+  data-title={p.title}
+  data-category={p.category}
+  data-tags={p.tags.join(' ')}
+  data-prompt={p.prompt}
+>
+  <div class="prompt-top">
+    <a
+      class="category-link"
+      href={`/prompts/${p.category.toLowerCase()}/`}
+      aria-label={`Browse ${p.category} prompts`}
+    >
+      {p.category}
+    </a>
+
+    <button
+      class="icon-btn fav-btn"
+      data-fav={p.id}
+      aria-label={`Favorite ${p.title}`}
+      aria-pressed="false"
+      type="button"
+    >
+      ♡
+    </button>
+  </div>
+
+  <a
+    class="prompt-card-main"
+    href={`/prompt/${p.id}/`}
+    aria-label={`Open ${p.title}`}
+  >
+    <h3>{p.title}</h3>
+
+    <p class="prompt-preview">
+      {preview}
+    </p>
+
+    <div class="best-for">
+      <span>Best for</span>
+      <strong>{bestFor}</strong>
+    </div>
+
+    <div class="tags">
+      {p.tags.slice(0, 3).map((tag) => (
+        <span class="tag">#{tag}</span>
+      ))}
+    </div>
+  </a>
+
+  <div class="card-actions">
+
+    <button
+      class="small-btn copy-btn"
+      data-copy={p.prompt}
+      type="button"
+    >
+      📋 Copy
+    </button>
+
+    <button
+      class="small-btn share-btn"
+      data-url={`/prompt/${p.id}/`}
+      type="button"
+    >
+      🔗 Share
+    </button>
+
+    <a
+      class="small-btn open-btn"
+      href={`/prompt/${p.id}/`}
+      aria-label={`Open ${p.title}`}
+    >
+      ↗ Open
+    </a>
+
+  </div>
 </article>
+
+<style>
+  .prompt-card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    overflow: hidden;
+  }
+
+  .prompt-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+  }
+
+  .category-link {
+    display: inline-flex;
+    color: #a78bfa;
+    text-decoration: none;
+    font-size: 0.72rem;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  .category-link:hover {
+    color: #c4b5fd;
+  }
+
+  .icon-btn {
+    flex: 0 0 auto;
+    width: 34px;
+    height: 34px;
+    display: grid;
+    place-items: center;
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 10px;
+    background: rgba(255,255,255,0.03);
+    color: #a1a1aa;
+    cursor: pointer;
+    font-size: 1.05rem;
+    transition:
+      background 0.2s ease,
+      border-color 0.2s ease,
+      color 0.2s ease,
+      transform 0.2s ease;
+  }
+
+  .icon-btn:hover {
+    border-color: rgba(139,92,246,0.4);
+    background: rgba(139,92,246,0.08);
+    color: #c4b5fd;
+    transform: scale(1.04);
+  }
+
+  .prompt-card-main {
+    display: block;
+    flex: 1;
+    color: inherit;
+    text-decoration: none;
+  }
+
+  .prompt-card h3 {
+    margin: 15px 0 10px;
+    color: #fff;
+    font-size: 1.12rem;
+    line-height: 1.35;
+  }
+
+  .prompt-preview {
+    margin: 0;
+    color: var(--muted, #a1a1aa);
+    font-size: 0.9rem;
+    line-height: 1.7;
+  }
+
+  .best-for {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    margin-top: 16px;
+    padding: 11px 12px;
+    border-radius: 10px;
+    background: rgba(139,92,246,0.055);
+    border: 1px solid rgba(139,92,246,0.11);
+  }
+
+  .best-for span {
+    color: #8f8f99;
+    font-size: 0.68rem;
+    font-weight: 800;
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+  }
+
+  .best-for strong {
+    color: #cfcfd6;
+    font-size: 0.78rem;
+    font-weight: 500;
+    line-height: 1.45;
+  }
+
+  .tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-top: 15px;
+  }
+
+  .tag {
+    padding: 5px 8px;
+    border: 1px solid rgba(255,255,255,0.07);
+    border-radius: 999px;
+    background: rgba(255,255,255,0.025);
+    color: #a1a1aa;
+    font-size: 0.7rem;
+  }
+
+  .card-actions {
+    display: flex;
+    gap: 7px;
+    flex-wrap: wrap;
+    margin-top: 18px;
+    padding-top: 14px;
+    border-top: 1px solid rgba(255,255,255,0.06);
+  }
+
+  .small-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 34px;
+    padding: 7px 10px;
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 9px;
+    background: rgba(255,255,255,0.025);
+    color: #c4c4cc;
+    font: inherit;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-decoration: none;
+    cursor: pointer;
+    transition:
+      background 0.2s ease,
+      border-color 0.2s ease,
+      color 0.2s ease;
+  }
+
+  .small-btn:hover {
+    border-color: rgba(139,92,246,0.35);
+    background: rgba(139,92,246,0.08);
+    color: #fff;
+  }
+
+  .open-btn {
+    margin-left: auto;
+    border-color: rgba(139,92,246,0.25);
+    color: #c4b5fd;
+  }
+
+  @media (max-width: 500px) {
+    .card-actions {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .open-btn {
+      margin-left: 0;
+      grid-column: 1 / -1;
+    }
+  }
+</style>
