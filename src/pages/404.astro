@@ -1,4 +1,353 @@
 ---
 import Layout from '../layouts/Layout.astro';
 ---
-<Layout title="Page Not Found | CreateLoom"><section class="hero"><div class="container"><div class="eyebrow">404</div><h1>That page isn't here.</h1><p>Try exploring the prompt library instead.</p><a class="primary" href="/prompts/">Explore Prompts</a></div></section></Layout>
+
+<Layout
+  title="Page Not Found | CreateLoom"
+  description="The page you were looking for could not be found. Explore CreateLoom's AI prompts, creator resources and guides."
+>
+  <section class="not-found">
+    <div class="container">
+
+      <div class="error-code" aria-hidden="true">
+        404
+      </div>
+
+      <div class="eyebrow">
+        Page not found
+      </div>
+
+      <h1>
+        That page
+        <span class="gradient-text">isn't here.</span>
+      </h1>
+
+      <p class="intro">
+        The link may be outdated, the page may have moved, or the URL
+        might have been entered incorrectly. Don't worry — there's plenty
+        more to explore on CreateLoom.
+      </p>
+
+      <div class="actions">
+        <a class="primary" href="/">
+          ← Back to Home
+        </a>
+
+        <a class="secondary" href="/prompts/">
+          Explore AI Prompts
+        </a>
+
+        <a class="secondary" href="/search/">
+          Search CreateLoom
+        </a>
+      </div>
+
+      <div class="quick-links">
+
+        <a href="/prompts/">
+          <span class="icon">✦</span>
+          <div>
+            <strong>AI Prompts</strong>
+            <p>Browse ready-to-use image prompts.</p>
+          </div>
+          <span class="arrow">→</span>
+        </a>
+
+        <a href="/creator-hub/">
+          <span class="icon">◎</span>
+          <div>
+            <strong>Creator Hub</strong>
+            <p>Explore Reel, growth and creator resources.</p>
+          </div>
+          <span class="arrow">→</span>
+        </a>
+
+        <a href="/blog/">
+          <span class="icon">✎</span>
+          <div>
+            <strong>Creator Guides</strong>
+            <p>Read practical guides for creators.</p>
+          </div>
+          <span class="arrow">→</span>
+        </a>
+
+        <a href="/brands/">
+          <span class="icon">↗</span>
+          <div>
+            <strong>Brands</strong>
+            <p>Learn about working with CreateLoom.</p>
+          </div>
+          <span class="arrow">→</span>
+        </a>
+
+      </div>
+
+      <div class="search-box">
+        <div>
+          <span class="eyebrow">Can't find what you need?</span>
+          <h2>Search the library.</h2>
+        </div>
+
+        <form action="/search/" role="search">
+          <label class="sr-only" for="error-search">
+            Search CreateLoom
+          </label>
+
+          <input
+            id="error-search"
+            name="q"
+            type="search"
+            placeholder="Search prompts, guides..."
+            autocomplete="off"
+          />
+
+          <button type="submit">
+            Search
+          </button>
+        </form>
+      </div>
+
+    </div>
+  </section>
+</Layout>
+
+<style>
+  .not-found {
+    min-height: 78vh;
+    display: flex;
+    align-items: center;
+    padding: 80px 0 100px;
+    text-align: center;
+  }
+
+  .not-found .container {
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  .error-code {
+    margin-bottom: -10px;
+    font-size: clamp(6rem, 17vw, 12rem);
+    line-height: .85;
+    font-weight: 900;
+    letter-spacing: -.09em;
+    color: rgba(255,255,255,.035);
+    user-select: none;
+  }
+
+  .not-found h1 {
+    margin: 12px 0 18px;
+    font-size: clamp(2.5rem, 6vw, 4.5rem);
+    line-height: 1.02;
+    letter-spacing: -.055em;
+  }
+
+  .intro {
+    max-width: 650px;
+    margin: 0 auto;
+    color: var(--muted, #a1a1aa);
+    font-size: 1rem;
+    line-height: 1.75;
+  }
+
+  .actions {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 28px;
+  }
+
+  .actions a {
+    text-decoration: none;
+  }
+
+  .quick-links {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+    max-width: 760px;
+    margin: 55px auto 0;
+    text-align: left;
+  }
+
+  .quick-links a {
+    display: grid;
+    grid-template-columns: 38px 1fr 20px;
+    align-items: center;
+    gap: 12px;
+    min-width: 0;
+    padding: 18px;
+    border: 1px solid rgba(255,255,255,.07);
+    border-radius: 15px;
+    background: rgba(255,255,255,.025);
+    color: inherit;
+    text-decoration: none;
+    transition:
+      transform .2s ease,
+      border-color .2s ease,
+      background .2s ease;
+  }
+
+  .quick-links a:hover {
+    transform: translateY(-3px);
+    border-color: rgba(139,92,246,.35);
+    background: rgba(139,92,246,.045);
+  }
+
+  .icon {
+    width: 38px;
+    height: 38px;
+    display: grid;
+    place-items: center;
+    border: 1px solid rgba(139,92,246,.15);
+    border-radius: 10px;
+    background: rgba(139,92,246,.07);
+    color: #c4b5fd;
+  }
+
+  .quick-links strong {
+    display: block;
+    font-size: .9rem;
+  }
+
+  .quick-links p {
+    margin: 4px 0 0;
+    color: var(--muted, #a1a1aa);
+    font-size: .76rem;
+    line-height: 1.45;
+  }
+
+  .arrow {
+    color: #777780;
+    transition:
+      color .2s ease,
+      transform .2s ease;
+  }
+
+  .quick-links a:hover .arrow {
+    color: #c4b5fd;
+    transform: translateX(3px);
+  }
+
+  .search-box {
+    display: grid;
+    grid-template-columns: .8fr 1.2fr;
+    align-items: center;
+    gap: 25px;
+    max-width: 760px;
+    margin: 35px auto 0;
+    padding: 22px;
+    border: 1px solid rgba(255,255,255,.07);
+    border-radius: 17px;
+    background: rgba(255,255,255,.018);
+    text-align: left;
+  }
+
+  .search-box h2 {
+    margin: 7px 0 0;
+    font-size: 1.25rem;
+  }
+
+  .search-box form {
+    display: flex;
+    gap: 8px;
+  }
+
+  .search-box input {
+    flex: 1;
+    min-width: 0;
+    height: 42px;
+    padding: 0 13px;
+    border: 1px solid rgba(255,255,255,.09);
+    border-radius: 10px;
+    outline: none;
+    background: rgba(0,0,0,.18);
+    color: #fff;
+    font: inherit;
+  }
+
+  .search-box input::placeholder {
+    color: #71717a;
+  }
+
+  .search-box input:focus {
+    border-color: rgba(139,92,246,.5);
+  }
+
+  .search-box button {
+    height: 42px;
+    padding: 0 16px;
+    border: 0;
+    border-radius: 10px;
+    background: #fff;
+    color: #09090b;
+    font: inherit;
+    font-size: .8rem;
+    font-weight: 800;
+    cursor: pointer;
+  }
+
+  .search-box button:hover {
+    background: #e4e4e7;
+  }
+
+  .sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+  }
+
+  @media (max-width: 700px) {
+    .not-found {
+      padding: 55px 0 75px;
+    }
+
+    .quick-links {
+      grid-template-columns: 1fr;
+      margin-top: 40px;
+    }
+
+    .search-box {
+      grid-template-columns: 1fr;
+    }
+
+    .search-box form {
+      width: 100%;
+    }
+  }
+
+  @media (max-width: 450px) {
+    .actions {
+      display: grid;
+      grid-template-columns: 1fr;
+    }
+
+    .actions a {
+      width: 100%;
+    }
+
+    .search-box form {
+      display: grid;
+      grid-template-columns: 1fr;
+    }
+
+    .search-box button {
+      width: 100%;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .quick-links a,
+    .arrow {
+      transition: none;
+    }
+  }
+</style>
