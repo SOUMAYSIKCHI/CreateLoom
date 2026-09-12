@@ -1,0 +1,20 @@
+---
+import Layout from '../../layouts/Layout.astro'; import PromptCard from '../../components/PromptCard.astro'; import prompts from '../../data/prompts.json';
+export function getStaticPaths(){return prompts.map(p=>({params:{id:p.id},props:{p}}))}
+const {p}=Astro.props;
+const related=prompts.filter(x=>x.id!==p.id && (x.category===p.category || x.tags.some(t=>p.tags.includes(t)))).slice(0,3);
+---
+<Layout title={`${p.title} | CreateLoom`} description={`Copy the ${p.title} for your next AI image creation. Ready-to-use ${p.category.toLowerCase()} prompt from CreateLoom.`} active="Prompts">
+<article class="prompt-page container">
+  <nav class="breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a><span>/</span><a href="/prompts/">Prompts</a><span>/</span><a href={`/prompts/${p.category.toLowerCase()}/`}>{p.category}</a><span>/</span><span>{p.title}</span></nav>
+  <div class="eyebrow" style="margin-top:28px">{p.category}</div>
+  <h1>{p.title}</h1>
+  <div class="tags">{p.tags.map(t=><span class="tag">#{t}</span>)}</div>
+  <div class="prompt-box" aria-label="Prompt text">{p.prompt}</div>
+  <div class="wide-actions"><button class="primary copy-btn" data-copy={p.prompt}>📋 Copy Prompt</button><button class="secondary share-btn" data-url={`/prompt/${p.id}/`}>🔗 Share</button><button class="secondary fav-btn" data-fav={p.id} aria-pressed="false">♡ Favorite</button></div>
+  <div class="ad">Advertisement</div>
+  <section><h2>How to use this prompt</h2><ol><li>Copy the prompt.</li><li>Open your preferred AI image generator.</li><li>Upload a reference image if your workflow requires one.</li><li>Paste the prompt, adjust details if needed, and generate your image.</li></ol></section>
+  {related.length>0 && <section><h2>You might also like</h2><div class="grid">{related.map(x=><PromptCard p={x}/>)}</div></section>}
+</article>
+<script type="application/ld+json" set:html={JSON.stringify({"@context":"https://schema.org","@type":"WebPage","name":p.title,"description":`Copy the ${p.title} on CreateLoom.`,`url`:new URL(`/prompt/${p.id}/`,Astro.site||Astro.url).href})}></script>
+</Layout>

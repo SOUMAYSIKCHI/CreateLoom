@@ -1,0 +1,9 @@
+---
+import Layout from '../../layouts/Layout.astro'; import PromptCard from '../../components/PromptCard.astro'; import prompts from '../../data/prompts.json';
+export function getStaticPaths(){return [...new Set(prompts.map(p=>p.category))].map(category=>({params:{category:category.toLowerCase()},props:{category,prompts:prompts.filter(p=>p.category===category)}}))}
+const {category,prompts:items}=Astro.props;
+---
+<Layout title={`${category} AI Prompts | CreateLoom`} description={`Browse ${category.toLowerCase()} AI prompts on CreateLoom.`} active="Prompts">
+<section class="hero hero-compact"><div class="container"><div class="eyebrow">Prompt category</div><h1><span class="gradient-text">{category}</span> Prompts</h1><p>Ready-to-copy {category.toLowerCase()} prompts for your next creation.</p><a class="secondary" href="/prompts/">← All Prompts</a></div></section>
+<section class="section"><div class="container"><div class="grid">{items.map(p=><PromptCard p={p}/>)}</div></div></section>
+</Layout>

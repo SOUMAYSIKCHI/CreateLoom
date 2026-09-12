@@ -1,0 +1,15 @@
+---
+import Layout from '../../layouts/Layout.astro'; import PromptCard from '../../components/PromptCard.astro'; import prompts from '../../data/prompts.json';
+const cats=[...new Set(prompts.map(p=>p.category))].sort();
+---
+<Layout title="AI Prompts — CreateLoom" description="Browse, search and copy ready-to-use AI image prompts on CreateLoom." active="Prompts">
+<section class="hero hero-compact"><div class="container"><div class="eyebrow">Prompt library</div><h1>AI <span class="gradient-text">Prompts</span></h1><p>Search, filter and copy prompts for your next creative idea.</p><form class="search" id="promptSearchForm"><input id="promptSearch" name="q" placeholder="Search prompts..." autocomplete="off"/><button type="submit">Search</button></form></div></section>
+<section class="section" id="categories"><div class="container"><div class="toolbar"><div class="filters" id="filters"><button type="button" class="small-btn active-filter" data-category="All">All</button>{cats.map(c=><button type="button" class="small-btn" data-category={c}>{c}</button>)}</div><span class="results-note" id="resultCount"></span></div><div class="grid" id="promptGrid">{prompts.map(p=><PromptCard p={p}/>)}</div><div class="empty-state" id="empty">No prompts found. Try another search or category.</div></div></section>
+<script is:inline>
+const input=document.querySelector('#promptSearch'), form=document.querySelector('#promptSearchForm'), cards=[...document.querySelectorAll('.prompt-card')], buttons=[...document.querySelectorAll('[data-category]')], count=document.querySelector('#resultCount');
+const params=new URLSearchParams(location.search); let cat=params.get('category')||'All'; if(cat!=='All' && !buttons.some(b=>b.dataset.category===cat))cat='All'; input.value=params.get('q')||'';
+function filter(){const q=input.value.trim().toLowerCase();let n=0;cards.forEach(c=>{const text=(c.dataset.title+' '+c.dataset.category+' '+c.dataset.tags+' '+c.dataset.prompt).toLowerCase();const ok=(cat==='All'||c.dataset.category===cat)&&(!q||text.includes(q));c.hidden=!ok;if(ok)n++});buttons.forEach(b=>b.classList.toggle('active-filter',b.dataset.category===cat));count.textContent=`${n} prompt${n===1?'':'s'}`;document.querySelector('#empty').style.display=n?'none':'block'}
+form.addEventListener('submit',e=>{e.preventDefault();const q=input.value.trim();history.replaceState({},'',`/prompts/${q?`?q=${encodeURIComponent(q)}`:''}${cat!=='All'?(q?'&':'?')+`category=${encodeURIComponent(cat)}`:''}`);filter()});
+input.addEventListener('input',filter);buttons.forEach(b=>b.addEventListener('click',()=>{cat=b.dataset.category;const q=input.value.trim();history.replaceState({},'',`/prompts/${q?`?q=${encodeURIComponent(q)}&`: '?'}${cat!=='All'?`category=${encodeURIComponent(cat)}`:''}`.replace(/[?&]$/,''));filter()})); filter();
+</script>
+</Layout>

@@ -1,0 +1,25 @@
+---
+import Layout from '../../layouts/Layout.astro';
+const resources=[
+['reels','🎬','Reel Ideas','Content','Find repeatable concepts for AI and creator-focused Reels.'],
+['hooks','⚡','Hooks','Content','Strong opening ideas that make the subject clear quickly.'],
+['captions','✍️','Captions','Writing','Caption frameworks and ideas for different creator formats.'],
+['content','💡','Content Ideas','Content','Build a consistent stream of posts without starting from zero.'],
+['growth','📈','Instagram Growth','Growth','Practical profile, content and retention principles for creators.'],
+['planning','🗓️','Content Planning','Growth','Simple ways to turn ideas into a repeatable publishing workflow.'],
+['brand-deals','🤝','Brand Deals','Business','Position your profile and prepare for brand collaborations.'],
+['media-kit','📊','Media Kit','Business','What to include when presenting your creator profile to brands.']
+];
+---
+<Layout title="Instagram Creator Hub | CreateLoom" description="Instagram Reel ideas, growth resources, creator tips and brand collaboration guidance." active="Creator Hub">
+<section class="hero hero-compact"><div class="container"><div class="eyebrow">Create smarter</div><h1>The Creator <span class="gradient-text">Hub</span></h1><p>Practical resources for creating content, growing on Instagram and building brand opportunities.</p></div></section>
+<section class="section"><div class="container"><div class="resource-grid">{resources.map(([id,icon,title,cat,desc])=><a class="resource" href={`#${id}`}><div class="eyebrow">{cat}</div><h3>{icon} {title}</h3><p>{desc}</p></a>)}</div></div></section>
+<section class="section" id="reels"><div class="container"><div class="card"><div class="eyebrow">Reels</div><h2>Build repeatable short-form formats.</h2><p>Show the result first, reveal the prompt, compare variations or turn one idea into a series.</p></div></div></section>
+<section class="section" id="hooks"><div class="container"><div class="card"><div class="eyebrow">Hooks</div><h2>Make the first seconds clear.</h2><p>Lead with the outcome, transformation or curiosity gap so viewers understand why they should keep watching.</p></div></div></section>
+<section class="section" id="captions"><div class="container"><div class="card"><div class="eyebrow">Captions</div><h2>Give the post a clear next action.</h2><p>Use a short context line, a useful takeaway and a simple call to action when appropriate.</p></div></div></section>
+<section class="section" id="content"><div class="container"><div class="card"><div class="eyebrow">Content ideas</div><h2>Turn one concept into a series.</h2><p>Build themes around prompts, transformations, tutorials, comparisons and creator experiments.</p></div></div></section>
+<section class="section" id="growth"><div class="container"><div class="card"><div class="eyebrow">Growth</div><h2>Optimize around patterns, not one post.</h2><p>Review retention, shares, saves and profile actions to identify formats worth repeating and improving.</p></div></div></section>
+<section class="section" id="planning"><div class="container"><div class="card"><div class="eyebrow">Planning</div><h2>Keep a simple publishing pipeline.</h2><p>Capture ideas, batch similar content and keep a small backlog so consistency does not depend on inspiration every day.</p></div></div></section>
+<section class="section" id="brand-deals"><div class="container"><div class="card"><div class="eyebrow">Brand deals</div><h2>Turn your creator profile into a business asset.</h2><p>Prepare a clear profile, define collaboration formats and make it easy for potential partners to understand your audience and content.</p><div class="resource-grid" style="margin-top:22px"><div class="resource"><h3>Pitching</h3><p>Keep outreach concise, specific and relevant to the brand.</p></div><div class="resource"><h3>Media Kit</h3><p>Present audience, performance, content examples and collaboration options.</p></div><div class="resource"><h3>Rate Card</h3><p>Organize deliverables so brands can understand what they are buying.</p></div><div class="resource"><h3>Campaign Ideas</h3><p>Propose a concrete creative concept instead of sending a generic pitch.</p></div></div></div></div></section>
+<section class="section"><div class="container"><div class="card cta"><div class="eyebrow">Need a collaboration?</div><h2>Want to work with CreateLoom?</h2><p class="muted">See our partnership options and get in touch.</p><a class="primary" href="/brands/">Work With Us →</a></div></div></section>
+</Layout>

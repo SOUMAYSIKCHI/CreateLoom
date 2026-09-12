@@ -1,0 +1,17 @@
+---
+import Layout from '../../layouts/Layout.astro'; import blogs from '../../data/blogs.json';
+export function getStaticPaths(){return blogs.map(b=>({params:{id:b.id},props:{b}}))} const {b}=Astro.props;
+---
+<Layout title={`${b.title} | CreateLoom Blog`} description={b.excerpt} active="Blog">
+<article class="article container">
+  <a class="muted" href="/blog/">← Back to Blog</a>
+  <div class="eyebrow" style="margin-top:28px">{b.category}</div>
+  <h1>{b.title}</h1>
+  <div class="article-meta muted">{b.date} · {b.readTime}</div>
+  <p class="article-lede">{b.excerpt}</p>
+  <div class="ad">Advertisement</div>
+  {b.content.map((paragraph, i)=><section><h2>{i===0?'The short version':`What to know — ${i+1}`}</h2><p>{paragraph}</p></section>)}
+  <div class="ad">Advertisement</div>
+  <section><h2>Explore more</h2><div class="grid">{blogs.filter(x=>x.id!==b.id && (x.category===b.category || x.tags.some(t=>b.tags.includes(t)))).slice(0,3).map(x=><a class="card" href={`/blog/${x.id}/`}><span class="eyebrow">{x.category}</span><h3>{x.title}</h3><p>{x.excerpt}</p></a>)}</div></section>
+</article>
+</Layout>

@@ -1,0 +1,10 @@
+---
+const {p}=Astro.props;
+---
+<article class="card prompt-card" data-title={p.title} data-category={p.category} data-tags={p.tags.join(' ')} data-prompt={p.prompt}>
+  <div class="prompt-top"><span class="eyebrow">{p.category}</span><button class="icon-btn fav-btn" data-fav={p.id} aria-label={`Favorite ${p.title}`} aria-pressed="false">♡</button></div>
+  <h3>{p.title}</h3>
+  <p>{p.prompt.slice(0,175)}{p.prompt.length>175?'…':''}</p>
+  <div class="tags">{p.tags.slice(0,3).map(t=><span class="tag">#{t}</span>)}</div>
+  <div class="card-actions"><button class="small-btn copy-btn" data-copy={p.prompt}>📋 Copy</button><button class="small-btn share-btn" data-url={`/prompt/${p.id}/`}>🔗 Share</button><a class="small-btn" href={`/prompt/${p.id}/`}>↗ Open</a></div>
+</article>
