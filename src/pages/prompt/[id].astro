@@ -16,5 +16,5 @@ const related=prompts.filter(x=>x.id!==p.id && (x.category===p.category || x.tag
   <section><h2>How to use this prompt</h2><ol><li>Copy the prompt.</li><li>Open your preferred AI image generator.</li><li>Upload a reference image if your workflow requires one.</li><li>Paste the prompt, adjust details if needed, and generate your image.</li></ol></section>
   {related.length>0 && <section><h2>You might also like</h2><div class="grid">{related.map(x=><PromptCard p={x}/>)}</div></section>}
 </article>
-<script type="application/ld+json" set:html={JSON.stringify({"@context":"https://schema.org","@type":"WebPage","name":p.title,"description":`Copy the ${p.title} on CreateLoom.`,`url`:new URL(`/prompt/${p.id}/`,Astro.site||Astro.url).href})}></script>
+<script type="application/ld+json" set:html={JSON.stringify({"@context":"https://schema.org","@type":"WebPage","name":p.title,"description":`Copy the ${p.title} on CreateLoom.`,"url":new URL(`/prompt/${p.id}/`,Astro.site||Astro.url).href})}></script>
 </Layout>
