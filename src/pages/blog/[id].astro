@@ -70,6 +70,19 @@ const articleSchema = {
   keywords: b.tags.join(', ')
 };
 
+const articleImageSchema = b.image
+  ? {
+      '@context': 'https://schema.org',
+      '@type': 'ImageObject',
+      contentUrl: new URL(
+        b.image,
+        Astro.site || 'https://createloom.vercel.app'
+      ).href,
+      name: b.title,
+      description: `Featured image for ${b.title}.`
+    }
+  : null;
+
 const breadcrumbSchema = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
@@ -125,6 +138,13 @@ const websiteSchema = {
     type="application/ld+json"
     set:html={JSON.stringify(websiteSchema)}
   />
+
+  {articleImageSchema && (
+    <script
+      type="application/ld+json"
+      set:html={JSON.stringify(articleImageSchema)}
+    />
+  )}
 
 
   <article class="article-page container">
@@ -365,6 +385,47 @@ const websiteSchema = {
           </section>
 
         )}
+
+
+        <!-- Related Creator Resources -->
+
+        <section class="related-section creator-resources-section">
+          <div class="eyebrow">
+            Explore CreateLoom
+          </div>
+
+          <h2>
+            More Creator Resources
+          </h2>
+
+          <p class="section-description">
+            Continue from this guide with practical AI prompts, Instagram
+            creator resources and curated hashtag sets.
+          </p>
+
+          <div class="resource-links">
+            <a href="/prompts/" class="related-card">
+              <span class="card-category">AI IMAGE CREATION</span>
+              <h3>AI Image Prompt Library</h3>
+              <p>Browse detailed, ready-to-use prompts for your next image.</p>
+              <span class="card-link">Explore prompts →</span>
+            </a>
+
+            <a href="/creator-hub/" class="related-card">
+              <span class="card-category">INSTAGRAM</span>
+              <h3>Instagram Creator Hub</h3>
+              <p>Find Reel ideas, growth tips, hooks and creator resources.</p>
+              <span class="card-link">Open Creator Hub →</span>
+            </a>
+
+            <a href="/creator-tools/trending-hashtags/" class="related-card">
+              <span class="card-category">HASHTAGS</span>
+              <h3>Trending Instagram Hashtags</h3>
+              <p>Find curated hashtag sets by topic, niche and creator goal.</p>
+              <span class="card-link">Explore hashtags →</span>
+            </a>
+          </div>
+        </section>
 
 
         <!-- Bottom CTA -->
@@ -820,6 +881,21 @@ const websiteSchema = {
   }
 
 
+  .creator-resources-section {
+    margin-top: 65px;
+  }
+
+  .resource-links {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 14px;
+    margin-top: 22px;
+  }
+
+  .resource-links .related-card {
+    height: 100%;
+  }
+
   /* Bottom CTA */
 
   .article-cta {
@@ -889,6 +965,10 @@ const websiteSchema = {
 
 
   @media (max-width: 600px) {
+
+    .resource-links {
+      grid-template-columns: 1fr;
+    }
 
     .article-page {
       padding-top: 28px;
