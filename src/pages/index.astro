@@ -7,6 +7,7 @@ import blogs from '../data/blogs.json';
 const categories = [...new Set(prompts.map((p) => p.category))].sort();
 
 const featuredPrompts = prompts.slice(0, 6);
+const trendingPrompts = prompts.filter((p) => p.trending === true);
 const latestPrompts = prompts.slice(-6).reverse();
 const latestBlogs = blogs.slice(0, 3);
 
@@ -117,6 +118,53 @@ const categoryDescriptions = {
     </div>
 
   </section>
+
+
+  <!-- TRENDING PROMPTS -->
+
+  {trendingPrompts.length > 0 && (
+    <section class="section trending-section" id="trending">
+
+      <div class="container">
+
+        <div class="section-head">
+
+          <div>
+            <div class="eyebrow">
+              🔥 Popular right now
+            </div>
+
+            <h2>
+              Trending AI Prompts
+            </h2>
+
+            <p class="section-subtitle">
+              Popular prompt ideas for creating scroll-stopping AI visuals.
+            </p>
+          </div>
+
+          <a
+            class="muted section-link"
+            href="/prompts/"
+          >
+            Explore all →
+          </a>
+
+        </div>
+
+
+        <div class="grid">
+
+          {trendingPrompts.slice(0, 6).map((p) => (
+            <PromptCard p={p} />
+          ))}
+
+        </div>
+
+      </div>
+
+    </section>
+  )}
 
 
   <!-- FEATURED PROMPTS -->
@@ -799,6 +847,19 @@ const categoryDescriptions = {
     text-decoration: none;
   }
 
+
+  /* Trending */
+
+  .trending-section {
+    background:
+      linear-gradient(
+        180deg,
+        rgba(139,92,246,0.045),
+        rgba(255,255,255,0.012)
+      );
+    border-top: 1px solid rgba(255,255,255,0.035);
+    border-bottom: 1px solid rgba(255,255,255,0.035);
+  }
 
   /* Categories */
 
