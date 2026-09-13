@@ -1,67 +1,316 @@
 ---
 import Layout from '../../layouts/Layout.astro';
+
+const contactEmail = 'soumaysikchi@gmail.com';
+
+const contactSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'ContactPage',
+  name: 'Contact CreateLoom',
+  description:
+    'Contact CreateLoom for brand collaborations, advertising, sponsored content, partnerships and business inquiries.',
+  url: 'https://createloom.vercel.app/contact/',
+  mainEntity: {
+    '@type': 'Organization',
+    name: 'CreateLoom',
+    url: 'https://createloom.vercel.app/',
+    email: `mailto:${contactEmail}`
+  }
+};
 ---
 
 <Layout
-  title="Contact CreateLoom"
-  description="Contact CreateLoom for brand collaborations, sponsored content, partnerships and business inquiries."
+  title="Contact CreateLoom — Brand Collaborations & Business Inquiries"
+  description="Contact CreateLoom for brand collaborations, website advertising, sponsored content, affiliate partnerships, custom campaigns and business inquiries."
 >
-  <section class="hero hero-compact">
+  <script
+    type="application/ld+json"
+    set:html={JSON.stringify(contactSchema)}
+  />
+
+  <!-- Hero -->
+  <section class="hero hero-compact contact-hero">
     <div class="container">
       <div class="eyebrow">Get in touch</div>
-      <h1>Let's work with <span class="gradient-text">CreateLoom.</span></h1>
+
+      <h1>
+        Let's work with
+        <span class="gradient-text">CreateLoom.</span>
+      </h1>
+
       <p>
-        For brand collaborations, sponsored content, partnerships, feedback,
-        or general business inquiries.
+        Have a brand partnership, advertising opportunity, campaign idea,
+        feedback or business inquiry? We'd love to hear from you.
       </p>
     </div>
   </section>
 
+  <!-- Contact -->
   <section class="section">
     <div class="container">
-      <div class="card" style="max-width:760px;margin:auto">
-        <div class="eyebrow">Business inquiries</div>
+      <div class="contact-layout">
 
-        <h2>Let's create something together.</h2>
+        <div class="contact-main">
+          <div class="eyebrow">Business inquiries</div>
 
-        <p class="muted">
-          Interested in collaborating with CreateLoom? We're open to brand
-          campaigns, sponsored Reels, website sponsorships, affiliate
-          partnerships, and custom campaigns.
+          <h2>Let's create something together.</h2>
+
+          <p class="intro">
+            CreateLoom works with brands, products and creator-focused
+            businesses on relevant partnerships and promotional campaigns.
+          </p>
+
+          <div class="email-box">
+            <div class="email-label">
+              Business & partnership inquiries
+            </div>
+
+            <a
+              class="email"
+              href={`mailto:${contactEmail}?subject=CreateLoom%20Business%20Inquiry`}
+            >
+              {contactEmail}
+            </a>
+
+            <p>
+              Click the email address or use the button below to start a
+              conversation.
+            </p>
+          </div>
+
+          <div class="actions">
+            <a
+              class="primary"
+              href={`mailto:${contactEmail}?subject=CreateLoom%20Business%20Inquiry`}
+            >
+              Email CreateLoom →
+            </a>
+
+            <a class="secondary" href="/brands/">
+              View Brand Opportunities →
+            </a>
+          </div>
+        </div>
+
+        <aside class="contact-side">
+          <div class="eyebrow">What can we discuss?</div>
+
+          <div class="inquiry-list">
+            <div>
+              <strong>Brand Collaborations</strong>
+              <span>Campaigns and creator-focused partnerships.</span>
+            </div>
+
+            <div>
+              <strong>Website Advertising</strong>
+              <span>Relevant advertising and featured placements.</span>
+            </div>
+
+            <div>
+              <strong>Sponsored Content</strong>
+              <span>Sponsored Reels, guides and content integrations.</span>
+            </div>
+
+            <div>
+              <strong>Affiliate Partnerships</strong>
+              <span>Long-term partnerships around useful products.</span>
+            </div>
+
+            <div>
+              <strong>General Inquiries</strong>
+              <span>Feedback, ideas or other business questions.</span>
+            </div>
+          </div>
+        </aside>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Brand CTA -->
+  <section class="section">
+    <div class="container">
+      <div class="brand-cta">
+        <div class="eyebrow">For brands & advertisers</div>
+
+        <h2>Want to feature your brand on CreateLoom?</h2>
+
+        <p>
+          Explore available partnership formats, including website
+          advertising, sponsored content, featured tools and custom campaigns.
         </p>
 
-        <div
-          style="margin:28px 0;padding:24px;border:1px solid var(--border);border-radius:16px"
-        >
-          <p class="muted" style="margin:0 0 8px">
-            For business & partnership inquiries
-          </p>
-
-          <a
-            href="mailto:soumaysikchi@gmail.com"
-            style="font-size:20px;font-weight:700"
-          >
-            soumaysikchi@gmail.com
-          </a>
-
-          <p class="muted" style="margin:10px 0 0">
-            Click the email address to send us an inquiry.
-          </p>
-        </div>
-
-        <div style="display:flex;gap:12px;flex-wrap:wrap">
-          <a
-            class="primary"
-            href="mailto:soumaysikchi@gmail.com?subject=CreateLoom%20Business%20Inquiry"
-          >
-            Email CreateLoom →
-          </a>
-
-          <a class="secondary" href="/brands/">
-            View brand opportunities →
-          </a>
-        </div>
+        <a class="primary" href="/brands/">
+          Explore Brand Opportunities →
+        </a>
       </div>
     </div>
   </section>
 </Layout>
+
+<style>
+  .contact-hero {
+    padding-bottom: 60px;
+  }
+
+  .contact-hero p {
+    max-width: 720px;
+    margin: 0 auto;
+    color: var(--muted, #a1a1aa);
+    line-height: 1.8;
+  }
+
+  .contact-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1.25fr) minmax(280px, 0.75fr);
+    gap: 28px;
+    max-width: 1050px;
+    margin: 0 auto;
+    align-items: start;
+  }
+
+  .contact-main,
+  .contact-side {
+    padding: 32px;
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 20px;
+    background: rgba(255,255,255,0.025);
+  }
+
+  .contact-main h2 {
+    margin: 9px 0 14px;
+  }
+
+  .intro {
+    color: var(--muted, #a1a1aa);
+    line-height: 1.8;
+  }
+
+  .email-box {
+    margin-top: 28px;
+    padding: 22px;
+    border: 1px solid rgba(139,92,246,0.22);
+    border-radius: 16px;
+    background: rgba(139,92,246,0.06);
+  }
+
+  .email-label {
+    color: var(--muted, #a1a1aa);
+    font-size: 0.78rem;
+    margin-bottom: 8px;
+  }
+
+  .email {
+    color: #c4b5fd;
+    font-size: 1.15rem;
+    font-weight: 800;
+    text-decoration: none;
+    word-break: break-word;
+  }
+
+  .email-box p {
+    margin: 9px 0 0;
+    color: var(--muted, #a1a1aa);
+    font-size: 0.82rem;
+    line-height: 1.6;
+  }
+
+  .actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 22px;
+  }
+
+  .actions a {
+    text-decoration: none;
+  }
+
+  .inquiry-list {
+    display: grid;
+    gap: 10px;
+    margin-top: 20px;
+  }
+
+  .inquiry-list div {
+    padding: 15px;
+    border: 1px solid rgba(255,255,255,0.06);
+    border-radius: 13px;
+    background: rgba(255,255,255,0.02);
+  }
+
+  .inquiry-list strong,
+  .inquiry-list span {
+    display: block;
+  }
+
+  .inquiry-list strong {
+    color: #fff;
+    font-size: 0.86rem;
+  }
+
+  .inquiry-list span {
+    margin-top: 4px;
+    color: var(--muted, #a1a1aa);
+    font-size: 0.76rem;
+    line-height: 1.5;
+  }
+
+  .brand-cta {
+    max-width: 850px;
+    margin: 0 auto;
+    padding: 45px 28px;
+    border: 1px solid rgba(139,92,246,0.2);
+    border-radius: 22px;
+    background:
+      linear-gradient(
+        145deg,
+        rgba(139,92,246,0.12),
+        rgba(255,255,255,0.025)
+      );
+    text-align: center;
+  }
+
+  .brand-cta h2 {
+    margin: 9px 0 12px;
+  }
+
+  .brand-cta p {
+    max-width: 650px;
+    margin: 0 auto;
+    color: var(--muted, #a1a1aa);
+    line-height: 1.75;
+  }
+
+  .brand-cta .primary {
+    display: inline-flex;
+    margin-top: 20px;
+    text-decoration: none;
+  }
+
+  @media (max-width: 800px) {
+    .contact-layout {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  @media (max-width: 600px) {
+    .contact-main,
+    .contact-side {
+      padding: 24px 20px;
+    }
+
+    .actions {
+      flex-direction: column;
+    }
+
+    .actions a {
+      width: 100%;
+      justify-content: center;
+    }
+
+    .brand-cta {
+      padding: 38px 20px;
+    }
+  }
+</style>
