@@ -124,78 +124,7 @@ const tags = Array.isArray(p.tags) ? p.tags.slice(0, 3) : [];
   </div>
 </article>
 
-<script>
-  const STORAGE_KEY = 'createloom-favorites';
 
-  function getFavorites() {
-    try {
-      const saved = localStorage.getItem(STORAGE_KEY);
-      const parsed = saved ? JSON.parse(saved) : [];
-      return Array.isArray(parsed) ? parsed : [];
-    } catch {
-      return [];
-    }
-  }
-
-  function setFavorites(favorites) {
-    try {
-      localStorage.setItem(STORAGE_KEY, JSON.stringify(favorites));
-    } catch {
-      // Ignore storage failures without breaking the prompt UI.
-    }
-  }
-
-  function updateFavoriteButton(button, saved) {
-    const title = button.closest('.prompt-card')?.dataset.title || 'prompt';
-    button.setAttribute('aria-pressed', String(saved));
-    button.setAttribute(
-      'aria-label',
-      saved ? `Remove ${title} from favorites` : `Save ${title} to favorites`
-    );
-    button.setAttribute(
-      'title',
-      saved ? 'Remove from favorites' : 'Save to favorites'
-    );
-
-    const icon = button.querySelector('span');
-    if (icon) icon.textContent = saved ? '♥' : '♡';
-  }
-
-  function syncFavoriteButtons() {
-    const favorites = getFavorites();
-
-    document.querySelectorAll('.fav-btn[data-fav]').forEach((button) => {
-      updateFavoriteButton(button, favorites.includes(button.dataset.fav));
-    });
-  }
-
-  document.addEventListener('click', (event) => {
-    const button = event.target.closest('.fav-btn[data-fav]');
-    if (!button) return;
-
-    const id = button.dataset.fav;
-    const favorites = getFavorites();
-    const saved = favorites.includes(id);
-
-    const nextFavorites = saved
-      ? favorites.filter((favoriteId) => favoriteId !== id)
-      : [...favorites, id];
-
-    setFavorites(nextFavorites);
-    updateFavoriteButton(button, !saved);
-
-    window.dispatchEvent(
-      new CustomEvent('createloom:favorites-changed', {
-        detail: { id, saved: !saved, favorites: nextFavorites }
-      })
-    );
-  });
-
-  document.addEventListener('createloom:favorites-changed', syncFavoriteButtons);
-  window.addEventListener('storage', syncFavoriteButtons);
-
-  syncFavoriteButtons();
-</script>
 
 <style>
   .prompt-card {
