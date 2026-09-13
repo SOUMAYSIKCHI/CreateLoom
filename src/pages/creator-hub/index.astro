@@ -156,12 +156,15 @@ const brandChecklist = [
   <div class="container">
     <div class="section-heading">
       <div>
-        <div class="eyebrow">Creator resources</div>
+        <div class="eyebrow">Instagram creator resources</div>
         <h2>Everything starts with a better system.</h2>
       </div>
 
       <p>
         Choose a topic and build one part of your creator workflow at a time.
+        For hashtag research, explore our
+        <a href="/creator-tools/trending-hashtags/">trending Instagram hashtags</a>
+        tool to find curated sets by topic.
       </p>
     </div>
 
@@ -170,7 +173,11 @@ const brandChecklist = [
         <a
           class="resource"
           href={resource.link || `#${resource.id}`}
-          aria-label={`Learn about ${resource.title}`}
+          aria-label={
+            resource.id === 'trending-hashtags'
+              ? 'Explore trending Instagram hashtags'
+              : `Learn about ${resource.title}`
+          }
         >
           <div class="resource-icon">{resource.icon}</div>
 
@@ -660,6 +667,28 @@ const brandChecklist = [
   </div>
 </section>
 
+<!-- RELATED CREATOR TOOLS -->
+<section class="section section-alt">
+  <div class="container narrow">
+    <div class="center-heading">
+      <div class="eyebrow">Related resources</div>
+      <h2>More tools and guides for Instagram creators.</h2>
+      <p>
+        Explore CreateLoom resources for creating content, finding relevant
+        hashtags, improving Reels and building a stronger creator workflow.
+      </p>
+    </div>
+
+    <div class="inline-links">
+      <a href="/creator-tools/trending-hashtags/">Trending Instagram Hashtags →</a>
+      <a href="/blog/instagram-reel-ideas/">Instagram Reel Ideas →</a>
+      <a href="/blog/how-to-get-more-reel-views/">How to Get More Reel Views →</a>
+      <a href="/prompts/">AI Prompt Library →</a>
+      <a href="/blog/">Creator Guides →</a>
+    </div>
+  </div>
+</section>
+
 <!-- FINAL CTA -->
 <section class="section">
   <div class="container">
@@ -683,6 +712,47 @@ const brandChecklist = [
     </div>
   </div>
 </section>
+
+
+<script type="application/ld+json" set:html={JSON.stringify({
+  '@context': 'https://schema.org',
+  '@type': 'CollectionPage',
+  name: 'Instagram Creator Hub',
+  description: 'Instagram creator resources covering Reel ideas, hooks, captions, content planning, Instagram growth, brand deals, media kits and trending hashtags.',
+  url: 'https://createloom.vercel.app/creator-hub/',
+  isPartOf: {
+    '@type': 'WebSite',
+    name: 'CreateLoom',
+    url: 'https://createloom.vercel.app/'
+  },
+  about: [
+    'Instagram Reels',
+    'Instagram growth',
+    'Instagram content ideas',
+    'Instagram hashtags',
+    'creator brand deals',
+    'creator media kits'
+  ]
+})}></script>
+
+<script type="application/ld+json" set:html={JSON.stringify({
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    {
+      '@type': 'ListItem',
+      position: 1,
+      name: 'Home',
+      item: 'https://createloom.vercel.app/'
+    },
+    {
+      '@type': 'ListItem',
+      position: 2,
+      name: 'Creator Hub',
+      item: 'https://createloom.vercel.app/creator-hub/'
+    }
+  ]
+})}></script>
 
 </Layout>
 
@@ -1216,6 +1286,20 @@ const brandChecklist = [
     padding: 0 4px 22px;
     color: var(--muted);
     line-height: 1.75;
+  }
+
+  .section-heading > p a,
+  .center-heading p a {
+    color: inherit;
+    font-weight: 700;
+    text-decoration: underline;
+    text-decoration-color: rgba(160,110,255,.55);
+    text-underline-offset: 3px;
+  }
+
+  .section-heading > p a:hover,
+  .center-heading p a:hover {
+    color: var(--purple2, #a78bfa);
   }
 
   .final-cta {
