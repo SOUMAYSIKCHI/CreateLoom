@@ -59,8 +59,23 @@ const webPageSchema = {
     '@type': 'WebSite',
     name: 'CreateLoom',
     url: 'https://createloom.vercel.app/'
-  }
+  },
+  about: {
+    '@type': 'Thing',
+    name: `${p.category} AI image prompt`
+  },
+  keywords: p.tags.join(', ')
 };
+
+const imageObjectSchema = p.image
+  ? {
+      '@context': 'https://schema.org',
+      '@type': 'ImageObject',
+      contentUrl: new URL(p.image, 'https://createloom.vercel.app').href,
+      name: `Example result for ${p.title} AI image prompt`,
+      description: `Example visual result for the ${p.title} AI image prompt on CreateLoom.`
+    }
+  : null;
 
 const breadcrumbSchema = {
   '@context': 'https://schema.org',
@@ -110,6 +125,13 @@ const breadcrumbSchema = {
     set:html={JSON.stringify(breadcrumbSchema)}
   />
 
+  {imageObjectSchema && (
+    <script
+      type="application/ld+json"
+      set:html={JSON.stringify(imageObjectSchema)}
+    />
+  )}
+
   <article class="prompt-page container">
 
     <!-- Breadcrumb -->
@@ -133,8 +155,9 @@ const breadcrumbSchema = {
       <h1>{p.title}</h1>
 
       <p class="prompt-intro">
-        A detailed, ready-to-use AI image prompt designed for
-        realistic and creative image generation.
+        A detailed, ready-to-use {p.category.toLowerCase()} AI image prompt
+        for realistic and creative image generation. Copy it, customize the
+        visual details and adapt it to your preferred image generator.
       </p>
 
       <div class="tags">
@@ -380,6 +403,20 @@ const breadcrumbSchema = {
         prompts for couples, selfies, portraits, fashion,
         vintage photography, anime and more.
       </p>
+
+      <div class="prompt-cta-links">
+        <a href={`/prompts/${p.category.toLowerCase()}/`}>
+          More {p.category} AI Prompts →
+        </a>
+
+        <a href="/creator-hub/">
+          Instagram Creator Hub →
+        </a>
+
+        <a href="/creator-tools/trending-hashtags/">
+          Trending Instagram Hashtags →
+        </a>
+      </div>
 
       <a
         class="primary cta-button"
@@ -838,6 +875,25 @@ const breadcrumbSchema = {
     display: inline-flex;
     margin-top: 20px;
     text-decoration: none;
+  }
+
+  .prompt-cta-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px 14px;
+    margin-top: 20px;
+  }
+
+  .prompt-cta-links a {
+    color: #c4b5fd;
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-decoration: none;
+  }
+
+  .prompt-cta-links a:hover {
+    text-decoration: underline;
   }
 
   @media (max-width: 760px) {
