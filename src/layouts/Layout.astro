@@ -248,14 +248,23 @@ const year = new Date().getFullYear();
           nav.map(([label, url]) =>
             label === 'Creator Hub' ? (
               <div class="nav-dropdown">
-                <a
-                  class:list={{ active: active === label }}
-                  href={url}
-                  aria-haspopup="true"
-                >
-                  Creator Hub
-                  <span class="nav-chevron" aria-hidden="true">⌄</span>
-                </a>
+                <div class="nav-dropdown-trigger">
+                  <a
+                    class:list={{ active: active === label }}
+                    href={url}
+                  >
+                    Creator Hub
+                  </a>
+                  <button
+                    class="nav-dropdown-toggle"
+                    type="button"
+                    aria-label="Toggle Creator Hub menu"
+                    aria-haspopup="true"
+                    aria-expanded="false"
+                  >
+                    <span class="nav-chevron" aria-hidden="true">⌄</span>
+                  </button>
+                </div>
 
                 <div class="nav-dropdown-menu">
                   {
@@ -591,6 +600,35 @@ const year = new Date().getFullYear();
           }
         }
       );
+
+      /*
+       * Desktop Creator Hub dropdown
+       */
+      const creatorDropdown = document.querySelector('.nav-dropdown');
+      const creatorDropdownToggle = document.querySelector('.nav-dropdown-toggle');
+
+      const setCreatorDropdown = (open) => {
+        if (!creatorDropdown || !creatorDropdownToggle) return;
+        creatorDropdown.classList.toggle('is-open', open);
+        creatorDropdownToggle.setAttribute('aria-expanded', String(open));
+      };
+
+      creatorDropdownToggle?.addEventListener('click', (event) => {
+        event.preventDefault();
+        event.stopPropagation();
+        const open = creatorDropdown?.classList.contains('is-open');
+        setCreatorDropdown(!open);
+      });
+
+      document.addEventListener('click', (event) => {
+        if (creatorDropdown && !creatorDropdown.contains(event.target)) {
+          setCreatorDropdown(false);
+        }
+      });
+
+      document.addEventListener('keydown', (event) => {
+        if (event.key === 'Escape') setCreatorDropdown(false);
+      });
 
       /*
        * Announcements
@@ -1031,10 +1069,32 @@ const year = new Date().getFullYear();
     align-items: center;
   }
 
-  .nav-dropdown > a {
+  .nav-dropdown-trigger {
     display: inline-flex;
     align-items: center;
-    gap: 5px;
+  }
+
+  .nav-dropdown-trigger > a {
+    display: inline-flex;
+    align-items: center;
+  }
+
+  .nav-dropdown-toggle {
+    display: inline-grid;
+    place-items: center;
+    width: 22px;
+    height: 30px;
+    margin-left: 1px;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    color: var(--muted, #a1a1aa);
+    cursor: pointer;
+  }
+
+  .nav-dropdown-toggle:hover,
+  .nav-dropdown-toggle:focus-visible {
+    color: #fff;
   }
 
   .nav-chevron {
@@ -1064,7 +1124,7 @@ const year = new Date().getFullYear();
     z-index: 1000;
   }
 
-  .nav-dropdown:hover .nav-dropdown-menu,
+  .nav-dropdown.is-open .nav-dropdown-menu,
   .nav-dropdown:focus-within .nav-dropdown-menu {
     opacity: 1;
     visibility: visible;
@@ -1200,6 +1260,10 @@ const year = new Date().getFullYear();
    */
 
   @media (max-width: 850px) {
+    .nav-dropdown {
+      display: none;
+    }
+
     .nav-dropdown-menu {
       display: none;
     }
