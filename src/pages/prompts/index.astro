@@ -361,8 +361,12 @@ const categoryDescriptions = {
   <script is:inline>
     const input = document.querySelector('#promptSearch');
     const form = document.querySelector('#promptSearchForm');
-    const cards = [...document.querySelectorAll('.prompt-card')];
-    const buttons = [...document.querySelectorAll('[data-category]')];
+    const cards = [
+      ...document.querySelectorAll('#promptGrid .prompt-card')
+    ];
+    const buttons = [
+      ...document.querySelectorAll('#filters button[data-category]')
+    ];
     const count = document.querySelector('#resultCount');
     const empty = document.querySelector('#empty');
     const clearButton = document.querySelector('#clearSearch');
@@ -435,9 +439,16 @@ const categoryDescriptions = {
       });
 
       buttons.forEach((button) => {
+        const active = button.dataset.category === cat;
+
         button.classList.toggle(
           'active-filter',
-          button.dataset.category === cat
+          active
+        );
+
+        button.setAttribute(
+          'aria-pressed',
+          String(active)
         );
       });
 
