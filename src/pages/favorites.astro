@@ -208,33 +208,6 @@ import prompts from '../data/prompts.json';
     }
 
     document.addEventListener('click', async (event) => {
-      const favoriteButton = event.target.closest('.fav-btn[data-fav]');
-
-      if (favoriteButton) {
-        const id = favoriteButton.dataset.fav;
-        const nextFavorites = getFavorites().filter(
-          (favoriteId) => favoriteId !== id
-        );
-
-        try {
-          localStorage.setItem(STORAGE_KEY, JSON.stringify(nextFavorites));
-        } catch {}
-
-        renderFavorites();
-
-        window.dispatchEvent(
-          new CustomEvent('createloom:favorites-changed', {
-            detail: {
-              id,
-              saved: false,
-              favorites: nextFavorites
-            }
-          })
-        );
-
-        return;
-      }
-
       const copyButton = event.target.closest('.copy-btn[data-copy]');
 
       if (copyButton) {
@@ -305,6 +278,18 @@ import prompts from '../data/prompts.json';
 
   .favorites-content {
     padding-top: 25px;
+  }
+
+  /* Keep saved prompt cards identical to the main prompt grid. */
+  #favorites-grid {
+    width: 100%;
+    min-width: 0;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  #favorites-grid .prompt-card {
+    min-width: 0;
+    width: 100%;
   }
 
   .empty-state {
@@ -527,6 +512,18 @@ import prompts from '../data/prompts.json';
   .open-btn {
     border-color: rgba(139,92,246,.22);
     color: #c4b5fd;
+  }
+
+  @media (max-width: 900px) {
+    #favorites-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
+
+  @media (max-width: 600px) {
+    #favorites-grid {
+      grid-template-columns: 1fr;
+    }
   }
 
   @media (max-width: 650px) {
