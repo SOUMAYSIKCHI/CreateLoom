@@ -146,6 +146,27 @@ const breadcrumbSchema = {
 
     </header>
 
+    <!-- Result Preview -->
+    <section class="prompt-result-section" aria-labelledby="result-preview-title">
+      <div class="section-label" id="result-preview-title">
+        <span>✦</span>
+        Result Preview
+      </div>
+
+      <figure class="prompt-result-figure">
+        <img
+          class="prompt-result-image"
+          src={p.image || '/images/prompts/createloom.png'}
+          alt={`Example result for ${p.title} AI image prompt`}
+          width="1080"
+          height="1920"
+          loading="eager"
+          decoding="async"
+        />
+        <figcaption>Example visual result this prompt is designed to create.</figcaption>
+      </figure>
+    </section>
+
     <!-- Prompt -->
     <section class="prompt-section">
 
@@ -540,6 +561,38 @@ const breadcrumbSchema = {
     font-size: 0.78rem;
   }
 
+  .prompt-result-section {
+    max-width: 920px;
+    margin: 0 auto 38px;
+  }
+
+  .prompt-result-figure {
+    margin: 0;
+    padding: 0;
+  }
+
+  .prompt-result-image {
+    display: block;
+    width: min(100%, 540px);
+    height: auto;
+    aspect-ratio: 9 / 16;
+    object-fit: cover;
+    margin: 0 auto;
+    border: 1px solid rgba(255,255,255,.09);
+    border-radius: 20px;
+    background: #0d0c13;
+    box-shadow: 0 20px 70px rgba(0,0,0,.24);
+  }
+
+  .prompt-result-figure figcaption {
+    max-width: 540px;
+    margin: 10px auto 0;
+    color: #777782;
+    font-size: .78rem;
+    line-height: 1.6;
+    text-align: center;
+  }
+
   .prompt-section {
     max-width: 920px;
     margin: 0 auto;
@@ -795,6 +848,15 @@ const breadcrumbSchema = {
       padding: 20px;
       font-size: 0.95rem;
       line-height: 1.75;
+    }
+
+    .prompt-result-section {
+      margin-bottom: 30px;
+    }
+
+    .prompt-result-image {
+      width: 100%;
+      border-radius: 16px;
     }
 
     .wide-actions {
