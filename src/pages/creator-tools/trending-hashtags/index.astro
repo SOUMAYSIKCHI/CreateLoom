@@ -1,0 +1,576 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import hashtagData from '../../../data/trending-hashtags.json';
+
+const categories = hashtagData.categories || [];
+const topics = categories.flatMap((category) =>
+  (category.topics || []).map((topic) => ({
+    ...topic,
+    categoryId: category.id,
+    categoryName: category.name,
+    categoryIcon: category.icon || ''
+  }))
+);
+
+const totalTopics = topics.length;
+const totalHashtags = topics.reduce(
+  (total, topic) => total + (topic.hashtags?.length || 0),
+  0
+);
+const trendingTopics = topics.filter((topic) => topic.trending === true);
+const seasonalTopics = topics.filter((topic) => topic.seasonal === true);
+
+function formatPostCount(count) {
+  if (typeof count !== 'number' || !Number.isFinite(count)) return '';
+  if (count >= 1_000_000_000) return `${(count / 1_000_000_000).toFixed(1).replace('.0', '')}B`;
+  if (count >= 1_000_000) return `${(count / 1_000_000).toFixed(1).replace('.0', '')}M`;
+  if (count >= 1_000) return `${(count / 1_000).toFixed(1).replace('.0', '')}K`;
+  return count.toLocaleString('en-IN');
+}
+---
+
+<Layout
+  title="Trending Instagram Hashtags — Hashtag Sets for Reels & Creators | CreateLoom"
+  description="Find curated Instagram hashtag sets for Reels, fashion, beauty, AI, travel, food, festivals, relationships, memes and more. Search by topic and copy relevant hashtags with CreateLoom."
+  active="Creator Hub"
+>
+
+<section class="hero hashtag-hero">
+  <div class="container">
+    <div class="eyebrow">Creator tool · Instagram hashtags</div>
+
+    <h1>
+      Trending
+      <span class="gradient-text">Hashtags</span>
+    </h1>
+
+    <p class="hero-copy">
+      Find relevant hashtag sets by topic, search the library, and copy
+      a complete set in one click.
+    </p>
+
+    <div class="hashtag-search">
+      <label class="sr-only" for="hashtag-search-input">Search hashtags and topics</label>
+      <input
+        id="hashtag-search-input"
+        type="search"
+        placeholder="Search love, fashion, AI, travel, Diwali..."
+        autocomplete="off"
+      />
+      <button class="primary" id="hashtag-search-button" type="button">Search</button>
+    </div>
+
+    <div class="hashtag-stats" aria-label="Hashtag library statistics">
+      <div><strong>{categories.length}</strong><span>Categories</span></div>
+      <div><strong>{totalTopics}</strong><span>Topic sets</span></div>
+      <div><strong>{totalHashtags}+</strong><span>Hashtags</span></div>
+      <div><strong>Free</strong><span>To use</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="section hashtag-library" id="hashtag-library">
+  <div class="container">
+    <div class="section-heading hashtag-heading">
+      <div>
+        <div class="eyebrow">Hashtag library</div>
+        <h2>Find the right set for your post.</h2>
+      </div>
+      <p id="hashtag-results" class="results-note" aria-live="polite"></p>
+    </div>
+
+    <div class="hashtag-toolbar">
+      <div class="hashtag-filters" role="group" aria-label="Filter hashtag topics">
+        <button class="small-btn active-filter" type="button" data-filter="all">All</button>
+        <button class="small-btn" type="button" data-filter="trending">Trending</button>
+        <button class="small-btn" type="button" data-filter="seasonal">Seasonal</button>
+      </div>
+
+      <label class="sort-control">
+        <span>Sort</span>
+        <select id="hashtag-sort" aria-label="Sort hashtag topics">
+          <option value="featured">Featured</option>
+          <option value="az">A–Z</option>
+        </select>
+      </label>
+    </div>
+
+    <div class="hashtag-categories" role="group" aria-label="Hashtag categories">
+      <button class="category-chip active" type="button" data-category="all">All topics</button>
+      {categories.map((category) => (
+        <button
+          class="category-chip"
+          type="button"
+          data-category={category.id}
+        >
+          <span aria-hidden="true">{category.icon}</span>
+          {category.name}
+        </button>
+      ))}
+    </div>
+
+    <div class="hashtag-grid" id="hashtag-grid">
+      {topics.map((topic, index) => (
+        <article
+          class="hashtag-topic"
+          data-category={topic.categoryId}
+          data-category-name={topic.categoryName}
+          data-title={topic.title}
+          data-description={topic.description}
+          data-trending={String(topic.trending === true)}
+          data-seasonal={String(topic.seasonal === true)}
+          data-index={index}
+          data-search={`${topic.categoryName} ${topic.title} ${topic.description} ${(topic.hashtags || []).map((item) => item.tag).join(' ')}`.toLowerCase()}
+        >
+          <div class="hashtag-topic-top">
+            <div>
+              <span class="hashtag-category-label">
+                <span aria-hidden="true">{topic.categoryIcon}</span>
+                {topic.categoryName}
+              </span>
+              <h3>{topic.title}</h3>
+            </div>
+
+            <div class="hashtag-badges">
+              {topic.trending === true && <span class="hashtag-badge">Trending</span>}
+              {topic.seasonal === true && <span class="hashtag-badge">Seasonal</span>}
+            </div>
+          </div>
+
+          <p class="hashtag-description">{topic.description}</p>
+
+          <div class="hashtag-list">
+            {(topic.hashtags || []).map((item) => (
+              <button
+                type="button"
+                class="hashtag"
+                data-hashtag={item.tag}
+                title={`Copy ${item.tag}`}
+              >
+                <span>{item.tag}</span>
+                {item.postCount !== null && item.postCount !== undefined && (
+                  <small>{formatPostCount(item.postCount)}</small>
+                )}
+              </button>
+            ))}
+          </div>
+
+          <div class="hashtag-actions">
+            <span>{topic.hashtags?.length || 0} hashtags</span>
+            <button
+              class="small-btn copy-set"
+              type="button"
+              data-copy={topic.hashtags?.map((item) => item.tag).join(' ') || ''}
+            >
+              Copy All
+            </button>
+          </div>
+        </article>
+      ))}
+    </div>
+
+    <div class="hashtag-empty" id="hashtag-empty" hidden>
+      <h3>No hashtag sets found</h3>
+      <p>Try another keyword or choose a different category.</p>
+      <button class="secondary" type="button" id="clear-hashtag-search">Clear search</button>
+    </div>
+  </div>
+</section>
+
+<section class="section hashtag-info">
+  <div class="container narrow">
+    <div class="eyebrow">How to use them</div>
+    <h2>Choose hashtags around the content, not just popularity.</h2>
+    <p class="lead">
+      Start with a topic-specific set that matches what your post is actually
+      about. A relevant combination is more useful than filling a caption
+      with unrelated high-volume tags.
+    </p>
+
+    <div class="hashtag-guidelines">
+      <div>
+        <span>01</span>
+        <h3>Match the topic</h3>
+        <p>Pick a set that accurately describes the Reel, photo or niche.</p>
+      </div>
+      <div>
+        <span>02</span>
+        <h3>Mix intent</h3>
+        <p>Combine broad discovery tags with more specific niche terms when appropriate.</p>
+      </div>
+      <div>
+        <span>03</span>
+        <h3>Keep it relevant</h3>
+        <p>Skip a popular hashtag when it has nothing to do with the content.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  const cards = Array.from(document.querySelectorAll('.hashtag-topic'));
+  const categoryButtons = Array.from(document.querySelectorAll('[data-category]'));
+  const filterButtons = Array.from(document.querySelectorAll('[data-filter]'));
+  const searchInput = document.querySelector('#hashtag-search-input');
+  const searchButton = document.querySelector('#hashtag-search-button');
+  const sortSelect = document.querySelector('#hashtag-sort');
+  const emptyState = document.querySelector('#hashtag-empty');
+  const results = document.querySelector('#hashtag-results');
+  const clearSearch = document.querySelector('#clear-hashtag-search');
+
+  let selectedCategory = 'all';
+  let selectedFilter = 'all';
+  let query = '';
+
+  function applyFilters() {
+    const normalizedQuery = query.trim().toLowerCase();
+
+    const visible = cards.filter((card) => {
+      const categoryMatch =
+        selectedCategory === 'all' || card.dataset.category === selectedCategory;
+
+      const filterMatch =
+        selectedFilter === 'all' ||
+        (selectedFilter === 'trending' && card.dataset.trending === 'true') ||
+        (selectedFilter === 'seasonal' && card.dataset.seasonal === 'true');
+
+      const searchMatch =
+        !normalizedQuery || card.dataset.search.includes(normalizedQuery);
+
+      const show = categoryMatch && filterMatch && searchMatch;
+      card.hidden = !show;
+      return show;
+    });
+
+    const sort = sortSelect?.value || 'featured';
+    const grid = document.querySelector('#hashtag-grid');
+
+    if (grid) {
+      const sorted = [...cards].sort((a, b) => {
+        if (sort === 'az') {
+          return (a.dataset.title || '').localeCompare(b.dataset.title || '');
+        }
+        return Number(a.dataset.index) - Number(b.dataset.index);
+      });
+
+      sorted.forEach((card) => grid.appendChild(card));
+    }
+
+    if (results) {
+      results.textContent = `${visible.length} topic set${visible.length === 1 ? '' : 's'}`;
+    }
+
+    if (emptyState) {
+      emptyState.hidden = visible.length !== 0;
+    }
+  }
+
+  function setCategory(category) {
+    selectedCategory = category;
+
+    categoryButtons.forEach((button) => {
+      button.classList.toggle('active', button.dataset.category === category);
+    });
+
+    applyFilters();
+  }
+
+  function setFilter(filter) {
+    selectedFilter = filter;
+
+    filterButtons.forEach((button) => {
+      button.classList.toggle('active-filter', button.dataset.filter === filter);
+    });
+
+    applyFilters();
+  }
+
+  categoryButtons.forEach((button) => {
+    button.addEventListener('click', () => setCategory(button.dataset.category || 'all'));
+  });
+
+  filterButtons.forEach((button) => {
+    button.addEventListener('click', () => setFilter(button.dataset.filter || 'all'));
+  });
+
+  searchInput?.addEventListener('input', () => {
+    query = searchInput.value;
+    applyFilters();
+  });
+
+  searchButton?.addEventListener('click', () => {
+    query = searchInput?.value || '';
+    applyFilters();
+    document.querySelector('#hashtag-library')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  });
+
+  sortSelect?.addEventListener('change', applyFilters);
+
+  clearSearch?.addEventListener('click', () => {
+    if (searchInput) searchInput.value = '';
+    query = '';
+    setCategory('all');
+    setFilter('all');
+    applyFilters();
+  });
+
+  document.querySelectorAll('.copy-set').forEach((button) => {
+    button.addEventListener('click', async () => {
+      const text = button.dataset.copy || '';
+      if (!text) return;
+
+      try {
+        await navigator.clipboard.writeText(text);
+        const original = button.textContent;
+        button.textContent = 'Copied ✓';
+        setTimeout(() => { button.textContent = original; }, 1400);
+      } catch {
+        const textarea = document.createElement('textarea');
+        textarea.value = text;
+        document.body.appendChild(textarea);
+        textarea.select();
+        document.execCommand('copy');
+        textarea.remove();
+        const original = button.textContent;
+        button.textContent = 'Copied ✓';
+        setTimeout(() => { button.textContent = original; }, 1400);
+      }
+    });
+  });
+
+  document.querySelectorAll('.hashtag').forEach((button) => {
+    button.addEventListener('click', async () => {
+      const text = button.dataset.hashtag || '';
+      if (!text) return;
+
+      try {
+        await navigator.clipboard.writeText(text);
+        const original = button.querySelector('span')?.textContent || text;
+        if (button.querySelector('span')) button.querySelector('span').textContent = 'Copied ✓';
+        setTimeout(() => {
+          if (button.querySelector('span')) button.querySelector('span').textContent = original;
+        }, 1000);
+      } catch {}
+    });
+  });
+
+  applyFilters();
+</script>
+
+<style>
+  .hashtag-hero { padding-bottom: 48px; }
+  .hero-copy { max-width: 700px; margin: 0 auto 28px; color: var(--muted); font-size: 18px; }
+
+  .hashtag-search {
+    display: flex;
+    gap: 8px;
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 7px;
+    background: #111019;
+    border: 1px solid var(--border);
+    border-radius: 15px;
+  }
+  .hashtag-search input {
+    flex: 1;
+    min-width: 0;
+    border: 0;
+    outline: 0;
+    background: transparent;
+    color: #fff;
+    padding: 12px 13px;
+  }
+
+  .hashtag-stats {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    max-width: 720px;
+    margin: 30px auto 0;
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    background: rgba(17,16,25,.72);
+    overflow: hidden;
+  }
+  .hashtag-stats div {
+    padding: 15px 10px;
+    border-right: 1px solid var(--border);
+  }
+  .hashtag-stats div:last-child { border-right: 0; }
+  .hashtag-stats strong { display: block; font-size: 20px; color: #fff; }
+  .hashtag-stats span { display: block; color: var(--muted); font-size: 12px; margin-top: 2px; }
+
+  .hashtag-heading { align-items: end; }
+  .hashtag-toolbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 14px;
+    margin-bottom: 16px;
+  }
+  .hashtag-filters { display: flex; gap: 8px; flex-wrap: wrap; }
+  .sort-control {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--muted);
+    font-size: 13px;
+  }
+  .sort-control select {
+    border: 1px solid var(--border);
+    border-radius: 9px;
+    background: #111019;
+    color: #ddd;
+    padding: 8px 10px;
+    outline: 0;
+  }
+
+  .hashtag-categories {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin-bottom: 24px;
+  }
+  .category-chip {
+    border: 1px solid var(--border);
+    background: #111019;
+    color: #bbb;
+    border-radius: 999px;
+    padding: 8px 11px;
+    font-size: 12px;
+    transition: .18s ease;
+  }
+  .category-chip:hover,
+  .category-chip.active {
+    color: #fff;
+    border-color: rgba(139,92,246,.48);
+    background: rgba(139,92,246,.12);
+  }
+
+  .hashtag-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+  }
+  .hashtag-topic {
+    min-width: 0;
+    padding: 20px;
+    background: linear-gradient(180deg,#15131f,#111019);
+    border: 1px solid var(--border);
+    border-radius: 17px;
+  }
+  .hashtag-topic[hidden] { display: none !important; }
+  .hashtag-topic-top {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 12px;
+  }
+  .hashtag-category-label {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    color: var(--purple2);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: .04em;
+  }
+  .hashtag-topic h3 {
+    margin: 6px 0 0;
+    font-size: 19px;
+    line-height: 1.3;
+  }
+  .hashtag-description {
+    color: var(--muted);
+    font-size: 13px;
+    margin: 10px 0 15px;
+  }
+  .hashtag-badges { display: flex; gap: 5px; flex-wrap: wrap; justify-content: flex-end; }
+  .hashtag-badge {
+    border: 1px solid rgba(139,92,246,.22);
+    background: rgba(139,92,246,.09);
+    color: #c4b5fd;
+    border-radius: 999px;
+    padding: 4px 7px;
+    font-size: 10px;
+    white-space: nowrap;
+  }
+  .hashtag-list {
+    display: flex;
+    gap: 7px;
+    flex-wrap: wrap;
+  }
+  .hashtag {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    border: 1px solid rgba(255,255,255,.08);
+    border-radius: 8px;
+    background: #0e0d14;
+    color: #ddd;
+    padding: 7px 8px;
+    font-size: 12px;
+    transition: .18s ease;
+  }
+  .hashtag:hover {
+    border-color: rgba(167,139,250,.38);
+    color: #fff;
+  }
+  .hashtag small {
+    color: #777;
+    font-size: 9px;
+  }
+  .hashtag-actions {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    margin-top: 17px;
+    padding-top: 13px;
+    border-top: 1px solid rgba(255,255,255,.06);
+    color: #777;
+    font-size: 11px;
+  }
+  .hashtag-empty {
+    text-align: center;
+    padding: 55px 20px;
+    border: 1px dashed var(--border);
+    border-radius: 16px;
+  }
+  .hashtag-empty h3 { margin: 0 0 6px; }
+  .hashtag-empty p { color: var(--muted); margin: 0 0 17px; }
+
+  .hashtag-info { border-top: 1px solid rgba(255,255,255,.05); }
+  .hashtag-guidelines {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 12px;
+    margin-top: 25px;
+  }
+  .hashtag-guidelines > div {
+    padding: 18px;
+    border: 1px solid var(--border);
+    border-radius: 15px;
+    background: #111019;
+  }
+  .hashtag-guidelines span {
+    color: var(--purple2);
+    font-size: 11px;
+    font-weight: 800;
+  }
+  .hashtag-guidelines h3 { margin: 8px 0 5px; font-size: 16px; }
+  .hashtag-guidelines p { color: var(--muted); margin: 0; font-size: 13px; }
+
+  @media (max-width: 800px) {
+    .hashtag-grid { grid-template-columns: 1fr; }
+    .hashtag-guidelines { grid-template-columns: 1fr; }
+  }
+  @media (max-width: 600px) {
+    .hashtag-search { display: flex; }
+    .hashtag-search button { white-space: nowrap; }
+    .hashtag-stats { grid-template-columns: repeat(2,1fr); }
+    .hashtag-stats div:nth-child(2) { border-right: 0; }
+    .hashtag-stats div:nth-child(-n+2) { border-bottom: 1px solid var(--border); }
+    .hashtag-toolbar { display: block; }
+    .sort-control { margin-top: 10px; justify-content: space-between; }
+  }
+</style>
