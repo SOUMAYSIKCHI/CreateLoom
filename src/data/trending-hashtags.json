@@ -1,0 +1,4906 @@
+{
+  "version": "1.0",
+  "lastUpdated": "2026-09-13",
+  "dataType": "instagram-hashtag-library",
+  "notes": "Post-count data for Instagram hashtags is not reliably or completely verifiable at scale: Instagram does not publish an official API for exact per-hashtag post totals, and third-party hashtag-analytics sites frequently disagree with each other by wide margins (sometimes 100x) and go stale quickly. Where multiple independent sources roughly converge on an order of magnitude for a very well-known tag, that figure is included with countType 'approximate' and a source note. For the large majority of hashtags in this dataset, postCount is honestly set to null (countType 'unknown') rather than inventing a precise-looking number. Treat all non-null counts here as rough, dated estimates to be refreshed periodically, not as verified Instagram figures.",
+  "categories": [
+    {
+      "id": "instagram-core",
+      "name": "Instagram & Reels",
+      "icon": "📸",
+      "topics": [
+        {
+          "id": "reels-general",
+          "title": "Reels General",
+          "description": "Broad hashtags for any Reels content.",
+          "trending": false,
+          "seasonal": false,
+          "trendStatus": "evergreen",
+          "region": "global",
+          "hashtags": [
+            {
+              "tag": "#reels",
+              "postCount": 2500000000,
+              "countType": "approximate",
+              "postCountSource": "Multiple third-party hashtag-analytics aggregators (rough consensus, not an Instagram-verified figure)"
+            },
+            {
+              "tag": "#instareels",
+              "postCount": null,
+              "countType": "approximate",
+              "postCountSource": "Multiple third-party hashtag-analytics aggregators (rough consensus, not an Instagram-verified figure)"
+            },
+            {
+              "tag": "#reelsinstagram",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            },
+            {
+              "tag": "#reelitfeelit",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            },
+            {
+              "tag": "#reelkarofeelkaro",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            },
+            {
+              "tag": "#instagram",
+              "postCount": 1800000000,
+              "countType": "approximate",
+              "postCountSource": "Multiple third-party hashtag-analytics aggregators (rough consensus, not an Instagram-verified figure)"
+            },
+            {
+              "tag": "#instagood",
+              "postCount": 1400000000,
+              "countType": "approximate",
+              "postCountSource": "Multiple third-party hashtag-analytics aggregators (rough consensus, not an Instagram-verified figure)"
+            },
+            {
+              "tag": "#explorepage",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            },
+            {
+              "tag": "#explore",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            },
+            {
+              "tag": "#viral",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            }
+          ]
+        },
+        {
+          "id": "instagram-growth",
+          "title": "Instagram Growth & Tips",
+          "description": "For creators posting about growing their IG account.",
+          "trending": false,
+          "seasonal": false,
+          "trendStatus": "evergreen",
+          "region": "global",
+          "hashtags": [
+            {
+              "tag": "#instagramgrowth",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            },
+            {
+              "tag": "#igtips",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            },
+            {
+              "tag": "#socialmediatips",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            },
+            {
+              "tag": "#instagramtips",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            },
+            {
+              "tag": "#growyourinstagram",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            },
+            {
+              "tag": "#contentcreatortips",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            },
+            {
+              "tag": "#instagramalgorithm",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            },
+            {
+              "tag": "#igreelstips",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            }
+          ]
+        },
+        {
+          "id": "ugc",
+          "title": "UGC & Creator Economy",
+          "description": "User-generated content and creator economy tags.",
+          "trending": false,
+          "seasonal": false,
+          "trendStatus": "evergreen",
+          "region": "global",
+          "hashtags": [
+            {
+              "tag": "#ugccreator",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            },
+            {
+              "tag": "#ugccontent",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            },
+            {
+              "tag": "#creatoreconomy",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            },
+            {
+              "tag": "#contentcreator",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            },
+            {
+              "tag": "#brandpartnership",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            },
+            {
+              "tag": "#ugcvideo",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            },
+            {
+              "tag": "#influencermarketing",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            }
+          ]
+        },
+        {
+          "id": "viral-trends",
+          "title": "Viral & Trending Reels",
+          "description": "Generic tags used on posts creators hope will trend.",
+          "trending": true,
+          "seasonal": false,
+          "trendStatus": "current",
+          "region": "global",
+          "hashtags": [
+            {
+              "tag": "#viral",
+              "postCount": null,
+              "countType": "approximate",
+              "postCountSource": "Multiple third-party hashtag-analytics aggregators (rough consensus, not an Instagram-verified figure)"
+            },
+            {
+              "tag": "#trending",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            },
+            {
+              "tag": "#viralreels",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            },
+            {
+              "tag": "#trendingreels",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            },
+            {
+              "tag": "#foryou",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            },
+            {
+              "tag": "#fyp",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            },
+            {
+              "tag": "#viralvideo",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "comedy",
+      "name": "Memes & Comedy",
+      "icon": "😂",
+      "topics": [
+        {
+          "id": "memes-general",
+          "title": "Memes",
+          "description": "General meme hashtags.",
+          "trending": false,
+          "seasonal": false,
+          "trendStatus": "evergreen",
+          "region": "global",
+          "hashtags": [
+            {
+              "tag": "#memes",
+              "postCount": 500000000,
+              "countType": "approximate",
+              "postCountSource": "Multiple third-party hashtag-analytics aggregators (rough consensus, not an Instagram-verified figure)"
+            },
+            {
+              "tag": "#memesdaily",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            },
+            {
+              "tag": "#dankmemes",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            },
+            {
+              "tag": "#funnymemes",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            },
+            {
+              "tag": "#memepage",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            },
+            {
+              "tag": "#relatablememes",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            }
+          ]
+        },
+        {
+          "id": "comedy-reels",
+          "title": "Comedy Reels",
+          "description": "Comedy skits and funny reels.",
+          "trending": false,
+          "seasonal": false,
+          "trendStatus": "evergreen",
+          "region": "global",
+          "hashtags": [
+            {
+              "tag": "#comedy",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            },
+            {
+              "tag": "#comedyreels",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            },
+            {
+              "tag": "#funny",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            },
+            {
+              "tag": "#funnyvideos",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            },
+            {
+              "tag": "#comedyvideo",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            },
+            {
+              "tag": "#indiancomedy",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            },
+            {
+              "tag": "#skit",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            }
+          ]
+        },
+        {
+          "id": "relatable",
+          "title": "Relatable Content",
+          "description": "Relatable/observational humor posts.",
+          "trending": false,
+          "seasonal": false,
+          "trendStatus": "evergreen",
+          "region": "global",
+          "hashtags": [
+            {
+              "tag": "#relatable",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            },
+            {
+              "tag": "#relateable",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            },
+            {
+              "tag": "#sotrue",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            },
+            {
+              "tag": "#mood",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            },
+            {
+              "tag": "#same",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "love",
+      "name": "Love & Relationships",
+      "icon": "❤️",
+      "topics": [
+        {
+          "id": "romantic-reels",
+          "title": "Romantic Reels",
+          "description": "Hashtags for romantic reels and couple content.",
+          "trending": false,
+          "seasonal": false,
+          "trendStatus": "evergreen",
+          "region": "global",
+          "hashtags": [
+            {
+              "tag": "#love",
+              "postCount": 2100000000,
+              "countType": "approximate",
+              "postCountSource": "Multiple third-party hashtag-analytics aggregators (rough consensus, not an Instagram-verified figure)"
+            },
+            {
+              "tag": "#couplegoals",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            },
+            {
+              "tag": "#romantic",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            },
+            {
+              "tag": "#lovestory",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            },
+            {
+              "tag": "#relationshipgoals",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            },
+            {
+              "tag": "#loveislove",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            },
+            {
+              "tag": "#coupleреels",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            }
+          ]
+        },
+        {
+          "id": "girlfriend-boyfriend",
+          "title": "Girlfriend / Boyfriend",
+          "description": "Tags for gf/bf content.",
+          "trending": false,
+          "seasonal": false,
+          "trendStatus": "evergreen",
+          "region": "global",
+          "hashtags": [
+            {
+              "tag": "#girlfriend",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            },
+            {
+              "tag": "#boyfriend",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            },
+            {
+              "tag": "#bestboyfriend",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            },
+            {
+              "tag": "#girlfriendgoals",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            },
+            {
+              "tag": "#longdistancerelationship",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            }
+          ]
+        },
+        {
+          "id": "friendship",
+          "title": "Friendship",
+          "description": "Friend-group content tags.",
+          "trending": false,
+          "seasonal": false,
+          "trendStatus": "evergreen",
+          "region": "global",
+          "hashtags": [
+            {
+              "tag": "#friendship",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            },
+            {
+              "tag": "#bestfriends",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            },
+            {
+              "tag": "#friendsforever",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            },
+            {
+              "tag": "#squadgoals",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            },
+            {
+              "tag": "#friendshipgoals",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            }
+          ]
+        },
+        {
+          "id": "family",
+          "title": "Family",
+          "description": "Family-oriented content.",
+          "trending": false,
+          "seasonal": false,
+          "trendStatus": "evergreen",
+          "region": "global",
+          "hashtags": [
+            {
+              "tag": "#family",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            },
+            {
+              "tag": "#familytime",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            },
+            {
+              "tag": "#familygoals",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            },
+            {
+              "tag": "#familylove",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            },
+            {
+              "tag": "#familyfirst",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "wedding",
+      "name": "Wedding & Bridal",
+      "icon": "💍",
+      "topics": [
+        {
+          "id": "wedding-general",
+          "title": "Indian Wedding General",
+          "description": "General Indian wedding hashtags.",
+          "trending": false,
+          "seasonal": false,
+          "trendStatus": "evergreen",
+          "region": "global",
+          "hashtags": [
+            {
+              "tag": "#indianwedding",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            },
+            {
+              "tag": "#weddingreels",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            },
+            {
+              "tag": "#shaadi",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            },
+            {
+              "tag": "#wedding",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            },
+            {
+              "tag": "#weddingphotography",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            },
+            {
+              "tag": "#weddinginspiration",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            },
+            {
+              "tag": "#bigfatindianwedding",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            }
+          ]
+        },
+        {
+          "id": "bride",
+          "title": "Bride & Bridal",
+          "description": "Bride-focused content.",
+          "trending": false,
+          "seasonal": false,
+          "trendStatus": "evergreen",
+          "region": "global",
+          "hashtags": [
+            {
+              "tag": "#bride",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            },
+            {
+              "tag": "#bridal",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            },
+            {
+              "tag": "#bridetobe",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            },
+            {
+              "tag": "#bridalmakeup",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            },
+            {
+              "tag": "#bridalwear",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            }
+          ]
+        },
+        {
+          "id": "groom",
+          "title": "Groom",
+          "description": "Groom-focused content.",
+          "trending": false,
+          "seasonal": false,
+          "trendStatus": "evergreen",
+          "region": "global",
+          "hashtags": [
+            {
+              "tag": "#groom",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            },
+            {
+              "tag": "#groomtobe",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            },
+            {
+              "tag": "#groomstyle",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            },
+            {
+              "tag": "#dulha",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            }
+          ]
+        },
+        {
+          "id": "mehndi-haldi",
+          "title": "Mehndi & Haldi",
+          "description": "Pre-wedding ceremony hashtags.",
+          "trending": false,
+          "seasonal": false,
+          "trendStatus": "evergreen",
+          "region": "global",
+          "hashtags": [
+            {
+              "tag": "#mehndi",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            },
+            {
+              "tag": "#mehendi",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            },
+            {
+              "tag": "#haldi",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            },
+            {
+              "tag": "#haldiceremony",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            },
+            {
+              "tag": "#mehndidesign",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            },
+            {
+              "tag": "#sangeet",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fashion",
+      "name": "Fashion",
+      "icon": "👗",
+      "topics": [
+        {
+          "id": "fashion-general",
+          "title": "Fashion General",
+          "description": "Broad fashion hashtags.",
+          "trending": false,
+          "seasonal": false,
+          "trendStatus": "evergreen",
+          "region": "global",
+          "hashtags": [
+            {
+              "tag": "#fashion",
+              "postCount": 1100000000,
+              "countType": "approximate",
+              "postCountSource": "Multiple third-party hashtag-analytics aggregators (rough consensus, not an Instagram-verified figure)"
+            },
+            {
+              "tag": "#style",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            },
+            {
+              "tag": "#fashionblogger",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            },
+            {
+              "tag": "#fashionista",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            },
+            {
+              "tag": "#instafashion",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            },
+            {
+              "tag": "#fashionstyle",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            }
+          ]
+        },
+        {
+          "id": "ootd",
+          "title": "Outfit / OOTD",
+          "description": "Outfit-of-the-day tags.",
+          "trending": false,
+          "seasonal": false,
+          "trendStatus": "evergreen",
+          "region": "global",
+          "hashtags": [
+            {
+              "tag": "#ootd",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            },
+            {
+              "tag": "#outfitoftheday",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            },
+            {
+              "tag": "#outfitinspo",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            },
+            {
+              "tag": "#outfitideas",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            },
+            {
+              "tag": "#lookbook",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            }
+          ]
+        },
+        {
+          "id": "mens-fashion",
+          "title": "Men's Fashion",
+          "description": "Menswear hashtags.",
+          "trending": false,
+          "seasonal": false,
+          "trendStatus": "evergreen",
+          "region": "global",
+          "hashtags": [
+            {
+              "tag": "#mensfashion",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            },
+            {
+              "tag": "#menswear",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            },
+            {
+              "tag": "#mensstyle",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            },
+            {
+              "tag": "#gentlemen",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            },
+            {
+              "tag": "#streetwearmen",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            }
+          ]
+        },
+        {
+          "id": "womens-fashion",
+          "title": "Women's Fashion",
+          "description": "Women's style hashtags.",
+          "trending": false,
+          "seasonal": false,
+          "trendStatus": "evergreen",
+          "region": "global",
+          "hashtags": [
+            {
+              "tag": "#womensfashion",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            },
+            {
+              "tag": "#womenswear",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            },
+            {
+              "tag": "#fashionwomen",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            },
+            {
+              "tag": "#styleinspo",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            }
+          ]
+        },
+        {
+          "id": "streetwear",
+          "title": "Streetwear",
+          "description": "Urban/streetwear style.",
+          "trending": false,
+          "seasonal": false,
+          "trendStatus": "evergreen",
+          "region": "global",
+          "hashtags": [
+            {
+              "tag": "#streetwear",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            },
+            {
+              "tag": "#streetstyle",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            },
+            {
+              "tag": "#hypebeast",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            },
+            {
+              "tag": "#sneakerhead",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            }
+          ]
+        },
+        {
+          "id": "ethnic-fashion",
+          "title": "Ethnic & Saree Fashion",
+          "description": "Indian ethnic wear.",
+          "trending": false,
+          "seasonal": false,
+          "trendStatus": "evergreen",
+          "region": "global",
+          "hashtags": [
+            {
+              "tag": "#ethnicwear",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            },
+            {
+              "tag": "#saree",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            },
+            {
+              "tag": "#sareelove",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            },
+            {
+              "tag": "#indianethnicwear",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            },
+            {
+              "tag": "#lehenga",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            },
+            {
+              "tag": "#kurti",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "beauty",
+      "name": "Beauty & Skincare",
+      "icon": "💄",
+      "topics": [
+        {
+          "id": "makeup",
+          "title": "Makeup",
+          "description": "Makeup content tags.",
+          "trending": false,
+          "seasonal": false,
+          "trendStatus": "evergreen",
+          "region": "global",
+          "hashtags": [
+            {
+              "tag": "#makeup",
+              "postCount": 700000000,
+              "countType": "approximate",
+              "postCountSource": "Multiple third-party hashtag-analytics aggregators (rough consensus, not an Instagram-verified figure)"
+            },
+            {
+              "tag": "#makeupartist",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            },
+            {
+              "tag": "#makeuptutorial",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            },
+            {
+              "tag": "#makeuplover",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            },
+            {
+              "tag": "#mua",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            },
+            {
+              "tag": "#makeupreels",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            }
+          ]
+        },
+        {
+          "id": "skincare",
+          "title": "Skincare",
+          "description": "Skincare routine tags.",
+          "trending": false,
+          "seasonal": false,
+          "trendStatus": "evergreen",
+          "region": "global",
+          "hashtags": [
+            {
+              "tag": "#skincare",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            },
+            {
+              "tag": "#skincareroutine",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            },
+            {
+              "tag": "#glowingskin",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            },
+            {
+              "tag": "#skincaretips",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            },
+            {
+              "tag": "#skincarecommunity",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            }
+          ]
+        },
+        {
+          "id": "hair",
+          "title": "Hair",
+          "description": "Hair styling and care.",
+          "trending": false,
+          "seasonal": false,
+          "trendStatus": "evergreen",
+          "region": "global",
+          "hashtags": [
+            {
+              "tag": "#hairstyle",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            },
+            {
+              "tag": "#hair",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            },
+            {
+              "tag": "#haircare",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            },
+            {
+              "tag": "#hairtutorial",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            },
+            {
+              "tag": "#hairtransformation",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            }
+          ]
+        },
+        {
+          "id": "nails",
+          "title": "Nails",
+          "description": "Nail art content.",
+          "trending": false,
+          "seasonal": false,
+          "trendStatus": "evergreen",
+          "region": "global",
+          "hashtags": [
+            {
+              "tag": "#nails",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            },
+            {
+              "tag": "#nailart",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            },
+            {
+              "tag": "#naildesign",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            },
+            {
+              "tag": "#manicure",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "photography",
+      "name": "Photography",
+      "icon": "📷",
+      "topics": [
+        {
+          "id": "photography-general",
+          "title": "Photography General",
+          "description": "Broad photography tags.",
+          "trending": false,
+          "seasonal": false,
+          "trendStatus": "evergreen",
+          "region": "global",
+          "hashtags": [
+            {
+              "tag": "#photography",
+              "postCount": 900000000,
+              "countType": "approximate",
+              "postCountSource": "Multiple third-party hashtag-analytics aggregators (rough consensus, not an Instagram-verified figure)"
+            },
+            {
+              "tag": "#photooftheday",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            },
+            {
+              "tag": "#photographer",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            },
+            {
+              "tag": "#instaphoto",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            },
+            {
+              "tag": "#capturedmoments",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            }
+          ]
+        },
+        {
+          "id": "portrait",
+          "title": "Portrait Photography",
+          "description": "Portrait-focused tags.",
+          "trending": false,
+          "seasonal": false,
+          "trendStatus": "evergreen",
+          "region": "global",
+          "hashtags": [
+            {
+              "tag": "#portraitphotography",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            },
+            {
+              "tag": "#portrait",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            },
+            {
+              "tag": "#portraitmood",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            },
+            {
+              "tag": "#portraitpage",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            }
+          ]
+        },
+        {
+          "id": "street-photo",
+          "title": "Street Photography",
+          "description": "Street photography tags.",
+          "trending": false,
+          "seasonal": false,
+          "trendStatus": "evergreen",
+          "region": "global",
+          "hashtags": [
+            {
+              "tag": "#streetphotography",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            },
+            {
+              "tag": "#streetphoto",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            },
+            {
+              "tag": "#urbanphotography",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            }
+          ]
+        },
+        {
+          "id": "mobile-photo",
+          "title": "Mobile Photography",
+          "description": "Smartphone photography.",
+          "trending": false,
+          "seasonal": false,
+          "trendStatus": "evergreen",
+          "region": "global",
+          "hashtags": [
+            {
+              "tag": "#mobilephotography",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            },
+            {
+              "tag": "#shotoniphone",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            },
+            {
+              "tag": "#shotonpixel",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            },
+            {
+              "tag": "#smartphonephotography",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            }
+          ]
+        },
+        {
+          "id": "cinematic",
+          "title": "Cinematic Photography",
+          "description": "Cinematic-style visuals.",
+          "trending": false,
+          "seasonal": false,
+          "trendStatus": "evergreen",
+          "region": "global",
+          "hashtags": [
+            {
+              "tag": "#cinematicphotography",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            },
+            {
+              "tag": "#cinematic",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            },
+            {
+              "tag": "#filmmaking",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            },
+            {
+              "tag": "#cinematography",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ai",
+      "name": "AI & Generative Tech",
+      "icon": "🤖",
+      "topics": [
+        {
+          "id": "ai-art",
+          "title": "AI Art",
+          "description": "AI-generated art tags.",
+          "trending": false,
+          "seasonal": false,
+          "trendStatus": "evergreen",
+          "region": "global",
+          "hashtags": [
+            {
+              "tag": "#aiart",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            },
+            {
+              "tag": "#aigenerated",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            },
+            {
+              "tag": "#generativeart",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            },
+            {
+              "tag": "#midjourney",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            },
+            {
+              "tag": "#aiartwork",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            }
+          ]
+        },
+        {
+          "id": "ai-images",
+          "title": "AI Images & Photography",
+          "description": "AI photo/image content.",
+          "trending": false,
+          "seasonal": false,
+          "trendStatus": "evergreen",
+          "region": "global",
+          "hashtags": [
+            {
+              "tag": "#aiimages",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            },
+            {
+              "tag": "#aiphotography",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            },
+            {
+              "tag": "#aiimage",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            }
+          ]
+        },
+        {
+          "id": "ai-video",
+          "title": "AI Video",
+          "description": "AI-generated video content.",
+          "trending": false,
+          "seasonal": false,
+          "trendStatus": "evergreen",
+          "region": "global",
+          "hashtags": [
+            {
+              "tag": "#aivideo",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            },
+            {
+              "tag": "#veo3",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            },
+            {
+              "tag": "#soravideo",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            },
+            {
+              "tag": "#aifilmmaking",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            }
+          ]
+        },
+        {
+          "id": "ai-prompts",
+          "title": "AI Prompts",
+          "description": "Prompt engineering / sharing.",
+          "trending": false,
+          "seasonal": false,
+          "trendStatus": "evergreen",
+          "region": "global",
+          "hashtags": [
+            {
+              "tag": "#aiprompts",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            },
+            {
+              "tag": "#promptengineering",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            },
+            {
+              "tag": "#chatgptprompts",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            }
+          ]
+        },
+        {
+          "id": "gen-ai",
+          "title": "Generative AI",
+          "description": "Broader gen-AI discussion.",
+          "trending": false,
+          "seasonal": false,
+          "trendStatus": "evergreen",
+          "region": "global",
+          "hashtags": [
+            {
+              "tag": "#generativeai",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            },
+            {
+              "tag": "#artificialintelligence",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            },
+            {
+              "tag": "#machinelearning",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            },
+            {
+              "tag": "#llm",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "travel",
+      "name": "Travel",
+      "icon": "✈️",
+      "topics": [
+        {
+          "id": "travel-general",
+          "title": "Travel General",
+          "description": "Broad travel tags.",
+          "trending": false,
+          "seasonal": false,
+          "trendStatus": "evergreen",
+          "region": "global",
+          "hashtags": [
+            {
+              "tag": "#travel",
+              "postCount": 700000000,
+              "countType": "approximate",
+              "postCountSource": "Multiple third-party hashtag-analytics aggregators (rough consensus, not an Instagram-verified figure)"
+            },
+            {
+              "tag": "#travelgram",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            },
+            {
+              "tag": "#wanderlust",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            },
+            {
+              "tag": "#travelphotography",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            },
+            {
+              "tag": "#travelblogger",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            }
+          ]
+        },
+        {
+          "id": "india-travel",
+          "title": "India Travel",
+          "description": "Travel within India.",
+          "trending": false,
+          "seasonal": false,
+          "trendStatus": "evergreen",
+          "region": "india",
+          "hashtags": [
+            {
+              "tag": "#incredibleindia",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            },
+            {
+              "tag": "#indiatravel",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            },
+            {
+              "tag": "#exploreindia",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            },
+            {
+              "tag": "#indiatourism",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            }
+          ]
+        },
+        {
+          "id": "solo-travel",
+          "title": "Solo Travel",
+          "description": "Solo traveler content.",
+          "trending": false,
+          "seasonal": false,
+          "trendStatus": "evergreen",
+          "region": "global",
+          "hashtags": [
+            {
+              "tag": "#solotravel",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            },
+            {
+              "tag": "#solotraveler",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            },
+            {
+              "tag": "#travelalone",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            }
+          ]
+        },
+        {
+          "id": "backpacking",
+          "title": "Backpacking",
+          "description": "Backpacker travel tags.",
+          "trending": false,
+          "seasonal": false,
+          "trendStatus": "evergreen",
+          "region": "global",
+          "hashtags": [
+            {
+              "tag": "#backpacking",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            },
+            {
+              "tag": "#backpacker",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            },
+            {
+              "tag": "#budgettravel",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            }
+          ]
+        },
+        {
+          "id": "beaches-mountains",
+          "title": "Beaches & Mountains",
+          "description": "Nature travel destinations.",
+          "trending": false,
+          "seasonal": false,
+          "trendStatus": "evergreen",
+          "region": "global",
+          "hashtags": [
+            {
+              "tag": "#beachlife",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            },
+            {
+              "tag": "#mountains",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            },
+            {
+              "tag": "#himalayas",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            },
+            {
+              "tag": "#beachvibes",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            },
+            {
+              "tag": "#hiking",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            }
+          ]
+        },
+        {
+          "id": "adventure",
+          "title": "Adventure",
+          "description": "Adventure travel/sports.",
+          "trending": false,
+          "seasonal": false,
+          "trendStatus": "evergreen",
+          "region": "global",
+          "hashtags": [
+            {
+              "tag": "#adventure",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            },
+            {
+              "tag": "#adventuretravel",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            },
+            {
+              "tag": "#trekking",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            },
+            {
+              "tag": "#roadtrip",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "food",
+      "name": "Food & Cooking",
+      "icon": "🍲",
+      "topics": [
+        {
+          "id": "food-general",
+          "title": "Food Photography",
+          "description": "General food content.",
+          "trending": false,
+          "seasonal": false,
+          "trendStatus": "evergreen",
+          "region": "global",
+          "hashtags": [
+            {
+              "tag": "#food",
+              "postCount": 800000000,
+              "countType": "approximate",
+              "postCountSource": "Multiple third-party hashtag-analytics aggregators (rough consensus, not an Instagram-verified figure)"
+            },
+            {
+              "tag": "#foodphotography",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            },
+            {
+              "tag": "#foodie",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            },
+            {
+              "tag": "#instafood",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            },
+            {
+              "tag": "#foodblogger",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            }
+          ]
+        },
+        {
+          "id": "cooking-recipes",
+          "title": "Cooking & Recipes",
+          "description": "Recipe content.",
+          "trending": false,
+          "seasonal": false,
+          "trendStatus": "evergreen",
+          "region": "global",
+          "hashtags": [
+            {
+              "tag": "#recipe",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            },
+            {
+              "tag": "#homecooking",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            },
+            {
+              "tag": "#easyrecipes",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            },
+            {
+              "tag": "#cookingreels",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            }
+          ]
+        },
+        {
+          "id": "street-food",
+          "title": "Street Food",
+          "description": "Street food content.",
+          "trending": false,
+          "seasonal": false,
+          "trendStatus": "evergreen",
+          "region": "global",
+          "hashtags": [
+            {
+              "tag": "#streetfood",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            },
+            {
+              "tag": "#streetfoodindia",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            },
+            {
+              "tag": "#foodstall",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            }
+          ]
+        },
+        {
+          "id": "indian-food",
+          "title": "Indian Food",
+          "description": "Indian cuisine tags.",
+          "trending": false,
+          "seasonal": false,
+          "trendStatus": "evergreen",
+          "region": "india",
+          "hashtags": [
+            {
+              "tag": "#indianfood",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            },
+            {
+              "tag": "#indiancuisine",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            },
+            {
+              "tag": "#desifood",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            },
+            {
+              "tag": "#indianfoodbloggers",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            }
+          ]
+        },
+        {
+          "id": "desserts",
+          "title": "Desserts",
+          "description": "Dessert/baking content.",
+          "trending": false,
+          "seasonal": false,
+          "trendStatus": "evergreen",
+          "region": "global",
+          "hashtags": [
+            {
+              "tag": "#dessert",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            },
+            {
+              "tag": "#baking",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            },
+            {
+              "tag": "#dessertlover",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            },
+            {
+              "tag": "#chocolatelover",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            }
+          ]
+        },
+        {
+          "id": "coffee",
+          "title": "Coffee",
+          "description": "Coffee culture content.",
+          "trending": false,
+          "seasonal": false,
+          "trendStatus": "evergreen",
+          "region": "global",
+          "hashtags": [
+            {
+              "tag": "#coffee",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            },
+            {
+              "tag": "#coffeetime",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            },
+            {
+              "tag": "#coffeelover",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            },
+            {
+              "tag": "#coffeeaddict",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fitness",
+      "name": "Fitness & Wellness",
+      "icon": "💪",
+      "topics": [
+        {
+          "id": "gym-workout",
+          "title": "Gym & Workout",
+          "description": "Gym/workout content.",
+          "trending": false,
+          "seasonal": false,
+          "trendStatus": "evergreen",
+          "region": "global",
+          "hashtags": [
+            {
+              "tag": "#fitness",
+              "postCount": 600000000,
+              "countType": "approximate",
+              "postCountSource": "Multiple third-party hashtag-analytics aggregators (rough consensus, not an Instagram-verified figure)"
+            },
+            {
+              "tag": "#gym",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            },
+            {
+              "tag": "#workout",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            },
+            {
+              "tag": "#gymlife",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            },
+            {
+              "tag": "#fitnessmotivation",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            }
+          ]
+        },
+        {
+          "id": "yoga",
+          "title": "Yoga",
+          "description": "Yoga practice content.",
+          "trending": false,
+          "seasonal": false,
+          "trendStatus": "evergreen",
+          "region": "global",
+          "hashtags": [
+            {
+              "tag": "#yoga",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            },
+            {
+              "tag": "#yogalife",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            },
+            {
+              "tag": "#yogapractice",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            },
+            {
+              "tag": "#yogaeverydamnday",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            }
+          ]
+        },
+        {
+          "id": "running",
+          "title": "Running",
+          "description": "Running/marathon content.",
+          "trending": false,
+          "seasonal": false,
+          "trendStatus": "evergreen",
+          "region": "global",
+          "hashtags": [
+            {
+              "tag": "#running",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            },
+            {
+              "tag": "#runner",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            },
+            {
+              "tag": "#marathontraining",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            }
+          ]
+        },
+        {
+          "id": "wellness",
+          "title": "Wellness & Self Care",
+          "description": "Holistic wellness content.",
+          "trending": false,
+          "seasonal": false,
+          "trendStatus": "evergreen",
+          "region": "global",
+          "hashtags": [
+            {
+              "tag": "#wellness",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            },
+            {
+              "tag": "#selfcare",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            },
+            {
+              "tag": "#mentalwellness",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            },
+            {
+              "tag": "#mindfulness",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "lifestyle",
+      "name": "Lifestyle & Aesthetic",
+      "icon": "🌿",
+      "topics": [
+        {
+          "id": "aesthetic",
+          "title": "Aesthetic",
+          "description": "Curated aesthetic content.",
+          "trending": false,
+          "seasonal": false,
+          "trendStatus": "evergreen",
+          "region": "global",
+          "hashtags": [
+            {
+              "tag": "#aesthetic",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            },
+            {
+              "tag": "#aestheticfeed",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            },
+            {
+              "tag": "#aestheticvibes",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            }
+          ]
+        },
+        {
+          "id": "minimalism",
+          "title": "Minimalism",
+          "description": "Minimalist lifestyle content.",
+          "trending": false,
+          "seasonal": false,
+          "trendStatus": "evergreen",
+          "region": "global",
+          "hashtags": [
+            {
+              "tag": "#minimalism",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            },
+            {
+              "tag": "#minimalist",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            },
+            {
+              "tag": "#minimalistlifestyle",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            }
+          ]
+        },
+        {
+          "id": "vlogging",
+          "title": "Daily Vlog",
+          "description": "Everyday vlog content.",
+          "trending": false,
+          "seasonal": false,
+          "trendStatus": "evergreen",
+          "region": "global",
+          "hashtags": [
+            {
+              "tag": "#dailyvlog",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            },
+            {
+              "tag": "#vlog",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            },
+            {
+              "tag": "#vlogger",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            },
+            {
+              "tag": "#dayinmylife",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "entertainment",
+      "name": "Music, Dance & Entertainment",
+      "icon": "🎬",
+      "topics": [
+        {
+          "id": "music-songs",
+          "title": "Music & Songs",
+          "description": "Music content tags.",
+          "trending": false,
+          "seasonal": false,
+          "trendStatus": "evergreen",
+          "region": "global",
+          "hashtags": [
+            {
+              "tag": "#music",
+              "postCount": 800000000,
+              "countType": "approximate",
+              "postCountSource": "Multiple third-party hashtag-analytics aggregators (rough consensus, not an Instagram-verified figure)"
+            },
+            {
+              "tag": "#song",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            },
+            {
+              "tag": "#musician",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            },
+            {
+              "tag": "#singer",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            },
+            {
+              "tag": "#newmusic",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            }
+          ]
+        },
+        {
+          "id": "dance",
+          "title": "Dance",
+          "description": "Dance content tags.",
+          "trending": false,
+          "seasonal": false,
+          "trendStatus": "evergreen",
+          "region": "global",
+          "hashtags": [
+            {
+              "tag": "#dance",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            },
+            {
+              "tag": "#dancereels",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            },
+            {
+              "tag": "#dancer",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            },
+            {
+              "tag": "#dancecover",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            }
+          ]
+        },
+        {
+          "id": "bollywood",
+          "title": "Bollywood & Indian Cinema",
+          "description": "Bollywood/Indian film content.",
+          "trending": false,
+          "seasonal": false,
+          "trendStatus": "evergreen",
+          "region": "india",
+          "hashtags": [
+            {
+              "tag": "#bollywood",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            },
+            {
+              "tag": "#bollywoodmovies",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            },
+            {
+              "tag": "#indiancinema",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            },
+            {
+              "tag": "#bollywoodsongs",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            }
+          ]
+        },
+        {
+          "id": "movies-webseries",
+          "title": "Movies & Web Series",
+          "description": "Movie/series discussion tags.",
+          "trending": false,
+          "seasonal": false,
+          "trendStatus": "evergreen",
+          "region": "global",
+          "hashtags": [
+            {
+              "tag": "#movies",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            },
+            {
+              "tag": "#webseries",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            },
+            {
+              "tag": "#moviereview",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            },
+            {
+              "tag": "#netflixindia",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            }
+          ]
+        },
+        {
+          "id": "celebrity",
+          "title": "Celebrity",
+          "description": "Celebrity fan content.",
+          "trending": false,
+          "seasonal": false,
+          "trendStatus": "evergreen",
+          "region": "global",
+          "hashtags": [
+            {
+              "tag": "#celebrity",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            },
+            {
+              "tag": "#celebstyle",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            },
+            {
+              "tag": "#celebritynews",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sports",
+      "name": "Sports & Gaming",
+      "icon": "🏏",
+      "topics": [
+        {
+          "id": "cricket-ipl",
+          "title": "Cricket & IPL",
+          "description": "Cricket fan content.",
+          "trending": false,
+          "seasonal": false,
+          "trendStatus": "evergreen",
+          "region": "india",
+          "hashtags": [
+            {
+              "tag": "#cricket",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            },
+            {
+              "tag": "#ipl",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            },
+            {
+              "tag": "#cricketfans",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            },
+            {
+              "tag": "#teamindia",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            }
+          ]
+        },
+        {
+          "id": "football",
+          "title": "Football",
+          "description": "Football fan content.",
+          "trending": false,
+          "seasonal": false,
+          "trendStatus": "evergreen",
+          "region": "global",
+          "hashtags": [
+            {
+              "tag": "#football",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            },
+            {
+              "tag": "#soccer",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            },
+            {
+              "tag": "#footballfans",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            }
+          ]
+        },
+        {
+          "id": "sports-general",
+          "title": "Sports General",
+          "description": "General sports tags.",
+          "trending": false,
+          "seasonal": false,
+          "trendStatus": "evergreen",
+          "region": "global",
+          "hashtags": [
+            {
+              "tag": "#sports",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            },
+            {
+              "tag": "#sportslife",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            },
+            {
+              "tag": "#athlete",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            }
+          ]
+        },
+        {
+          "id": "gaming-esports",
+          "title": "Gaming & Esports",
+          "description": "Gaming/esports tags.",
+          "trending": false,
+          "seasonal": false,
+          "trendStatus": "evergreen",
+          "region": "global",
+          "hashtags": [
+            {
+              "tag": "#gaming",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            },
+            {
+              "tag": "#esports",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            },
+            {
+              "tag": "#gamer",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            },
+            {
+              "tag": "#pcgaming",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            },
+            {
+              "tag": "#mobilegaming",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "technology",
+      "name": "Technology & Startups",
+      "icon": "💻",
+      "topics": [
+        {
+          "id": "coding-webdev",
+          "title": "Coding & Web Development",
+          "description": "Programming content.",
+          "trending": false,
+          "seasonal": false,
+          "trendStatus": "evergreen",
+          "region": "global",
+          "hashtags": [
+            {
+              "tag": "#coding",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            },
+            {
+              "tag": "#programming",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            },
+            {
+              "tag": "#webdevelopment",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            },
+            {
+              "tag": "#developer",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            },
+            {
+              "tag": "#100daysofcode",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            }
+          ]
+        },
+        {
+          "id": "startups-business",
+          "title": "Startups & Business",
+          "description": "Startup/business content.",
+          "trending": false,
+          "seasonal": false,
+          "trendStatus": "evergreen",
+          "region": "global",
+          "hashtags": [
+            {
+              "tag": "#startup",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            },
+            {
+              "tag": "#entrepreneurship",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            },
+            {
+              "tag": "#business",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            },
+            {
+              "tag": "#smallbusiness",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            }
+          ]
+        },
+        {
+          "id": "marketing",
+          "title": "Marketing & Personal Branding",
+          "description": "Marketing tags.",
+          "trending": false,
+          "seasonal": false,
+          "trendStatus": "evergreen",
+          "region": "global",
+          "hashtags": [
+            {
+              "tag": "#digitalmarketing",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            },
+            {
+              "tag": "#marketing",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            },
+            {
+              "tag": "#personalbranding",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            },
+            {
+              "tag": "#socialmediamarketing",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "education",
+      "name": "Education & Career",
+      "icon": "🎓",
+      "topics": [
+        {
+          "id": "students-college",
+          "title": "Students & College Life",
+          "description": "Student life content.",
+          "trending": false,
+          "seasonal": false,
+          "trendStatus": "evergreen",
+          "region": "global",
+          "hashtags": [
+            {
+              "tag": "#studentlife",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            },
+            {
+              "tag": "#collegelife",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            },
+            {
+              "tag": "#studygram",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            },
+            {
+              "tag": "#examseason",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            }
+          ]
+        },
+        {
+          "id": "study-motivation",
+          "title": "Study Motivation",
+          "description": "Study motivation content.",
+          "trending": false,
+          "seasonal": false,
+          "trendStatus": "evergreen",
+          "region": "global",
+          "hashtags": [
+            {
+              "tag": "#studymotivation",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            },
+            {
+              "tag": "#studywithme",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            },
+            {
+              "tag": "#productivity",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            }
+          ]
+        },
+        {
+          "id": "career-jobs",
+          "title": "Career & Jobs",
+          "description": "Career-focused content.",
+          "trending": false,
+          "seasonal": false,
+          "trendStatus": "evergreen",
+          "region": "global",
+          "hashtags": [
+            {
+              "tag": "#career",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            },
+            {
+              "tag": "#jobsearch",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            },
+            {
+              "tag": "#careergoals",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            },
+            {
+              "tag": "#job",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "motivation",
+      "name": "Motivation & Mindset",
+      "icon": "🌟",
+      "topics": [
+        {
+          "id": "motivation-success",
+          "title": "Motivation & Success",
+          "description": "Motivational content tags.",
+          "trending": false,
+          "seasonal": false,
+          "trendStatus": "evergreen",
+          "region": "global",
+          "hashtags": [
+            {
+              "tag": "#motivation",
+              "postCount": 600000000,
+              "countType": "approximate",
+              "postCountSource": "Multiple third-party hashtag-analytics aggregators (rough consensus, not an Instagram-verified figure)"
+            },
+            {
+              "tag": "#success",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            },
+            {
+              "tag": "#successmindset",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            },
+            {
+              "tag": "#hustle",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            }
+          ]
+        },
+        {
+          "id": "quotes",
+          "title": "Quotes",
+          "description": "Quote-post content.",
+          "trending": false,
+          "seasonal": false,
+          "trendStatus": "evergreen",
+          "region": "global",
+          "hashtags": [
+            {
+              "tag": "#quotes",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            },
+            {
+              "tag": "#quoteoftheday",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            },
+            {
+              "tag": "#lifequotes",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            },
+            {
+              "tag": "#motivationalquotes",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            }
+          ]
+        },
+        {
+          "id": "self-love-mental",
+          "title": "Self Love & Mental Wellness",
+          "description": "Mental health awareness tags.",
+          "trending": false,
+          "seasonal": false,
+          "trendStatus": "evergreen",
+          "region": "global",
+          "hashtags": [
+            {
+              "tag": "#selflove",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            },
+            {
+              "tag": "#mentalhealthawareness",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            },
+            {
+              "tag": "#mentalhealthmatters",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            }
+          ]
+        },
+        {
+          "id": "books-reading",
+          "title": "Books & Reading",
+          "description": "Reading community tags.",
+          "trending": false,
+          "seasonal": false,
+          "trendStatus": "evergreen",
+          "region": "global",
+          "hashtags": [
+            {
+              "tag": "#booksofinstagram",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            },
+            {
+              "tag": "#bookstagram",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            },
+            {
+              "tag": "#reading",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            },
+            {
+              "tag": "#booklover",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "art-design",
+      "name": "Art & Design",
+      "icon": "🎨",
+      "topics": [
+        {
+          "id": "art-drawing",
+          "title": "Art & Drawing",
+          "description": "Illustration/drawing content.",
+          "trending": false,
+          "seasonal": false,
+          "trendStatus": "evergreen",
+          "region": "global",
+          "hashtags": [
+            {
+              "tag": "#art",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            },
+            {
+              "tag": "#drawing",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            },
+            {
+              "tag": "#illustration",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            },
+            {
+              "tag": "#artistsoninstagram",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            }
+          ]
+        },
+        {
+          "id": "graphic-design",
+          "title": "Graphic Design",
+          "description": "Graphic design content.",
+          "trending": false,
+          "seasonal": false,
+          "trendStatus": "evergreen",
+          "region": "global",
+          "hashtags": [
+            {
+              "tag": "#graphicdesign",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            },
+            {
+              "tag": "#logodesign",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            },
+            {
+              "tag": "#designer",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            }
+          ]
+        },
+        {
+          "id": "interior-decor",
+          "title": "Interior Design & Home Decor",
+          "description": "Interior design content.",
+          "trending": false,
+          "seasonal": false,
+          "trendStatus": "evergreen",
+          "region": "global",
+          "hashtags": [
+            {
+              "tag": "#interiordesign",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            },
+            {
+              "tag": "#homedecor",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            },
+            {
+              "tag": "#interiordecor",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            },
+            {
+              "tag": "#homedesign",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            }
+          ]
+        },
+        {
+          "id": "architecture",
+          "title": "Architecture",
+          "description": "Architecture photography/content.",
+          "trending": false,
+          "seasonal": false,
+          "trendStatus": "evergreen",
+          "region": "global",
+          "hashtags": [
+            {
+              "tag": "#architecture",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            },
+            {
+              "tag": "#architecturephotography",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            },
+            {
+              "tag": "#archilovers",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "vehicles",
+      "name": "Cars & Bikes",
+      "icon": "🚗",
+      "topics": [
+        {
+          "id": "cars",
+          "title": "Cars",
+          "description": "Car enthusiast content.",
+          "trending": false,
+          "seasonal": false,
+          "trendStatus": "evergreen",
+          "region": "global",
+          "hashtags": [
+            {
+              "tag": "#cars",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            },
+            {
+              "tag": "#carsofinstagram",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            },
+            {
+              "tag": "#supercars",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            },
+            {
+              "tag": "#luxurycars",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            }
+          ]
+        },
+        {
+          "id": "bikes",
+          "title": "Bikes & Motorcycles",
+          "description": "Motorcycle content.",
+          "trending": false,
+          "seasonal": false,
+          "trendStatus": "evergreen",
+          "region": "india",
+          "hashtags": [
+            {
+              "tag": "#bikes",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            },
+            {
+              "tag": "#motorcycle",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            },
+            {
+              "tag": "#bikelife",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            },
+            {
+              "tag": "#royalenfield",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "pets-animals",
+      "name": "Pets & Animals",
+      "icon": "🐾",
+      "topics": [
+        {
+          "id": "dogs",
+          "title": "Dogs",
+          "description": "Dog content tags.",
+          "trending": false,
+          "seasonal": false,
+          "trendStatus": "evergreen",
+          "region": "global",
+          "hashtags": [
+            {
+              "tag": "#dogsofinstagram",
+              "postCount": 200000000,
+              "countType": "approximate",
+              "postCountSource": "Multiple third-party hashtag-analytics aggregators (rough consensus, not an Instagram-verified figure)"
+            },
+            {
+              "tag": "#dog",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            },
+            {
+              "tag": "#doglover",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            },
+            {
+              "tag": "#puppy",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            }
+          ]
+        },
+        {
+          "id": "cats",
+          "title": "Cats",
+          "description": "Cat content tags.",
+          "trending": false,
+          "seasonal": false,
+          "trendStatus": "evergreen",
+          "region": "global",
+          "hashtags": [
+            {
+              "tag": "#catsofinstagram",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            },
+            {
+              "tag": "#cat",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            },
+            {
+              "tag": "#catlover",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            },
+            {
+              "tag": "#kitten",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            }
+          ]
+        },
+        {
+          "id": "animals-nature",
+          "title": "Animals & Nature",
+          "description": "Wildlife/nature content.",
+          "trending": false,
+          "seasonal": false,
+          "trendStatus": "evergreen",
+          "region": "global",
+          "hashtags": [
+            {
+              "tag": "#animals",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            },
+            {
+              "tag": "#wildlife",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            },
+            {
+              "tag": "#nature",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            },
+            {
+              "tag": "#naturephotography",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "nature-weather",
+      "name": "Nature & Weather Moments",
+      "icon": "🌅",
+      "topics": [
+        {
+          "id": "flowers",
+          "title": "Flowers",
+          "description": "Flower/floral content.",
+          "trending": false,
+          "seasonal": false,
+          "trendStatus": "evergreen",
+          "region": "global",
+          "hashtags": [
+            {
+              "tag": "#flowers",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            },
+            {
+              "tag": "#flowerstagram",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            },
+            {
+              "tag": "#floral",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            }
+          ]
+        },
+        {
+          "id": "sunset-sunrise",
+          "title": "Sunset & Sunrise",
+          "description": "Sky photography tags.",
+          "trending": false,
+          "seasonal": false,
+          "trendStatus": "evergreen",
+          "region": "global",
+          "hashtags": [
+            {
+              "tag": "#sunset",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            },
+            {
+              "tag": "#sunrise",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            },
+            {
+              "tag": "#skyporn",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            },
+            {
+              "tag": "#goldenhour",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            }
+          ]
+        },
+        {
+          "id": "monsoon-rain",
+          "title": "Monsoon & Rain",
+          "description": "Rain/monsoon season content.",
+          "trending": false,
+          "seasonal": true,
+          "trendStatus": "seasonal",
+          "region": "india",
+          "hashtags": [
+            {
+              "tag": "#rain",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            },
+            {
+              "tag": "#monsoon",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            },
+            {
+              "tag": "#monsoonvibes",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            },
+            {
+              "tag": "#rainyday",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "spirituality",
+      "name": "Spirituality & Devotional",
+      "icon": "🕉️",
+      "topics": [
+        {
+          "id": "devotional",
+          "title": "Devotional",
+          "description": "General devotional content.",
+          "trending": false,
+          "seasonal": false,
+          "trendStatus": "evergreen",
+          "region": "india",
+          "hashtags": [
+            {
+              "tag": "#devotional",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            },
+            {
+              "tag": "#bhakti",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            },
+            {
+              "tag": "#spiritual",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            },
+            {
+              "tag": "#jaishreeram",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            },
+            {
+              "tag": "#harharmahadev",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            }
+          ]
+        },
+        {
+          "id": "meditation",
+          "title": "Meditation",
+          "description": "Meditation/mindfulness practice.",
+          "trending": false,
+          "seasonal": false,
+          "trendStatus": "evergreen",
+          "region": "global",
+          "hashtags": [
+            {
+              "tag": "#meditation",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            },
+            {
+              "tag": "#mindfulnessmeditation",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            },
+            {
+              "tag": "#innerpeace",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "indian-culture",
+      "name": "Indian Culture & Desi",
+      "icon": "🇮🇳",
+      "topics": [
+        {
+          "id": "desi-general",
+          "title": "Desi Culture",
+          "description": "General desi/Indian culture content.",
+          "trending": false,
+          "seasonal": false,
+          "trendStatus": "evergreen",
+          "region": "india",
+          "hashtags": [
+            {
+              "tag": "#desi",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            },
+            {
+              "tag": "#indianculture",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            },
+            {
+              "tag": "#incredibleindia",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            },
+            {
+              "tag": "#desivibes",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            }
+          ]
+        },
+        {
+          "id": "telugu",
+          "title": "Telugu",
+          "description": "Telugu-language content.",
+          "trending": false,
+          "seasonal": false,
+          "trendStatus": "evergreen",
+          "region": "india",
+          "hashtags": [
+            {
+              "tag": "#telugu",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            },
+            {
+              "tag": "#tollywood",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            },
+            {
+              "tag": "#teluguculture",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            }
+          ]
+        },
+        {
+          "id": "hindi",
+          "title": "Hindi",
+          "description": "Hindi-language content.",
+          "trending": false,
+          "seasonal": false,
+          "trendStatus": "evergreen",
+          "region": "india",
+          "hashtags": [
+            {
+              "tag": "#hindi",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            },
+            {
+              "tag": "#hindipoetry",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            },
+            {
+              "tag": "#hindiquotes",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            }
+          ]
+        },
+        {
+          "id": "tamil",
+          "title": "Tamil",
+          "description": "Tamil-language content.",
+          "trending": false,
+          "seasonal": false,
+          "trendStatus": "evergreen",
+          "region": "india",
+          "hashtags": [
+            {
+              "tag": "#tamil",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            },
+            {
+              "tag": "#kollywood",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            },
+            {
+              "tag": "#tamilculture",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            }
+          ]
+        },
+        {
+          "id": "kannada",
+          "title": "Kannada",
+          "description": "Kannada-language content.",
+          "trending": false,
+          "seasonal": false,
+          "trendStatus": "evergreen",
+          "region": "india",
+          "hashtags": [
+            {
+              "tag": "#kannada",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            },
+            {
+              "tag": "#sandalwood",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            },
+            {
+              "tag": "#kannadiga",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            }
+          ]
+        },
+        {
+          "id": "malayalam",
+          "title": "Malayalam",
+          "description": "Malayalam-language content.",
+          "trending": false,
+          "seasonal": false,
+          "trendStatus": "evergreen",
+          "region": "india",
+          "hashtags": [
+            {
+              "tag": "#malayalam",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            },
+            {
+              "tag": "#mollywood",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            },
+            {
+              "tag": "#malayali",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            }
+          ]
+        },
+        {
+          "id": "bengali",
+          "title": "Bengali",
+          "description": "Bengali-language content.",
+          "trending": false,
+          "seasonal": false,
+          "trendStatus": "evergreen",
+          "region": "india",
+          "hashtags": [
+            {
+              "tag": "#bengali",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            },
+            {
+              "tag": "#bangla",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            },
+            {
+              "tag": "#kolkata",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            }
+          ]
+        },
+        {
+          "id": "marathi",
+          "title": "Marathi",
+          "description": "Marathi-language content.",
+          "trending": false,
+          "seasonal": false,
+          "trendStatus": "evergreen",
+          "region": "india",
+          "hashtags": [
+            {
+              "tag": "#marathi",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            },
+            {
+              "tag": "#marathimulgi",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            },
+            {
+              "tag": "#maharashtra",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            }
+          ]
+        },
+        {
+          "id": "punjabi",
+          "title": "Punjabi",
+          "description": "Punjabi-language content.",
+          "trending": false,
+          "seasonal": false,
+          "trendStatus": "evergreen",
+          "region": "india",
+          "hashtags": [
+            {
+              "tag": "#punjabi",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            },
+            {
+              "tag": "#punjabiculture",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            },
+            {
+              "tag": "#punjabimusic",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            }
+          ]
+        },
+        {
+          "id": "gujarati",
+          "title": "Gujarati",
+          "description": "Gujarati-language content.",
+          "trending": false,
+          "seasonal": false,
+          "trendStatus": "evergreen",
+          "region": "india",
+          "hashtags": [
+            {
+              "tag": "#gujarati",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            },
+            {
+              "tag": "#gujaraticulture",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            },
+            {
+              "tag": "#garba",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "diwali",
+      "name": "Diwali",
+      "icon": "🪔",
+      "topics": [
+        {
+          "id": "diwali-general",
+          "title": "Diwali General",
+          "description": "General Diwali hashtags.",
+          "trending": false,
+          "seasonal": true,
+          "trendStatus": "seasonal",
+          "region": "india",
+          "hashtags": [
+            {
+              "tag": "#diwali",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            },
+            {
+              "tag": "#happydiwali",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            },
+            {
+              "tag": "#diwali2026",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            },
+            {
+              "tag": "#festivaloflights",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            },
+            {
+              "tag": "#deepavali",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            }
+          ]
+        },
+        {
+          "id": "diwali-reels",
+          "title": "Diwali Reels",
+          "description": "Diwali reels content.",
+          "trending": false,
+          "seasonal": true,
+          "trendStatus": "seasonal",
+          "region": "india",
+          "hashtags": [
+            {
+              "tag": "#diwalireels",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            },
+            {
+              "tag": "#diwalivibes",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            },
+            {
+              "tag": "#diwalicelebration",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            }
+          ]
+        },
+        {
+          "id": "diwali-outfit",
+          "title": "Diwali Outfit",
+          "description": "Diwali fashion content.",
+          "trending": false,
+          "seasonal": true,
+          "trendStatus": "seasonal",
+          "region": "india",
+          "hashtags": [
+            {
+              "tag": "#diwalioutfit",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            },
+            {
+              "tag": "#diwalilook",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            },
+            {
+              "tag": "#festivewear",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            }
+          ]
+        },
+        {
+          "id": "diwali-makeup",
+          "title": "Diwali Makeup",
+          "description": "Diwali makeup looks.",
+          "trending": false,
+          "seasonal": true,
+          "trendStatus": "seasonal",
+          "region": "india",
+          "hashtags": [
+            {
+              "tag": "#diwalimakeup",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            },
+            {
+              "tag": "#festivemakeup",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            }
+          ]
+        },
+        {
+          "id": "diwali-decoration",
+          "title": "Diwali Decoration",
+          "description": "Diwali home decor content.",
+          "trending": false,
+          "seasonal": true,
+          "trendStatus": "seasonal",
+          "region": "india",
+          "hashtags": [
+            {
+              "tag": "#diwalidecor",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            },
+            {
+              "tag": "#diwalidecoration",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            },
+            {
+              "tag": "#rangoli",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            }
+          ]
+        },
+        {
+          "id": "diwali-wishes",
+          "title": "Diwali Wishes",
+          "description": "Diwali greeting posts.",
+          "trending": false,
+          "seasonal": true,
+          "trendStatus": "seasonal",
+          "region": "india",
+          "hashtags": [
+            {
+              "tag": "#diwaliwishes",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            },
+            {
+              "tag": "#happydiwali2026",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            },
+            {
+              "tag": "#shubhdeepavali",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            }
+          ]
+        },
+        {
+          "id": "diwali-family",
+          "title": "Diwali Family",
+          "description": "Family Diwali content.",
+          "trending": false,
+          "seasonal": true,
+          "trendStatus": "seasonal",
+          "region": "india",
+          "hashtags": [
+            {
+              "tag": "#diwaliwithfamily",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            },
+            {
+              "tag": "#diwalicelebrations",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            }
+          ]
+        },
+        {
+          "id": "diwali-food",
+          "title": "Diwali Food",
+          "description": "Diwali sweets/food content.",
+          "trending": false,
+          "seasonal": true,
+          "trendStatus": "seasonal",
+          "region": "india",
+          "hashtags": [
+            {
+              "tag": "#diwalisweets",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            },
+            {
+              "tag": "#diwalifood",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            },
+            {
+              "tag": "#mithai",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ganesh-chaturthi",
+      "name": "Ganesh Chaturthi",
+      "icon": "🐘",
+      "topics": [
+        {
+          "id": "ganesh-chaturthi-general",
+          "title": "Ganesh Chaturthi General",
+          "description": "General Ganesh Chaturthi tags.",
+          "trending": false,
+          "seasonal": true,
+          "trendStatus": "seasonal",
+          "region": "india",
+          "hashtags": [
+            {
+              "tag": "#ganeshchaturthi",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            },
+            {
+              "tag": "#ganpatibappamorya",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            },
+            {
+              "tag": "#ganeshotsav",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            },
+            {
+              "tag": "#ganpati",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            }
+          ]
+        },
+        {
+          "id": "ganesh-visarjan",
+          "title": "Ganesh Visarjan",
+          "description": "Immersion ceremony tags.",
+          "trending": false,
+          "seasonal": true,
+          "trendStatus": "seasonal",
+          "region": "india",
+          "hashtags": [
+            {
+              "tag": "#ganeshvisarjan",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            },
+            {
+              "tag": "#visarjan",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            }
+          ]
+        },
+        {
+          "id": "ganesh-decoration",
+          "title": "Ganesh Decoration",
+          "description": "Pandal/idol decoration tags.",
+          "trending": false,
+          "seasonal": true,
+          "trendStatus": "seasonal",
+          "region": "india",
+          "hashtags": [
+            {
+              "tag": "#ganpatidecoration",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            },
+            {
+              "tag": "#ganeshpandal",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "navratri-durga",
+      "name": "Navratri & Durga Puja",
+      "icon": "🪘",
+      "topics": [
+        {
+          "id": "navratri-general",
+          "title": "Navratri General",
+          "description": "Navratri festival tags.",
+          "trending": false,
+          "seasonal": true,
+          "trendStatus": "seasonal",
+          "region": "india",
+          "hashtags": [
+            {
+              "tag": "#navratri",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            },
+            {
+              "tag": "#navratrispecial",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            },
+            {
+              "tag": "#navratri2026",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            }
+          ]
+        },
+        {
+          "id": "garba-dandiya",
+          "title": "Garba & Dandiya",
+          "description": "Garba/dandiya dance content.",
+          "trending": false,
+          "seasonal": true,
+          "trendStatus": "seasonal",
+          "region": "india",
+          "hashtags": [
+            {
+              "tag": "#garba",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            },
+            {
+              "tag": "#dandiya",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            },
+            {
+              "tag": "#garbanight",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            }
+          ]
+        },
+        {
+          "id": "durga-puja",
+          "title": "Durga Puja",
+          "description": "Durga Puja festival tags.",
+          "trending": false,
+          "seasonal": true,
+          "trendStatus": "seasonal",
+          "region": "india",
+          "hashtags": [
+            {
+              "tag": "#durgapuja",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            },
+            {
+              "tag": "#durgapuja2026",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            },
+            {
+              "tag": "#pandalhopping",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            }
+          ]
+        },
+        {
+          "id": "dussehra",
+          "title": "Dussehra",
+          "description": "Dussehra festival tags.",
+          "trending": false,
+          "seasonal": true,
+          "trendStatus": "seasonal",
+          "region": "india",
+          "hashtags": [
+            {
+              "tag": "#dussehra",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            },
+            {
+              "tag": "#vijayadashami",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "holi",
+      "name": "Holi",
+      "icon": "🎨",
+      "topics": [
+        {
+          "id": "holi-general",
+          "title": "Holi General",
+          "description": "Holi festival tags.",
+          "trending": false,
+          "seasonal": true,
+          "trendStatus": "seasonal",
+          "region": "india",
+          "hashtags": [
+            {
+              "tag": "#holi",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            },
+            {
+              "tag": "#happyholi",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            },
+            {
+              "tag": "#holi2026",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            },
+            {
+              "tag": "#festivalofcolors",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            }
+          ]
+        },
+        {
+          "id": "holi-reels",
+          "title": "Holi Reels",
+          "description": "Holi reel content.",
+          "trending": false,
+          "seasonal": true,
+          "trendStatus": "seasonal",
+          "region": "india",
+          "hashtags": [
+            {
+              "tag": "#holireels",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            },
+            {
+              "tag": "#holivibes",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            },
+            {
+              "tag": "#holicelebration",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "raksha-bandhan",
+      "name": "Raksha Bandhan",
+      "icon": "🎗️",
+      "topics": [
+        {
+          "id": "rakhi-general",
+          "title": "Raksha Bandhan General",
+          "description": "Rakhi festival tags.",
+          "trending": false,
+          "seasonal": true,
+          "trendStatus": "seasonal",
+          "region": "india",
+          "hashtags": [
+            {
+              "tag": "#rakshabandhan",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            },
+            {
+              "tag": "#rakhi",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            },
+            {
+              "tag": "#happyrakshabandhan",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "janmashtami",
+      "name": "Janmashtami",
+      "icon": "🦚",
+      "topics": [
+        {
+          "id": "janmashtami-general",
+          "title": "Janmashtami General",
+          "description": "Janmashtami festival tags.",
+          "trending": false,
+          "seasonal": true,
+          "trendStatus": "seasonal",
+          "region": "india",
+          "hashtags": [
+            {
+              "tag": "#janmashtami",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            },
+            {
+              "tag": "#krishnajanmashtami",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            },
+            {
+              "tag": "#dahihandi",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "shivratri-ramnavami",
+      "name": "Maha Shivratri & Ram Navami",
+      "icon": "🔱",
+      "topics": [
+        {
+          "id": "maha-shivratri",
+          "title": "Maha Shivratri",
+          "description": "Maha Shivratri tags.",
+          "trending": false,
+          "seasonal": true,
+          "trendStatus": "seasonal",
+          "region": "india",
+          "hashtags": [
+            {
+              "tag": "#mahashivratri",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            },
+            {
+              "tag": "#harharmahadev",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            }
+          ]
+        },
+        {
+          "id": "ram-navami",
+          "title": "Ram Navami",
+          "description": "Ram Navami tags.",
+          "trending": false,
+          "seasonal": true,
+          "trendStatus": "seasonal",
+          "region": "india",
+          "hashtags": [
+            {
+              "tag": "#ramnavami",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            },
+            {
+              "tag": "#jaishreeram",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            }
+          ]
+        },
+        {
+          "id": "hanuman-jayanti",
+          "title": "Hanuman Jayanti",
+          "description": "Hanuman Jayanti tags.",
+          "trending": false,
+          "seasonal": true,
+          "trendStatus": "seasonal",
+          "region": "india",
+          "hashtags": [
+            {
+              "tag": "#hanumanjayanti",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            },
+            {
+              "tag": "#jaihanuman",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "eid",
+      "name": "Eid",
+      "icon": "🌙",
+      "topics": [
+        {
+          "id": "eid-fitr",
+          "title": "Eid al-Fitr",
+          "description": "Eid al-Fitr tags.",
+          "trending": false,
+          "seasonal": true,
+          "trendStatus": "seasonal",
+          "region": "global",
+          "hashtags": [
+            {
+              "tag": "#eidmubarak",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            },
+            {
+              "tag": "#eidalfitr",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            },
+            {
+              "tag": "#eid2026",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            }
+          ]
+        },
+        {
+          "id": "eid-adha",
+          "title": "Eid al-Adha",
+          "description": "Eid al-Adha tags.",
+          "trending": false,
+          "seasonal": true,
+          "trendStatus": "seasonal",
+          "region": "global",
+          "hashtags": [
+            {
+              "tag": "#eidaladha",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            },
+            {
+              "tag": "#bakrid",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "christmas-newyear",
+      "name": "Christmas & New Year",
+      "icon": "🎄",
+      "topics": [
+        {
+          "id": "christmas-general",
+          "title": "Christmas General",
+          "description": "Christmas festival tags.",
+          "trending": false,
+          "seasonal": true,
+          "trendStatus": "seasonal",
+          "region": "global",
+          "hashtags": [
+            {
+              "tag": "#christmas",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            },
+            {
+              "tag": "#merrychristmas",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            },
+            {
+              "tag": "#christmasvibes",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            },
+            {
+              "tag": "#christmas2026",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            }
+          ]
+        },
+        {
+          "id": "new-year",
+          "title": "New Year",
+          "description": "New Year celebration tags.",
+          "trending": false,
+          "seasonal": true,
+          "trendStatus": "seasonal",
+          "region": "global",
+          "hashtags": [
+            {
+              "tag": "#happynewyear",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            },
+            {
+              "tag": "#newyear2027",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            },
+            {
+              "tag": "#newyeareve",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "makar-sankranti-pongal",
+      "name": "Makar Sankranti, Pongal & Lohri",
+      "icon": "🪁",
+      "topics": [
+        {
+          "id": "makar-sankranti",
+          "title": "Makar Sankranti",
+          "description": "Kite festival tags.",
+          "trending": false,
+          "seasonal": true,
+          "trendStatus": "seasonal",
+          "region": "india",
+          "hashtags": [
+            {
+              "tag": "#makarsankranti",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            },
+            {
+              "tag": "#kitefestival",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            }
+          ]
+        },
+        {
+          "id": "pongal",
+          "title": "Pongal",
+          "description": "Pongal festival tags.",
+          "trending": false,
+          "seasonal": true,
+          "trendStatus": "seasonal",
+          "region": "india",
+          "hashtags": [
+            {
+              "tag": "#pongal",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            },
+            {
+              "tag": "#happypongal",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            }
+          ]
+        },
+        {
+          "id": "lohri-baisakhi",
+          "title": "Lohri & Baisakhi",
+          "description": "Punjab harvest festival tags.",
+          "trending": false,
+          "seasonal": true,
+          "trendStatus": "seasonal",
+          "region": "india",
+          "hashtags": [
+            {
+              "tag": "#lohri",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            },
+            {
+              "tag": "#baisakhi",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            },
+            {
+              "tag": "#happylohri",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "onam",
+      "name": "Onam",
+      "icon": "🌼",
+      "topics": [
+        {
+          "id": "onam-general",
+          "title": "Onam General",
+          "description": "Onam festival tags.",
+          "trending": false,
+          "seasonal": true,
+          "trendStatus": "seasonal",
+          "region": "india",
+          "hashtags": [
+            {
+              "tag": "#onam",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            },
+            {
+              "tag": "#happyonam",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            },
+            {
+              "tag": "#onamsadya",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            },
+            {
+              "tag": "#pookalam",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "karwa-chauth-teej",
+      "name": "Karwa Chauth & Teej",
+      "icon": "🌕",
+      "topics": [
+        {
+          "id": "karwa-chauth",
+          "title": "Karwa Chauth",
+          "description": "Karwa Chauth festival tags.",
+          "trending": false,
+          "seasonal": true,
+          "trendStatus": "seasonal",
+          "region": "india",
+          "hashtags": [
+            {
+              "tag": "#karwachauth",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            },
+            {
+              "tag": "#karwachauthlook",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            }
+          ]
+        },
+        {
+          "id": "teej",
+          "title": "Teej",
+          "description": "Teej festival tags.",
+          "trending": false,
+          "seasonal": true,
+          "trendStatus": "seasonal",
+          "region": "india",
+          "hashtags": [
+            {
+              "tag": "#teej",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            },
+            {
+              "tag": "#hartalikateej",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "national-days",
+      "name": "Independence & Republic Day",
+      "icon": "🇮🇳",
+      "topics": [
+        {
+          "id": "independence-day",
+          "title": "Independence Day",
+          "description": "India Independence Day tags.",
+          "trending": false,
+          "seasonal": true,
+          "trendStatus": "seasonal",
+          "region": "india",
+          "hashtags": [
+            {
+              "tag": "#independenceday",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            },
+            {
+              "tag": "#happyindependenceday",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            },
+            {
+              "tag": "#15august",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            }
+          ]
+        },
+        {
+          "id": "republic-day",
+          "title": "Republic Day",
+          "description": "India Republic Day tags.",
+          "trending": false,
+          "seasonal": true,
+          "trendStatus": "seasonal",
+          "region": "india",
+          "hashtags": [
+            {
+              "tag": "#republicday",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            },
+            {
+              "tag": "#26january",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "observance-days",
+      "name": "Teachers, Children's & Care Days",
+      "icon": "🏫",
+      "topics": [
+        {
+          "id": "teachers-day",
+          "title": "Teachers Day",
+          "description": "Teachers Day tags.",
+          "trending": false,
+          "seasonal": true,
+          "trendStatus": "seasonal",
+          "region": "india",
+          "hashtags": [
+            {
+              "tag": "#teachersday",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            },
+            {
+              "tag": "#happyteachersday",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            }
+          ]
+        },
+        {
+          "id": "childrens-day",
+          "title": "Children's Day",
+          "description": "Children's Day tags.",
+          "trending": false,
+          "seasonal": true,
+          "trendStatus": "seasonal",
+          "region": "india",
+          "hashtags": [
+            {
+              "tag": "#childrensday",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            },
+            {
+              "tag": "#balDiwas",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            }
+          ]
+        },
+        {
+          "id": "valentines-day",
+          "title": "Valentine's Day",
+          "description": "Valentine's Day tags.",
+          "trending": false,
+          "seasonal": true,
+          "trendStatus": "seasonal",
+          "region": "global",
+          "hashtags": [
+            {
+              "tag": "#valentinesday",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            },
+            {
+              "tag": "#valentine",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            },
+            {
+              "tag": "#loveday",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            }
+          ]
+        },
+        {
+          "id": "womens-day",
+          "title": "Women's Day",
+          "description": "International Women's Day tags.",
+          "trending": false,
+          "seasonal": true,
+          "trendStatus": "seasonal",
+          "region": "global",
+          "hashtags": [
+            {
+              "tag": "#internationalwomensday",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            },
+            {
+              "tag": "#womensday",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            }
+          ]
+        },
+        {
+          "id": "mothers-day",
+          "title": "Mother's Day",
+          "description": "Mother's Day tags.",
+          "trending": false,
+          "seasonal": true,
+          "trendStatus": "seasonal",
+          "region": "global",
+          "hashtags": [
+            {
+              "tag": "#mothersday",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            },
+            {
+              "tag": "#happymothersday",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            }
+          ]
+        },
+        {
+          "id": "fathers-day",
+          "title": "Father's Day",
+          "description": "Father's Day tags.",
+          "trending": false,
+          "seasonal": true,
+          "trendStatus": "seasonal",
+          "region": "global",
+          "hashtags": [
+            {
+              "tag": "#fathersday",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            },
+            {
+              "tag": "#happyfathersday",
+              "postCount": null,
+              "countType": "unknown",
+              "postCountSource": null
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
