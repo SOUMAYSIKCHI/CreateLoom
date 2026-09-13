@@ -517,12 +517,18 @@ import prompts from '../data/prompts.json';
   @media (max-width: 900px) {
     #favorites-grid {
       grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 14px;
     }
   }
 
-  @media (max-width: 600px) {
+  @media (max-width: 650px) {
     #favorites-grid {
       grid-template-columns: 1fr;
+      gap: 14px;
+    }
+
+    #favorites-grid .prompt-card {
+      width: 100%;
     }
   }
 
@@ -545,6 +551,10 @@ import prompts from '../data/prompts.json';
   }
 
   @media (max-width: 380px) {
+    #favorites-grid {
+      gap: 12px;
+    }
+
     .prompt-card {
       padding: 16px;
     }
