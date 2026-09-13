@@ -61,129 +61,8 @@ const categoryDescriptions = {
         </button>
       </form>
 
-      <div class="hero-stats">
-        <div>
-          <strong>{prompts.length}+</strong>
-          <span>AI Prompts</span>
-        </div>
-
-        <div>
-          <strong>{cats.length}</strong>
-          <span>Categories</span>
-        </div>
-
-        <div>
-          <strong>Free</strong>
-          <span>To Copy & Use</span>
-        </div>
-      </div>
-
-    </div>
-  </section>
-
 
   <!-- All Prompts -->
-
-
-
-  <!-- Featured -->
-  <section class="section featured-section">
-    <div class="container">
-
-      <div class="section-heading">
-        <div>
-          <div class="eyebrow">Start here</div>
-          <h2>Featured AI Prompts</h2>
-          <p>
-            Popular concepts to help you get started quickly.
-          </p>
-        </div>
-
-        <a href="#all-prompts" class="text-link">
-          Browse all →
-        </a>
-      </div>
-
-      <div class="featured-grid">
-
-        {featured.map((p) => (
-          <a
-            class="featured-card"
-            href={`/prompt/${p.id}/`}
-          >
-            <span>{p.category}</span>
-
-            <h3>{p.title}</h3>
-
-            <p>
-              {p.prompt.slice(0, 125)}
-              {p.prompt.length > 125 ? '…' : ''}
-            </p>
-
-            <strong>
-              View prompt →
-            </strong>
-          </a>
-        ))}
-
-      </div>
-
-    </div>
-  </section>
-
-
-  <!-- Categories -->
-  <section class="section category-section">
-
-    <div class="container">
-
-      <div class="section-heading">
-        <div>
-          <div class="eyebrow">Explore by style</div>
-          <h2>Prompt Categories</h2>
-          <p>
-            Find prompts based on the type of image you want to create.
-          </p>
-        </div>
-      </div>
-
-      <div class="category-grid">
-
-        {cats.map((category) => (
-          <a
-            class="category-card"
-            href={`/prompts/${category.toLowerCase()}/`}
-          >
-
-            <span class="category-name">
-              {category}
-            </span>
-
-            <span class="category-count">
-              {prompts.filter((p) => p.category === category).length}
-              prompts
-            </span>
-
-            <p>
-              {categoryDescriptions[category] ||
-                `Explore ${category.toLowerCase()} AI image prompts.`}
-            </p>
-
-            <span class="category-arrow">
-              Explore →
-            </span>
-
-          </a>
-        ))}
-
-      </div>
-
-    </div>
-
-  </section>
-
-
-
   <section
     class="section"
     id="all-prompts"
@@ -287,6 +166,133 @@ const categoryDescriptions = {
     </div>
 
   </section>
+
+
+
+
+    </div>
+  </section>
+
+
+  <!-- Library stats -->
+  <section class="hero-stats-section">
+    <div class="container">
+      <div class="hero-stats">
+        <div>
+          <strong>{prompts.length}+</strong>
+          <span>AI Prompts</span>
+        </div>
+
+        <div>
+          <strong>{cats.length}</strong>
+          <span>Categories</span>
+        </div>
+
+        <div>
+          <strong>Free</strong>
+          <span>To Copy & Use</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Featured -->
+  <section class="section featured-section">
+    <div class="container">
+
+      <div class="section-heading">
+        <div>
+          <div class="eyebrow">Start here</div>
+          <h2>Featured AI Prompts</h2>
+          <p>
+            Popular concepts to help you get started quickly.
+          </p>
+        </div>
+
+        <a href="#all-prompts" class="text-link">
+          Browse all →
+        </a>
+      </div>
+
+      <div class="featured-grid">
+
+        {featured.map((p) => (
+          <a
+            class="featured-card"
+            href={`/prompt/${p.id}/`}
+          >
+            <span>{p.category}</span>
+
+            <h3>{p.title}</h3>
+
+            <p>
+              {p.prompt.slice(0, 125)}
+              {p.prompt.length > 125 ? '…' : ''}
+            </p>
+
+            <strong>
+              View prompt →
+            </strong>
+          </a>
+        ))}
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- Categories -->
+  <section class="section category-section">
+
+    <div class="container">
+
+      <div class="section-heading">
+        <div>
+          <div class="eyebrow">Explore by style</div>
+          <h2>Prompt Categories</h2>
+          <p>
+            Find prompts based on the type of image you want to create.
+          </p>
+        </div>
+      </div>
+
+      <div class="category-grid">
+
+        {cats.map((category) => (
+          <a
+            class="category-card"
+            href={`/prompts/${category.toLowerCase()}/`}
+          >
+
+            <span class="category-name">
+              {category}
+            </span>
+
+            <span class="category-count">
+              {prompts.filter((p) => p.category === category).length}
+              prompts
+            </span>
+
+            <p>
+              {categoryDescriptions[category] ||
+                `Explore ${category.toLowerCase()} AI image prompts.`}
+            </p>
+
+            <span class="category-arrow">
+              Explore →
+            </span>
+
+          </a>
+        ))}
+
+      </div>
+
+    </div>
+
+  </section>
+
 
 
   <!-- SEO Content -->
@@ -541,6 +547,10 @@ const categoryDescriptions = {
     margin: 0 auto;
     color: var(--muted, #a1a1aa);
     line-height: 1.8;
+  }
+
+  .hero-stats-section {
+    padding: 0 0 10px;
   }
 
   .hero-stats {
