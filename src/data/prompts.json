@@ -15,7 +15,8 @@
       "Describe any clothing, location or prop you want to change before generating.",
       "If your generator supports image references, keep the reference strength high enough to preserve recognizable features."
     ],
-    "image": "/images/prompts/street1.jpeg"
+    "image": "/images/prompts/street1.jpeg",
+    "trending": true
   },
   {
     "id": "cinematic-couple",
@@ -33,7 +34,8 @@
       "Describe any clothing, location or prop you want to change before generating.",
       "If your generator supports image references, keep the reference strength high enough to preserve recognizable features."
     ],
-    "image": "/images/prompts/createloom.png"
+    "image": "/images/prompts/createloom.png",
+    "trending": false
   },
   {
     "id": "80s-vintage-couple",
@@ -51,7 +53,8 @@
       "Describe any clothing, location or prop you want to change before generating.",
       "If your generator supports image references, keep the reference strength high enough to preserve recognizable features."
     ],
-    "image": "/images/prompts/createloom.png"
+    "image": "/images/prompts/createloom.png",
+    "trending": false
   },
   {
     "id": "romantic-sunset-couple",
@@ -69,7 +72,8 @@
       "Describe any clothing, location or prop you want to change before generating.",
       "If your generator supports image references, keep the reference strength high enough to preserve recognizable features."
     ],
-    "image": "/images/prompts/createloom.png"
+    "image": "/images/prompts/createloom.png",
+    "trending": false
   },
   {
     "id": "couple-rain-photo",
@@ -87,7 +91,8 @@
       "Describe any clothing, location or prop you want to change before generating.",
       "If your generator supports image references, keep the reference strength high enough to preserve recognizable features."
     ],
-    "image": "/images/prompts/createloom.png"
+    "image": "/images/prompts/createloom.png",
+    "trending": false
   },
   {
     "id": "wedding-couple-portrait",
@@ -105,7 +110,8 @@
       "Describe any clothing, location or prop you want to change before generating.",
       "If your generator supports image references, keep the reference strength high enough to preserve recognizable features."
     ],
-    "image": "/images/prompts/createloom.png"
+    "image": "/images/prompts/createloom.png",
+    "trending": false
   },
   {
     "id": "couple-beach-sunset",
@@ -123,7 +129,8 @@
       "Describe any clothing, location or prop you want to change before generating.",
       "If your generator supports image references, keep the reference strength high enough to preserve recognizable features."
     ],
-    "image": "/images/prompts/createloom.png"
+    "image": "/images/prompts/createloom.png",
+    "trending": false
   },
   {
     "id": "couple-cafe-date",
@@ -141,7 +148,8 @@
       "Describe any clothing, location or prop you want to change before generating.",
       "If your generator supports image references, keep the reference strength high enough to preserve recognizable features."
     ],
-    "image": "/images/prompts/createloom.png"
+    "image": "/images/prompts/createloom.png",
+    "trending": false
   },
   {
     "id": "best-friends-selfie",
@@ -159,7 +167,8 @@
       "Describe any clothing, location or prop you want to change before generating.",
       "If your generator supports image references, keep the reference strength high enough to preserve recognizable features."
     ],
-    "image": "/images/prompts/createloom.png"
+    "image": "/images/prompts/createloom.png",
+    "trending": false
   },
   {
     "id": "group-friends-photo",
@@ -177,7 +186,8 @@
       "Describe any clothing, location or prop you want to change before generating.",
       "If your generator supports image references, keep the reference strength high enough to preserve recognizable features."
     ],
-    "image": "/images/prompts/createloom.png"
+    "image": "/images/prompts/createloom.png",
+    "trending": false
   },
   {
     "id": "aesthetic-mirror-selfie",
@@ -195,7 +205,8 @@
       "Describe any clothing, location or prop you want to change before generating.",
       "If your generator supports image references, keep the reference strength high enough to preserve recognizable features."
     ],
-    "image": "/images/prompts/createloom.png"
+    "image": "/images/prompts/createloom.png",
+    "trending": false
   },
   {
     "id": "streetwear-fashion-portrait",
@@ -213,7 +224,8 @@
       "Describe any clothing, location or prop you want to change before generating.",
       "If your generator supports image references, keep the reference strength high enough to preserve recognizable features."
     ],
-    "image": "/images/prompts/createloom.png"
+    "image": "/images/prompts/createloom.png",
+    "trending": false
   },
   {
     "id": "luxury-fashion-editorial",
@@ -231,7 +243,8 @@
       "Describe any clothing, location or prop you want to change before generating.",
       "If your generator supports image references, keep the reference strength high enough to preserve recognizable features."
     ],
-    "image": "/images/prompts/createloom.png"
+    "image": "/images/prompts/createloom.png",
+    "trending": false
   },
   {
     "id": "studio-portrait",
@@ -249,7 +262,8 @@
       "Describe any clothing, location or prop you want to change before generating.",
       "If your generator supports image references, keep the reference strength high enough to preserve recognizable features."
     ],
-    "image": "/images/prompts/createloom.png"
+    "image": "/images/prompts/createloom.png",
+    "trending": false
   },
   {
     "id": "dramatic-black-white-portrait",
@@ -267,7 +281,8 @@
       "Describe any clothing, location or prop you want to change before generating.",
       "If your generator supports image references, keep the reference strength high enough to preserve recognizable features."
     ],
-    "image": "/images/prompts/createloom.png"
+    "image": "/images/prompts/createloom.png",
+    "trending": false
   },
   {
     "id": "passport-style-portrait",
@@ -285,7 +300,8 @@
       "Describe any clothing, location or prop you want to change before generating.",
       "If your generator supports image references, keep the reference strength high enough to preserve recognizable features."
     ],
-    "image": "/images/prompts/createloom.png"
+    "image": "/images/prompts/createloom.png",
+    "trending": false
   },
   {
     "id": "anime-portrait",
@@ -303,7 +319,8 @@
       "Describe any clothing, location or prop you want to change before generating.",
       "If your generator supports image references, keep the reference strength high enough to preserve recognizable features."
     ],
-    "image": "/images/prompts/createloom.png"
+    "image": "/images/prompts/createloom.png",
+    "trending": false
   },
   {
     "id": "chibi-character",
@@ -321,7 +338,8 @@
       "Describe any clothing, location or prop you want to change before generating.",
       "If your generator supports image references, keep the reference strength high enough to preserve recognizable features."
     ],
-    "image": "/images/prompts/createloom.png"
+    "image": "/images/prompts/createloom.png",
+    "trending": false
   },
   {
     "id": "retro-film-selfie",
@@ -339,7 +357,8 @@
       "Describe any clothing, location or prop you want to change before generating.",
       "If your generator supports image references, keep the reference strength high enough to preserve recognizable features."
     ],
-    "image": "/images/prompts/createloom.png"
+    "image": "/images/prompts/createloom.png",
+    "trending": false
   },
   {
     "id": "2000s-digital-photo",
@@ -357,7 +376,8 @@
       "Describe any clothing, location or prop you want to change before generating.",
       "If your generator supports image references, keep the reference strength high enough to preserve recognizable features."
     ],
-    "image": "/images/prompts/createloom.png"
+    "image": "/images/prompts/createloom.png",
+    "trending": false
   },
   {
     "id": "old-money-portrait",
@@ -375,7 +395,8 @@
       "Describe any clothing, location or prop you want to change before generating.",
       "If your generator supports image references, keep the reference strength high enough to preserve recognizable features."
     ],
-    "image": "/images/prompts/createloom.png"
+    "image": "/images/prompts/createloom.png",
+    "trending": false
   },
   {
     "id": "quiet-luxury-selfie",
@@ -393,7 +414,8 @@
       "Describe any clothing, location or prop you want to change before generating.",
       "If your generator supports image references, keep the reference strength high enough to preserve recognizable features."
     ],
-    "image": "/images/prompts/createloom.png"
+    "image": "/images/prompts/createloom.png",
+    "trending": false
   },
   {
     "id": "night-city-portrait",
@@ -411,7 +433,8 @@
       "Describe any clothing, location or prop you want to change before generating.",
       "If your generator supports image references, keep the reference strength high enough to preserve recognizable features."
     ],
-    "image": "/images/prompts/createloom.png"
+    "image": "/images/prompts/createloom.png",
+    "trending": false
   },
   {
     "id": "neon-cinematic-portrait",
@@ -429,7 +452,8 @@
       "Describe any clothing, location or prop you want to change before generating.",
       "If your generator supports image references, keep the reference strength high enough to preserve recognizable features."
     ],
-    "image": "/images/prompts/createloom.png"
+    "image": "/images/prompts/createloom.png",
+    "trending": false
   },
   {
     "id": "rainy-window-portrait",
@@ -447,7 +471,8 @@
       "Describe any clothing, location or prop you want to change before generating.",
       "If your generator supports image references, keep the reference strength high enough to preserve recognizable features."
     ],
-    "image": "/images/prompts/createloom.png"
+    "image": "/images/prompts/createloom.png",
+    "trending": false
   },
   {
     "id": "travel-airport-photo",
@@ -465,7 +490,8 @@
       "Describe any clothing, location or prop you want to change before generating.",
       "If your generator supports image references, keep the reference strength high enough to preserve recognizable features."
     ],
-    "image": "/images/prompts/createloom.png"
+    "image": "/images/prompts/createloom.png",
+    "trending": false
   },
   {
     "id": "paris-street-portrait",
@@ -483,7 +509,8 @@
       "Describe any clothing, location or prop you want to change before generating.",
       "If your generator supports image references, keep the reference strength high enough to preserve recognizable features."
     ],
-    "image": "/images/prompts/createloom.png"
+    "image": "/images/prompts/createloom.png",
+    "trending": false
   },
   {
     "id": "festive-portrait",
@@ -502,7 +529,8 @@
       "Describe any clothing, location or prop you want to change before generating.",
       "If your generator supports image references, keep the reference strength high enough to preserve recognizable features."
     ],
-    "image": "/images/prompts/festival1.jpeg"
+    "image": "/images/prompts/festival1.jpeg",
+    "trending": true
   },
   {
     "id": "diwali-portrait",
@@ -520,7 +548,8 @@
       "Describe any clothing, location or prop you want to change before generating.",
       "If your generator supports image references, keep the reference strength high enough to preserve recognizable features."
     ],
-    "image": "/images/prompts/createloom.png"
+    "image": "/images/prompts/createloom.png",
+    "trending": false
   },
   {
     "id": "birthday-portrait",
@@ -538,7 +567,8 @@
       "Describe any clothing, location or prop you want to change before generating.",
       "If your generator supports image references, keep the reference strength high enough to preserve recognizable features."
     ],
-    "image": "/images/prompts/createloom.png"
+    "image": "/images/prompts/createloom.png",
+    "trending": false
   },
   {
     "id": "couple-birthday-photo",
@@ -556,7 +586,8 @@
       "Describe any clothing, location or prop you want to change before generating.",
       "If your generator supports image references, keep the reference strength high enough to preserve recognizable features."
     ],
-    "image": "/images/prompts/createloom.png"
+    "image": "/images/prompts/createloom.png",
+    "trending": false
   },
   {
     "id": "rainy-street-selfie",
@@ -574,7 +605,8 @@
       "Describe any clothing, location or prop you want to change before generating.",
       "If your generator supports image references, keep the reference strength high enough to preserve recognizable features."
     ],
-    "image": "/images/prompts/createloom.png"
+    "image": "/images/prompts/createloom.png",
+    "trending": false
   },
   {
     "id": "car-selfie",
@@ -592,7 +624,8 @@
       "Describe any clothing, location or prop you want to change before generating.",
       "If your generator supports image references, keep the reference strength high enough to preserve recognizable features."
     ],
-    "image": "/images/prompts/createloom.png"
+    "image": "/images/prompts/createloom.png",
+    "trending": false
   },
   {
     "id": "college-friends-photo",
@@ -610,7 +643,8 @@
       "Describe any clothing, location or prop you want to change before generating.",
       "If your generator supports image references, keep the reference strength high enough to preserve recognizable features."
     ],
-    "image": "/images/prompts/createloom.png"
+    "image": "/images/prompts/createloom.png",
+    "trending": false
   },
   {
     "id": "couple-traditional-outfit",
@@ -628,7 +662,8 @@
       "Describe any clothing, location or prop you want to change before generating.",
       "If your generator supports image references, keep the reference strength high enough to preserve recognizable features."
     ],
-    "image": "/images/prompts/createloom.png"
+    "image": "/images/prompts/createloom.png",
+    "trending": false
   },
   {
     "id": "polaroid-couple",
@@ -646,7 +681,8 @@
       "Describe any clothing, location or prop you want to change before generating.",
       "If your generator supports image references, keep the reference strength high enough to preserve recognizable features."
     ],
-    "image": "/images/prompts/createloom.png"
+    "image": "/images/prompts/createloom.png",
+    "trending": false
   },
   {
     "id": "mirror-fashion-selfie",
@@ -664,7 +700,8 @@
       "Describe any clothing, location or prop you want to change before generating.",
       "If your generator supports image references, keep the reference strength high enough to preserve recognizable features."
     ],
-    "image": "/images/prompts/createloom.png"
+    "image": "/images/prompts/createloom.png",
+    "trending": false
   },
   {
     "id": "soft-aesthetic-portrait",
@@ -682,7 +719,8 @@
       "Describe any clothing, location or prop you want to change before generating.",
       "If your generator supports image references, keep the reference strength high enough to preserve recognizable features."
     ],
-    "image": "/images/prompts/createloom.png"
+    "image": "/images/prompts/createloom.png",
+    "trending": false
   },
   {
     "id": "dramatic-studio-fashion",
@@ -700,7 +738,8 @@
       "Describe any clothing, location or prop you want to change before generating.",
       "If your generator supports image references, keep the reference strength high enough to preserve recognizable features."
     ],
-    "image": "/images/prompts/createloom.png"
+    "image": "/images/prompts/createloom.png",
+    "trending": false
   },
   {
     "id": "cozy-winter-portrait",
@@ -718,6 +757,7 @@
       "Describe any clothing, location or prop you want to change before generating.",
       "If your generator supports image references, keep the reference strength high enough to preserve recognizable features."
     ],
-    "image": "/images/prompts/createloom.png"
+    "image": "/images/prompts/createloom.png",
+    "trending": false
   }
 ]
