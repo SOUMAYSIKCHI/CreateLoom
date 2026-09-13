@@ -211,6 +211,57 @@ function formatPostCount(count) {
   </div>
 </section>
 
+
+<section class="section hashtag-seo">
+  <div class="container narrow">
+    <div class="eyebrow">Instagram hashtag guide</div>
+    <h2>Trending Instagram hashtags for Reels, posts and creators</h2>
+    <p class="lead">
+      Use this curated Instagram hashtag library to discover relevant hashtag sets
+      for Reels, photos and creator content. Search by niche, topic or seasonal idea,
+      then copy a ready-to-use set instead of building hashtags from scratch.
+    </p>
+    <div class="seo-links">
+      <a href="/prompts/">Explore AI image prompts</a>
+      <a href="/creator-hub/">Visit Creator Hub</a>
+      <a href="/blog/">Read creator guides</a>
+    </div>
+    <h3>How to choose Instagram hashtags</h3>
+    <p>
+      The strongest hashtag set is closely related to the content you publish.
+      Combine broad discovery terms with specific niche hashtags, and update your
+      selection when the topic, season or audience changes. Avoid adding unrelated
+      hashtags simply because they are popular.
+    </p>
+  </div>
+</section>
+
+<script type="application/ld+json">
+{JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "@id": "https://createloom.vercel.app/creator-tools/trending-hashtags/#webpage",
+  "url": "https://createloom.vercel.app/creator-tools/trending-hashtags/",
+  "name": "Trending Instagram Hashtags — Hashtag Sets for Reels & Creators | CreateLoom",
+  "description": "Find curated Instagram hashtag sets for Reels, fashion, beauty, AI, travel, food, festivals, relationships, memes and more.",
+  "isPartOf": { "@type": "WebSite", "url": "https://createloom.vercel.app/" },
+  "breadcrumb": { "@id": "https://createloom.vercel.app/creator-tools/trending-hashtags/#breadcrumb" }
+})}
+</script>
+
+<script type="application/ld+json">
+{JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "@id": "https://createloom.vercel.app/creator-tools/trending-hashtags/#breadcrumb",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://createloom.vercel.app/" },
+    { "@type": "ListItem", "position": 2, "name": "Creator Hub", "item": "https://createloom.vercel.app/creator-hub/" },
+    { "@type": "ListItem", "position": 3, "name": "Trending Instagram Hashtags", "item": "https://createloom.vercel.app/creator-tools/trending-hashtags/" }
+  ]
+})}
+</script>
+
 <script>
   const cards = Array.from(document.querySelectorAll('.hashtag-topic'));
   const categoryButtons = Array.from(document.querySelectorAll('[data-category]'));
@@ -566,6 +617,19 @@ function formatPostCount(count) {
   .hashtag-guidelines h3 { margin: 8px 0 5px; font-size: 16px; }
   .hashtag-guidelines p { color: var(--muted); margin: 0; font-size: 13px; }
 
+
+
+  .hashtag-seo { border-top: 1px solid rgba(255,255,255,.05); }
+  .hashtag-seo h2 { max-width: 760px; }
+  .hashtag-seo h3 { margin: 28px 0 8px; font-size: 18px; }
+  .hashtag-seo p { color: var(--muted); line-height: 1.75; }
+  .seo-links { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 20px; }
+  .seo-links a {
+    color: #c4b5fd;
+    text-decoration: none;
+    border-bottom: 1px solid rgba(196,181,253,.35);
+  }
+  .seo-links a:hover { color: #fff; }
 
   @media (max-width: 800px) {
     .hashtag-grid { grid-template-columns: 1fr; }
