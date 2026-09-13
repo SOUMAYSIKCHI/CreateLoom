@@ -352,7 +352,6 @@ function formatPostCount(count) {
         await navigator.clipboard.writeText(text);
         const span = button.querySelector('span');
         const original = span ? span.textContent || text : text;
-        const span = button.querySelector('span');
         if (span) span.textContent = 'Copied ✓';
         setTimeout(() => {
           if (span) span.textContent = original;
