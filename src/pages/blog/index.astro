@@ -23,6 +23,49 @@ const categoryDescriptions = {
 const getCategoryDescription = (category) =>
   categoryDescriptions[category] ||
   `Explore ${category.toLowerCase()} guides and resources from CreateLoom.`;
+
+const blogCollectionSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'CollectionPage',
+  name: 'CreateLoom Blog — AI, Instagram & Creator Guides',
+  description:
+    'Explore detailed AI image, Instagram, creator growth and brand collaboration guides from CreateLoom.',
+  url: 'https://createloom.vercel.app/blog/',
+  isPartOf: {
+    '@type': 'WebSite',
+    name: 'CreateLoom',
+    url: 'https://createloom.vercel.app/'
+  },
+  mainEntity: {
+    '@type': 'ItemList',
+    numberOfItems: blogs.length,
+    itemListElement: blogs.map((blog, index) => ({
+      '@type': 'ListItem',
+      position: index + 1,
+      url: `https://createloom.vercel.app/blog/${blog.id}/`,
+      name: blog.title
+    }))
+  }
+};
+
+const breadcrumbSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    {
+      '@type': 'ListItem',
+      position: 1,
+      name: 'Home',
+      item: 'https://createloom.vercel.app/'
+    },
+    {
+      '@type': 'ListItem',
+      position: 2,
+      name: 'Blog',
+      item: 'https://createloom.vercel.app/blog/'
+    }
+  ]
+};
 ---
 
 <Layout
@@ -30,6 +73,8 @@ const getCategoryDescription = (category) =>
   description="Explore detailed AI image, Instagram, creator growth and brand collaboration guides from CreateLoom. Practical advice, examples and workflows for creators."
   active="Blog"
 >
+  <script type="application/ld+json" set:html={JSON.stringify(blogCollectionSchema)} />
+  <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />
 
   <!-- Hero -->
   <section class="hero hero-compact blog-hero">
@@ -440,6 +485,34 @@ const getCategoryDescription = (category) =>
 
   </section>
 
+
+  <!-- Related Creator Resources -->
+  <section class="section related-resources">
+    <div class="container">
+      <div class="section-heading">
+        <div>
+          <div class="eyebrow">Explore CreateLoom</div>
+          <h2>More Creator Resources</h2>
+          <p>Continue from the guides into practical tools, prompts and creator resources.</p>
+        </div>
+      </div>
+
+      <div class="resource-links">
+        <a href="/prompts/">
+          <strong>AI Image Prompt Library</strong>
+          <span>Browse ready-to-use prompts for AI image creation.</span>
+        </a>
+        <a href="/creator-hub/">
+          <strong>Instagram Creator Hub</strong>
+          <span>Explore Reel ideas, growth tips, hooks and creator resources.</span>
+        </a>
+        <a href="/creator-tools/trending-hashtags/">
+          <strong>Trending Instagram Hashtags</strong>
+          <span>Find curated hashtag sets by topic and creator niche.</span>
+        </a>
+      </div>
+    </div>
+  </section>
 
   <!-- CTA -->
   <section class="section">
@@ -1063,6 +1136,45 @@ const getCategoryDescription = (category) =>
   }
 
 
+  .related-resources {
+    background: rgba(255,255,255,0.015);
+  }
+
+  .resource-links {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 12px;
+  }
+
+  .resource-links a {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    padding: 20px;
+    border: 1px solid rgba(255,255,255,0.07);
+    border-radius: 16px;
+    background: rgba(255,255,255,0.02);
+    color: inherit;
+    text-decoration: none;
+    transition: transform 0.2s ease, border-color 0.2s ease;
+  }
+
+  .resource-links a:hover {
+    transform: translateY(-2px);
+    border-color: rgba(139,92,246,0.35);
+  }
+
+  .resource-links strong {
+    color: #fff;
+    line-height: 1.4;
+  }
+
+  .resource-links span {
+    color: var(--muted, #a1a1aa);
+    font-size: 0.82rem;
+    line-height: 1.6;
+  }
+
   @media (max-width: 900px) {
 
     .featured-grid {
@@ -1088,7 +1200,8 @@ const getCategoryDescription = (category) =>
     }
 
     .featured-grid,
-    .topic-grid {
+    .topic-grid,
+    .resource-links {
       grid-template-columns: 1fr;
     }
 
