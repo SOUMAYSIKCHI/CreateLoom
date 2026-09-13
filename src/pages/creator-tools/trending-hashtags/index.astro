@@ -8,23 +8,27 @@ const topics = categories.flatMap((category) =>
     ...topic,
     categoryId: category.id,
     categoryName: category.name,
-    categoryIcon: category.icon || ''
+    categoryIcon: category.icon || '',
+    searchText: [
+      category.name,
+      topic.title,
+      topic.description,
+      ...(topic.hashtags || []).map((item) => item.tag)
+    ].join(' ').toLowerCase()
   }))
 );
 
 const totalTopics = topics.length;
 const totalHashtags = topics.reduce(
-  (total, topic) => total + (topic.hashtags?.length || 0),
+  (total, topic) => total + ((topic.hashtags || []).length),
   0
 );
-const trendingTopics = topics.filter((topic) => topic.trending === true);
-const seasonalTopics = topics.filter((topic) => topic.seasonal === true);
 
 function formatPostCount(count) {
   if (typeof count !== 'number' || !Number.isFinite(count)) return '';
-  if (count >= 1_000_000_000) return `${(count / 1_000_000_000).toFixed(1).replace('.0', '')}B`;
-  if (count >= 1_000_000) return `${(count / 1_000_000).toFixed(1).replace('.0', '')}M`;
-  if (count >= 1_000) return `${(count / 1_000).toFixed(1).replace('.0', '')}K`;
+  if (count >= 1_000_000_000) return (count / 1_000_000_000).toFixed(1).replace('.0', '') + 'B';
+  if (count >= 1_000_000) return (count / 1_000_000).toFixed(1).replace('.0', '') + 'M';
+  if (count >= 1_000) return (count / 1_000).toFixed(1).replace('.0', '') + 'K';
   return count.toLocaleString('en-IN');
 }
 ---
@@ -120,7 +124,7 @@ function formatPostCount(count) {
           data-trending={String(topic.trending === true)}
           data-seasonal={String(topic.seasonal === true)}
           data-index={index}
-          data-search={`${topic.categoryName} ${topic.title} ${topic.description} ${(topic.hashtags || []).map((item) => item.tag).join(' ')}`.toLowerCase()}
+          data-search={topic.searchText}
         >
           <div class="hashtag-topic-top">
             <div>
@@ -145,7 +149,7 @@ function formatPostCount(count) {
                 type="button"
                 class="hashtag"
                 data-hashtag={item.tag}
-                title={`Copy ${item.tag}`}
+                title={"Copy " + item.tag}
               >
                 <span>{item.tag}</span>
                 {item.postCount !== null && item.postCount !== undefined && (
@@ -156,11 +160,11 @@ function formatPostCount(count) {
           </div>
 
           <div class="hashtag-actions">
-            <span>{topic.hashtags?.length || 0} hashtags</span>
+            <span>{(topic.hashtags || []).length} hashtags</span>
             <button
               class="small-btn copy-set"
               type="button"
-              data-copy={topic.hashtags?.map((item) => item.tag).join(' ') || ''}
+              data-copy={(topic.hashtags || []).map((item) => item.tag).join(' ')}
             >
               Copy All
             </button>
@@ -242,7 +246,7 @@ function formatPostCount(count) {
       return show;
     });
 
-    const sort = sortSelect?.value || 'featured';
+    const sort = sortSelect ? sortSelect.value : 'featured';
     const grid = document.querySelector('#hashtag-grid');
 
     if (grid) {
@@ -257,7 +261,7 @@ function formatPostCount(count) {
     }
 
     if (results) {
-      results.textContent = `${visible.length} topic set${visible.length === 1 ? '' : 's'}`;
+      results.textContent = String(visible.length) + ' topic set' + (visible.length === 1 ? '' : 's');
     }
 
     if (emptyState) {
@@ -293,20 +297,21 @@ function formatPostCount(count) {
     button.addEventListener('click', () => setFilter(button.dataset.filter || 'all'));
   });
 
-  searchInput?.addEventListener('input', () => {
+  if (searchInput) searchInput.addEventListener('input', () => {
     query = searchInput.value;
     applyFilters();
   });
 
-  searchButton?.addEventListener('click', () => {
-    query = searchInput?.value || '';
+  if (searchButton) searchButton.addEventListener('click', () => {
+    query = searchInput ? searchInput.value : '';
     applyFilters();
-    document.querySelector('#hashtag-library')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    const library = document.querySelector('#hashtag-library');
+    if (library) library.scrollIntoView({ behavior: 'smooth', block: 'start' });
   });
 
-  sortSelect?.addEventListener('change', applyFilters);
+  if (sortSelect) sortSelect.addEventListener('change', applyFilters);
 
-  clearSearch?.addEventListener('click', () => {
+  if (clearSearch) clearSearch.addEventListener('click', () => {
     if (searchInput) searchInput.value = '';
     query = '';
     setCategory('all');
@@ -345,10 +350,12 @@ function formatPostCount(count) {
 
       try {
         await navigator.clipboard.writeText(text);
-        const original = button.querySelector('span')?.textContent || text;
-        if (button.querySelector('span')) button.querySelector('span').textContent = 'Copied ✓';
+        const span = button.querySelector('span');
+        const original = span ? span.textContent || text : text;
+        const span = button.querySelector('span');
+        if (span) span.textContent = 'Copied ✓';
         setTimeout(() => {
-          if (button.querySelector('span')) button.querySelector('span').textContent = original;
+          if (span) span.textContent = original;
         }, 1000);
       } catch {}
     });
