@@ -223,6 +223,14 @@ const categoryDescriptions = {
             All
           </button>
 
+          <button
+            type="button"
+            class="small-btn"
+            data-category="Trending"
+          >
+            Trending
+          </button>
+
           {cats.map((category) => (
             <button
               type="button"
@@ -414,6 +422,8 @@ const categoryDescriptions = {
           ' ' +
           card.dataset.category +
           ' ' +
+          (card.dataset.trending === 'true' ? 'trending' : '') +
+          ' ' +
           card.dataset.tags +
           ' ' +
           card.dataset.prompt
@@ -421,7 +431,9 @@ const categoryDescriptions = {
 
         const matchesCategory =
           cat === 'All' ||
-          card.dataset.category === cat;
+          (cat === 'Trending'
+            ? card.dataset.trending === 'true'
+            : card.dataset.category === cat);
 
         const matchesSearch =
           !q ||
