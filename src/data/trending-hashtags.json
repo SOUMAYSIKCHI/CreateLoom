@@ -2,7 +2,7 @@
   "version": "1.0",
   "lastUpdated": "2026-09-13",
   "dataType": "instagram-hashtag-library",
-  "notes": "Post-count data for Instagram hashtags is not reliably or completely verifiable at scale: Instagram does not publish an official API for exact per-hashtag post totals, and third-party hashtag-analytics sites frequently disagree with each other by wide margins (sometimes 100x) and go stale quickly. Where multiple independent sources roughly converge on an order of magnitude for a very well-known tag, that figure is included with countType 'approximate' and a source note. For the large majority of hashtags in this dataset, postCount is honestly set to null (countType 'unknown') rather than inventing a precise-looking number. Treat all non-null counts here as rough, dated estimates to be refreshed periodically, not as verified Instagram figures.",
+  "notes": "Post-count data for Instagram hashtags is not reliably or completely verifiable at scale: Instagram does not publish an official API for exact per-hashtag post totals, and third-party hashtag-analytics sites frequently disagree with each other and go stale quickly. Where a rough figure is included, it is marked approximate and should not be treated as an Instagram-verified total. For the large majority of hashtags, postCount is null and countType is unknown rather than an invented precise-looking number. Refresh dated estimates periodically.",
   "categories": [
     {
       "id": "instagram-core",
@@ -27,8 +27,8 @@
             {
               "tag": "#instareels",
               "postCount": null,
-              "countType": "approximate",
-              "postCountSource": "Multiple third-party hashtag-analytics aggregators (rough consensus, not an Instagram-verified figure)"
+              "countType": "unknown",
+              "postCountSource": null
             },
             {
               "tag": "#reelsinstagram",
@@ -204,8 +204,8 @@
             {
               "tag": "#viral",
               "postCount": null,
-              "countType": "approximate",
-              "postCountSource": "Multiple third-party hashtag-analytics aggregators (rough consensus, not an Instagram-verified figure)"
+              "countType": "unknown",
+              "postCountSource": null
             },
             {
               "tag": "#trending",
@@ -368,12 +368,6 @@
               "postCountSource": null
             },
             {
-              "tag": "#relateable",
-              "postCount": null,
-              "countType": "unknown",
-              "postCountSource": null
-            },
-            {
               "tag": "#sotrue",
               "postCount": null,
               "countType": "unknown",
@@ -446,7 +440,7 @@
               "postCountSource": null
             },
             {
-              "tag": "#coupleреels",
+              "tag": "#couplereels",
               "postCount": null,
               "countType": "unknown",
               "postCountSource": null
@@ -4795,7 +4789,7 @@
               "postCountSource": null
             },
             {
-              "tag": "#balDiwas",
+              "tag": "#baldiwas",
               "postCount": null,
               "countType": "unknown",
               "postCountSource": null
