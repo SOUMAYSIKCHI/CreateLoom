@@ -17,6 +17,7 @@ const tags = Array.isArray(p.tags) ? p.tags.slice(0, 3) : [];
   class="card prompt-card"
   data-title={p.title}
   data-category={p.category}
+  data-trending={String(p.trending === true)}
   data-tags={Array.isArray(p.tags) ? p.tags.join(' ') : ''}
   data-prompt={p.prompt}
   data-prompt-id={p.id}
@@ -165,7 +166,7 @@ const tags = Array.isArray(p.tags) ? p.tags.slice(0, 3) : [];
   .prompt-card-image-wrap {
     position: relative;
     width: 100%;
-    aspect-ratio: 9 / 16;
+    aspect-ratio: 9 / 12;
     overflow: hidden;
     background: #0d0c13;
     border-bottom: 1px solid rgba(255,255,255,.075);
