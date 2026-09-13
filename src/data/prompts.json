@@ -513,7 +513,7 @@
     "trending": false
   },
   {
-    "id": "festive-portrait",
+    "id": "festival-portrait",
     "title": "Festive Traditional Portrait Prompt",
     "category": "Festival",
     "tags": [
@@ -533,23 +533,23 @@
     "trending": true
   },
   {
-    "id": "diwali-portrait",
+    "id": "couple-Chaturthi-festival",
     "title": "Diwali Portrait Prompt",
     "category": "Festival",
     "tags": [
-      "diwali",
+      "Ganesh-Chaturthi",
       "festival",
-      "portrait"
+      "couples"
     ],
-    "prompt": "The reference person in an elegant diwali setting with tasteful traditional clothing, warm diyas, subtle rangoli-inspired floor decoration and soft golden practical lighting; keep the festive elements refined rather than overcrowded, with realistic shadows, skin texture and natural expression. If a reference photo is provided, preserve the person's recognizable identity exactly: facial structure, eyes, nose, lips, jawline, skin tone, hairstyle and natural proportions. Do not reshape, beautify, age, de-age or replace distinctive facial features. Keep the person consistent from face to hands and avoid identity drift. Use realistic portrait photography with warm practical lighting and believable environmental shadows. Photorealistic where the concept is photographic; for illustrated concepts, keep the illustration style coherent. Use realistic lighting direction, physically plausible shadows, natural skin and fabric texture, believable hands and fingers, correct anatomy, realistic hair strands and subtle lens behavior. Avoid plastic skin, over-smoothed faces, warped hands, duplicate fingers, extra limbs, floating objects, distorted jewelry, fake text, excessive HDR, oversharpening, extreme bokeh or an obviously AI-generated look. Do not add watermarks, logos or random text unless the scene specifically requires it. Compose the image with a clear visual hierarchy, natural subject placement and enough environmental detail to establish the setting without distracting from the subject. Aim for a polished final result that feels intentionally photographed or illustrated rather than generically generated.",
+    "prompt": "Photorealistic indoor recreation of a young South Asian couple during Ganesh Chaturthi matching composition, poses, clothing, lighting, and background; uses supplied face reference to reproduce the female subject’s natural facial identity and details.",
     "best_for": "Festival portraits, cultural celebrations and seasonal posts.",
     "prompt_tips": [
       "Use a clear reference image when identity consistency matters.",
       "Describe any clothing, location or prop you want to change before generating.",
       "If your generator supports image references, keep the reference strength high enough to preserve recognizable features."
     ],
-    "image": "/images/prompts/createloom.png",
-    "trending": false
+    "image": "/images/prompts/Festival2.jpeg",
+    "trending": true
   },
   {
     "id": "birthday-portrait",
