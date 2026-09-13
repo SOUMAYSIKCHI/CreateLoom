@@ -12,7 +12,8 @@ const nav = [
   ['Prompts', '/prompts/'],
   ['Creator Hub', '/creator-hub/'],
   ['Blog', '/blog/'],
-  ['Brands', '/brands/']
+  ['Brands', '/brands/'],
+  ['Favorites', '/favorites/']
 ];
 
 const siteName = 'CreateLoom';
@@ -538,7 +539,7 @@ const year = new Date().getFullYear();
        * prompt detail pages.
        */
       const favKey =
-        'createloom:favorites';
+        'createloom-favorites';
 
       const readFavs = () => {
         try {
