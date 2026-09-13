@@ -156,6 +156,14 @@ const pageTitle = `${category} AI Prompts — ${items.length}+ Ready-to-Use Prom
             camera perspective and overall visual style.
           </p>
 
+          <p>
+            If you're creating content for Instagram, continue with the
+            <a href="/creator-hub/">Instagram Creator Hub</a> for Reel ideas
+            and growth resources, or use our
+            <a href="/creator-tools/trending-hashtags/">trending Instagram hashtags</a>
+            tool to find curated hashtag sets by topic.
+          </p>
+
         </div>
 
         <div class="category-stat-card">
@@ -346,6 +354,43 @@ const pageTitle = `${category} AI Prompts — ${items.length}+ Ready-to-Use Prom
   )}
 
 
+  <!-- Related Creator Resources -->
+  <section class="section category-tools-section">
+
+    <div class="container">
+
+      <div class="section-heading">
+        <div>
+          <div class="eyebrow">More from CreateLoom</div>
+          <h2>Creator Resources & Tools</h2>
+          <p>
+            Explore related resources after choosing your {category.toLowerCase()} prompt.
+          </p>
+        </div>
+      </div>
+
+      <div class="category-tools-links">
+        <a href="/creator-hub/">
+          <strong>Instagram Creator Hub</strong>
+          <span>Reel ideas, growth resources and creator strategy.</span>
+        </a>
+
+        <a href="/creator-tools/trending-hashtags/">
+          <strong>Trending Instagram Hashtags</strong>
+          <span>Curated hashtag sets for Instagram posts and Reels.</span>
+        </a>
+
+        <a href="/prompts/">
+          <strong>All AI Image Prompts</strong>
+          <span>Browse every CreateLoom prompt category.</span>
+        </a>
+      </div>
+
+    </div>
+
+  </section>
+
+
   <!-- CTA -->
   <section class="section">
 
@@ -407,6 +452,26 @@ const pageTitle = `${category} AI Prompts — ${items.length}+ Ready-to-Use Prom
             Astro.site || Astro.url
           ).href
         }))
+      }
+    })}
+  />
+
+  <script
+    type="application/ld+json"
+    set:html={JSON.stringify({
+      '@context': 'https://schema.org',
+      '@type': 'WebPage',
+      name: pageTitle,
+      description,
+      url: canonicalUrl,
+      isPartOf: {
+        '@type': 'WebSite',
+        name: 'CreateLoom',
+        url: new URL('/', Astro.site || Astro.url).href
+      },
+      about: {
+        '@type': 'Thing',
+        name: `${category} AI image prompts`
       }
     })}
   />
@@ -500,6 +565,56 @@ const pageTitle = `${category} AI Prompts — ${items.length}+ Ready-to-Use Prom
   .overview-grid p {
     color: #c7c7cf;
     line-height: 1.8;
+  }
+
+  .overview-grid a {
+    color: #c4b5fd;
+    font-weight: 700;
+    text-decoration: none;
+  }
+
+  .overview-grid a:hover {
+    text-decoration: underline;
+  }
+
+  .category-tools-section {
+    background: rgba(255,255,255,0.015);
+  }
+
+  .category-tools-links {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 12px;
+  }
+
+  .category-tools-links a {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    min-height: 115px;
+    padding: 18px;
+    border: 1px solid rgba(255,255,255,0.07);
+    border-radius: 15px;
+    background: rgba(255,255,255,0.02);
+    color: inherit;
+    text-decoration: none;
+    transition: transform .2s ease, border-color .2s ease;
+  }
+
+  .category-tools-links a:hover {
+    transform: translateY(-2px);
+    border-color: rgba(139,92,246,0.35);
+  }
+
+  .category-tools-links strong {
+    color: #fff;
+    font-size: .88rem;
+  }
+
+  .category-tools-links span {
+    color: var(--muted, #a1a1aa);
+    font-size: .78rem;
+    line-height: 1.55;
   }
 
   .category-stat-card {
@@ -665,6 +780,10 @@ const pageTitle = `${category} AI Prompts — ${items.length}+ Ready-to-Use Prom
   }
 
   @media (max-width: 700px) {
+
+    .category-tools-links {
+      grid-template-columns: 1fr;
+    }
 
     .overview-grid {
       grid-template-columns: 1fr;
