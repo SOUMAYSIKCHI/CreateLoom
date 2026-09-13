@@ -259,7 +259,255 @@ import prompts from '../data/prompts.json';
   </script>
 </Layout>
 
-<style>
+<style is:global>
+  /* Favorites cards are created with innerHTML, so these styles must be
+     global. Scope every rule to #favorites-grid to avoid affecting the site. */
+
+  #favorites-grid {
+    width: 100%;
+    min-width: 0;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 16px;
+    align-items: stretch;
+  }
+
+  #favorites-grid .prompt-card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    min-width: 0;
+    max-width: 100%;
+    height: 100%;
+    overflow: hidden;
+    padding: 20px;
+    border: 1px solid rgba(255,255,255,.075);
+    border-radius: 18px;
+    background:
+      linear-gradient(
+        145deg,
+        rgba(255,255,255,.035),
+        rgba(255,255,255,.018)
+      );
+  }
+
+  #favorites-grid .prompt-card-image-link {
+    display: block;
+    width: calc(100% + 40px);
+    max-width: calc(100% + 40px);
+    margin: -20px -20px 18px;
+    overflow: hidden;
+    color: inherit;
+    text-decoration: none;
+  }
+
+  #favorites-grid .prompt-card-image-wrap {
+    position: relative;
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    aspect-ratio: 9 / 16;
+    overflow: hidden;
+    background: #0d0c13;
+    border-bottom: 1px solid rgba(255,255,255,.075);
+  }
+
+  #favorites-grid .prompt-card-image {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    height: 100%;
+    min-width: 0;
+    min-height: 0;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  #favorites-grid .prompt-card-image-wrap::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background: linear-gradient(
+      180deg,
+      rgba(0,0,0,0),
+      rgba(0,0,0,.2)
+    );
+  }
+
+  #favorites-grid .prompt-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    min-height: 34px;
+  }
+
+  #favorites-grid .category-link {
+    display: inline-flex;
+    align-items: center;
+    width: fit-content;
+    max-width: calc(100% - 46px);
+    color: #a78bfa;
+    text-decoration: none;
+    font-size: .69rem;
+    font-weight: 850;
+    letter-spacing: .09em;
+    text-transform: uppercase;
+  }
+
+  #favorites-grid .icon-btn {
+    flex: 0 0 34px;
+    width: 34px;
+    height: 34px;
+    display: grid;
+    place-items: center;
+    border: 1px solid rgba(139,92,246,.38);
+    border-radius: 10px;
+    background: rgba(139,92,246,.11);
+    color: #c4b5fd;
+    cursor: pointer;
+    font: inherit;
+  }
+
+  #favorites-grid .prompt-card-main {
+    display: block;
+    flex: 1 1 auto;
+    min-width: 0;
+    max-width: 100%;
+    overflow-wrap: anywhere;
+    color: inherit;
+    text-decoration: none;
+  }
+
+  #favorites-grid .title-row {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    min-width: 0;
+  }
+
+  #favorites-grid .title-row h3 {
+    flex: 1 1 auto;
+    min-width: 0;
+    margin: 15px 0 9px;
+    color: #fff;
+    font-size: 1.08rem;
+    line-height: 1.38;
+  }
+
+  #favorites-grid .open-arrow {
+    flex: 0 0 auto;
+    margin-top: 17px;
+    color: #a78bfa;
+  }
+
+  #favorites-grid .prompt-preview {
+    margin: 0;
+    color: var(--muted, #a1a1aa);
+    font-size: .87rem;
+    line-height: 1.68;
+    overflow-wrap: anywhere;
+  }
+
+  #favorites-grid .best-for {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    gap: 4px;
+    margin-top: 16px;
+    padding: 11px 12px;
+    border: 1px solid rgba(139,92,246,.11);
+    border-radius: 10px;
+    background: rgba(139,92,246,.045);
+  }
+
+  #favorites-grid .best-for span {
+    color: #85858f;
+    font-size: .65rem;
+    font-weight: 850;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+  }
+
+  #favorites-grid .best-for strong {
+    min-width: 0;
+    color: #d2d2d8;
+    font-size: .77rem;
+    font-weight: 500;
+    line-height: 1.45;
+    overflow-wrap: anywhere;
+  }
+
+  #favorites-grid .tags {
+    display: flex;
+    flex-wrap: wrap;
+    min-width: 0;
+    gap: 6px;
+    margin-top: 14px;
+  }
+
+  #favorites-grid .tag {
+    max-width: 100%;
+    padding: 5px 8px;
+    border: 1px solid rgba(255,255,255,.065);
+    border-radius: 999px;
+    background: rgba(255,255,255,.022);
+    color: #9999a3;
+    font-size: .68rem;
+  }
+
+  #favorites-grid .card-actions {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) auto;
+    gap: 7px;
+    min-width: 0;
+    margin-top: 18px;
+    padding-top: 14px;
+    border-top: 1px solid rgba(255,255,255,.055);
+  }
+
+  #favorites-grid .small-btn {
+    min-width: 0;
+    max-width: 100%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    min-height: 34px;
+    padding: 7px 10px;
+    border: 1px solid rgba(255,255,255,.075);
+    border-radius: 9px;
+    background: rgba(255,255,255,.022);
+    color: #bdbdc6;
+    font: inherit;
+    font-size: .72rem;
+    font-weight: 700;
+    text-decoration: none;
+    white-space: nowrap;
+    cursor: pointer;
+  }
+
+  #favorites-grid .open-btn {
+    border-color: rgba(139,92,246,.22);
+    color: #c4b5fd;
+  }
+
+  #favorites-empty {
+    max-width: 620px;
+    margin: 20px auto 0;
+    padding: 55px 25px;
+    border: 1px solid rgba(255,255,255,.075);
+    border-radius: 20px;
+    background: rgba(255,255,255,.02);
+    text-align: center;
+  }
+
+  #favorites-empty[hidden] {
+    display: none !important;
+  }
+
   .favorites-hero {
     padding-bottom: 45px;
     text-align: center;
@@ -280,257 +528,6 @@ import prompts from '../data/prompts.json';
     padding-top: 25px;
   }
 
-  /* Keep saved prompt cards identical to the main prompt grid. */
-  #favorites-grid {
-    width: 100%;
-    min-width: 0;
-    display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 16px;
-    align-items: stretch;
-  }
-
-  #favorites-grid .prompt-card {
-    min-width: 0;
-    width: 100%;
-    max-width: 100%;
-    overflow: hidden;
-  }
-
-  .empty-state {
-    max-width: 620px;
-    margin: 20px auto 0;
-    padding: 55px 25px;
-    border: 1px solid rgba(255,255,255,.075);
-    border-radius: 20px;
-    background: rgba(255,255,255,.02);
-    text-align: center;
-  }
-
-  .empty-icon {
-    margin-bottom: 15px;
-    color: #c4b5fd;
-    font-size: 2.5rem;
-  }
-
-  .empty-state h2 {
-    margin: 0 0 10px;
-  }
-
-  .empty-state p {
-    max-width: 480px;
-    margin: 0 auto 24px;
-    color: var(--muted, #a1a1aa);
-    line-height: 1.7;
-  }
-
-  .empty-state .primary {
-    display: inline-flex;
-    text-decoration: none;
-  }
-
-  .prompt-card {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    min-width: 0;
-    overflow: hidden;
-    height: 100%;
-    padding: 20px;
-    border: 1px solid rgba(255,255,255,.075);
-    border-radius: 18px;
-    background:
-      linear-gradient(
-        145deg,
-        rgba(255,255,255,.035),
-        rgba(255,255,255,.018)
-      );
-  }
-
-  .prompt-card-image-link {
-    display: block;
-    width: calc(100% + 40px);
-    max-width: calc(100% + 40px);
-    margin: -20px -20px 18px;
-    color: inherit;
-    text-decoration: none;
-    overflow: hidden;
-  }
-
-  .prompt-card-image-wrap {
-    position: relative;
-    display: block;
-    width: 100%;
-    max-width: 100%;
-    aspect-ratio: 9 / 16;
-    overflow: hidden;
-    background: #0d0c13;
-    border-bottom: 1px solid rgba(255,255,255,.075);
-    isolation: isolate;
-  }
-
-  .prompt-card-image-wrap::after {
-    content: "";
-    position: absolute;
-    inset: 0;
-    z-index: 1;
-    pointer-events: none;
-    background: linear-gradient(180deg, rgba(0,0,0,0) 68%, rgba(0,0,0,.2));
-  }
-
-  .prompt-card-image {
-    position: absolute;
-    inset: 0;
-    display: block;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center;
-  }
-
-  .prompt-top {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 12px;
-    min-height: 34px;
-  }
-
-  .category-link {
-    display: inline-flex;
-    color: #a78bfa;
-    text-decoration: none;
-    font-size: .69rem;
-    font-weight: 850;
-    letter-spacing: .09em;
-    text-transform: uppercase;
-  }
-
-  .icon-btn {
-    flex: 0 0 auto;
-    width: 34px;
-    height: 34px;
-    display: grid;
-    place-items: center;
-    border: 1px solid rgba(139,92,246,.38);
-    border-radius: 10px;
-    background: rgba(139,92,246,.11);
-    color: #c4b5fd;
-    cursor: pointer;
-    font: inherit;
-  }
-
-  .prompt-card-main {
-    display: block;
-    flex: 1;
-    min-width: 0;
-    max-width: 100%;
-    overflow-wrap: anywhere;
-    color: inherit;
-    text-decoration: none;
-  }
-
-  .title-row {
-    display: flex;
-    align-items: flex-start;
-    gap: 8px;
-  }
-
-  .prompt-card h3 {
-    flex: 1;
-    margin: 15px 0 9px;
-    color: #fff;
-    font-size: 1.08rem;
-    line-height: 1.38;
-  }
-
-  .open-arrow {
-    margin-top: 17px;
-    color: #a78bfa;
-  }
-
-  .prompt-preview {
-    margin: 0;
-    color: var(--muted, #a1a1aa);
-    font-size: .87rem;
-    line-height: 1.68;
-  }
-
-  .best-for {
-    display: flex;
-    flex-direction: column;
-    gap: 4px;
-    margin-top: 16px;
-    padding: 11px 12px;
-    border: 1px solid rgba(139,92,246,.11);
-    border-radius: 10px;
-    background: rgba(139,92,246,.045);
-  }
-
-  .best-for span {
-    color: #85858f;
-    font-size: .65rem;
-    font-weight: 850;
-    letter-spacing: .08em;
-    text-transform: uppercase;
-  }
-
-  .best-for strong {
-    color: #d2d2d8;
-    font-size: .77rem;
-    font-weight: 500;
-    line-height: 1.45;
-  }
-
-  .tags {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 6px;
-    margin-top: 14px;
-  }
-
-  .tag {
-    padding: 5px 8px;
-    border: 1px solid rgba(255,255,255,.065);
-    border-radius: 999px;
-    background: rgba(255,255,255,.022);
-    color: #9999a3;
-    font-size: .68rem;
-  }
-
-  .card-actions {
-    display: grid;
-    grid-template-columns: 1fr 1fr auto;
-    gap: 7px;
-    margin-top: 18px;
-    padding-top: 14px;
-    border-top: 1px solid rgba(255,255,255,.055);
-  }
-
-  .small-btn {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    gap: 5px;
-    min-height: 34px;
-    padding: 7px 10px;
-    border: 1px solid rgba(255,255,255,.075);
-    border-radius: 9px;
-    background: rgba(255,255,255,.022);
-    color: #bdbdc6;
-    font: inherit;
-    font-size: .72rem;
-    font-weight: 700;
-    text-decoration: none;
-    white-space: nowrap;
-    cursor: pointer;
-  }
-
-  .open-btn {
-    border-color: rgba(139,92,246,.22);
-    color: #c4b5fd;
-  }
-
   @media (max-width: 900px) {
     #favorites-grid {
       grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -543,29 +540,24 @@ import prompts from '../data/prompts.json';
       grid-template-columns: minmax(0, 1fr);
       gap: 14px;
     }
-
-    #favorites-grid .prompt-card {
-      width: 100%;
-      max-width: 100%;
-    }
   }
 
   @media (max-width: 650px) {
-    .prompt-card {
+    #favorites-grid .prompt-card {
       padding: 18px;
     }
 
-    .prompt-card-image-link {
+    #favorites-grid .prompt-card-image-link {
       width: calc(100% + 36px);
       max-width: calc(100% + 36px);
       margin: -18px -18px 18px;
     }
 
-    .card-actions {
-      grid-template-columns: 1fr 1fr;
+    #favorites-grid .card-actions {
+      grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
     }
 
-    .open-btn {
+    #favorites-grid .open-btn {
       grid-column: 1 / -1;
     }
   }
@@ -575,21 +567,21 @@ import prompts from '../data/prompts.json';
       gap: 12px;
     }
 
-    .prompt-card {
+    #favorites-grid .prompt-card {
       padding: 16px;
     }
 
-    .prompt-card-image-link {
+    #favorites-grid .prompt-card-image-link {
       width: calc(100% + 32px);
       max-width: calc(100% + 32px);
       margin: -16px -16px 16px;
     }
 
-    .card-actions {
+    #favorites-grid .card-actions {
       grid-template-columns: 1fr;
     }
 
-    .open-btn {
+    #favorites-grid .open-btn {
       grid-column: auto;
     }
   }
