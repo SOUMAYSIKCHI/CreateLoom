@@ -19,6 +19,7 @@ const tags = Array.isArray(p.tags) ? p.tags.slice(0, 3) : [];
   data-category={p.category}
   data-tags={Array.isArray(p.tags) ? p.tags.join(' ') : ''}
   data-prompt={p.prompt}
+  data-prompt-id={p.id}
 >
   <!-- Visual result preview -->
   <a
@@ -123,6 +124,79 @@ const tags = Array.isArray(p.tags) ? p.tags.slice(0, 3) : [];
   </div>
 </article>
 
+<script>
+  const STORAGE_KEY = 'createloom-favorites';
+
+  function getFavorites() {
+    try {
+      const saved = localStorage.getItem(STORAGE_KEY);
+      const parsed = saved ? JSON.parse(saved) : [];
+      return Array.isArray(parsed) ? parsed : [];
+    } catch {
+      return [];
+    }
+  }
+
+  function setFavorites(favorites) {
+    try {
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(favorites));
+    } catch {
+      // Ignore storage failures without breaking the prompt UI.
+    }
+  }
+
+  function updateFavoriteButton(button, saved) {
+    const title = button.closest('.prompt-card')?.dataset.title || 'prompt';
+    button.setAttribute('aria-pressed', String(saved));
+    button.setAttribute(
+      'aria-label',
+      saved ? `Remove ${title} from favorites` : `Save ${title} to favorites`
+    );
+    button.setAttribute(
+      'title',
+      saved ? 'Remove from favorites' : 'Save to favorites'
+    );
+
+    const icon = button.querySelector('span');
+    if (icon) icon.textContent = saved ? '♥' : '♡';
+  }
+
+  function syncFavoriteButtons() {
+    const favorites = getFavorites();
+
+    document.querySelectorAll('.fav-btn[data-fav]').forEach((button) => {
+      updateFavoriteButton(button, favorites.includes(button.dataset.fav));
+    });
+  }
+
+  document.addEventListener('click', (event) => {
+    const button = event.target.closest('.fav-btn[data-fav]');
+    if (!button) return;
+
+    const id = button.dataset.fav;
+    const favorites = getFavorites();
+    const saved = favorites.includes(id);
+
+    const nextFavorites = saved
+      ? favorites.filter((favoriteId) => favoriteId !== id)
+      : [...favorites, id];
+
+    setFavorites(nextFavorites);
+    updateFavoriteButton(button, !saved);
+
+    window.dispatchEvent(
+      new CustomEvent('createloom:favorites-changed', {
+        detail: { id, saved: !saved, favorites: nextFavorites }
+      })
+    );
+  });
+
+  document.addEventListener('createloom:favorites-changed', syncFavoriteButtons);
+  window.addEventListener('storage', syncFavoriteButtons);
+
+  syncFavoriteButtons();
+</script>
+
 <style>
   .prompt-card {
     position: relative;
@@ -151,8 +225,6 @@ const tags = Array.isArray(p.tags) ? p.tags.slice(0, 3) : [];
     border-color: rgba(139,92,246,.32);
     box-shadow: 0 14px 40px rgba(0,0,0,.18);
   }
-
-  /* Visual result preview */
 
   .prompt-card-image-link {
     display: block;
@@ -190,8 +262,6 @@ const tags = Array.isArray(p.tags) ? p.tags.slice(0, 3) : [];
   .prompt-card:hover .prompt-card-image {
     transform: scale(1.025);
   }
-
-  /* Top */
 
   .prompt-top {
     display: flex;
@@ -232,8 +302,6 @@ const tags = Array.isArray(p.tags) ? p.tags.slice(0, 3) : [];
     transform: translateX(0);
   }
 
-  /* Favorite */
-
   .icon-btn {
     flex: 0 0 auto;
     width: 34px;
@@ -265,8 +333,6 @@ const tags = Array.isArray(p.tags) ? p.tags.slice(0, 3) : [];
     background: rgba(139,92,246,.11);
     color: #c4b5fd;
   }
-
-  /* Main */
 
   .prompt-card-main {
     display: block;
@@ -317,8 +383,6 @@ const tags = Array.isArray(p.tags) ? p.tags.slice(0, 3) : [];
     line-height: 1.68;
   }
 
-  /* Best for */
-
   .best-for {
     display: flex;
     flex-direction: column;
@@ -345,8 +409,6 @@ const tags = Array.isArray(p.tags) ? p.tags.slice(0, 3) : [];
     line-height: 1.45;
   }
 
-  /* Tags */
-
   .tags {
     display: flex;
     flex-wrap: wrap;
@@ -363,8 +425,6 @@ const tags = Array.isArray(p.tags) ? p.tags.slice(0, 3) : [];
     font-size: .68rem;
     line-height: 1;
   }
-
-  /* Actions */
 
   .card-actions {
     display: grid;
@@ -411,8 +471,6 @@ const tags = Array.isArray(p.tags) ? p.tags.slice(0, 3) : [];
     color: #c4b5fd;
   }
 
-  /* Keyboard accessibility */
-
   .category-link:focus-visible,
   .prompt-card-main:focus-visible,
   .small-btn:focus-visible,
@@ -421,8 +479,6 @@ const tags = Array.isArray(p.tags) ? p.tags.slice(0, 3) : [];
     outline-offset: 3px;
     border-radius: 8px;
   }
-
-  /* Mobile */
 
   @media (max-width: 650px) {
     .prompt-card {
