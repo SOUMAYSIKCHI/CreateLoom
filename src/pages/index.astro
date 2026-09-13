@@ -373,6 +373,35 @@ const categoryDescriptions = {
 
         <a
           class="resource-card"
+          href="/creator-tools/trending-hashtags/"
+          aria-label="Trending Instagram Hashtags — curated hashtag sets for Reels and creators"
+        >
+
+          <span class="resource-icon">
+            #
+          </span>
+
+          <div class="eyebrow">
+            Instagram
+          </div>
+
+          <h3>
+            Trending Instagram Hashtags
+          </h3>
+
+          <p>
+            Find curated hashtag sets by topic for Instagram posts and Reels.
+          </p>
+
+          <strong>
+            Explore hashtags →
+          </strong>
+
+        </a>
+
+
+        <a
+          class="resource-card"
           href="/creator-hub/#reels"
         >
 
@@ -486,6 +515,57 @@ const categoryDescriptions = {
 
         </a>
 
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- RELATED CREATOR TOOLS -->
+
+  <section class="section related-tools-section">
+
+    <div class="container">
+
+      <div class="section-head">
+
+        <div>
+          <div class="eyebrow">
+            More creator tools
+          </div>
+
+          <h2>
+            Tools & Resources for Instagram Creators
+          </h2>
+
+          <p class="section-subtitle">
+            Continue from prompts into hashtag research, creator guides and content resources.
+          </p>
+        </div>
+
+        <a
+          class="muted section-link"
+          href="/creator-hub/"
+        >
+          Open Creator Hub →
+        </a>
+
+      </div>
+
+      <div class="related-tools-links">
+        <a href="/creator-tools/trending-hashtags/">
+          Trending Instagram Hashtags
+        </a>
+        <a href="/creator-hub/">
+          Instagram Creator Hub
+        </a>
+        <a href="/blog/">
+          Creator Guides
+        </a>
+        <a href="/prompts/">
+          AI Prompt Library
+        </a>
       </div>
 
     </div>
@@ -753,6 +833,73 @@ const categoryDescriptions = {
   </section>
 
 
+
+  <!-- Homepage structured data -->
+  <script
+    type="application/ld+json"
+    set:html={JSON.stringify({
+      '@context': 'https://schema.org',
+      '@type': 'WebPage',
+      name: 'CreateLoom — AI Image Prompts & Creator Resources',
+      description:
+        'Discover detailed AI image prompts, Instagram creator resources and practical guides on CreateLoom.',
+      url: 'https://createloom.vercel.app/',
+      isPartOf: {
+        '@type': 'WebSite',
+        name: 'CreateLoom',
+        url: 'https://createloom.vercel.app/'
+      },
+      about: [
+        'AI image prompts',
+        'Instagram creator resources',
+        'Instagram content ideas',
+        'AI image creation'
+      ]
+    })}
+  />
+
+  <script
+    type="application/ld+json"
+    set:html={JSON.stringify({
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      mainEntity: [
+        {
+          '@type': 'Question',
+          name: 'What is CreateLoom?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'CreateLoom is a creator-focused library of AI image prompts, practical guides and resources for Instagram and visual content creation.'
+          }
+        },
+        {
+          '@type': 'Question',
+          name: 'Can I copy the AI prompts?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Yes. Individual prompt pages include a copy button so you can quickly copy the complete prompt and customize it for your preferred AI image generator.'
+          }
+        },
+        {
+          '@type': 'Question',
+          name: 'Can I share a specific prompt?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Yes. Every prompt has its own URL, making it easy to share a specific prompt through a message, social post or Instagram workflow.'
+          }
+        },
+        {
+          '@type': 'Question',
+          name: 'Are CreateLoom prompts free?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'CreateLoom provides free prompt resources. The AI generation service you choose may have its own plans, limits or pricing.'
+          }
+        }
+      ]
+    })}
+  />
+
 </Layout>
 
 
@@ -1003,6 +1150,38 @@ const categoryDescriptions = {
   }
 
 
+  /* Related creator tools */
+
+  .related-tools-section {
+    background: rgba(255,255,255,0.015);
+  }
+
+  .related-tools-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .related-tools-links a {
+    display: inline-flex;
+    align-items: center;
+    min-height: 42px;
+    padding: 10px 14px;
+    border: 1px solid rgba(255,255,255,0.07);
+    border-radius: 12px;
+    background: rgba(255,255,255,0.02);
+    color: #c4b5fd;
+    text-decoration: none;
+    font-size: 0.82rem;
+    font-weight: 700;
+  }
+
+  .related-tools-links a:hover {
+    border-color: rgba(139,92,246,0.35);
+    background: rgba(139,92,246,0.05);
+  }
+
+
   /* Articles */
 
   .article-grid {
@@ -1224,6 +1403,15 @@ const categoryDescriptions = {
 
 
   @media (max-width: 500px) {
+
+    .related-tools-links {
+      display: grid;
+      grid-template-columns: 1fr;
+    }
+
+    .related-tools-links a {
+      width: 100%;
+    }
 
     .resource-grid {
       grid-template-columns: 1fr;
