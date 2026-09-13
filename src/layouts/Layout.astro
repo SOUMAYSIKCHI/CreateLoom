@@ -234,6 +234,7 @@ const year = new Date().getFullYear();
 
   <!-- Accessibility -->
   
+  <a
     class="skip-link"
     href="#main-content"
   >
@@ -247,6 +248,7 @@ const year = new Date().getFullYear();
 
       <!-- Brand -->
       
+        <a
         class="brand"
         href="/"
         aria-label="CreateLoom home"
@@ -276,6 +278,7 @@ const year = new Date().getFullYear();
               <div class="nav-dropdown">
                 <div class="nav-dropdown-trigger">
                   
+                  <a
                     class:list={{ active: active === label }}
                     href={url}
                   >
@@ -298,6 +301,7 @@ const year = new Date().getFullYear();
                   {
                     creatorHubLinks.map((item) => (
                       
+                      <a
                         href={item.url}
                         class:list={{ 'nav-dropdown-featured': !!item.badge }}
                         aria-current={
@@ -322,6 +326,7 @@ const year = new Date().getFullYear();
               </div>
             ) : (
               
+              <a
                 class:list={{ active: active === label }}
                 href={url}
                 aria-current={
@@ -387,6 +392,7 @@ const year = new Date().getFullYear();
               label === 'Creator Hub' ? (
                 <div class="mobile-nav-group">
                   
+                  <a
                     class:list={{ active: active === label }}
                     href={url}
                     aria-current={
@@ -402,6 +408,7 @@ const year = new Date().getFullYear();
                     {
                       creatorHubLinks.slice(1).map((item) => (
                         
+                        <a
                           href={item.url}
                           class:list={{ 'mobile-nav-featured': !!item.badge }}
                           aria-current={
@@ -426,6 +433,7 @@ const year = new Date().getFullYear();
                 </div>
               ) : (
                 
+                <a
                   class:list={{ active: active === label }}
                   href={url}
                   aria-current={
@@ -472,6 +480,7 @@ const year = new Date().getFullYear();
       <div class="footer-brand">
 
         
+        <a
           class="brand"
           href="/"
           aria-label="CreateLoom home"
