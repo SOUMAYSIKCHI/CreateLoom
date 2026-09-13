@@ -845,6 +845,19 @@ const year = new Date().getFullYear();
 
             syncFavs();
 
+            window.dispatchEvent(
+              new CustomEvent(
+                'createloom:favorites-changed',
+                {
+                  detail: {
+                    id,
+                    saved: saving,
+                    favorites: [...favorites]
+                  }
+                }
+              )
+            );
+
             announce(
               saving
                 ? 'Prompt saved to favorites.'
