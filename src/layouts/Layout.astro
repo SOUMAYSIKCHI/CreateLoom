@@ -4,7 +4,8 @@ import '../styles/global.css';
 const {
   title = 'CreateLoom — AI Prompts & Creator Resources',
   description = 'Discover AI image prompts, Instagram creator resources, Reel ideas, growth guides and more with CreateLoom.',
-  active = ''
+  active = '',
+  robots = 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1'
 } = Astro.props;
 
 const nav = [
@@ -68,7 +69,7 @@ const year = new Date().getFullYear();
 
   <meta
     name="robots"
-    content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"
+    content={robots}
   />
 
   <meta
