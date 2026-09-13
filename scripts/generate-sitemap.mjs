@@ -5,53 +5,54 @@ import { fileURLToPath } from 'node:url';
 const root = path.dirname(fileURLToPath(import.meta.url));
 const project = path.resolve(root, '..');
 
-const prompts = JSON.parse(
-  fs.readFileSync(
-    path.join(project, 'src/data/prompts.json'),
-    'utf8'
-  )
-);
+const readJson = (file) =>
+  JSON.parse(
+    fs.readFileSync(
+      path.join(project, file),
+      'utf8'
+    )
+  );
 
-const blogs = JSON.parse(
-  fs.readFileSync(
-    path.join(project, 'src/data/blogs.json'),
-    'utf8'
-  )
-);
+const prompts = readJson('src/data/prompts.json');
+const blogs = readJson('src/data/blogs.json');
 
 const site = (
   process.env.SITE_URL || 'https://createloom.vercel.app'
-).replace(/\/$/, '');
+).replace(/\/+$/, '');
 
 const staticUrls = [
   '/',
   '/prompts/',
   '/blog/',
   '/creator-hub/',
+  '/creator-tools/trending-hashtags/',
   '/brands/',
   '/about/',
   '/contact/',
-  '/privacy/',
-  '/terms/',
 ];
 
-const promptUrls = prompts.map(
-  (p) => `/prompt/${encodeURIComponent(p.id)}/`
-);
+const promptUrls = prompts
+  .filter((p) => p?.id)
+  .map(
+    (p) => `/prompt/${encodeURIComponent(p.id)}/`
+  );
 
-const blogUrls = blogs.map(
-  (b) => `/blog/${encodeURIComponent(b.id)}/`
-);
+const blogUrls = blogs
+  .filter((b) => b?.id)
+  .map(
+    (b) => `/blog/${encodeURIComponent(b.id)}/`
+  );
 
 const categoryUrls = [
   ...new Set(
     prompts
-      .map((p) => p.category)
+      .map((p) => p?.category)
       .filter(Boolean)
+      .map((category) => category.trim().toLowerCase())
   ),
 ].map(
   (category) =>
-    `/prompts/${encodeURIComponent(category.toLowerCase())}/`
+    `/prompts/${encodeURIComponent(category)}/`
 );
 
 const urls = [
@@ -86,8 +87,10 @@ const publicDir = path.join(project, 'public');
 
 fs.mkdirSync(publicDir, { recursive: true });
 
+const sitemapPath = path.join(publicDir, 'sitemap.xml');
+
 fs.writeFileSync(
-  path.join(publicDir, 'sitemap.xml'),
+  sitemapPath,
   xml,
   'utf8'
 );
