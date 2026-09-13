@@ -20,6 +20,25 @@ const tags = Array.isArray(p.tags) ? p.tags.slice(0, 3) : [];
   data-tags={Array.isArray(p.tags) ? p.tags.join(' ') : ''}
   data-prompt={p.prompt}
 >
+  <!-- Visual result preview -->
+  <a
+    class="prompt-card-image-link"
+    href={`/prompt/${p.id}/`}
+    aria-label={`View ${p.title} result preview`}
+  >
+    <div class="prompt-card-image-wrap">
+      <img
+        class="prompt-card-image"
+        src={p.image || '/images/prompts/createloom.png'}
+        alt={`Example result for ${p.title} AI image prompt`}
+        width="1080"
+        height="1920"
+        loading="lazy"
+        decoding="async"
+      />
+    </div>
+  </a>
+
   <!-- Card top -->
   <div class="prompt-top">
     <a
@@ -131,6 +150,45 @@ const tags = Array.isArray(p.tags) ? p.tags.slice(0, 3) : [];
     transform: translateY(-3px);
     border-color: rgba(139,92,246,.32);
     box-shadow: 0 14px 40px rgba(0,0,0,.18);
+  }
+
+  /* Visual result preview */
+
+  .prompt-card-image-link {
+    display: block;
+    margin: -20px -20px 18px;
+    color: inherit;
+    text-decoration: none;
+  }
+
+  .prompt-card-image-wrap {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 9 / 12;
+    overflow: hidden;
+    background: #0d0c13;
+    border-bottom: 1px solid rgba(255,255,255,.075);
+  }
+
+  .prompt-card-image-wrap::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background: linear-gradient(180deg, rgba(0,0,0,0) 68%, rgba(0,0,0,.2));
+  }
+
+  .prompt-card-image {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    transition: transform .35s ease;
+  }
+
+  .prompt-card:hover .prompt-card-image {
+    transform: scale(1.025);
   }
 
   /* Top */
@@ -371,6 +429,10 @@ const tags = Array.isArray(p.tags) ? p.tags.slice(0, 3) : [];
       padding: 18px;
     }
 
+    .prompt-card-image-link {
+      margin: -18px -18px 18px;
+    }
+
     .card-actions {
       grid-template-columns: 1fr 1fr;
     }
@@ -383,6 +445,10 @@ const tags = Array.isArray(p.tags) ? p.tags.slice(0, 3) : [];
   @media (max-width: 380px) {
     .prompt-card {
       padding: 16px;
+    }
+
+    .prompt-card-image-link {
+      margin: -16px -16px 16px;
     }
 
     .card-actions {
@@ -403,7 +469,8 @@ const tags = Array.isArray(p.tags) ? p.tags.slice(0, 3) : [];
     .icon-btn,
     .small-btn,
     .open-arrow,
-    .category-link::after {
+    .category-link::after,
+    .prompt-card-image {
       transition: none;
     }
 
