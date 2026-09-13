@@ -361,13 +361,12 @@ const categoryDescriptions = {
   <script is:inline>
     const input = document.querySelector('#promptSearch');
     const form = document.querySelector('#promptSearchForm');
-    const cards = Array.from(
-      document.querySelectorAll('#promptGrid > .prompt-card')
-    );
-
-    const buttons = Array.from(
-      document.querySelectorAll('#filters > button[data-category]')
-    );
+    const cards = [
+      ...document.querySelectorAll('#promptGrid .prompt-card')
+    ];
+    const buttons = [
+      ...document.querySelectorAll('#filters button[data-category]')
+    ];
     const count = document.querySelector('#resultCount');
     const empty = document.querySelector('#empty');
     const clearButton = document.querySelector('#clearSearch');
@@ -432,7 +431,10 @@ const categoryDescriptions = {
           matchesCategory &&
           matchesSearch;
 
-        card.hidden = !show;
+        /* Use inline display instead of only [hidden].
+           The global .card rule defines display:flex, which can override
+           the browser's default hidden behavior. */
+        card.style.display = show ? '' : 'none';
 
         if (show) {
           visible++;
@@ -687,11 +689,6 @@ const categoryDescriptions = {
 
   .toolbar {
     margin-bottom: 24px;
-  }
-
-  /* Global .card uses display:flex, so explicitly hide filtered cards. */
-  #promptGrid .prompt-card[hidden] {
-    display: none !important;
   }
 
   .filters {
