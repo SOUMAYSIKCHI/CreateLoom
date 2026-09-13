@@ -202,8 +202,10 @@ const breadcrumbSchema = {
           class="secondary fav-btn"
           data-fav={p.id}
           aria-pressed="false"
+          title="Add to favorites"
         >
-          ♡ Favorite
+          <span aria-hidden="true">♡</span>
+          Favorite
         </button>
 
       </div>
@@ -393,6 +395,49 @@ const breadcrumbSchema = {
 
   <!-- Copy / Share / Favorite functionality -->
   <script is:inline>
+    const syncDetailFavorite = () => {
+      const button = document.querySelector('.fav-btn[data-fav]');
+      if (!button) return;
+
+      const favorites = JSON.parse(
+        localStorage.getItem('createloom-favorites') || '[]'
+      );
+
+      const saved = favorites.includes(button.dataset.fav);
+      const icon = button.querySelector('[aria-hidden="true"]');
+
+      if (icon) {
+        icon.textContent = saved ? '♥' : '♡';
+      }
+
+      button.setAttribute(
+        'aria-pressed',
+        String(saved)
+      );
+
+      button.title = saved
+        ? 'Remove from favorites'
+        : 'Add to favorites';
+    };
+
+    syncDetailFavorite();
+
+    window.addEventListener(
+      'createloom:favorites-changed',
+      syncDetailFavorite
+    );
+
+    window.addEventListener(
+      'storage',
+      (event) => {
+        if (
+          event.key === 'createloom-favorites'
+        ) {
+          syncDetailFavorite();
+        }
+      }
+    );
+
     document.addEventListener('click', async (event) => {
 
       const copyButton = event.target.closest('.copy-btn');
@@ -457,41 +502,6 @@ const breadcrumbSchema = {
             // Clipboard unavailable.
           }
         }
-      }
-
-      const favoriteButton = event.target.closest('.fav-btn');
-
-      if (favoriteButton) {
-
-        const storageKey = 'cl-favorites';
-
-        const favorites = JSON.parse(
-          localStorage.getItem(storageKey) || '[]'
-        );
-
-        const id = favoriteButton.dataset.fav;
-
-        const index = favorites.indexOf(id);
-
-        if (index >= 0) {
-
-          favorites.splice(index, 1);
-
-          favoriteButton.textContent = '♡ Favorite';
-          favoriteButton.setAttribute('aria-pressed', 'false');
-
-        } else {
-
-          favorites.push(id);
-
-          favoriteButton.textContent = '♥ Saved';
-          favoriteButton.setAttribute('aria-pressed', 'true');
-        }
-
-        localStorage.setItem(
-          storageKey,
-          JSON.stringify(favorites)
-        );
       }
 
     });
