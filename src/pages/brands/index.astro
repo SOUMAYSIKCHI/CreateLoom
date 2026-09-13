@@ -1,9 +1,513 @@
 ---
 import Layout from '../../layouts/Layout.astro';
+
+const partnershipOptions = [
+  {
+    number: '01',
+    title: 'Sponsored Reels',
+    description:
+      'Feature your product, app or service in creator-focused short-form content designed around useful ideas rather than forced promotion.'
+  },
+  {
+    number: '02',
+    title: 'Website Advertising',
+    description:
+      'Feature your brand, product or campaign across relevant CreateLoom website placements and creator-focused content.'
+  },
+  {
+    number: '03',
+    title: 'Featured Tools & Products',
+    description:
+      'Introduce useful AI, creator, design or productivity tools to people actively exploring resources for content creation.'
+  },
+  {
+    number: '04',
+    title: 'Affiliate Partnerships',
+    description:
+      'Build longer-term partnerships around products and services that genuinely fit the CreateLoom creator ecosystem.'
+  },
+  {
+    number: '05',
+    title: 'Sponsored Guides',
+    description:
+      'Partner on useful educational content where your product or service naturally fits the topic being explored.'
+  },
+  {
+    number: '06',
+    title: 'Custom Campaigns',
+    description:
+      'Combine website placements, social content and creator resources into a campaign tailored to your goals.'
+  }
+];
 ---
-<Layout title="Work With CreateLoom — Brand Collaborations" description="Explore brand collaboration and sponsorship opportunities with CreateLoom." active="Brands">
-<section class="hero hero-compact"><div class="container"><div class="eyebrow">Partnerships</div><h1>Let's create something <span class="gradient-text">together.</span></h1><p>Reach an audience interested in AI, creativity and content creation through thoughtful partnerships.</p><a class="primary" href="/contact/">Start a conversation →</a></div></section>
-<section class="section"><div class="container"><div class="resource-grid"><div class="resource"><div class="eyebrow">01</div><h3>Sponsored Reels</h3><p>Integrate a product or idea into creator-focused short-form content.</p></div><div class="resource"><div class="eyebrow">02</div><h3>Website Sponsorships</h3><p>Place relevant sponsored visibility across CreateLoom content.</p></div><div class="resource"><div class="eyebrow">03</div><h3>Affiliate Partnerships</h3><p>Build long-term partnerships around tools that are useful to creators.</p></div><div class="resource"><div class="eyebrow">04</div><h3>Custom Campaigns</h3><p>Combine social content, creator resources and website placements around a campaign.</p></div></div></div></section>
-<section class="section"><div class="container"><div class="card"><div class="eyebrow">Why CreateLoom</div><h2>Useful content first.</h2><p>We focus on practical AI and creator resources rather than interruptive promotion. Partnership concepts should fit naturally into what our audience already comes to CreateLoom to discover.</p></div></div></section>
-<section class="section"><div class="container"><div class="card cta"><h2>Have a campaign in mind?</h2><p class="muted">Send the details and we can discuss the right format.</p><a class="primary" href="/contact/">Contact CreateLoom →</a></div></div></section>
+
+<Layout
+  title="Work With CreateLoom — Brand Collaborations, Sponsorships & Advertising"
+  description="Partner with CreateLoom for sponsored Reels, website advertising, featured products, creator-focused campaigns and brand collaborations."
+  active="Brands"
+>
+  <!-- Hero -->
+  <section class="hero hero-compact brands-hero">
+    <div class="container">
+      <div class="eyebrow">Brand Partnerships</div>
+
+      <h1>
+        Put your brand in front of
+        <span class="gradient-text">creators.</span>
+      </h1>
+
+      <p class="hero-description">
+        CreateLoom brings together AI image prompts, Instagram creator
+        resources, practical guides and creative tools. If your product is
+        useful to creators, let's explore a partnership.
+      </p>
+
+      <div class="hero-actions">
+        <a
+          class="primary"
+          href="mailto:soumaysikchi@gmail.com?subject=CreateLoom%20Brand%20Partnership"
+        >
+          Discuss a Partnership →
+        </a>
+
+        <a class="secondary" href="#opportunities">
+          View Opportunities
+        </a>
+      </div>
+
+      <div class="hero-note">
+        Sponsorships · Advertising · Featured Tools · Custom Campaigns
+      </div>
+    </div>
+  </section>
+
+  <!-- Partnership Opportunities -->
+  <section class="section" id="opportunities">
+    <div class="container">
+      <div class="section-heading">
+        <div>
+          <div class="eyebrow">Ways to work together</div>
+
+          <h2>Partnership opportunities</h2>
+
+          <p>
+            Choose a format that fits your product, campaign and audience.
+          </p>
+        </div>
+      </div>
+
+      <div class="partnership-grid">
+        {partnershipOptions.map((item) => (
+          <div class="partnership-card">
+            <div class="partnership-number">{item.number}</div>
+
+            <h3>{item.title}</h3>
+
+            <p>{item.description}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Advertising -->
+  <section class="section advertising-section">
+    <div class="container">
+      <div class="advertising-card">
+        <div>
+          <div class="eyebrow">Advertise on CreateLoom</div>
+
+          <h2>
+            Want to feature your
+            <span class="gradient-text">brand?</span>
+          </h2>
+
+          <p>
+            If you're looking to advertise an AI tool, creator product,
+            software, app, service or campaign, get in touch with the details.
+            We can discuss available website placements and other promotional
+            formats that fit CreateLoom.
+          </p>
+
+          <a
+            class="primary"
+            href="mailto:soumaysikchi@gmail.com?subject=Advertise%20on%20CreateLoom"
+          >
+            Email for Advertising →
+          </a>
+        </div>
+
+        <div class="advertising-points">
+          <div>
+            <strong>Website</strong>
+            <span>Featured advertising opportunities</span>
+          </div>
+
+          <div>
+            <strong>Instagram</strong>
+            <span>Creator-focused social content</span>
+          </div>
+
+          <div>
+            <strong>Content</strong>
+            <span>Sponsored guides and integrations</span>
+          </div>
+
+          <div>
+            <strong>Custom</strong>
+            <span>Campaigns built around your goals</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why CreateLoom -->
+  <section class="section">
+    <div class="container narrow">
+      <div class="eyebrow">Why partner with CreateLoom</div>
+
+      <h2>Useful content comes first.</h2>
+
+      <p class="editorial-text">
+        CreateLoom is built around practical resources for people interested
+        in AI image creation, Instagram content and the broader creator
+        ecosystem. We aim to make partnerships feel relevant to the content
+        rather than interruptive.
+      </p>
+
+      <p class="editorial-text">
+        That means we are particularly interested in products, tools and
+        services that can genuinely help creators create, publish, grow or
+        work more efficiently.
+      </p>
+    </div>
+  </section>
+
+  <!-- Audience / Ecosystem -->
+  <section class="section">
+    <div class="container">
+      <div class="ecosystem-grid">
+        <div class="ecosystem-card">
+          <div class="eyebrow">01</div>
+          <h3>AI & Visual Creation</h3>
+          <p>
+            Prompts, image-generation workflows and creative inspiration.
+          </p>
+          <a href="/prompts/">Explore AI Prompts →</a>
+        </div>
+
+        <div class="ecosystem-card">
+          <div class="eyebrow">02</div>
+          <h3>Instagram Creators</h3>
+          <p>
+            Reel ideas, growth resources, hooks, captions and creator tools.
+          </p>
+          <a href="/creator-hub/">Explore Creator Hub →</a>
+        </div>
+
+        <div class="ecosystem-card">
+          <div class="eyebrow">03</div>
+          <h3>Creator Education</h3>
+          <p>
+            Practical articles covering AI, Instagram and creator growth.
+          </p>
+          <a href="/blog/">Explore the Blog →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section class="section">
+    <div class="container">
+      <div class="contact-card">
+        <div class="eyebrow">Let's work together</div>
+
+        <h2>Have a product or campaign in mind?</h2>
+
+        <p>
+          Send a short overview of your brand, product, campaign goals and the
+          type of partnership you're interested in. We'll take it from there.
+        </p>
+
+        <a
+          class="email-link"
+          href="mailto:soumaysikchi@gmail.com?subject=CreateLoom%20Partnership%20Inquiry"
+        >
+          soumaysikchi@gmail.com
+        </a>
+
+        <a
+          class="primary"
+          href="mailto:soumaysikchi@gmail.com?subject=CreateLoom%20Partnership%20Inquiry"
+        >
+          Start a Conversation →
+        </a>
+      </div>
+    </div>
+  </section>
 </Layout>
+
+<style>
+  .brands-hero {
+    padding-bottom: 65px;
+  }
+
+  .hero-description {
+    max-width: 760px;
+    margin: 0 auto;
+    color: var(--muted, #a1a1aa);
+    line-height: 1.8;
+  }
+
+  .hero-actions {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 25px;
+  }
+
+  .hero-actions a {
+    text-decoration: none;
+  }
+
+  .hero-note {
+    margin-top: 20px;
+    color: var(--muted, #a1a1aa);
+    font-size: 0.78rem;
+  }
+
+  .section-heading {
+    margin-bottom: 25px;
+  }
+
+  .section-heading h2 {
+    margin: 7px 0 5px;
+  }
+
+  .section-heading p {
+    margin: 0;
+    color: var(--muted, #a1a1aa);
+    line-height: 1.6;
+  }
+
+  .partnership-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 14px;
+  }
+
+  .partnership-card {
+    min-height: 210px;
+    padding: 24px;
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 18px;
+    background: rgba(255,255,255,0.025);
+    transition:
+      transform 0.2s ease,
+      border-color 0.2s ease;
+  }
+
+  .partnership-card:hover {
+    transform: translateY(-3px);
+    border-color: rgba(139,92,246,0.4);
+  }
+
+  .partnership-number {
+    color: #a78bfa;
+    font-size: 0.75rem;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+  }
+
+  .partnership-card h3 {
+    margin: 28px 0 10px;
+    color: #fff;
+    font-size: 1.15rem;
+  }
+
+  .partnership-card p {
+    margin: 0;
+    color: var(--muted, #a1a1aa);
+    line-height: 1.7;
+    font-size: 0.88rem;
+  }
+
+  .advertising-section {
+    background: rgba(255,255,255,0.015);
+  }
+
+  .advertising-card {
+    display: grid;
+    grid-template-columns: minmax(0, 1.4fr) minmax(250px, 0.8fr);
+    gap: 45px;
+    padding: 42px;
+    border: 1px solid rgba(139,92,246,0.2);
+    border-radius: 22px;
+    background:
+      linear-gradient(
+        145deg,
+        rgba(139,92,246,0.11),
+        rgba(255,255,255,0.025)
+      );
+  }
+
+  .advertising-card h2 {
+    margin: 9px 0 14px;
+  }
+
+  .advertising-card p {
+    max-width: 700px;
+    color: var(--muted, #a1a1aa);
+    line-height: 1.8;
+  }
+
+  .advertising-card .primary {
+    display: inline-flex;
+    margin-top: 12px;
+    text-decoration: none;
+  }
+
+  .advertising-points {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    align-content: center;
+  }
+
+  .advertising-points div {
+    padding: 16px;
+    border: 1px solid rgba(255,255,255,0.07);
+    border-radius: 14px;
+    background: rgba(255,255,255,0.025);
+  }
+
+  .advertising-points strong,
+  .advertising-points span {
+    display: block;
+  }
+
+  .advertising-points strong {
+    color: #fff;
+    font-size: 0.9rem;
+  }
+
+  .advertising-points span {
+    margin-top: 4px;
+    color: var(--muted, #a1a1aa);
+    font-size: 0.75rem;
+    line-height: 1.5;
+  }
+
+  .narrow {
+    max-width: 850px;
+  }
+
+  .editorial-text {
+    color: #c9c9d1;
+    line-height: 1.85;
+  }
+
+  .ecosystem-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 14px;
+  }
+
+  .ecosystem-card {
+    padding: 24px;
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 18px;
+    background: rgba(255,255,255,0.02);
+  }
+
+  .ecosystem-card h3 {
+    margin: 12px 0 9px;
+    color: #fff;
+  }
+
+  .ecosystem-card p {
+    min-height: 50px;
+    color: var(--muted, #a1a1aa);
+    line-height: 1.65;
+    font-size: 0.86rem;
+  }
+
+  .ecosystem-card a {
+    color: #c4b5fd;
+    text-decoration: none;
+    font-size: 0.82rem;
+    font-weight: 700;
+  }
+
+  .contact-card {
+    max-width: 850px;
+    margin: 0 auto;
+    padding: 50px 30px;
+    border: 1px solid rgba(139,92,246,0.2);
+    border-radius: 22px;
+    background:
+      linear-gradient(
+        145deg,
+        rgba(139,92,246,0.12),
+        rgba(255,255,255,0.025)
+      );
+    text-align: center;
+  }
+
+  .contact-card h2 {
+    margin: 9px 0 12px;
+  }
+
+  .contact-card p {
+    max-width: 650px;
+    margin: 0 auto;
+    color: var(--muted, #a1a1aa);
+    line-height: 1.75;
+  }
+
+  .email-link {
+    display: block;
+    margin-top: 22px;
+    color: #c4b5fd;
+    font-size: 1rem;
+    font-weight: 700;
+    text-decoration: none;
+  }
+
+  .contact-card .primary {
+    display: inline-flex;
+    margin-top: 18px;
+    text-decoration: none;
+  }
+
+  @media (max-width: 900px) {
+    .partnership-grid,
+    .ecosystem-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .advertising-card {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  @media (max-width: 600px) {
+    .partnership-grid,
+    .ecosystem-grid,
+    .advertising-points {
+      grid-template-columns: 1fr;
+    }
+
+    .advertising-card {
+      padding: 28px 20px;
+    }
+
+    .contact-card {
+      padding: 38px 20px;
+    }
+  }
+</style>
