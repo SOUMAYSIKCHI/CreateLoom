@@ -190,23 +190,23 @@
     "trending": false
   },
   {
-    "id": "aesthetic-mirror-selfie",
-    "title": "Aesthetic Mirror Selfie Prompt",
+    "id": "aesthetic-wallpaper",
+    "title": "Aesthetic Wallpaper Prompt",
     "category": "Selfie",
     "tags": [
       "selfie",
-      "mirror",
+      "wallpaper",
       "aesthetic"
     ],
-    "prompt": "The reference person taking a tasteful full or three-quarter mirror selfie in a clean bedroom, dressing room or minimalist interior; coordinated outfit, subtle accessories, soft window light, realistic mirror edges and reflections, phone naturally positioned without hiding important facial features. If a reference photo is provided, preserve the person's recognizable identity exactly: facial structure, eyes, nose, lips, jawline, skin tone, hairstyle and natural proportions. Do not reshape, beautify, age, de-age or replace distinctive facial features. Keep the person consistent from face to hands and avoid identity drift. Use a believable front-camera or mirror-camera perspective, including realistic lens distortion and phone distance without making faces unnaturally wide. Photorealistic where the concept is photographic; for illustrated concepts, keep the illustration style coherent. Use realistic lighting direction, physically plausible shadows, natural skin and fabric texture, believable hands and fingers, correct anatomy, realistic hair strands and subtle lens behavior. Avoid plastic skin, over-smoothed faces, warped hands, duplicate fingers, extra limbs, floating objects, distorted jewelry, fake text, excessive HDR, oversharpening, extreme bokeh or an obviously AI-generated look. Do not add watermarks, logos or random text unless the scene specifically requires it. Compose the image with a clear visual hierarchy, natural subject placement and enough environmental detail to establish the setting without distracting from the subject. Aim for a polished final result that feels intentionally photographed or illustrated rather than generically generated.",
-    "best_for": "Profile photos, mirror selfies and casual social posts.",
+    "prompt": "Spontaneous 9:16 disposable-film shot in a dark garden. Girl holds a huge bouquet of sharp white peonies, turning her head aside with a soft smile. Strong motion blur on face and flowing hair, recognizable features. Airy white off-shoulder ruffled lace dress, nude square manicure. Harsh direct flash, black background with faint warm window light, natural skin texture, heavy film grain, vintage colors, soft edges.",
+    "best_for": "Profile photos, and casual social posts.",
     "prompt_tips": [
       "Use a clear reference image when identity consistency matters.",
       "Describe any clothing, location or prop you want to change before generating.",
       "If your generator supports image references, keep the reference strength high enough to preserve recognizable features."
     ],
-    "image": "/images/prompts/createloom.png",
-    "trending": false
+    "image": "/images/prompts/aesthetic1.jpeg",
+    "trending": true
   },
   {
     "id": "streetwear-fashion-portrait",
