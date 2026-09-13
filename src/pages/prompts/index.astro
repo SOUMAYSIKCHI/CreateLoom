@@ -359,150 +359,159 @@ const categoryDescriptions = {
 
 
   <script is:inline>
-    (() => {
-      function initPromptFilters() {
-        const input = document.querySelector('#promptSearch');
-        const form = document.querySelector('#promptSearchForm');
-        const cards = [
-          ...document.querySelectorAll('#promptGrid .prompt-card')
-        ];
-        const buttons = [
-          ...document.querySelectorAll('#filters button[data-category]')
-        ];
-        const count = document.querySelector('#resultCount');
-        const empty = document.querySelector('#empty');
-        const clearButton = document.querySelector('#clearSearch');
+    const input = document.querySelector('#promptSearch');
+    const form = document.querySelector('#promptSearchForm');
+    const cards = Array.from(
+      document.querySelectorAll('#promptGrid > .prompt-card')
+    );
 
-        if (!input || !form || !count || !empty) return;
+    const buttons = Array.from(
+      document.querySelectorAll('#filters > button[data-category]')
+    );
+    const count = document.querySelector('#resultCount');
+    const empty = document.querySelector('#empty');
+    const clearButton = document.querySelector('#clearSearch');
 
-        const params = new URLSearchParams(window.location.search);
+    const params = new URLSearchParams(location.search);
 
-        let cat = params.get('category') || 'All';
+    let cat = params.get('category') || 'All';
 
-        if (
-          cat !== 'All' &&
-          !buttons.some(
-            (button) => button.dataset.category === cat
-          )
-        ) {
-          cat = 'All';
+    if (
+      cat !== 'All' &&
+      !buttons.some((button) => button.dataset.category === cat)
+    ) {
+      cat = 'All';
+    }
+
+    input.value = params.get('q') || '';
+
+    function updateUrl() {
+      const q = input.value.trim();
+
+      const url = new URL(location.href);
+
+      url.search = '';
+
+      if (q) {
+        url.searchParams.set('q', q);
+      }
+
+      if (cat !== 'All') {
+        url.searchParams.set('category', cat);
+      }
+
+      history.replaceState({}, '', url);
+    }
+
+    function filterPrompts() {
+      const q = input.value.trim().toLowerCase();
+
+      let visible = 0;
+
+      cards.forEach((card) => {
+
+        const searchableText = (
+          card.dataset.title +
+          ' ' +
+          card.dataset.category +
+          ' ' +
+          card.dataset.tags +
+          ' ' +
+          card.dataset.prompt
+        ).toLowerCase();
+
+        const matchesCategory =
+          cat === 'All' ||
+          card.dataset.category === cat;
+
+        const matchesSearch =
+          !q ||
+          searchableText.includes(q);
+
+        const show =
+          matchesCategory &&
+          matchesSearch;
+
+        card.hidden = !show;
+
+        if (show) {
+          visible++;
         }
+      });
 
-        input.value = params.get('q') || '';
+      buttons.forEach((button) => {
+        const active = button.dataset.category === cat;
 
-        function updateUrl() {
-          const url = new URL(window.location.href);
-          url.search = '';
+        button.classList.toggle(
+          'active-filter',
+          active
+        );
 
-          const q = input.value.trim();
+        button.setAttribute(
+          'aria-pressed',
+          String(active)
+        );
+      });
 
-          if (q) {
-            url.searchParams.set('q', q);
-          }
+      count.textContent =
+        `${visible} prompt${visible === 1 ? '' : 's'}`;
 
-          if (cat !== 'All') {
-            url.searchParams.set('category', cat);
-          }
+      empty.hidden = visible !== 0;
+    }
 
-          window.history.replaceState({}, '', url);
-        }
+    form.addEventListener('submit', (event) => {
+      event.preventDefault();
 
-        function filterPrompts() {
-          const q = input.value.trim().toLowerCase();
-          let visible = 0;
+      updateUrl();
+      filterPrompts();
 
-          cards.forEach((card) => {
-            const searchableText = [
-              card.dataset.title || '',
-              card.dataset.category || '',
-              card.dataset.tags || '',
-              card.dataset.prompt || ''
-            ].join(' ').toLowerCase();
-
-            const matchesCategory =
-              cat === 'All' ||
-              card.dataset.category === cat;
-
-            const matchesSearch =
-              !q ||
-              searchableText.includes(q);
-
-            const show =
-              matchesCategory &&
-              matchesSearch;
-
-            card.hidden = !show;
-
-            if (show) visible++;
-          });
-
-          buttons.forEach((button) => {
-            const active =
-              button.dataset.category === cat;
-
-            button.classList.toggle(
-              'active-filter',
-              active
-            );
-
-            button.setAttribute(
-              'aria-pressed',
-              String(active)
-            );
-          });
-
-          count.textContent =
-            `${visible} prompt${visible === 1 ? '' : 's'}`;
-
-          empty.hidden = visible !== 0;
-        }
-
-        form.addEventListener('submit', (event) => {
-          event.preventDefault();
-          updateUrl();
-          filterPrompts();
-
-          document
-            .querySelector('#all-prompts')
-            ?.scrollIntoView({
-              behavior: 'smooth',
-              block: 'start'
-            });
+      document
+        .querySelector('#all-prompts')
+        ?.scrollIntoView({
+          behavior: 'smooth',
+          block: 'start'
         });
+    });
 
-        input.addEventListener('input', () => {
-          updateUrl();
-          filterPrompts();
-        });
-
-        buttons.forEach((button) => {
-          button.addEventListener('click', () => {
-            cat = button.dataset.category || 'All';
-            updateUrl();
-            filterPrompts();
-          });
-        });
-
-        clearButton?.addEventListener('click', () => {
-          input.value = '';
-          cat = 'All';
-          updateUrl();
-          filterPrompts();
-        });
-
+    input.addEventListener(
+      'input',
+      () => {
+        updateUrl();
         filterPrompts();
       }
+    );
 
-      if (document.readyState === 'loading') {
-        document.addEventListener(
-          'DOMContentLoaded',
-          initPromptFilters,
-          { once: true }
-        );
-      } else {
-        initPromptFilters();
-      }
-    })();
+    buttons.forEach((button) => {
+
+      button.addEventListener('click', () => {
+
+        cat = button.dataset.category;
+
+        updateUrl();
+        filterPrompts();
+
+        document
+          .querySelector('#all-prompts')
+          ?.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+          });
+
+      });
+
+    });
+
+    clearButton?.addEventListener('click', () => {
+
+      input.value = '';
+      cat = 'All';
+
+      updateUrl();
+      filterPrompts();
+
+    });
+
+    filterPrompts();
   </script>
 
 </Layout>
@@ -678,6 +687,11 @@ const categoryDescriptions = {
 
   .toolbar {
     margin-bottom: 24px;
+  }
+
+  /* Global .card uses display:flex, so explicitly hide filtered cards. */
+  #promptGrid .prompt-card[hidden] {
+    display: none !important;
   }
 
   .filters {
