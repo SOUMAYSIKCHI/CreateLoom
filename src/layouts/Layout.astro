@@ -18,11 +18,37 @@ const nav = [
 ];
 
 const creatorHubLinks = [
-  ['Creator Hub', '/creator-hub/'],
-  ['Trending Instagram Hashtags', '/creator-tools/trending-hashtags/'],
-  ['Reel Ideas & Growth', '/creator-hub/#reel-ideas'],
-  ['Brand Deals', '/creator-hub/#brand-deals'],
-  ['Media Kit', '/creator-hub/#media-kit']
+  {
+    label: 'Creator Hub',
+    url: '/creator-hub/',
+    icon: '🧭',
+    desc: 'Browse the full creator toolkit'
+  },
+  {
+    label: 'Trending Instagram Hashtags',
+    url: '/creator-tools/trending-hashtags/',
+    icon: '#',
+    desc: 'Curated hashtag sets for Reels',
+    badge: 'NEW'
+  },
+  {
+    label: 'Reel Ideas & Growth',
+    url: '/creator-hub/#reel-ideas',
+    icon: '🎬',
+    desc: 'Fresh ideas to keep posting'
+  },
+  {
+    label: 'Brand Deals',
+    url: '/creator-hub/#brand-deals',
+    icon: '🤝',
+    desc: 'Pitch, price and land collabs'
+  },
+  {
+    label: 'Media Kit',
+    url: '/creator-hub/#media-kit',
+    icon: '📇',
+    desc: 'Build your creator profile'
+  }
 ];
 
 const siteName = 'CreateLoom';
@@ -207,7 +233,7 @@ const year = new Date().getFullYear();
 <body>
 
   <!-- Accessibility -->
-  <a
+  
     class="skip-link"
     href="#main-content"
   >
@@ -220,7 +246,7 @@ const year = new Date().getFullYear();
     <div class="container nav">
 
       <!-- Brand -->
-      <a
+      
         class="brand"
         href="/"
         aria-label="CreateLoom home"
@@ -249,7 +275,7 @@ const year = new Date().getFullYear();
             label === 'Creator Hub' ? (
               <div class="nav-dropdown">
                 <div class="nav-dropdown-trigger">
-                  <a
+                  
                     class:list={{ active: active === label }}
                     href={url}
                   >
@@ -267,26 +293,35 @@ const year = new Date().getFullYear();
                 </div>
 
                 <div class="nav-dropdown-menu">
+                  <span class="nav-dropdown-heading">Creator Hub</span>
+
                   {
-                    creatorHubLinks.map(([itemLabel, itemUrl], index) => (
-                      <a
-                        href={itemUrl}
-                        class:list={{ 'nav-dropdown-featured': index === 1 }}
+                    creatorHubLinks.map((item) => (
+                      
+                        href={item.url}
+                        class:list={{ 'nav-dropdown-featured': !!item.badge }}
                         aria-current={
-                          itemUrl === Astro.url.pathname
+                          item.url === Astro.url.pathname
                             ? 'page'
                             : undefined
                         }
                       >
-                        {index === 1 && <span class="nav-hot" aria-hidden="true">NEW</span>}
-                        {itemLabel}
+                        <span class="nav-dropdown-icon" aria-hidden="true">{item.icon}</span>
+
+                        <span class="nav-dropdown-text">
+                          <span class="nav-dropdown-label">
+                            {item.label}
+                            {item.badge && <span class="nav-hot" aria-hidden="true">{item.badge}</span>}
+                          </span>
+                          <span class="nav-dropdown-desc">{item.desc}</span>
+                        </span>
                       </a>
                     ))
                   }
                 </div>
               </div>
             ) : (
-              <a
+              
                 class:list={{ active: active === label }}
                 href={url}
                 aria-current={
@@ -351,7 +386,7 @@ const year = new Date().getFullYear();
             nav.map(([label, url]) =>
               label === 'Creator Hub' ? (
                 <div class="mobile-nav-group">
-                  <a
+                  
                     class:list={{ active: active === label }}
                     href={url}
                     aria-current={
@@ -365,25 +400,32 @@ const year = new Date().getFullYear();
 
                   <div class="mobile-nav-subnav" aria-label="Creator Hub resources">
                     {
-                      creatorHubLinks.slice(1).map(([itemLabel, itemUrl], index) => (
-                        <a
-                          href={itemUrl}
-                          class:list={{ 'mobile-nav-featured': index === 0 }}
+                      creatorHubLinks.slice(1).map((item) => (
+                        
+                          href={item.url}
+                          class:list={{ 'mobile-nav-featured': !!item.badge }}
                           aria-current={
-                            itemUrl === Astro.url.pathname
+                            item.url === Astro.url.pathname
                               ? 'page'
                               : undefined
                           }
                         >
-                          {index === 0 && <span class="nav-hot" aria-hidden="true">NEW</span>}
-                          {itemLabel}
+                          <span class="nav-dropdown-icon" aria-hidden="true">{item.icon}</span>
+
+                          <span class="nav-dropdown-text">
+                            <span class="nav-dropdown-label">
+                              {item.label}
+                              {item.badge && <span class="nav-hot" aria-hidden="true">{item.badge}</span>}
+                            </span>
+                            <span class="nav-dropdown-desc">{item.desc}</span>
+                          </span>
                         </a>
                       ))
                     }
                   </div>
                 </div>
               ) : (
-                <a
+                
                   class:list={{ active: active === label }}
                   href={url}
                   aria-current={
@@ -429,7 +471,7 @@ const year = new Date().getFullYear();
       <!-- Brand -->
       <div class="footer-brand">
 
-        <a
+        
           class="brand"
           href="/"
           aria-label="CreateLoom home"
@@ -1090,6 +1132,7 @@ const year = new Date().getFullYear();
     background: transparent;
     color: var(--muted, #a1a1aa);
     cursor: pointer;
+    transition: color .16s ease;
   }
 
   .nav-dropdown-toggle:hover,
@@ -1098,30 +1141,53 @@ const year = new Date().getFullYear();
   }
 
   .nav-chevron {
+    display: inline-block;
     font-size: .78rem;
     line-height: 1;
     color: var(--muted, #a1a1aa);
     transform: translateY(-1px);
+    transition: transform .18s ease;
+  }
+
+  .nav-dropdown.is-open .nav-chevron,
+  .nav-dropdown:focus-within .nav-chevron {
+    transform: translateY(-1px) rotate(180deg);
+    color: #fff;
   }
 
   .nav-dropdown-menu {
     position: absolute;
-    top: calc(100% + 10px);
+    top: calc(100% + 14px);
     left: 50%;
-    min-width: 235px;
-    padding: 7px;
+    width: 310px;
+    padding: 10px;
     display: grid;
     gap: 2px;
-    background: #111019;
+    background: linear-gradient(180deg, #15131f, #0e0d14);
     border: 1px solid var(--border, rgba(255,255,255,.08));
-    border-radius: 13px;
-    box-shadow: 0 18px 45px rgba(0,0,0,.28);
+    border-radius: 16px;
+    box-shadow: 0 22px 50px rgba(0,0,0,.4);
     opacity: 0;
     visibility: hidden;
     pointer-events: none;
-    transform: translate(-50%, -5px);
-    transition: opacity .16s ease, transform .16s ease, visibility .16s ease;
+    transform: translate(-50%, -6px) scale(.98);
+    transform-origin: top center;
+    transition: opacity .18s ease, transform .18s ease, visibility .18s ease;
     z-index: 1000;
+  }
+
+  .nav-dropdown-menu::before {
+    content: '';
+    position: absolute;
+    top: -6px;
+    left: 50%;
+    width: 12px;
+    height: 12px;
+    background: #15131f;
+    border-left: 1px solid var(--border, rgba(255,255,255,.08));
+    border-top: 1px solid var(--border, rgba(255,255,255,.08));
+    transform: translateX(-50%) rotate(45deg);
+    border-radius: 3px 0 0 0;
   }
 
   .nav-dropdown.is-open .nav-dropdown-menu,
@@ -1129,31 +1195,73 @@ const year = new Date().getFullYear();
     opacity: 1;
     visibility: visible;
     pointer-events: auto;
-    transform: translate(-50%, 0);
+    transform: translate(-50%, 0) scale(1);
+  }
+
+  .nav-dropdown-heading {
+    padding: 6px 10px 8px;
+    color: var(--muted, #a1a1aa);
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: .08em;
+    text-transform: uppercase;
   }
 
   .nav-dropdown-menu a {
     position: relative;
     display: flex;
-    align-items: center;
-    gap: 7px;
-    padding: 10px 11px;
-    border-radius: 9px;
+    align-items: flex-start;
+    gap: 11px;
+    padding: 10px;
+    border-radius: 11px;
     color: var(--muted, #a1a1aa);
     text-decoration: none;
-    font-size: .82rem;
-    line-height: 1.25;
+    transition: background .14s ease, color .14s ease;
   }
 
   .nav-dropdown-menu a:hover,
   .nav-dropdown-menu a:focus-visible {
     color: #fff;
-    background: rgba(139,92,246,.09);
+    background: rgba(139,92,246,.10);
   }
 
   .nav-dropdown-menu .nav-dropdown-featured {
-    color: #fff;
-    background: rgba(139,92,246,.10);
+    background: rgba(139,92,246,.08);
+    border: 1px solid rgba(139,92,246,.2);
+  }
+
+  .nav-dropdown-icon {
+    display: inline-grid;
+    place-items: center;
+    flex: 0 0 34px;
+    width: 34px;
+    height: 34px;
+    border-radius: 9px;
+    background: rgba(139,92,246,.14);
+    color: #c4b5fd;
+    font-size: 15px;
+    font-weight: 700;
+  }
+
+  .nav-dropdown-text {
+    display: grid;
+    gap: 2px;
+    min-width: 0;
+  }
+
+  .nav-dropdown-label {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    color: inherit;
+    font-size: .87rem;
+    font-weight: 700;
+  }
+
+  .nav-dropdown-desc {
+    color: var(--muted, #a1a1aa);
+    font-size: .74rem;
+    line-height: 1.35;
   }
 
   .nav-hot {
@@ -1161,9 +1269,9 @@ const year = new Date().getFullYear();
     align-items: center;
     justify-content: center;
     flex: 0 0 auto;
-    padding: 2px 5px;
+    padding: 2px 6px;
     border-radius: 999px;
-    background: rgba(139,92,246,.16);
+    background: rgba(139,92,246,.22);
     color: #c4b5fd;
     font-size: 8px;
     font-weight: 800;
@@ -1177,21 +1285,46 @@ const year = new Date().getFullYear();
 
   .mobile-nav-subnav {
     display: grid;
-    margin: 0 0 5px 10px;
-    padding-left: 10px;
+    gap: 4px;
+    margin: 2px 0 10px 10px;
+    padding: 6px 0 6px 10px;
     border-left: 1px solid rgba(139,92,246,.18);
   }
 
   .mobile-nav-subnav a {
     display: flex;
-    align-items: center;
-    gap: 7px;
-    padding: 9px 4px;
-    font-size: .84rem;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 8px 6px;
+    border-radius: 10px;
+    text-decoration: none;
+    color: var(--muted, #a1a1aa);
+  }
+
+  .mobile-nav-subnav a:hover,
+  .mobile-nav-subnav a:active {
+    background: rgba(139,92,246,.08);
+    color: #fff;
   }
 
   .mobile-nav-subnav .mobile-nav-featured {
-    color: #c4b5fd;
+    background: rgba(139,92,246,.07);
+    border: 1px solid rgba(139,92,246,.18);
+  }
+
+  .mobile-nav-subnav .nav-dropdown-icon {
+    flex: 0 0 30px;
+    width: 30px;
+    height: 30px;
+    font-size: 13px;
+  }
+
+  .mobile-nav-subnav .nav-dropdown-label {
+    font-size: .84rem;
+  }
+
+  .mobile-nav-subnav .nav-dropdown-desc {
+    font-size: .72rem;
   }
 
   /*
