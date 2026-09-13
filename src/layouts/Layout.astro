@@ -191,29 +191,15 @@ const year = new Date().getFullYear();
         href="/"
         aria-label="CreateLoom home"
       >
-        <span
-          class="logo"
-          aria-hidden="true"
-        >
-          <svg
-            viewBox="0 0 32 32"
-            fill="none"
-            focusable="false"
-          >
-            <path
-              d="M23.5 8.5a10.5 10.5 0 1 0 0 15"
-              stroke="currentColor"
-              stroke-width="2.4"
-              stroke-linecap="round"
-            />
-
-            <path
-              d="M8.5 11h15M8.5 21h15"
-              stroke="currentColor"
-              stroke-width="2.4"
-              stroke-linecap="round"
-            />
-          </svg>
+        <span class="logo" aria-hidden="true">
+          <img
+            src="/images/createloom-logo.png"
+            alt=""
+            width="40"
+            height="40"
+            loading="eager"
+            decoding="async"
+          />
         </span>
 
         <span>CreateLoom</span>
@@ -338,29 +324,15 @@ const year = new Date().getFullYear();
           href="/"
           aria-label="CreateLoom home"
         >
-          <span
-            class="logo"
-            aria-hidden="true"
-          >
-            <svg
-              viewBox="0 0 32 32"
-              fill="none"
-              focusable="false"
-            >
-              <path
-                d="M23.5 8.5a10.5 10.5 0 1 0 0 15"
-                stroke="currentColor"
-                stroke-width="2.4"
-                stroke-linecap="round"
-              />
-
-              <path
-                d="M8.5 11h15M8.5 21h15"
-                stroke="currentColor"
-                stroke-width="2.4"
-                stroke-linecap="round"
-              />
-            </svg>
+          <span class="logo" aria-hidden="true">
+            <img
+              src="/images/createloom-logo.png"
+              alt=""
+              width="40"
+              height="40"
+              loading="lazy"
+              decoding="async"
+            />
           </span>
 
           <span>CreateLoom</span>
@@ -900,6 +872,24 @@ const year = new Date().getFullYear();
 
   .skip-link:focus {
     transform: translateY(0);
+  }
+
+  .brand .logo {
+    width: 40px;
+    height: 40px;
+    display: grid;
+    place-items: center;
+    flex: 0 0 40px;
+    overflow: hidden;
+    border-radius: 11px;
+  }
+
+  .brand .logo img {
+    display: block;
+    width: 40px;
+    height: 40px;
+    max-width: 100%;
+    object-fit: cover;
   }
 
   .sr-only {
