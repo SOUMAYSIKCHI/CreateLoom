@@ -15,7 +15,7 @@
       "Describe any clothing, location or prop you want to change before generating.",
       "If your generator supports image references, keep the reference strength high enough to preserve recognizable features."
     ],
-    "image": "/images/prompts/createloom.png"
+    "image": "/images/prompts/street1.jpeg"
   },
   {
     "id": "cinematic-couple",
@@ -502,7 +502,7 @@
       "Describe any clothing, location or prop you want to change before generating.",
       "If your generator supports image references, keep the reference strength high enough to preserve recognizable features."
     ],
-    "image": "/images/prompts/createloom.png"
+    "image": "/images/prompts/festival1.jpeg"
   },
   {
     "id": "diwali-portrait",
