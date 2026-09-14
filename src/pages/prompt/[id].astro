@@ -68,11 +68,33 @@ const canonicalUrl = new URL(
   Astro.site || 'https://createloom.vercel.app'
 );
 
-const seoTerms = searchTerms.slice(0, 3).join(', ');
+const primarySearchTerm = searchTerms[0] || `${p.category} AI image prompt`;
+const secondarySearchTerm = searchTerms[1] || '';
+const toolNames = tools.slice(0, 3).join(', ');
+
+const seoTitleBase =
+  p.title.toLowerCase().includes('prompt')
+    ? p.title
+    : `${p.title} AI Image Prompt`;
+
+const seoTitle =
+  seoTitleBase.length <= 58
+    ? `${seoTitleBase} | CreateLoom`
+    : `${seoTitleBase.slice(0, 54).trim()}… | CreateLoom`;
+
+const naturalSeoDescription = [
+  description,
+  primarySearchTerm ? `Create a ${primarySearchTerm.toLowerCase()}.` : '',
+  secondarySearchTerm ? `Also useful for ${secondarySearchTerm.toLowerCase()}.` : '',
+  toolNames ? `Works with ${toolNames}.` : ''
+]
+  .filter(Boolean)
+  .join(' ');
+
 const pageDescription =
-  description.length <= 155
-    ? description
-    : `${description.slice(0, 152).trim()}…`;
+  naturalSeoDescription.length <= 155
+    ? naturalSeoDescription
+    : `${naturalSeoDescription.slice(0, 152).trim()}…`;
 
 const webPageSchema = {
   '@context': 'https://schema.org',
@@ -95,7 +117,16 @@ const webPageSchema = {
   mainEntity: {
     '@type': 'CreativeWork',
     name: `${p.title} AI image prompt`,
-    description
+    description,
+    keywords: searchTerms.join(', '),
+    ...(p.image
+      ? {
+          image: new URL(
+            p.image,
+            'https://createloom.vercel.app'
+          ).href
+        }
+      : {})
   }
 };
 
@@ -142,7 +173,7 @@ const breadcrumbSchema = {
 ---
 
 <Layout
-  title={`${p.title} | CreateLoom`}
+  title={seoTitle}
   description={pageDescription}
   active="Prompts"
 >
@@ -181,6 +212,15 @@ const breadcrumbSchema = {
 
     <!-- Header -->
     <header class="prompt-header">
+
+      <div class="prompt-seo-intro">
+        <p>
+          {description}
+          {primarySearchTerm && (
+            <> This is a useful {primarySearchTerm.toLowerCase()} for creating realistic AI visuals.</>
+          )}
+        </p>
+      </div>
 
       <div class="prompt-header-meta">
         <a
@@ -1081,6 +1121,17 @@ const breadcrumbSchema = {
 
   .prompt-cta-links a:hover {
     text-decoration: underline;
+  }
+
+  .prompt-seo-intro {
+    max-width: 780px;
+    margin: 10px 0 0;
+  }
+
+  .prompt-seo-intro p {
+    margin: 0;
+    color: var(--muted, #a1a1aa);
+    line-height: 1.75;
   }
 
   @media (max-width: 760px) {
