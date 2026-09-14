@@ -1,0 +1,446 @@
+[
+  {
+    "noId": 1,
+    "slug": "meet-your-younger-self",
+    "isTrending": true,
+    "title": "Meet Your Younger Self AI Photo Trend",
+    "metaTitle": "Meet Your Younger Self AI Photo | Prompt & How to Create",
+    "metaDescription": "Learn how to create a realistic meet-your-younger-self AI photo with your own images, a ready-to-use prompt, step-by-step instructions and practical tips.",
+    "eyebrow": "AI Photo Trend",
+    "intro": "The meet your younger self AI photo trend turns two stages of one person's life into a single emotional image. The most convincing results look like a genuine old photograph or instant-film memory rather than a heavily edited AI composition.",
+    "heroImage": "/images/prompts/no8.webp",
+    "heroImageAlt": "Meet your younger self AI photo created in a nostalgic polaroid style",
+    "searchTerms": [
+      "meet your younger self AI photo",
+      "meet your younger self AI trend",
+      "younger self AI photo",
+      "how to create younger self AI photo",
+      "AI photo with younger self",
+      "hug younger self AI prompt"
+    ],
+    "whatIsIt": "The trend uses an adult reference photo and, when available, a childhood photo to create one believable scene showing the present-day person with a younger version of themselves. A nostalgic instant-film or Polaroid treatment is popular because the soft colors, grain and white border make the result feel like a real memory.",
+    "whyItsPopular": "It combines personalization and nostalgia in a format that works naturally on Instagram, Reels covers, Stories and sentimental posts. The idea is easy to understand at a glance, but the emotional payoff comes from preserving recognizable facial features while making both versions look like they belong in the same photograph.",
+    "howToCreate": [
+      {
+        "title": "Choose the right reference photos",
+        "text": "Use a clear current photo and, if you have one, a childhood image with the face visible. Front-facing or lightly angled photos with even lighting usually give an image model more useful facial information."
+      },
+      {
+        "title": "Decide how the two versions should interact",
+        "text": "A gentle hug, side-by-side pose or hand on the shoulder gives the image a natural story. Keep the interaction physically simple so the model has fewer opportunities to create distorted hands or awkward anatomy."
+      },
+      {
+        "title": "Use a focused image prompt",
+        "text": "Tell the model which image controls the adult identity, which image represents the younger version, and what should remain consistent. Then describe the setting, camera style and nostalgic finish."
+      },
+      {
+        "title": "Generate and refine",
+        "text": "If the faces look inconsistent, strengthen the identity instructions before changing the visual style. Make one change at a time instead of rewriting the entire prompt after every generation."
+      }
+    ],
+    "tips": [
+      "Use a childhood photo with a clearly visible face whenever one is available.",
+      "Keep identity instructions separate from styling instructions so the model understands what must not change.",
+      "For a convincing memory effect, use subtle grain and faded colors rather than extreme filters.",
+      "If hands or the interaction look unnatural, simplify the pose before increasing visual detail."
+    ],
+    "supportedTools": [
+      "ChatGPT",
+      "Gemini",
+      "Nano Banana"
+    ],
+    "relatedPrompts": [
+      "hug-younger-self-polaroid"
+    ],
+    "relatedBlogs": [],
+    "faq": [
+      {
+        "question": "What is the meet your younger self AI photo trend?",
+        "answer": "It is an AI image trend that combines an adult reference photo with a childhood version of the same person in one realistic, nostalgic scene, often styled like an instant-film or Polaroid photograph."
+      },
+      {
+        "question": "How do I make a meet your younger self AI photo?",
+        "answer": "Upload a clear adult reference and, if possible, a childhood photo. Tell the image generator which reference controls each identity, describe the interaction and scene, then use a nostalgic photographic style."
+      },
+      {
+        "question": "Can I create the younger self photo without a childhood picture?",
+        "answer": "Yes. An image model can attempt to create a younger version from an adult reference, but an actual childhood photo generally provides stronger visual guidance for facial resemblance and age-specific details."
+      },
+      {
+        "question": "Which AI tools can make a younger self photo?",
+        "answer": "Tools such as ChatGPT and Gemini can create this type of image when image generation and reference-image features are available. The exact controls vary by tool."
+      }
+    ]
+  },
+  {
+    "noId": 2,
+    "slug": "ai-action-figure",
+    "isTrending": true,
+    "title": "AI Action Figure & Figurine Photo Trend",
+    "metaTitle": "AI Action Figure Photo Trend | 3D Figurine Prompt & Guide",
+    "metaDescription": "Create an AI action figure or collectible figurine photo from your selfie. Get a ready-to-use prompt, tool options, steps and tips for a realistic toy-style result.",
+    "eyebrow": "AI Photo Trend",
+    "intro": "The AI action figure trend turns an ordinary portrait into a collectible toy-style character, often shown on a display base or inside retail-style packaging. The strongest results balance recognizable identity with believable toy materials, lighting and product photography.",
+    "heroImage": "/images/prompts/no5.webp",
+    "heroImageAlt": "AI action figure and collectible figurine photo trend",
+    "searchTerms": [
+      "AI action figure photo",
+      "AI action figure trend",
+      "AI figurine trend",
+      "turn photo into action figure",
+      "AI collectible figurine",
+      "Nano Banana action figure prompt"
+    ],
+    "whatIsIt": "Instead of simply applying a cartoon filter, this trend reimagines a real person as a physical collectible. The prompt usually controls the figurine's proportions, vinyl or molded-plastic appearance, display base, packaging and studio lighting while keeping the person's face recognizable.",
+    "whyItsPopular": "The result is instantly shareable because it looks like a personalized product reveal. It also works across profile pictures, Instagram posts, Stories and creator content because the concept can be adapted to almost any outfit, profession or personal aesthetic.",
+    "howToCreate": [
+      {
+        "title": "Upload a clear reference photo",
+        "text": "Choose a portrait where the face and hairstyle are easy to see. A clean reference makes it easier for the generator to retain recognizable facial characteristics."
+      },
+      {
+        "title": "Describe the collectible format",
+        "text": "Specify whether you want a figurine, action figure, boxed collectible or display model. Add details such as a base, clear window packaging and realistic molded materials."
+      },
+      {
+        "title": "Control the product photography",
+        "text": "Use soft studio lighting, believable reflections and a clean surface. These details help the result read as a photographed physical object instead of a digital character render."
+      },
+      {
+        "title": "Refine identity before decoration",
+        "text": "If the toy looks good but no longer resembles the reference, improve the identity instructions first. Add accessories and packaging details only after the face is consistent."
+      }
+    ],
+    "tips": [
+      "A front-facing portrait usually gives the model the clearest identity reference.",
+      "Ask for realistic molded-plastic or vinyl material instead of generic 3D rendering.",
+      "Keep packaging branding minimal or brand-free unless you specifically want fictional packaging.",
+      "Use product-photography language such as studio light, controlled reflections and sharp material detail."
+    ],
+    "supportedTools": [
+      "ChatGPT",
+      "Gemini",
+      "Nano Banana"
+    ],
+    "relatedPrompts": [
+      "nano-banana-figurine-portrait"
+    ],
+    "relatedBlogs": [],
+    "faq": [
+      {
+        "question": "What is the AI action figure trend?",
+        "answer": "It is a photo-generation trend that turns a person's reference image into a collectible action figure or figurine, often shown with a display base or toy packaging."
+      },
+      {
+        "question": "How do I turn my photo into an AI action figure?",
+        "answer": "Upload a clear reference photo and prompt the image generator to recreate you as a physical collectible while specifying the toy material, pose, packaging and product-photography style."
+      },
+      {
+        "question": "Which AI tool is best for AI figurine photos?",
+        "answer": "ChatGPT, Gemini and Nano Banana can all be used for this style when their image-generation and reference features are available. Results depend on the reference image and prompt quality."
+      },
+      {
+        "question": "Can the AI action figure keep my face?",
+        "answer": "Yes. A clear reference image and explicit identity-preservation instructions can improve facial resemblance, although no image generator guarantees perfect identity consistency."
+      }
+    ]
+  },
+  {
+    "noId": 3,
+    "slug": "90s-bollywood-ai-photo",
+    "isTrending": true,
+    "title": "90s Bollywood AI Photo & Movie Poster Trend",
+    "metaTitle": "90s Bollywood AI Photo Trend | Retro Poster Prompt & Guide",
+    "metaDescription": "Create a 90s Bollywood AI photo or retro movie poster from your own picture. Learn the prompt structure, styling ideas and steps for an authentic vintage cinema look.",
+    "eyebrow": "Retro AI Trend",
+    "intro": "The 90s Bollywood AI photo trend recreates the larger-than-life visual language of classic Indian movie posters: dramatic spotlighting, painted textures, bold composition, nostalgic colors and expressive fashion. It works especially well when the face remains photographic while the surrounding design takes on a retro poster character.",
+    "heroImage": "/images/prompts/no6.webp",
+    "heroImageAlt": "90s Bollywood AI movie poster photo trend",
+    "searchTerms": [
+      "90s Bollywood AI photo",
+      "90s Bollywood AI trend",
+      "90s Bollywood poster AI",
+      "Bollywood retro poster prompt",
+      "90s Bollywood photo editing prompt",
+      "AI Bollywood movie poster"
+    ],
+    "whatIsIt": "The trend transforms a modern portrait into a fictional 1990s Bollywood-style poster. The visual recipe commonly includes warm film grain, hand-painted poster texture, dramatic lighting, ornate borders and nostalgic Indian-cinema styling.",
+    "whyItsPopular": "The 1990s aesthetic combines nostalgia with personalization. Instead of recreating a specific copyrighted poster, creators can use the visual language of the era to make an original poster featuring themselves as the central character.",
+    "howToCreate": [
+      {
+        "title": "Pick a strong portrait",
+        "text": "Use a clear reference image with the face unobstructed. The portrait should provide enough detail for the model to preserve the subject while changing the surrounding visual treatment."
+      },
+      {
+        "title": "Describe the 90s cinema look",
+        "text": "Mention hand-painted texture, warm film grain, dramatic spotlighting, retro fashion and an ornate poster composition. These details are more useful than simply saying 'make it Bollywood'."
+      },
+      {
+        "title": "Leave the title flexible",
+        "text": "If you want to add your own title later, ask the model to keep the title area blank. This also avoids generating unreadable or distracting fake text."
+      },
+      {
+        "title": "Polish the final image",
+        "text": "Adjust the color grade, texture and composition after the main identity is correct. Keep the face natural rather than applying excessive smoothing."
+      }
+    ],
+    "tips": [
+      "Use 'inspired by 1990s Indian cinema poster design' rather than requesting an exact recreation of a specific movie poster.",
+      "Ask for blank title space if you plan to add typography yourself.",
+      "Film grain and halation should be subtle enough to preserve facial detail.",
+      "A simple reference pose gives the model more room to build the poster composition."
+    ],
+    "supportedTools": [
+      "ChatGPT",
+      "Gemini",
+      "Nano Banana"
+    ],
+    "relatedPrompts": [
+      "bollywood-90s-hero-poster",
+      "bollywood-90s-heroine-poster"
+    ],
+    "relatedBlogs": [],
+    "faq": [
+      {
+        "question": "What is the 90s Bollywood AI photo trend?",
+        "answer": "It is an AI image trend that transforms a personal photo into an original 1990s Bollywood-inspired portrait or movie-poster design using retro cinema colors, lighting, texture and fashion."
+      },
+      {
+        "question": "How do I make a 90s Bollywood AI poster?",
+        "answer": "Upload a clear portrait and describe the era-specific visual elements you want, such as hand-painted texture, dramatic spotlighting, warm film grain, retro fashion and an ornate poster layout."
+      },
+      {
+        "question": "Can I make a 90s Bollywood poster from my selfie?",
+        "answer": "Yes. A clear selfie or portrait can work as the identity reference. A front-facing image generally gives the generator more facial information to work with."
+      },
+      {
+        "question": "How can I make the poster look less AI-generated?",
+        "answer": "Ask for realistic skin texture, restrained grain, natural facial proportions and physically believable lighting. Avoid excessive HDR, plastic skin and overly clean digital rendering."
+      }
+    ]
+  },
+  {
+    "noId": 4,
+    "slug": "retro-ai-photo",
+    "isTrending": true,
+    "title": "Retro AI Photo Trend: 80s Vintage Portraits",
+    "metaTitle": "80s Retro AI Photo Trend | Vintage Portrait Prompt & Guide",
+    "metaDescription": "Create an authentic-looking 1980s retro AI photo from your portrait. Get a vintage prompt, styling ideas, camera details and practical steps for a cinematic 80s look.",
+    "eyebrow": "Retro AI Trend",
+    "intro": "The retro AI photo trend uses 1980s-inspired fashion, analog film characteristics, neon streets and vintage cars to make a modern portrait feel like it was captured decades ago. The goal is believable period photography, not a modern photo with a simple retro filter.",
+    "heroImage": "/images/prompts/no16.webp",
+    "heroImageAlt": "1980s retro AI portrait trend with vintage film photography",
+    "searchTerms": [
+      "80s AI photo",
+      "1980s AI photo trend",
+      "retro AI photo",
+      "80s retro portrait AI",
+      "1980s vintage photo AI",
+      "80s aesthetic AI photo"
+    ],
+    "whatIsIt": "An 80s retro AI photo recreates the photographic language of the decade through analog 35mm texture, film halation, muted highlights, deep shadows, period clothing and era-appropriate environments. A strong prompt treats the camera and environment as seriously as the clothing.",
+    "whyItsPopular": "Retro imagery has a strong visual identity and works well for social profiles, Reels covers, fashion edits and nostalgia content. The effect becomes more convincing when the environment, lens behavior and film characteristics all support the same era.",
+    "howToCreate": [
+      {
+        "title": "Start with a simple portrait",
+        "text": "Choose a reference where your face is visible and your pose is not too complicated. This gives the model a stable identity while leaving room to build the period scene."
+      },
+      {
+        "title": "Build an authentic 1980s setting",
+        "text": "Use era-specific details such as vintage cars, neon storefronts, old street lamps and period clothing. Avoid modern objects that immediately break the illusion."
+      },
+      {
+        "title": "Describe analog photography",
+        "text": "Mention 35mm film grain, halation, subtle lens imperfections, natural shadows and muted highlights. These cues are more convincing than simply asking for a 'vintage filter'."
+      },
+      {
+        "title": "Check for modern artifacts",
+        "text": "Look for contemporary clothing, phones, signage or overly clean digital lighting. Remove those details with a focused refinement prompt."
+      }
+    ],
+    "tips": [
+      "Period accuracy matters more than adding more effects.",
+      "Use subtle chromatic aberration and film grain instead of heavy distortion.",
+      "Ask the model to avoid modern objects when recreating an older era.",
+      "Keep the subject's identity instructions explicit if the scene changes substantially."
+    ],
+    "supportedTools": [
+      "ChatGPT",
+      "Gemini",
+      "Nano Banana"
+    ],
+    "relatedPrompts": [
+      "eighties-retro-male-portrait",
+      "bollywood-90s-hero-poster",
+      "bollywood-90s-heroine-poster"
+    ],
+    "relatedBlogs": [],
+    "faq": [
+      {
+        "question": "What is the retro AI photo trend?",
+        "answer": "It is an AI photography trend that places a modern person into a convincing vintage setting using period styling, analog film characteristics, older cameras and nostalgic color treatment."
+      },
+      {
+        "question": "How do I create an 80s AI photo?",
+        "answer": "Use a clear reference portrait and describe an authentic 1980s environment, period clothing and analog 35mm photography characteristics. Then refine any modern details that appear."
+      },
+      {
+        "question": "How do I make an AI retro photo look realistic?",
+        "answer": "Use physically believable lighting, restrained film grain, realistic skin texture and period-correct environments. A simple, coherent scene usually looks more authentic than one overloaded with effects."
+      },
+      {
+        "question": "Can I use an 80s AI photo for Instagram?",
+        "answer": "Yes. A 9:16 composition is especially useful for Instagram Stories and Reels, while portrait crops can work for profile and feed posts."
+      }
+    ]
+  },
+  {
+    "noId": 5,
+    "slug": "ai-polaroid-couple-photo",
+    "isTrending": true,
+    "title": "AI Polaroid Couple Photo Trend",
+    "metaTitle": "AI Polaroid Couple Photo | Prompt & How to Create the Trend",
+    "metaDescription": "Create a nostalgic AI Polaroid couple photo from reference images. Learn how to preserve both faces, build a candid instant-film look and create a shareable relationship photo.",
+    "eyebrow": "AI Couple Trend",
+    "intro": "The AI Polaroid couple trend turns reference photos of two people into a candid-looking instant-film snapshot. Soft window light, relaxed poses, faded colors and a visible white Polaroid-style border create the feeling of a shared memory.",
+    "heroImage": "/images/prompts/no9.webp",
+    "heroImageAlt": "AI Polaroid couple photo trend with nostalgic instant film styling",
+    "searchTerms": [
+      "AI Polaroid couple photo",
+      "AI couple Polaroid trend",
+      "Polaroid couple AI prompt",
+      "AI photo with boyfriend girlfriend",
+      "AI romantic Polaroid photo",
+      "couple instant film AI photo"
+    ],
+    "whatIsIt": "The trend creates one instant-film-style photograph from reference images of two people. The important part is not just the Polaroid border; the scene needs believable proximity, natural expressions, consistent lighting and recognizable identities for both subjects.",
+    "whyItsPopular": "Polaroid photography already communicates intimacy and nostalgia, which makes it a natural format for couple content. AI adds the ability to create a shared-looking moment even when the original reference photos were taken separately.",
+    "howToCreate": [
+      {
+        "title": "Use one good reference per person",
+        "text": "Choose clear images where each person's face is visible. Similar lighting and camera angles can make identity consistency easier, but the references do not have to be identical."
+      },
+      {
+        "title": "Describe a simple candid moment",
+        "text": "Standing close, laughing, looking at the camera or gently leaning together are easier for image models than complicated poses. Keep the interaction physically believable."
+      },
+      {
+        "title": "Add instant-film characteristics",
+        "text": "Specify soft light, faded colors, light film grain and a white instant-film border. These elements should support the photograph rather than overwhelm the faces."
+      },
+      {
+        "title": "Check both identities",
+        "text": "Inspect each face independently. If one person changes, strengthen that person's reference and identity instructions instead of changing the entire aesthetic prompt."
+      }
+    ],
+    "tips": [
+      "Use separate, clear reference images for both people.",
+      "Simple couple poses tend to produce more natural hands and body positioning.",
+      "Ask for genuine-looking expressions instead of exaggerated smiles.",
+      "Keep the vintage grade soft enough that skin tones remain believable."
+    ],
+    "supportedTools": [
+      "ChatGPT",
+      "Gemini",
+      "Nano Banana"
+    ],
+    "relatedPrompts": [
+      "ai-polaroid-with-loved-one",
+      "friends-polaroid-reunion",
+      "hug-younger-self-polaroid"
+    ],
+    "relatedBlogs": [],
+    "faq": [
+      {
+        "question": "What is the AI Polaroid couple trend?",
+        "answer": "It is an AI photo trend that combines reference images of two people into a single candid instant-film-style couple photograph with nostalgic colors and a Polaroid-like border."
+      },
+      {
+        "question": "How do I make an AI Polaroid photo with my partner?",
+        "answer": "Upload clear reference photos of both people, describe a simple candid pose and ask for instant-film characteristics such as soft light, faded color, grain and a white border."
+      },
+      {
+        "question": "Can AI put two separate photos into one couple picture?",
+        "answer": "Yes. Image-generation tools can use separate reference images to create a shared scene, although facial and body consistency can vary between generations."
+      },
+      {
+        "question": "How do I keep both faces recognizable in an AI couple photo?",
+        "answer": "Use clear reference images and explicitly state that both people should retain their natural facial identities. If one face changes, refine that person's identity instructions separately."
+      }
+    ]
+  },
+  {
+    "noId": 6,
+    "slug": "ganesh-chaturthi-ai-photo",
+    "isTrending": true,
+    "title": "Ganesh Chaturthi AI Photo Trend",
+    "metaTitle": "Ganesh Chaturthi AI Photo Trend | Ganpati Prompt & Guide",
+    "metaDescription": "Create a realistic Ganesh Chaturthi AI photo with your own reference image. Learn how to preserve your identity, recreate festive details and get a natural devotional portrait.",
+    "eyebrow": "Festival AI Trend",
+    "intro": "Ganesh Chaturthi AI photo edits combine a personal portrait with the visual atmosphere of a real celebration: a decorated Ganesha idol, flowers, warm lights and traditional festive details. The best results feel devotional and photographic rather than overly artificial.",
+    "heroImage": "/images/prompts/no3.webp",
+    "heroImageAlt": "Realistic Ganesh Chaturthi AI devotional portrait",
+    "searchTerms": [
+      "Ganesh Chaturthi AI photo",
+      "Ganesh Chaturthi AI photo prompt",
+      "Ganpati AI photo",
+      "Ganpati photo editing prompt",
+      "Ganesh Chaturthi portrait AI",
+      "Ganpati Bappa AI photo"
+    ],
+    "whatIsIt": "The trend uses image generation to place a person into a detailed Ganesh Chaturthi setting while preserving their facial identity. Common elements include a decorated Lord Ganesha idol, marigold flowers, warm golden lighting, festive ornaments and a shallow depth of field.",
+    "whyItsPopular": "Festival portraits are highly shareable during Ganesh Chaturthi because they combine personal identity with a culturally meaningful celebration. A realistic photographic treatment also makes the result suitable for Instagram posts, Stories and festive profile pictures.",
+    "howToCreate": [
+      {
+        "title": "Choose a clear reference portrait",
+        "text": "Use a photo where your face and natural features are easy to see. Avoid references with heavy filters because they can make identity preservation harder."
+      },
+      {
+        "title": "Define the devotional composition",
+        "text": "Describe your relationship to the idol, camera distance, pose and framing. Keep the scene specific so the model does not replace the setting with a generic festival background."
+      },
+      {
+        "title": "Add realistic festive details",
+        "text": "Use warm golden light, flowers, decorations and realistic idol materials. Avoid adding unnecessary objects that can make the image look synthetic."
+      },
+      {
+        "title": "Check identity and anatomy",
+        "text": "Before polishing the color grade, make sure your face, hands and the idol's important features are correct. Fix structural problems first, then refine atmosphere."
+      }
+    ],
+    "tips": [
+      "Use a reference image with natural skin texture and minimal filters.",
+      "Be explicit about the composition if you want a close devotional portrait.",
+      "Ask for realistic warm lighting rather than an exaggerated golden glow.",
+      "When generating an idol, clearly specify important structural details to reduce duplication errors."
+    ],
+    "supportedTools": [
+      "ChatGPT",
+      "Gemini",
+      "Nano Banana"
+    ],
+    "relatedPrompts": [
+      "festival-portrait",
+      "ganesh-chaturthi-couplephoto"
+    ],
+    "relatedBlogs": [],
+    "faq": [
+      {
+        "question": "What is the Ganesh Chaturthi AI photo trend?",
+        "answer": "It is an AI portrait trend that places a person into a realistic Ganesh Chaturthi setting with a decorated Ganesha idol, festive flowers, warm lighting and devotional details."
+      },
+      {
+        "question": "How do I create a Ganesh Chaturthi AI photo?",
+        "answer": "Upload a clear portrait, describe the desired devotional composition and festive setting, and explicitly instruct the image generator to preserve your natural facial identity."
+      },
+      {
+        "question": "Can I make a Ganpati AI photo with my own face?",
+        "answer": "Yes. Reference-image features can be used to guide the person's identity, although the degree of facial consistency depends on the tool and reference image."
+      },
+      {
+        "question": "How can I make a Ganesh Chaturthi AI portrait look realistic?",
+        "answer": "Use natural skin texture, physically believable warm lighting, realistic flowers and idol materials, and avoid excessive glow, smoothing or artificial effects."
+      }
+    ]
+  }
+]
