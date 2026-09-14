@@ -37,10 +37,20 @@ const relatedPrompts = prompts
   )
   .slice(0, 4);
 
+const siteUrl = Astro.site || 'https://createloom.vercel.app';
+
 const canonicalUrl = new URL(
   `/blog/${b.id}/`,
-  Astro.site || 'https://createloom.vercel.app'
+  siteUrl
 );
+
+const authorName = b.author || b.authorName || 'CreateLoom Editorial Team';
+const authorSchema = b.author || b.authorName
+  ? { '@type': 'Person', name: authorName }
+  : { '@type': 'Organization', name: 'CreateLoom', url: new URL('/', siteUrl).href };
+const articleImage = b.image
+  ? new URL(b.image, siteUrl).href
+  : undefined;
 
 const getAnchor = (heading) =>
   heading
@@ -54,17 +64,13 @@ const articleSchema = {
   headline: b.title,
   description: b.excerpt,
   datePublished: b.date,
-  dateModified: b.date,
+  dateModified: b.updatedAt || b.date,
   mainEntityOfPage: canonicalUrl.href,
-  author: {
-    '@type': 'Organization',
-    name: 'CreateLoom',
-    url: 'https://createloom.vercel.app/'
-  },
+  author: authorSchema,
   publisher: {
     '@type': 'Organization',
     name: 'CreateLoom',
-    url: 'https://createloom.vercel.app/'
+    url: new URL('/', siteUrl).href
   },
   articleSection: b.category,
   keywords: b.tags.join(', ')
@@ -74,10 +80,7 @@ const articleImageSchema = b.image
   ? {
       '@context': 'https://schema.org',
       '@type': 'ImageObject',
-      contentUrl: new URL(
-        b.image,
-        Astro.site || 'https://createloom.vercel.app'
-      ).href,
+      contentUrl: articleImage,
       name: b.title,
       description: `Featured image for ${b.title}.`
     }
@@ -91,13 +94,13 @@ const breadcrumbSchema = {
       '@type': 'ListItem',
       position: 1,
       name: 'Home',
-      item: new URL('/', Astro.site || canonicalUrl).href
+      item: new URL('/', siteUrl).href
     },
     {
       '@type': 'ListItem',
       position: 2,
       name: 'Blog',
-      item: new URL('/blog/', Astro.site || canonicalUrl).href
+      item: new URL('/blog/', siteUrl).href
     },
     {
       '@type': 'ListItem',
@@ -112,7 +115,7 @@ const websiteSchema = {
   '@context': 'https://schema.org',
   '@type': 'WebSite',
   name: 'CreateLoom',
-  url: new URL('/', Astro.site || canonicalUrl).href
+  url: new URL('/', siteUrl).href
 };
 ---
 
@@ -120,6 +123,8 @@ const websiteSchema = {
   title={`${b.title} | CreateLoom Blog`}
   description={b.excerpt}
   active="Blog"
+  ogImage={articleImage}
+  ogImageAlt={`Featured image for ${b.title}`}
 >
 
   <!-- Structured data -->
@@ -194,7 +199,7 @@ const websiteSchema = {
         <span>•</span>
 
         <span>
-          ✦ CreateLoom
+          ✦ Written by {authorName}
         </span>
 
       </div>
