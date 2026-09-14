@@ -96,7 +96,7 @@
       "9:16 aesthetic AI photo"
     ],
     "referenceImageRequired": true,
-    "trendStatus": "current",
+    "trendStatus": "hot",
     "trendSource": "editorial",
     "createdAt": "2026-09-14",
     "updatedAt": "2026-09-14",
@@ -151,7 +151,7 @@
       "Ganesh Chaturthi AI image"
     ],
     "referenceImageRequired": true,
-    "trendStatus": "current",
+    "trendStatus": "hot",
     "trendSource": "editorial",
     "createdAt": "2026-09-14",
     "updatedAt": "2026-09-14",
@@ -205,7 +205,7 @@
       "Ganpati couple DP AI"
     ],
     "referenceImageRequired": true,
-    "trendStatus": "current",
+    "trendStatus": "hot",
     "trendSource": "editorial",
     "createdAt": "2026-09-14",
     "updatedAt": "2026-09-14",
@@ -324,7 +324,7 @@
     "image": "/images/prompts/no6.webp",
     "referenceImageRequired": true,
     "trending": true,
-    "trendStatus": "hot",
+    "trendStatus": "current",
     "trendSource": "editorial",
     "createdAt": "2026-09-14",
     "updatedAt": "2026-09-14"
@@ -381,7 +381,7 @@
     "image": "/images/prompts/no7.webp",
     "referenceImageRequired": true,
     "trending": true,
-    "trendStatus": "hot",
+    "trendStatus": "current",
     "trendSource": "editorial",
     "createdAt": "2026-09-14",
     "updatedAt": "2026-09-14"
@@ -896,7 +896,7 @@
   "image": "/images/prompts/no16.webp",
   "referenceImageRequired": true,
   "trending": true,
-  "trendStatus": "current",
+  "trendStatus": "hot",
   "trendSource": "editorial",
   "createdAt": "2026-09-14",
   "updatedAt": "2026-09-14"
