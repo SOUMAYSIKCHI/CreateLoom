@@ -11,7 +11,7 @@
       "couple-photo"
     ],
     "date": "2026-09-12",
-    "readTime": "12 min read",
+    "readTime": "5 min read",
     "excerpt": "A practical guide to creating realistic, cinematic and creative AI couple photos with stronger prompts, better composition and reliable identity preservation.",
     "content": [
       "AI couple photography has become one of the easiest ways to turn two ordinary reference photos into cinematic concepts, travel memories, vintage portraits or romantic editorial scenes. The quality of the result, however, depends heavily on how clearly the image prompt describes the visual goal. A vague request such as “make a romantic couple photo” gives an image model too much freedom. A stronger prompt defines the relationship between the subjects, their pose, camera perspective, environment, lighting, wardrobe, mood and realism requirements.",
@@ -32,7 +32,8 @@
       "### Best workflow for consistent results",
       "Choose the concept first, upload the appropriate reference images, use a detailed prompt, generate several variations, select the strongest composition, and then refine one variable at a time. Save the prompt version that produces the best result. Over time, this gives you a reusable prompt library rather than a collection of disconnected experiments.",
       "CreateLoom's couple prompt collection is designed around this workflow. Start with a concept such as a mirror selfie, sunset portrait, rainy cinematic scene, café date or traditional couple portrait, then customize the details that make the image yours."
-    ]
+    ],
+    "authorName": "CreateLoom Editorial Team"
   },
   {
     "id": "ai-selfie-prompts",
@@ -46,7 +47,7 @@
       "portrait"
     ],
     "date": "2026-09-12",
-    "readTime": "12 min read",
+    "readTime": "4 min read",
     "excerpt": "Learn how to write AI selfie prompts that preserve identity, create believable camera perspective and produce natural-looking lighting, poses and environments.",
     "content": [
       "A convincing AI selfie is more than a portrait with a phone added to the frame. A real selfie has a specific camera distance, perspective, arm position, lens behavior, lighting pattern and relationship between the person and the environment. When these details are missing, an AI-generated selfie can look like a studio portrait pretending to be a selfie.",
@@ -65,7 +66,8 @@
       "Generate a first version and identify the single biggest problem. If the face is wrong, work on identity instructions. If the scene is wrong, simplify the environment. If the camera perspective is wrong, clarify the phone position and framing. Avoid changing every section at once because you lose the ability to diagnose what caused the improvement.",
       "### Selfie ideas that work well for Reels",
       "You can build repeatable content around mirror selfies, car selfies, airport selfies, rainy street selfies, café selfies, old-camera selfies and fashion selfies. A strong Reel can show the original reference, reveal the prompt and finish with the generated result. The exact prompt can then live on a CreateLoom page for viewers who want to recreate the concept."
-    ]
+    ],
+    "authorName": "CreateLoom Editorial Team"
   },
   {
     "id": "instagram-reel-ideas",
@@ -79,7 +81,7 @@
       "content-ideas"
     ],
     "date": "2026-09-12",
-    "readTime": "12 min read",
+    "readTime": "4 min read",
     "excerpt": "Build repeatable AI-content Reel formats around prompt reveals, transformations, comparisons, tutorials and themed series instead of relying on random ideas.",
     "content": [
       "AI creators have an unusual advantage on Instagram: the content itself can demonstrate a transformation. Instead of simply showing a finished AI image, you can turn the process into the story of the Reel. The strongest formats make the viewer understand the result quickly and then give them a reason to stay for the reveal, prompt or comparison.",
@@ -100,7 +102,8 @@
       "### A simple weekly system",
       "A practical schedule could rotate between a transformation Reel, prompt reveal, comparison, tutorial, themed series entry and audience-requested concept. The exact posting frequency matters less than maintaining a repeatable format and reviewing what your audience actually responds to.",
       "The goal is not to manufacture viral posts every day. The goal is to build a recognizable content system where every good idea can generate multiple useful pieces of content and where the best-performing concepts can be improved rather than abandoned."
-    ]
+    ],
+    "authorName": "CreateLoom Editorial Team"
   },
   {
     "id": "how-to-get-more-reel-views",
@@ -114,7 +117,7 @@
       "creator"
     ],
     "date": "2026-09-12",
-    "readTime": "13 min read",
+    "readTime": "4 min read",
     "excerpt": "A practical framework for improving Reel packaging, retention, clarity and repeatability without relying on fake engagement or artificial view boosts.",
     "content": [
       "Getting more Reel views is rarely about one secret setting. A Reel has to earn attention, communicate its idea quickly, give the viewer a reason to continue watching and make the content satisfying enough to share or revisit. For a new account, this can take experimentation because the system has little historical information about the audience that will respond best.",
@@ -136,7 +139,8 @@
       "### Give viewers a reason to visit your profile",
       "If the Reel demonstrates a useful prompt, the profile should make the next step obvious. CreateLoom can act as the detailed destination where viewers copy the exact prompt, explore related prompts and read supporting guides. The Reel earns attention while the website provides the deeper resource.",
       "Growth is usually an iteration problem rather than a single-post problem. Publish useful concepts, measure what happens, identify the strongest patterns and improve the next version. Over time, this produces a much more reliable content strategy than chasing every viral trend."
-    ]
+    ],
+    "authorName": "CreateLoom Editorial Team"
   },
   {
     "id": "how-to-get-brand-deals",
@@ -150,7 +154,7 @@
       "media-kit"
     ],
     "date": "2026-09-12",
-    "readTime": "13 min read",
+    "readTime": "4 min read",
     "excerpt": "A beginner-friendly framework for positioning your creator profile, building a simple media kit, finding relevant brands and sending professional collaboration pitches.",
     "content": [
       "Getting a first brand deal is easier when your profile makes three things obvious: what you create, who your audience is and what a brand would gain by working with you. A huge follower count is not the only factor brands consider. A focused niche, credible content and an audience that matches the product can make a smaller creator interesting.",
@@ -172,7 +176,8 @@
       "### Follow up professionally",
       "If a brand does not respond, one polite follow-up after a reasonable interval is better than repeatedly messaging them. Keep records of who you contacted, when you contacted them and what you proposed. Treat outreach as a pipeline rather than an emotional judgment of your content.",
       "The first deal is often less about becoming famous and more about becoming easy to evaluate. Build a focused profile, publish evidence of your content quality, prepare a clear offer and contact brands whose products genuinely fit your audience."
-    ]
+    ],
+    "authorName": "CreateLoom Editorial Team"
   },
   {
     "id": "how-to-write-ai-image-prompts",
@@ -186,7 +191,7 @@
       "ai-art"
     ],
     "date": "2026-09-12",
-    "readTime": "14 min read",
+    "readTime": "4 min read",
     "excerpt": "Learn a repeatable framework for turning a rough visual idea into a clear AI image prompt with better control over subject, composition, lighting, identity and style.",
     "content": [
       "A good AI image prompt is not simply a long list of descriptive words. It is a visual specification. The prompt should communicate what the model needs to know about the subject, action, environment, composition, camera perspective, lighting, style and important constraints. The objective is clarity, not maximum word count.",
@@ -211,7 +216,8 @@
       "### Build reusable prompt templates",
       "Once you find a structure that consistently works, turn it into a template with editable sections such as [SUBJECT], [OUTFIT], [LOCATION], [LIGHTING] and [MOOD]. This lets you create variations quickly without rewriting the entire prompt every time.",
       "The best prompt-writing workflow is therefore simple: define the visual goal, describe the important physical details, preserve identity when needed, establish composition and lighting, generate a baseline, inspect the result and refine one variable at a time. CreateLoom's prompt library follows this practical approach so you can start from a structured prompt instead of a blank page."
-    ]
+    ],
+    "authorName": "CreateLoom Editorial Team"
   },
   {
     "id": "nano-banana-ai-photo-prompts-guide",
@@ -226,7 +232,7 @@
       "identity-preservation"
     ],
     "date": "2026-09-14",
-    "readTime": "13 min read",
+    "readTime": "5 min read",
     "excerpt": "What Nano Banana actually is, why it became the tool behind most of this year's viral Instagram AI photos, and how to structure a prompt that gets a clean, identity-preserving result.",
     "content": [
       "Nano Banana is the name that stuck for Google's image-generation and image-editing model inside Gemini, and by 2026 it has become the tool most people mean when they search for a “trending AI photo prompt.” Its popularity did not come from being the flashiest option on paper. It came from being unusually good at one specific thing people actually want: taking a real photo of a real face and changing the styling, outfit, setting or format around it while keeping that face recognizable.",
@@ -245,7 +251,8 @@
       "### Building a repeatable workflow for Instagram content",
       "Once a Nano Banana prompt produces a result you like, treat it as a template rather than a one-off. Swap the reference photo, keep the transformation instruction the same, and you have a repeatable format for a Reel series. This is exactly how most of the current viral trend formats spread — not because one image went viral, but because the underlying prompt structure was easy for anyone to reuse with their own photo.",
       "CreateLoom's Nano Banana-compatible prompts are written with this structure in mind, so each one separates the transformation, the visual details and the identity instruction clearly — copy one, drop in your own reference photo, and adjust only the part that needs to change for your version of the concept."
-    ]
+    ],
+    "authorName": "CreateLoom Editorial Team"
   },
   {
     "id": "trending-ai-photo-styles-instagram",
@@ -259,7 +266,7 @@
       "nano-banana"
     ],
     "date": "2026-09-14",
-    "readTime": "12 min read",
+    "readTime": "4 min read",
     "excerpt": "A breakdown of the AI photo styles actually spreading on Instagram this year, why each one caught on, and how to adapt one into your own content instead of copying it exactly.",
     "content": [
       "AI photo trends move differently from most Instagram trends. A dance or audio trend spreads because it's easy to copy with your body. An AI photo trend spreads because it's easy to copy with a prompt and a selfie — no skill, no editing software, no waiting. That's part of why the current wave of trends has moved faster and lasted longer than the filter trends that came before it.",
@@ -276,7 +283,8 @@
       "### Turning a trend into your own content instead of a copy",
       "The creators who get the most out of a trend adapt it rather than replicate it exactly. If a saree-portrait trend is spreading, a travel creator might apply it to a specific regional style tied to a place they're covering. If a polaroid trend is spreading, a comedy creator might apply it to an exaggerated, deliberately absurd pairing instead of a sentimental one. The format is the reusable part; the specific execution is where your own content stands out.",
       "Because these trends move quickly, CreateLoom's trending prompt section is reviewed and updated as new patterns emerge, so the goal is to keep a current, honestly-labeled read on what's actually spreading — rather than treating any one style as permanent."
-    ]
+    ],
+    "authorName": "CreateLoom Editorial Team"
   },
   {
     "id": "chatgpt-ai-photo-prompts-instagram",
@@ -290,7 +298,7 @@
       "image-generation"
     ],
     "date": "2026-09-14",
-    "readTime": "12 min read",
+    "readTime": "4 min read",
     "excerpt": "How ChatGPT's image generation actually behaves compared to other tools, where it's the stronger choice, and how to write and refine prompts for it specifically.",
     "content": [
       "ChatGPT's image generation gets searched almost as often as Nano Banana's for a simple reason: a huge number of people already have ChatGPT open for something else and try the photo prompt there first, before ever looking for a separate tool. That habit alone makes it worth understanding on its own terms rather than treating every AI photo prompt as interchangeable across platforms.",
@@ -306,7 +314,8 @@
       "### When to reach for ChatGPT versus another tool",
       "ChatGPT is a strong choice when a project involves several rounds of back-and-forth refinement, when text needs to render correctly inside the image, or when you're already mid-conversation about the concept and don't want to switch tools. For a single, carefully pre-planned identity-preserving portrait where you already know exactly what you want in one shot, a tool built specifically around photo editing can sometimes get there in fewer attempts.",
       "CreateLoom's prompt library flags which tools each prompt was written for so you can pick based on how you actually want to work — one detailed attempt, or a conversation you refine as you go."
-    ]
+    ],
+    "authorName": "CreateLoom Editorial Team"
   },
   {
     "id": "how-to-make-ai-photos-look-real",
@@ -320,7 +329,7 @@
       "identity-preservation"
     ],
     "date": "2026-09-14",
-    "readTime": "12 min read",
+    "readTime": "4 min read",
     "excerpt": "The specific details that separate a convincing AI photo from an obviously artificial one, and the prompt language that actually fixes each problem.",
     "content": [
       "There's a specific, recognizable look people mean when they say an AI photo looks “fake,” and it's rarely one big mistake. It's usually a handful of small physical inconsistencies stacked on top of each other — skin that's too smooth, eyes that don't quite focus on anything, lighting that doesn't match between the subject and the background. Fixing the biggest offenders individually does more than adding a general “make it realistic” instruction ever will.",
@@ -337,6 +346,7 @@
       "### Realism isn't always the goal",
       "Not every concept should aim for photographic realism. A cartoon sticker, an anime portrait or a poster-style illustration is meant to look stylized, and pushing those toward photorealism usually makes the result worse, not better. Decide which category your concept belongs to before applying any of this — these fixes are for photo-style prompts specifically, not illustrated ones.",
       "Every prompt in CreateLoom's photo-style categories is written with these specific details already built in, which is part of why identity and realism tend to hold up better than in a prompt assembled from a generic adjective list."
-    ]
+    ],
+    "authorName": "CreateLoom Editorial Team"
   }
 ]
