@@ -4,8 +4,8 @@ import prompts from '../data/prompts.json';
 ---
 
 <Layout
-  title="Saved AI Prompts — CreateLoom"
-  description="View your saved AI image prompts on CreateLoom. Keep your favorite prompts in one place and quickly reopen, copy or share them."
+  title="Saved AI Prompts — Create With Soumay"
+  description="View your saved AI image prompts on Create With Soumay. Keep your favorite prompts in one place and quickly reopen, copy or share them."
   active="Favorites"
   robots="noindex, nofollow"
 >
@@ -57,7 +57,7 @@ import prompts from '../data/prompts.json';
   </main>
 
   <script define:vars={{ prompts }}>
-    const STORAGE_KEY = 'createloom-favorites';
+    const STORAGE_KEY = 'Create With Soumay-favorites';
     const promptData = prompts;
 
     function getFavorites() {
@@ -101,7 +101,7 @@ import prompts from '../data/prompts.json';
             <div class="prompt-card-image-wrap">
               <img
                 class="prompt-card-image"
-                src="${escapeHtml(p.image || '/images/prompts/createloom.png')}"
+                src="${escapeHtml(p.image || '/images/prompts/Create With Soumay.png')}"
                 alt="Example result for ${escapeHtml(p.title)} AI image prompt"
                 width="1080"
                 height="1920"
@@ -230,7 +230,7 @@ import prompts from '../data/prompts.json';
         try {
           if (navigator.share) {
             await navigator.share({
-              title: 'CreateLoom AI Prompt',
+              title: 'Create With Soumay AI Prompt',
               url: url.href
             });
           } else {
@@ -247,7 +247,7 @@ import prompts from '../data/prompts.json';
     });
 
     document.addEventListener(
-      'createloom:favorites-changed',
+      'Create With Soumay:favorites-changed',
       renderFavorites
     );
 
