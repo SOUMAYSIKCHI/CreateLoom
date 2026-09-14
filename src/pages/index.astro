@@ -8,14 +8,6 @@ const siteUrl = (Astro.site || 'https://createwithsoumay.store').toString().repl
 
 const categories = [...new Set(prompts.map((p) => p.category))].sort();
 
-const trendingPreviewIds = new Set(
-  trendingPrompts.slice(0, 6).map((p) => p.id)
-);
-
-const featuredPrompts = prompts
-  .filter((p) => !trendingPreviewIds.has(p.id))
-  .slice(0, 6);
-
 const trendPriority = {
   hot: 0,
   current: 1,
@@ -38,6 +30,14 @@ const trendingPrompts = prompts
       String(a.createdAt || '')
     );
   });
+
+const trendingPreviewIds = new Set(
+  trendingPrompts.slice(0, 6).map((p) => p.id)
+);
+
+const featuredPrompts = prompts
+  .filter((p) => !trendingPreviewIds.has(p.id))
+  .slice(0, 6);
 
 const latestPrompts = [...prompts]
   .filter((p) => p.createdAt)
