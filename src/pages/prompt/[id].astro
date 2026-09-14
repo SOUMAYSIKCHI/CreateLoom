@@ -213,15 +213,6 @@ const breadcrumbSchema = {
     <!-- Header -->
     <header class="prompt-header">
 
-      <div class="prompt-seo-intro">
-        <p>
-          {description}
-          {primarySearchTerm && (
-            <> This is a useful {primarySearchTerm.toLowerCase()} for creating realistic AI visuals.</>
-          )}
-        </p>
-      </div>
-
       <div class="prompt-header-meta">
         <a
           class="header-category"
@@ -245,8 +236,6 @@ const breadcrumbSchema = {
       </div>
 
       <h1>{p.title}</h1>
-
-      <p class="prompt-intro">{description}</p>
 
       <div class="usage-meta">
         {tools.length > 0 && (
@@ -811,14 +800,6 @@ const breadcrumbSchema = {
     letter-spacing: -0.045em;
   }
 
-  .prompt-intro {
-    max-width: 720px;
-    margin: 0 auto;
-    color: var(--muted, #a1a1aa);
-    line-height: 1.75;
-    font-size: 1.05rem;
-  }
-
   .tags {
     display: flex;
     justify-content: center;
@@ -1121,17 +1102,6 @@ const breadcrumbSchema = {
 
   .prompt-cta-links a:hover {
     text-decoration: underline;
-  }
-
-  .prompt-seo-intro {
-    max-width: 780px;
-    margin: 10px 0 0;
-  }
-
-  .prompt-seo-intro p {
-    margin: 0;
-    color: var(--muted, #a1a1aa);
-    line-height: 1.75;
   }
 
   @media (max-width: 760px) {
