@@ -63,7 +63,7 @@ const trendLabel =
           ? 'Evergreen'
           : 'Trending';
 
-const siteUrl = (Astro.site || 'https://createloom.vercel.app').toString().replace(/\/$/, '');
+const siteUrl = (Astro.site || 'https://createwithsoumay.store').toString().replace(/\/$/, '');
 
 const canonicalUrl = new URL(
   `/prompt/${p.id}/`,
@@ -81,8 +81,8 @@ const seoTitleBase =
 
 const seoTitle =
   seoTitleBase.length <= 58
-    ? `${seoTitleBase} | CreateLoom`
-    : `${seoTitleBase.slice(0, 54).trim()}… | CreateLoom`;
+    ? `${seoTitleBase} | Create With Soumay`
+    : `${seoTitleBase.slice(0, 54).trim()}… | Create With Soumay`;
 
 const naturalSeoDescription = [
   description,
@@ -106,7 +106,7 @@ const webPageSchema = {
   url: canonicalUrl.href,
   isPartOf: {
     '@type': 'WebSite',
-    name: 'CreateLoom',
+    name: 'Create With Soumay',
     url: `${siteUrl}/`
   },
   about: {
@@ -138,7 +138,7 @@ const imageObjectSchema = p.image
       '@type': 'ImageObject',
       contentUrl: new URL(p.image, siteUrl).href,
       name: `Example result for ${p.title} AI image prompt`,
-      description: `Example visual result for the ${p.title} AI image prompt on CreateLoom.`
+      description: `Example visual result for the ${p.title} AI image prompt on Create With Soumay.`
     }
   : null;
 
@@ -444,7 +444,7 @@ const breadcrumbSchema = {
         <h2>Related AI Prompts</h2>
 
         <p class="section-description">
-          Explore more CreateLoom prompts with similar styles,
+          Explore more Create With Soumay prompts with similar styles,
           categories and visual concepts.
         </p>
 
@@ -509,12 +509,12 @@ const breadcrumbSchema = {
     <!-- Bottom CTA -->
     <section class="prompt-cta">
 
-      <div class="eyebrow">CreateLoom</div>
+      <div class="eyebrow">Create With Soumay</div>
 
       <h2>Looking for more AI image prompts?</h2>
 
       <p>
-        Explore the full CreateLoom library of ready-to-use
+        Explore the full Create With Soumay library of ready-to-use
         prompts for couples, selfies, portraits, fashion,
         vintage photography, anime and more.
       </p>
