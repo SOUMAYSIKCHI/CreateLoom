@@ -4,9 +4,13 @@ import PromptCard from '../components/PromptCard.astro';
 import prompts from '../data/prompts.json';
 import blogs from '../data/blogs.json';
 
+const siteUrl = (Astro.site || 'https://createloom.vercel.app').toString().replace(/\/$/, '');
+
 const categories = [...new Set(prompts.map((p) => p.category))].sort();
 
-const featuredPrompts = prompts.slice(0, 6);
+const featuredPrompts = prompts
+  .filter((p) => !p.trending)
+  .slice(0, 6);
 
 const trendPriority = {
   hot: 0,
@@ -871,11 +875,11 @@ const categoryDescriptions = {
       name: 'CreateLoom — AI Image Prompts & Creator Resources',
       description:
         'Discover detailed AI image prompts, Instagram creator resources and practical guides on CreateLoom.',
-      url: 'https://createloom.vercel.app/',
+      url: `${siteUrl}/`,
       isPartOf: {
         '@type': 'WebSite',
         name: 'CreateLoom',
-        url: 'https://createloom.vercel.app/'
+        url: `${siteUrl}/`
       },
       about: [
         'AI image prompts',
