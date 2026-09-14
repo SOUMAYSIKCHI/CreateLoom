@@ -5,6 +5,28 @@ import prompts from '../../data/prompts.json';
 
 const cats = [...new Set(prompts.map((p) => p.category))].sort();
 
+const types = ['Boy', 'Girl', 'Couple', 'Unisex'];
+const toolOptions = ['ChatGPT', 'Gemini', 'Nano Banana', 'Midjourney'];
+
+const trendRank = {
+  hot: 0,
+  current: 1,
+  rising: 2,
+  seasonal: 3,
+  evergreen: 4
+};
+
+const sortByCreatedAtDesc = (a, b) =>
+  String(b.createdAt || '').localeCompare(String(a.createdAt || ''));
+
+const trendingPrompts = prompts
+  .filter((p) => p.trending === true)
+  .sort((a, b) => {
+    const rankA = trendRank[a.trendStatus] ?? 99;
+    const rankB = trendRank[b.trendStatus] ?? 99;
+    return rankA - rankB || sortByCreatedAtDesc(a, b);
+  });
+
 const featured = prompts.slice(0, 6);
 
 const categoryDescriptions = {
@@ -92,38 +114,100 @@ const categoryDescriptions = {
       <!-- Filters -->
       <div class="toolbar">
 
-        <div
-          class="filters"
-          id="filters"
-          aria-label="Prompt categories"
-        >
-
-          <button
-            type="button"
-            class="small-btn active-filter"
-            data-category="All"
+        <div class="filter-group">
+          <span class="filter-label">Category</span>
+          <div
+            class="filters"
+            id="categoryFilters"
+            aria-label="Prompt categories"
           >
-            All
-          </button>
+            <button
+              type="button"
+              class="small-btn active-filter"
+              data-category="All"
+              aria-pressed="true"
+            >
+              All
+            </button>
 
-          <button
-            type="button"
-            class="small-btn"
-            data-category="Trending"
-          >
-            Trending
-          </button>
-
-          {cats.map((category) => (
             <button
               type="button"
               class="small-btn"
-              data-category={category}
+              data-category="Trending"
+              aria-pressed="false"
             >
-              {category}
+              Trending
             </button>
-          ))}
 
+            {cats.map((category) => (
+              <button
+                type="button"
+                class="small-btn"
+                data-category={category}
+                aria-pressed="false"
+              >
+                {category}
+              </button>
+            ))}
+          </div>
+        </div>
+
+        <div class="filter-group">
+          <span class="filter-label">Type</span>
+          <div
+            class="filters"
+            id="typeFilters"
+            aria-label="Prompt type"
+          >
+            <button
+              type="button"
+              class="small-btn active-filter"
+              data-type="All"
+              aria-pressed="true"
+            >
+              All
+            </button>
+
+            {types.map((type) => (
+              <button
+                type="button"
+                class="small-btn"
+                data-type={type}
+                aria-pressed="false"
+              >
+                {type}
+              </button>
+            ))}
+          </div>
+        </div>
+
+        <div class="filter-group">
+          <span class="filter-label">AI tool</span>
+          <div
+            class="filters"
+            id="toolFilters"
+            aria-label="Compatible AI tool"
+          >
+            <button
+              type="button"
+              class="small-btn active-filter"
+              data-tool="All"
+              aria-pressed="true"
+            >
+              All
+            </button>
+
+            {toolOptions.map((tool) => (
+              <button
+                type="button"
+                class="small-btn"
+                data-tool={tool}
+                aria-pressed="false"
+              >
+                {tool}
+              </button>
+            ))}
+          </div>
         </div>
 
       </div>
@@ -227,8 +311,7 @@ const categoryDescriptions = {
             <h3>{p.title}</h3>
 
             <p>
-              {p.prompt.slice(0, 125)}
-              {p.prompt.length > 125 ? '…' : ''}
+              {p.description || `A ready-to-use ${p.category.toLowerCase()} AI image prompt.`}
             </p>
 
             <strong>
@@ -425,9 +508,19 @@ const categoryDescriptions = {
     const cards = [
       ...document.querySelectorAll('#promptGrid .prompt-card')
     ];
-    const buttons = [
-      ...document.querySelectorAll('#filters button[data-category]')
+
+    const categoryButtons = [
+      ...document.querySelectorAll('#categoryFilters button[data-category]')
     ];
+
+    const typeButtons = [
+      ...document.querySelectorAll('#typeFilters button[data-type]')
+    ];
+
+    const toolButtons = [
+      ...document.querySelectorAll('#toolFilters button[data-tool]')
+    ];
+
     const count = document.querySelector('#resultCount');
     const empty = document.querySelector('#empty');
     const clearButton = document.querySelector('#clearSearch');
@@ -435,52 +528,74 @@ const categoryDescriptions = {
     const params = new URLSearchParams(location.search);
 
     let cat = params.get('category') || 'All';
+    let type = params.get('type') || 'All';
+    let tool = params.get('tool') || 'All';
 
     if (
       cat !== 'All' &&
-      !buttons.some((button) => button.dataset.category === cat)
+      !categoryButtons.some((button) => button.dataset.category === cat)
     ) {
       cat = 'All';
+    }
+
+    if (
+      type !== 'All' &&
+      !typeButtons.some((button) => button.dataset.type === type)
+    ) {
+      type = 'All';
+    }
+
+    if (
+      tool !== 'All' &&
+      !toolButtons.some((button) => button.dataset.tool === tool)
+    ) {
+      tool = 'All';
     }
 
     input.value = params.get('q') || '';
 
     function updateUrl() {
       const q = input.value.trim();
-
       const url = new URL(location.href);
 
       url.search = '';
 
-      if (q) {
-        url.searchParams.set('q', q);
-      }
-
-      if (cat !== 'All') {
-        url.searchParams.set('category', cat);
-      }
+      if (q) url.searchParams.set('q', q);
+      if (cat !== 'All') url.searchParams.set('category', cat);
+      if (type !== 'All') url.searchParams.set('type', type);
+      if (tool !== 'All') url.searchParams.set('tool', tool);
 
       history.replaceState({}, '', url);
     }
 
+    function setActive(buttons, value, key) {
+      buttons.forEach((button) => {
+        const active = button.dataset[key] === value;
+
+        button.classList.toggle('active-filter', active);
+        button.setAttribute('aria-pressed', String(active));
+      });
+    }
+
     function filterPrompts() {
       const q = input.value.trim().toLowerCase();
-
       let visible = 0;
 
       cards.forEach((card) => {
-
-        const searchableText = (
-          card.dataset.title +
-          ' ' +
-          card.dataset.category +
-          ' ' +
-          (card.dataset.trending === 'true' ? 'trending' : '') +
-          ' ' +
-          card.dataset.tags +
-          ' ' +
-          card.dataset.prompt
-        ).toLowerCase();
+        const searchableText = [
+          card.dataset.title,
+          card.dataset.category,
+          card.dataset.type,
+          card.dataset.tools,
+          card.dataset.tags,
+          card.dataset.prompt,
+          card.dataset.description,
+          card.dataset.searchTerms,
+          card.dataset.trending === 'true' ? 'trending' : ''
+        ]
+          .filter(Boolean)
+          .join(' ')
+          .toLowerCase();
 
         const matchesCategory =
           cat === 'All' ||
@@ -488,37 +603,33 @@ const categoryDescriptions = {
             ? card.dataset.trending === 'true'
             : card.dataset.category === cat);
 
+        const matchesType =
+          type === 'All' ||
+          card.dataset.type === type;
+
+        const cardTools = card.dataset.tools || '';
+
+        const matchesTool =
+          tool === 'All' ||
+          cardTools.includes(tool);
+
         const matchesSearch =
-          !q ||
-          searchableText.includes(q);
+          !q || searchableText.includes(q);
 
         const show =
           matchesCategory &&
+          matchesType &&
+          matchesTool &&
           matchesSearch;
 
-        /* Use inline display instead of only [hidden].
-           The global .card rule defines display:flex, which can override
-           the browser's default hidden behavior. */
         card.style.display = show ? '' : 'none';
 
-        if (show) {
-          visible++;
-        }
+        if (show) visible++;
       });
 
-      buttons.forEach((button) => {
-        const active = button.dataset.category === cat;
-
-        button.classList.toggle(
-          'active-filter',
-          active
-        );
-
-        button.setAttribute(
-          'aria-pressed',
-          String(active)
-        );
-      });
+      setActive(categoryButtons, cat, 'category');
+      setActive(typeButtons, type, 'type');
+      setActive(toolButtons, tool, 'tool');
 
       count.textContent =
         `${visible} prompt${visible === 1 ? '' : 's'}`;
@@ -540,20 +651,14 @@ const categoryDescriptions = {
         });
     });
 
-    input.addEventListener(
-      'input',
-      () => {
-        updateUrl();
-        filterPrompts();
-      }
-    );
+    input.addEventListener('input', () => {
+      updateUrl();
+      filterPrompts();
+    });
 
-    buttons.forEach((button) => {
-
+    categoryButtons.forEach((button) => {
       button.addEventListener('click', () => {
-
         cat = button.dataset.category;
-
         updateUrl();
         filterPrompts();
 
@@ -563,19 +668,47 @@ const categoryDescriptions = {
             behavior: 'smooth',
             block: 'start'
           });
-
       });
+    });
 
+    typeButtons.forEach((button) => {
+      button.addEventListener('click', () => {
+        type = button.dataset.type;
+        updateUrl();
+        filterPrompts();
+
+        document
+          .querySelector('#all-prompts')
+          ?.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+          });
+      });
+    });
+
+    toolButtons.forEach((button) => {
+      button.addEventListener('click', () => {
+        tool = button.dataset.tool;
+        updateUrl();
+        filterPrompts();
+
+        document
+          .querySelector('#all-prompts')
+          ?.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+          });
+      });
     });
 
     clearButton?.addEventListener('click', () => {
-
       input.value = '';
       cat = 'All';
+      type = 'All';
+      tool = 'All';
 
       updateUrl();
       filterPrompts();
-
     });
 
     filterPrompts();
@@ -805,7 +938,22 @@ const categoryDescriptions = {
   }
 
   .toolbar {
+    display: grid;
+    gap: 16px;
     margin-bottom: 24px;
+  }
+
+  .filter-group {
+    display: grid;
+    gap: 8px;
+  }
+
+  .filter-label {
+    color: #85858f;
+    font-size: .68rem;
+    font-weight: 850;
+    letter-spacing: .07em;
+    text-transform: uppercase;
   }
 
   .filters {
