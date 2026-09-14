@@ -19,6 +19,11 @@ const trendRank = {
 const sortByCreatedAtDesc = (a, b) =>
   String(b.createdAt || '').localeCompare(String(a.createdAt || ''));
 
+// Always show the newest prompts first by noId.
+const sortedPrompts = [...prompts].sort(
+  (a, b) => Number(b.noId || 0) - Number(a.noId || 0)
+);
+
 const trendingPrompts = prompts
   .filter((p) => p.trending === true)
   .sort((a, b) => {
@@ -27,7 +32,7 @@ const trendingPrompts = prompts
     return rankA - rankB || sortByCreatedAtDesc(a, b);
   });
 
-const featured = prompts.slice(0, 6);
+const featured = sortedPrompts.slice(0, 6);
 
 const categoryDescriptions = {
   Couple: 'Romantic couple photos, mirror selfies, dates and cinematic relationship portraits.',
@@ -219,7 +224,7 @@ const categoryDescriptions = {
         class="grid"
         id="promptGrid"
       >
-        {prompts.map((p) => (
+        {sortedPrompts.map((p) => (
           <PromptCard p={p} />
         ))}
       </div>
@@ -751,7 +756,7 @@ const categoryDescriptions = {
         '@type': 'ItemList',
         name: 'AI Image Prompt Library',
         numberOfItems: prompts.length,
-        itemListOrder: 'https://schema.org/ItemListOrderAscending'
+        itemListOrder: 'https://schema.org/ItemListOrderDescending'
       },
       about: [
         'AI image prompts',
