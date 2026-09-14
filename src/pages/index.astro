@@ -65,8 +65,8 @@ const categoryDescriptions = {
 ---
 
 <Layout
-  title="Create With Soumay — AI Image Prompts & Creator Resources"
-  description="Discover detailed AI image prompts, Instagram creator resources and practical guides on Create With Soumay. Copy prompts for couples, selfies, portraits, fashion, anime, vintage photography and more."
+  title="Create With Soumay | AI Image Prompts & Creator Tools"
+  description="Free AI image prompts, Instagram creator tools, Reel ideas and practical guides. Copy and customize prompts for couples, selfies, portraits, fashion, anime, vintage and more."
   active="Home"
 >
 
@@ -81,14 +81,13 @@ const categoryDescriptions = {
       </div>
 
       <h1>
-        Create.
-        <span class="gradient-text">Inspire.</span>
-        Repeat.
+        AI Image Prompts &amp;
+        <span class="gradient-text">Creator Tools</span>
       </h1>
 
       <p class="hero-lede">
-        Discover detailed AI image prompts and practical creator
-        resources designed to turn your ideas into better content.
+        Discover free, copy-ready AI image prompts and practical Instagram
+        creator resources to turn your ideas into better content.
       </p>
 
       <form
@@ -876,10 +875,11 @@ const categoryDescriptions = {
     set:html={JSON.stringify({
       '@context': 'https://schema.org',
       '@type': 'WebPage',
-      name: 'Create With Soumay — AI Image Prompts & Creator Resources',
+      name: 'Create With Soumay | AI Image Prompts & Creator Tools',
       description:
-        'Discover detailed AI image prompts, Instagram creator resources and practical guides on Create With Soumay.',
+        'Free AI image prompts, Instagram creator tools, Reel ideas and practical guides from Create With Soumay.',
       url: `${siteUrl}/`,
+      mainEntityOfPage: `${siteUrl}/`,
       isPartOf: {
         '@type': 'WebSite',
         name: 'Create With Soumay',
@@ -887,10 +887,19 @@ const categoryDescriptions = {
       },
       about: [
         'AI image prompts',
-        'Instagram creator resources',
+        'Instagram creator tools',
         'Instagram content ideas',
         'AI image creation'
-      ]
+      ],
+      publisher: {
+        '@type': 'Organization',
+        name: 'Create With Soumay',
+        url: `${siteUrl}/`,
+        logo: {
+          '@type': 'ImageObject',
+          url: `${siteUrl}/images/createloom-logo.png`
+        }
+      }
     })}
   />
 
