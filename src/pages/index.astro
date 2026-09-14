@@ -4,12 +4,16 @@ import PromptCard from '../components/PromptCard.astro';
 import prompts from '../data/prompts.json';
 import blogs from '../data/blogs.json';
 
-const siteUrl = (Astro.site || 'https://createloom.vercel.app').toString().replace(/\/$/, '');
+const siteUrl = (Astro.site || 'https://createwithsoumay.store').toString().replace(/\/$/, '');
 
 const categories = [...new Set(prompts.map((p) => p.category))].sort();
 
+const trendingPreviewIds = new Set(
+  trendingPrompts.slice(0, 6).map((p) => p.id)
+);
+
 const featuredPrompts = prompts
-  .filter((p) => !p.trending)
+  .filter((p) => !trendingPreviewIds.has(p.id))
   .slice(0, 6);
 
 const trendPriority = {
@@ -61,8 +65,8 @@ const categoryDescriptions = {
 ---
 
 <Layout
-  title="CreateLoom — AI Image Prompts & Creator Resources"
-  description="Discover detailed AI image prompts, Instagram creator resources and practical guides on CreateLoom. Copy prompts for couples, selfies, portraits, fashion, anime, vintage photography and more."
+  title="Create With Soumay — AI Image Prompts & Creator Resources"
+  description="Discover detailed AI image prompts, Instagram creator resources and practical guides on Create With Soumay. Copy prompts for couples, selfies, portraits, fashion, anime, vintage photography and more."
   active="Home"
 >
 
@@ -696,7 +700,7 @@ const categoryDescriptions = {
         <div>
 
           <div class="eyebrow">
-            Why CreateLoom
+            Why Create With Soumay
           </div>
 
           <h2>
@@ -708,7 +712,7 @@ const categoryDescriptions = {
         <div>
 
           <p>
-            CreateLoom brings ready-to-use AI image prompts together
+            Create With Soumay brings ready-to-use AI image prompts together
             with practical resources for creators. Instead of searching
             through scattered examples, you can find a prompt, copy it,
             customize it and move directly into your creative workflow.
@@ -726,7 +730,7 @@ const categoryDescriptions = {
             href="/about/"
             class="text-link"
           >
-            Learn more about CreateLoom →
+            Learn more about Create With Soumay →
           </a>
 
         </div>
@@ -763,11 +767,11 @@ const categoryDescriptions = {
 
         <details>
           <summary>
-            What is CreateLoom?
+            What is Create With Soumay?
           </summary>
 
           <p>
-            CreateLoom is a creator-focused library of AI image
+            Create With Soumay is a creator-focused library of AI image
             prompts, practical guides and resources for Instagram
             and visual content creation.
           </p>
@@ -802,11 +806,11 @@ const categoryDescriptions = {
 
         <details>
           <summary>
-            Are CreateLoom prompts free?
+            Are Create With Soumay prompts free?
           </summary>
 
           <p>
-            CreateLoom provides free prompt resources. The AI
+            Create With Soumay provides free prompt resources. The AI
             generation service you choose may have its own plans,
             limits or pricing.
           </p>
@@ -872,13 +876,13 @@ const categoryDescriptions = {
     set:html={JSON.stringify({
       '@context': 'https://schema.org',
       '@type': 'WebPage',
-      name: 'CreateLoom — AI Image Prompts & Creator Resources',
+      name: 'Create With Soumay — AI Image Prompts & Creator Resources',
       description:
-        'Discover detailed AI image prompts, Instagram creator resources and practical guides on CreateLoom.',
+        'Discover detailed AI image prompts, Instagram creator resources and practical guides on Create With Soumay.',
       url: `${siteUrl}/`,
       isPartOf: {
         '@type': 'WebSite',
-        name: 'CreateLoom',
+        name: 'Create With Soumay',
         url: `${siteUrl}/`
       },
       about: [
@@ -898,10 +902,10 @@ const categoryDescriptions = {
       mainEntity: [
         {
           '@type': 'Question',
-          name: 'What is CreateLoom?',
+          name: 'What is Create With Soumay?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'CreateLoom is a creator-focused library of AI image prompts, practical guides and resources for Instagram and visual content creation.'
+            text: 'Create With Soumay is a creator-focused library of AI image prompts, practical guides and resources for Instagram and visual content creation.'
           }
         },
         {
@@ -922,10 +926,10 @@ const categoryDescriptions = {
         },
         {
           '@type': 'Question',
-          name: 'Are CreateLoom prompts free?',
+          name: 'Are Create With Soumay prompts free?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'CreateLoom provides free prompt resources. The AI generation service you choose may have its own plans, limits or pricing.'
+            text: 'Create With Soumay provides free prompt resources. The AI generation service you choose may have its own plans, limits or pricing.'
           }
         }
       ]
