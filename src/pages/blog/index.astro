@@ -2,6 +2,10 @@
 import Layout from '../../layouts/Layout.astro';
 import blogs from '../../data/blogs.json';
 
+const siteUrl = (Astro.site || 'https://createloom.vercel.app')
+  .toString()
+  .replace(/\/$/, '');
+
 const cats = [...new Set(blogs.map((b) => b.category))].sort();
 
 const featured = blogs.slice(0, 3);
@@ -30,21 +34,39 @@ const blogCollectionSchema = {
   name: 'CreateLoom Blog — AI, Instagram & Creator Guides',
   description:
     'Explore detailed AI image, Instagram, creator growth and brand collaboration guides from CreateLoom.',
-  url: 'https://createloom.vercel.app/blog/',
+  url: `${siteUrl}/blog/`,
   isPartOf: {
     '@type': 'WebSite',
     name: 'CreateLoom',
-    url: 'https://createloom.vercel.app/'
+    url: `${siteUrl}/`
   },
   mainEntity: {
     '@type': 'ItemList',
     numberOfItems: blogs.length,
+    itemListOrder: 'https://schema.org/ItemListOrderDescending',
     itemListElement: blogs.map((blog, index) => ({
       '@type': 'ListItem',
       position: index + 1,
-      url: `https://createloom.vercel.app/blog/${blog.id}/`,
+      url: `${siteUrl}/blog/${blog.id}/`,
       name: blog.title
     }))
+  },
+  breadcrumb: {
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      {
+        '@type': 'ListItem',
+        position: 1,
+        name: 'Home',
+        item: `${siteUrl}/`
+      },
+      {
+        '@type': 'ListItem',
+        position: 2,
+        name: 'Blog',
+        item: `${siteUrl}/blog/`
+      }
+    ]
   }
 };
 
@@ -56,13 +78,13 @@ const breadcrumbSchema = {
       '@type': 'ListItem',
       position: 1,
       name: 'Home',
-      item: 'https://createloom.vercel.app/'
+      item: `${siteUrl}/`
     },
     {
       '@type': 'ListItem',
       position: 2,
       name: 'Blog',
-      item: 'https://createloom.vercel.app/blog/'
+      item: `${siteUrl}/blog/`
     }
   ]
 };
@@ -72,6 +94,8 @@ const breadcrumbSchema = {
   title="CreateLoom Blog — AI, Instagram & Creator Guides"
   description="Explore detailed AI image, Instagram, creator growth and brand collaboration guides from CreateLoom. Practical advice, examples and workflows for creators."
   active="Blog"
+  ogImage={`${siteUrl}/images/createloom-logo.png`}
+  ogImageAlt="CreateLoom Blog — AI, Instagram & Creator Guides"
 >
   <script type="application/ld+json" set:html={JSON.stringify(blogCollectionSchema)} />
   <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />
