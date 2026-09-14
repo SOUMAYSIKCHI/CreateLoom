@@ -33,15 +33,17 @@ const staticUrls = [
 
 const promptUrls = prompts
   .filter((p) => p?.id)
-  .map(
-    (p) => `/prompt/${encodeURIComponent(p.id)}/`
-  );
+  .map((p) => ({
+    url: `/prompt/${encodeURIComponent(p.id)}/`,
+    lastmod: p.updatedAt || p.createdAt || null,
+  }));
 
 const blogUrls = blogs
   .filter((b) => b?.id)
-  .map(
-    (b) => `/blog/${encodeURIComponent(b.id)}/`
-  );
+  .map((b) => ({
+    url: `/blog/${encodeURIComponent(b.id)}/`,
+    lastmod: b.updatedAt || b.date || b.createdAt || null,
+  }));
 
 const categoryUrls = [
   ...new Set(
@@ -50,19 +52,26 @@ const categoryUrls = [
       .filter(Boolean)
       .map((category) => category.trim().toLowerCase())
   ),
-].map(
-  (category) =>
-    `/prompts/${encodeURIComponent(category)}/`
-);
+].map((category) => ({
+  url: `/prompts/${encodeURIComponent(category)}/`,
+  lastmod: null,
+}));
 
 const urls = [
-  ...staticUrls,
+  ...staticUrls.map((url) => ({
+    url,
+    lastmod: null,
+  })),
   ...promptUrls,
   ...blogUrls,
   ...categoryUrls,
 ];
 
-const uniqueUrls = [...new Set(urls)];
+const uniqueUrls = [
+  ...new Map(
+    urls.map((item) => [item.url, item])
+  ).values(),
+];
 
 const escapeXml = (value) =>
   String(value)
@@ -75,10 +84,15 @@ const escapeXml = (value) =>
 const xml = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 ${uniqueUrls
-  .map(
-    (url) =>
-      `  <url><loc>${escapeXml(`${site}${url}`)}</loc></url>`
-  )
+  .map(({ url, lastmod }) => {
+    const lastmodXml = lastmod
+      ? `\n    <lastmod>${escapeXml(lastmod)}</lastmod>`
+      : '';
+
+    return `  <url>
+    <loc>${escapeXml(`${site}${url}`)}</loc>${lastmodXml}
+  </url>`;
+  })
   .join('\n')}
 </urlset>
 `;
@@ -87,7 +101,10 @@ const publicDir = path.join(project, 'public');
 
 fs.mkdirSync(publicDir, { recursive: true });
 
-const sitemapPath = path.join(publicDir, 'sitemap.xml');
+const sitemapPath = path.join(
+  publicDir,
+  'sitemap.xml'
+);
 
 fs.writeFileSync(
   sitemapPath,
