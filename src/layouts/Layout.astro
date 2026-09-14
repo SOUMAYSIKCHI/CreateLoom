@@ -695,6 +695,35 @@ const year = new Date().getFullYear();
       };
 
       /*
+       * Google Analytics events
+       *
+       * Keep event names stable so reports can be
+       * configured without changing the UI.
+       */
+      const trackEvent = (name, params = {}) => {
+        if (typeof window.gtag !== 'function') return;
+
+        window.gtag('event', name, {
+          page_path: window.location.pathname,
+          ...params
+        });
+      };
+
+      const getPromptId = (element) => {
+        if (!element) return '';
+
+        const source =
+          element.closest('[data-prompt-id]') ||
+          element.closest('[data-fav]');
+
+        return (
+          source?.dataset?.promptId ||
+          source?.dataset?.fav ||
+          ''
+        );
+      };
+
+      /*
        * Favorites
        *
        * Keep this key compatible with the
@@ -878,6 +907,10 @@ const year = new Date().getFullYear();
 
             if (success) {
               flash(copy, '✓ Copied');
+              trackEvent('prompt_copied', {
+                prompt_id: getPromptId(copy),
+                prompt_url: window.location.pathname
+              });
               announce(
                 'Prompt copied to clipboard.'
               );
@@ -925,6 +958,11 @@ const year = new Date().getFullYear();
                   url
                 });
 
+                trackEvent('prompt_shared', {
+                  prompt_id: getPromptId(share),
+                  prompt_url: url
+                });
+
                 announce(
                   'Share dialog opened.'
                 );
@@ -939,6 +977,11 @@ const year = new Date().getFullYear();
                     share,
                     '✓ Link Copied'
                   );
+
+                  trackEvent('prompt_shared', {
+                    prompt_id: getPromptId(share),
+                    prompt_url: url
+                  });
 
                   announce(
                     'Page link copied to clipboard.'
@@ -1006,6 +1049,12 @@ const year = new Date().getFullYear();
             }
 
             syncFavs();
+
+            trackEvent('prompt_favorited', {
+              prompt_id: id,
+              action: saving ? 'save' : 'remove',
+              prompt_url: window.location.pathname
+            });
 
             window.dispatchEvent(
               new CustomEvent(
