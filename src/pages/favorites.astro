@@ -57,7 +57,7 @@ import prompts from '../data/prompts.json';
   </main>
 
   <script define:vars={{ prompts }}>
-    const STORAGE_KEY = 'Create With Soumay-favorites';
+    const STORAGE_KEY = 'createloom-favorites';
     const promptData = prompts;
 
     function getFavorites() {
@@ -101,7 +101,7 @@ import prompts from '../data/prompts.json';
             <div class="prompt-card-image-wrap">
               <img
                 class="prompt-card-image"
-                src="${escapeHtml(p.image || '/images/prompts/Create With Soumay.png')}"
+                src="${escapeHtml(p.image || '/images/prompts/createloom.png')}"
                 alt="Example result for ${escapeHtml(p.title)} AI image prompt"
                 width="1080"
                 height="1920"
@@ -247,7 +247,7 @@ import prompts from '../data/prompts.json';
     });
 
     document.addEventListener(
-      'Create With Soumay:favorites-changed',
+      'createloom:favorites-changed',
       renderFavorites
     );
 
