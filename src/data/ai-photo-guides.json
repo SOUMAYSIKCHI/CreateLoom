@@ -1,0 +1,898 @@
+[
+  {
+    "noId": 1,
+    "slug": "keep-same-face",
+    "title": "How to Keep the Same Face in AI-Generated Photos",
+    "metaTitle": "How to Keep the Same Face in AI Photos | AI Face Consistency Guide",
+    "metaDescription": "Learn how to keep the same face and identity in AI-generated photos. Use better reference images, prompts and consistency techniques for realistic results.",
+    "eyebrow": "AI Photo Guide",
+    "intro": "AI image generators can create beautiful photos, but one of the most common problems is that the face changes from one image to another. This guide explains how to improve face consistency while creating different outfits, poses, backgrounds and styles.",
+    "searchTerms": [
+      "how to keep same face in AI photos",
+      "AI face consistency",
+      "how to keep same face AI image",
+      "AI image same face prompt",
+      "how to make AI photos look like you",
+      "AI identity consistency"
+    ],
+    "problem": {
+      "heading": "Why does AI keep changing the face?",
+      "content": "AI image generators do not always treat a reference photo as a permanent identity. When the prompt changes the pose, clothing, lighting, camera angle or environment, the model may reinterpret facial features. Small differences in the reference image can also make the generated face look noticeably different."
+    },
+    "commonCauses": [
+      "Using a low-quality or heavily edited reference image",
+      "Using multiple reference faces without clearly defining the main subject",
+      "Changing too many visual elements at the same time",
+      "Using vague instructions about identity preservation",
+      "Extreme camera angles or poses",
+      "Strong style transformations that alter facial features"
+    ],
+    "solutions": [
+      {
+        "title": "Use a clear reference image",
+        "content": "Choose a sharp reference photo where the face is clearly visible. Avoid sunglasses, heavy filters, extreme shadows and excessive blur."
+      },
+      {
+        "title": "Clearly define the reference person's identity",
+        "content": "Tell the image model that the uploaded person is the primary identity reference and that facial structure and recognizable features should remain consistent."
+      },
+      {
+        "title": "Change one major element at a time",
+        "content": "For better consistency, keep the identity and composition stable while changing clothing, background or styling instead of changing everything simultaneously."
+      },
+      {
+        "title": "Avoid unnecessary face descriptions",
+        "content": "If the model already has a strong visual reference, excessive descriptions of facial features can sometimes create conflicting instructions."
+      }
+    ],
+    "promptExample": {
+      "title": "Face consistency prompt example",
+      "prompt": "Use the uploaded reference image as the primary identity reference. Keep the same person, recognizable facial features, face shape, eyes, nose, lips, skin tone and overall identity. Do not redesign or replace the face. Only change the requested clothing, pose and environment while maintaining natural photographic realism."
+    },
+    "steps": [
+      "Upload a clear reference photo.",
+      "State that the uploaded person is the primary identity reference.",
+      "Explicitly request consistent facial identity.",
+      "Describe only the changes you want to make.",
+      "Review the result and simplify the prompt if the face changes."
+    ],
+    "tips": [
+      "Use the same high-quality reference image when possible.",
+      "Avoid unnecessary face-related wording when the reference is already clear.",
+      "Start with simple transformations before attempting complex scenes.",
+      "Keep lighting and camera direction reasonably consistent when identity is critical."
+    ],
+    "supportedTools": [
+      "ChatGPT",
+      "Gemini",
+      "Nano Banana",
+      "Midjourney"
+    ],
+    "relatedPrompts": [
+      "couple-mirror-selfie",
+      "traditional-saree-portrait",
+      "cinematic-red-studio-portrait"
+    ],
+    "relatedTrends": [
+      "ai-polaroid-couple-photo",
+      "meet-your-younger-self"
+    ],
+    "relatedGuides": [
+      "ai-photo-identity-consistency",
+      "how-to-write-ai-image-prompts",
+      "ai-face-looks-different"
+    ],
+    "faq": [
+      {
+        "question": "How do I make AI keep the same face?",
+        "answer": "Use a clear reference image and explicitly instruct the AI to preserve the person's identity and recognizable facial features while changing only the requested elements."
+      },
+      {
+        "question": "Why does my AI-generated face look different?",
+        "answer": "The model may reinterpret the identity because of the reference image, prompt instructions, camera angle, lighting or major changes to the scene."
+      },
+      {
+        "question": "Can AI keep my face while changing clothes?",
+        "answer": "Yes. Clothing changes are generally easier when the prompt clearly separates the person's identity from the elements being changed."
+      }
+    ]
+  },
+
+  {
+    "noId": 2,
+    "slug": "why-ai-photo-looks-fake",
+    "title": "Why Does My AI Photo Look Fake? How to Make AI Images More Realistic",
+    "metaTitle": "Why AI Photos Look Fake & How to Make Them Realistic",
+    "metaDescription": "Find out why AI-generated photos look fake and learn practical prompting techniques to create more natural skin, lighting, hands, textures and photography.",
+    "eyebrow": "AI Photo Guide",
+    "intro": "An AI-generated image can have the right composition but still look obviously artificial. Plastic skin, strange lighting, perfect textures and unnatural details are common signs. Here is how to make AI photos feel more like real photography.",
+    "searchTerms": [
+      "why AI photos look fake",
+      "how to make AI images realistic",
+      "realistic AI photo prompt",
+      "AI photography prompt",
+      "how to make AI generated photos look real",
+      "photorealistic AI prompt"
+    ],
+    "problem": {
+      "heading": "What makes an AI photo look fake?",
+      "content": "AI-generated images often look artificial when the prompt focuses heavily on style but does not provide enough photographic context. Unrealistic skin texture, lighting, depth, hands, reflections and overly perfect details can make an image feel synthetic."
+    },
+    "commonCauses": [
+      "Overly smooth or plastic-looking skin",
+      "Perfectly uniform lighting",
+      "Excessive beauty retouching",
+      "Unnatural hands and fingers",
+      "Incorrect reflections and shadows",
+      "Overly sharp or artificial textures",
+      "Too many cinematic or fantasy keywords"
+    ],
+    "solutions": [
+      {
+        "title": "Add realistic photographic details",
+        "content": "Describe natural skin texture, realistic lighting, subtle imperfections, authentic shadows and believable photographic depth."
+      },
+      {
+        "title": "Use natural lighting",
+        "content": "Soft window light, overcast daylight or realistic direct flash can produce more believable photographic results than vague instructions such as 'perfect lighting'."
+      },
+      {
+        "title": "Avoid excessive perfection",
+        "content": "Real photographs contain small imperfections. Asking for completely flawless skin, perfect symmetry and perfect textures can make the result look synthetic."
+      },
+      {
+        "title": "Describe the camera context",
+        "content": "Camera type, focal length, depth of field, flash behavior and photographic style can help establish a more coherent visual result."
+      }
+    ],
+    "promptExample": {
+      "title": "Realistic AI photo prompt example",
+      "prompt": "Create a photorealistic photograph with natural skin texture, subtle facial imperfections, realistic lighting, believable shadows, authentic fabric texture and natural depth of field. Avoid plastic skin, excessive beauty retouching, artificial sharpness and overly perfect details."
+    },
+    "steps": [
+      "Decide what currently looks artificial.",
+      "Add photographic context instead of adding more style keywords.",
+      "Specify natural skin and material textures.",
+      "Use realistic lighting and shadows.",
+      "Generate again and remove unnecessary dramatic wording."
+    ],
+    "tips": [
+      "Do not overload the prompt with dozens of realism keywords.",
+      "Realistic lighting often matters more than adding '8K' or 'ultra detailed'.",
+      "Describe materials such as skin, denim, silk, glass and metal naturally.",
+      "Compare the output with a real photograph and identify the specific unrealistic detail."
+    ],
+    "supportedTools": [
+      "ChatGPT",
+      "Gemini",
+      "Nano Banana",
+      "Midjourney"
+    ],
+    "relatedPrompts": [
+      "cinematic-red-studio-portrait",
+      "airport-travel-aesthetic",
+      "neon-city-street-portrait"
+    ],
+    "relatedTrends": [
+      "retro-ai-photo",
+      "90s-bollywood-ai-photo"
+    ],
+    "relatedGuides": [
+      "how-to-write-ai-image-prompts",
+      "ai-image-too-cartoonish",
+      "ai-image-wrong-background"
+    ],
+    "faq": [
+      {
+        "question": "Why do AI-generated photos look artificial?",
+        "answer": "They can look artificial when skin, lighting, textures, shadows or other photographic details are generated in an overly perfect or inconsistent way."
+      },
+      {
+        "question": "What should I add to an AI prompt for realism?",
+        "answer": "Focus on natural skin texture, believable lighting, realistic shadows, authentic materials and coherent photographic depth."
+      },
+      {
+        "question": "Does adding '8K' make an AI image more realistic?",
+        "answer": "Not necessarily. Resolution-related keywords do not automatically fix unrealistic anatomy, lighting, textures or facial details."
+      }
+    ]
+  },
+
+  {
+    "noId": 3,
+    "slug": "fix-ai-hands",
+    "title": "How to Fix AI Hands and Fingers in Generated Images",
+    "metaTitle": "How to Fix AI Hands & Fingers | AI Image Prompt Guide",
+    "metaDescription": "AI hands and fingers can look distorted or unnatural. Learn why it happens and how to improve hands, fingers and arm anatomy with better prompts and image references.",
+    "eyebrow": "AI Photo Guide",
+    "intro": "Hands are one of the most difficult details for AI image generators. Extra fingers, strange poses and distorted anatomy can still appear even in otherwise realistic images. These techniques can help improve hand accuracy.",
+    "searchTerms": [
+      "how to fix AI hands",
+      "AI fingers look weird",
+      "AI hand prompt",
+      "fix AI generated hands",
+      "AI image extra fingers",
+      "AI hand anatomy"
+    ],
+    "problem": {
+      "heading": "Why does AI struggle with hands?",
+      "content": "Hands contain many small joints, overlapping fingers and complex poses. When they are partially hidden, holding objects or placed close to the camera, the model can have difficulty producing consistent anatomy."
+    },
+    "commonCauses": [
+      "Complex hand poses",
+      "Hands partially hidden by objects",
+      "Hands close to the camera",
+      "Very detailed interactions between fingers and objects",
+      "Multiple people with visible hands",
+      "Ambiguous instructions about hand placement"
+    ],
+    "solutions": [
+      {
+        "title": "Specify the hand position",
+        "content": "Describe exactly where the hands are and what they are doing instead of simply asking for 'natural hands'."
+      },
+      {
+        "title": "Keep poses simple",
+        "content": "Simple, relaxed hand positions are usually easier for an image model to reproduce accurately."
+      },
+      {
+        "title": "Use references when available",
+        "content": "A clear visual reference for a difficult pose can give the model more useful information than text alone."
+      },
+      {
+        "title": "Regenerate problem areas",
+        "content": "If the overall image is strong but the hands are incorrect, use an editing or inpainting workflow where supported instead of regenerating the entire composition."
+      }
+    ],
+    "promptExample": {
+      "title": "Hand accuracy prompt example",
+      "prompt": "Natural human hands with anatomically correct proportions and five fingers on each visible hand. Keep the fingers clearly separated and correctly attached to the hands and wrists. Use a relaxed, believable pose with realistic skin texture."
+    },
+    "steps": [
+      "Identify exactly what is wrong with the hands.",
+      "Simplify the hand pose.",
+      "Describe the intended hand position clearly.",
+      "Regenerate or edit the affected area.",
+      "Keep the rest of the prompt unchanged when possible."
+    ],
+    "tips": [
+      "Avoid complicated finger gestures unless necessary.",
+      "Do not repeat 'five fingers' excessively throughout the prompt.",
+      "For difficult compositions, generate the main scene first and fix the hands afterward.",
+      "Check both hands and fingers before publishing an AI photo."
+    ],
+    "supportedTools": [
+      "ChatGPT",
+      "Gemini",
+      "Nano Banana",
+      "Midjourney"
+    ],
+    "relatedPrompts": [
+      "couple-mirror-selfie",
+      "hug-younger-self-polaroid",
+      "gym-cinematic-portrait"
+    ],
+    "relatedTrends": [
+      "meet-your-younger-self",
+      "ai-action-figure"
+    ],
+    "relatedGuides": [
+      "why-ai-photo-looks-fake",
+      "how-to-write-ai-image-prompts"
+    ],
+    "faq": [
+      {
+        "question": "Why are AI fingers often wrong?",
+        "answer": "Hands have complex anatomy and many overlapping joints, making them difficult for image models to reproduce consistently."
+      },
+      {
+        "question": "What prompt can fix AI hands?",
+        "answer": "Clearly describe natural hand positioning, anatomically correct proportions and the intended interaction with nearby objects."
+      },
+      {
+        "question": "Can AI fix bad hands without regenerating the whole image?",
+        "answer": "Some AI image tools support localized editing or inpainting, which can allow you to correct the hands while preserving most of the original image."
+      }
+    ]
+  },
+
+  {
+    "noId": 4,
+    "slug": "ai-photo-identity-consistency",
+    "title": "AI Photo Identity Consistency: How to Keep a Person Recognizable",
+    "metaTitle": "AI Photo Identity Consistency Guide | Keep the Same Person",
+    "metaDescription": "Learn how AI identity consistency works and how to keep a person recognizable across different AI-generated photos, outfits, poses and locations.",
+    "eyebrow": "AI Photo Guide",
+    "intro": "Creating multiple AI photos of the same person is harder than generating a single image. Identity consistency requires a strong reference, clear instructions and controlled changes between generations.",
+    "searchTerms": [
+      "AI identity consistency",
+      "AI photo identity consistency",
+      "same person AI images",
+      "consistent character AI photos",
+      "keep person consistent AI",
+      "AI face identity"
+    ],
+    "problem": {
+      "heading": "What is identity consistency?",
+      "content": "Identity consistency means maintaining the recognizable visual characteristics of the same person across multiple generated images, even when the scene, outfit, pose or location changes."
+    },
+    "commonCauses": [
+      "Different reference images for different generations",
+      "Large changes in age or facial expression",
+      "Conflicting identity instructions",
+      "Major changes in camera angle",
+      "Heavy artistic transformations",
+      "Weak or unclear reference images"
+    ],
+    "solutions": [
+      {
+        "title": "Use one primary identity reference",
+        "content": "Keep a strong reference image as the visual anchor whenever possible."
+      },
+      {
+        "title": "Separate identity from scene instructions",
+        "content": "Make it clear which characteristics must remain stable and which elements are allowed to change."
+      },
+      {
+        "title": "Control transformations",
+        "content": "Change clothing, location and styling progressively rather than making several extreme changes at once."
+      },
+      {
+        "title": "Keep a reusable identity instruction",
+        "content": "A consistent identity block can be reused across related generations so the model receives similar identity guidance each time."
+      }
+    ],
+    "promptExample": {
+      "title": "Identity consistency prompt example",
+      "prompt": "Use the uploaded person as the consistent identity reference across the entire image. Preserve their recognizable facial structure, proportions, skin tone and overall appearance. Change only the requested outfit, pose, environment and photographic style."
+    },
+    "steps": [
+      "Choose your strongest identity reference.",
+      "Create a reusable identity instruction.",
+      "Define the scene and changes separately.",
+      "Avoid unnecessary identity-altering transformations.",
+      "Compare each generation with the original reference."
+    ],
+    "tips": [
+      "Keep your reference image consistent across a series.",
+      "Make controlled changes instead of changing everything at once.",
+      "Use natural photographic settings when identity is the priority.",
+      "Save successful prompts as reusable templates."
+    ],
+    "supportedTools": [
+      "ChatGPT",
+      "Gemini",
+      "Nano Banana",
+      "Midjourney"
+    ],
+    "relatedPrompts": [
+      "traditional-saree-portrait",
+      "cinematic-red-studio-portrait",
+      "eighties-retro-male-portrait"
+    ],
+    "relatedTrends": [
+      "ai-polaroid-couple-photo",
+      "meet-your-younger-self"
+    ],
+    "relatedGuides": [
+      "keep-same-face",
+      "ai-face-looks-different",
+      "how-to-write-ai-image-prompts"
+    ],
+    "faq": [
+      {
+        "question": "What does AI identity consistency mean?",
+        "answer": "It means keeping the same person's recognizable appearance across multiple AI-generated images."
+      },
+      {
+        "question": "How can I make the same person appear in different AI photos?",
+        "answer": "Use a consistent reference image and clearly separate identity-preservation instructions from the scene and styling instructions."
+      },
+      {
+        "question": "Why does the same reference produce different faces?",
+        "answer": "AI generation is probabilistic, and changes in prompts, composition, lighting, camera angle and styling can cause the model to reinterpret the person's identity."
+      }
+    ]
+  },
+
+  {
+    "noId": 5,
+    "slug": "how-to-write-ai-image-prompts",
+    "title": "How to Write Better AI Image Prompts",
+    "metaTitle": "How to Write AI Image Prompts | Complete Prompt Guide",
+    "metaDescription": "Learn how to write better AI image prompts with a simple structure for subject, composition, lighting, camera, style and details. Includes practical prompt examples.",
+    "eyebrow": "Prompt Writing Guide",
+    "intro": "A good AI image prompt is more than a list of keywords. Clear structure helps the image model understand the subject, composition, environment, lighting and visual style you actually want.",
+    "searchTerms": [
+      "how to write AI image prompts",
+      "AI image prompt guide",
+      "best AI prompt structure",
+      "how to make better AI images",
+      "AI photography prompt tips",
+      "AI prompt writing"
+    ],
+    "problem": {
+      "heading": "Why do some AI prompts work better than others?",
+      "content": "Weak prompts often mix unrelated instructions or rely on vague words such as 'beautiful' and 'perfect'. Strong prompts communicate the important visual decisions in a logical order and avoid unnecessary contradictions."
+    },
+    "commonCauses": [
+      "Vague descriptions",
+      "Too many conflicting instructions",
+      "No clear subject or composition",
+      "Mixing style and scene instructions randomly",
+      "Overloading the prompt with quality keywords",
+      "Not specifying what should actually change"
+    ],
+    "solutions": [
+      {
+        "title": "Start with the subject",
+        "content": "Describe who or what should appear in the image before adding secondary visual details."
+      },
+      {
+        "title": "Define the composition",
+        "content": "Explain the pose, framing, camera perspective and important objects in the scene."
+      },
+      {
+        "title": "Add environment and lighting",
+        "content": "Describe where the subject is and how the light interacts with the scene."
+      },
+      {
+        "title": "Finish with visual style",
+        "content": "Add photographic or artistic characteristics after the core scene is established."
+      }
+    ],
+    "promptExample": {
+      "title": "Simple AI prompt structure",
+      "prompt": "Subject + identity/reference + pose + clothing + environment + composition + lighting + camera/photo style + important details. Keep the subject recognizable and preserve the requested proportions while changing only the specified elements."
+    },
+    "steps": [
+      "Define the main subject.",
+      "Add identity or reference-image instructions if needed.",
+      "Describe pose, clothing and important objects.",
+      "Describe the environment and composition.",
+      "Add lighting, camera and style details.",
+      "Remove conflicting or unnecessary instructions.",
+      "Generate and refine based on the actual problem."
+    ],
+    "tips": [
+      "Write for the image you want, not for the AI buzzwords you have seen online.",
+      "Prioritize important visual information.",
+      "Change one variable at a time when refining a prompt.",
+      "Keep successful prompt structures and adapt them for new concepts."
+    ],
+    "supportedTools": [
+      "ChatGPT",
+      "Gemini",
+      "Nano Banana",
+      "Midjourney"
+    ],
+    "relatedPrompts": [
+      "couple-mirror-selfie",
+      "traditional-saree-portrait",
+      "neon-city-street-portrait",
+      "airport-travel-aesthetic"
+    ],
+    "relatedTrends": [
+      "90s-bollywood-ai-photo",
+      "retro-ai-photo",
+      "ai-polaroid-couple-photo"
+    ],
+    "relatedGuides": [
+      "why-ai-photo-looks-fake",
+      "keep-same-face",
+      "fix-ai-hands"
+    ],
+    "faq": [
+      {
+        "question": "What is the best structure for an AI image prompt?",
+        "answer": "A useful structure is subject, identity or reference, pose, clothing, environment, composition, lighting, camera or photographic style, and important details."
+      },
+      {
+        "question": "Should AI prompts be long?",
+        "answer": "Not necessarily. A prompt should be detailed enough to communicate the important visual decisions without adding conflicting or irrelevant instructions."
+      },
+      {
+        "question": "How do I improve an AI image prompt?",
+        "answer": "Identify the specific part of the generated image that is wrong and refine the prompt around that issue instead of rewriting everything."
+      }
+    ]
+  },
+
+  {
+    "noId": 6,
+    "slug": "ai-image-keeps-changing-clothes",
+    "title": "Why AI Images Keep Changing Clothes and How to Fix It",
+    "metaTitle": "AI Image Keeps Changing Clothes? How to Fix Clothing Changes",
+    "metaDescription": "Learn why AI-generated images change clothing unexpectedly and how to write prompts that preserve outfits, colors, fabrics and clothing details.",
+    "eyebrow": "AI Photo Guide",
+    "intro": "Sometimes an AI image starts with the right outfit but changes the clothing during generation. Colors, patterns, sleeves, accessories and even the entire outfit can be altered. Here is how to make clothing instructions more consistent.",
+    "searchTerms": [
+      "AI image keeps changing clothes",
+      "AI outfit changes prompt",
+      "keep same clothes AI image",
+      "AI clothing consistency",
+      "AI outfit prompt",
+      "how to preserve clothes in AI photos"
+    ],
+    "problem": {
+      "heading": "Why does AI change the outfit?",
+      "content": "AI models may treat clothing as part of the overall visual interpretation rather than a fixed object. If the prompt contains conflicting styling instructions or the outfit is not described clearly, the model may substitute or redesign parts of it."
+    },
+    "commonCauses": [
+      "Vague clothing descriptions",
+      "Conflicting style instructions",
+      "Too many accessories",
+      "Changing the scene dramatically",
+      "Not identifying which clothing elements must remain unchanged",
+      "Using reference images where the outfit is unclear"
+    ],
+    "solutions": [
+      {
+        "title": "Describe the outfit precisely",
+        "content": "Specify the garment, color, material, length, pattern and important design details."
+      },
+      {
+        "title": "Separate outfit from style",
+        "content": "Tell the model which clothing details are fixed and which overall photographic style can change."
+      },
+      {
+        "title": "Use a clear clothing reference",
+        "content": "If supported, provide a reference image where the outfit is clearly visible."
+      },
+      {
+        "title": "Avoid contradictory fashion instructions",
+        "content": "Do not request multiple incompatible clothing styles in the same prompt."
+      }
+    ],
+    "promptExample": {
+      "title": "Clothing consistency prompt example",
+      "prompt": "Keep the exact same outfit throughout the image: a black fitted leather jacket over a plain white T-shirt, dark blue jeans and white sneakers. Preserve the garment colors, materials, proportions and key design details. Do not replace, redesign or add clothing unless explicitly requested."
+    },
+    "steps": [
+      "List the exact clothing pieces you want preserved.",
+      "Specify important colors and materials.",
+      "State which outfit elements must remain unchanged.",
+      "Remove conflicting fashion instructions.",
+      "Generate again and compare the outfit with the reference."
+    ],
+    "tips": [
+      "Use simple, visually distinct clothing descriptions.",
+      "Mention important accessories separately.",
+      "Do not use several competing fashion aesthetics.",
+      "If only the background should change, explicitly say that the outfit should remain unchanged."
+    ],
+    "supportedTools": [
+      "ChatGPT",
+      "Gemini",
+      "Nano Banana",
+      "Midjourney"
+    ],
+    "relatedPrompts": [
+      "traditional-saree-portrait",
+      "eighties-retro-male-portrait",
+      "curtain-hairstyle-poster"
+    ],
+    "relatedTrends": [
+      "retro-ai-photo",
+      "90s-bollywood-ai-photo"
+    ],
+    "relatedGuides": [
+      "keep-same-face",
+      "ai-photo-identity-consistency",
+      "how-to-write-ai-image-prompts"
+    ],
+    "faq": [
+      {
+        "question": "Why does AI keep changing my clothes?",
+        "answer": "The model may reinterpret the outfit when clothing instructions are vague, conflicting or secondary to stronger style and scene instructions."
+      },
+      {
+        "question": "How do I keep the same outfit in AI images?",
+        "answer": "Describe the clothing precisely and explicitly state that its colors, materials, proportions and key details should remain unchanged."
+      },
+      {
+        "question": "Can I change the background without changing the clothes?",
+        "answer": "Yes. Clearly separate the background change from the clothing instructions and explicitly preserve the existing outfit."
+      }
+    ]
+  },
+
+  {
+    "noId": 7,
+    "slug": "ai-image-wrong-background",
+    "title": "Why AI Images Generate the Wrong Background and How to Fix It",
+    "metaTitle": "AI Image Wrong Background? How to Fix Backgrounds with Prompts",
+    "metaDescription": "Learn why AI image generators create the wrong background and how to control locations, environments, lighting and background details with better prompts.",
+    "eyebrow": "AI Photo Guide",
+    "intro": "You can describe the subject perfectly and still get the wrong environment. AI models sometimes simplify, replace or reinterpret backgrounds when the scene contains too many competing instructions.",
+    "searchTerms": [
+      "AI image wrong background",
+      "AI background prompt",
+      "how to change background with AI",
+      "AI generated background wrong",
+      "background replacement AI prompt",
+      "how to control AI image background"
+    ],
+    "problem": {
+      "heading": "Why does AI generate the wrong background?",
+      "content": "Backgrounds contain many spatial relationships, objects and lighting cues. When the prompt is vague or contains several locations and styles, the model may prioritize some instructions over others."
+    },
+    "commonCauses": [
+      "Vague location descriptions",
+      "Multiple competing environments",
+      "Too many background objects",
+      "Conflicting lighting instructions",
+      "Weak separation between subject and environment",
+      "Changing the camera perspective"
+    ],
+    "solutions": [
+      {
+        "title": "Describe one clear environment",
+        "content": "Start with the location and its most important visual characteristics instead of listing many possible settings."
+      },
+      {
+        "title": "Specify the background depth",
+        "content": "Describe whether the background should be close, distant, blurred or sharply visible."
+      },
+      {
+        "title": "Match lighting to the environment",
+        "content": "The background becomes more believable when its lighting direction and intensity agree with the subject."
+      },
+      {
+        "title": "Prioritize important background elements",
+        "content": "Mention only the objects that actually matter to the composition."
+      }
+    ],
+    "promptExample": {
+      "title": "Background control prompt example",
+      "prompt": "Place the subject in a realistic urban street at night. The background should show softly illuminated storefronts, distant pedestrians and subtle street lights, with shallow depth of field. Keep the environment visually consistent with the subject's lighting and camera perspective."
+    },
+    "steps": [
+      "Choose one specific location.",
+      "Describe the most important background elements.",
+      "Define depth of field and visibility.",
+      "Match background lighting to the subject.",
+      "Remove unnecessary background objects from the prompt."
+    ],
+    "tips": [
+      "Specific locations usually work better than generic words like 'beautiful background'.",
+      "Do not describe five different environments in one prompt.",
+      "Use depth-of-field language when the background should be subtle.",
+      "Keep the camera perspective consistent with the environment."
+    ],
+    "supportedTools": [
+      "ChatGPT",
+      "Gemini",
+      "Nano Banana",
+      "Midjourney"
+    ],
+    "relatedPrompts": [
+      "airport-travel-aesthetic",
+      "neon-city-street-portrait",
+      "gym-cinematic-portrait"
+    ],
+    "relatedTrends": [
+      "retro-ai-photo",
+      "90s-bollywood-ai-photo"
+    ],
+    "relatedGuides": [
+      "why-ai-photo-looks-fake",
+      "how-to-write-ai-image-prompts",
+      "ai-face-looks-different"
+    ],
+    "faq": [
+      {
+        "question": "Why does AI ignore my background prompt?",
+        "answer": "The model may prioritize other instructions when the background description is vague, conflicting or overloaded with too many details."
+      },
+      {
+        "question": "How do I get a specific background in an AI image?",
+        "answer": "Describe one clear location, identify its most important visual elements and specify the desired depth, lighting and camera perspective."
+      },
+      {
+        "question": "Can I change only the background?",
+        "answer": "Yes, when the tool supports image editing or background replacement. Clearly state that the subject, identity, clothing and pose should remain unchanged."
+      }
+    ]
+  },
+
+  {
+    "noId": 8,
+    "slug": "ai-face-looks-different",
+    "title": "Why Does My AI Face Look Different? Common Causes and Fixes",
+    "metaTitle": "AI Face Looks Different? Causes & Fixes for Face Changes",
+    "metaDescription": "If your AI-generated face looks different from the reference, learn the common causes and practical fixes for better facial identity and consistency.",
+    "eyebrow": "AI Photo Guide",
+    "intro": "One of the most frustrating AI image problems is getting an output that looks like a different person. Understanding why facial identity changes makes it easier to fix the prompt and reference workflow.",
+    "searchTerms": [
+      "AI face looks different",
+      "AI generated face looks different",
+      "AI face changed from reference",
+      "how to fix AI face",
+      "AI face consistency problem",
+      "AI photo doesn't look like me"
+    ],
+    "problem": {
+      "heading": "Why does the AI face change?",
+      "content": "Facial identity can change when the reference is unclear or when the generation introduces major differences in angle, lighting, age, expression, styling or composition. The model may preserve the general concept of the person without reproducing the exact identity."
+    },
+    "commonCauses": [
+      "Poor reference image",
+      "Extreme camera angles",
+      "Major changes in lighting",
+      "Heavy makeup or styling changes",
+      "Large age transformations",
+      "Conflicting facial descriptions",
+      "Complex image compositions"
+    ],
+    "solutions": [
+      {
+        "title": "Use a stronger reference",
+        "content": "Choose a clear, well-lit image where the face is easy to recognize."
+      },
+      {
+        "title": "Reduce extreme transformations",
+        "content": "Keep camera angle, expression and lighting reasonably natural when identity is more important than style."
+      },
+      {
+        "title": "Preserve identity explicitly",
+        "content": "Tell the model to maintain recognizable facial structure and identity while changing the requested visual elements."
+      },
+      {
+        "title": "Remove conflicting face descriptions",
+        "content": "Do not simultaneously provide a reference image and a contradictory written description of a different facial appearance."
+      }
+    ],
+    "promptExample": {
+      "title": "Face preservation prompt example",
+      "prompt": "Use the uploaded image as the primary face and identity reference. Preserve the person's recognizable facial structure, proportions, eyes, nose, lips, skin tone and overall identity. Do not redesign the face or substitute another person. Change only the requested scene, clothing and styling."
+    },
+    "steps": [
+      "Check whether the reference image is clear enough.",
+      "Remove unnecessary facial descriptions.",
+      "State that identity must remain consistent.",
+      "Reduce extreme camera and lighting changes.",
+      "Generate again and compare the face against the reference."
+    ],
+    "tips": [
+      "Use one strong reference image instead of many inconsistent references.",
+      "Avoid dramatic age changes when identity accuracy is critical.",
+      "Keep the face visible and well lit in the reference.",
+      "Do not add contradictory facial characteristics."
+    ],
+    "supportedTools": [
+      "ChatGPT",
+      "Gemini",
+      "Nano Banana",
+      "Midjourney"
+    ],
+    "relatedPrompts": [
+      "couple-mirror-selfie",
+      "traditional-saree-portrait",
+      "festival-portrait"
+    ],
+    "relatedTrends": [
+      "ai-polaroid-couple-photo",
+      "meet-your-younger-self"
+    ],
+    "relatedGuides": [
+      "keep-same-face",
+      "ai-photo-identity-consistency",
+      "why-ai-photo-looks-fake"
+    ],
+    "faq": [
+      {
+        "question": "Why doesn't my AI photo look like me?",
+        "answer": "The model may not have enough reliable identity information or may reinterpret the face because of changes in pose, lighting, camera angle or styling."
+      },
+      {
+        "question": "How do I make an AI face look more like the reference?",
+        "answer": "Use a clear reference image, explicitly preserve identity and avoid unnecessary transformations that can alter facial structure."
+      },
+      {
+        "question": "Should I describe every facial feature in the prompt?",
+        "answer": "Not always. If the reference image is strong, excessive facial descriptions can introduce unnecessary or conflicting instructions."
+      }
+    ]
+  },
+
+  {
+    "noId": 9,
+    "slug": "ai-image-too-cartoonish",
+    "title": "Why Does My AI Image Look Too Cartoonish? How to Make It Realistic",
+    "metaTitle": "AI Image Too Cartoonish? How to Make AI Photos Realistic",
+    "metaDescription": "Is your AI image too cartoonish? Learn why it happens and how to guide AI image generators toward natural, realistic photography instead of an illustrated look.",
+    "eyebrow": "AI Photo Guide",
+    "intro": "Sometimes an image that was supposed to look like a photograph ends up looking like digital art or a cartoon. This usually comes from the combination of style wording, rendering cues and unrealistic visual instructions.",
+    "searchTerms": [
+      "AI image too cartoonish",
+      "make AI image realistic",
+      "AI photo looks like cartoon",
+      "remove cartoon effect AI image",
+      "photorealistic AI prompt",
+      "AI image realistic photography"
+    ],
+    "problem": {
+      "heading": "Why does an AI photo look cartoonish?",
+      "content": "Certain words and visual concepts strongly push image models toward illustration, animation or stylized rendering. Even when the prompt asks for realism, those signals can overpower the photographic context."
+    },
+    "commonCauses": [
+      "Strong illustration or anime terminology",
+      "Excessive stylization",
+      "Unnatural skin rendering",
+      "Fantasy lighting",
+      "Overly saturated colors",
+      "Too many artistic quality keywords",
+      "Lack of photographic context"
+    ],
+    "solutions": [
+      {
+        "title": "Establish photography first",
+        "content": "Start by describing the result as a realistic photograph and then define the photographic environment."
+      },
+      {
+        "title": "Remove conflicting style words",
+        "content": "If you want realism, remove illustration, cartoon, painting or animation terminology unless it is intentionally part of the style."
+      },
+      {
+        "title": "Use natural textures",
+        "content": "Describe realistic skin, fabric, hair and environmental textures rather than overly polished surfaces."
+      },
+      {
+        "title": "Use believable lighting",
+        "content": "Natural daylight, window light and realistic flash can help establish photographic depth."
+      }
+    ],
+    "promptExample": {
+      "title": "Photorealistic prompt example",
+      "prompt": "Create a natural, photorealistic photograph with realistic human skin texture, authentic hair strands, believable fabric detail, natural lighting, realistic shadows and photographic depth of field. Avoid illustration, cartoon rendering, plastic skin and exaggerated colors."
+    },
+    "steps": [
+      "Remove words that imply illustration or animation.",
+      "State that the output should be a realistic photograph.",
+      "Add natural material and skin textures.",
+      "Use realistic lighting.",
+      "Regenerate and refine only the remaining artificial elements."
+    ],
+    "tips": [
+      "Do not stack dozens of realism keywords.",
+      "Use photographic language instead of generic quality words.",
+      "Natural imperfections can make the result more believable.",
+      "If you intentionally want a stylized image, do not fight the style with contradictory realism instructions."
+    ],
+    "supportedTools": [
+      "ChatGPT",
+      "Gemini",
+      "Nano Banana",
+      "Midjourney"
+    ],
+    "relatedPrompts": [
+      "cinematic-red-studio-portrait",
+      "airport-travel-aesthetic",
+      "neon-city-street-portrait"
+    ],
+    "relatedTrends": [
+      "retro-ai-photo",
+      "90s-bollywood-ai-photo"
+    ],
+    "relatedGuides": [
+      "why-ai-photo-looks-fake",
+      "how-to-write-ai-image-prompts",
+      "ai-image-wrong-background"
+    ],
+    "faq": [
+      {
+        "question": "Why does my AI photo look like a cartoon?",
+        "answer": "The prompt may contain strong stylistic signals that push the model toward illustration or exaggerated rendering instead of photography."
+      },
+      {
+        "question": "How do I make an AI image more photorealistic?",
+        "answer": "Use clear photographic context, natural textures, believable lighting and realistic shadows while removing conflicting illustration or cartoon terminology."
+      },
+      {
+        "question": "Does saying 'photorealistic' guarantee a realistic image?",
+        "answer": "No. The overall prompt still needs coherent photographic instructions, and conflicting style cues can push the output away from realism."
+      }
+    ]
+  }
+]
