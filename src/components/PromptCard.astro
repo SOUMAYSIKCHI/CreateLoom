@@ -1,26 +1,58 @@
 ---
 const { p } = Astro.props;
 
-const preview =
-  p.prompt.length > 190
-    ? `${p.prompt.slice(0, 190).trim()}…`
-    : p.prompt;
-
 const bestFor =
+  p.bestFor ||
   p.best_for ||
   `AI ${p.category.toLowerCase()} image creation`;
 
+const description =
+  p.description ||
+  `A ready-to-use ${p.category.toLowerCase()} AI image prompt for creative image generation.`;
+
 const tags = Array.isArray(p.tags) ? p.tags.slice(0, 3) : [];
+const tools = Array.isArray(p.tools) ? p.tools : [];
+
+const trendStatus = p.trendStatus || '';
+const showTrending = p.trending === true;
+
+const trendLabel =
+  trendStatus === 'hot'
+    ? '🔥 Hot'
+    : trendStatus === 'rising'
+      ? '📈 Rising'
+      : trendStatus === 'seasonal'
+        ? 'Seasonal'
+        : trendStatus === 'evergreen'
+          ? 'Evergreen'
+          : 'Trending';
+
+const trendClass =
+  trendStatus === 'hot'
+    ? 'trend-hot'
+    : trendStatus === 'rising'
+      ? 'trend-rising'
+      : trendStatus === 'seasonal'
+        ? 'trend-seasonal'
+        : trendStatus === 'evergreen'
+          ? 'trend-evergreen'
+          : 'trend-current';
 ---
 
 <article
   class="card prompt-card"
   data-title={p.title}
   data-category={p.category}
+  data-type={p.type || 'Unisex'}
+  data-tools={tools.join(' ')}
   data-trending={String(p.trending === true)}
+  data-trend-status={trendStatus}
   data-tags={Array.isArray(p.tags) ? p.tags.join(' ') : ''}
+  data-search-terms={Array.isArray(p.searchTerms) ? p.searchTerms.join(' ') : ''}
   data-prompt={p.prompt}
+  data-description={description}
   data-prompt-id={p.id}
+  data-created-at={p.createdAt || ''}
 >
   <!-- Visual result preview -->
   <a
@@ -41,27 +73,42 @@ const tags = Array.isArray(p.tags) ? p.tags.slice(0, 3) : [];
     </div>
   </a>
 
-  <!-- Card top -->
-  <div class="prompt-top">
-    <a
-      class="category-link"
-      href={`/prompts/${p.category.toLowerCase()}/`}
-      aria-label={`Browse ${p.category} AI prompts`}
-    >
-      {p.category}
-    </a>
+  <!-- Card metadata -->
+  <div class="prompt-meta">
+    <div class="meta-left">
+      <a
+        class="category-link"
+        href={`/prompts/${p.category.toLowerCase()}/`}
+        aria-label={`Browse ${p.category} AI prompts`}
+      >
+        {p.category}
+      </a>
 
-    <button
-      class="icon-btn fav-btn"
-      data-fav={p.id}
-      type="button"
-      aria-label={`Save ${p.title} to favorites`}
-      aria-pressed="false"
-      title="Save to favorites"
-    >
-      <span aria-hidden="true">♡</span>
-    </button>
+      {p.type && (
+        <span class="type-badge" aria-label={`Prompt type: ${p.type}`}>
+          {p.type}
+        </span>
+      )}
+    </div>
+
+    {showTrending && (
+      <span class:list={['trend-badge', trendClass]}>
+        {trendLabel}
+      </span>
+    )}
   </div>
+
+  <!-- Favorite -->
+  <button
+    class="icon-btn fav-btn"
+    data-fav={p.id}
+    type="button"
+    aria-label={`Save ${p.title} to favorites`}
+    aria-pressed="false"
+    title="Save to favorites"
+  >
+    <span aria-hidden="true">♡</span>
+  </button>
 
   <!-- Main card content -->
   <a
@@ -75,8 +122,26 @@ const tags = Array.isArray(p.tags) ? p.tags.slice(0, 3) : [];
     </div>
 
     <p class="prompt-preview">
-      {preview}
+      {description}
     </p>
+
+    {tools.length > 0 && (
+      <div class="tools-row" aria-label="Compatible AI tools">
+        <span class="tools-label">Works with</span>
+        <div class="tool-list">
+          {tools.slice(0, 3).map((tool) => (
+            <span class="tool-badge">{tool}</span>
+          ))}
+        </div>
+      </div>
+    )}
+
+    {p.referenceImageRequired === true && (
+      <div class="reference-indicator">
+        <span aria-hidden="true">◉</span>
+        Needs your photo
+      </div>
+    )}
 
     <div class="best-for">
       <span>Best for</span>
@@ -124,8 +189,6 @@ const tags = Array.isArray(p.tags) ? p.tags.slice(0, 3) : [];
     </a>
   </div>
 </article>
-
-
 
 <style>
   .prompt-card {
@@ -193,12 +256,21 @@ const tags = Array.isArray(p.tags) ? p.tags.slice(0, 3) : [];
     transform: scale(1.025);
   }
 
-  .prompt-top {
+  .prompt-meta {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 12px;
-    min-height: 34px;
+    gap: 8px;
+    min-width: 0;
+    padding-right: 42px;
+  }
+
+  .meta-left {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 7px;
+    min-width: 0;
   }
 
   .category-link {
@@ -232,7 +304,63 @@ const tags = Array.isArray(p.tags) ? p.tags.slice(0, 3) : [];
     transform: translateX(0);
   }
 
+  .type-badge,
+  .trend-badge,
+  .tool-badge,
+  .reference-indicator {
+    display: inline-flex;
+    align-items: center;
+    white-space: nowrap;
+  }
+
+  .type-badge {
+    padding: 4px 7px;
+    border: 1px solid rgba(255,255,255,.07);
+    border-radius: 999px;
+    background: rgba(255,255,255,.025);
+    color: #aaaab3;
+    font-size: .64rem;
+    font-weight: 700;
+  }
+
+  .trend-badge {
+    flex: 0 0 auto;
+    padding: 4px 7px;
+    border-radius: 999px;
+    font-size: .64rem;
+    font-weight: 800;
+  }
+
+  .trend-current {
+    border: 1px solid rgba(139,92,246,.25);
+    background: rgba(139,92,246,.08);
+    color: #c4b5fd;
+  }
+
+  .trend-hot {
+    border: 1px solid rgba(251,146,60,.24);
+    background: rgba(251,146,60,.08);
+    color: #fdba74;
+  }
+
+  .trend-rising {
+    border: 1px solid rgba(139,92,246,.22);
+    background: rgba(139,92,246,.07);
+    color: #c4b5fd;
+  }
+
+  .trend-seasonal,
+  .trend-evergreen {
+    border: 1px solid rgba(255,255,255,.06);
+    background: rgba(255,255,255,.025);
+    color: #9999a3;
+  }
+
   .icon-btn {
+    position: absolute;
+    top: calc(20px + min(83.333vw, 100%));
+    right: 20px;
+    z-index: 2;
     flex: 0 0 auto;
     width: 34px;
     height: 34px;
@@ -240,7 +368,7 @@ const tags = Array.isArray(p.tags) ? p.tags.slice(0, 3) : [];
     place-items: center;
     border: 1px solid rgba(255,255,255,.08);
     border-radius: 10px;
-    background: rgba(255,255,255,.025);
+    background: rgba(13,12,19,.82);
     color: #8f8f98;
     cursor: pointer;
     font: inherit;
@@ -268,7 +396,7 @@ const tags = Array.isArray(p.tags) ? p.tags.slice(0, 3) : [];
     display: block;
     flex: 1;
     min-width: 0;
-    margin-top: 2px;
+    margin-top: 12px;
     color: inherit;
     text-decoration: none;
   }
@@ -281,7 +409,7 @@ const tags = Array.isArray(p.tags) ? p.tags.slice(0, 3) : [];
 
   .prompt-card h3 {
     flex: 1;
-    margin: 15px 0 9px;
+    margin: 0 0 9px;
     color: #fff;
     font-size: 1.08rem;
     line-height: 1.38;
@@ -289,7 +417,7 @@ const tags = Array.isArray(p.tags) ? p.tags.slice(0, 3) : [];
   }
 
   .open-arrow {
-    margin-top: 17px;
+    margin-top: 2px;
     color: #71717a;
     font-size: .9rem;
     opacity: 0;
@@ -313,11 +441,55 @@ const tags = Array.isArray(p.tags) ? p.tags.slice(0, 3) : [];
     line-height: 1.68;
   }
 
+  .tools-row {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-top: 14px;
+  }
+
+  .tools-label {
+    color: #85858f;
+    font-size: .65rem;
+    font-weight: 800;
+    letter-spacing: .04em;
+  }
+
+  .tool-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+  }
+
+  .tool-badge {
+    padding: 4px 7px;
+    border: 1px solid rgba(139,92,246,.14);
+    border-radius: 999px;
+    background: rgba(139,92,246,.045);
+    color: #b9b0d9;
+    font-size: .64rem;
+    font-weight: 650;
+  }
+
+  .reference-indicator {
+    gap: 5px;
+    margin-top: 10px;
+    color: #aaa1c5;
+    font-size: .68rem;
+    font-weight: 700;
+  }
+
+  .reference-indicator span {
+    color: #a78bfa;
+    font-size: .6rem;
+  }
+
   .best-for {
     display: flex;
     flex-direction: column;
     gap: 4px;
-    margin-top: 16px;
+    margin-top: 14px;
     padding: 11px 12px;
     border: 1px solid rgba(139,92,246,.11);
     border-radius: 10px;
@@ -343,7 +515,7 @@ const tags = Array.isArray(p.tags) ? p.tags.slice(0, 3) : [];
     display: flex;
     flex-wrap: wrap;
     gap: 6px;
-    margin-top: 14px;
+    margin-top: 12px;
   }
 
   .tag {
@@ -419,6 +591,15 @@ const tags = Array.isArray(p.tags) ? p.tags.slice(0, 3) : [];
       margin: -18px -18px 18px;
     }
 
+    .prompt-meta {
+      padding-right: 42px;
+    }
+
+    .icon-btn {
+      top: calc(18px + min(83.333vw, 100%));
+      right: 18px;
+    }
+
     .card-actions {
       grid-template-columns: 1fr 1fr;
     }
@@ -435,6 +616,11 @@ const tags = Array.isArray(p.tags) ? p.tags.slice(0, 3) : [];
 
     .prompt-card-image-link {
       margin: -16px -16px 16px;
+    }
+
+    .icon-btn {
+      top: calc(16px + min(83.333vw, 100%));
+      right: 16px;
     }
 
     .card-actions {
