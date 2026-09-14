@@ -1,0 +1,650 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import prompts from '../../data/prompts.json';
+import trends from '../../data/trends.json';
+import guides from '../../data/ai-photo-guides.json';
+
+export function getStaticPaths() {
+  return guides.map((guide) => ({
+    params: { slug: guide.slug },
+    props: { guide },
+  }));
+}
+
+const { guide } = Astro.props;
+
+const siteUrl = 'https://createwithsoumay.store';
+const pageUrl = `${siteUrl}/ai-photo-guides/${guide.slug}/`;
+
+const promptMap = new Map(prompts.map((prompt) => [prompt.id, prompt]));
+const trendMap = new Map(trends.map((trend) => [trend.slug, trend]));
+
+const relatedPrompts = (guide.relatedPrompts || [])
+  .map((id) => promptMap.get(id))
+  .filter(Boolean);
+
+const relatedTrends = (guide.relatedTrends || [])
+  .map((slug) => trendMap.get(slug))
+  .filter(Boolean);
+
+const guideMap = new Map(guides.map((item) => [item.slug, item]));
+const relatedGuides = (guide.relatedGuides || [])
+  .map((slug) => guideMap.get(slug))
+  .filter(Boolean);
+
+const breadcrumbItems = [
+  { name: 'Home', url: '/' },
+  { name: 'AI Photo Guides', url: '/ai-photo-guides/' },
+  { name: guide.title, url: `/ai-photo-guides/${guide.slug}/` },
+];
+
+const faqSchema = guide.faq?.length
+  ? {
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      mainEntity: guide.faq.map((item) => ({
+        '@type': 'Question',
+        name: item.question,
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: item.answer,
+        },
+      })),
+    }
+  : null;
+
+const howToSchema = guide.steps?.length
+  ? {
+      '@context': 'https://schema.org',
+      '@type': 'HowTo',
+      name: guide.title,
+      description: guide.metaDescription,
+      step: guide.steps.map((step, index) => ({
+        '@type': 'HowToStep',
+        position: index + 1,
+        name: `Step ${index + 1}`,
+        text: step,
+      })),
+    }
+  : null;
+
+const webPageSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'WebPage',
+  name: guide.title,
+  url: pageUrl,
+  description: guide.metaDescription,
+  isPartOf: {
+    '@type': 'WebSite',
+    name: 'Create With Soumay',
+    url: siteUrl,
+  },
+  about: {
+    '@type': 'Thing',
+    name: 'AI image generation and prompting',
+  },
+  publisher: {
+    '@type': 'Organization',
+    name: 'Create With Soumay',
+    url: siteUrl,
+  },
+};
+
+const schemas = [webPageSchema, faqSchema, howToSchema].filter(Boolean);
+---
+
+<Layout
+  title={guide.metaTitle}
+  description={guide.metaDescription}
+  canonical={pageUrl}
+>
+  <article class="guide-page">
+    <div class="guide-container">
+      <nav class="breadcrumbs" aria-label="Breadcrumb">
+        {breadcrumbItems.map((item, index) => (
+          <>
+            {index > 0 && <span aria-hidden="true">/</span>}
+            {index === breadcrumbItems.length - 1 ? (
+              <span>{item.name}</span>
+            ) : (
+              <a href={item.url}>{item.name}</a>
+            )}
+          </>
+        ))}
+      </nav>
+
+      <header class="guide-header">
+        <div class="eyebrow">{guide.eyebrow}</div>
+        <h1>{guide.title}</h1>
+        <p class="intro">{guide.intro}</p>
+      </header>
+
+      <div class="guide-layout">
+        <main>
+          <section class="guide-section">
+            <h2>{guide.problem.heading}</h2>
+            <p>{guide.problem.content}</p>
+          </section>
+
+          <section class="guide-section">
+            <h2>Common causes</h2>
+            <ul class="check-list">
+              {guide.commonCauses.map((item) => <li>{item}</li>)}
+            </ul>
+          </section>
+
+          <section class="guide-section">
+            <h2>Practical solutions</h2>
+            <div class="solution-grid">
+              {guide.solutions.map((solution) => (
+                <article class="solution-card">
+                  <h3>{solution.title}</h3>
+                  <p>{solution.content}</p>
+                </article>
+              ))}
+            </div>
+          </section>
+
+          <section class="guide-section prompt-box">
+            <div class="section-label">Prompt example</div>
+            <h2>{guide.promptExample.title}</h2>
+            <pre><code>{guide.promptExample.prompt}</code></pre>
+            <button class="copy-button" type="button" data-copy={guide.promptExample.prompt}>
+              Copy prompt
+            </button>
+          </section>
+
+          <section class="guide-section">
+            <h2>Step-by-step fix</h2>
+            <ol class="steps">
+              {guide.steps.map((step, index) => (
+                <li>
+                  <span class="step-number">{index + 1}</span>
+                  <span>{step}</span>
+                </li>
+              ))}
+            </ol>
+          </section>
+
+          <section class="guide-section">
+            <h2>Tips for better results</h2>
+            <ul class="tips-list">
+              {guide.tips.map((tip) => <li>{tip}</li>)}
+            </ul>
+          </section>
+
+          <section class="guide-section">
+            <h2>AI tools you can use</h2>
+            <div class="tool-list">
+              {guide.supportedTools.map((tool) => <span>{tool}</span>)}
+            </div>
+          </section>
+
+          {relatedPrompts.length > 0 && (
+            <section class="guide-section">
+              <div class="section-heading-row">
+                <div>
+                  <div class="section-label">Explore more</div>
+                  <h2>Related AI prompts</h2>
+                </div>
+                <a href="/prompts/">View all prompts →</a>
+              </div>
+
+              <div class="related-grid">
+                {relatedPrompts.map((prompt) => (
+                  <a class="related-card" href={`/prompt/${prompt.id}/`}>
+                    <h3>{prompt.title}</h3>
+                    <p>{prompt.primarySearchTerm || prompt.title}</p>
+                  </a>
+                ))}
+              </div>
+            </section>
+          )}
+
+          {relatedTrends.length > 0 && (
+            <section class="guide-section">
+              <div class="section-heading-row">
+                <div>
+                  <div class="section-label">Trending ideas</div>
+                  <h2>Related AI photo trends</h2>
+                </div>
+                <a href="/trends/">View all trends →</a>
+              </div>
+
+              <div class="related-grid">
+                {relatedTrends.map((trend) => (
+                  <a class="related-card" href={`/trends/${trend.slug}/`}>
+                    <h3>{trend.title}</h3>
+                    <p>{trend.intro}</p>
+                  </a>
+                ))}
+              </div>
+            </section>
+          )}
+
+          {relatedGuides.length > 0 && (
+            <section class="guide-section">
+              <div class="section-heading-row">
+                <div>
+                  <div class="section-label">Keep learning</div>
+                  <h2>Related AI photo guides</h2>
+                </div>
+                <a href="/ai-photo-guides/">View all guides →</a>
+              </div>
+
+              <div class="related-grid">
+                {relatedGuides.map((item) => (
+                  <a class="related-card" href={`/ai-photo-guides/${item.slug}/`}>
+                    <h3>{item.title}</h3>
+                    <p>{item.intro}</p>
+                  </a>
+                ))}
+              </div>
+            </section>
+          )}
+
+          {guide.faq?.length > 0 && (
+            <section class="guide-section faq-section">
+              <div class="section-label">FAQ</div>
+              <h2>Frequently asked questions</h2>
+
+              <div class="faq-list">
+                {guide.faq.map((item) => (
+                  <details>
+                    <summary>{item.question}</summary>
+                    <p>{item.answer}</p>
+                  </details>
+                ))}
+              </div>
+            </section>
+          )}
+        </main>
+
+        <aside class="guide-sidebar">
+          <div class="sidebar-card">
+            <div class="section-label">Create something</div>
+            <h2>Ready to try an AI prompt?</h2>
+            <p>Explore ready-to-use AI image prompts and turn the ideas from this guide into your next image.</p>
+            <a class="primary-button" href="/prompts/">Explore AI prompts</a>
+          </div>
+
+          <div class="sidebar-card">
+            <div class="section-label">On this page</div>
+            <a href="#common-causes">Common causes</a>
+            <a href="#solutions">Practical solutions</a>
+            <a href="#prompt-example">Prompt example</a>
+            <a href="#steps">Step-by-step fix</a>
+            <a href="#tips">Tips</a>
+            <a href="#faq">FAQ</a>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </article>
+
+  {schemas.map((schema) => (
+    <script type="application/ld+json" set:html={JSON.stringify(schema)} />
+  ))}
+
+  <script>
+    document.querySelectorAll<HTMLButtonElement>('[data-copy]').forEach((button) => {
+      button.addEventListener('click', async () => {
+        const text = button.dataset.copy || '';
+        try {
+          await navigator.clipboard.writeText(text);
+          const original = button.textContent;
+          button.textContent = 'Copied!';
+          setTimeout(() => {
+            button.textContent = original;
+          }, 1500);
+        } catch {
+          button.textContent = 'Copy failed';
+        }
+      });
+    });
+  </script>
+</Layout>
+
+<style>
+  .guide-page {
+    padding: 28px 0 80px;
+  }
+
+  .guide-container {
+    width: min(1120px, calc(100% - 32px));
+    margin: 0 auto;
+  }
+
+  .breadcrumbs {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 42px;
+    color: #777;
+    font-size: 0.88rem;
+  }
+
+  .breadcrumbs a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  .breadcrumbs a:hover {
+    text-decoration: underline;
+  }
+
+  .guide-header {
+    max-width: 850px;
+    margin-bottom: 52px;
+  }
+
+  .eyebrow,
+  .section-label {
+    font-size: 0.76rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: #777;
+  }
+
+  h1 {
+    max-width: 900px;
+    margin: 12px 0 20px;
+    font-size: clamp(2.2rem, 5vw, 4.3rem);
+    line-height: 1.04;
+    letter-spacing: -0.04em;
+  }
+
+  .intro {
+    max-width: 780px;
+    margin: 0;
+    color: #5f5f5f;
+    font-size: 1.15rem;
+    line-height: 1.75;
+  }
+
+  .guide-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 290px;
+    gap: 54px;
+    align-items: start;
+  }
+
+  .guide-section {
+    margin-bottom: 54px;
+    scroll-margin-top: 90px;
+  }
+
+  .guide-section h2 {
+    margin: 8px 0 16px;
+    font-size: clamp(1.55rem, 3vw, 2.2rem);
+    line-height: 1.15;
+    letter-spacing: -0.025em;
+  }
+
+  .guide-section p {
+    color: #5f5f5f;
+    line-height: 1.8;
+  }
+
+  .check-list,
+  .tips-list {
+    padding: 0;
+    margin: 20px 0 0;
+    list-style: none;
+  }
+
+  .check-list li,
+  .tips-list li {
+    position: relative;
+    padding: 13px 0 13px 28px;
+    border-bottom: 1px solid #ececec;
+    color: #4f4f4f;
+    line-height: 1.6;
+  }
+
+  .check-list li::before,
+  .tips-list li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    font-weight: 700;
+  }
+
+  .solution-grid,
+  .related-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 14px;
+  }
+
+  .solution-card,
+  .related-card,
+  .sidebar-card {
+    border: 1px solid #e7e7e7;
+    border-radius: 16px;
+    padding: 22px;
+    background: #fff;
+  }
+
+  .solution-card h3,
+  .related-card h3 {
+    margin: 0 0 8px;
+    font-size: 1.05rem;
+  }
+
+  .solution-card p,
+  .related-card p {
+    margin: 0;
+    font-size: 0.95rem;
+    line-height: 1.65;
+  }
+
+  .prompt-box {
+    position: relative;
+    padding: 26px;
+    border-radius: 18px;
+    background: #f7f7f7;
+  }
+
+  .prompt-box pre {
+    margin: 20px 0 14px;
+    padding: 20px;
+    overflow-x: auto;
+    border-radius: 12px;
+    background: #fff;
+    border: 1px solid #e7e7e7;
+    white-space: pre-wrap;
+  }
+
+  .prompt-box code {
+    font: inherit;
+    font-size: 0.94rem;
+    line-height: 1.7;
+  }
+
+  .copy-button,
+  .primary-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 42px;
+    padding: 10px 16px;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    background: #111;
+    color: #fff;
+    font: inherit;
+    font-weight: 650;
+    cursor: pointer;
+    text-decoration: none;
+  }
+
+  .steps {
+    display: grid;
+    gap: 14px;
+    padding: 0;
+    margin: 22px 0 0;
+    list-style: none;
+    counter-reset: none;
+  }
+
+  .steps li {
+    display: flex;
+    gap: 15px;
+    align-items: flex-start;
+    color: #4f4f4f;
+    line-height: 1.65;
+  }
+
+  .step-number {
+    flex: 0 0 32px;
+    display: grid;
+    place-items: center;
+    width: 32px;
+    height: 32px;
+    border: 1px solid #ddd;
+    border-radius: 50%;
+    font-size: 0.82rem;
+    font-weight: 700;
+  }
+
+  .tool-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 20px;
+  }
+
+  .tool-list span {
+    padding: 9px 13px;
+    border: 1px solid #e3e3e3;
+    border-radius: 999px;
+    font-size: 0.9rem;
+  }
+
+  .section-heading-row {
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+    gap: 20px;
+  }
+
+  .section-heading-row h2 {
+    margin-bottom: 0;
+  }
+
+  .section-heading-row > a {
+    color: inherit;
+    font-size: 0.9rem;
+    white-space: nowrap;
+  }
+
+  .related-grid {
+    margin-top: 20px;
+  }
+
+  .related-card {
+    display: block;
+    color: inherit;
+    text-decoration: none;
+    transition: transform 0.18s ease, border-color 0.18s ease;
+  }
+
+  .related-card:hover {
+    transform: translateY(-2px);
+    border-color: #cfcfcf;
+  }
+
+  .guide-sidebar {
+    position: sticky;
+    top: 88px;
+    display: grid;
+    gap: 16px;
+  }
+
+  .sidebar-card h2 {
+    margin: 10px 0;
+    font-size: 1.25rem;
+    line-height: 1.25;
+  }
+
+  .sidebar-card p {
+    margin: 0 0 18px;
+    font-size: 0.92rem;
+    line-height: 1.65;
+  }
+
+  .sidebar-card > a:not(.primary-button) {
+    display: block;
+    padding: 9px 0;
+    color: inherit;
+    text-decoration: none;
+    border-bottom: 1px solid #eee;
+    font-size: 0.9rem;
+  }
+
+  .faq-list {
+    margin-top: 20px;
+    border-top: 1px solid #e7e7e7;
+  }
+
+  .faq-list details {
+    border-bottom: 1px solid #e7e7e7;
+  }
+
+  .faq-list summary {
+    padding: 18px 0;
+    cursor: pointer;
+    font-weight: 650;
+  }
+
+  .faq-list details p {
+    margin: 0 0 18px;
+  }
+
+  @media (max-width: 850px) {
+    .guide-layout {
+      grid-template-columns: 1fr;
+      gap: 10px;
+    }
+
+    .guide-sidebar {
+      position: static;
+      order: -1;
+    }
+  }
+
+  @media (max-width: 600px) {
+    .guide-page {
+      padding-top: 18px;
+    }
+
+    .breadcrumbs {
+      margin-bottom: 30px;
+    }
+
+    .solution-grid,
+    .related-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .guide-header {
+      margin-bottom: 38px;
+    }
+
+    .prompt-box {
+      padding: 20px;
+    }
+
+    .section-heading-row {
+      display: block;
+    }
+
+    .section-heading-row > a {
+      display: inline-block;
+      margin-top: 10px;
+    }
+  }
+</style>
