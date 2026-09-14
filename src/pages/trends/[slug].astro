@@ -1,0 +1,649 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import prompts from '../../data/prompts.json';
+import trends from '../../data/trends.json';
+
+export function getStaticPaths() {
+  return trends.map((trend) => ({
+    params: { slug: trend.slug },
+    props: { trend }
+  }));
+}
+
+const { trend } = Astro.props;
+
+const siteUrl = 'https://createwithsoumay.store';
+const pageUrl = new URL(`/trends/${trend.slug}/`, siteUrl).href;
+const heroImageUrl = trend.heroImage
+  ? new URL(trend.heroImage, siteUrl).href
+  : undefined;
+
+const relatedPrompts = (trend.relatedPrompts ?? [])
+  .map((id) => prompts.find((prompt) => prompt.id === id))
+  .filter(Boolean);
+
+const relatedTrends = trends
+  .filter((item) => item.slug !== trend.slug)
+  .sort((a, b) => Number(b.isTrending) - Number(a.isTrending))
+  .slice(0, 4);
+
+const toolList = trend.supportedTools ?? [];
+
+const webPageSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'WebPage',
+  '@id': `${pageUrl}#webpage`,
+  url: pageUrl,
+  name: trend.title,
+  description: trend.metaDescription,
+  isPartOf: {
+    '@type': 'WebSite',
+    name: 'Create With Soumay',
+    url: siteUrl
+  },
+  about: {
+    '@type': 'Thing',
+    name: trend.title
+  },
+  publisher: {
+    '@type': 'Organization',
+    name: 'Create With Soumay',
+    url: siteUrl,
+    logo: {
+      '@type': 'ImageObject',
+      url: new URL('/images/createloom-logo.png', siteUrl).href
+    }
+  }
+};
+
+const imageSchema = heroImageUrl
+  ? {
+      '@context': 'https://schema.org',
+      '@type': 'ImageObject',
+      '@id': `${pageUrl}#image`,
+      url: heroImageUrl,
+      contentUrl: heroImageUrl,
+      caption: trend.heroImageAlt
+    }
+  : null;
+
+const faqSchema = (trend.faq ?? []).length
+  ? {
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      mainEntity: trend.faq.map((item) => ({
+        '@type': 'Question',
+        name: item.question,
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: item.answer
+        }
+      }))
+    }
+  : null;
+
+const howToSchema = (trend.howToCreate ?? []).length
+  ? {
+      '@context': 'https://schema.org',
+      '@type': 'HowTo',
+      name: `How to create ${trend.title}`,
+      description: trend.metaDescription,
+      step: trend.howToCreate.map((step) => ({
+        '@type': 'HowToStep',
+        name: step.title,
+        text: step.text
+      }))
+    }
+  : null;
+---
+
+<Layout
+  title={trend.metaTitle}
+  description={trend.metaDescription}
+  ogImage={trend.heroImage}
+>
+  <script type="application/ld+json" set:html={JSON.stringify(webPageSchema)} />
+  {imageSchema && <script type="application/ld+json" set:html={JSON.stringify(imageSchema)} />}
+  {faqSchema && <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />}
+  {howToSchema && <script type="application/ld+json" set:html={JSON.stringify(howToSchema)} />}
+
+  <main class="trend-page">
+    <section class="trend-hero container">
+      <div class="trend-hero-copy">
+        <div class="eyebrow">
+          {trend.eyebrow}
+          {trend.isTrending && <span class="trend-badge">Trending</span>}
+        </div>
+
+        <h1>{trend.title}</h1>
+        <p class="lead">{trend.intro}</p>
+
+        <div class="hero-actions">
+          {relatedPrompts.length > 0 && (
+            <a class="button primary" href={`/prompt/${relatedPrompts[0].id}/`}>
+              Try the AI Prompt
+            </a>
+          )}
+          <a class="button secondary" href="/prompts/">
+            Browse All Prompts
+          </a>
+        </div>
+      </div>
+
+      {trend.heroImage && (
+        <figure class="trend-hero-media">
+          <img
+            src={trend.heroImage}
+            alt={trend.heroImageAlt}
+            width="1080"
+            height="1920"
+            loading="eager"
+            fetchpriority="high"
+            decoding="async"
+          />
+        </figure>
+      )}
+    </section>
+
+    <div class="trend-layout container">
+      <article class="trend-content">
+        <section>
+          <h2>What is the {trend.title.replace(/ AI Photo Trend$/, '').replace(/ AI Photo & Movie Poster Trend$/, '')}?</h2>
+          <p>{trend.whatIsIt}</p>
+        </section>
+
+        <section>
+          <h2>Why this AI photo trend is popular</h2>
+          <p>{trend.whyItsPopular}</p>
+        </section>
+
+        <section>
+          <h2>How to create this AI photo</h2>
+          <div class="steps">
+            {trend.howToCreate.map((step, index) => (
+              <div class="step">
+                <div class="step-number">{index + 1}</div>
+                <div>
+                  <h3>{step.title}</h3>
+                  <p>{step.text}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        {relatedPrompts.length > 0 && (
+          <section>
+            <div class="section-heading">
+              <div>
+                <div class="eyebrow">Ready-to-use prompts</div>
+                <h2>Try related AI image prompts</h2>
+              </div>
+              <a href="/prompts/">View all prompts →</a>
+            </div>
+
+            <div class="prompt-grid">
+              {relatedPrompts.map((prompt) => (
+                <a class="prompt-card" href={`/prompt/${prompt.id}/`}>
+                  {prompt.image && (
+                    <img
+                      src={prompt.image}
+                      alt={prompt.title}
+                      width="1080"
+                      height="1920"
+                      loading="lazy"
+                      decoding="async"
+                    />
+                  )}
+                  <div class="prompt-card-body">
+                    <span>{prompt.category}</span>
+                    <h3>{prompt.title}</h3>
+                    <p>{prompt.description}</p>
+                    <strong>View prompt →</strong>
+                  </div>
+                </a>
+              ))}
+            </div>
+          </section>
+        )}
+
+        <section>
+          <h2>AI tools you can use</h2>
+          <p>
+            This type of image can be created with image-generation tools that support
+            reference images. Available options include:
+          </p>
+          <div class="tool-list">
+            {toolList.map((tool) => <span>{tool}</span>)}
+          </div>
+          <p class="note">
+            Features and image-reference controls can change between tools and versions,
+            so use the workflow above as a prompt strategy rather than relying on one exact interface.
+          </p>
+        </section>
+
+        <section>
+          <h2>Tips for a more realistic result</h2>
+          <ul class="tips">
+            {trend.tips.map((tip) => <li>{tip}</li>)}
+          </ul>
+        </section>
+
+        {trend.faq?.length > 0 && (
+          <section class="faq-section">
+            <div class="eyebrow">Frequently asked questions</div>
+            <h2>FAQs about this AI photo trend</h2>
+
+            <div class="faq-list">
+              {trend.faq.map((item) => (
+                <details>
+                  <summary>{item.question}</summary>
+                  <p>{item.answer}</p>
+                </details>
+              ))}
+            </div>
+          </section>
+        )}
+      </article>
+
+      <aside class="trend-sidebar">
+        <div class="sidebar-card">
+          <div class="eyebrow">Create With Soumay</div>
+          <h2>Find your next AI photo idea</h2>
+          <p>
+            Explore ready-to-use prompts for portraits, couples, fashion, festivals,
+            vintage photography and more.
+          </p>
+          <a class="button primary full" href="/prompts/">Explore AI Prompts</a>
+        </div>
+
+        <div class="sidebar-card">
+          <div class="eyebrow">Related trends</div>
+          <div class="related-list">
+            {relatedTrends.map((item) => (
+              <a href={`/trends/${item.slug}/`}>
+                <span>{item.isTrending ? 'Trending · ' : ''}</span>
+                {item.title}
+              </a>
+            ))}
+          </div>
+        </div>
+      </aside>
+    </div>
+  </main>
+</Layout>
+
+<style>
+  .trend-page {
+    padding: 0 0 5rem;
+  }
+
+  .trend-hero {
+    display: grid;
+    grid-template-columns: minmax(0, 1.05fr) minmax(300px, .75fr);
+    gap: clamp(2rem, 6vw, 5rem);
+    align-items: center;
+    padding-top: clamp(2rem, 5vw, 4rem);
+    padding-bottom: clamp(3rem, 7vw, 5.5rem);
+  }
+
+  .trend-hero-copy {
+    max-width: 760px;
+  }
+
+  .eyebrow {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: .65rem;
+    margin-bottom: .9rem;
+    font-size: .78rem;
+    font-weight: 800;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    opacity: .78;
+  }
+
+  .trend-badge {
+    display: inline-flex;
+    padding: .28rem .6rem;
+    border-radius: 999px;
+    background: rgba(127, 92, 255, .12);
+    letter-spacing: .04em;
+  }
+
+  h1 {
+    max-width: 850px;
+    margin: 0;
+    font-size: clamp(2.4rem, 5.8vw, 5rem);
+    line-height: 1.02;
+    letter-spacing: -.04em;
+  }
+
+  .lead {
+    max-width: 720px;
+    margin: 1.35rem 0 0;
+    font-size: clamp(1.05rem, 1.6vw, 1.25rem);
+    line-height: 1.75;
+    opacity: .82;
+  }
+
+  .hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .8rem;
+    margin-top: 1.7rem;
+  }
+
+  .button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 46px;
+    padding: .7rem 1.05rem;
+    border-radius: 12px;
+    text-decoration: none;
+    font-weight: 800;
+    border: 1px solid rgba(127, 127, 127, .22);
+  }
+
+  .button.primary {
+    background: var(--accent, #111);
+    color: var(--accent-contrast, #fff);
+  }
+
+  .button.secondary {
+    color: inherit;
+    background: transparent;
+  }
+
+  .button.full {
+    width: 100%;
+  }
+
+  .trend-hero-media {
+    margin: 0;
+    max-width: 520px;
+    width: 100%;
+    justify-self: end;
+    overflow: hidden;
+    border-radius: 24px;
+    border: 1px solid rgba(127, 127, 127, .18);
+    box-shadow: 0 20px 70px rgba(0, 0, 0, .12);
+  }
+
+  .trend-hero-media img {
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 9 / 16;
+    object-fit: cover;
+  }
+
+  .trend-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 320px;
+    gap: clamp(2rem, 5vw, 4.5rem);
+    align-items: start;
+  }
+
+  .trend-content {
+    max-width: 850px;
+  }
+
+  .trend-content section {
+    margin-bottom: 4rem;
+  }
+
+  .trend-content h2 {
+    margin: 0 0 1rem;
+    font-size: clamp(1.65rem, 3vw, 2.25rem);
+    line-height: 1.15;
+    letter-spacing: -.025em;
+  }
+
+  .trend-content h3 {
+    margin: 0 0 .45rem;
+    font-size: 1.08rem;
+  }
+
+  .trend-content p {
+    margin: 0;
+    line-height: 1.8;
+    opacity: .86;
+  }
+
+  .steps {
+    display: grid;
+    gap: 1rem;
+  }
+
+  .step {
+    display: grid;
+    grid-template-columns: 42px minmax(0, 1fr);
+    gap: 1rem;
+    padding: 1.15rem;
+    border: 1px solid rgba(127, 127, 127, .18);
+    border-radius: 16px;
+    background: rgba(127, 127, 127, .035);
+  }
+
+  .step-number {
+    width: 38px;
+    height: 38px;
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+    font-weight: 900;
+    background: rgba(127, 127, 127, .12);
+  }
+
+  .section-heading {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    align-items: end;
+    margin-bottom: 1.2rem;
+  }
+
+  .section-heading .eyebrow {
+    margin-bottom: .35rem;
+  }
+
+  .section-heading h2 {
+    margin-bottom: 0;
+  }
+
+  .section-heading a {
+    white-space: nowrap;
+    font-weight: 800;
+    color: inherit;
+  }
+
+  .prompt-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem;
+  }
+
+  .prompt-card {
+    overflow: hidden;
+    border: 1px solid rgba(127, 127, 127, .18);
+    border-radius: 18px;
+    text-decoration: none;
+    color: inherit;
+    background: rgba(127, 127, 127, .035);
+  }
+
+  .prompt-card img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 9 / 12;
+    object-fit: cover;
+  }
+
+  .prompt-card-body {
+    padding: 1rem;
+  }
+
+  .prompt-card-body > span {
+    font-size: .75rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: .08em;
+    opacity: .65;
+  }
+
+  .prompt-card-body h3 {
+    margin: .45rem 0 .55rem;
+  }
+
+  .prompt-card-body p {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    margin-bottom: .8rem;
+    font-size: .92rem;
+  }
+
+  .prompt-card-body strong {
+    font-size: .9rem;
+  }
+
+  .tool-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .6rem;
+    margin: 1.2rem 0;
+  }
+
+  .tool-list span {
+    padding: .55rem .75rem;
+    border: 1px solid rgba(127, 127, 127, .2);
+    border-radius: 999px;
+    font-weight: 750;
+  }
+
+  .note {
+    font-size: .9rem;
+    opacity: .68 !important;
+  }
+
+  .tips {
+    margin: 0;
+    padding-left: 1.25rem;
+  }
+
+  .tips li {
+    margin: .75rem 0;
+    line-height: 1.7;
+  }
+
+  .faq-section {
+    padding-top: .5rem;
+  }
+
+  .faq-list {
+    display: grid;
+    gap: .7rem;
+  }
+
+  details {
+    border: 1px solid rgba(127, 127, 127, .18);
+    border-radius: 14px;
+    padding: 1rem 1.1rem;
+    background: rgba(127, 127, 127, .035);
+  }
+
+  summary {
+    cursor: pointer;
+    font-weight: 800;
+    line-height: 1.5;
+  }
+
+  details p {
+    padding-top: .75rem;
+  }
+
+  .trend-sidebar {
+    position: sticky;
+    top: 1.25rem;
+    display: grid;
+    gap: 1rem;
+  }
+
+  .sidebar-card {
+    padding: 1.25rem;
+    border: 1px solid rgba(127, 127, 127, .18);
+    border-radius: 18px;
+    background: rgba(127, 127, 127, .035);
+  }
+
+  .sidebar-card h2 {
+    margin: 0 0 .65rem;
+    font-size: 1.25rem;
+  }
+
+  .sidebar-card p {
+    margin: 0 0 1rem;
+    line-height: 1.65;
+    opacity: .8;
+  }
+
+  .related-list {
+    display: grid;
+    gap: .75rem;
+  }
+
+  .related-list a {
+    display: block;
+    padding-bottom: .75rem;
+    border-bottom: 1px solid rgba(127, 127, 127, .14);
+    color: inherit;
+    text-decoration: none;
+    font-weight: 750;
+    line-height: 1.4;
+  }
+
+  .related-list a:last-child {
+    border-bottom: 0;
+    padding-bottom: 0;
+  }
+
+  .related-list span {
+    font-size: .72rem;
+    opacity: .62;
+  }
+
+  @media (max-width: 900px) {
+    .trend-hero,
+    .trend-layout {
+      grid-template-columns: 1fr;
+    }
+
+    .trend-hero-media {
+      justify-self: start;
+      max-width: 440px;
+    }
+
+    .trend-sidebar {
+      position: static;
+    }
+  }
+
+  @media (max-width: 620px) {
+    .prompt-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .section-heading {
+      align-items: start;
+      flex-direction: column;
+    }
+
+    h1 {
+      font-size: clamp(2.25rem, 12vw, 3.3rem);
+    }
+  }
+</style>
