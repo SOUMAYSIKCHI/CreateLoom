@@ -212,5 +212,131 @@
       "Once you find a structure that consistently works, turn it into a template with editable sections such as [SUBJECT], [OUTFIT], [LOCATION], [LIGHTING] and [MOOD]. This lets you create variations quickly without rewriting the entire prompt every time.",
       "The best prompt-writing workflow is therefore simple: define the visual goal, describe the important physical details, preserve identity when needed, establish composition and lighting, generate a baseline, inspect the result and refine one variable at a time. CreateLoom's prompt library follows this practical approach so you can start from a structured prompt instead of a blank page."
     ]
+  },
+  {
+    "id": "nano-banana-ai-photo-prompts-guide",
+    "title": "Nano Banana AI Photo Prompts: The Complete Guide",
+    "category": "AI Prompts",
+    "tags": [
+      "nano-banana",
+      "gemini",
+      "ai-photo",
+      "prompts",
+      "instagram",
+      "identity-preservation"
+    ],
+    "date": "2026-09-14",
+    "readTime": "13 min read",
+    "excerpt": "What Nano Banana actually is, why it became the tool behind most of this year's viral Instagram AI photos, and how to structure a prompt that gets a clean, identity-preserving result.",
+    "content": [
+      "Nano Banana is the name that stuck for Google's image-generation and image-editing model inside Gemini, and by 2026 it has become the tool most people mean when they search for a “trending AI photo prompt.” Its popularity did not come from being the flashiest option on paper. It came from being unusually good at one specific thing people actually want: taking a real photo of a real face and changing the styling, outfit, setting or format around it while keeping that face recognizable.",
+      "That distinction matters more than it sounds. Most earlier image generators were built to create a scene from scratch out of a text description. Nano Banana behaves more like an editor you talk to in plain language. You give it a photo, describe the change you want, and it applies that change while treating the rest of the photo as something to preserve rather than something to reinvent. Once people realized this, the entire category of “turn my selfie into X” prompts took off.",
+      "This changes how you should think about writing a prompt for it. Instead of describing an entire scene as if nothing exists yet, describe the transformation. State what should change, state what should stay the same, and be explicit about the one thing most people forget: that the person's actual face is the anchor the whole image is built around, not a detail to be regenerated.",
+      "A dependable Nano Banana prompt usually has four parts. First, name the transformation directly — a 3D figurine, a traditional saree portrait, a retro film poster, a polaroid with someone else in frame. Second, describe the specific visual details of that transformation: textures, lighting, props, framing. Third, state the identity instruction on its own line so it does not get lost among styling details. Fourth, mention the output format if it matters, such as a square frame, a visible border, or a plain background.",
+      "The identity instruction deserves its own sentence rather than being folded into a longer description. Something like “preserve the subject's natural facial structure, skin tone and features exactly as shown in the reference photo” does more work than a dozen aesthetic adjectives. Nano Banana tends to respect an isolated, clearly stated constraint more reliably than one buried in the middle of a stylistic paragraph.",
+      "Most of the trend categories currently spreading on Instagram are really the same underlying skill applied to different concepts. The collectible-figurine trend asks Nano Banana to restyle a person as a toy while keeping their face. The traditional-saree trend asks it to change clothing and setting while keeping the face. The retro Bollywood-poster trend adds typography-style framing and film-grain texture on top of the same core instruction. Once you understand the pattern, you can adapt it to a concept nobody has tried yet.",
+      "The polaroid-style trends work slightly differently because they often combine two reference photos — a present-day photo and a childhood photo, or photos of two different people. Here it helps to name each subject's role explicitly (“the adult in the first reference,” “the person in the second reference”) so the model does not blend two identities into a single face, which is the most common failure in these prompts.",
+      "### A simple Nano Banana prompt formula",
+      "A workable structure is: name the transformation → describe the specific visual details → state the identity-preservation requirement on its own → specify format or framing if relevant. Keep each part to a sentence or two. Nano Banana responds better to a short, well-ordered prompt than to an exhaustive one.",
+      "### Common problems and how to fix them",
+      "If the face starts drifting from the reference, the identity sentence is usually too vague or too far from the front of the prompt — move it earlier and make it more specific. If the styling looks weak or half-applied, the transformation description is probably too short; add concrete visual details like texture, lighting direction and color rather than single adjectives. If two people's faces start blending in a multi-reference prompt, name each person's role explicitly instead of referring to “both people” as a group.",
+      "### Editing an existing generation instead of starting over",
+      "One underused feature of working with Nano Banana through Gemini is that you can keep the conversation going after the first result. Rather than rewriting the whole prompt because the lighting is slightly off, describe only the adjustment you want — “make the lighting warmer” or “move the light source to the left.” This mirrors how a real photo edit works and usually gets you to a usable result faster than regenerating from scratch each time.",
+      "### Building a repeatable workflow for Instagram content",
+      "Once a Nano Banana prompt produces a result you like, treat it as a template rather than a one-off. Swap the reference photo, keep the transformation instruction the same, and you have a repeatable format for a Reel series. This is exactly how most of the current viral trend formats spread — not because one image went viral, but because the underlying prompt structure was easy for anyone to reuse with their own photo.",
+      "CreateLoom's Nano Banana-compatible prompts are written with this structure in mind, so each one separates the transformation, the visual details and the identity instruction clearly — copy one, drop in your own reference photo, and adjust only the part that needs to change for your version of the concept."
+    ]
+  },
+  {
+    "id": "trending-ai-photo-styles-instagram",
+    "title": "Trending AI Photo Styles on Instagram Right Now",
+    "category": "Instagram",
+    "tags": [
+      "instagram",
+      "ai-photo-trends",
+      "viral",
+      "trends",
+      "nano-banana"
+    ],
+    "date": "2026-09-14",
+    "readTime": "12 min read",
+    "excerpt": "A breakdown of the AI photo styles actually spreading on Instagram this year, why each one caught on, and how to adapt one into your own content instead of copying it exactly.",
+    "content": [
+      "AI photo trends move differently from most Instagram trends. A dance or audio trend spreads because it's easy to copy with your body. An AI photo trend spreads because it's easy to copy with a prompt and a selfie — no skill, no editing software, no waiting. That's part of why the current wave of trends has moved faster and lasted longer than the filter trends that came before it.",
+      "The common thread across nearly every trend spreading right now is identity preservation. Earlier AI photo fads relied on stylized filters that changed your whole face into a cartoon or painting. The current generation of trends keeps your actual face recognizable while changing everything around it — which is a large part of why people are comfortable posting the results next to their normal photos.",
+      "The collectible-figurine trend is a good example. The prompt asks the model to reimagine the person as a 3D toy figure, complete with a display base and packaging-style presentation, while keeping the face a faithful likeness. It spread quickly because the novelty is instantly understandable in a single frame — you don't need context to “get” the image the way you would with a more abstract art style.",
+      "Traditional-outfit portraits, especially saree looks, are one of the most consistently searched styles on Indian Instagram this year. Part of the appeal is practical: not everyone owns festival-ready clothing or has time to get one professionally styled, and an AI version lets someone try the look before deciding whether to actually wear it for an event.",
+      "Retro Bollywood-poster styling is a slightly more theatrical trend, turning a normal photo into something resembling a 1990s film poster — spotlighting, grain, an ornate typography border. It works because it borrows a visual language most people in India already recognize instantly, so the joke or nostalgia lands without needing an explanation.",
+      "Polaroid-style prompts, including the versions that place someone next to a younger version of themselves or next to a person who isn't physically in the room, tap into something more emotional than the others. These tend to get shared privately — sent to a parent, a partner, or an old friend — rather than just posted publicly, which is part of why they keep resurfacing in different forms.",
+      "Cinematic portrait styles — moody studio lighting, neon-lit street scenes, film-grain edits — have stayed popular for longer than most single trends because they aren't tied to one specific gimmick. They function more like an aesthetic upgrade for an ordinary profile photo, which gives them a longer shelf life than a novelty format.",
+      "### How these trends are actually being searched",
+      "Search behavior around these styles clusters into a few consistent patterns: the tool name plus the style (“Nano Banana saree prompt”), the platform plus the intent (“Instagram trending AI photo prompt”), and increasingly specific variations of an established trend (“90s Bollywood heroine poster prompt” rather than just “Bollywood poster”). That last pattern is worth noting — once a trend is established, people search for more specific versions of it rather than the general idea.",
+      "### Why some versions of a trend look noticeably better than others",
+      "The difference between a convincing result and an obviously-AI one usually comes down to reference photo quality and how specific the prompt is about lighting and texture, not the concept itself. A blurry, badly-lit selfie will produce a mediocre figurine or saree portrait no matter how well-written the prompt is — the model can only work with what it's given.",
+      "### Turning a trend into your own content instead of a copy",
+      "The creators who get the most out of a trend adapt it rather than replicate it exactly. If a saree-portrait trend is spreading, a travel creator might apply it to a specific regional style tied to a place they're covering. If a polaroid trend is spreading, a comedy creator might apply it to an exaggerated, deliberately absurd pairing instead of a sentimental one. The format is the reusable part; the specific execution is where your own content stands out.",
+      "Because these trends move quickly, CreateLoom's trending prompt section is reviewed and updated as new patterns emerge, so the goal is to keep a current, honestly-labeled read on what's actually spreading — rather than treating any one style as permanent."
+    ]
+  },
+  {
+    "id": "chatgpt-ai-photo-prompts-instagram",
+    "title": "ChatGPT AI Photo Prompts for Instagram: A Practical Guide",
+    "category": "AI Prompts",
+    "tags": [
+      "chatgpt",
+      "ai-photo",
+      "prompts",
+      "instagram",
+      "image-generation"
+    ],
+    "date": "2026-09-14",
+    "readTime": "12 min read",
+    "excerpt": "How ChatGPT's image generation actually behaves compared to other tools, where it's the stronger choice, and how to write and refine prompts for it specifically.",
+    "content": [
+      "ChatGPT's image generation gets searched almost as often as Nano Banana's for a simple reason: a huge number of people already have ChatGPT open for something else and try the photo prompt there first, before ever looking for a separate tool. That habit alone makes it worth understanding on its own terms rather than treating every AI photo prompt as interchangeable across platforms.",
+      "The most useful thing to know about ChatGPT specifically is that it behaves conversationally. Rather than treating each prompt as an isolated instruction, it treats the conversation as an ongoing project you're refining together. That makes it well suited to a back-and-forth workflow: generate a first version, then describe exactly what to adjust in the next message instead of rewriting the whole prompt.",
+      "ChatGPT also tends to handle legible text inside an image more reliably than most alternatives, which matters for anything poster-like — a title, a birthday message, a name on a jersey. If your concept depends on readable text appearing correctly in the final image, that's a point in ChatGPT's favor over tools that are stronger at pure photorealism but weaker at typography.",
+      "For a first-message prompt, the same core structure that works elsewhere still applies: describe the subject and identity requirement, the transformation or scene, the composition, and the lighting or mood. What changes is how much you lean on the follow-up messages afterward. Where a single-shot tool needs everything specified up front, ChatGPT rewards leaving room to adjust after seeing the first result.",
+      "Identity preservation works a little differently here too. Rather than a single dense instruction, it can help to state it plainly and then reinforce it if a follow-up edit starts drifting — for example, if you ask for a background change and the face shifts slightly as a side effect, a short follow-up like “keep the face exactly as it was in the previous image, only change the background” is usually enough to correct it.",
+      "One common frustration people run into is over-stylization: asking for a specific aesthetic and getting a result that leans further into that style than intended, at the cost of realism. If that happens, it's more effective to explicitly ask for the realism to be dialed back in a follow-up (“make this look like a real photograph, reduce the illustrated or painted quality”) than to rewrite the entire original prompt.",
+      "### A ChatGPT-specific prompt formula",
+      "Open with subject, identity requirement and the core transformation in one message. Keep the first prompt moderately detailed rather than exhaustive — composition, lighting direction and mood are usually enough. Save fine-tuning (color grading, minor pose adjustments, background swaps) for short follow-up messages rather than trying to lock everything in on the first attempt.",
+      "### Getting good iterative edits",
+      "Be specific about what should change and explicitly say what should stay the same in the same message — “change only the lighting to golden hour, keep the pose and outfit exactly as they are” works better than “make it more golden hour.” Vague follow-ups tend to produce broader, less predictable changes than the original prompt.",
+      "### When to reach for ChatGPT versus another tool",
+      "ChatGPT is a strong choice when a project involves several rounds of back-and-forth refinement, when text needs to render correctly inside the image, or when you're already mid-conversation about the concept and don't want to switch tools. For a single, carefully pre-planned identity-preserving portrait where you already know exactly what you want in one shot, a tool built specifically around photo editing can sometimes get there in fewer attempts.",
+      "CreateLoom's prompt library flags which tools each prompt was written for so you can pick based on how you actually want to work — one detailed attempt, or a conversation you refine as you go."
+    ]
+  },
+  {
+    "id": "how-to-make-ai-photos-look-real",
+    "title": "How to Make AI Photos Look Real Instead of Fake",
+    "category": "AI Prompts",
+    "tags": [
+      "realistic-ai",
+      "ai-photo",
+      "tips",
+      "prompts",
+      "identity-preservation"
+    ],
+    "date": "2026-09-14",
+    "readTime": "12 min read",
+    "excerpt": "The specific details that separate a convincing AI photo from an obviously artificial one, and the prompt language that actually fixes each problem.",
+    "content": [
+      "There's a specific, recognizable look people mean when they say an AI photo looks “fake,” and it's rarely one big mistake. It's usually a handful of small physical inconsistencies stacked on top of each other — skin that's too smooth, eyes that don't quite focus on anything, lighting that doesn't match between the subject and the background. Fixing the biggest offenders individually does more than adding a general “make it realistic” instruction ever will.",
+      "Skin texture is the most common giveaway. Many models default toward smooth, evenly-lit skin because it's a safer average result. Asking explicitly for natural skin texture — visible pores, slight unevenness, natural texture rather than a retouched look — pushes the result away from that default and toward something that reads as a real photograph rather than a beauty filter.",
+      "Eyes are the second most common tell. Unnatural results often have eyes that are too symmetrical, too brightly lit compared to the rest of the face, or aimed in a direction that doesn't match the head's angle. Naming a specific gaze direction — looking slightly off-camera, or making direct eye contact with the lens — gives the model a concrete target instead of leaving it to guess.",
+      "Hands remain one of the harder problems for most image models, especially in poses where fingers overlap, hold an object, or rest against fabric. If hands are visible in your composition, an explicit anatomy instruction (“anatomically correct hands with natural finger placement”) measurably reduces the odds of an extra finger or an oddly bent joint, though it isn't a guarantee.",
+      "Lighting mismatch is a subtler problem that's easy to miss at first glance but registers instantly on closer inspection: a subject lit like they're indoors placed against a background that's clearly lit like outdoor daylight, or shadows falling in a direction that doesn't match the implied light source. Describing the light source once and its direction explicitly — rather than describing the subject's lighting and the background's lighting as if they're separate problems — keeps them consistent.",
+      "Reflections and shadows carry more weight than people expect. A mirror selfie with no visible phone reflection, or a person standing near a window with no corresponding shadow, breaks the illusion even when everything else in the frame is convincing. If your composition includes a mirror, glass, water or a polished surface, it's worth naming what that surface should realistically show.",
+      "Reference photo quality matters more than most people account for. A blurry, poorly lit or heavily-cropped reference photo gives the model less accurate information to preserve, and no amount of prompt refinement fully compensates for that. A clear, front-facing, evenly-lit photo is the single highest-leverage thing you can control before you even write the prompt.",
+      "### A realism checklist before you generate",
+      "Skin texture specified rather than left to default. Eye direction and expression named explicitly. Hands given an anatomy safeguard if visible. One consistent light source described for the whole scene, not the subject and background separately. Reflections or shadows addressed if the composition includes a mirror, window or glass surface. A clear, well-lit reference photo used as the starting point.",
+      "### When a prompt keeps producing an artificial result",
+      "Resist the urge to add more realism keywords on top of each other — stacking “ultra-realistic, photorealistic, 8k, hyperrealistic” rarely helps and can push a result toward an over-processed look instead. Identify which single element looks wrong — skin, eyes, lighting, hands — and address that one thing specifically before touching anything else.",
+      "### Realism isn't always the goal",
+      "Not every concept should aim for photographic realism. A cartoon sticker, an anime portrait or a poster-style illustration is meant to look stylized, and pushing those toward photorealism usually makes the result worse, not better. Decide which category your concept belongs to before applying any of this — these fixes are for photo-style prompts specifically, not illustrated ones.",
+      "Every prompt in CreateLoom's photo-style categories is written with these specific details already built in, which is part of why identity and realism tend to hold up better than in a prompt assembled from a generic adjective list."
+    ]
   }
 ]
