@@ -79,10 +79,17 @@ const seoTitleBase =
     ? p.title
     : `${p.title} AI Image Prompt`;
 
+const seoSearchTitle =
+  primarySearchTerm &&
+  !seoTitleBase.toLowerCase().includes(primarySearchTerm.toLowerCase()) &&
+  seoTitleBase.length <= 44
+    ? `${seoTitleBase} — ${primarySearchTerm}`
+    : seoTitleBase;
+
 const seoTitle =
-  seoTitleBase.length <= 58
-    ? `${seoTitleBase} | Create With Soumay`
-    : `${seoTitleBase.slice(0, 54).trim()}… | Create With Soumay`;
+  seoSearchTitle.length <= 58
+    ? `${seoSearchTitle} | Create With Soumay`
+    : `${seoSearchTitle.slice(0, 54).trim()}… | Create With Soumay`;
 
 const naturalSeoDescription = [
   description,
@@ -142,6 +149,50 @@ const imageObjectSchema = p.image
     }
   : null;
 
+const howToSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'HowTo',
+  name: `How to use the ${p.title} AI image prompt`,
+  description: `A quick guide to using the ${p.title} AI image prompt with an AI image generator.`,
+  url: canonicalUrl.href,
+  step: [
+    {
+      '@type': 'HowToStep',
+      position: 1,
+      name: 'Copy the prompt',
+      text: 'Use the Copy Prompt button to copy the complete AI image prompt.'
+    },
+    {
+      '@type': 'HowToStep',
+      position: 2,
+      name: 'Choose your image generator',
+      text: 'Open the AI image generation tool you normally use.'
+    },
+    {
+      '@type': 'HowToStep',
+      position: 3,
+      name: p.referenceImageRequired === true
+        ? 'Upload your reference photo'
+        : 'Add a reference image if useful',
+      text: p.referenceImageRequired === true
+        ? 'Use a clear reference photo so the supported image generator has a strong identity reference.'
+        : 'A reference image is optional for this prompt; use one when it helps guide the result.'
+    },
+    {
+      '@type': 'HowToStep',
+      position: 4,
+      name: 'Paste and generate',
+      text: 'Paste the prompt and generate your first result.'
+    },
+    {
+      '@type': 'HowToStep',
+      position: 5,
+      name: 'Refine one detail at a time',
+      text: 'Adjust lighting, pose, clothing, location or composition instead of changing everything simultaneously.'
+    }
+  ]
+};
+
 const breadcrumbSchema = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
@@ -190,6 +241,11 @@ const breadcrumbSchema = {
   <script
     type="application/ld+json"
     set:html={JSON.stringify(breadcrumbSchema)}
+  />
+
+  <script
+    type="application/ld+json"
+    set:html={JSON.stringify(howToSchema)}
   />
 
   {imageObjectSchema && (
@@ -302,6 +358,7 @@ const breadcrumbSchema = {
           width="1080"
           height="1920"
           loading="eager"
+          fetchpriority="high"
           decoding="async"
         />
         <figcaption>Example visual result this prompt is designed to create.</figcaption>
