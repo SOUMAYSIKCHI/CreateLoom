@@ -10,12 +10,6 @@
       "photorealistic"
     ],
     "prompt": "Create a highly realistic editorial street-fashion photograph using the provided reference image for the exact overall composition, environment, lighting, pose, clothing style, flowers, car placement, camera perspective, and visual mood, while using the uploaded face-reference image as the sole identity source for the person.\n\nSUBJECT — EXACT IDENTITY & BODY PRESERVATION\n\nReplace the person in the reference image with the person from the uploaded face-reference photo.\n\nThe uploaded person must remain unmistakably the same real person. Identity preservation is the highest priority.\n\nPreserve the uploaded person's:\n\nExact face shape and facial structure\n\nForehead, eyebrows, eyes, eyelids and eye shape\n\nNose shape and proportions\n\nLips and mouth structure\n\nCheekbones and jawline\n\nChin and facial proportions\n\nNatural skin tone and texture\n\nHairline and naturally visible hairstyle\n\nFacial hair pattern, if present\n\nNatural asymmetry and subtle facial imperfections\n\nOverall recognizable identity\n\nDo not redesign, beautify, feminize, masculinize, age, de-age, or otherwise modify the person's face.\n\nAlso preserve the uploaded person's natural body identity and proportions:\n\nNatural height and overall proportions\n\nShoulder width\n\nTorso and limb proportions\n\nNatural body shape\n\nNatural posture and physical characteristics\n\nDo not make the body unnaturally taller, shorter, thinner, broader, more muscular, curvier, or otherwise different from the uploaded person.\n\nThe final image must look like the exact same real person naturally photographed in the reference scene.\n\nGENDER & APPEARANCE\n\nThe uploaded person may be male or female.\n\nAutomatically preserve the person's actual gender presentation and physical characteristics from the uploaded image. Do not convert a girl into a boy or a boy into a girl.\n\nThe reference image should control the scene and styling, not the person's identity.\n\nPOSE & EXPRESSION\n\nRecreate the reference pose as closely as possible.\n\nThe person should be:\n\nLeaning casually against the side of the white/silver car\n\nBody positioned and angled similarly to the reference\n\nOne leg naturally relaxed\n\nHolding the bouquet in front of the torso with both hands\n\nHead positioned and tilted similarly to the reference\n\nWearing a relaxed, romantic, confident expression\n\nMaintaining natural facial proportions and realistic anatomy\n\nAdapt the pose naturally to the uploaded person's actual body proportions.\n\nDo not distort the body or force an anatomically impossible pose.\n\nCLOTHING — REFERENCE-BASED, BUT NATURALLY ADAPTED\n\nRecreate the same clothing style, color, silhouette, material, and overall appearance shown in the reference image, but adapt it naturally to the uploaded person's gender and body.\n\nThe clothing should look realistically fitted to the person's actual body.\n\nIf the reference contains the black outfit shown above:\n\nRelaxed all-black outfit\n\nLoose black button-up shirt\n\nNaturally open upper buttons where appropriate\n\nRelaxed black wide-leg trousers\n\nRealistic cotton/linen texture\n\nNatural fabric folds and wrinkles\n\nNo logos\n\nNo patterns\n\nNo unnecessary accessories\n\nThe clothing may change, but the person's face, identity, hairstyle, body proportions, and natural physical characteristics must NOT change.\n\nDo not use the reference person's face or body as the identity source.\n\nFLOWERS — EXACTLY MATCH THE REFERENCE\n\nRecreate the bouquet precisely:\n\nLarge, dense bouquet\n\nDeep red/crimson roses\n\nMany tightly packed individual roses\n\nClearly visible realistic petals\n\nDark green foliage\n\nNatural beige/brown kraft-paper wrapping\n\nSame approximate size and shape as the reference\n\nHeld naturally at approximately waist/chest level\n\nDo not replace the roses with other flowers.\n\nBACKGROUND & LOCATION — PRESERVE EXACTLY\n\nRecreate the reference environment as closely as possible.\n\nUse the same visual setting:\n\nEuropean/Parisian-style tree-lined city street\n\nMature tall trees forming a leafy canopy\n\nWarm sunlight filtering through the leaves\n\nHistoric beige/cream stone architecture on the right\n\nDistinctive arched openings/windows\n\nParked cars lining the street\n\nUrban sidewalk and road\n\nDistant street signs and subtle pedestrians\n\nNatural depth and perspective\n\nDo not replace this with a generic city street, studio, garden, modern street, or unrelated location.\n\nPreserve the same spatial arrangement, perspective, depth, architecture, and environmental character as the reference.\n\nCAR\n\nInclude the same visual type of white/silver modern car from the reference.\n\nPreserve:\n\nCar position relative to the person\n\nVisible side mirror\n\nDoors\n\nWindows\n\nSide profile\n\nPerspective\n\nApproximate proportions and placement\n\nNo distracting branding, logos, or unrealistic vehicle geometry.\n\nLIGHTING\n\nMatch the reference lighting precisely:\n\nWarm nostalgic afternoon sunlight\n\nSoft but clearly visible dappled sunlight through tree leaves\n\nNatural highlights and shadows\n\nRealistic light falling across the person's face, clothing, bouquet, car, and pavement\n\nGentle atmospheric haze\n\nWarm golden tones\n\nNatural exposure\n\nSubtle cinematic/film-like softness\n\nLighting must remain physically realistic and consistent throughout the scene.\n\nCAMERA & COMPOSITION\n\nVertical 9:16 portrait composition.\n\nUse approximately:\n\nEye/chest-level camera position\n\nNatural smartphone/editorial-camera perspective\n\nSimilar framing to the reference\n\nSimilar subject placement\n\nSimilar car placement\n\nSimilar architectural depth\n\nRealistic perspective\n\nMild natural background softness\n\nThe person's face must remain clearly recognizable and naturally detailed.\n\nDo not use excessive artificial bokeh that destroys the background.\n\nPHOTOGRAPHIC REALISM\n\nCreate an ultra-realistic candid editorial street photograph.\n\nThe final image should contain:\n\nAuthentic human skin texture\n\nNatural pores and subtle imperfections\n\nRealistic hair strands\n\nRealistic fabric texture\n\nPhysically accurate shadows\n\nRealistic hands and fingers\n\nNatural bouquet details\n\nAccurate reflections on the car\n\nRealistic environmental lighting\n\nSubtle film grain\n\nSlight vintage photographic character\n\nWarm cinematic color grading\n\nThe result must look like a genuine photograph captured on a real European street, not an AI-generated image, illustration, CGI render, or digitally composited scene.\n\nCRITICAL IDENTITY RULE\n\nFACE AND BODY IDENTITY > EVERYTHING ELSE.\n\nThe uploaded person's face and natural body must remain unchanged.\n\nUse the reference image only for:\nscene + background + pose + clothing + bouquet + car + lighting + composition + photographic mood.\n\nUse the uploaded image only for:\nperson's identity + face + natural body proportions + physical characteristics.\n\nDo not copy the reference person's facial features or body shape onto the uploaded person.\n\nNEGATIVE PROMPT\n\ndifferent person, altered identity, face replacement error, changed face shape, changed forehead, changed eyebrows, changed eyes, changed nose, changed lips, changed jawline, changed cheekbones, altered facial proportions, feminized face, masculinized face, beautified face, artificial beauty, excessive retouching, plastic skin, smooth skin, changed skin tone, changed hairstyle, changed hairline, changed facial hair, changed body shape, changed body proportions, thinner body, wider body, taller body, shorter body, exaggerated curves, exaggerated muscles, unrealistic anatomy, distorted hands, extra fingers, missing fingers, malformed hands, duplicated limbs, different person wearing the clothes, incorrect clothing, different outfit color, colorful clothing, logos, jewelry, accessories, different flowers, white roses, tulips, artificial bouquet, incorrect bouquet, generic background, studio background, modern city background, incorrect architecture, altered car, distorted car, excessive bokeh, oversaturated colors, CGI, 3D render, illustration, cartoon, anime, artificial skin, fantasy elements, text, captions, watermark, logo, unnatural shadows, unrealistic lighting.",
-    "best_for": "Couple photos, relationship posts and romantic AI image generation.",
-    "prompt_tips": [
-      "Use a clear reference image when identity consistency matters.",
-      "Describe any clothing, location or prop you want to change before generating.",
-      "If your generator supports image references, keep the reference strength high enough to preserve recognizable features."
-    ],
     "image": "/images/prompts/street1.jpeg",
     "trending": true,
     "type": "Couple",
@@ -51,7 +45,13 @@
     "trendStatus": "current",
     "trendSource": "editorial",
     "createdAt": "2026-09-14",
-    "updatedAt": "2026-09-14"
+    "updatedAt": "2026-09-14",
+    "bestFor": "Couple photos, relationship posts and romantic AI image generation.",
+    "promptTips": [
+      "Use a clear reference image when identity consistency matters.",
+      "Describe any clothing, location or prop you want to change before generating.",
+      "If your generator supports image references, keep the reference strength high enough to preserve recognizable features."
+    ]
   },
   {
     "noId": 2,
@@ -64,12 +64,6 @@
       "aesthetic"
     ],
     "prompt": "Spontaneous 9:16 disposable-film shot in a dark garden. Girl holds a huge bouquet of sharp white peonies, turning her head aside with a soft smile. Strong motion blur on face and flowing hair, recognizable features. Airy white off-shoulder ruffled lace dress, nude square manicure. Harsh direct flash, black background with faint warm window light, natural skin texture, heavy film grain, vintage colors, soft edges.",
-    "best_for": "Profile photos, and casual social posts.",
-    "prompt_tips": [
-      "Use a clear reference image when identity consistency matters.",
-      "Describe any clothing, location or prop you want to change before generating.",
-      "If your generator supports image references, keep the reference strength high enough to preserve recognizable features."
-    ],
     "image": "/images/prompts/aesthetic1.jpeg",
     "trending": true,
     "type": "Girl",
@@ -105,7 +99,13 @@
     "trendStatus": "current",
     "trendSource": "editorial",
     "createdAt": "2026-09-14",
-    "updatedAt": "2026-09-14"
+    "updatedAt": "2026-09-14",
+    "bestFor": "Profile photos, and casual social posts.",
+    "promptTips": [
+      "Use a clear reference image when identity consistency matters.",
+      "Describe any clothing, location or prop you want to change before generating.",
+      "If your generator supports image references, keep the reference strength high enough to preserve recognizable features."
+    ]
   },
   {
     "noId": 3,
@@ -119,12 +119,6 @@
       "Ganesh Chaturthi"
     ],
     "prompt": "Create a highly realistic, emotionally intimate Ganesh Chaturthi devotional photograph using the uploaded reference image as the PRIMARY reference for the entire composition, while using the uploaded face-reference image as the SOLE identity reference for the person.\n\nCOMPOSITION & SCENE — RECREATE THE REFERENCE: Recreate the same close-up portrait composition as the reference: the person standing extremely close to a beautifully decorated Lord Ganesha idol, with their face gently touching/near Ganesha Ji's cheek and trunk area in a tender devotional moment. Maintain the same intimate framing, camera distance, perspective, head positioning, facial angle, crop, depth of field, and overall visual balance.\n\nShow a large, beautifully crafted Lord Ganesha idol with EXACTLY ONE elephant trunk — anatomically correct and clearly visible. Do NOT generate two trunks, duplicated facial features, or any extra trunk.\n\nRecreate the richly decorated Ganesh Chaturthi environment: ornate golden crown on Ganesha Ji, traditional decorative details, red and yellow flower garlands, marigold flowers, warm golden festive decorations, glowing bokeh lights, and a luxurious devotional atmosphere. Keep the background softly blurred with warm golden illumination exactly like a premium festival photograph.\n\nPERSON — ABSOLUTE IDENTITY PRESERVATION: Replace the person in the reference scene with the exact person from the uploaded face-reference image.\n\nThe uploaded person may be male or female. Do NOT assume, alter, feminize, masculinize, or reinterpret their gender or appearance.\n\nPreserve the person's identity with maximum fidelity:\n\nexact face shape and proportions\n\nforehead and hairline\n\neyebrows\n\neyes, eyelids and eye shape\n\nnose shape and proportions\n\nlips and natural mouth shape\n\ncheeks and cheekbones\n\njawline and chin\n\nskin tone and natural skin texture\n\nears\n\nfacial hair, if present\n\nhairstyle/hair texture and natural hairline\n\nall recognizable facial characteristics\n\nBODY STRUCTURE MUST ALSO REMAIN THE SAME AS THE UPLOADED PERSON. Preserve their natural body proportions, physique, shoulders, neck, height impression, and overall anatomical structure. Do not make the person thinner, heavier, taller, shorter, more muscular, more feminine, or more masculine.\n\nDo not beautify or redesign the person. No face replacement with a generic model, no facial morphing, no altered facial proportions, no artificial symmetry, and no change to their recognizable identity.\n\nPOSE & EXPRESSION: Recreate the same gentle devotional pose from the reference. The person's face should be naturally positioned very close to Ganesha Ji, creating the same affectionate, peaceful Ganesh Chaturthi moment. Preserve the person's natural facial proportions while matching the reference's head tilt, eye direction, expression, and overall pose as closely as physically possible.\n\nCLOTHING & ACCESSORIES: Recreate the same traditional festive styling and visual appearance shown in the reference, while adapting the clothing naturally to the uploaded person's gender and appearance without changing their body structure. If jewelry is visible, reproduce the same style, placement, scale, and intricate detailing.\n\nLIGHTING & CAMERA: Warm golden temple/festival lighting, realistic skin illumination, subtle highlights, soft cinematic shadows, shallow depth of field, strong natural bokeh from decorative lights, realistic DSLR photography, close-up portrait lens, natural optical falloff, high dynamic range, authentic photographic texture.\n\nREALISM: Make the final result look like a genuine photograph captured during Ganesh Chaturthi, not AI-generated, not a painting, not CGI, not an illustration. Preserve realistic skin pores, natural hair strands, realistic idol texture, accurate jewelry reflections, physically believable lighting, and natural depth.\n\nREFERENCE FIDELITY: The provided reference image controls the composition, framing, environment, idol placement, pose, lighting, flowers, decorations, camera perspective, and overall mood.\n\nThe uploaded face-reference image controls the person's exact identity and body structure.\n\nDo not change the composition unnecessarily. Do not add extra people. Do not alter the devotional atmosphere. Do not introduce unrelated objects.\n\nFINAL REQUIREMENT: The result should look as though the exact person from the uploaded face-reference photograph was genuinely photographed in the reference Ganesh Chaturthi setting, while keeping their same face, same identity, same body structure, and natural appearance, regardless of whether the uploaded person is male or female.\n\nNegative prompt:\n\nduplicate face, second trunk, two trunks, extra trunk, malformed Ganesha, duplicate eyes, extra eyes, distorted face, changed identity, generic face, different person, face morphing, altered jawline, altered nose, altered eyes, beautified face, gender change, changed body shape, unrealistic anatomy, plastic skin, CGI, cartoon, illustration, painting, excessive smoothing, artificial facial symmetry, extra fingers, extra limbs, distorted hands, duplicate jewelry, warped ornaments, low detail, blurry face, unnatural lighting.",
-    "best_for": "Festival portraits, cultural celebrations and seasonal posts.",
-    "prompt_tips": [
-      "Use a clear reference image when identity consistency matters.",
-      "Describe any clothing, location or prop you want to change before generating.",
-      "If your generator supports image references, keep the reference strength high enough to preserve recognizable features."
-    ],
     "image": "/images/prompts/festival1.jpeg",
     "trending": true,
     "type": "Unisex",
@@ -160,7 +154,13 @@
     "trendStatus": "current",
     "trendSource": "editorial",
     "createdAt": "2026-09-14",
-    "updatedAt": "2026-09-14"
+    "updatedAt": "2026-09-14",
+    "bestFor": "Festival portraits, cultural celebrations and seasonal posts.",
+    "promptTips": [
+      "Use a clear reference image when identity consistency matters.",
+      "Describe any clothing, location or prop you want to change before generating.",
+      "If your generator supports image references, keep the reference strength high enough to preserve recognizable features."
+    ]
   },
   {
     "noId": 4,
@@ -173,12 +173,6 @@
       "couples"
     ],
     "prompt": "Photorealistic indoor recreation of a young South Asian couple during Ganesh Chaturthi matching composition, poses, clothing, lighting, and background; uses supplied face reference to reproduce the female subject’s natural facial identity and details.",
-    "best_for": "Festival portraits, cultural celebrations and seasonal posts.",
-    "prompt_tips": [
-      "Use a clear reference image when identity consistency matters.",
-      "Describe any clothing, location or prop you want to change before generating.",
-      "If your generator supports image references, keep the reference strength high enough to preserve recognizable features."
-    ],
     "image": "/images/prompts/Festival2.jpeg",
     "trending": true,
     "type": "Couple",
@@ -214,7 +208,13 @@
     "trendStatus": "current",
     "trendSource": "editorial",
     "createdAt": "2026-09-14",
-    "updatedAt": "2026-09-14"
+    "updatedAt": "2026-09-14",
+    "bestFor": "Festival portraits, cultural celebrations and seasonal posts.",
+    "promptTips": [
+      "Use a clear reference image when identity consistency matters.",
+      "Describe any clothing, location or prop you want to change before generating.",
+      "If your generator supports image references, keep the reference strength high enough to preserve recognizable features."
+    ]
   },
   {
     "noId": 5,
@@ -230,7 +230,7 @@
     "tags": [
       "figurine",
       "3dtoy",
-      "naonbanana",
+      "nanobanana",
       "collectible",
       "aesthetic",
       "viral",
