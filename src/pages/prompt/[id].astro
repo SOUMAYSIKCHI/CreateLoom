@@ -3,6 +3,8 @@ import Layout from '../../layouts/Layout.astro';
 import PromptCard from '../../components/PromptCard.astro';
 import prompts from '../../data/prompts.json';
 import blogs from '../../data/blogs.json';
+import trends from '../../data/trends.json';
+import guides from '../../data/ai-photo-guides.json';
 
 export function getStaticPaths() {
   return prompts.map((p) => ({
@@ -29,6 +31,59 @@ const relatedBlogs = blogs
       b.tags.some((t) => p.tags.includes(t))
   )
   .slice(0, 3);
+
+const promptSearchText = [
+  p.title,
+  p.description,
+  p.category,
+  ...tags,
+  ...searchTerms
+]
+  .filter(Boolean)
+  .join(' ')
+  .toLowerCase();
+
+const relatedTrends = trends
+  .filter((t) => {
+    const trendSearchText = [
+      t.title,
+      t.eyebrow,
+      ...(Array.isArray(t.searchTerms) ? t.searchTerms : [])
+    ]
+      .filter(Boolean)
+      .join(' ')
+      .toLowerCase();
+
+    return (
+      trendSearchText.includes(p.category.toLowerCase()) ||
+      p.tags.some((tag) => trendSearchText.includes(String(tag).toLowerCase())) ||
+      searchTerms.some((term) => trendSearchText.includes(String(term).toLowerCase())) ||
+      trendSearchText.includes(promptSearchText.split(' ')[0] || '')
+    );
+  })
+  .slice(0, 2);
+
+const relatedGuides = guides
+  .filter((g) => {
+    const guideSearchText = [
+      g.title,
+      g.eyebrow,
+      ...(Array.isArray(g.searchTerms) ? g.searchTerms : [])
+    ]
+      .filter(Boolean)
+      .join(' ')
+      .toLowerCase();
+
+    return (
+      p.referenceImageRequired === true &&
+      (
+        guideSearchText.includes('face') ||
+        guideSearchText.includes('identity') ||
+        guideSearchText.includes('reference')
+      )
+    ) || p.tags.some((tag) => guideSearchText.includes(String(tag).toLowerCase()));
+  })
+  .slice(0, 2);
 
 const bestFor =
   p.bestFor ||
@@ -560,6 +615,36 @@ const breadcrumbSchema = {
 
         </div>
 
+      </section>
+    )}
+
+    <!-- Related AI Photo Resources -->
+    {(relatedTrends.length > 0 || relatedGuides.length > 0) && (
+      <section class="related-section resource-links-section">
+        <div class="eyebrow">Explore more</div>
+        <h2>AI Photo Trends & Guides</h2>
+        <p class="section-description">
+          Discover related AI photo trends and practical guides that can help
+          you create better results with this prompt.
+        </p>
+
+        <div class="resource-link-grid">
+          {relatedTrends.map((trend) => (
+            <a class="resource-link-card" href={`/trends/${trend.slug}/`}>
+              <span class="resource-link-type">AI Photo Trend</span>
+              <h3>{trend.title}</h3>
+              <span class="card-link">Explore trend →</span>
+            </a>
+          ))}
+
+          {relatedGuides.map((guide) => (
+            <a class="resource-link-card" href={`/ai-photo-guides/${guide.slug}/`}>
+              <span class="resource-link-type">AI Photo Guide</span>
+              <h3>{guide.title}</h3>
+              <span class="card-link">Read guide →</span>
+            </a>
+          ))}
+        </div>
       </section>
     )}
 
@@ -1113,6 +1198,48 @@ const breadcrumbSchema = {
     font-weight: 700;
   }
 
+  .resource-link-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+    margin-top: 24px;
+  }
+
+  .resource-link-card {
+    display: block;
+    padding: 20px;
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 16px;
+    background: rgba(255,255,255,0.025);
+    color: inherit;
+    text-decoration: none;
+    transition: transform .2s ease, border-color .2s ease;
+  }
+
+  .resource-link-card:hover {
+    transform: translateY(-3px);
+    border-color: rgba(139,92,246,0.4);
+  }
+
+  .resource-link-type {
+    color: #a78bfa;
+    font-size: .7rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: .08em;
+  }
+
+  .resource-link-card h3 {
+    margin: 9px 0 12px;
+    color: #fff;
+    line-height: 1.35;
+  }
+
+  .resource-link-card .card-link {
+    display: inline-block;
+    margin-top: 0;
+  }
+
   .prompt-cta {
     max-width: 920px;
     margin: 70px auto 0;
@@ -1203,6 +1330,10 @@ const breadcrumbSchema = {
     }
 
     .blog-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .resource-link-grid {
       grid-template-columns: 1fr;
     }
 
