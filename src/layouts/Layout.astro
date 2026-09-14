@@ -72,6 +72,7 @@ const year = new Date().getFullYear();
   src="https://www.googletagmanager.com/gtag/js?id=G-12W9ZPFSFG"
 ></script>
 
+
 <script is:inline>
   window.dataLayer = window.dataLayer || [];
 
@@ -128,7 +129,12 @@ const year = new Date().getFullYear();
     rel="canonical"
     href={canonicalHref}
   />
-
+  <link
+  rel="alternate"
+  type="application/rss+xml"
+  title="CreateLoom Blog"
+  href={new URL('/rss.xml', Astro.site ?? siteUrl).href}
+/>
   <link
     rel="sitemap"
     type="application/xml"
