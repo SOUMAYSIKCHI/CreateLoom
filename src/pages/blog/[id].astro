@@ -37,17 +37,17 @@ const relatedPrompts = prompts
   )
   .slice(0, 4);
 
-const siteUrl = Astro.site || 'https://createloom.vercel.app';
+const siteUrl = Astro.site || 'https://createwithsoumay.store';
 
 const canonicalUrl = new URL(
   `/blog/${b.id}/`,
   siteUrl
 );
 
-const authorName = b.author || b.authorName || 'CreateLoom Editorial Team';
-const authorSchema = b.author || b.authorName
+const authorName = b.author || b.authorName || 'Create With Soumay Editorial Team';
+const authorSchema = b.author
   ? { '@type': 'Person', name: authorName }
-  : { '@type': 'Organization', name: 'CreateLoom', url: new URL('/', siteUrl).href };
+  : { '@type': 'Organization', name: authorName, url: new URL('/', siteUrl).href };
 const articleImage = b.image
   ? new URL(b.image, siteUrl).href
   : undefined;
@@ -69,7 +69,7 @@ const articleSchema = {
   author: authorSchema,
   publisher: {
     '@type': 'Organization',
-    name: 'CreateLoom',
+    name: 'Create With Soumay',
     url: new URL('/', siteUrl).href
   },
   articleSection: b.category,
@@ -120,7 +120,7 @@ const websiteSchema = {
 ---
 
 <Layout
-  title={`${b.title} | CreateLoom Blog`}
+  title={`${b.title} | Create With Soumay Blog`}
   description={b.excerpt}
   active="Blog"
   ogImage={articleImage}
@@ -296,7 +296,7 @@ const websiteSchema = {
 
             <p class="section-description">
               Turn the ideas from this guide into actual images with
-              detailed, ready-to-copy CreateLoom prompts.
+              detailed, ready-to-copy Create With Soumay prompts.
             </p>
 
 
@@ -396,7 +396,7 @@ const websiteSchema = {
 
         <section class="related-section creator-resources-section">
           <div class="eyebrow">
-            Explore CreateLoom
+            Explore Create With Soumay
           </div>
 
           <h2>
@@ -438,7 +438,7 @@ const websiteSchema = {
         <section class="article-cta">
 
           <div class="eyebrow">
-            CreateLoom Prompt Library
+            Create With Soumay Prompt Library
           </div>
 
           <h2>
@@ -503,7 +503,7 @@ const websiteSchema = {
         <div class="sidebar-card">
 
           <div class="eyebrow">
-            CreateLoom
+            Create With Soumay
           </div>
 
           <h3>
@@ -538,7 +538,7 @@ const websiteSchema = {
           </h3>
 
           <p>
-            Explore more CreateLoom articles covering AI,
+            Explore more Create With Soumay articles covering AI,
             Instagram and creator growth.
           </p>
 
