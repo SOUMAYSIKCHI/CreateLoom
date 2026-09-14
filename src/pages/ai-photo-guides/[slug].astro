@@ -126,14 +126,14 @@ const schemas = [webPageSchema, faqSchema, howToSchema].filter(Boolean);
             <p>{guide.problem.content}</p>
           </section>
 
-          <section class="guide-section">
+          <section class="guide-section" id="common-causes">
             <h2>Common causes</h2>
             <ul class="check-list">
               {guide.commonCauses.map((item) => <li>{item}</li>)}
             </ul>
           </section>
 
-          <section class="guide-section">
+          <section class="guide-section" id="solutions">
             <h2>Practical solutions</h2>
             <div class="solution-grid">
               {guide.solutions.map((solution) => (
@@ -145,7 +145,7 @@ const schemas = [webPageSchema, faqSchema, howToSchema].filter(Boolean);
             </div>
           </section>
 
-          <section class="guide-section prompt-box">
+          <section class="guide-section prompt-box" id="prompt-example">
             <div class="section-label">Prompt example</div>
             <h2>{guide.promptExample.title}</h2>
             <pre><code>{guide.promptExample.prompt}</code></pre>
@@ -154,7 +154,7 @@ const schemas = [webPageSchema, faqSchema, howToSchema].filter(Boolean);
             </button>
           </section>
 
-          <section class="guide-section">
+          <section class="guide-section" id="steps">
             <h2>Step-by-step fix</h2>
             <ol class="steps">
               {guide.steps.map((step, index) => (
@@ -166,7 +166,7 @@ const schemas = [webPageSchema, faqSchema, howToSchema].filter(Boolean);
             </ol>
           </section>
 
-          <section class="guide-section">
+          <section class="guide-section" id="tips">
             <h2>Tips for better results</h2>
             <ul class="tips-list">
               {guide.tips.map((tip) => <li>{tip}</li>)}
@@ -244,7 +244,7 @@ const schemas = [webPageSchema, faqSchema, howToSchema].filter(Boolean);
           )}
 
           {guide.faq?.length > 0 && (
-            <section class="guide-section faq-section">
+            <section class="guide-section faq-section" id="faq">
               <div class="section-label">FAQ</div>
               <h2>Frequently asked questions</h2>
 
@@ -422,6 +422,7 @@ const schemas = [webPageSchema, faqSchema, howToSchema].filter(Boolean);
   .solution-card,
   .related-card,
   .sidebar-card {
+    color: #252525;
     border: 1px solid #e7e7e7;
     border-radius: 16px;
     padding: 22px;
@@ -430,6 +431,7 @@ const schemas = [webPageSchema, faqSchema, howToSchema].filter(Boolean);
 
   .solution-card h3,
   .related-card h3 {
+    color: #161616;
     margin: 0 0 8px;
     font-size: 1.05rem;
   }
@@ -442,6 +444,7 @@ const schemas = [webPageSchema, faqSchema, howToSchema].filter(Boolean);
   }
 
   .prompt-box {
+    color: #252525;
     position: relative;
     padding: 26px;
     border-radius: 18px;
@@ -536,7 +539,7 @@ const schemas = [webPageSchema, faqSchema, howToSchema].filter(Boolean);
   }
 
   .section-heading-row > a {
-    color: inherit;
+    color: #444;
     font-size: 0.9rem;
     white-space: nowrap;
   }
@@ -546,6 +549,7 @@ const schemas = [webPageSchema, faqSchema, howToSchema].filter(Boolean);
   }
 
   .related-card {
+    color: #252525;
     display: block;
     color: inherit;
     text-decoration: none;
@@ -565,18 +569,21 @@ const schemas = [webPageSchema, faqSchema, howToSchema].filter(Boolean);
   }
 
   .sidebar-card h2 {
+    color: #161616;
     margin: 10px 0;
     font-size: 1.25rem;
     line-height: 1.25;
   }
 
   .sidebar-card p {
+    color: #555;
     margin: 0 0 18px;
     font-size: 0.92rem;
     line-height: 1.65;
   }
 
   .sidebar-card > a:not(.primary-button) {
+    color: #333;
     display: block;
     padding: 9px 0;
     color: inherit;
@@ -595,12 +602,14 @@ const schemas = [webPageSchema, faqSchema, howToSchema].filter(Boolean);
   }
 
   .faq-list summary {
+    color: #222;
     padding: 18px 0;
     cursor: pointer;
     font-weight: 650;
   }
 
   .faq-list details p {
+    color: #555;
     margin: 0 0 18px;
   }
 
