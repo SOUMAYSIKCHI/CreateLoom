@@ -47,8 +47,8 @@ const categoryDescriptions = {
 ---
 
 <Layout
-  title="AI Image Prompts — 40+ Ready-to-Use Prompts | Create With Soumay"
-  description="Browse Create With Soumay's collection of detailed AI image prompts for couples, selfies, portraits, fashion, vintage photos, anime, travel and more. Search, filter and copy prompts."
+  title="Free AI Image Prompts | 40+ Ready-to-Use Prompts | Create With Soumay"
+  description="Explore free AI image prompts for couples, selfies, portraits, fashion, vintage photography, anime, travel and more. Search, filter and copy ready-to-use prompts for ChatGPT, Gemini, Nano Banana and Midjourney."
   active="Prompts"
 >
 
@@ -59,14 +59,15 @@ const categoryDescriptions = {
       <div class="eyebrow">Create With Soumay Prompt Library</div>
 
       <h1>
-        AI Image
+        Free AI Image
         <span class="gradient-text">Prompts</span>
       </h1>
 
       <p class="hero-description">
-        Explore detailed, ready-to-use AI image prompts for realistic
-        portraits, couple photos, selfies, fashion, vintage photography,
-        anime and creative social content.
+        Explore free, ready-to-use AI image prompts for realistic portraits,
+        couple photos, selfies, fashion, vintage photography, anime and
+        creative social content. Copy and customize prompts for your favorite
+        AI image generator.
       </p>
 
       <form class="search" id="promptSearchForm">
@@ -721,19 +722,32 @@ const categoryDescriptions = {
     set:html={JSON.stringify({
       '@context': 'https://schema.org',
       '@type': 'CollectionPage',
-      name: 'AI Image Prompts — 40+ Ready-to-Use Prompts',
+      name: 'Free AI Image Prompts | 40+ Ready-to-Use Prompts',
       description:
-        "Browse Create With Soumay's collection of detailed AI image prompts for couples, selfies, portraits, fashion, vintage photos, anime, travel and more.",
+        "Explore free AI image prompts for couples, selfies, portraits, fashion, vintage photography, anime, travel and more. Search, filter and copy ready-to-use prompts for ChatGPT, Gemini, Nano Banana and Midjourney.",
       url: 'https://createwithsoumay.store/prompts/',
       isPartOf: {
         '@type': 'WebSite',
         name: 'Create With Soumay',
         url: 'https://createwithsoumay.store/'
       },
+      publisher: {
+        '@type': 'Organization',
+        name: 'Create With Soumay',
+        url: 'https://createwithsoumay.store/',
+        logo: 'https://createwithsoumay.store/images/createloom-logo.png'
+      },
+      mainEntity: {
+        '@type': 'ItemList',
+        name: 'AI Image Prompt Library',
+        numberOfItems: prompts.length,
+        itemListOrder: 'https://schema.org/ItemListOrderAscending'
+      },
       about: [
         'AI image prompts',
         'AI photography prompts',
         'portrait prompts',
+        'couple photo prompts',
         'Instagram visual content'
       ],
       numberOfItems: prompts.length
