@@ -60,7 +60,7 @@ const categoryDescriptions = {
 
 const description =
   categoryDescriptions[category] ||
-  `Explore detailed ${category.toLowerCase()} AI image prompts on CreateLoom.`;
+  `Explore detailed ${category.toLowerCase()} AI image prompts on Create With Soumay.`;
 
 const related = prompts
   .filter((p) => p.category !== category)
@@ -76,7 +76,7 @@ const canonicalUrl = new URL(
   Astro.site || Astro.url
 ).href;
 
-const pageTitle = `${category} AI Prompts — ${items.length}+ Ready-to-Use Prompts | CreateLoom`;
+const pageTitle = `${category} AI Prompts — ${items.length}+ Ready-to-Use Prompts | Create With Soumay`;
 ---
 
 <Layout
@@ -361,7 +361,7 @@ const pageTitle = `${category} AI Prompts — ${items.length}+ Ready-to-Use Prom
 
       <div class="section-heading">
         <div>
-          <div class="eyebrow">More from CreateLoom</div>
+          <div class="eyebrow">More from Create With Soumay</div>
           <h2>Creator Resources & Tools</h2>
           <p>
             Explore related resources after choosing your {category.toLowerCase()} prompt.
@@ -382,7 +382,7 @@ const pageTitle = `${category} AI Prompts — ${items.length}+ Ready-to-Use Prom
 
         <a href="/prompts/">
           <strong>All AI Image Prompts</strong>
-          <span>Browse every CreateLoom prompt category.</span>
+          <span>Browse every Create With Soumay prompt category.</span>
         </a>
       </div>
 
@@ -407,7 +407,7 @@ const pageTitle = `${category} AI Prompts — ${items.length}+ Ready-to-Use Prom
         </h2>
 
         <p>
-          Browse the complete CreateLoom library for more styles,
+          Browse the complete Create With Soumay library for more styles,
           concepts and AI image prompts.
         </p>
 
@@ -437,7 +437,7 @@ const pageTitle = `${category} AI Prompts — ${items.length}+ Ready-to-Use Prom
       url: canonicalUrl,
       isPartOf: {
         '@type': 'WebSite',
-        name: 'CreateLoom',
+        name: 'Create With Soumay',
         url: new URL('/', Astro.site || Astro.url).href
       },
       mainEntity: {
@@ -466,7 +466,7 @@ const pageTitle = `${category} AI Prompts — ${items.length}+ Ready-to-Use Prom
       url: canonicalUrl,
       isPartOf: {
         '@type': 'WebSite',
-        name: 'CreateLoom',
+        name: 'Create With Soumay',
         url: new URL('/', Astro.site || Astro.url).href
       },
       about: {
