@@ -46,8 +46,16 @@ const canonicalUrl = new URL(
 
 const authorName = b.author || b.authorName || 'Create With Soumay Editorial Team';
 const authorSchema = b.author
-  ? { '@type': 'Person', name: authorName }
-  : { '@type': 'Organization', name: authorName, url: new URL('/', siteUrl).href };
+  ? {
+      '@type': 'Person',
+      name: authorName,
+      url: new URL('/about/', siteUrl).href
+    }
+  : {
+      '@type': 'Organization',
+      name: authorName,
+      url: new URL('/', siteUrl).href
+    };
 const articleImage = b.image
   ? new URL(b.image, siteUrl).href
   : undefined;
@@ -66,11 +74,16 @@ const articleSchema = {
   datePublished: b.date,
   dateModified: b.updatedAt || b.date,
   mainEntityOfPage: canonicalUrl.href,
+  ...(articleImage ? { image: [articleImage] } : {}),
   author: authorSchema,
   publisher: {
     '@type': 'Organization',
     name: 'Create With Soumay',
-    url: new URL('/', siteUrl).href
+    url: new URL('/', siteUrl).href,
+    logo: {
+      '@type': 'ImageObject',
+      url: new URL('/images/createloom-logo.png', siteUrl).href
+    }
   },
   articleSection: b.category,
   keywords: b.tags.join(', ')
