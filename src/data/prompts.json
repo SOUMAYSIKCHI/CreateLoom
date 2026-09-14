@@ -489,7 +489,7 @@
       "Describe any clothing, location or prop you want changed before generating.",
       "If your generator supports image references, keep the reference strength high enough to preserve recognizable features."
     ],
-    "image": "/images/prompts/createloom.png",
+    "image": "/images/prompts/no9.webp",
     "referenceImageRequired": true,
     "trending": true,
     "trendStatus": "current",
@@ -545,7 +545,7 @@
       "Describe any clothing, location or prop you want changed before generating.",
       "If your generator supports image references, keep the reference strength high enough to preserve recognizable features."
     ],
-    "image": "/images/prompts/createloom.png",
+    "image": "/images/prompts/no10.webp",
     "referenceImageRequired": true,
     "trending": true,
     "trendStatus": "hot",
