@@ -123,6 +123,31 @@ const webPageSchema = {
         </section>
       )}
 
+      <section class="resource-section">
+        <div class="section-heading">
+          <div>
+            <div class="eyebrow">Create better AI images</div>
+            <h2>Explore AI Photo Guides & Prompts</h2>
+          </div>
+        </div>
+
+        <div class="resource-grid">
+          <a class="resource-card" href="/ai-photo-guides/">
+            <span class="resource-type">AI Photo Guides</span>
+            <h3>Learn how to create better AI photos</h3>
+            <p>Get practical guidance for face consistency, realistic results, AI hands, prompts and other common image-generation problems.</p>
+            <span class="read-link">Read AI photo guides →</span>
+          </a>
+
+          <a class="resource-card" href="/prompts/">
+            <span class="resource-type">AI Image Prompts</span>
+            <h3>Try ready-to-use AI image prompts</h3>
+            <p>Browse prompts for couples, selfies, portraits, fashion, vintage photography, anime and more.</p>
+            <span class="read-link">Explore AI prompts →</span>
+          </a>
+        </div>
+      </section>
+
       <section class="bottom-cta">
         <div>
           <div class="eyebrow">Create something</div>
@@ -290,6 +315,62 @@ const webPageSchema = {
     font-weight: 700;
   }
 
+  .resource-section {
+    margin-bottom: 64px;
+  }
+
+  .resource-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+  }
+
+  .resource-card {
+    display: flex;
+    min-height: 210px;
+    flex-direction: column;
+    padding: 25px;
+    border: 1px solid #292631;
+    border-radius: 18px;
+    background: #111016;
+    color: #f4f2f8;
+    text-decoration: none;
+    transition: transform 0.18s ease, border-color 0.18s ease, background 0.18s ease;
+  }
+
+  .resource-card:hover {
+    transform: translateY(-3px);
+    border-color: #51495f;
+    background: #141219;
+  }
+
+  .resource-type {
+    color: #9f98aa;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
+
+  .resource-card h3 {
+    margin: 10px 0;
+    color: #fff;
+    font-size: 1.2rem;
+    line-height: 1.3;
+  }
+
+  .resource-card p {
+    margin: 0;
+    color: #b9b4c3;
+    font-size: 0.92rem;
+    line-height: 1.65;
+  }
+
+  .resource-card .read-link {
+    margin-top: auto;
+    padding-top: 22px;
+  }
+
   .bottom-cta {
     display: flex;
     align-items: center;
@@ -339,6 +420,10 @@ const webPageSchema = {
     }
 
     .trend-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .resource-grid {
       grid-template-columns: 1fr;
     }
 
