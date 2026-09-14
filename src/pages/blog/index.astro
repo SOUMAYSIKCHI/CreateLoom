@@ -2,7 +2,7 @@
 import Layout from '../../layouts/Layout.astro';
 import blogs from '../../data/blogs.json';
 
-const siteUrl = (Astro.site || 'https://createloom.vercel.app')
+const siteUrl = (Astro.site || 'https://createwithsoumay.store')
   .toString()
   .replace(/\/$/, '');
 
@@ -26,18 +26,18 @@ const categoryDescriptions = {
 
 const getCategoryDescription = (category) =>
   categoryDescriptions[category] ||
-  `Explore ${category.toLowerCase()} guides and resources from CreateLoom.`;
+  `Explore ${category.toLowerCase()} guides and resources from Create With Soumay.`;
 
 const blogCollectionSchema = {
   '@context': 'https://schema.org',
   '@type': 'CollectionPage',
-  name: 'CreateLoom Blog — AI, Instagram & Creator Guides',
+  name: 'Create With Soumay Blog — AI, Instagram & Creator Guides',
   description:
-    'Explore detailed AI image, Instagram, creator growth and brand collaboration guides from CreateLoom.',
+    'Explore detailed AI image, Instagram, creator growth and brand collaboration guides from Create With Soumay.',
   url: `${siteUrl}/blog/`,
   isPartOf: {
     '@type': 'WebSite',
-    name: 'CreateLoom',
+    name: 'Create With Soumay',
     url: `${siteUrl}/`
   },
   mainEntity: {
@@ -91,11 +91,11 @@ const breadcrumbSchema = {
 ---
 
 <Layout
-  title="CreateLoom Blog — AI, Instagram & Creator Guides"
-  description="Explore detailed AI image, Instagram, creator growth and brand collaboration guides from CreateLoom. Practical advice, examples and workflows for creators."
+  title="Create With Soumay Blog — AI, Instagram & Creator Guides"
+  description="Explore detailed AI image, Instagram, creator growth and brand collaboration guides from Create With Soumay. Practical advice, examples and workflows for creators."
   active="Blog"
   ogImage={`${siteUrl}/images/createloom-logo.png`}
-  ogImageAlt="CreateLoom Blog — AI, Instagram & Creator Guides"
+  ogImageAlt="Create With Soumay Blog — AI, Instagram & Creator Guides"
 >
   <script type="application/ld+json" set:html={JSON.stringify(blogCollectionSchema)} />
   <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />
@@ -106,7 +106,7 @@ const breadcrumbSchema = {
     <div class="container">
 
       <div class="eyebrow">
-        CreateLoom Resources
+        Create With Soumay Resources
       </div>
 
       <h1>
@@ -128,7 +128,7 @@ const breadcrumbSchema = {
           name="q"
           placeholder="Search AI, Instagram, prompts, brands..."
           autocomplete="off"
-          aria-label="Search CreateLoom articles"
+          aria-label="Search Create With Soumay articles"
         />
 
         <button type="submit">
@@ -326,7 +326,7 @@ const breadcrumbSchema = {
           </h2>
 
           <p>
-            Search the complete CreateLoom article library.
+            Search the complete Create With Soumay article library.
           </p>
         </div>
 
@@ -479,7 +479,7 @@ const breadcrumbSchema = {
       </h2>
 
       <p>
-        The CreateLoom blog focuses on practical problems creators
+        The Create With Soumay blog focuses on practical problems creators
         encounter while making AI-assisted visual content and growing
         on social platforms. The goal is not simply to give you another
         list of generic tips, but to provide usable workflows,
@@ -502,7 +502,7 @@ const breadcrumbSchema = {
       <p>
         If you're looking for ready-to-use prompts rather than articles,
         you can also explore the
-        <a href="/prompts/">CreateLoom AI Prompt Library</a>.
+        <a href="/prompts/">Create With Soumay AI Prompt Library</a>.
       </p>
 
     </div>
@@ -515,7 +515,7 @@ const breadcrumbSchema = {
     <div class="container">
       <div class="section-heading">
         <div>
-          <div class="eyebrow">Explore CreateLoom</div>
+          <div class="eyebrow">Explore Create With Soumay</div>
           <h2>More Creator Resources</h2>
           <p>Continue from the guides into practical tools, prompts and creator resources.</p>
         </div>
