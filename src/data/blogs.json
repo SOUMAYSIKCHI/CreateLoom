@@ -348,5 +348,445 @@
       "Every prompt in CreateLoom's photo-style categories is written with these specific details already built in, which is part of why identity and realism tend to hold up better than in a prompt assembled from a generic adjective list."
     ],
     "authorName": "CreateLoom Editorial Team"
+  },
+  {
+    "id": "chatgpt-vs-gemini-2026",
+    "title": "ChatGPT vs Gemini in 2026: Which One Should You Actually Use?",
+    "category": "AI Tools",
+    "tags": [
+      "chatgpt",
+      "gemini",
+      "ai-comparison",
+      "ai-assistant",
+      "google-ai"
+    ],
+    "date": "2026-06-03",
+    "readTime": "6 min read",
+    "excerpt": "A practical, no-hype comparison of ChatGPT and Gemini in 2026 — what each one actually does better, what they cost, and which one fits your workflow.",
+    "content": [
+      "ChatGPT and Gemini are the two names most people type into a search bar when they're trying to decide which AI assistant is worth their time in 2026, and for good reason — they're the two most widely used general-purpose AI tools right now, and Gemini has recently overtaken ChatGPT as the single most searched AI term in the US. Total usage and search interest, though, aren't the same thing as which tool is actually better for what you need it for.",
+      "The honest answer is that both are genuinely good, and the choice mostly comes down to where you already spend your time. If your work and personal life run through Gmail, Google Docs, Sheets and Drive, Gemini's integration into those tools removes a lot of copy-paste friction that ChatGPT simply can't match, since it lives outside that ecosystem. If you're not particularly tied to Google's suite, that advantage mostly disappears.",
+      "Where ChatGPT still has an edge is breadth and integrations. It connects to more third-party tools, has a larger plugin and custom-GPT ecosystem, and tends to feel more flexible for people who bounce between very different kinds of tasks in the same session — writing, coding, brainstorming, image generation — without wanting to switch apps.",
+      "On image generation specifically, the gap has narrowed a lot. Gemini's image model, nicknamed Nano Banana, has become genuinely strong at photorealistic, identity-preserving edits — the kind of prompt where you upload a real photo and ask for a specific, believable change. ChatGPT's built-in image generation is more convenient if you're already mid-conversation there, and it tends to handle in-image text more reliably, which matters for anything poster-like.",
+      "Pricing is close enough that it shouldn't be the deciding factor for most people. Both offer a genuinely usable free tier and a roughly $20/month premium plan that unlocks higher usage limits, faster response times and more advanced models. If you're paying for one, it's worth actually using the free tier of the other for a week or two before committing, since your own workflow will tell you more than any comparison article.",
+      "### Where Gemini pulls ahead",
+      "Deep integration with Gmail, Docs, Sheets and Drive; strong performance summarizing or drafting content that already lives in Google's ecosystem; increasingly strong, natural-language-friendly image generation through Nano Banana.",
+      "### Where ChatGPT pulls ahead",
+      "Broader third-party integrations and plugin ecosystem; more flexible for switching between very different task types in one conversation; more reliable text rendering inside generated images.",
+      "### A simple way to decide",
+      "If you live inside Google Workspace daily, start with Gemini. If you use a wider mix of tools and want one assistant that adapts to all of them, start with ChatGPT. If you're a content creator who generates a lot of photo-style AI images from personal reference photos, it's worth testing both, since the two models can produce noticeably different results on the exact same prompt.",
+      "### You don't have to pick permanently",
+      "Most people who use AI tools daily eventually settle into using more than one — a primary assistant for everyday work, plus a second tool for the specific thing it happens to be better at. Treating this as a one-time decision adds pressure that isn't necessary; both tools are cheap enough, and different enough, that testing both for a real project is more useful than reading ten more comparison posts."
+    ],
+    "authorName": "CreateLoom Editorial Team"
+  },
+  {
+    "id": "best-ai-image-generators-compared",
+    "title": "Best AI Image Generators Compared: Midjourney, Nano Banana, and ChatGPT",
+    "category": "AI Tools",
+    "tags": [
+      "midjourney",
+      "nano-banana",
+      "ai-image-generator",
+      "chatgpt",
+      "comparison"
+    ],
+    "date": "2026-06-10",
+    "readTime": "6 min read",
+    "excerpt": "Midjourney, Gemini's Nano Banana, and ChatGPT's image tool all do different jobs well. Here's an honest breakdown of which one to reach for and when.",
+    "content": [
+      "The AI image generator you should use in 2026 depends entirely on what you're trying to make, and this is the single most common mistake people run into when they pick one tool and expect it to be good at everything. Midjourney, Gemini's Nano Banana, and ChatGPT's built-in image generation are all strong, but they're strong at genuinely different things.",
+      "Midjourney remains the strongest choice for pure artistic and illustrative output — concept art, stylized fashion imagery, editorial-style visuals, and anything where a distinctive artistic look matters more than photographic realism. It has the deepest community of shared prompt techniques and reference styles, which makes it easier to find a starting point for a specific artistic direction.",
+      "Nano Banana, Gemini's image model, has become the strongest choice for realistic, identity-preserving photo edits — taking an actual photo of a real person and changing the outfit, setting, era or format around them while keeping their face recognizable. This is the category almost every current Instagram AI-photo trend falls into, from figurine-style portraits to traditional-dress transformations.",
+      "ChatGPT's built-in image generation sits in between the two — not as artistically distinctive as Midjourney, not quite as strong at photorealistic identity preservation as Nano Banana, but genuinely convenient because it lives inside a conversation you're already having. It also tends to handle legible in-image text more reliably than either of the other two, which matters for posters, birthday cards or anything with a caption baked into the image.",
+      "Cost is a real factor worth weighing honestly. Midjourney requires its own paid subscription starting around $10/month with no meaningful free tier. Nano Banana comes bundled into Gemini's free and paid tiers. ChatGPT's image generation comes with a ChatGPT Plus subscription you may already have for other reasons. If you're only occasionally generating images, that alone might decide which tool makes sense to add.",
+      "### Pick Midjourney if",
+      "You want a distinctive artistic style, you're making concept art, illustration, or stylized editorial visuals, and photographic realism isn't the priority.",
+      "### Pick Nano Banana (Gemini) if",
+      "You're working from a real reference photo and need the result to still look like the actual person — portraits, outfit changes, trend-style transformations, restorations.",
+      "### Pick ChatGPT if",
+      "You want the image generation inside an ongoing conversation, need reliable text inside the image, or you're already paying for ChatGPT Plus for other reasons and don't want another subscription.",
+      "### A workflow that uses more than one",
+      "Many creators now use Nano Banana for the core identity-preserving photo, then bring the result into a separate step for any illustrated or stylized overlay work Midjourney handles better. Treating these tools as a small toolkit rather than a single all-purpose choice usually produces better final results than forcing one tool to do a job it wasn't built for."
+    ],
+    "authorName": "CreateLoom Editorial Team"
+  },
+  {
+    "id": "midjourney-v8-prompts-guide",
+    "title": "Midjourney V8 Prompt Guide: What Changed and How to Prompt It",
+    "category": "AI Tools",
+    "tags": [
+      "midjourney",
+      "midjourney-v8",
+      "ai-art",
+      "prompts",
+      "image-generation"
+    ],
+    "date": "2026-06-17",
+    "readTime": "5 min read",
+    "excerpt": "Midjourney's latest version brings faster generation and stronger detail retention. Here's what's actually different and how to adjust your prompts for it.",
+    "content": [
+      "Midjourney's newest version has pushed the tool further ahead on small-detail retention, faster generation speed, and support for higher-resolution output than earlier versions offered. If you've been prompting Midjourney the same way for a year or more, a few habits are worth revisiting, because some of the workarounds people relied on in earlier versions aren't necessary anymore and can actually hold back the newer model.",
+      "The biggest practical change is how much fine detail the model now retains without extra prompting effort. Earlier versions often needed repeated emphasis or specific keyword stacking to keep small details — jewelry, fabric texture, background elements — from getting muddied or dropped. The current version handles this more reliably by default, which means simpler, cleaner prompts often outperform the longer, keyword-heavy prompts that used to be necessary.",
+      "Resolution support has also improved meaningfully, which matters if your output is heading somewhere it'll be viewed large — a printed piece, a website hero image, a presentation slide — rather than just a small social media thumbnail. If your use case actually needs the extra resolution, it's worth specifying it directly rather than relying on an upscale pass afterward.",
+      "Speed improvements change the practical workflow more than people expect. Faster generation makes it much more reasonable to test small prompt variations back-to-back rather than trying to get everything perfect in a single attempt. Instead of writing one long, exhaustive prompt, it's often more efficient to write a clear, moderately detailed prompt, generate several quick variations, and adjust based on what you actually see.",
+      "### What to simplify in your prompts",
+      "Drop redundant quality keywords stacked on top of each other (\"highly detailed, ultra detailed, extremely detailed\") — the newer model doesn't need the repetition, and stacking synonyms rarely adds anything beyond the first instance.",
+      "### What's still worth being specific about",
+      "Composition, lighting direction, and artistic style references still benefit from clear, specific language. The model got better at rendering fine detail; it didn't get better at reading your mind about framing or mood, so those instructions are still worth being deliberate about.",
+      "### A practical prompting approach",
+      "Start with a clear, moderately detailed prompt describing subject, style, and composition. Generate a small batch of variations rather than one long attempt. Identify what's working and adjust only that element in the next round, rather than rewriting the whole prompt from scratch each time.",
+      "### Where Midjourney still fits best",
+      "Even with these improvements, Midjourney remains strongest for artistic, illustrative, and stylized work rather than realistic identity-preserving photo edits from a personal reference photo — for that specific job, a tool built around photo editing, like Gemini's Nano Banana, is still the more reliable choice."
+    ],
+    "authorName": "CreateLoom Editorial Team"
+  },
+  {
+    "id": "best-free-ai-tools-creators",
+    "title": "Best Free AI Tools for Content Creators in 2026",
+    "category": "AI Tools",
+    "tags": [
+      "free-ai-tools",
+      "content-creation",
+      "ai-tools-2026",
+      "creator-tools",
+      "budget"
+    ],
+    "date": "2026-06-24",
+    "readTime": "5 min read",
+    "excerpt": "You don't need a stack of paid subscriptions to create good content. Here's what's genuinely usable on free tiers in 2026, and where paying actually pays off.",
+    "content": [
+      "It's easy to assume that serious content creation requires a stack of paid AI subscriptions, but the free tiers of most major AI tools in 2026 are genuinely usable for real work, not just a crippled trial version designed to push you toward upgrading. Knowing which free tiers are actually worth relying on saves real money for creators just getting started.",
+      "For writing and captions, both ChatGPT's free tier and Gemini's free tier handle the vast majority of everyday content tasks — drafting captions, brainstorming Reel ideas, writing prompt variations, and outlining a content calendar. The paid tiers mostly add higher usage limits and slightly stronger reasoning for complex tasks, which most day-to-day content work doesn't need.",
+      "For image generation, Gemini's free tier includes access to Nano Banana with daily usage limits, which is enough for a creator posting a handful of AI photo concepts per week. If your content depends on generating dozens of images daily, the limits will start to matter, but for testing concepts and building an initial portfolio of prompts, the free tier is a reasonable starting point.",
+      "For research and fact-checking, Perplexity's free tier is worth knowing about specifically because it's built around citing its sources by default, which matters if you're writing anything factual for a blog or caption and want to double-check a claim before posting it.",
+      "Where paying tends to actually pay off is volume and speed, not capability. If you're generating enough images or messages daily to regularly hit free-tier limits, or if slow response times during peak hours are genuinely costing you time, that's when a $20/month plan starts paying for itself rather than being a nice-to-have.",
+      "### A reasonable free starting stack",
+      "One general assistant (ChatGPT or Gemini, whichever fits your existing tools) for writing and planning, Gemini free tier for Nano Banana image generation, and Perplexity free tier for anything that needs a cited fact-check before you post it.",
+      "### Signs it's time to pay for one",
+      "You're hitting daily generation limits before you're done with your content for the day, response times during your working hours are slowing you down noticeably, or you need a specific feature — higher resolution, longer memory, priority processing — that the free tier doesn't include.",
+      "### Don't subscribe to everything at once",
+      "The fastest way to overspend on AI tools is subscribing to several at once because each one does one thing slightly better. Upgrade the single tool you use most first, and only add a second paid subscription once you've genuinely outgrown the free tier of the first."
+    ],
+    "authorName": "CreateLoom Editorial Team"
+  },
+  {
+    "id": "ai-subscription-costs-worth-it",
+    "title": "AI Subscription Costs: What's Actually Worth Paying For in 2026",
+    "category": "AI Tools",
+    "tags": [
+      "ai-subscriptions",
+      "ai-tools-cost",
+      "chatgpt-plus",
+      "budget",
+      "ai-tools-2026"
+    ],
+    "date": "2026-07-01",
+    "readTime": "5 min read",
+    "excerpt": "A practical breakdown of what the major AI subscriptions actually cost in 2026, and a simple way to decide which ones are worth paying for.",
+    "content": [
+      "Most flagship AI subscriptions in 2026 sit around the same $20/month price point, which makes it tempting to just pick one and move on. The more useful question isn't which one is cheapest — it's which one actually recovers its cost through the time or money it saves you each month.",
+      "For a general assistant like ChatGPT Plus, Claude Pro, or Gemini's paid tier, the honest way to judge it is time saved. If a $20/month subscription saves you even two or three hours a month that you'd otherwise spend writing, researching, or editing by hand, it's already paid for itself for most people's hourly value of time.",
+      "For image generation tools like Midjourney, which typically starts around $10/month with no meaningful free tier, the calculation is different — it's worth it specifically if you're producing enough visual content that the free alternatives' limits are genuinely holding you back, not just because the tool itself is impressive.",
+      "It's worth resisting the pull toward subscribing to three or four overlapping tools at once. A common pattern is ending up with ChatGPT, Claude, and Gemini subscriptions simultaneously because each is slightly better at one specific thing, while actually only using two of them regularly. An honest monthly audit — cancel anything used fewer than five times in the last 30 days — catches this quickly.",
+      "Annual billing is worth considering once you're confident a tool is a permanent part of your workflow, since most providers offer meaningful discounts, often in the 15-20% range, for paying yearly instead of monthly.",
+      "### A simple monthly audit",
+      "Once a month, look at what you actually used each subscription for. If a tool was opened fewer than five times, that's a strong signal it's not earning its cost yet — either use it more deliberately or cancel it.",
+      "### The realistic budget for most creators",
+      "Most professionals and content creators get the most value out of somewhere between $20 and $60 a month in AI tools total — a primary assistant plus one specialized tool for image or video generation. Spending well beyond that usually means paying for capability you're not using.",
+      "### When it's worth spending more",
+      "If AI-generated content is a meaningful part of your income — sponsored posts, a content business, client work — the calculation shifts from personal convenience to business cost, and a heavier monthly spend across two or three specialized tools can make sense the same way any other business software cost would."
+    ],
+    "authorName": "CreateLoom Editorial Team"
+  },
+  {
+    "id": "ai-baby-prediction-photo-prompts",
+    "title": "AI Baby Prediction Photo Prompts: How the Trend Actually Works",
+    "category": "AI Prompts",
+    "tags": [
+      "ai-baby-photo",
+      "prompts",
+      "couple",
+      "family",
+      "trend"
+    ],
+    "date": "2026-07-08",
+    "readTime": "5 min read",
+    "excerpt": "The AI \"future baby\" photo trend explained, with prompt guidance for getting a believable, tasteful result from two reference photos.",
+    "content": [
+      "The AI baby prediction trend — generating an imagined photo of what a couple's future child might look like — is one of the more emotionally resonant AI photo formats, and also one of the trickier ones to prompt well, because it depends on blending two distinct facial identities into a single believable new one rather than preserving either identity individually.",
+      "The core technical challenge is different from most other AI photo prompts. Instead of telling the model to preserve one person's identity, you're asking it to plausibly combine features from two references — which means the prompt needs to name specific features to draw from each parent rather than leaving the blend entirely up to the model's default guess.",
+      "A useful approach is naming a feature or two per reference photo rather than asking for a generic blend. For example: eye shape and hair texture drawn more from one reference, and nose shape and smile from the other. This tends to produce a more coherent, believable face than a vague \"combine these two people\" instruction, which often produces something that looks like neither parent clearly.",
+      "Age and framing matter for how convincing the result feels. Specifying a young child, roughly toddler age, with a simple, warm, well-lit portrait style tends to read as more heartfelt and less uncanny than an attempt at a highly detailed, adult-proportioned face on a small child, which can look unsettling rather than charming.",
+      "### The core prompt structure",
+      "\"Generate a portrait of a young child, combining features from both reference photos. Draw the eye shape and hair texture more from the first reference and the nose and smile more from the second. Use warm, natural lighting and a simple, gentle expression appropriate for a toddler.\"",
+      "### Getting a more believable result",
+      "Keep the lighting and framing simple rather than heavily stylized — a plain warm portrait reads as more genuine than an elaborate scene. Avoid asking for an overly precise resemblance percentage or split, since real family resemblance doesn't work in exact fractions and a rigid instruction like that tends to confuse the model rather than help it.",
+      "### A note on using this thoughtfully",
+      "This format works best when both people in the reference photos have given their consent to be part of the image, and it's worth remembering the result is a lighthearted guess, not a genuine prediction — treating it that way in the caption keeps the content fun rather than something that reads as more literal than it is."
+    ],
+    "authorName": "CreateLoom Editorial Team"
+  },
+  {
+    "id": "ai-pet-portrait-prompts",
+    "title": "AI Pet Portrait Prompts: Turning Your Pet Photo Into Art",
+    "category": "AI Prompts",
+    "tags": [
+      "ai-pet-photo",
+      "prompts",
+      "pet-portrait",
+      "aesthetic",
+      "instagram"
+    ],
+    "date": "2026-07-15",
+    "readTime": "5 min read",
+    "excerpt": "How to write AI prompts for pet portraits that keep your pet actually recognizable, from renaissance-style paintings to cinematic studio shots.",
+    "content": [
+      "Pet portrait prompts are one of the most reliably shareable AI photo categories, mostly because the stakes feel lower than a personal portrait — people are far more willing to experiment with dramatic, silly, or highly stylized concepts on a pet photo than they are on their own face, which makes it a great low-risk category for practicing more adventurous prompts.",
+      "Identity preservation still matters, though, and it works a little differently for animals than people. Instead of facial structure and expression, the details that keep a pet recognizable are coat color and pattern, ear shape, eye color, and any distinctive markings. Naming these explicitly in the prompt matters just as much as naming a human's facial features would.",
+      "The renaissance-painting style is one of the most consistently popular pet portrait concepts — reimagining a dog or cat as the subject of an oil painting, in formal dress, with the ornate lighting and brushwork texture of classical portraiture. It works well specifically because the contrast between a formal painting style and a pet subject is what makes it funny and shareable.",
+      "Cinematic studio portraits are the more \"serious\" alternative — dramatic single-source lighting, a dark or neutral backdrop, and a composed pose, treating the pet the way a professional pet photographer would treat a paid studio session.",
+      "### Core renaissance-style prompt",
+      "\"Reimagine this pet as the subject of a formal renaissance-style oil painting, dressed in period-appropriate royal attire. Use rich, warm lighting typical of classical portraiture and visible brushstroke texture. Preserve the pet's actual coat color, pattern, ear shape and distinctive markings.\"",
+      "### Core studio portrait prompt",
+      "\"Create a professional studio portrait of this pet with dramatic single-source lighting against a dark neutral background. Keep the pet's coat color, markings and eye color exactly as shown in the reference photo, in a natural, alert pose.\"",
+      "### Tips for a convincing result",
+      "Use a clear, well-lit reference photo where the pet's face and markings are visible rather than a blurry action shot. Name the specific coat pattern (tabby, brindle, tuxedo) rather than a generic color, since specific pattern names give the model something concrete to preserve.",
+      "### Where this content performs well",
+      "Pet portrait prompts pair naturally with before-and-after Reels, since the contrast between an ordinary pet photo and a dramatic reimagined version is the entire appeal — showing both in sequence usually outperforms posting the result alone."
+    ],
+    "authorName": "CreateLoom Editorial Team"
+  },
+  {
+    "id": "ai-3d-figurine-prompt-guide",
+    "title": "AI 3D Figurine Prompts: The Complete Guide to the Collectible-Toy Trend",
+    "category": "AI Prompts",
+    "tags": [
+      "3d-figurine",
+      "ai-photo-trend",
+      "collectible-toy",
+      "nano-banana",
+      "prompts"
+    ],
+    "date": "2026-07-22",
+    "readTime": "5 min read",
+    "excerpt": "How to write a prompt for the viral 3D collectible-figurine trend, including packaging, display base and pose details that make it look convincing.",
+    "content": [
+      "The 3D figurine trend — reimagining a real photo as a collectible toy, complete with a display base and packaging-style presentation — has stayed popular longer than most single AI photo trends because it's instantly understandable in one frame and works on almost any subject, not just portraits.",
+      "The strongest figurine prompts describe three distinct elements: the figurine itself (material, pose, level of detail), the display base (shape, material, any nameplate text), and the packaging or presentation context (a box, a shelf, studio product-photography lighting). Leaving any of the three vague tends to produce a result that looks more like a stylized illustration than an actual toy.",
+      "Material description matters more than people expect. Specifying a matte or glossy vinyl finish, or a painted resin look, gives the model a concrete physical surface to render, versus a generic \"toy version\" instruction which often defaults to something closer to a cartoon than an actual collectible object.",
+      "Identity preservation still applies here, just adapted to a stylized context — the figurine's face should be a clearly recognizable, simplified likeness of the reference photo, not a generic character that merely shares a hairstyle.",
+      "### The core prompt",
+      "\"Transform this photo into a collectible 3D vinyl figurine on a circular display base. Give it a glossy painted finish, simplified but clearly recognizable facial features matching the reference photo, and a confident standing pose. Add soft studio product-photography lighting and a plain neutral background, as if photographed for an online store listing.\"",
+      "### Adding packaging for extra realism",
+      "\"Show the figurine inside a clear-window collector's box with clean minimal packaging design, displayed on a light gray studio background with soft even lighting, as if photographed for a product catalog.\"",
+      "### Common mistakes",
+      "Skipping the material description entirely, which tends to produce a flatter, more illustrated look rather than an object with real physical presence. Overcomplicating the pose — a simple, confident standing or sitting pose reads as more convincingly toy-like than an elaborate action pose.",
+      "### Why this trend has lasted",
+      "Because it works on pets, couples, kids and solo portraits equally well, and because the humor and novelty come from the format itself rather than a specific one-time joke, it's one of the more durable trend templates to build repeat content around rather than a single post."
+    ],
+    "authorName": "CreateLoom Editorial Team"
+  },
+  {
+    "id": "ai-graduation-photo-prompts",
+    "title": "AI Graduation Photo Prompts for a Polished Cap-and-Gown Portrait",
+    "category": "AI Prompts",
+    "tags": [
+      "ai-graduation-photo",
+      "prompts",
+      "portrait",
+      "celebration",
+      "instagram"
+    ],
+    "date": "2026-07-29",
+    "readTime": "4 min read",
+    "excerpt": "Write AI prompts for a believable graduation portrait — cap, gown, and stole details included — without a formal photo session.",
+    "content": [
+      "Graduation photos are a genuinely useful category for AI prompts, since not everyone gets access to a formal cap-and-gown photo session, and the format is specific enough that a vague prompt tends to produce something that looks obviously off — a gown that drapes wrong, a cap at an odd angle, or graduation regalia that doesn't match any real academic tradition.",
+      "The most important detail to specify is the regalia itself: gown color, any stole or cords indicating honors or major, and cap style. Naming these explicitly, rather than a generic \"graduation outfit,\" is what separates a convincing result from something that looks like a costume.",
+      "Setting matters almost as much as the outfit. A believable graduation portrait usually has one of two settings: a plain studio backdrop typical of official grad photos, or an outdoor campus setting with visible greenery or architecture in a softly blurred background.",
+      "### The core prompt",
+      "\"Create a graduation portrait of the person in this photo wearing a traditional black academic gown with a gold honor cord and matching mortarboard cap. Studio-style soft lighting against a plain neutral gray background, confident and proud expression. Preserve the subject's actual facial features and skin tone exactly.\"",
+      "### Outdoor campus variation",
+      "\"Create an outdoor graduation portrait with the subject in cap and gown, standing on a university campus with softly blurred greenery and stone architecture in the background, warm natural afternoon light. Preserve facial identity exactly as shown in the reference photo.\"",
+      "### Adding a diploma or props",
+      "If you want a diploma scroll or tassel detail included, name it directly rather than assuming the model will add it — \"holding a rolled diploma tied with a ribbon\" is more reliable than leaving props unspecified.",
+      "### Where this fits",
+      "This is a strong evergreen category rather than a fast-moving trend — search interest for graduation-specific AI portraits spikes predictably around spring and winter graduation seasons, making it worth having ready ahead of those windows rather than writing it from scratch each year."
+    ],
+    "authorName": "CreateLoom Editorial Team"
+  },
+  {
+    "id": "ai-gym-transformation-prompts",
+    "title": "AI Gym Transformation Photo Prompts (and Why to Use Them Carefully)",
+    "category": "AI Prompts",
+    "tags": [
+      "ai-fitness-photo",
+      "prompts",
+      "transformation",
+      "aesthetic",
+      "instagram"
+    ],
+    "date": "2026-08-05",
+    "readTime": "4 min read",
+    "excerpt": "How AI gym and physique-transformation prompts work, what makes a natural-looking result, and where the line is for honest fitness content.",
+    "content": [
+      "AI gym and fitness-aesthetic prompts have become a popular way to generate polished workout content — better gym lighting, a more editorial photography style, a specific mood — without needing an actual photographer at the gym. It's worth being clear up front about what this category is and isn't good for: it's suited to styling and photography quality, not to fabricating a physique change that didn't happen.",
+      "For styling purposes, the strongest prompts focus on lighting, gym environment, and photographic composition rather than body shape. Gym photography has a fairly recognizable visual language — directional overhead lighting, dark moody backgrounds, motion blur on movement, sweat detail — and naming these specifically produces a far more convincing result than a vague \"fitness photo\" request.",
+      "### The core prompt",
+      "\"Recreate this gym photo with dramatic overhead directional lighting, a dark moody background with visible equipment softly out of focus, and subtle motion blur on movement. Keep the subject's body, proportions, and facial features exactly as shown in the reference photo — do not alter physique or body shape.\"",
+      "### Cinematic training photo variation",
+      "\"Style this as a cinematic training photo with high contrast lighting, a slightly desaturated color grade, and a determined expression. Preserve the subject's actual body proportions and facial identity unchanged.\"",
+      "### Why the identity and body-preservation line matters here specifically",
+      "This is one of the few prompt categories where explicitly instructing the model not to change the person's body is worth stating as its own separate line, not just an afterthought. Fitness content carries real weight for viewers who compare their own bodies to what they see online, and generating an altered physique — even without intending to mislead anyone — can contribute to exactly that problem.",
+      "### A better use for this format",
+      "Use these prompts to improve the photography and mood of a real training photo, not to simulate progress that hasn't happened. If the goal is documenting an actual transformation over time, a real photo taken consistently under similar lighting will always be more meaningful and more honest than an AI-styled one."
+    ],
+    "authorName": "CreateLoom Editorial Team"
+  },
+  {
+    "id": "instagram-algorithm-explained-2026",
+    "title": "How the Instagram Algorithm Actually Works in 2026",
+    "category": "Instagram",
+    "tags": [
+      "instagram-algorithm",
+      "reach",
+      "growth",
+      "reels",
+      "instagram-2026"
+    ],
+    "date": "2026-08-12",
+    "readTime": "5 min read",
+    "excerpt": "What actually drives reach on Instagram in 2026 — DM shares, watch time, carousels, and why hashtags stopped mattering the way they used to.",
+    "content": [
+      "The single biggest shift in how Instagram's algorithm behaves in 2026 is what signal it weighs most heavily for Reels distribution: DM shares. Content that gets sent in a direct message earns significantly more distribution than content that only gets liked, which changes what kind of content is actually worth making if reach is the goal.",
+      "This matters practically because likes and shares reward different kinds of content. A polished, aspirational post tends to get liked. A relatable, funny, or genuinely useful post tends to get sent to a friend. If your content strategy is optimized purely for likes, it may be leaving the algorithm's strongest distribution lever untouched.",
+      "Watch time and completion rate remain critical for Reels specifically. The first two to three seconds decide whether someone keeps watching or swipes away, and Instagram tracks that decision closely — a Reel that loses viewers immediately gets shown to fewer people, regardless of how good the rest of the content is.",
+      "Carousels have quietly become one of the highest-engagement formats by follower percentage, even ahead of Reels in some measurements, largely driven by saves and shares rather than passive viewing. For content that's genuinely useful — a tutorial, a comparison, a list of prompts — a carousel format is often underrated compared to defaulting to video.",
+      "Hashtags have lost most of the relevance they once had for discovery. Instagram now relies much more heavily on caption text and on-screen text to understand what content is actually about and match it to interested viewers, which means natural, keyword-rich captions do more for discoverability now than a wall of hashtags does.",
+      "### What actually moves the algorithm in 2026",
+      "DM shares over likes, strong 2-3 second hooks for Reels, carousels for save-worthy or reference-style content, and natural keyword usage in captions rather than hashtag stacking.",
+      "### What matters less than it used to",
+      "Hashtag volume and hashtag-following behavior have both declined sharply in relevance. Posting at a single \"perfect\" time also matters less than consistent posting frequency and content quality.",
+      "### A practical takeaway",
+      "Before publishing, ask honestly whether a piece of content is something someone would actually forward to a specific friend, not just double-tap while scrolling. That single question reflects the biggest change in how Instagram distributes content right now."
+    ],
+    "authorName": "CreateLoom Editorial Team"
+  },
+  {
+    "id": "instagram-seo-guide",
+    "title": "Instagram SEO: How to Get Found in Search, Not Just the Feed",
+    "category": "Instagram",
+    "tags": [
+      "instagram-seo",
+      "keywords",
+      "discoverability",
+      "captions",
+      "growth"
+    ],
+    "date": "2026-08-19",
+    "readTime": "5 min read",
+    "excerpt": "Instagram increasingly works like a search engine. Here's how to write captions, bios and alt text that actually get your content found.",
+    "content": [
+      "Instagram has increasingly started to behave like a search engine rather than a purely algorithmic feed, and that shift means the old habit of writing a caption purely for tone and voice, with keywords as an afterthought, is leaving a real discovery channel on the table. People now genuinely search Instagram directly for things the way they'd search Google — \"ai couple photo prompt,\" \"instagram growth tips\" — and well-optimized content shows up in those results.",
+      "The caption is the primary place Instagram reads to understand what your content is about. This doesn't mean stuffing keywords unnaturally — it means writing the caption the way you'd naturally describe the content to a person, while making sure the actual words someone would search for appear somewhere in that natural description.",
+      "Your bio and name field also carry real search weight. If your account name field only contains your personal name with no reference to your niche, you're invisible to anyone searching for what you actually do. Adding a niche-relevant phrase to your name field — not just your bio — meaningfully improves how often your account surfaces in search.",
+      "Alt text, the description Instagram lets you add to a photo or video for accessibility, is a quietly underused SEO lever. Filling it in with a clear, accurate description of the image gives Instagram another concrete signal about the content's subject matter, on top of whatever the caption says.",
+      "### A simple Instagram SEO checklist",
+      "Name field includes a niche-relevant keyword, not just your personal name. Captions describe the content naturally using the actual words someone would search for. Alt text filled in accurately rather than left blank. On-screen text in Reels/videos matches the spoken or captioned topic clearly.",
+      "### What doesn't help anymore",
+      "Hashtag stacking has very little search value now compared to a few years ago. A caption written purely to sound clever, with no concrete description of the content, gives Instagram's search system little to work with even if it reads well to a human.",
+      "### Why this compounds over time",
+      "Unlike a single viral post, search-optimized content keeps getting discovered by new people searching that exact term long after the initial posting window, which makes it one of the more durable, low-effort improvements you can make to an existing content routine."
+    ],
+    "authorName": "CreateLoom Editorial Team"
+  },
+  {
+    "id": "zero-to-10k-instagram-followers",
+    "title": "How to Go From 0 to 10K Followers on Instagram",
+    "category": "Creator Growth",
+    "tags": [
+      "instagram-growth",
+      "followers",
+      "creator",
+      "niche",
+      "reels"
+    ],
+    "date": "2026-08-26",
+    "readTime": "5 min read",
+    "excerpt": "A realistic, non-hype roadmap for the first 10,000 followers — what actually matters in the early stage versus what to ignore.",
+    "content": [
+      "The first 10,000 followers are the hardest to earn and the easiest to overthink. Most accounts that stall out in this early stage aren't failing because of a single mistake — they're failing because they're trying to do everything at once: perfect editing, a broad topic, inconsistent posting, and constant format-switching, all before the account has any real signal about what actually works for its specific audience.",
+      "The first real decision is niche clarity. A new account has almost no data to work with, so the algorithm and potential followers alike need an easy, obvious answer to \"what is this account about\" from the very first few posts. A broad, unfocused account takes far longer to find its audience than a narrow, clearly defined one, even if the narrow niche feels limiting at first.",
+      "Consistency matters more than perfection at this stage. An account posting three reasonably good Reels a week for two months will almost always outperform an account posting one highly polished Reel a month, because the algorithm has more opportunities to learn who responds to the content, and repeat viewers have more chances to notice a pattern and follow.",
+      "Early growth tends to come disproportionately from a small number of posts that significantly outperform the rest, not a steady, even climb. The productive response to a post that does unusually well is to study exactly why it worked and make more content like it — not to abandon the format the moment the next post doesn't repeat the exact same performance.",
+      "### The first-month priorities",
+      "Pick one clear, specific niche rather than a broad topic. Post consistently, even if the content isn't perfectly polished. Fill out bio, name field, and profile photo to make the account's purpose obvious at a glance.",
+      "### What to actually track",
+      "Watch which specific posts get shared or saved, not just liked, since those are the signals more likely to drive new follower growth. Note the topic, format, and hook of anything that clearly outperforms your average post.",
+      "### What to ignore early on",
+      "Follower count comparisons to established accounts, hashtag strategy debates, and posting-time optimization all matter far less at this stage than topic clarity and consistency. Save that level of optimization for once you have enough data from your own account to make it meaningful.",
+      "### A realistic mindset",
+      "Ten thousand followers rarely comes from one viral post — it usually comes from finding one or two formats that reliably work for your specific niche and repeating them consistently while gradually refining based on what your actual audience responds to."
+    ],
+    "authorName": "CreateLoom Editorial Team"
+  },
+  {
+    "id": "instagram-stories-engagement-tips",
+    "title": "Instagram Stories Tips That Actually Increase Engagement",
+    "category": "Instagram",
+    "tags": [
+      "instagram-stories",
+      "engagement",
+      "polls",
+      "stickers",
+      "creator"
+    ],
+    "date": "2026-09-02",
+    "readTime": "4 min read",
+    "excerpt": "Stories are still one of the most underused engagement tools on Instagram. Here's how to actually use them to build a closer connection with your audience.",
+    "content": [
+      "Stories get treated as an afterthought by a lot of creators focused on Reels and feed posts, but they're one of the few formats on Instagram built specifically for direct, low-friction interaction rather than passive viewing — and that interaction is exactly the kind of signal (DM replies, sticker taps) that Instagram's current algorithm rewards heavily.",
+      "Interactive stickers — polls, quizzes, question boxes, sliders — exist specifically to lower the effort required for someone to respond. A viewer who wouldn't type out a comment will often tap a poll option in under a second, and each of those small interactions signals genuine engagement with your account.",
+      "The question sticker is particularly useful for content planning, not just engagement. Asking your audience an open question (\"what should I make a prompt for next?\") does double duty — it drives interaction now, and the answers double as a ready-made content queue for your next few posts.",
+      "Behind-the-scenes content belongs in Stories more than almost anywhere else. The lower production expectation of Stories compared to a polished feed post or Reel makes them the natural home for process content — a half-finished generation, a failed prompt attempt, a quick reaction — content that would feel out of place as a main post but builds a much closer sense of connection with your audience.",
+      "### Sticker types worth using regularly",
+      "Polls for quick preference questions, question boxes for open-ended audience input, quizzes for lighter, more playful engagement, and countdown stickers for announcing an upcoming post or launch.",
+      "### A simple weekly Stories rhythm",
+      "A behind-the-scenes moment, a poll asking for a preference between two options, a question box gathering content ideas, and a countdown or teaser for an upcoming post — repeated weekly, this keeps your account visible between main posts without requiring the production effort of another Reel.",
+      "### Why this matters for the algorithm specifically",
+      "Direct interactions like sticker taps and Story replies are a strong relationship signal Instagram uses to decide whose content to keep showing a given viewer, which means an engaged Stories habit can quietly improve how often your main feed and Reel content reaches your existing followers, not just new ones."
+    ],
+    "authorName": "CreateLoom Editorial Team"
+  },
+  {
+    "id": "how-to-price-sponsored-instagram-post",
+    "title": "How to Price a Sponsored Instagram Post",
+    "category": "Brand Deals",
+    "tags": [
+      "sponsored-post",
+      "pricing",
+      "brand-deals",
+      "creator-rates",
+      "instagram"
+    ],
+    "date": "2026-09-09",
+    "readTime": "5 min read",
+    "excerpt": "There's no universal rate card for creator pricing, but there is a practical framework for arriving at a fair number for your first few sponsored posts.",
+    "content": [
+      "Pricing a sponsored post is one of the most anxiety-inducing parts of early brand collaborations, mostly because there's no single correct number — the same account size can reasonably charge very different amounts depending on the deliverable, usage rights, and exclusivity being requested. Understanding what actually drives the price is more useful than searching for a universal rate card.",
+      "Follower count is only one input, and often not the most important one. A smaller, highly engaged, niche-specific audience can reasonably charge more than a larger but more generic account, because the brand is paying for relevant attention, not just raw reach.",
+      "Deliverable complexity matters directly. A single feed post, a Reel with custom editing, a multi-part Story sequence, and a tutorial-style video all represent very different amounts of production effort, and pricing should reflect that difference rather than treating every \"post\" as equivalent.",
+      "Usage rights are the most commonly overlooked pricing factor. A brand simply reposting your content to their own account is different from a brand licensing your content for their paid advertising, which is different again from an exclusivity agreement preventing you from working with competing brands for a period of time. Each of these should be priced as a separate consideration, not bundled silently into a flat post fee.",
+      "### A basic framework to start from",
+      "Start with a baseline for the core deliverable (a single Reel, a carousel, a Story set) based on your production effort and audience engagement, then add clearly separated fees for extended usage rights, whitelisting or paid amplification, and any exclusivity period requested.",
+      "### Questions to ask before quoting a price",
+      "What exactly is the deliverable — one post, several, a series? Will the brand repost this content on their own channels? Will they use it in paid ads? Is there an exclusivity clause preventing similar collaborations for a period of time?",
+      "### Don't undercharge to \"get started\"",
+      "It's tempting to accept a very low rate for a first collaboration to build a portfolio, and an occasional trade-value arrangement for genuine product access can make sense early on. But consistently underpricing sets a hard-to-escape precedent for the brands you'll want repeat business from, so treat a genuinely low first rate as a deliberate one-time exception rather than a new normal.",
+      "### Getting it in writing",
+      "Regardless of the number you land on, put the deliverable, timeline, usage rights and payment terms in a simple written agreement before starting the work — a short, clear document protects both sides and avoids disputes over what was actually promised."
+    ],
+    "authorName": "CreateLoom Editorial Team"
   }
 ]
