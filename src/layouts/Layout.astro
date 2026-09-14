@@ -62,6 +62,52 @@ const canonical = new URL(
 );
 
 const canonicalHref = canonical.href;
+
+const breadcrumbItems = (() => {
+  const path = Astro.url.pathname.replace(/^\/+|\/+$/g, '');
+  if (!path) return [{ name: 'Home', url: '/' }];
+
+  const parts = path.split('/');
+  const items = [{ name: 'Home', url: '/' }];
+
+  if (parts[0] === 'prompt' && parts[1]) {
+    items.push({ name: 'Prompts', url: '/prompts/' });
+    items.push({ name: title.replace(/\s*[—|].*$/, '').trim(), url: Astro.url.pathname });
+    return items;
+  }
+
+  if (parts[0] === 'blog' && parts[1]) {
+    items.push({ name: 'Blog', url: '/blog/' });
+    items.push({ name: title.replace(/\s*[—|].*$/, '').trim(), url: Astro.url.pathname });
+    return items;
+  }
+
+  if (parts[0] === 'prompts' && parts[1]) {
+    items.push({ name: 'Prompts', url: '/prompts/' });
+    items.push({
+      name: parts[1].replace(/[-_]+/g, ' ').replace(/\b\w/g, (c) => c.toUpperCase()),
+      url: Astro.url.pathname
+    });
+    return items;
+  }
+
+  const labels = {
+    'creator-hub': 'Creator Hub',
+    'creator-tools': 'Creator Tools',
+    'trending-hashtags': 'Trending Instagram Hashtags'
+  };
+
+  let currentPath = '';
+  for (const part of parts) {
+    currentPath += `/${part}`;
+    items.push({
+      name: labels[part] || part.replace(/[-_]+/g, ' ').replace(/\b\w/g, (c) => c.toUpperCase()),
+      url: `${currentPath}/`
+    });
+  }
+
+  return items;
+})();
 const defaultOgImage = `${siteUrl}/images/createloom-logo.png`;
 const resolvedOgImage = ogImage || defaultOgImage;
 
@@ -236,6 +282,19 @@ const year = new Date().getFullYear();
         'query-input':
           'required name=search_term_string'
       }
+    })}
+  />
+  <script
+    type="application/ld+json"
+    set:html={JSON.stringify({
+      '@context': 'https://schema.org',
+      '@type': 'BreadcrumbList',
+      itemListElement: breadcrumbItems.map((item, index) => ({
+        '@type': 'ListItem',
+        position: index + 1,
+        name: item.name,
+        item: new URL(item.url, siteUrl).href
+      }))
     })}
   />
 </head>
@@ -467,6 +526,20 @@ const year = new Date().getFullYear();
     </div>
 
   </header>
+
+  <!-- Breadcrumbs -->
+  <nav class="breadcrumbs container" aria-label="Breadcrumb">
+    {breadcrumbItems.map((item, index) => (
+      <>
+        {index > 0 && <span class="breadcrumbs-separator" aria-hidden="true">›</span>}
+        {index === breadcrumbItems.length - 1 ? (
+          <span aria-current="page">{item.name}</span>
+        ) : (
+          <a href={item.url}>{item.name}</a>
+        )}
+      </>
+    ))}
+  </nav>
 
   <!-- Main -->
   <main id="main-content">
@@ -1507,4 +1580,45 @@ const year = new Date().getFullYear();
       display: none !important;
     }
   }
+  /*
+   * Breadcrumbs
+   */
+  .breadcrumbs {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 7px;
+    padding-top: 10px;
+    padding-bottom: 4px;
+    color: var(--muted, #a1a1aa);
+    font-size: .76rem;
+    line-height: 1.4;
+  }
+
+  .breadcrumbs a {
+    color: var(--muted, #a1a1aa);
+    text-decoration: none;
+  }
+
+  .breadcrumbs a:hover,
+  .breadcrumbs a:focus-visible {
+    color: #fff;
+    text-decoration: underline;
+  }
+
+  .breadcrumbs-separator {
+    color: var(--muted, #71717a);
+  }
+
+  .breadcrumbs [aria-current="page"] {
+    color: #d4d4d8;
+  }
+
+  @media (max-width: 600px) {
+    .breadcrumbs {
+      padding-top: 8px;
+      font-size: .72rem;
+    }
+  }
+
 </style>
