@@ -32,6 +32,9 @@ const relatedBlogs = blogs
   )
   .slice(0, 3);
 
+const tags = Array.isArray(p.tags) ? p.tags : [];
+const searchTerms = Array.isArray(p.searchTerms) ? p.searchTerms : [];
+
 const promptSearchText = [
   p.title,
   p.description,
@@ -97,8 +100,7 @@ const promptTips = Array.isArray(p.promptTips)
     : [];
 
 const tools = Array.isArray(p.tools) ? p.tools : [];
-const tags = Array.isArray(p.tags) ? p.tags : [];
-const searchTerms = Array.isArray(p.searchTerms) ? p.searchTerms : [];
+
 
 const description =
   p.description ||
