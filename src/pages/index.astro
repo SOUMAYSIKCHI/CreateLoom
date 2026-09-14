@@ -7,8 +7,36 @@ import blogs from '../data/blogs.json';
 const categories = [...new Set(prompts.map((p) => p.category))].sort();
 
 const featuredPrompts = prompts.slice(0, 6);
-const trendingPrompts = prompts.filter((p) => p.trending === true);
-const latestPrompts = prompts.slice(-6).reverse();
+
+const trendPriority = {
+  hot: 0,
+  current: 1,
+  rising: 2,
+  seasonal: 3,
+  evergreen: 4
+};
+
+const trendingPrompts = prompts
+  .filter((p) => p.trending === true)
+  .sort((a, b) => {
+    const priorityA = trendPriority[a.trendStatus] ?? 99;
+    const priorityB = trendPriority[b.trendStatus] ?? 99;
+
+    if (priorityA !== priorityB) {
+      return priorityA - priorityB;
+    }
+
+    return String(b.createdAt || '').localeCompare(
+      String(a.createdAt || '')
+    );
+  });
+
+const latestPrompts = [...prompts]
+  .filter((p) => p.createdAt)
+  .sort((a, b) =>
+    String(b.createdAt).localeCompare(String(a.createdAt))
+  );
+
 const latestBlogs = blogs.slice(0, 3);
 
 const categoryDescriptions = {
@@ -139,7 +167,7 @@ const categoryDescriptions = {
             </h2>
 
             <p class="section-subtitle">
-              Popular prompt ideas for creating scroll-stopping AI visuals.
+              Fresh and popular AI image prompts worth trying right now.
             </p>
           </div>
 
@@ -310,7 +338,7 @@ const categoryDescriptions = {
           </h2>
 
           <p class="section-subtitle">
-            More concepts to explore and customize.
+            Recently added AI image prompts to explore and customize.
           </p>
         </div>
 
