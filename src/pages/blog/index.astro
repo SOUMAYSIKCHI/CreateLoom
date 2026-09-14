@@ -40,6 +40,12 @@ const blogCollectionSchema = {
     name: 'Create With Soumay',
     url: `${siteUrl}/`
   },
+  publisher: {
+    '@type': 'Organization',
+    name: 'Create With Soumay',
+    url: `${siteUrl}/`,
+    logo: `${siteUrl}/images/createloom-logo.png`
+  },
   mainEntity: {
     '@type': 'ItemList',
     numberOfItems: blogs.length,
@@ -91,8 +97,8 @@ const breadcrumbSchema = {
 ---
 
 <Layout
-  title="Create With Soumay Blog — AI, Instagram & Creator Guides"
-  description="Explore detailed AI image, Instagram, creator growth and brand collaboration guides from Create With Soumay. Practical advice, examples and workflows for creators."
+  title="AI, Instagram & Creator Guides | Create With Soumay Blog"
+  description="Read practical AI image, Instagram and creator growth guides from Create With Soumay. Learn prompt techniques, Reel strategy, content growth and brand collaboration workflows."
   active="Blog"
   ogImage={`${siteUrl}/images/createloom-logo.png`}
   ogImageAlt="Create With Soumay Blog — AI, Instagram & Creator Guides"
