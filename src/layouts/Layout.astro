@@ -5,7 +5,9 @@ const {
   title = 'CreateLoom — AI Prompts & Creator Resources',
   description = 'Discover AI image prompts, Instagram creator resources, Reel ideas, growth guides and more with CreateLoom.',
   active = '',
-  robots = 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1'
+  robots = 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1',
+  ogImage,
+  ogImageAlt = 'CreateLoom — AI Prompts & Creator Resources'
 } = Astro.props;
 
 const nav = [
@@ -60,6 +62,8 @@ const canonical = new URL(
 );
 
 const canonicalHref = canonical.href;
+const defaultOgImage = `${siteUrl}/images/createloom-logo.png`;
+const resolvedOgImage = ogImage || defaultOgImage;
 
 const year = new Date().getFullYear();
 ---
@@ -174,12 +178,12 @@ const year = new Date().getFullYear();
 
   <meta
     property="og:image"
-    content={`${siteUrl}/images/createloom-logo.png`}
+    content={resolvedOgImage}
   />
 
   <meta
     property="og:image:alt"
-    content="CreateLoom — AI Prompts & Creator Resources"
+    content={ogImageAlt}
   />
 
   <!-- Twitter / X -->
@@ -200,12 +204,12 @@ const year = new Date().getFullYear();
 
   <meta
     name="twitter:image"
-    content={`${siteUrl}/images/createloom-logo.png`}
+    content={resolvedOgImage}
   />
 
   <meta
     name="twitter:image:alt"
-    content="CreateLoom — AI Prompts & Creator Resources"
+    content={ogImageAlt}
   />
 
   <!-- Performance -->
