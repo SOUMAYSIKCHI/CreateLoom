@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://createwithsoumay.store/sitemap.xml
+Sitemap: https://www.createwithsoumay.store/sitemap.xml
