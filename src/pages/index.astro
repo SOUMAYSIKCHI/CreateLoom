@@ -4,7 +4,7 @@ import PromptCard from '../components/PromptCard.astro';
 import prompts from '../data/prompts.json';
 import blogs from '../data/blogs.json';
 
-const siteUrl = (Astro.site || 'https://createwithsoumay.store').toString().replace(/\/$/, '');
+const siteUrl = (Astro.site || 'https://www.createwithsoumay.store').toString().replace(/\/$/, '');
 
 const categories = [...new Set(prompts.map((p) => p.category))].sort();
 
