@@ -4,7 +4,7 @@ import blogs from '../data/blogs.json';
 export function GET(context) {
   const site =
     context.site?.toString() ||
-    'https://createwithsoumay.store';
+    'https://www.createwithsoumay.store';
 
   const items = [...blogs]
     .filter((blog) => blog?.id && blog?.title)
