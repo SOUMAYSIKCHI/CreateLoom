@@ -62,39 +62,14 @@
       "Start with simple transformations before attempting complex scenes.",
       "Keep lighting and camera direction reasonably consistent when identity is critical."
     ],
-    "supportedTools": [
-      "ChatGPT",
-      "Gemini",
-      "Nano Banana",
-      "Midjourney"
-    ],
-    "relatedPrompts": [
-      "couple-mirror-selfie",
-      "traditional-saree-portrait",
-      "cinematic-red-studio-portrait"
-    ],
-    "relatedTrends": [
-      "ai-polaroid-couple-photo",
-      "meet-your-younger-self"
-    ],
-    "relatedGuides": [
-      "ai-photo-identity-consistency",
-      "how-to-write-ai-image-prompts",
-      "ai-face-looks-different"
-    ],
+    "supportedTools": ["ChatGPT", "Gemini", "Nano Banana", "Midjourney"],
+    "relatedPrompts": ["couple-mirror-selfie", "traditional-saree-portrait", "cinematic-red-studio-portrait"],
+    "relatedTrends": ["ai-polaroid-couple-photo", "meet-your-younger-self"],
+    "relatedGuides": ["ai-photo-identity-consistency", "how-to-write-ai-image-prompts", "ai-face-looks-different"],
     "faq": [
-      {
-        "question": "How do I make AI keep the same face?",
-        "answer": "Use a clear reference image and explicitly instruct the AI to preserve the person's identity and recognizable facial features while changing only the requested elements."
-      },
-      {
-        "question": "Why does my AI-generated face look different?",
-        "answer": "The model may reinterpret the identity because of the reference image, prompt instructions, camera angle, lighting or major changes to the scene."
-      },
-      {
-        "question": "Can AI keep my face while changing clothes?",
-        "answer": "Yes. Clothing changes are generally easier when the prompt clearly separates the person's identity from the elements being changed."
-      }
+      { "question": "How do I make AI keep the same face?", "answer": "Use a clear reference image and explicitly instruct the AI to preserve the person's identity and recognizable facial features while changing only the requested elements." },
+      { "question": "Why does my AI-generated face look different?", "answer": "The model may reinterpret the identity because of the reference image, prompt instructions, camera angle, lighting or major changes to the scene." },
+      { "question": "Can AI keep my face while changing clothes?", "answer": "Yes. Clothing changes are generally easier when the prompt clearly separates the person's identity from the elements being changed." }
     ]
   },
 
@@ -128,22 +103,10 @@
       "Too many cinematic or fantasy keywords"
     ],
     "solutions": [
-      {
-        "title": "Add realistic photographic details",
-        "content": "Describe natural skin texture, realistic lighting, subtle imperfections, authentic shadows and believable photographic depth."
-      },
-      {
-        "title": "Use natural lighting",
-        "content": "Soft window light, overcast daylight or realistic direct flash can produce more believable photographic results than vague instructions such as 'perfect lighting'."
-      },
-      {
-        "title": "Avoid excessive perfection",
-        "content": "Real photographs contain small imperfections. Asking for completely flawless skin, perfect symmetry and perfect textures can make the result look synthetic."
-      },
-      {
-        "title": "Describe the camera context",
-        "content": "Camera type, focal length, depth of field, flash behavior and photographic style can help establish a more coherent visual result."
-      }
+      { "title": "Add realistic photographic details", "content": "Describe natural skin texture, realistic lighting, subtle imperfections, authentic shadows and believable photographic depth." },
+      { "title": "Use natural lighting", "content": "Soft window light, overcast daylight or realistic direct flash can produce more believable photographic results than vague instructions such as 'perfect lighting'." },
+      { "title": "Avoid excessive perfection", "content": "Real photographs contain small imperfections. Asking for completely flawless skin, perfect symmetry and perfect textures can make the result look synthetic." },
+      { "title": "Describe the camera context", "content": "Camera type, focal length, depth of field, flash behavior and photographic style can help establish a more coherent visual result." }
     ],
     "promptExample": {
       "title": "Realistic AI photo prompt example",
@@ -162,39 +125,14 @@
       "Describe materials such as skin, denim, silk, glass and metal naturally.",
       "Compare the output with a real photograph and identify the specific unrealistic detail."
     ],
-    "supportedTools": [
-      "ChatGPT",
-      "Gemini",
-      "Nano Banana",
-      "Midjourney"
-    ],
-    "relatedPrompts": [
-      "cinematic-red-studio-portrait",
-      "airport-travel-aesthetic",
-      "neon-city-street-portrait"
-    ],
-    "relatedTrends": [
-      "retro-ai-photo",
-      "90s-bollywood-ai-photo"
-    ],
-    "relatedGuides": [
-      "how-to-write-ai-image-prompts",
-      "ai-image-too-cartoonish",
-      "ai-image-wrong-background"
-    ],
+    "supportedTools": ["ChatGPT", "Gemini", "Nano Banana", "Midjourney"],
+    "relatedPrompts": ["cinematic-red-studio-portrait", "airport-travel-aesthetic", "neon-city-street-portrait"],
+    "relatedTrends": ["retro-ai-photo", "90s-bollywood-ai-photo"],
+    "relatedGuides": ["how-to-write-ai-image-prompts", "ai-image-too-cartoonish", "ai-image-wrong-background"],
     "faq": [
-      {
-        "question": "Why do AI-generated photos look artificial?",
-        "answer": "They can look artificial when skin, lighting, textures, shadows or other photographic details are generated in an overly perfect or inconsistent way."
-      },
-      {
-        "question": "What should I add to an AI prompt for realism?",
-        "answer": "Focus on natural skin texture, believable lighting, realistic shadows, authentic materials and coherent photographic depth."
-      },
-      {
-        "question": "Does adding '8K' make an AI image more realistic?",
-        "answer": "Not necessarily. Resolution-related keywords do not automatically fix unrealistic anatomy, lighting, textures or facial details."
-      }
+      { "question": "Why do AI-generated photos look artificial?", "answer": "They can look artificial when skin, lighting, textures, shadows or other photographic details are generated in an overly perfect or inconsistent way." },
+      { "question": "What should I add to an AI prompt for realism?", "answer": "Focus on natural skin texture, believable lighting, realistic shadows, authentic materials and coherent photographic depth." },
+      { "question": "Does adding '8K' make an AI image more realistic?", "answer": "Not necessarily. Resolution-related keywords do not automatically fix unrealistic anatomy, lighting, textures or facial details." }
     ]
   },
 
@@ -227,22 +165,10 @@
       "Ambiguous instructions about hand placement"
     ],
     "solutions": [
-      {
-        "title": "Specify the hand position",
-        "content": "Describe exactly where the hands are and what they are doing instead of simply asking for 'natural hands'."
-      },
-      {
-        "title": "Keep poses simple",
-        "content": "Simple, relaxed hand positions are usually easier for an image model to reproduce accurately."
-      },
-      {
-        "title": "Use references when available",
-        "content": "A clear visual reference for a difficult pose can give the model more useful information than text alone."
-      },
-      {
-        "title": "Regenerate problem areas",
-        "content": "If the overall image is strong but the hands are incorrect, use an editing or inpainting workflow where supported instead of regenerating the entire composition."
-      }
+      { "title": "Specify the hand position", "content": "Describe exactly where the hands are and what they are doing instead of simply asking for 'natural hands'." },
+      { "title": "Keep poses simple", "content": "Simple, relaxed hand positions are usually easier for an image model to reproduce accurately." },
+      { "title": "Use references when available", "content": "A clear visual reference for a difficult pose can give the model more useful information than text alone." },
+      { "title": "Regenerate problem areas", "content": "If the overall image is strong but the hands are incorrect, use an editing or inpainting workflow where supported instead of regenerating the entire composition." }
     ],
     "promptExample": {
       "title": "Hand accuracy prompt example",
@@ -261,38 +187,14 @@
       "For difficult compositions, generate the main scene first and fix the hands afterward.",
       "Check both hands and fingers before publishing an AI photo."
     ],
-    "supportedTools": [
-      "ChatGPT",
-      "Gemini",
-      "Nano Banana",
-      "Midjourney"
-    ],
-    "relatedPrompts": [
-      "couple-mirror-selfie",
-      "hug-younger-self-polaroid",
-      "gym-cinematic-portrait"
-    ],
-    "relatedTrends": [
-      "meet-your-younger-self",
-      "ai-action-figure"
-    ],
-    "relatedGuides": [
-      "why-ai-photo-looks-fake",
-      "how-to-write-ai-image-prompts"
-    ],
+    "supportedTools": ["ChatGPT", "Gemini", "Nano Banana", "Midjourney"],
+    "relatedPrompts": ["couple-mirror-selfie", "hug-younger-self-polaroid", "gym-cinematic-portrait"],
+    "relatedTrends": ["meet-your-younger-self", "ai-action-figure"],
+    "relatedGuides": ["why-ai-photo-looks-fake", "how-to-write-ai-image-prompts"],
     "faq": [
-      {
-        "question": "Why are AI fingers often wrong?",
-        "answer": "Hands have complex anatomy and many overlapping joints, making them difficult for image models to reproduce consistently."
-      },
-      {
-        "question": "What prompt can fix AI hands?",
-        "answer": "Clearly describe natural hand positioning, anatomically correct proportions and the intended interaction with nearby objects."
-      },
-      {
-        "question": "Can AI fix bad hands without regenerating the whole image?",
-        "answer": "Some AI image tools support localized editing or inpainting, which can allow you to correct the hands while preserving most of the original image."
-      }
+      { "question": "Why are AI fingers often wrong?", "answer": "Hands have complex anatomy and many overlapping joints, making them difficult for image models to reproduce consistently." },
+      { "question": "What prompt can fix AI hands?", "answer": "Clearly describe natural hand positioning, anatomically correct proportions and the intended interaction with nearby objects." },
+      { "question": "Can AI fix bad hands without regenerating the whole image?", "answer": "Some AI image tools support localized editing or inpainting, which can allow you to correct the hands while preserving most of the original image." }
     ]
   },
 
@@ -325,22 +227,10 @@
       "Weak or unclear reference images"
     ],
     "solutions": [
-      {
-        "title": "Use one primary identity reference",
-        "content": "Keep a strong reference image as the visual anchor whenever possible."
-      },
-      {
-        "title": "Separate identity from scene instructions",
-        "content": "Make it clear which characteristics must remain stable and which elements are allowed to change."
-      },
-      {
-        "title": "Control transformations",
-        "content": "Change clothing, location and styling progressively rather than making several extreme changes at once."
-      },
-      {
-        "title": "Keep a reusable identity instruction",
-        "content": "A consistent identity block can be reused across related generations so the model receives similar identity guidance each time."
-      }
+      { "title": "Use one primary identity reference", "content": "Keep a strong reference image as the visual anchor whenever possible." },
+      { "title": "Separate identity from scene instructions", "content": "Make it clear which characteristics must remain stable and which elements are allowed to change." },
+      { "title": "Control transformations", "content": "Change clothing, location and styling progressively rather than making several extreme changes at once." },
+      { "title": "Keep a reusable identity instruction", "content": "A consistent identity block can be reused across related generations so the model receives similar identity guidance each time." }
     ],
     "promptExample": {
       "title": "Identity consistency prompt example",
@@ -359,39 +249,14 @@
       "Use natural photographic settings when identity is the priority.",
       "Save successful prompts as reusable templates."
     ],
-    "supportedTools": [
-      "ChatGPT",
-      "Gemini",
-      "Nano Banana",
-      "Midjourney"
-    ],
-    "relatedPrompts": [
-      "traditional-saree-portrait",
-      "cinematic-red-studio-portrait",
-      "eighties-retro-male-portrait"
-    ],
-    "relatedTrends": [
-      "ai-polaroid-couple-photo",
-      "meet-your-younger-self"
-    ],
-    "relatedGuides": [
-      "keep-same-face",
-      "ai-face-looks-different",
-      "how-to-write-ai-image-prompts"
-    ],
+    "supportedTools": ["ChatGPT", "Gemini", "Nano Banana", "Midjourney"],
+    "relatedPrompts": ["traditional-saree-portrait", "cinematic-red-studio-portrait", "eighties-retro-male-portrait"],
+    "relatedTrends": ["ai-polaroid-couple-photo", "meet-your-younger-self"],
+    "relatedGuides": ["keep-same-face", "ai-face-looks-different", "how-to-write-ai-image-prompts"],
     "faq": [
-      {
-        "question": "What does AI identity consistency mean?",
-        "answer": "It means keeping the same person's recognizable appearance across multiple AI-generated images."
-      },
-      {
-        "question": "How can I make the same person appear in different AI photos?",
-        "answer": "Use a consistent reference image and clearly separate identity-preservation instructions from the scene and styling instructions."
-      },
-      {
-        "question": "Why does the same reference produce different faces?",
-        "answer": "AI generation is probabilistic, and changes in prompts, composition, lighting, camera angle and styling can cause the model to reinterpret the person's identity."
-      }
+      { "question": "What does AI identity consistency mean?", "answer": "It means keeping the same person's recognizable appearance across multiple AI-generated images." },
+      { "question": "How can I make the same person appear in different AI photos?", "answer": "Use a consistent reference image and clearly separate identity-preservation instructions from the scene and styling instructions." },
+      { "question": "Why does the same reference produce different faces?", "answer": "AI generation is probabilistic, and changes in prompts, composition, lighting, camera angle and styling can cause the model to reinterpret the person's identity." }
     ]
   },
 
@@ -424,22 +289,10 @@
       "Not specifying what should actually change"
     ],
     "solutions": [
-      {
-        "title": "Start with the subject",
-        "content": "Describe who or what should appear in the image before adding secondary visual details."
-      },
-      {
-        "title": "Define the composition",
-        "content": "Explain the pose, framing, camera perspective and important objects in the scene."
-      },
-      {
-        "title": "Add environment and lighting",
-        "content": "Describe where the subject is and how the light interacts with the scene."
-      },
-      {
-        "title": "Finish with visual style",
-        "content": "Add photographic or artistic characteristics after the core scene is established."
-      }
+      { "title": "Start with the subject", "content": "Describe who or what should appear in the image before adding secondary visual details." },
+      { "title": "Define the composition", "content": "Explain the pose, framing, camera perspective and important objects in the scene." },
+      { "title": "Add environment and lighting", "content": "Describe where the subject is and how the light interacts with the scene." },
+      { "title": "Finish with visual style", "content": "Add photographic or artistic characteristics after the core scene is established." }
     ],
     "promptExample": {
       "title": "Simple AI prompt structure",
@@ -460,41 +313,14 @@
       "Change one variable at a time when refining a prompt.",
       "Keep successful prompt structures and adapt them for new concepts."
     ],
-    "supportedTools": [
-      "ChatGPT",
-      "Gemini",
-      "Nano Banana",
-      "Midjourney"
-    ],
-    "relatedPrompts": [
-      "couple-mirror-selfie",
-      "traditional-saree-portrait",
-      "neon-city-street-portrait",
-      "airport-travel-aesthetic"
-    ],
-    "relatedTrends": [
-      "90s-bollywood-ai-photo",
-      "retro-ai-photo",
-      "ai-polaroid-couple-photo"
-    ],
-    "relatedGuides": [
-      "why-ai-photo-looks-fake",
-      "keep-same-face",
-      "fix-ai-hands"
-    ],
+    "supportedTools": ["ChatGPT", "Gemini", "Nano Banana", "Midjourney"],
+    "relatedPrompts": ["couple-mirror-selfie", "traditional-saree-portrait", "neon-city-street-portrait", "airport-travel-aesthetic"],
+    "relatedTrends": ["90s-bollywood-ai-photo", "retro-ai-photo", "ai-polaroid-couple-photo"],
+    "relatedGuides": ["why-ai-photo-looks-fake", "keep-same-face", "fix-ai-hands"],
     "faq": [
-      {
-        "question": "What is the best structure for an AI image prompt?",
-        "answer": "A useful structure is subject, identity or reference, pose, clothing, environment, composition, lighting, camera or photographic style, and important details."
-      },
-      {
-        "question": "Should AI prompts be long?",
-        "answer": "Not necessarily. A prompt should be detailed enough to communicate the important visual decisions without adding conflicting or irrelevant instructions."
-      },
-      {
-        "question": "How do I improve an AI image prompt?",
-        "answer": "Identify the specific part of the generated image that is wrong and refine the prompt around that issue instead of rewriting everything."
-      }
+      { "question": "What is the best structure for an AI image prompt?", "answer": "A useful structure is subject, identity or reference, pose, clothing, environment, composition, lighting, camera or photographic style, and important details." },
+      { "question": "Should AI prompts be long?", "answer": "Not necessarily. A prompt should be detailed enough to communicate the important visual decisions without adding conflicting or irrelevant instructions." },
+      { "question": "How do I improve an AI image prompt?", "answer": "Identify the specific part of the generated image that is wrong and refine the prompt around that issue instead of rewriting everything." }
     ]
   },
 
@@ -527,22 +353,10 @@
       "Using reference images where the outfit is unclear"
     ],
     "solutions": [
-      {
-        "title": "Describe the outfit precisely",
-        "content": "Specify the garment, color, material, length, pattern and important design details."
-      },
-      {
-        "title": "Separate outfit from style",
-        "content": "Tell the model which clothing details are fixed and which overall photographic style can change."
-      },
-      {
-        "title": "Use a clear clothing reference",
-        "content": "If supported, provide a reference image where the outfit is clearly visible."
-      },
-      {
-        "title": "Avoid contradictory fashion instructions",
-        "content": "Do not request multiple incompatible clothing styles in the same prompt."
-      }
+      { "title": "Describe the outfit precisely", "content": "Specify the garment, color, material, length, pattern and important design details." },
+      { "title": "Separate outfit from style", "content": "Tell the model which clothing details are fixed and which overall photographic style can change." },
+      { "title": "Use a clear clothing reference", "content": "If supported, provide a reference image where the outfit is clearly visible." },
+      { "title": "Avoid contradictory fashion instructions", "content": "Do not request multiple incompatible clothing styles in the same prompt." }
     ],
     "promptExample": {
       "title": "Clothing consistency prompt example",
@@ -561,39 +375,14 @@
       "Do not use several competing fashion aesthetics.",
       "If only the background should change, explicitly say that the outfit should remain unchanged."
     ],
-    "supportedTools": [
-      "ChatGPT",
-      "Gemini",
-      "Nano Banana",
-      "Midjourney"
-    ],
-    "relatedPrompts": [
-      "traditional-saree-portrait",
-      "eighties-retro-male-portrait",
-      "curtain-hairstyle-poster"
-    ],
-    "relatedTrends": [
-      "retro-ai-photo",
-      "90s-bollywood-ai-photo"
-    ],
-    "relatedGuides": [
-      "keep-same-face",
-      "ai-photo-identity-consistency",
-      "how-to-write-ai-image-prompts"
-    ],
+    "supportedTools": ["ChatGPT", "Gemini", "Nano Banana", "Midjourney"],
+    "relatedPrompts": ["traditional-saree-portrait", "eighties-retro-male-portrait", "curtain-hairstyle-poster"],
+    "relatedTrends": ["retro-ai-photo", "90s-bollywood-ai-photo"],
+    "relatedGuides": ["keep-same-face", "ai-photo-identity-consistency", "how-to-write-ai-image-prompts"],
     "faq": [
-      {
-        "question": "Why does AI keep changing my clothes?",
-        "answer": "The model may reinterpret the outfit when clothing instructions are vague, conflicting or secondary to stronger style and scene instructions."
-      },
-      {
-        "question": "How do I keep the same outfit in AI images?",
-        "answer": "Describe the clothing precisely and explicitly state that its colors, materials, proportions and key details should remain unchanged."
-      },
-      {
-        "question": "Can I change the background without changing the clothes?",
-        "answer": "Yes. Clearly separate the background change from the clothing instructions and explicitly preserve the existing outfit."
-      }
+      { "question": "Why does AI keep changing my clothes?", "answer": "The model may reinterpret the outfit when clothing instructions are vague, conflicting or secondary to stronger style and scene instructions." },
+      { "question": "How do I keep the same outfit in AI images?", "answer": "Describe the clothing precisely and explicitly state that its colors, materials, proportions and key details should remain unchanged." },
+      { "question": "Can I change the background without changing the clothes?", "answer": "Yes. Clearly separate the background change from the clothing instructions and explicitly preserve the existing outfit." }
     ]
   },
 
@@ -626,22 +415,10 @@
       "Changing the camera perspective"
     ],
     "solutions": [
-      {
-        "title": "Describe one clear environment",
-        "content": "Start with the location and its most important visual characteristics instead of listing many possible settings."
-      },
-      {
-        "title": "Specify the background depth",
-        "content": "Describe whether the background should be close, distant, blurred or sharply visible."
-      },
-      {
-        "title": "Match lighting to the environment",
-        "content": "The background becomes more believable when its lighting direction and intensity agree with the subject."
-      },
-      {
-        "title": "Prioritize important background elements",
-        "content": "Mention only the objects that actually matter to the composition."
-      }
+      { "title": "Describe one clear environment", "content": "Start with the location and its most important visual characteristics instead of listing many possible settings." },
+      { "title": "Specify the background depth", "content": "Describe whether the background should be close, distant, blurred or sharply visible." },
+      { "title": "Match lighting to the environment", "content": "The background becomes more believable when its lighting direction and intensity agree with the subject." },
+      { "title": "Prioritize important background elements", "content": "Mention only the objects that actually matter to the composition." }
     ],
     "promptExample": {
       "title": "Background control prompt example",
@@ -660,39 +437,14 @@
       "Use depth-of-field language when the background should be subtle.",
       "Keep the camera perspective consistent with the environment."
     ],
-    "supportedTools": [
-      "ChatGPT",
-      "Gemini",
-      "Nano Banana",
-      "Midjourney"
-    ],
-    "relatedPrompts": [
-      "airport-travel-aesthetic",
-      "neon-city-street-portrait",
-      "gym-cinematic-portrait"
-    ],
-    "relatedTrends": [
-      "retro-ai-photo",
-      "90s-bollywood-ai-photo"
-    ],
-    "relatedGuides": [
-      "why-ai-photo-looks-fake",
-      "how-to-write-ai-image-prompts",
-      "ai-face-looks-different"
-    ],
+    "supportedTools": ["ChatGPT", "Gemini", "Nano Banana", "Midjourney"],
+    "relatedPrompts": ["airport-travel-aesthetic", "neon-city-street-portrait", "gym-cinematic-portrait"],
+    "relatedTrends": ["retro-ai-photo", "90s-bollywood-ai-photo"],
+    "relatedGuides": ["why-ai-photo-looks-fake", "how-to-write-ai-image-prompts", "ai-face-looks-different"],
     "faq": [
-      {
-        "question": "Why does AI ignore my background prompt?",
-        "answer": "The model may prioritize other instructions when the background description is vague, conflicting or overloaded with too many details."
-      },
-      {
-        "question": "How do I get a specific background in an AI image?",
-        "answer": "Describe one clear location, identify its most important visual elements and specify the desired depth, lighting and camera perspective."
-      },
-      {
-        "question": "Can I change only the background?",
-        "answer": "Yes, when the tool supports image editing or background replacement. Clearly state that the subject, identity, clothing and pose should remain unchanged."
-      }
+      { "question": "Why does AI ignore my background prompt?", "answer": "The model may prioritize other instructions when the background description is vague, conflicting or overloaded with too many details." },
+      { "question": "How do I get a specific background in an AI image?", "answer": "Describe one clear location, identify its most important visual elements and specify the desired depth, lighting and camera perspective." },
+      { "question": "Can I change only the background?", "answer": "Yes, when the tool supports image editing or background replacement. Clearly state that the subject, identity, clothing and pose should remain unchanged." }
     ]
   },
 
@@ -726,22 +478,10 @@
       "Complex image compositions"
     ],
     "solutions": [
-      {
-        "title": "Use a stronger reference",
-        "content": "Choose a clear, well-lit image where the face is easy to recognize."
-      },
-      {
-        "title": "Reduce extreme transformations",
-        "content": "Keep camera angle, expression and lighting reasonably natural when identity is more important than style."
-      },
-      {
-        "title": "Preserve identity explicitly",
-        "content": "Tell the model to maintain recognizable facial structure and identity while changing the requested visual elements."
-      },
-      {
-        "title": "Remove conflicting face descriptions",
-        "content": "Do not simultaneously provide a reference image and a contradictory written description of a different facial appearance."
-      }
+      { "title": "Use a stronger reference", "content": "Choose a clear, well-lit image where the face is easy to recognize." },
+      { "title": "Reduce extreme transformations", "content": "Keep camera angle, expression and lighting reasonably natural when identity is more important than style." },
+      { "title": "Preserve identity explicitly", "content": "Tell the model to maintain recognizable facial structure and identity while changing the requested visual elements." },
+      { "title": "Remove conflicting face descriptions", "content": "Do not simultaneously provide a reference image and a contradictory written description of a different facial appearance." }
     ],
     "promptExample": {
       "title": "Face preservation prompt example",
@@ -760,39 +500,14 @@
       "Keep the face visible and well lit in the reference.",
       "Do not add contradictory facial characteristics."
     ],
-    "supportedTools": [
-      "ChatGPT",
-      "Gemini",
-      "Nano Banana",
-      "Midjourney"
-    ],
-    "relatedPrompts": [
-      "couple-mirror-selfie",
-      "traditional-saree-portrait",
-      "festival-portrait"
-    ],
-    "relatedTrends": [
-      "ai-polaroid-couple-photo",
-      "meet-your-younger-self"
-    ],
-    "relatedGuides": [
-      "keep-same-face",
-      "ai-photo-identity-consistency",
-      "why-ai-photo-looks-fake"
-    ],
+    "supportedTools": ["ChatGPT", "Gemini", "Nano Banana", "Midjourney"],
+    "relatedPrompts": ["couple-mirror-selfie", "traditional-saree-portrait", "festival-portrait"],
+    "relatedTrends": ["ai-polaroid-couple-photo", "meet-your-younger-self"],
+    "relatedGuides": ["keep-same-face", "ai-photo-identity-consistency", "why-ai-photo-looks-fake"],
     "faq": [
-      {
-        "question": "Why doesn't my AI photo look like me?",
-        "answer": "The model may not have enough reliable identity information or may reinterpret the face because of changes in pose, lighting, camera angle or styling."
-      },
-      {
-        "question": "How do I make an AI face look more like the reference?",
-        "answer": "Use a clear reference image, explicitly preserve identity and avoid unnecessary transformations that can alter facial structure."
-      },
-      {
-        "question": "Should I describe every facial feature in the prompt?",
-        "answer": "Not always. If the reference image is strong, excessive facial descriptions can introduce unnecessary or conflicting instructions."
-      }
+      { "question": "Why doesn't my AI photo look like me?", "answer": "The model may not have enough reliable identity information or may reinterpret the face because of changes in pose, lighting, camera angle or styling." },
+      { "question": "How do I make an AI face look more like the reference?", "answer": "Use a clear reference image, explicitly preserve identity and avoid unnecessary transformations that can alter facial structure." },
+      { "question": "Should I describe every facial feature in the prompt?", "answer": "Not always. If the reference image is strong, excessive facial descriptions can introduce unnecessary or conflicting instructions." }
     ]
   },
 
@@ -826,22 +541,10 @@
       "Lack of photographic context"
     ],
     "solutions": [
-      {
-        "title": "Establish photography first",
-        "content": "Start by describing the result as a realistic photograph and then define the photographic environment."
-      },
-      {
-        "title": "Remove conflicting style words",
-        "content": "If you want realism, remove illustration, cartoon, painting or animation terminology unless it is intentionally part of the style."
-      },
-      {
-        "title": "Use natural textures",
-        "content": "Describe realistic skin, fabric, hair and environmental textures rather than overly polished surfaces."
-      },
-      {
-        "title": "Use believable lighting",
-        "content": "Natural daylight, window light and realistic flash can help establish photographic depth."
-      }
+      { "title": "Establish photography first", "content": "Start by describing the result as a realistic photograph and then define the photographic environment." },
+      { "title": "Remove conflicting style words", "content": "If you want realism, remove illustration, cartoon, painting or animation terminology unless it is intentionally part of the style." },
+      { "title": "Use natural textures", "content": "Describe realistic skin, fabric, hair and environmental textures rather than overly polished surfaces." },
+      { "title": "Use believable lighting", "content": "Natural daylight, window light and realistic flash can help establish photographic depth." }
     ],
     "promptExample": {
       "title": "Photorealistic prompt example",
@@ -860,39 +563,944 @@
       "Natural imperfections can make the result more believable.",
       "If you intentionally want a stylized image, do not fight the style with contradictory realism instructions."
     ],
-    "supportedTools": [
-      "ChatGPT",
-      "Gemini",
-      "Nano Banana",
-      "Midjourney"
-    ],
-    "relatedPrompts": [
-      "cinematic-red-studio-portrait",
-      "airport-travel-aesthetic",
-      "neon-city-street-portrait"
-    ],
-    "relatedTrends": [
-      "retro-ai-photo",
-      "90s-bollywood-ai-photo"
-    ],
-    "relatedGuides": [
-      "why-ai-photo-looks-fake",
-      "how-to-write-ai-image-prompts",
-      "ai-image-wrong-background"
-    ],
+    "supportedTools": ["ChatGPT", "Gemini", "Nano Banana", "Midjourney"],
+    "relatedPrompts": ["cinematic-red-studio-portrait", "airport-travel-aesthetic", "neon-city-street-portrait"],
+    "relatedTrends": ["retro-ai-photo", "90s-bollywood-ai-photo"],
+    "relatedGuides": ["why-ai-photo-looks-fake", "how-to-write-ai-image-prompts", "ai-image-wrong-background"],
     "faq": [
-      {
-        "question": "Why does my AI photo look like a cartoon?",
-        "answer": "The prompt may contain strong stylistic signals that push the model toward illustration or exaggerated rendering instead of photography."
-      },
-      {
-        "question": "How do I make an AI image more photorealistic?",
-        "answer": "Use clear photographic context, natural textures, believable lighting and realistic shadows while removing conflicting illustration or cartoon terminology."
-      },
-      {
-        "question": "Does saying 'photorealistic' guarantee a realistic image?",
-        "answer": "No. The overall prompt still needs coherent photographic instructions, and conflicting style cues can push the output away from realism."
-      }
+      { "question": "Why does my AI photo look like a cartoon?", "answer": "The prompt may contain strong stylistic signals that push the model toward illustration or exaggerated rendering instead of photography." },
+      { "question": "How do I make an AI image more photorealistic?", "answer": "Use clear photographic context, natural textures, believable lighting and realistic shadows while removing conflicting illustration or cartoon terminology." },
+      { "question": "Does saying 'photorealistic' guarantee a realistic image?", "answer": "No. The overall prompt still needs coherent photographic instructions, and conflicting style cues can push the output away from realism." }
+    ]
+  },
+
+  {
+    "noId": 10,
+    "slug": "80s-ai-photo-trend",
+    "title": "How to Create the Viral 1980s AI Photo Trend",
+    "metaTitle": "1980s AI Photo Trend Guide | How to Make an 80s AI Portrait",
+    "metaDescription": "Learn how the viral 1980s AI photo trend works and how to write prompts that turn a modern selfie into a realistic 80s-style portrait while keeping your face.",
+    "eyebrow": "Trending AI Photo",
+    "intro": "The 1980s AI photo trend has become one of the most searched AI photography styles, with people turning ordinary selfies into retro family portraits, college pictures and vintage studio shots. This guide explains how the trend works and how to prompt it correctly.",
+    "searchTerms": [
+      "1980s AI photo trend",
+      "80s AI portrait prompt",
+      "AI 80s photo generator",
+      "how to make 80s AI photo",
+      "retro AI photo prompt",
+      "vintage AI portrait"
+    ],
+    "problem": {
+      "heading": "Why do 80s AI photos often look wrong?",
+      "content": "The 1980s look depends on specific period details such as film grain, studio backdrops, hairstyles, clothing and color grading. Without describing these details precisely, the AI may produce a generic vintage filter instead of an authentic period portrait, or it may change the person's face while applying the retro styling."
+    },
+    "commonCauses": [
+      "Vague references to 'old' or 'vintage' without period details",
+      "Missing description of 80s-specific hairstyles and clothing",
+      "No mention of studio backdrop or film-camera characteristics",
+      "Losing facial identity during the stylistic transformation",
+      "Overly modern lighting or background elements left in the scene",
+      "Excessive color grading that hides realistic skin texture"
+    ],
+    "solutions": [
+      { "title": "Describe the exact decade details", "content": "Mention 1980s studio backdrops, film-camera grain, period-accurate hairstyles and clothing rather than generic 'retro' wording." },
+      { "title": "Preserve identity during the transformation", "content": "Explicitly state that the uploaded person's face must remain recognizable while the styling, clothing and background change to match the decade." },
+      { "title": "Use warm, soft studio lighting", "content": "80s portrait studios typically used soft, warm lighting and simple gradient or curtain backdrops rather than outdoor or modern lighting." },
+      { "title": "Add authentic film characteristics", "content": "Reference subtle film grain, slightly muted color tones and soft focus typical of analog photography from that era." }
+    ],
+    "promptExample": {
+      "title": "1980s AI portrait prompt example",
+      "prompt": "Transform the uploaded photo into an authentic 1980s studio portrait while keeping the same person's recognizable facial identity. Add period-accurate hairstyle and clothing, a soft gradient studio backdrop, warm studio lighting, subtle film grain and slightly muted vintage color tones. Do not change the person's identity."
+    },
+    "steps": [
+      "Upload a clear, front-facing reference photo.",
+      "Describe the specific 1980s studio elements you want.",
+      "State that the facial identity must be preserved.",
+      "Add film grain and vintage color grading details.",
+      "Compare the result with real 80s studio photographs and refine."
+    ],
+    "tips": [
+      "Look at real 1980s studio photos for authentic hairstyle and backdrop references.",
+      "Avoid modern accessories or digital-camera lighting in the prompt.",
+      "Regional variations such as family-album or college-photo styles can be added for more specific results.",
+      "Keep the identity-preservation instruction even when adding heavy stylistic changes."
+    ],
+    "supportedTools": ["ChatGPT", "Gemini", "Nano Banana", "Midjourney"],
+    "relatedPrompts": ["eighties-retro-male-portrait", "traditional-saree-portrait", "festival-portrait"],
+    "relatedTrends": ["retro-ai-photo", "90s-bollywood-ai-photo", "ai-polaroid-couple-photo"],
+    "relatedGuides": ["keep-same-face", "ai-face-looks-different", "how-to-write-ai-image-prompts"],
+    "faq": [
+      { "question": "How do I make an accurate 1980s AI photo?", "answer": "Describe period-specific studio backdrops, hairstyles, clothing, film grain and color grading instead of using a generic vintage filter instruction." },
+      { "question": "Why does the 80s AI trend sometimes change my face?", "answer": "Heavy stylistic transformations can shift facial identity if the prompt does not explicitly instruct the model to preserve the uploaded person's features." },
+      { "question": "Which AI tools work best for the 1980s photo trend?", "answer": "ChatGPT, Gemini and Nano Banana are commonly used because they support uploading a reference photo alongside detailed styling instructions." }
+    ]
+  },
+
+  {
+    "noId": 11,
+    "slug": "nano-banana-prompts-guide",
+    "title": "Nano Banana Prompts: A Complete Guide to Better Results",
+    "metaTitle": "Nano Banana Prompts Guide | How to Get Better AI Image Results",
+    "metaDescription": "Learn how to write effective Nano Banana prompts for photo editing, identity preservation, realistic portraits and trending AI photo styles.",
+    "eyebrow": "Tool Guide",
+    "intro": "Nano Banana has become a popular choice for photo-realistic AI image editing because it handles reference images and identity preservation well. This guide explains how to structure prompts specifically for Nano Banana to get consistent, high-quality results.",
+    "searchTerms": [
+      "Nano Banana prompts",
+      "Nano Banana prompt guide",
+      "best Nano Banana prompts",
+      "Nano Banana photo editing prompt",
+      "how to use Nano Banana",
+      "Nano Banana 2 prompts"
+    ],
+    "problem": {
+      "heading": "Why do some Nano Banana results look inconsistent?",
+      "content": "Nano Banana performs best when prompts clearly separate what should stay the same from what should change. Inconsistent results usually happen when instructions are vague, contradictory, or when too many edits are requested in a single generation."
+    },
+    "commonCauses": [
+      "Unclear reference image quality",
+      "Requesting too many simultaneous edits",
+      "Not stating which elements must remain unchanged",
+      "Overloading the prompt with unrelated style keywords",
+      "Ambiguous instructions about pose or composition",
+      "Skipping a review step between edits"
+    ],
+    "solutions": [
+      { "title": "Lead with identity preservation", "content": "Start the prompt by telling Nano Banana to keep the uploaded person's face, proportions and identity unchanged." },
+      { "title": "Make one change per generation", "content": "Edit clothing, background or pose separately rather than combining several major changes in one prompt." },
+      { "title": "Be explicit about what stays fixed", "content": "Clearly state which elements, such as facial identity or an existing outfit, must not be altered." },
+      { "title": "Use natural, structured language", "content": "Write prompts as clear instructions rather than long strings of disconnected keywords." }
+    ],
+    "promptExample": {
+      "title": "Nano Banana editing prompt example",
+      "prompt": "Using the uploaded photo, keep the person's face, identity and body proportions exactly the same. Change only the outfit to a fitted navy blazer over a white shirt, and replace the background with a softly lit modern office. Maintain realistic lighting and natural skin texture throughout."
+    },
+    "steps": [
+      "Upload a clear, high-resolution reference photo.",
+      "State the identity-preservation instruction first.",
+      "Describe only the single change you want made.",
+      "Review the output before requesting the next edit.",
+      "Reuse the same reference image across a series for consistency."
+    ],
+    "tips": [
+      "Avoid stacking multiple unrelated edits in one prompt.",
+      "Keep a saved template of your identity-preservation instruction.",
+      "Use simple, well-lit reference photos for the most reliable results.",
+      "Break complex scenes into smaller, sequential edits."
+    ],
+    "supportedTools": ["Nano Banana", "ChatGPT", "Gemini"],
+    "relatedPrompts": ["cinematic-red-studio-portrait", "couple-mirror-selfie", "curtain-hairstyle-poster"],
+    "relatedTrends": ["ai-polaroid-couple-photo", "retro-ai-photo"],
+    "relatedGuides": ["how-to-write-ai-image-prompts", "keep-same-face", "chatgpt-image-editing-prompts"],
+    "faq": [
+      { "question": "What makes a good Nano Banana prompt?", "answer": "A good prompt clearly preserves identity, requests one change at a time and avoids conflicting or overloaded instructions." },
+      { "question": "Can Nano Banana edit a photo without changing the face?", "answer": "Yes, when the prompt explicitly instructs it to preserve the uploaded person's facial identity while changing only specified elements." },
+      { "question": "How is Nano Banana different from other AI image tools?", "answer": "Nano Banana is generally used for photo-realistic editing and identity-preserving transformations rather than purely artistic image generation." }
+    ]
+  },
+
+  {
+    "noId": 12,
+    "slug": "chatgpt-image-editing-prompts",
+    "title": "How to Write ChatGPT Image Editing Prompts That Actually Work",
+    "metaTitle": "ChatGPT Image Editing Prompts Guide | Best Practices & Examples",
+    "metaDescription": "Learn how to write ChatGPT image editing prompts for realistic photo edits, outfit changes, background swaps and identity-preserving transformations.",
+    "eyebrow": "Tool Guide",
+    "intro": "ChatGPT's image generation and editing tools are widely used for turning selfies into trending photo styles. Getting reliable results depends on how the editing instructions are structured, not just which style is requested.",
+    "searchTerms": [
+      "ChatGPT image editing prompts",
+      "ChatGPT photo editing prompt",
+      "ChatGPT prompts for pictures of yourself",
+      "how to edit photos with ChatGPT",
+      "ChatGPT AI photo prompt",
+      "ChatGPT image prompt tips"
+    ],
+    "problem": {
+      "heading": "Why do ChatGPT photo edits sometimes miss the request?",
+      "content": "ChatGPT interprets an edit request alongside the uploaded image as a whole. If the instructions are vague or contradict details already visible in the photo, the model may apply an unintended interpretation or alter parts of the image that were meant to stay the same."
+    },
+    "commonCauses": [
+      "Not specifying what should remain unchanged",
+      "Uploading a low-resolution or unclear photo",
+      "Combining unrelated edit requests in one message",
+      "Using ambiguous style references without describing them",
+      "Requesting edits that conflict with the existing photo composition",
+      "Skipping a follow-up correction step"
+    ],
+    "solutions": [
+      { "title": "State the fixed elements first", "content": "Tell ChatGPT explicitly which parts of the photo, such as the face or existing pose, must remain unchanged." },
+      { "title": "Describe the edit in plain, specific language", "content": "Clearly describe the single change you want, such as an outfit, background or lighting adjustment." },
+      { "title": "Iterate in small steps", "content": "Ask for one edit, review the result, and then request the next adjustment rather than combining everything at once." },
+      { "title": "Reference the uploaded photo directly", "content": "Point to specific details already in the image so the model understands what to preserve and what to modify." }
+    ],
+    "promptExample": {
+      "title": "ChatGPT photo editing prompt example",
+      "prompt": "Using the attached photo, keep my face, expression and body pose exactly as they are. Change only the background to a softly blurred cafe interior with warm ambient lighting, and keep the rest of the image realistic and unedited."
+    },
+    "steps": [
+      "Upload a clear, well-lit photo.",
+      "State which elements must remain unchanged.",
+      "Describe the single edit you want in plain language.",
+      "Review the result carefully.",
+      "Request a follow-up correction if needed instead of restarting."
+    ],
+    "tips": [
+      "Keep edit requests specific and limited to one change at a time.",
+      "Use follow-up messages to refine rather than rewriting the entire prompt.",
+      "Reference visible details in the photo to reduce ambiguity.",
+      "Avoid contradicting the existing composition of the uploaded image."
+    ],
+    "supportedTools": ["ChatGPT", "Gemini", "Nano Banana"],
+    "relatedPrompts": ["airport-travel-aesthetic", "neon-city-street-portrait", "gym-cinematic-portrait"],
+    "relatedTrends": ["retro-ai-photo", "ai-polaroid-couple-photo"],
+    "relatedGuides": ["how-to-write-ai-image-prompts", "nano-banana-prompts-guide", "ai-image-wrong-background"],
+    "faq": [
+      { "question": "Why does ChatGPT change parts of my photo I didn't ask about?", "answer": "This usually happens when the prompt does not clearly state which elements should remain unchanged, leaving room for the model to reinterpret them." },
+      { "question": "Can ChatGPT edit just one part of a photo?", "answer": "Yes, when the prompt is specific about the single change requested and explicitly preserves the rest of the image." },
+      { "question": "Should I ask for multiple edits at once in ChatGPT?", "answer": "It is usually more reliable to request one edit at a time and review the result before asking for further changes." }
+    ]
+  },
+
+  {
+    "noId": 13,
+    "slug": "ai-passport-photo-maker",
+    "title": "How to Create a Passport or ID Photo with AI",
+    "metaTitle": "AI Passport Photo Maker Guide | Rules, Prompts and Common Mistakes",
+    "metaDescription": "Learn how to use AI to create a compliant passport or ID photo, including background, lighting, framing rules and common mistakes to avoid.",
+    "eyebrow": "AI Photo Guide",
+    "intro": "AI passport photo tools are popular because they can produce a compliant-looking photo from a normal selfie. However, official documents have strict requirements, and AI-generated photos need to be checked carefully before use.",
+    "searchTerms": [
+      "AI passport photo maker",
+      "AI passport photo generator",
+      "AI ID photo",
+      "how to make passport photo with AI",
+      "passport photo AI prompt",
+      "AI photo for visa application"
+    ],
+    "problem": {
+      "heading": "Why do AI-generated passport photos often get rejected?",
+      "content": "Passport and visa photos must meet strict rules for background color, framing, expression, lighting and head position. AI image generators do not automatically know these rules unless they are stated clearly, and generated backgrounds or lighting can easily fall outside official requirements."
+    },
+    "commonCauses": [
+      "Incorrect or uneven background color",
+      "Head not centered or sized correctly within the frame",
+      "Shadows on the face or background",
+      "Non-neutral expression or slightly open mouth",
+      "Accessories such as sunglasses or hats left in the image",
+      "Aspect ratio not matching the required document size"
+    ],
+    "solutions": [
+      { "title": "Specify the exact background requirement", "content": "State the required plain background color, such as white or light grey, with even lighting and no shadows." },
+      { "title": "Describe correct framing", "content": "Ask for a front-facing head-and-shoulders composition with the head centered and sized according to standard passport photo proportions." },
+      { "title": "Request a neutral expression", "content": "Specify a neutral facial expression with both eyes open and mouth closed, looking directly at the camera." },
+      { "title": "Remove accessories and shadows", "content": "Explicitly state that glasses, hats and heavy shadows should not appear in the final image." }
+    ],
+    "promptExample": {
+      "title": "AI passport photo prompt example",
+      "prompt": "Using the uploaded photo, create a passport-style photo with a plain, evenly lit white background, no shadows, a neutral facial expression, eyes open, mouth closed, facing directly at the camera. Center the head and shoulders in the frame and preserve the person's real facial identity without retouching key features."
+    },
+    "steps": [
+      "Upload a clear, front-facing photo taken in good lighting.",
+      "State the exact background color required for your country's passport photo rules.",
+      "Request a neutral expression and correct head framing.",
+      "Remove any accessories or shadows from the prompt.",
+      "Check the result against your country's official passport photo specification before using it."
+    ],
+    "tips": [
+      "Always confirm your country's specific passport photo dimensions and rules before submitting.",
+      "Avoid heavy retouching, since some agencies reject over-edited photos.",
+      "Use a plain wall or check the background manually if AI does not remove it correctly.",
+      "Print or upload the photo at the exact required resolution and size."
+    ],
+    "supportedTools": ["ChatGPT", "Gemini", "Nano Banana"],
+    "relatedPrompts": ["cinematic-red-studio-portrait", "traditional-saree-portrait"],
+    "relatedTrends": ["ai-polaroid-couple-photo"],
+    "relatedGuides": ["ai-image-aspect-ratio-guide", "keep-same-face", "ai-professional-headshot"],
+    "faq": [
+      { "question": "Can I use an AI-generated photo for my actual passport application?", "answer": "Many agencies accept photos as long as they meet official size, background, lighting and expression requirements, but you should always verify against your country's current rules before submitting." },
+      { "question": "Why does my AI passport photo have the wrong background?", "answer": "The background may not be evenly lit or the correct color if the prompt did not clearly specify the exact plain background required." },
+      { "question": "Does AI retouching cause passport photo rejections?", "answer": "Yes, official guidelines often prohibit heavy retouching, so the AI-generated face should closely match your real, unaltered appearance." }
+    ]
+  },
+
+  {
+    "noId": 14,
+    "slug": "ai-professional-headshot",
+    "title": "How to Create a Professional AI Headshot for LinkedIn",
+    "metaTitle": "AI Professional Headshot Guide | LinkedIn Photo Prompts",
+    "metaDescription": "Learn how to create a realistic, professional AI headshot for LinkedIn or a resume, including prompt structure, lighting, attire and common mistakes.",
+    "eyebrow": "AI Photo Guide",
+    "intro": "AI headshot generators are widely used to create professional photos for LinkedIn, resumes and company profiles without booking a studio session. The key to a convincing result is describing professional context clearly rather than relying on generic 'professional photo' wording.",
+    "searchTerms": [
+      "AI professional headshot",
+      "AI LinkedIn photo",
+      "AI headshot generator prompt",
+      "how to make professional headshot with AI",
+      "AI resume photo",
+      "corporate AI headshot"
+    ],
+    "problem": {
+      "heading": "Why do AI headshots often look unconvincing?",
+      "content": "A professional headshot depends on specific studio lighting, appropriate attire, natural posture and a believable background. Generic prompts often produce overly glamorous, overly retouched or inconsistent results that do not resemble real corporate photography."
+    },
+    "commonCauses": [
+      "Overly dramatic or cinematic lighting",
+      "Attire that looks too casual or too formal for the context",
+      "Unnatural, overly perfect skin retouching",
+      "Backgrounds that look like a generic gradient rather than a real office or studio",
+      "Inconsistent identity compared to the reference photo",
+      "Poses that look stiff or artificial"
+    ],
+    "solutions": [
+      { "title": "Describe studio-style lighting", "content": "Use soft, even key lighting typical of corporate headshot photography rather than dramatic or colored lighting." },
+      { "title": "Specify appropriate attire", "content": "Describe business-appropriate clothing that matches the industry, such as a blazer or collared shirt." },
+      { "title": "Keep retouching natural", "content": "Ask for natural skin texture and light, realistic retouching rather than a flawless, artificial look." },
+      { "title": "Use a simple, professional background", "content": "A softly blurred office or a neutral studio backdrop usually looks more convincing than a generic gradient." }
+    ],
+    "promptExample": {
+      "title": "Professional headshot prompt example",
+      "prompt": "Using the uploaded photo, create a professional corporate headshot with soft, even studio lighting, a neutral grey or softly blurred office background, and a well-fitted navy blazer over a collared shirt. Keep the person's facial identity, natural skin texture and a relaxed, confident expression."
+    },
+    "steps": [
+      "Upload a clear, front-facing reference photo.",
+      "Describe professional attire suited to your industry.",
+      "Specify soft, even studio-style lighting.",
+      "Choose a simple, realistic background.",
+      "Compare the result with real corporate headshots and adjust retouching if needed."
+    ],
+    "tips": [
+      "Avoid asking for dramatic or colorful lighting for corporate use.",
+      "Match the attire to the industry, since expectations vary by field.",
+      "Keep retouching subtle to maintain a natural, trustworthy appearance.",
+      "Generate a few variations and pick the one that looks most like a real photograph."
+    ],
+    "supportedTools": ["ChatGPT", "Gemini", "Nano Banana"],
+    "relatedPrompts": ["cinematic-red-studio-portrait", "gym-cinematic-portrait"],
+    "relatedTrends": ["retro-ai-photo"],
+    "relatedGuides": ["ai-passport-photo-maker", "why-ai-photo-looks-fake", "keep-same-face"],
+    "faq": [
+      { "question": "Can AI headshots be used on LinkedIn?", "answer": "Many people use AI-generated headshots on LinkedIn as long as the photo looks natural and still resembles them accurately." },
+      { "question": "How do I stop my AI headshot from looking too glamorous?", "answer": "Avoid dramatic lighting and heavy retouching keywords, and instead describe natural studio lighting and realistic skin texture." },
+      { "question": "What background works best for an AI headshot?", "answer": "A neutral studio backdrop or a softly blurred office setting generally looks more professional than an abstract gradient." }
+    ]
+  },
+
+  {
+    "noId": 15,
+    "slug": "how-to-tell-if-image-is-ai",
+    "title": "How to Tell If an Image Is AI-Generated",
+    "metaTitle": "How to Tell If a Photo Is AI-Generated | Detection Guide",
+    "metaDescription": "Learn the common visual signs of AI-generated images, including hands, text, lighting, textures and background details, plus how detection tools work.",
+    "eyebrow": "AI Photo Guide",
+    "intro": "As AI-generated photos become more realistic, it is increasingly useful to know what visual clues can reveal that an image was not taken with a camera. This guide covers the most common signs and how detection tools approach the problem.",
+    "searchTerms": [
+      "how to tell if image is AI generated",
+      "how to spot AI images",
+      "signs of AI generated photo",
+      "AI image detector",
+      "is this photo AI generated",
+      "how to detect fake AI photo"
+    ],
+    "problem": {
+      "heading": "Why is it getting harder to spot AI images?",
+      "content": "Newer AI image models produce more realistic lighting, skin texture and composition than earlier tools, which means older detection tricks such as obviously wrong hands are less reliable than before. Spotting AI images now often requires looking at several smaller details together rather than one obvious flaw."
+    },
+    "commonCauses": [
+      "Improved realism in skin, lighting and textures",
+      "Fewer obvious hand and finger errors in newer models",
+      "More consistent backgrounds and objects",
+      "Better handling of reflections and shadows",
+      "Compression and re-uploading that hides subtle artifacts",
+      "People being less familiar with newer AI visual patterns"
+    ],
+    "solutions": [
+      { "title": "Check small text and patterns", "content": "AI models can still struggle with small text, fine repeating patterns and complex background details, so zoom into these areas." },
+      { "title": "Look at hands, ears and teeth", "content": "These areas remain some of the most error-prone details even in advanced models." },
+      { "title": "Examine lighting consistency", "content": "Check whether shadows, reflections and light direction match logically across the whole image." },
+      { "title": "Use detection tools as one signal, not proof", "content": "AI detection tools can provide a probability estimate, but they are not always accurate and should be combined with visual inspection and context." }
+    ],
+    "promptExample": {
+      "title": "Self-check checklist instead of a prompt",
+      "prompt": "When reviewing a suspicious image, examine small text, jewelry, background patterns, hand and finger anatomy, teeth alignment, reflections in glass or eyes, and whether shadows are consistent with a single light source before drawing a conclusion."
+    },
+    "steps": [
+      "Zoom into hands, ears, teeth and small text.",
+      "Check whether lighting and shadows are consistent throughout the image.",
+      "Look at background patterns and repeating objects for irregularities.",
+      "Consider the image's source and context.",
+      "Use an AI detection tool as a supporting signal rather than a final answer."
+    ],
+    "tips": [
+      "No single detail guarantees an image is AI-generated; look for several small inconsistencies together.",
+      "Detection tools can produce false positives and false negatives, so treat results as estimates.",
+      "Metadata can sometimes reveal the source, but it can also be stripped or edited.",
+      "Context, such as where an image was shared and by whom, is often as useful as visual analysis."
+    ],
+    "supportedTools": ["ChatGPT", "Gemini"],
+    "relatedPrompts": [],
+    "relatedTrends": ["ai-polaroid-couple-photo", "retro-ai-photo"],
+    "relatedGuides": ["fix-ai-hands", "why-ai-photo-looks-fake", "ai-image-artifacts-objects-merging"],
+    "faq": [
+      { "question": "What are the most reliable signs of an AI-generated image?", "answer": "Small text, hands, ears, teeth, reflections and inconsistent lighting or shadows remain among the more reliable areas to check." },
+      { "question": "Are AI image detectors accurate?", "answer": "Detection tools can be useful but are not always accurate, and results should be treated as one signal among several rather than definitive proof." },
+      { "question": "Why is it harder to detect AI images now than before?", "answer": "Newer AI models produce more consistent lighting, textures and anatomy, reducing the obvious visual errors that used to make AI images easy to spot." }
+    ]
+  },
+
+  {
+    "noId": 16,
+    "slug": "ai-eyes-look-weird",
+    "title": "Why AI-Generated Eyes Look Weird and How to Fix Them",
+    "metaTitle": "AI Eyes Look Weird? How to Fix Unnatural AI-Generated Eyes",
+    "metaDescription": "Learn why AI-generated eyes can look asymmetrical, glassy or misaligned, and how to write prompts that produce more natural, realistic eyes.",
+    "eyebrow": "AI Photo Guide",
+    "intro": "Eyes carry a lot of the emotional realism in a portrait, so even small inaccuracies are noticeable. Asymmetry, unnatural reflections or a glassy, doll-like appearance are common issues that can be improved with more specific prompting.",
+    "searchTerms": [
+      "AI eyes look weird",
+      "AI generated eyes unnatural",
+      "fix AI eyes prompt",
+      "AI eyes asymmetrical",
+      "AI portrait eyes glassy",
+      "how to fix AI eyes"
+    ],
+    "problem": {
+      "heading": "Why do AI eyes look unnatural?",
+      "content": "Eyes require precise symmetry, natural reflections and consistent gaze direction. When a prompt focuses on dramatic style rather than natural anatomy, the model may produce overly glossy, misaligned or emotionless eyes."
+    },
+    "commonCauses": [
+      "Overly dramatic or glossy eye styling",
+      "Slight asymmetry between the two eyes",
+      "Unnatural or missing catchlight reflections",
+      "Mismatched gaze direction",
+      "Extreme close-up framing that exaggerates small errors",
+      "Heavy stylization that overrides natural anatomy"
+    ],
+    "solutions": [
+      { "title": "Ask for natural eye reflections", "content": "Describe soft, realistic catchlights consistent with the scene's lighting rather than glossy or exaggerated highlights." },
+      { "title": "Avoid extreme close-ups when identity matters", "content": "Closer framing makes small asymmetries more visible, so a slightly wider shot can look more natural." },
+      { "title": "Specify a natural gaze", "content": "State that both eyes should look in the same direction toward the camera or a defined point in the scene." },
+      { "title": "Reduce excessive stylization", "content": "Remove overly dramatic beauty or fantasy eye-styling keywords if realism is the goal." }
+    ],
+    "promptExample": {
+      "title": "Natural eyes prompt example",
+      "prompt": "Render natural, symmetrical eyes with soft, realistic catchlight reflections matching the scene's lighting. Both eyes should look in the same direction toward the camera with a relaxed, natural expression. Avoid glossy, exaggerated or mismatched eye styling."
+    },
+    "steps": [
+      "Identify the specific eye issue, such as asymmetry or glossy highlights.",
+      "Simplify eye-related style keywords in the prompt.",
+      "Specify natural catchlights and consistent gaze direction.",
+      "Avoid extreme close-up framing if the issue persists.",
+      "Regenerate or use localized editing to fix only the eye area."
+    ],
+    "tips": [
+      "Compare both eyes closely for symmetry before finalizing an image.",
+      "Natural lighting descriptions usually produce more believable eye reflections than dramatic lighting keywords.",
+      "If only the eyes are wrong, use an editing or inpainting workflow instead of regenerating the whole image.",
+      "Avoid combining multiple conflicting eye-color or eye-shape instructions."
+    ],
+    "supportedTools": ["ChatGPT", "Gemini", "Nano Banana", "Midjourney"],
+    "relatedPrompts": ["cinematic-red-studio-portrait", "couple-mirror-selfie"],
+    "relatedTrends": ["retro-ai-photo"],
+    "relatedGuides": ["fix-ai-hands", "why-ai-photo-looks-fake", "ai-teeth-look-fake"],
+    "faq": [
+      { "question": "Why do AI-generated eyes look asymmetrical?", "answer": "Small anatomical inconsistencies can appear when the model prioritizes stylistic effects over precise facial symmetry." },
+      { "question": "How do I get more realistic eye reflections in AI images?", "answer": "Describe soft, natural catchlights that match the scene's lighting instead of requesting glossy or dramatic highlights." },
+      { "question": "Can I fix just the eyes without regenerating the whole photo?", "answer": "Some AI tools support localized editing or inpainting, which allows you to correct the eyes while keeping the rest of the image unchanged." }
+    ]
+  },
+
+  {
+    "noId": 17,
+    "slug": "ai-teeth-look-fake",
+    "title": "Why AI-Generated Teeth and Smiles Look Fake",
+    "metaTitle": "AI Teeth Look Fake? How to Fix Unnatural AI Smiles",
+    "metaDescription": "Learn why AI-generated teeth and smiles often look too perfect or distorted, and how to prompt for a more natural, realistic smile.",
+    "eyebrow": "AI Photo Guide",
+    "intro": "Smiling portraits are popular, but teeth are a detail where AI models can produce overly uniform, oddly shaped or unnaturally white results. Small prompt adjustments can make a smile look far more realistic.",
+    "searchTerms": [
+      "AI teeth look fake",
+      "AI smile looks weird",
+      "fix AI teeth prompt",
+      "AI generated smile unnatural",
+      "AI portrait teeth distorted",
+      "realistic AI smile prompt"
+    ],
+    "problem": {
+      "heading": "Why do AI teeth look unnatural?",
+      "content": "Teeth involve small, repeating shapes that are easy for a model to oversimplify or exaggerate. Requests for a 'perfect smile' can push the result toward unnaturally uniform, overly white or slightly distorted teeth."
+    },
+    "commonCauses": [
+      "Overly uniform, perfectly white teeth",
+      "Distorted tooth shape or spacing during a wide smile",
+      "Extreme close-up framing on the mouth",
+      "Vague instructions such as 'perfect smile'",
+      "Conflicting expression instructions",
+      "Heavy stylization overriding natural anatomy"
+    ],
+    "solutions": [
+      { "title": "Ask for natural tooth variation", "content": "Describe a natural, slightly imperfect smile rather than a flawless, uniform one." },
+      { "title": "Use a relaxed expression", "content": "A soft or closed-mouth smile is often easier for the model to render accurately than a wide, teeth-baring smile." },
+      { "title": "Avoid extreme mouth close-ups", "content": "Wider framing reduces the visibility of small distortions around the mouth." },
+      { "title": "Remove vague perfection language", "content": "Replace terms like 'perfect smile' with natural, descriptive language about the expression." }
+    ],
+    "promptExample": {
+      "title": "Natural smile prompt example",
+      "prompt": "Give the subject a natural, relaxed smile with realistic, slightly varied teeth rather than perfectly uniform or overly white teeth. Keep the mouth proportionate to the face and avoid distortion around the lips and teeth."
+    },
+    "steps": [
+      "Decide whether a closed-mouth or open smile is needed.",
+      "Describe natural tooth variation instead of asking for perfection.",
+      "Avoid extreme close-up framing on the mouth.",
+      "Regenerate or use inpainting to correct the mouth area if needed.",
+      "Compare the result with a natural reference photo."
+    ],
+    "tips": [
+      "A relaxed, closed-mouth smile is usually more reliable for realism.",
+      "Avoid combining wide-smile requests with heavy stylization.",
+      "Check symmetry and spacing of the teeth before finalizing an image.",
+      "Use localized editing for the mouth if the rest of the portrait is already correct."
+    ],
+    "supportedTools": ["ChatGPT", "Gemini", "Nano Banana"],
+    "relatedPrompts": ["couple-mirror-selfie", "cinematic-red-studio-portrait"],
+    "relatedTrends": ["retro-ai-photo"],
+    "relatedGuides": ["ai-eyes-look-weird", "fix-ai-hands", "why-ai-photo-looks-fake"],
+    "faq": [
+      { "question": "Why does AI make teeth look too perfect?", "answer": "Vague instructions such as 'perfect smile' can push the model toward unnaturally uniform, overly white teeth instead of realistic variation." },
+      { "question": "How do I get a natural smile in an AI photo?", "answer": "Describe a relaxed expression with natural tooth variation and avoid extreme close-up framing on the mouth." },
+      { "question": "Can I fix distorted teeth without regenerating the whole photo?", "answer": "Some AI tools allow localized editing of the mouth area, which can correct teeth without affecting the rest of the image." }
+    ]
+  },
+
+  {
+    "noId": 18,
+    "slug": "ai-hair-looks-fake",
+    "title": "Why AI-Generated Hair Looks Fake or Wig-Like",
+    "metaTitle": "AI Hair Looks Fake? How to Get Realistic AI-Generated Hair",
+    "metaDescription": "Learn why AI-generated hair can look like a wig or plastic helmet, and how to prompt for natural strands, texture and realistic hairstyles.",
+    "eyebrow": "AI Photo Guide",
+    "intro": "Hair is another detail that can make an otherwise realistic AI photo look artificial. A smooth, helmet-like appearance or unnaturally perfect strands are common signs that the prompt needs more texture-specific language.",
+    "searchTerms": [
+      "AI hair looks fake",
+      "AI generated hair looks like wig",
+      "fix AI hair prompt",
+      "realistic AI hair prompt",
+      "AI hair texture problem",
+      "AI hairstyle looks unnatural"
+    ],
+    "problem": {
+      "heading": "Why does AI hair look artificial?",
+      "content": "Hair is made of thousands of individual strands with irregular flyaways, texture and movement. When a prompt only names a hairstyle without describing texture, the model can render hair as a smooth, uniform mass rather than realistic strands."
+    },
+    "commonCauses": [
+      "Overly smooth, helmet-like hair rendering",
+      "Missing flyaway strands and natural texture",
+      "Unrealistic shine or gloss",
+      "Hairstyle not matching the described hair type",
+      "Extreme wind or motion effects exaggerating errors",
+      "Heavy stylization overriding natural hair structure"
+    ],
+    "solutions": [
+      { "title": "Describe natural hair texture", "content": "Mention individual strands, subtle flyaways and natural texture appropriate to the hair type, such as wavy, curly or straight." },
+      { "title": "Match hairstyle to hair type", "content": "Describe the hairstyle in a way that is physically consistent with the described hair texture and length." },
+      { "title": "Use natural lighting on hair", "content": "Soft, natural lighting produces more believable highlights than exaggerated glossy shine." },
+      { "title": "Avoid extreme motion effects", "content": "Strong wind or dramatic movement can exaggerate unnatural hair rendering, so keep hair movement subtle unless it is intentional." }
+    ],
+    "promptExample": {
+      "title": "Realistic hair prompt example",
+      "prompt": "Render natural hair with visible individual strands, subtle flyaways and realistic texture appropriate to a wavy medium-length hairstyle. Use soft, natural lighting with believable highlights, avoiding an overly smooth, glossy or helmet-like appearance."
+    },
+    "steps": [
+      "Identify the hair type and length you want.",
+      "Describe natural strand texture and subtle flyaways.",
+      "Match the lighting description to natural highlights.",
+      "Avoid extreme motion or wind effects unless intended.",
+      "Regenerate or edit the hair area if it still looks unnatural."
+    ],
+    "tips": [
+      "Reference realistic hair types, such as curly, wavy or straight, rather than generic 'nice hair' wording.",
+      "Avoid asking for excessive shine or gloss if realism is the goal.",
+      "Subtle imperfections, like a few loose strands, can make hair look more natural.",
+      "Use localized editing if only the hair needs correction."
+    ],
+    "supportedTools": ["ChatGPT", "Gemini", "Nano Banana"],
+    "relatedPrompts": ["curtain-hairstyle-poster", "cinematic-red-studio-portrait"],
+    "relatedTrends": ["retro-ai-photo"],
+    "relatedGuides": ["why-ai-photo-looks-fake", "ai-eyes-look-weird", "fix-ai-hands"],
+    "faq": [
+      { "question": "Why does AI hair look like a wig?", "answer": "The model may render hair as a smooth, uniform mass when the prompt does not describe natural strand texture, flyaways or realistic lighting." },
+      { "question": "How do I get realistic hair texture in AI photos?", "answer": "Describe the specific hair type, natural strand detail and subtle flyaways, and use soft, natural lighting instead of exaggerated shine." },
+      { "question": "Does the hairstyle description matter for realism?", "answer": "Yes. The hairstyle should be physically consistent with the described hair type and length to avoid an artificial appearance." }
+    ]
+  },
+
+  {
+    "noId": 19,
+    "slug": "ai-image-lighting-mismatch",
+    "title": "How to Fix Lighting and Shadow Mismatches in AI Images",
+    "metaTitle": "AI Image Lighting Mismatch? How to Fix Inconsistent Shadows",
+    "metaDescription": "Learn why AI-generated images sometimes have inconsistent lighting or mismatched shadows, and how to prompt for coherent, realistic lighting.",
+    "eyebrow": "AI Photo Guide",
+    "intro": "A photo can have a realistic subject and background separately, yet still look wrong when the lighting direction, shadow angle or color temperature do not match between them. This guide explains how to prompt for coherent lighting.",
+    "searchTerms": [
+      "AI image lighting mismatch",
+      "AI photo shadows wrong",
+      "fix AI lighting prompt",
+      "AI image inconsistent lighting",
+      "realistic lighting AI prompt",
+      "AI photo shadow direction wrong"
+    ],
+    "problem": {
+      "heading": "Why does AI lighting look inconsistent?",
+      "content": "AI models generate the subject and environment together, but if the prompt does not clearly define a single light source and direction, shadows, highlights and color temperature can end up mismatched between different parts of the image."
+    },
+    "commonCauses": [
+      "Multiple conflicting lighting instructions",
+      "No defined light source or direction",
+      "Background and subject lit with different color temperatures",
+      "Shadows pointing in inconsistent directions",
+      "Reflections that do not match the described light source",
+      "Combining daytime and nighttime lighting cues"
+    ],
+    "solutions": [
+      { "title": "Define one light source", "content": "Specify a single primary light source, such as soft window light from the left, and its approximate direction." },
+      { "title": "Match subject and background lighting", "content": "Ensure the described lighting applies consistently to both the subject and the environment." },
+      { "title": "Specify a consistent color temperature", "content": "State whether the lighting should be warm, cool or neutral to avoid mismatched tones between elements." },
+      { "title": "Describe shadow direction explicitly", "content": "Mention where shadows should fall relative to the light source for a more physically coherent result." }
+    ],
+    "promptExample": {
+      "title": "Consistent lighting prompt example",
+      "prompt": "Light the entire scene with a single soft, warm light source coming from the upper left, consistent with a late afternoon sun. Shadows should fall to the lower right for both the subject and the background, with a matching warm color temperature throughout the image."
+    },
+    "steps": [
+      "Decide on one primary light source and direction.",
+      "Apply that lighting description to both subject and background.",
+      "Specify a consistent color temperature.",
+      "Describe the expected shadow direction.",
+      "Review the image for mismatched highlights, shadows or tones."
+    ],
+    "tips": [
+      "Avoid listing multiple different lighting styles in one prompt.",
+      "Reference real lighting scenarios, such as 'overcast daylight' or 'golden hour', for more coherent results.",
+      "Check reflections in glass, eyes or glossy surfaces for consistency with the described light source.",
+      "Simplify the lighting description if mismatches persist."
+    ],
+    "supportedTools": ["ChatGPT", "Gemini", "Nano Banana", "Midjourney"],
+    "relatedPrompts": ["neon-city-street-portrait", "cinematic-red-studio-portrait"],
+    "relatedTrends": ["retro-ai-photo"],
+    "relatedGuides": ["ai-image-wrong-background", "why-ai-photo-looks-fake", "ai-image-artifacts-objects-merging"],
+    "faq": [
+      { "question": "Why do shadows look wrong in my AI image?", "answer": "Shadows can look inconsistent when the prompt does not define a single, clear light source and direction for the entire scene." },
+      { "question": "How do I get consistent lighting between the subject and background?", "answer": "Describe one light source and color temperature and apply it explicitly to both the subject and the environment in the prompt." },
+      { "question": "Does mentioning a time of day help with lighting accuracy?", "answer": "Yes. Referencing a specific, real lighting scenario such as golden hour or overcast daylight tends to produce more physically coherent results than abstract lighting terms." }
+    ]
+  },
+
+  {
+    "noId": 20,
+    "slug": "ai-product-photography-prompts",
+    "title": "How to Write AI Product Photography Prompts",
+    "metaTitle": "AI Product Photography Prompts | E-Commerce Photo Guide",
+    "metaDescription": "Learn how to write AI prompts for clean, realistic product photography, including lighting, background and composition tips for e-commerce images.",
+    "eyebrow": "Prompt Writing Guide",
+    "intro": "AI-generated product photos are increasingly used for e-commerce listings, but products need accurate proportions, clean backgrounds and realistic material rendering. This guide covers how to prompt for reliable product photography results.",
+    "searchTerms": [
+      "AI product photography prompt",
+      "AI product photo generator",
+      "e-commerce AI photo prompt",
+      "AI product image prompt",
+      "how to make product photos with AI",
+      "AI studio product shot"
+    ],
+    "problem": {
+      "heading": "Why do AI product photos often look inaccurate?",
+      "content": "Product photography requires the exact shape, color, material and proportions of the real item, which AI models can distort if the reference image is unclear or the prompt focuses too much on generic style rather than product accuracy."
+    },
+    "commonCauses": [
+      "Distorted product shape or proportions",
+      "Incorrect color reproduction",
+      "Unrealistic reflections on glossy or metallic surfaces",
+      "Background inconsistent with e-commerce standards",
+      "Added or missing product details",
+      "Vague lighting instructions causing flat or harsh results"
+    ],
+    "solutions": [
+      { "title": "Use a clear product reference image", "content": "Upload a sharp, well-lit photo of the actual product from a straightforward angle." },
+      { "title": "Preserve exact product details", "content": "Instruct the model to keep the product's shape, color, logo and material exactly as shown in the reference." },
+      { "title": "Specify studio lighting", "content": "Describe soft, even studio lighting appropriate for e-commerce, such as a softbox setup, to avoid harsh shadows or glare." },
+      { "title": "Use a clean, standard background", "content": "Request a plain white or neutral background matching common marketplace requirements." }
+    ],
+    "promptExample": {
+      "title": "Product photography prompt example",
+      "prompt": "Using the uploaded product photo, create a clean e-commerce studio shot with a plain white background, soft even studio lighting and no harsh shadows or glare. Preserve the product's exact shape, color, logo and material details without altering the design."
+    },
+    "steps": [
+      "Upload a clear, accurate reference photo of the product.",
+      "State that the product's shape, color and details must remain unchanged.",
+      "Specify soft, even studio lighting.",
+      "Request a clean, standard background.",
+      "Compare the result against the real product for accuracy before publishing."
+    ],
+    "tips": [
+      "Always verify that colors and proportions match the real product before using the image commercially.",
+      "Avoid stylistic embellishments that could misrepresent the product.",
+      "Use consistent lighting and background across a full product catalog for a professional look.",
+      "Check reflective or transparent materials carefully, since these are harder for AI to render accurately."
+    ],
+    "supportedTools": ["ChatGPT", "Gemini", "Nano Banana"],
+    "relatedPrompts": [],
+    "relatedTrends": [],
+    "relatedGuides": ["ai-image-wrong-background", "ai-image-lighting-mismatch", "how-to-write-ai-image-prompts"],
+    "faq": [
+      { "question": "Can AI generate accurate product photos for e-commerce?", "answer": "AI can produce clean product photos when given a clear reference image and explicit instructions to preserve the product's exact shape, color and details." },
+      { "question": "Why does AI sometimes change my product's design?", "answer": "This can happen if the prompt does not clearly instruct the model to preserve the product's exact appearance from the reference image." },
+      { "question": "What background works best for AI product photos?", "answer": "A plain white or neutral studio background is standard for most e-commerce marketplaces and tends to produce more reliable, professional results." }
+    ]
+  },
+
+  {
+    "noId": 21,
+    "slug": "ai-image-aspect-ratio-guide",
+    "title": "AI Image Aspect Ratio Guide: Choosing the Right Size for Every Platform",
+    "metaTitle": "AI Image Aspect Ratio Guide | Best Sizes for Social Media & Printing",
+    "metaDescription": "Learn how to choose the right AI image aspect ratio and resolution for Instagram, profile photos, printing and other platforms, with prompt tips.",
+    "eyebrow": "Prompt Writing Guide",
+    "intro": "AI images can be generated in different aspect ratios and resolutions, but using the wrong size for a platform can lead to cropped compositions, blurry uploads or a rejected print. This guide explains how to choose and prompt for the correct dimensions.",
+    "searchTerms": [
+      "AI image aspect ratio guide",
+      "best aspect ratio for AI photos",
+      "AI image size for Instagram",
+      "AI photo resolution guide",
+      "AI image dimensions",
+      "AI generated image for printing size"
+    ],
+    "problem": {
+      "heading": "Why does the wrong aspect ratio cause problems?",
+      "content": "Different platforms expect different image proportions and resolutions. An AI image generated in the wrong ratio can be awkwardly cropped when uploaded, and a low-resolution image can look blurry or pixelated when printed or enlarged."
+    },
+    "commonCauses": [
+      "Not specifying an aspect ratio, leading to a default square or landscape output",
+      "Using a low-resolution setting for a large print",
+      "Mismatched ratio between the composition and the platform's crop",
+      "Important subject details placed too close to the frame edge",
+      "Confusing resolution with aspect ratio",
+      "Ignoring platform-specific size recommendations"
+    ],
+    "solutions": [
+      { "title": "Specify the aspect ratio explicitly", "content": "State the exact ratio needed, such as square 1:1 for a profile photo or vertical 4:5 for a social feed post." },
+      { "title": "Match resolution to the intended use", "content": "Request a higher resolution for printing and a moderate resolution for typical web or social media use." },
+      { "title": "Keep the subject centered with margin", "content": "Leave some space around the main subject so platform-specific cropping does not cut off important details." },
+      { "title": "Check platform requirements before generating", "content": "Confirm the current recommended size for the specific platform, such as a profile photo, cover photo or print size." }
+    ],
+    "promptExample": {
+      "title": "Aspect ratio prompt example",
+      "prompt": "Generate the image in a vertical 4:5 aspect ratio suitable for a social media feed post, at a resolution suitable for sharp display on mobile screens. Keep the subject centered with comfortable margin around the edges to avoid cropping important details."
+    },
+    "steps": [
+      "Identify the platform or purpose for the image.",
+      "Look up the current recommended aspect ratio and resolution.",
+      "State the exact ratio and resolution in the prompt.",
+      "Keep important details away from the frame edges.",
+      "Preview the image at the target platform's crop before publishing."
+    ],
+    "tips": [
+      "Square (1:1) works well for profile photos, while vertical ratios often suit feed posts and stories.",
+      "For printing, always request the highest resolution the tool supports.",
+      "Leave margin around the subject so different platform crops do not cut off key details.",
+      "Recheck platform size guidelines periodically, since recommended dimensions can change."
+    ],
+    "supportedTools": ["ChatGPT", "Gemini", "Nano Banana", "Midjourney"],
+    "relatedPrompts": [],
+    "relatedTrends": [],
+    "relatedGuides": ["ai-passport-photo-maker", "how-to-write-ai-image-prompts", "ai-professional-headshot"],
+    "faq": [
+      { "question": "What aspect ratio should I use for a profile photo?", "answer": "A square 1:1 ratio is generally the safest choice for profile photos across most platforms." },
+      { "question": "Does a higher resolution always look better?", "answer": "Higher resolution helps for printing and enlarging, but for typical web and social media use, a moderate resolution is usually sufficient and loads faster." },
+      { "question": "Why does my AI image get cropped strangely when uploaded?", "answer": "This usually happens when the generated aspect ratio does not match the platform's expected crop, cutting off parts of the composition." }
+    ]
+  },
+
+  {
+    "noId": 22,
+    "slug": "ai-character-consistency-story",
+    "title": "How to Keep a Character Consistent Across an AI Story or Comic",
+    "metaTitle": "AI Character Consistency Guide | Comics, Storyboards & Series",
+    "metaDescription": "Learn how to keep the same AI-generated character consistent across multiple scenes for a comic, storyboard or illustrated story.",
+    "eyebrow": "AI Photo Guide",
+    "intro": "Creating a comic, storyboard or illustrated series with AI requires the same character to appear consistently across many different scenes, poses and expressions. This is more demanding than a single portrait and needs a structured approach.",
+    "searchTerms": [
+      "AI character consistency",
+      "consistent character AI comic",
+      "AI storyboard character prompt",
+      "same character multiple AI images",
+      "AI character sheet prompt",
+      "AI comic character consistency"
+    ],
+    "problem": {
+      "heading": "Why is character consistency hard across a story?",
+      "content": "Every new generation is an independent interpretation of the prompt, so small differences in wording, pose or scene can cause the character's face, proportions, outfit or color palette to drift across a sequence of images."
+    },
+    "commonCauses": [
+      "No consistent visual reference used across scenes",
+      "Character description changing slightly between prompts",
+      "Different artists' styles applied inconsistently",
+      "Large changes in pose, angle or expression between scenes",
+      "Costume or color details not repeated in every prompt",
+      "Generating scenes in isolation without comparing to earlier ones"
+    ],
+    "solutions": [
+      { "title": "Create a character reference sheet first", "content": "Generate or define one clear reference image showing the character's face, proportions, outfit and color palette before creating individual scenes." },
+      { "title": "Reuse a fixed character description", "content": "Write a consistent character description block and include it in every scene prompt without altering the wording." },
+      { "title": "Keep the art style locked", "content": "Use the same style description, such as line weight, coloring approach and rendering style, across every panel or scene." },
+      { "title": "Compare each new scene to the reference", "content": "Check each generated image against the reference sheet and regenerate if the character drifts too far." }
+    ],
+    "promptExample": {
+      "title": "Character consistency prompt example",
+      "prompt": "Using the character reference sheet, depict the same character with the same face shape, hairstyle, outfit and color palette described in the reference. Change only the pose, expression and background for this scene, and keep the illustration style identical to previous panels."
+    },
+    "steps": [
+      "Create a single reference sheet defining the character's appearance.",
+      "Write a reusable character description block.",
+      "Apply the same style and description to every scene prompt.",
+      "Generate each scene and compare it to the reference sheet.",
+      "Regenerate any scene where the character drifts noticeably."
+    ],
+    "tips": [
+      "Keep a written character bible with exact colors, outfit details and proportions for reuse.",
+      "Avoid rewriting the character description differently in each prompt.",
+      "Limit how much the pose or angle changes between consecutive panels if drift becomes a problem.",
+      "Some tools support consistent character or reference-image features, which can reduce manual reference matching."
+    ],
+    "supportedTools": ["ChatGPT", "Gemini", "Nano Banana", "Midjourney"],
+    "relatedPrompts": [],
+    "relatedTrends": [],
+    "relatedGuides": ["ai-photo-identity-consistency", "keep-same-face", "how-to-write-ai-image-prompts"],
+    "faq": [
+      { "question": "How do I keep an AI character consistent across a comic?", "answer": "Create a fixed character reference sheet and reuse the same character description and art style in every scene prompt." },
+      { "question": "Why does my AI character look different in each panel?", "answer": "Each generation is interpreted independently, so small wording differences, style changes or pose variations can cause the character's appearance to drift." },
+      { "question": "Should I regenerate an entire scene if the character looks slightly off?", "answer": "Not always. If the composition is otherwise correct, targeted editing of the character's face or outfit can be more efficient than regenerating the whole scene." }
+    ]
+  },
+
+  {
+    "noId": 23,
+    "slug": "ai-image-artifacts-objects-merging",
+    "title": "How to Fix AI Image Artifacts Where Objects Merge or Blend",
+    "metaTitle": "AI Image Objects Merging? How to Fix Visual Artifacts",
+    "metaDescription": "Learn why AI-generated images sometimes show objects merging, blending or overlapping incorrectly, and how to prompt for cleaner compositions.",
+    "eyebrow": "AI Photo Guide",
+    "intro": "AI images sometimes show strange artifacts where two separate objects appear to merge, overlap unnaturally or blend into the background. This is more common in busy scenes with many overlapping elements.",
+    "searchTerms": [
+      "AI image objects merging",
+      "AI photo artifacts",
+      "fix AI image blending errors",
+      "AI generated image glitches",
+      "AI photo overlapping objects",
+      "AI image weird artifacts"
+    ],
+    "problem": {
+      "heading": "Why do objects merge or blend incorrectly in AI images?",
+      "content": "When a scene contains many overlapping objects, similar colors, or unclear spatial relationships, the model can struggle to keep each object visually separate, resulting in blended edges, duplicated parts or objects that appear to fuse together."
+    },
+    "commonCauses": [
+      "Too many overlapping objects in one composition",
+      "Objects with similar colors or textures placed close together",
+      "Unclear spatial instructions in the prompt",
+      "Complex backgrounds competing with the main subject",
+      "Multiple people or items with overlapping limbs or edges",
+      "Ambiguous foreground and background separation"
+    ],
+    "solutions": [
+      { "title": "Simplify the composition", "content": "Reduce the number of overlapping objects and describe a clearer spatial arrangement between elements." },
+      { "title": "Use distinct colors and materials", "content": "Describe objects with different colors or materials so the model can separate them more clearly." },
+      { "title": "Specify spatial relationships", "content": "State which objects are in the foreground, middle ground and background, and how they are positioned relative to each other." },
+      { "title": "Edit problem areas locally", "content": "If most of the image is correct, use an inpainting or editing workflow to fix only the merged or blended area." }
+    ],
+    "promptExample": {
+      "title": "Clean composition prompt example",
+      "prompt": "Arrange the scene with the main subject clearly in the foreground, a separate object placed to the right with a visible gap between them, and a softly blurred background further behind. Use distinct colors and materials for each object so their edges remain clearly separated."
+    },
+    "steps": [
+      "Identify where objects are merging or blending in the image.",
+      "Simplify the number of overlapping elements in the prompt.",
+      "Describe clear spatial relationships between objects.",
+      "Use distinct colors or materials to separate similar items.",
+      "Use localized editing to correct the affected area if needed."
+    ],
+    "tips": [
+      "Busy scenes with many similar-looking objects are more prone to merging artifacts.",
+      "Adding a small gap or clear separation in the description can help the model keep objects distinct.",
+      "Check hands, limbs and overlapping fabric closely in group photos.",
+      "Simplify the background if it is competing visually with the main subject."
+    ],
+    "supportedTools": ["ChatGPT", "Gemini", "Nano Banana", "Midjourney"],
+    "relatedPrompts": [],
+    "relatedTrends": [],
+    "relatedGuides": ["fix-ai-hands", "ai-image-wrong-background", "how-to-tell-if-image-is-ai"],
+    "faq": [
+      { "question": "Why do objects merge together in AI-generated images?", "answer": "This often happens in busy scenes with many overlapping or similarly colored objects, where the model struggles to keep each element visually distinct." },
+      { "question": "How do I stop AI from blending two objects together?", "answer": "Simplify the composition, use distinct colors or materials, and clearly describe the spatial relationship between the objects." },
+      { "question": "Can I fix a merged object without regenerating the whole image?", "answer": "Yes, many AI tools support localized editing or inpainting, which can correct the affected area while keeping the rest of the image intact." }
+    ]
+  },
+
+  {
+    "noId": 24,
+    "slug": "ai-baby-and-future-self-prompts",
+    "title": "How to Create AI Baby, Future Self and Age Transformation Photos",
+    "metaTitle": "AI Baby & Age Transformation Photo Guide | Prompts and Tips",
+    "metaDescription": "Learn how to create realistic AI baby predictions, future self and age transformation photos while keeping recognizable facial features.",
+    "eyebrow": "Trending AI Photo",
+    "intro": "AI age transformation trends, including baby-face predictions, 'meet your younger self' and future-self portraits, are some of the most searched AI photo styles. This guide explains how to prompt for realistic results that still resemble the real person.",
+    "searchTerms": [
+      "AI baby generator prompt",
+      "AI future self photo",
+      "meet your younger self AI",
+      "AI age transformation prompt",
+      "AI baby face predictor",
+      "AI older self photo"
+    ],
+    "problem": {
+      "heading": "Why do AI age transformations often lose facial identity?",
+      "content": "Aging a face up or down, or blending two people's features for a baby prediction, involves significant changes to bone structure and proportions. Without careful prompting, the result can look like an unrelated person rather than a believable version of the original."
+    },
+    "commonCauses": [
+      "Extreme age changes requested in a single step",
+      "Blending two reference photos without clear instructions",
+      "Losing key recognizable features during the transformation",
+      "Inconsistent lighting or style between the reference and result",
+      "Unrealistic skin or hair aging effects",
+      "Not specifying which features should carry over"
+    ],
+    "solutions": [
+      { "title": "Age in believable increments", "content": "Request a moderate, believable age change rather than an extreme jump, especially when identity should remain recognizable." },
+      { "title": "Preserve key facial landmarks", "content": "Specify that core features such as eye shape, nose structure and face shape should carry over through the transformation." },
+      { "title": "Blend reference photos carefully", "content": "For baby-prediction styles, clearly state how much each parent's features should be reflected in the result." },
+      { "title": "Use natural aging or de-aging cues", "content": "Describe realistic skin texture, hair changes and posture appropriate to the target age rather than exaggerated effects." }
+    ],
+    "promptExample": {
+      "title": "Age transformation prompt example",
+      "prompt": "Using the uploaded reference photo, show a realistic version of this person approximately 20 years older. Preserve their recognizable eye shape, nose structure and face shape while naturally aging the skin texture, hairline and posture. Avoid exaggerated or unrealistic aging effects."
+    },
+    "steps": [
+      "Choose a clear, well-lit reference photo.",
+      "Decide on a believable age difference rather than an extreme jump.",
+      "State which facial landmarks must remain recognizable.",
+      "Describe natural, age-appropriate skin and hair changes.",
+      "Compare the result with the original to confirm identity is preserved."
+    ],
+    "tips": [
+      "Moderate age changes tend to preserve identity better than extreme transformations.",
+      "For baby-prediction images, treat the result as a playful estimate rather than an accurate prediction.",
+      "Keep lighting and photo style similar to the reference for a more believable comparison.",
+      "Generate a few variations, since age transformation results can vary significantly between attempts."
+    ],
+    "supportedTools": ["ChatGPT", "Gemini", "Nano Banana"],
+    "relatedPrompts": ["hug-younger-self-polaroid", "couple-mirror-selfie"],
+    "relatedTrends": ["meet-your-younger-self", "ai-polaroid-couple-photo"],
+    "relatedGuides": ["ai-face-looks-different", "keep-same-face", "ai-photo-identity-consistency"],
+    "faq": [
+      { "question": "Can AI accurately predict what a baby will look like?", "answer": "AI baby-prediction images are a playful estimate based on blending facial features and are not a scientifically accurate prediction." },
+      { "question": "Why does an AI age transformation look like a different person?", "answer": "Extreme age changes or a lack of instructions to preserve key facial landmarks can shift the result away from the original person's identity." },
+      { "question": "How do I make an AI future-self photo look more like me?", "answer": "Use a clear reference photo, request a believable age difference, and explicitly state which facial features should remain recognizable." }
     ]
   }
 ]
