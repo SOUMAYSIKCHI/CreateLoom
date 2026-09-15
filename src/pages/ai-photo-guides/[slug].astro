@@ -13,7 +13,7 @@ export function getStaticPaths() {
 
 const { guide } = Astro.props;
 
-const siteUrl = 'https://createwithsoumay.store';
+const siteUrl = 'https://www.createwithsoumay.store';
 const pageUrl = `${siteUrl}/ai-photo-guides/${guide.slug}/`;
 
 const promptMap = new Map(prompts.map((prompt) => [prompt.id, prompt]));
