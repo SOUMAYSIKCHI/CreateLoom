@@ -12,7 +12,7 @@ export function getStaticPaths() {
 
 const { trend } = Astro.props;
 
-const siteUrl = 'https://createwithsoumay.store';
+const siteUrl = 'https://www.createwithsoumay.store';
 const pageUrl = new URL(`/trends/${trend.slug}/`, siteUrl).href;
 const heroImageUrl = trend.heroImage
   ? new URL(trend.heroImage, siteUrl).href
