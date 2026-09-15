@@ -8,66 +8,72 @@ const contactSchema = {
   '@type': 'ContactPage',
   name: 'Contact Create With Soumay',
   description:
-    'Contact Create With Soumay for brand collaborations, advertising, sponsored content, partnerships and business inquiries.',
+    'Contact Create With Soumay for questions, feedback, partnerships, collaborations, advertising and business inquiries.',
   url: 'https://www.createwithsoumay.store/contact/',
   mainEntity: {
     '@type': 'Organization',
     name: 'Create With Soumay',
     url: 'https://www.createwithsoumay.store/',
-    email: `mailto:${contactEmail}`
+    email: `mailto:${contactEmail}`,
+    contactPoint: {
+      '@type': 'ContactPoint',
+      contactType: 'customer support',
+      email: `mailto:${contactEmail}`
+    }
   }
 };
 ---
 
 <Layout
-  title="Contact Create With Soumay — Brand Collaborations & Business Inquiries"
-  description="Contact Create With Soumay for brand collaborations, website advertising, sponsored content, affiliate partnerships, custom campaigns and business inquiries."
+  title="Contact Create With Soumay | Questions, Feedback & Business Inquiries"
+  description="Contact Create With Soumay for questions, feedback, AI prompt suggestions, creator resources, partnerships, advertising and business inquiries."
 >
   <script
     type="application/ld+json"
     set:html={JSON.stringify(contactSchema)}
   />
 
-  <!-- Hero -->
   <section class="hero hero-compact contact-hero">
     <div class="container">
-      <div class="eyebrow">Get in touch</div>
+      <div class="eyebrow">Contact</div>
 
       <h1>
-        Let's work with
-        <span class="gradient-text">Create With Soumay.</span>
+        We'd love to
+        <span class="gradient-text">hear from you.</span>
       </h1>
 
       <p>
-        Have a brand partnership, advertising opportunity, campaign idea,
-        feedback or business inquiry? We'd love to hear from you.
+        Have a question, suggestion, correction, collaboration idea,
+        partnership opportunity, or business inquiry? Get in touch with
+        Create With Soumay.
       </p>
     </div>
   </section>
 
-  <!-- Contact -->
   <section class="section">
     <div class="container">
       <div class="contact-layout">
 
         <div class="contact-main">
-          <div class="eyebrow">Business inquiries</div>
+          <div class="eyebrow">Get in touch</div>
 
-          <h2>Let's create something together.</h2>
+          <h2>Contact Create With Soumay</h2>
 
           <p class="intro">
-            Create With Soumay works with brands, products and creator-focused
-            businesses on relevant partnerships and promotional campaigns.
+            Create With Soumay is an independent creator-focused platform
+            providing AI image prompts, creative resources, Instagram
+            resources, and practical guides. We welcome questions,
+            suggestions, feedback, and relevant business inquiries.
           </p>
 
           <div class="email-box">
             <div class="email-label">
-              Business & partnership inquiries
+              Contact email
             </div>
 
             <a
               class="email"
-              href={`mailto:${contactEmail}?subject=Create%20With%20Soumay%20Business%20Inquiry`}
+              href={`mailto:${contactEmail}?subject=Create%20With%20Soumay%20Inquiry`}
             >
               {contactEmail}
             </a>
@@ -81,45 +87,70 @@ const contactSchema = {
           <div class="actions">
             <a
               class="primary"
-              href={`mailto:${contactEmail}?subject=Create%20With%20Soumay%20Business%20Inquiry`}
+              href={`mailto:${contactEmail}?subject=Create%20With%20Soumay%20Inquiry`}
             >
-              Email Create With Soumay →
+              Email Us →
             </a>
 
-            <a class="secondary" href="/brands/">
-              View Brand Opportunities →
+            <a class="secondary" href="/about/">
+              About Create With Soumay →
             </a>
           </div>
         </div>
 
         <aside class="contact-side">
-          <div class="eyebrow">What can we discuss?</div>
+          <div class="eyebrow">What can you contact us about?</div>
 
           <div class="inquiry-list">
+
+            <div>
+              <strong>General Questions</strong>
+              <span>
+                Questions about the website, prompts, resources or published
+                content.
+              </span>
+            </div>
+
+            <div>
+              <strong>Feedback & Suggestions</strong>
+              <span>
+                Suggestions for improving the website or ideas for future
+                resources.
+              </span>
+            </div>
+
+            <div>
+              <strong>Content Corrections</strong>
+              <span>
+                Let us know if you find an error, outdated information or
+                something that needs clarification.
+              </span>
+            </div>
+
             <div>
               <strong>Brand Collaborations</strong>
-              <span>Campaigns and creator-focused partnerships.</span>
+              <span>
+                Relevant partnerships, campaigns and creator-focused
+                collaborations.
+              </span>
             </div>
 
             <div>
-              <strong>Website Advertising</strong>
-              <span>Relevant advertising and featured placements.</span>
+              <strong>Advertising & Sponsorships</strong>
+              <span>
+                Advertising opportunities and sponsored content inquiries
+                relevant to our audience.
+              </span>
             </div>
 
             <div>
-              <strong>Sponsored Content</strong>
-              <span>Sponsored Reels, guides and content integrations.</span>
+              <strong>Other Business Inquiries</strong>
+              <span>
+                Partnerships, affiliate opportunities and other legitimate
+                business proposals.
+              </span>
             </div>
 
-            <div>
-              <strong>Affiliate Partnerships</strong>
-              <span>Long-term partnerships around useful products.</span>
-            </div>
-
-            <div>
-              <strong>General Inquiries</strong>
-              <span>Feedback, ideas or other business questions.</span>
-            </div>
           </div>
         </aside>
 
@@ -127,190 +158,73 @@ const contactSchema = {
     </div>
   </section>
 
-  <!-- Brand CTA -->
+  <section class="section">
+    <div class="container">
+      <div class="card">
+        <h2>For business inquiries</h2>
+
+        <p>
+          If you are contacting us about a collaboration, advertising
+          opportunity, sponsorship or partnership, please include enough
+          information for us to understand your proposal.
+        </p>
+
+        <ul>
+          <li>Your name and organization or brand</li>
+          <li>The type of collaboration or inquiry</li>
+          <li>A brief description of the opportunity</li>
+          <li>Relevant website or social media links, if applicable</li>
+          <li>Any important campaign details or requirements</li>
+        </ul>
+
+        <p>
+          Providing clear information helps us understand the request and
+          respond appropriately.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="card">
+        <h2>Before contacting us</h2>
+
+        <p>
+          If you are looking for information about Create With Soumay,
+          you may also find the following pages useful:
+        </p>
+
+        <div class="actions">
+          <a class="secondary" href="/about/">About Us →</a>
+          <a class="secondary" href="/privacy/">Privacy Policy →</a>
+          <a class="secondary" href="/terms/">Terms & Conditions →</a>
+          <a class="secondary" href="/disclaimer/">Disclaimer →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <section class="section">
     <div class="container">
       <div class="brand-cta">
-        <div class="eyebrow">For brands & advertisers</div>
+        <div class="eyebrow">Creators & brands</div>
 
-        <h2>Want to feature your brand on Create With Soumay?</h2>
+        <h2>Have an idea worth discussing?</h2>
 
         <p>
-          Explore available partnership formats, including website
-          advertising, sponsored content, featured tools and custom campaigns.
+          Whether you have feedback about the platform or a relevant
+          collaboration opportunity, send us the details and we'll take a
+          look.
         </p>
 
-        <a class="primary" href="/brands/">
-          Explore Brand Opportunities →
+        <a
+          class="primary"
+          href={`mailto:${contactEmail}?subject=Create%20With%20Soumay%20Inquiry`}
+        >
+          Start a Conversation →
         </a>
       </div>
     </div>
   </section>
 </Layout>
-
-<style>
-  .contact-hero {
-    padding-bottom: 60px;
-  }
-
-  .contact-hero p {
-    max-width: 720px;
-    margin: 0 auto;
-    color: var(--muted, #a1a1aa);
-    line-height: 1.8;
-  }
-
-  .contact-layout {
-    display: grid;
-    grid-template-columns: minmax(0, 1.25fr) minmax(280px, 0.75fr);
-    gap: 28px;
-    max-width: 1050px;
-    margin: 0 auto;
-    align-items: start;
-  }
-
-  .contact-main,
-  .contact-side {
-    padding: 32px;
-    border: 1px solid rgba(255,255,255,0.08);
-    border-radius: 20px;
-    background: rgba(255,255,255,0.025);
-  }
-
-  .contact-main h2 {
-    margin: 9px 0 14px;
-  }
-
-  .intro {
-    color: var(--muted, #a1a1aa);
-    line-height: 1.8;
-  }
-
-  .email-box {
-    margin-top: 28px;
-    padding: 22px;
-    border: 1px solid rgba(139,92,246,0.22);
-    border-radius: 16px;
-    background: rgba(139,92,246,0.06);
-  }
-
-  .email-label {
-    color: var(--muted, #a1a1aa);
-    font-size: 0.78rem;
-    margin-bottom: 8px;
-  }
-
-  .email {
-    color: #c4b5fd;
-    font-size: 1.15rem;
-    font-weight: 800;
-    text-decoration: none;
-    word-break: break-word;
-  }
-
-  .email-box p {
-    margin: 9px 0 0;
-    color: var(--muted, #a1a1aa);
-    font-size: 0.82rem;
-    line-height: 1.6;
-  }
-
-  .actions {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    margin-top: 22px;
-  }
-
-  .actions a {
-    text-decoration: none;
-  }
-
-  .inquiry-list {
-    display: grid;
-    gap: 10px;
-    margin-top: 20px;
-  }
-
-  .inquiry-list div {
-    padding: 15px;
-    border: 1px solid rgba(255,255,255,0.06);
-    border-radius: 13px;
-    background: rgba(255,255,255,0.02);
-  }
-
-  .inquiry-list strong,
-  .inquiry-list span {
-    display: block;
-  }
-
-  .inquiry-list strong {
-    color: #fff;
-    font-size: 0.86rem;
-  }
-
-  .inquiry-list span {
-    margin-top: 4px;
-    color: var(--muted, #a1a1aa);
-    font-size: 0.76rem;
-    line-height: 1.5;
-  }
-
-  .brand-cta {
-    max-width: 850px;
-    margin: 0 auto;
-    padding: 45px 28px;
-    border: 1px solid rgba(139,92,246,0.2);
-    border-radius: 22px;
-    background:
-      linear-gradient(
-        145deg,
-        rgba(139,92,246,0.12),
-        rgba(255,255,255,0.025)
-      );
-    text-align: center;
-  }
-
-  .brand-cta h2 {
-    margin: 9px 0 12px;
-  }
-
-  .brand-cta p {
-    max-width: 650px;
-    margin: 0 auto;
-    color: var(--muted, #a1a1aa);
-    line-height: 1.75;
-  }
-
-  .brand-cta .primary {
-    display: inline-flex;
-    margin-top: 20px;
-    text-decoration: none;
-  }
-
-  @media (max-width: 800px) {
-    .contact-layout {
-      grid-template-columns: 1fr;
-    }
-  }
-
-  @media (max-width: 600px) {
-    .contact-main,
-    .contact-side {
-      padding: 24px 20px;
-    }
-
-    .actions {
-      flex-direction: column;
-    }
-
-    .actions a {
-      width: 100%;
-      justify-content: center;
-    }
-
-    .brand-cta {
-      padding: 38px 20px;
-    }
-  }
-</style>
