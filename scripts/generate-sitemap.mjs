@@ -17,7 +17,7 @@ const prompts = readJson('src/data/prompts.json');
 const blogs = readJson('src/data/blogs.json');
 
 const site = (
-  process.env.SITE_URL || 'https://createwithsoumay.store'
+  process.env.SITE_URL || 'https://www.createwithsoumay.store'
 ).replace(/\/+$/, '');
 
 const staticUrls = [
