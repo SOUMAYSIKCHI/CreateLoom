@@ -3,14 +3,14 @@ import Layout from '../../layouts/Layout.astro';
 import blogs from '../../data/blogs.json';
 import prompts from '../../data/prompts.json';
 
-const isPublished = (date) => {
+function isPublished(date) {
   if (!date) return false;
 
   const publishDate = new Date(date);
   if (Number.isNaN(publishDate.getTime())) return false;
 
   return publishDate <= new Date();
-};
+}
 
 export function getStaticPaths() {
   return blogs
