@@ -159,7 +159,7 @@ const year = new Date().getFullYear();
 
   <meta
     name="googlebot"
-    content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"
+    content={robots}
   />
 
   <meta name="google-adsense-account" content="ca-pub-1438137309361519"/>
@@ -276,6 +276,7 @@ const year = new Date().getFullYear();
     set:html={JSON.stringify({
       '@context': 'https://schema.org',
       '@type': 'WebSite',
+      '@id': `${siteUrl}/#website`,
       name: siteName,
       url: `${siteUrl}/`,
       description:
