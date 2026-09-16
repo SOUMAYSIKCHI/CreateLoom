@@ -9,7 +9,7 @@ import categoriesData from '../../data/categories.json';
 // is later changed to a plain array.
 const categories = categoriesData.categories || categoriesData;
 
-const types = ['Boy', 'Girl', 'Couple', 'Unisex'];
+const types = ['Boy', 'Girl', 'Unisex', 'Couple'];
 const toolOptions = ['ChatGPT', 'Gemini', 'Nano Banana', 'Midjourney'];
 
 const trendRank = {
@@ -65,6 +65,21 @@ const categoryItems = categories
   );
 
 const cats = categoryItems.map((item) => item.category);
+
+// "All" and "Trending" are special filter options; the remaining
+// options are the 20 real prompt categories.
+const filterCategories = [
+  'All',
+  'Trending',
+  ...categories
+    .filter((category) => category.slug !== 'all' && category.slug !== 'trending')
+    .map((category) => category.name)
+];
+
+// Main library order: noId ascending.
+const promptLibrary = [...prompts].sort(
+  (a, b) => Number(a.noId || 0) - Number(b.noId || 0)
+);
 ---
 
 <Layout
@@ -158,6 +173,105 @@ const cats = categoryItems.map((item) => item.category);
           </a>
         ))}
       </nav>
+
+      <!-- Prompt Library Filters + Results -->
+      <div class="prompt-library-section" id="prompt-library">
+
+        <div class="prompt-library-heading">
+          <div>
+            <div class="eyebrow">Filter prompts</div>
+            <h2>Find the Right AI Image Prompt</h2>
+            <p>
+              Filter the prompt library by category and type to find the
+              exact AI image prompts you want to create.
+            </p>
+          </div>
+
+          <div class="results-note" id="promptResultsNote" aria-live="polite">
+            Showing 10 of {prompts.length} prompts
+          </div>
+        </div>
+
+        <div class="toolbar" aria-label="Prompt filters">
+
+          <div class="filter-group">
+            <div class="filter-label">Category</div>
+            <div
+              class="filters"
+              id="categoryFilters"
+              role="group"
+              aria-label="Filter prompts by category"
+            >
+              {filterCategories.map((category) => (
+                <button
+                  type="button"
+                  class:list={{ 'active-filter': category === 'All' }}
+                  data-category-filter={category}
+                  aria-pressed={category === 'All' ? 'true' : 'false'}
+                >
+                  {category}
+                </button>
+              ))}
+            </div>
+          </div>
+
+          <div class="filter-group">
+            <div class="filter-label">Type</div>
+            <div
+              class="filters"
+              id="typeFilters"
+              role="group"
+              aria-label="Filter prompts by type"
+            >
+              {['All', ...types].map((type) => (
+                <button
+                  type="button"
+                  class:list={{ 'active-filter': type === 'All' }}
+                  data-type-filter={type}
+                  aria-pressed={type === 'All' ? 'true' : 'false'}
+                >
+                  {type}
+                </button>
+              ))}
+            </div>
+          </div>
+
+        </div>
+
+        <div
+          class="grid prompt-library-grid"
+          id="promptLibraryGrid"
+          aria-live="polite"
+        >
+          {promptLibrary.map((p, index) => (
+            <div
+              class="prompt-library-item"
+              data-prompt-category={p.category || ''}
+              data-prompt-type={p.type || ''}
+              data-prompt-trending={p.trending === true ? 'true' : 'false'}
+              data-prompt-noid={String(p.noId ?? '')}
+              hidden={index >= 10}
+            >
+              <PromptCard p={p} />
+            </div>
+          ))}
+        </div>
+
+        <div class="prompt-library-actions">
+          <button
+            type="button"
+            class="load-more-button"
+            id="loadMorePrompts"
+          >
+            Load More
+          </button>
+        </div>
+
+        <p class="prompt-library-empty" id="promptLibraryEmpty" hidden>
+          No prompts match these filters yet. Try another category or type.
+        </p>
+
+      </div>
 
       <div class="category-preview-list">
         {categoryItems.map(({ category, meta, count }) => {
@@ -363,6 +477,112 @@ const cats = categoryItems.map((item) => item.category);
 
 
   <!-- Prompt library structured data -->
+  <script>
+    (() => {
+      const grid = document.getElementById('promptLibraryGrid');
+      const loadMoreButton = document.getElementById('loadMorePrompts');
+      const emptyState = document.getElementById('promptLibraryEmpty');
+      const resultsNote = document.getElementById('promptResultsNote');
+      const categoryButtons = document.querySelectorAll('[data-category-filter]');
+      const typeButtons = document.querySelectorAll('[data-type-filter]');
+
+      if (!grid || !loadMoreButton) return;
+
+      const items = Array.from(
+        grid.querySelectorAll('.prompt-library-item')
+      );
+      const pageSize = 10;
+      let visibleCount = pageSize;
+      let selectedCategory = 'All';
+      let selectedType = 'All';
+
+      const normalize = (value) =>
+        String(value || '').trim().toLowerCase();
+
+      const matchesFilters = (item) => {
+        const category = item.dataset.promptCategory || '';
+        const type = item.dataset.promptType || '';
+        const trending = item.dataset.promptTrending === 'true';
+
+        const categoryMatches =
+          selectedCategory === 'All' ||
+          (selectedCategory === 'Trending'
+            ? trending
+            : normalize(category) === normalize(selectedCategory));
+
+        const typeMatches =
+          selectedType === 'All' ||
+          normalize(type) === normalize(selectedType);
+
+        return categoryMatches && typeMatches;
+      };
+
+      const updateButtons = (buttons, selected, attribute) => {
+        buttons.forEach((button) => {
+          const active = button.dataset[attribute] === selected;
+          button.classList.toggle('active-filter', active);
+          button.setAttribute('aria-pressed', String(active));
+        });
+      };
+
+      const render = () => {
+        const matchingItems = items.filter(matchesFilters);
+
+        items.forEach((item) => {
+          item.hidden = true;
+        });
+
+        matchingItems.slice(0, visibleCount).forEach((item) => {
+          item.hidden = false;
+        });
+
+        const shownCount = Math.min(visibleCount, matchingItems.length);
+
+        if (resultsNote) {
+          resultsNote.textContent =
+            matchingItems.length === 0
+              ? '0 prompts found'
+              : `Showing ${shownCount} of ${matchingItems.length} prompts`;
+        }
+
+        if (emptyState) {
+          emptyState.hidden = matchingItems.length !== 0;
+        }
+
+        loadMoreButton.hidden = shownCount >= matchingItems.length;
+      };
+
+      categoryButtons.forEach((button) => {
+        button.addEventListener('click', () => {
+          selectedCategory = button.dataset.categoryFilter || 'All';
+          visibleCount = pageSize;
+          updateButtons(
+            categoryButtons,
+            selectedCategory,
+            'categoryFilter'
+          );
+          render();
+        });
+      });
+
+      typeButtons.forEach((button) => {
+        button.addEventListener('click', () => {
+          selectedType = button.dataset.typeFilter || 'All';
+          visibleCount = pageSize;
+          updateButtons(typeButtons, selectedType, 'typeFilter');
+          render();
+        });
+      });
+
+      loadMoreButton.addEventListener('click', () => {
+        visibleCount += pageSize;
+        render();
+      });
+
+      render();
+    })();
+  </script>
+
   <script
     type="application/ld+json"
     set:html={JSON.stringify({
@@ -387,7 +607,7 @@ const cats = categoryItems.map((item) => item.category);
         '@type': 'ItemList',
         name: 'AI Image Prompt Library',
         numberOfItems: prompts.length,
-        itemListOrder: 'https://schema.org/ItemListOrderDescending'
+        itemListOrder: 'https://schema.org/ItemListOrderAscending'
       },
       about: [
         'AI image prompts',
@@ -647,6 +867,80 @@ const cats = categoryItems.map((item) => item.category);
     text-decoration: none;
   }
 
+  .prompt-library-section {
+    margin: 0 0 62px;
+  }
+
+  .prompt-library-heading {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 20px;
+    margin-bottom: 24px;
+  }
+
+  .prompt-library-heading h2 {
+    margin: 7px 0 5px;
+  }
+
+  .prompt-library-heading p {
+    max-width: 760px;
+    margin: 0;
+    color: var(--muted, #a1a1aa);
+    line-height: 1.6;
+  }
+
+  .prompt-library-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 18px;
+    align-items: stretch;
+  }
+
+  .prompt-library-item[hidden] {
+    display: none !important;
+  }
+
+  .prompt-library-actions {
+    display: flex;
+    justify-content: center;
+    margin-top: 28px;
+  }
+
+  .load-more-button {
+    min-height: 42px;
+    padding: 10px 20px;
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 999px;
+    background: rgba(255,255,255,0.03);
+    color: #fff;
+    font: inherit;
+    font-size: .82rem;
+    font-weight: 800;
+    cursor: pointer;
+    transition: border-color .2s ease, background .2s ease, transform .2s ease;
+  }
+
+  .load-more-button:hover {
+    border-color: rgba(139,92,246,.45);
+    background: rgba(139,92,246,.1);
+    transform: translateY(-1px);
+  }
+
+  .load-more-button:focus-visible,
+  .filters button:focus-visible {
+    outline: 2px solid #a78bfa;
+    outline-offset: 2px;
+  }
+
+  .prompt-library-empty {
+    padding: 42px 20px;
+    margin: 22px 0 0;
+    border: 1px solid rgba(255,255,255,.07);
+    border-radius: 15px;
+    color: var(--muted, #a1a1aa);
+    text-align: center;
+  }
+
   .toolbar {
     display: grid;
     gap: 16px;
@@ -808,7 +1102,8 @@ const cats = categoryItems.map((item) => item.category);
       grid-template-columns: repeat(2, 1fr);
     }
 
-    .category-prompt-grid {
+    .category-prompt-grid,
+    .prompt-library-grid {
       grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 
@@ -830,9 +1125,15 @@ const cats = categoryItems.map((item) => item.category);
     }
 
     .featured-grid,
-    .category-prompt-grid {
+    .category-prompt-grid,
+    .prompt-library-grid {
       grid-template-columns: 1fr;
       gap: 14px;
+    }
+
+    .prompt-library-heading {
+      align-items: flex-start;
+      flex-direction: column;
     }
 
     .category-preview-heading {
