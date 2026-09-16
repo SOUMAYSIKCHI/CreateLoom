@@ -530,9 +530,7 @@ const toolFilters = ['All', 'ChatGPT', 'Gemini', 'Nano Banana', 'Midjourney'];
       url: canonicalUrl,
       keywords: pageKeywords,
       isPartOf: {
-        '@type': 'WebSite',
-        name: 'Create With Soumay',
-        url: new URL('/', Astro.site || Astro.url).href
+        '@id': `${new URL('/', Astro.site || Astro.url).href}#website`
       },
       mainEntity: {
         '@type': 'ItemList',
@@ -547,74 +545,6 @@ const toolFilters = ['All', 'ChatGPT', 'Gemini', 'Nano Banana', 'Midjourney'];
           ).href
         }))
       }
-    })}
-  />
-
-  <script
-    type="application/ld+json"
-    set:html={JSON.stringify({
-      '@context': 'https://schema.org',
-      '@type': 'WebPage',
-      name: pageTitle,
-      description,
-      url: canonicalUrl,
-      keywords: pageKeywords,
-      isPartOf: {
-        '@type': 'WebSite',
-        name: 'Create With Soumay',
-        url: new URL('/', Astro.site || Astro.url).href
-      },
-      about: {
-        '@type': 'Thing',
-        name: `${category} AI image prompts`
-      }
-    })}
-  />
-
-
-  {categoryMeta?.faq?.length > 0 && (
-    <script
-      type="application/ld+json"
-      set:html={JSON.stringify({
-        '@context': 'https://schema.org',
-        '@type': 'FAQPage',
-        mainEntity: categoryMeta.faq.map((faq) => ({
-          '@type': 'Question',
-          name: faq.question,
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: faq.answer
-          }
-        }))
-      })}
-    />
-  )}
-
-  <script
-    type="application/ld+json"
-    set:html={JSON.stringify({
-      '@context': 'https://schema.org',
-      '@type': 'BreadcrumbList',
-      itemListElement: [
-        {
-          '@type': 'ListItem',
-          position: 1,
-          name: 'Home',
-          item: new URL('/', Astro.site || Astro.url).href
-        },
-        {
-          '@type': 'ListItem',
-          position: 2,
-          name: 'AI Prompts',
-          item: new URL('/prompts/', Astro.site || Astro.url).href
-        },
-        {
-          '@type': 'ListItem',
-          position: 3,
-          name: `${category} Prompts`,
-          item: canonicalUrl
-        }
-      ]
     })}
   />
 
