@@ -825,19 +825,53 @@ const year = new Date().getFullYear();
        * prompt detail pages.
        */
       const favKey =
+        'createwithsoumay-favorites';
+
+      const legacyFavKey =
         'createloom-favorites';
 
       const readFavs = () => {
         try {
-          const value =
+          const currentValue =
             localStorage.getItem(favKey);
 
-          const parsed =
-            JSON.parse(value || '[]');
+          const legacyValue =
+            localStorage.getItem(legacyFavKey);
 
-          return Array.isArray(parsed)
-            ? parsed
-            : [];
+          const currentParsed =
+            JSON.parse(currentValue || 'null');
+
+          const legacyParsed =
+            JSON.parse(legacyValue || 'null');
+
+          const currentFavorites =
+            Array.isArray(currentParsed)
+              ? currentParsed
+              : [];
+
+          const legacyFavorites =
+            Array.isArray(legacyParsed)
+              ? legacyParsed
+              : [];
+
+          const favorites = [
+            ...new Set([
+              ...currentFavorites,
+              ...legacyFavorites
+            ])
+          ];
+
+          if (
+            favorites.length > 0 &&
+            currentFavorites.length === 0
+          ) {
+            localStorage.setItem(
+              favKey,
+              JSON.stringify(favorites)
+            );
+          }
+
+          return favorites;
         } catch {
           return [];
         }
@@ -845,9 +879,19 @@ const year = new Date().getFullYear();
 
       const writeFavs = (favorites) => {
         try {
+          const value =
+            JSON.stringify(favorites);
+
           localStorage.setItem(
             favKey,
-            JSON.stringify(favorites)
+            value
+          );
+
+          // Keep the legacy key in sync until
+          // all existing pages use the new key.
+          localStorage.setItem(
+            legacyFavKey,
+            value
           );
 
           return true;
