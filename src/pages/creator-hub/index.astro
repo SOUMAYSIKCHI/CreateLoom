@@ -1,5 +1,7 @@
 ---
 import Layout from '../../layouts/Layout.astro';
+import blogs from '../../data/blogs.json';
+import { isPublished } from '../../lib/publication.js';
 
 const resources = [
   {
@@ -111,6 +113,43 @@ const brandChecklist = [
   'Specific campaign ideas',
   'Clear expectations for deliverables'
 ];
+
+const publishedBlogIds = new Set(
+  blogs
+    .filter((blog) => isPublished(blog.date))
+    .map((blog) => blog.id)
+);
+
+const creatorGuides = [
+  {
+    id: 'best-ai-couple-prompts',
+    category: 'AI Prompts',
+    title: 'Best AI Couple Prompts',
+    description:
+      'Learn how to structure detailed couple-image prompts for more controlled and consistent generations.'
+  },
+  {
+    id: 'ai-selfie-prompts',
+    category: 'Selfies',
+    title: 'AI Selfie Prompts',
+    description:
+      'Explore prompt structures for realistic, aesthetic and creative selfie concepts.'
+  },
+  {
+    id: 'how-to-write-ai-image-prompts',
+    category: 'Prompt Writing',
+    title: 'How to Write AI Image Prompts',
+    description:
+      'Understand the components that make an image prompt more specific, controllable and useful.'
+  },
+  {
+    id: 'how-to-get-more-reel-views',
+    category: 'Growth',
+    title: 'How to Get More Reel Views',
+    description:
+      'Build a better Reel testing process instead of relying entirely on luck or one-off trends.'
+  }
+].filter((guide) => publishedBlogIds.has(guide.id));
 ---
 
 <Layout
@@ -570,45 +609,14 @@ const brandChecklist = [
     </div>
 
     <div class="guide-grid">
-      <a class="guide" href="/blog/best-ai-couple-prompts/">
-        <span>AI Prompts</span>
-        <h3>Best AI Couple Prompts</h3>
-        <p>
-          Learn how to structure detailed couple-image prompts for more
-          controlled and consistent generations.
-        </p>
-        <strong>Read guide →</strong>
-      </a>
-
-      <a class="guide" href="/blog/ai-selfie-prompts/">
-        <span>Selfies</span>
-        <h3>AI Selfie Prompts</h3>
-        <p>
-          Explore prompt structures for realistic, aesthetic and creative
-          selfie concepts.
-        </p>
-        <strong>Read guide →</strong>
-      </a>
-
-      <a class="guide" href="/blog/how-to-write-ai-image-prompts/">
-        <span>Prompt Writing</span>
-        <h3>How to Write AI Image Prompts</h3>
-        <p>
-          Understand the components that make an image prompt more specific,
-          controllable and useful.
-        </p>
-        <strong>Read guide →</strong>
-      </a>
-
-      <a class="guide" href="/blog/how-to-get-more-reel-views/">
-        <span>Growth</span>
-        <h3>How to Get More Reel Views</h3>
-        <p>
-          Build a better Reel testing process instead of relying entirely on
-          luck or one-off trends.
-        </p>
-        <strong>Read guide →</strong>
-      </a>
+      {creatorGuides.map((guide) => (
+        <a class="guide" href={`/blog/${guide.id}/`}>
+          <span>{guide.category}</span>
+          <h3>{guide.title}</h3>
+          <p>{guide.description}</p>
+          <strong>Read guide →</strong>
+        </a>
+      ))}
     </div>
   </div>
 </section>
