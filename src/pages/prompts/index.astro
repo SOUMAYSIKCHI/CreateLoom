@@ -2,9 +2,12 @@
 import Layout from '../../layouts/Layout.astro';
 import PromptCard from '../../components/PromptCard.astro';
 import prompts from '../../data/prompts.json';
-import categories from '../../data/categories.json';
+import categoriesData from '../../data/categories.json';
 
-const cats = [...new Set(prompts.map((p) => p.category))].sort();
+// categories.json uses a top-level { categories: [...] } object.
+// Keep a small fallback so the page remains compatible if the JSON
+// is later changed to a plain array.
+const categories = categoriesData.categories || categoriesData;
 
 const types = ['Boy', 'Girl', 'Couple', 'Unisex'];
 const toolOptions = ['ChatGPT', 'Gemini', 'Nano Banana', 'Midjourney'];
@@ -36,31 +39,37 @@ const trendingPrompts = prompts
 const featured = sortedPrompts.slice(0, 6);
 
 // Category metadata comes from categories.json.
-// Keep the page content in one source of truth so category descriptions
-// stay synchronized with each /prompts/[category]/ page.
+// Category names, slugs, descriptions and ratings stay in one source of truth.
 const categoryMeta = new Map(
   categories.map((category) => [category.slug, category])
 );
 
-const getCategoryMeta = (category) =>
-  categoryMeta.get(String(category).toLowerCase());
-
-const categoryItems = cats
+const categoryItems = categories
+  .filter(
+    (category) =>
+      category.slug !== 'all' &&
+      category.slug !== 'trending'
+  )
   .map((category) => ({
-    category,
-    meta: getCategoryMeta(category),
-    count: prompts.filter((p) => p.category === category).length
+    category: category.name,
+    meta: category,
+    count: prompts.filter((p) => p.category === category.name).length
   }))
+  .filter((item) => item.count > 0)
   .sort(
     (a, b) =>
-      Number(b.meta?.starRating ?? 0) - Number(a.meta?.starRating ?? 0) ||
-      String(a.category).localeCompare(String(b.category))
+      Number(b.meta?.starRating ?? 0) -
+        Number(a.meta?.starRating ?? 0) ||
+      Number(a.meta?.displayOrder ?? 999) -
+        Number(b.meta?.displayOrder ?? 999)
   );
+
+const cats = categoryItems.map((item) => item.category);
 ---
 
 <Layout
-  title="Free AI Image Prompts | Copy-Paste Prompts for ChatGPT, Gemini & More | Create With Soumay"
-  description="Explore free AI image prompts for couples, selfies, portraits, fashion, vintage photography, anime, travel and more. Search, filter and copy ready-to-use prompts for ChatGPT, Gemini, Nano Banana and Midjourney."
+  title="Free AI Image Prompts | ChatGPT, Gemini & Nano Banana Prompts | Create With Soumay"
+  description="Explore free AI image prompts for couples, selfies, portraits, fashion, Navratri, vintage photography, anime and more. Copy ready-to-use prompts for ChatGPT, Gemini, Nano Banana and Midjourney."
   active="Prompts"
 >
 
@@ -790,9 +799,9 @@ const categoryItems = cats
     set:html={JSON.stringify({
       '@context': 'https://schema.org',
       '@type': 'CollectionPage',
-      name: 'Free AI Image Prompts | Copy-Paste Prompt Library',
+      name: 'Free AI Image Prompts | ChatGPT, Gemini & Nano Banana Prompts',
       description:
-        "Explore free AI image prompts for couples, selfies, portraits, fashion, vintage photography, anime, travel and more. Search, filter and copy ready-to-use prompts for ChatGPT, Gemini, Nano Banana and Midjourney.",
+        "Explore free AI image prompts for couples, selfies, portraits, fashion, Navratri, vintage photography, anime and more. Copy ready-to-use prompts for ChatGPT, Gemini, Nano Banana and Midjourney.",
       url: 'https://www.createwithsoumay.store/prompts/',
       isPartOf: {
         '@type': 'WebSite',
