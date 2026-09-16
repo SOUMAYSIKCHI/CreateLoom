@@ -966,6 +966,38 @@ const promptLibrary = [...prompts].sort(
     flex-wrap: wrap;
   }
 
+  .filters button {
+    min-height: 36px;
+    padding: 7px 13px;
+    border: 1px solid rgba(255,255,255,0.10);
+    border-radius: 999px;
+    background: rgba(255,255,255,0.035);
+    color: #d4d4d8;
+    font: inherit;
+    font-size: .76rem;
+    font-weight: 700;
+    line-height: 1;
+    cursor: pointer;
+    transition:
+      background .2s ease,
+      border-color .2s ease,
+      color .2s ease,
+      transform .2s ease;
+  }
+
+  .filters button:hover {
+    border-color: rgba(139,92,246,.38);
+    background: rgba(139,92,246,.08);
+    color: #c4b5fd;
+    transform: translateY(-1px);
+  }
+
+  .filters button.active-filter {
+    border-color: rgba(139,92,246,.55) !important;
+    background: rgba(139,92,246,.14) !important;
+    color: #c4b5fd !important;
+  }
+
   .active-filter {
     border-color: rgba(139,92,246,0.5) !important;
     background: rgba(139,92,246,0.13) !important;
