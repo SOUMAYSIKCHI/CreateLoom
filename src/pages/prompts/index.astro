@@ -81,7 +81,7 @@ const cats = categoryItems.map((item) => item.category);
 
       <h1>
         Free AI Image
-        <span class="gradient-text">Prompts</span>
+        <span class="gradient-text"> Prompts</span>
       </h1>
 
       <p class="hero-description">
@@ -629,8 +629,9 @@ const cats = categoryItems.map((item) => item.category);
   }
 
   .category-prompt-grid {
-    grid-template-columns: repeat(5, minmax(0, 1fr));
-    gap: 13px;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 18px;
+    align-items: stretch;
   }
 
   .category-empty {
@@ -808,7 +809,7 @@ const cats = categoryItems.map((item) => item.category);
     }
 
     .category-prompt-grid {
-      grid-template-columns: repeat(3, minmax(0, 1fr));
+      grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 
   }
@@ -831,11 +832,21 @@ const cats = categoryItems.map((item) => item.category);
     .featured-grid,
     .category-prompt-grid {
       grid-template-columns: 1fr;
+      gap: 14px;
     }
 
     .category-preview-heading {
       align-items: flex-start;
       flex-direction: column;
+      gap: 10px;
+    }
+
+    .category-preview-heading p {
+      font-size: .92rem;
+    }
+
+    .category-preview {
+      padding-top: 8px;
     }
 
     .featured-card {
