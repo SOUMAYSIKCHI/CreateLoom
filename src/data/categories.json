@@ -70,7 +70,8 @@
       ],
       "categoryIntro": "Explore the complete collection of free, ready-to-use AI image prompts for portraits, couples, fashion, selfies, festivals, anime, cinematic photography and more.",
       "seoContent": "Explore the Create With Soumay Prompt Library for free, ready-to-use AI image prompts covering portraits, couples, fashion, selfies, festivals, anime, cinematic photography, weddings and other creative social content. Copy a prompt, customize the details you need, and adapt it for your preferred AI image generator. The collection includes prompts for different subjects, poses, outfits, settings, lighting styles and photography concepts. Prompts can be adapted for supported tools such as ChatGPT, Gemini, Nano Banana and Midjourney. When a prompt is designed for photo editing with your own image, follow its identity-preservation instructions and use image input where supported. Browse by category to find a focused collection or explore the full library for more ideas.",
-      "faqTitle": "Frequently Asked Questions About All AI Image Prompts"
+      "faqTitle": "Frequently Asked Questions About All AI Image Prompts",
+      "starRating": 5.0
     },
     {
       "id": "trending",
@@ -141,862 +142,8 @@
       ],
       "categoryIntro": "Discover trending and viral-style AI image prompts for creative content.",
       "seoContent": "Explore free Trending AI image prompts and ready-to-use photo editing ideas for creative image generation and social media content. Discover trending AI image prompts for viral-style portraits, couple photos, fashion edits, selfies, cinematic scenes and social media content. Find fresh prompt ideas designed for today's popular AI image generators. Use these copy-ready prompts as a starting point and customize the subject, pose, outfit, setting, lighting, camera style and other details for your preferred AI image generator. This category includes prompt ideas related to trending ai image prompts, viral ai photo prompts, viral ai photo editing prompts, pinterest viral ai prompts, instagram viral ai prompts. Depending on the prompt, you can adapt the instructions for supported tools such as ChatGPT, Gemini, Nano Banana and Midjourney. For photo-editing prompts that use your own image, follow the identity-preservation instructions in the individual prompt and use image input when supported by your selected tool.",
-      "faqTitle": "Frequently Asked Questions About Trending AI Image Prompts"
-    },
-    {
-      "id": "aesthetic",
-      "name": "Aesthetic",
-      "slug": "aesthetic",
-      "title": "Aesthetic AI Image Prompts",
-      "metaTitle": "Aesthetic AI Image Prompts | Realistic Aesthetic Photo Prompts",
-      "description": "Create beautiful aesthetic AI images with ready-to-use prompts for soft portraits, natural lighting, stylish outfits, dreamy backgrounds, editorial photography and modern social media aesthetics.",
-      "shortDescription": "Create stylish, dreamy and realistic aesthetic AI photos.",
-      "seoDescription": "Create beautiful aesthetic AI images with ready-to-use prompts for soft portraits, natural lighting, stylish outfits, dreamy backgrounds, editorial photography and modern social media aesthetics.",
-      "searchTerms": [
-        "aesthetic ai image prompts",
-        "aesthetic ai photo editing prompts",
-        "aesthetic girl prompts",
-        "aesthetic boy prompts",
-        "aesthetic couple prompts"
-      ],
-      "tags": [
-        "aesthetic",
-        "ai-photo-editing",
-        "realistic-aesthetic",
-        "social-media"
-      ],
-      "featured": true,
-      "displayOrder": 3,
-      "tools": [
-        "ChatGPT",
-        "Gemini",
-        "Nano Banana",
-        "Midjourney"
-      ],
-      "typeFilters": [
-        "all",
-        "girl",
-        "boy",
-        "couple",
-        "unisex"
-      ],
-      "toolFilters": [
-        "all",
-        "ChatGPT",
-        "Gemini",
-        "Nano Banana",
-        "Midjourney"
-      ],
-      "bestFor": [
-        "aesthetic portraits",
-        "Instagram content",
-        "editorial-style images"
-      ],
-      "faq": [
-        {
-          "question": "What are AI image prompts?",
-          "answer": "AI image prompts are ready-to-use instructions that describe the subject, pose, clothing, setting, lighting and visual style you want an AI image generator to create."
-        },
-        {
-          "question": "Which AI tools can I use with these prompts?",
-          "answer": "You can adapt the prompts for popular AI image generators such as ChatGPT, Gemini, Nano Banana and Midjourney, depending on the prompt and tool capabilities."
-        },
-        {
-          "question": "Can I use these prompts with my own photo?",
-          "answer": "Yes. For prompts designed for photo editing or identity preservation, upload your own image when the selected AI tool supports image input and follow the prompt's identity or face-lock instructions."
-        },
-        {
-          "question": "What can I create with Aesthetic AI image prompts?",
-          "answer": "Create beautiful aesthetic AI images with ready-to-use prompts for soft portraits, natural lighting, stylish outfits, dreamy backgrounds, editorial photography and modern social media aesthetics."
-        }
-      ],
-      "categoryIntro": "Create stylish, dreamy and realistic aesthetic AI photos.",
-      "seoContent": "Explore free Aesthetic AI image prompts and ready-to-use photo editing ideas for creative image generation and social media content. Create beautiful aesthetic AI images with ready-to-use prompts for soft portraits, natural lighting, stylish outfits, dreamy backgrounds, editorial photography and modern social media aesthetics. Use these copy-ready prompts as a starting point and customize the subject, pose, outfit, setting, lighting, camera style and other details for your preferred AI image generator. This category includes prompt ideas related to aesthetic ai image prompts, aesthetic ai photo editing prompts, aesthetic girl prompts, aesthetic boy prompts, aesthetic couple prompts. Depending on the prompt, you can adapt the instructions for supported tools such as ChatGPT, Gemini, Nano Banana and Midjourney. For photo-editing prompts that use your own image, follow the identity-preservation instructions in the individual prompt and use image input when supported by your selected tool.",
-      "faqTitle": "Frequently Asked Questions About Aesthetic AI Image Prompts"
-    },
-    {
-      "id": "anime",
-      "name": "Anime",
-      "slug": "anime",
-      "title": "Anime AI Image Prompts",
-      "metaTitle": "Anime AI Image Prompts | Anime Photo Editing Prompts",
-      "description": "Explore anime AI image prompts for transforming creative ideas and photos into anime-inspired portraits, couples, characters, cinematic scenes and imaginative social content.",
-      "shortDescription": "Explore anime-inspired prompts for portraits, characters and creative scenes.",
-      "seoDescription": "Explore anime AI image prompts for transforming creative ideas and photos into anime-inspired portraits, couples, characters, cinematic scenes and imaginative social content.",
-      "searchTerms": [
-        "anime ai image prompts",
-        "anime photo editing prompts",
-        "anime girl ai prompt",
-        "anime boy ai prompt",
-        "anime couple prompt"
-      ],
-      "tags": [
-        "anime",
-        "anime-ai",
-        "character-prompts",
-        "creative-ai"
-      ],
-      "featured": false,
-      "displayOrder": 4,
-      "tools": [
-        "ChatGPT",
-        "Gemini",
-        "Nano Banana",
-        "Midjourney"
-      ],
-      "typeFilters": [
-        "all",
-        "girl",
-        "boy",
-        "couple",
-        "unisex"
-      ],
-      "toolFilters": [
-        "all",
-        "ChatGPT",
-        "Gemini",
-        "Nano Banana",
-        "Midjourney"
-      ],
-      "bestFor": [
-        "anime portraits",
-        "character concepts",
-        "creative edits"
-      ],
-      "faq": [
-        {
-          "question": "What are AI image prompts?",
-          "answer": "AI image prompts are ready-to-use instructions that describe the subject, pose, clothing, setting, lighting and visual style you want an AI image generator to create."
-        },
-        {
-          "question": "Which AI tools can I use with these prompts?",
-          "answer": "You can adapt the prompts for popular AI image generators such as ChatGPT, Gemini, Nano Banana and Midjourney, depending on the prompt and tool capabilities."
-        },
-        {
-          "question": "Can I use these prompts with my own photo?",
-          "answer": "Yes. For prompts designed for photo editing or identity preservation, upload your own image when the selected AI tool supports image input and follow the prompt's identity or face-lock instructions."
-        },
-        {
-          "question": "What can I create with Anime AI image prompts?",
-          "answer": "Explore anime AI image prompts for transforming creative ideas and photos into anime-inspired portraits, couples, characters, cinematic scenes and imaginative social content."
-        }
-      ],
-      "categoryIntro": "Explore anime-inspired prompts for portraits, characters and creative scenes.",
-      "seoContent": "Explore free Anime AI image prompts and ready-to-use photo editing ideas for creative image generation and social media content. Explore anime AI image prompts for transforming creative ideas and photos into anime-inspired portraits, couples, characters, cinematic scenes and imaginative social content. Use these copy-ready prompts as a starting point and customize the subject, pose, outfit, setting, lighting, camera style and other details for your preferred AI image generator. This category includes prompt ideas related to anime ai image prompts, anime photo editing prompts, anime girl ai prompt, anime boy ai prompt, anime couple prompt. Depending on the prompt, you can adapt the instructions for supported tools such as ChatGPT, Gemini, Nano Banana and Midjourney. For photo-editing prompts that use your own image, follow the identity-preservation instructions in the individual prompt and use image input when supported by your selected tool.",
-      "faqTitle": "Frequently Asked Questions About Anime AI Image Prompts"
-    },
-    {
-      "id": "birthday",
-      "name": "Birthday",
-      "slug": "birthday",
-      "title": "Birthday AI Image Prompts",
-      "metaTitle": "Birthday AI Image Prompts | Birthday Photo Editing Prompts",
-      "description": "Create memorable birthday AI photos with prompts for birthday portraits, cake celebrations, party scenes, stylish outfits, balloons, candles and realistic social media photography.",
-      "shortDescription": "Create realistic and creative birthday celebration AI photos.",
-      "seoDescription": "Create memorable birthday AI photos with prompts for birthday portraits, cake celebrations, party scenes, stylish outfits, balloons, candles and realistic social media photography.",
-      "searchTerms": [
-        "birthday ai image prompts",
-        "birthday photo editing prompts",
-        "birthday girl ai prompt",
-        "birthday boy ai prompt",
-        "birthday couple ai prompt"
-      ],
-      "tags": [
-        "birthday",
-        "celebration",
-        "party",
-        "ai-photo-prompts"
-      ],
-      "featured": false,
-      "displayOrder": 5,
-      "tools": [
-        "ChatGPT",
-        "Gemini",
-        "Nano Banana",
-        "Midjourney"
-      ],
-      "typeFilters": [
-        "all",
-        "girl",
-        "boy",
-        "couple",
-        "unisex"
-      ],
-      "toolFilters": [
-        "all",
-        "ChatGPT",
-        "Gemini",
-        "Nano Banana",
-        "Midjourney"
-      ],
-      "bestFor": [
-        "birthday posts",
-        "party photos",
-        "birthday portraits"
-      ],
-      "faq": [
-        {
-          "question": "What are AI image prompts?",
-          "answer": "AI image prompts are ready-to-use instructions that describe the subject, pose, clothing, setting, lighting and visual style you want an AI image generator to create."
-        },
-        {
-          "question": "Which AI tools can I use with these prompts?",
-          "answer": "You can adapt the prompts for popular AI image generators such as ChatGPT, Gemini, Nano Banana and Midjourney, depending on the prompt and tool capabilities."
-        },
-        {
-          "question": "Can I use these prompts with my own photo?",
-          "answer": "Yes. For prompts designed for photo editing or identity preservation, upload your own image when the selected AI tool supports image input and follow the prompt's identity or face-lock instructions."
-        },
-        {
-          "question": "What can I create with Birthday AI image prompts?",
-          "answer": "Create memorable birthday AI photos with prompts for birthday portraits, cake celebrations, party scenes, stylish outfits, balloons, candles and realistic social media photography."
-        }
-      ],
-      "categoryIntro": "Create realistic and creative birthday celebration AI photos.",
-      "seoContent": "Explore free Birthday AI image prompts and ready-to-use photo editing ideas for creative image generation and social media content. Create memorable birthday AI photos with prompts for birthday portraits, cake celebrations, party scenes, stylish outfits, balloons, candles and realistic social media photography. Use these copy-ready prompts as a starting point and customize the subject, pose, outfit, setting, lighting, camera style and other details for your preferred AI image generator. This category includes prompt ideas related to birthday ai image prompts, birthday photo editing prompts, birthday girl ai prompt, birthday boy ai prompt, birthday couple ai prompt. Depending on the prompt, you can adapt the instructions for supported tools such as ChatGPT, Gemini, Nano Banana and Midjourney. For photo-editing prompts that use your own image, follow the identity-preservation instructions in the individual prompt and use image input when supported by your selected tool.",
-      "faqTitle": "Frequently Asked Questions About Birthday AI Image Prompts"
-    },
-    {
-      "id": "celebration",
-      "name": "Celebration",
-      "slug": "celebration",
-      "title": "Celebration AI Image Prompts",
-      "metaTitle": "Celebration AI Image Prompts | Festive AI Photo Prompts",
-      "description": "Find creative celebration AI image prompts for parties, special moments, festive gatherings, milestones and joyful social media photos with realistic photography styles.",
-      "shortDescription": "Create joyful AI images for celebrations, parties and special moments.",
-      "seoDescription": "Find creative celebration AI image prompts for parties, special moments, festive gatherings, milestones and joyful social media photos with realistic photography styles.",
-      "searchTerms": [
-        "celebration ai image prompts",
-        "celebration photo editing prompts",
-        "party ai photo prompts",
-        "festive ai prompts",
-        "special occasion ai prompts"
-      ],
-      "tags": [
-        "celebration",
-        "party",
-        "festive",
-        "special-occasion"
-      ],
-      "featured": false,
-      "displayOrder": 6,
-      "tools": [
-        "ChatGPT",
-        "Gemini",
-        "Nano Banana",
-        "Midjourney"
-      ],
-      "typeFilters": [
-        "all",
-        "girl",
-        "boy",
-        "couple",
-        "unisex"
-      ],
-      "toolFilters": [
-        "all",
-        "ChatGPT",
-        "Gemini",
-        "Nano Banana",
-        "Midjourney"
-      ],
-      "bestFor": [
-        "celebrations",
-        "party content",
-        "special occasions"
-      ],
-      "faq": [
-        {
-          "question": "What are AI image prompts?",
-          "answer": "AI image prompts are ready-to-use instructions that describe the subject, pose, clothing, setting, lighting and visual style you want an AI image generator to create."
-        },
-        {
-          "question": "Which AI tools can I use with these prompts?",
-          "answer": "You can adapt the prompts for popular AI image generators such as ChatGPT, Gemini, Nano Banana and Midjourney, depending on the prompt and tool capabilities."
-        },
-        {
-          "question": "Can I use these prompts with my own photo?",
-          "answer": "Yes. For prompts designed for photo editing or identity preservation, upload your own image when the selected AI tool supports image input and follow the prompt's identity or face-lock instructions."
-        },
-        {
-          "question": "What can I create with Celebration AI image prompts?",
-          "answer": "Find creative celebration AI image prompts for parties, special moments, festive gatherings, milestones and joyful social media photos with realistic photography styles."
-        }
-      ],
-      "categoryIntro": "Create joyful AI images for celebrations, parties and special moments.",
-      "seoContent": "Explore free Celebration AI image prompts and ready-to-use photo editing ideas for creative image generation and social media content. Find creative celebration AI image prompts for parties, special moments, festive gatherings, milestones and joyful social media photos with realistic photography styles. Use these copy-ready prompts as a starting point and customize the subject, pose, outfit, setting, lighting, camera style and other details for your preferred AI image generator. This category includes prompt ideas related to celebration ai image prompts, celebration photo editing prompts, party ai photo prompts, festive ai prompts, special occasion ai prompts. Depending on the prompt, you can adapt the instructions for supported tools such as ChatGPT, Gemini, Nano Banana and Midjourney. For photo-editing prompts that use your own image, follow the identity-preservation instructions in the individual prompt and use image input when supported by your selected tool.",
-      "faqTitle": "Frequently Asked Questions About Celebration AI Image Prompts"
-    },
-    {
-      "id": "cinematic",
-      "name": "Cinematic",
-      "slug": "cinematic",
-      "title": "Cinematic AI Image Prompts",
-      "metaTitle": "Cinematic AI Image Prompts | Cinematic Photo Editing Prompts",
-      "description": "Create cinematic AI images with dramatic lighting, film-inspired compositions, atmospheric environments, depth, realistic skin texture and professional photography aesthetics.",
-      "shortDescription": "Create dramatic, film-inspired and cinematic AI photographs.",
-      "seoDescription": "Create cinematic AI images with dramatic lighting, film-inspired compositions, atmospheric environments, depth, realistic skin texture and professional photography aesthetics.",
-      "searchTerms": [
-        "cinematic ai image prompts",
-        "cinematic photo editing prompts",
-        "cinematic portrait prompt",
-        "cinematic photography ai prompt",
-        "movie style ai image prompt"
-      ],
-      "tags": [
-        "cinematic",
-        "cinematic-photography",
-        "film-look",
-        "dramatic-lighting"
-      ],
-      "featured": false,
-      "displayOrder": 7,
-      "tools": [
-        "ChatGPT",
-        "Gemini",
-        "Nano Banana",
-        "Midjourney"
-      ],
-      "typeFilters": [
-        "all",
-        "girl",
-        "boy",
-        "couple",
-        "unisex"
-      ],
-      "toolFilters": [
-        "all",
-        "ChatGPT",
-        "Gemini",
-        "Nano Banana",
-        "Midjourney"
-      ],
-      "bestFor": [
-        "cinematic portraits",
-        "film-style photography",
-        "dramatic scenes"
-      ],
-      "faq": [
-        {
-          "question": "What are AI image prompts?",
-          "answer": "AI image prompts are ready-to-use instructions that describe the subject, pose, clothing, setting, lighting and visual style you want an AI image generator to create."
-        },
-        {
-          "question": "Which AI tools can I use with these prompts?",
-          "answer": "You can adapt the prompts for popular AI image generators such as ChatGPT, Gemini, Nano Banana and Midjourney, depending on the prompt and tool capabilities."
-        },
-        {
-          "question": "Can I use these prompts with my own photo?",
-          "answer": "Yes. For prompts designed for photo editing or identity preservation, upload your own image when the selected AI tool supports image input and follow the prompt's identity or face-lock instructions."
-        },
-        {
-          "question": "What can I create with Cinematic AI image prompts?",
-          "answer": "Create cinematic AI images with dramatic lighting, film-inspired compositions, atmospheric environments, depth, realistic skin texture and professional photography aesthetics."
-        }
-      ],
-      "categoryIntro": "Create dramatic, film-inspired and cinematic AI photographs.",
-      "seoContent": "Explore free Cinematic AI image prompts and ready-to-use photo editing ideas for creative image generation and social media content. Create cinematic AI images with dramatic lighting, film-inspired compositions, atmospheric environments, depth, realistic skin texture and professional photography aesthetics. Use these copy-ready prompts as a starting point and customize the subject, pose, outfit, setting, lighting, camera style and other details for your preferred AI image generator. This category includes prompt ideas related to cinematic ai image prompts, cinematic photo editing prompts, cinematic portrait prompt, cinematic photography ai prompt, movie style ai image prompt. Depending on the prompt, you can adapt the instructions for supported tools such as ChatGPT, Gemini, Nano Banana and Midjourney. For photo-editing prompts that use your own image, follow the identity-preservation instructions in the individual prompt and use image input when supported by your selected tool.",
-      "faqTitle": "Frequently Asked Questions About Cinematic AI Image Prompts"
-    },
-    {
-      "id": "couple",
-      "name": "Couple",
-      "slug": "couple",
-      "title": "Couple AI Image Prompts",
-      "metaTitle": "Couple AI Image Prompts | Romantic Couple Photo Editing Prompts",
-      "description": "Explore romantic couple AI image prompts for realistic poses, natural eye contact, candid moments, hugs, hand holding, dates, weddings, festive photos and cinematic couple portraits.",
-      "shortDescription": "Create realistic romantic couple photos with ready-to-use AI prompts.",
-      "seoDescription": "Explore romantic couple AI image prompts for realistic poses, natural eye contact, candid moments, hugs, hand holding, dates, weddings, festive photos and cinematic couple portraits.",
-      "searchTerms": [
-        "couple ai image prompts",
-        "couple photo editing prompts",
-        "romantic couple ai prompts",
-        "couple prompts for Gemini",
-        "couple prompts for Nano Banana",
-        "viral couple ai photo prompts"
-      ],
-      "tags": [
-        "couple",
-        "romantic",
-        "couple-photo",
-        "gemini-prompt",
-        "nano-banana"
-      ],
-      "featured": true,
-      "displayOrder": 8,
-      "tools": [
-        "ChatGPT",
-        "Gemini",
-        "Nano Banana",
-        "Midjourney"
-      ],
-      "typeFilters": [
-        "all",
-        "girl",
-        "boy",
-        "couple",
-        "unisex"
-      ],
-      "toolFilters": [
-        "all",
-        "ChatGPT",
-        "Gemini",
-        "Nano Banana",
-        "Midjourney"
-      ],
-      "bestFor": [
-        "romantic couples",
-        "Instagram couple photos",
-        "pre-wedding concepts"
-      ],
-      "faq": [
-        {
-          "question": "What are AI image prompts?",
-          "answer": "AI image prompts are ready-to-use instructions that describe the subject, pose, clothing, setting, lighting and visual style you want an AI image generator to create."
-        },
-        {
-          "question": "Which AI tools can I use with these prompts?",
-          "answer": "You can adapt the prompts for popular AI image generators such as ChatGPT, Gemini, Nano Banana and Midjourney, depending on the prompt and tool capabilities."
-        },
-        {
-          "question": "Can I use these prompts with my own photo?",
-          "answer": "Yes. For prompts designed for photo editing or identity preservation, upload your own image when the selected AI tool supports image input and follow the prompt's identity or face-lock instructions."
-        },
-        {
-          "question": "What can I create with Couple AI image prompts?",
-          "answer": "Explore romantic couple AI image prompts for realistic poses, natural eye contact, candid moments, hugs, hand holding, dates, weddings, festive photos and cinematic couple portraits."
-        }
-      ],
-      "categoryIntro": "Create realistic romantic couple photos with ready-to-use AI prompts.",
-      "seoContent": "Explore free Couple AI image prompts and ready-to-use photo editing ideas for creative image generation and social media content. Explore romantic couple AI image prompts for realistic poses, natural eye contact, candid moments, hugs, hand holding, dates, weddings, festive photos and cinematic couple portraits. Use these copy-ready prompts as a starting point and customize the subject, pose, outfit, setting, lighting, camera style and other details for your preferred AI image generator. This category includes prompt ideas related to couple ai image prompts, couple photo editing prompts, romantic couple ai prompts, couple prompts for Gemini, couple prompts for Nano Banana. Depending on the prompt, you can adapt the instructions for supported tools such as ChatGPT, Gemini, Nano Banana and Midjourney. For photo-editing prompts that use your own image, follow the identity-preservation instructions in the individual prompt and use image input when supported by your selected tool.",
-      "faqTitle": "Frequently Asked Questions About Couple AI Image Prompts"
-    },
-    {
-      "id": "fashion",
-      "name": "Fashion",
-      "slug": "fashion",
-      "title": "Fashion AI Image Prompts",
-      "metaTitle": "Fashion AI Image Prompts | AI Fashion Photo Editing Prompts",
-      "description": "Discover fashion AI image prompts for stylish portraits, editorial looks, street fashion, traditional outfits, luxury concepts, studio photography and social media fashion content.",
-      "shortDescription": "Create stylish fashion editorials, portraits and outfit-focused AI photos.",
-      "seoDescription": "Discover fashion AI image prompts for stylish portraits, editorial looks, street fashion, traditional outfits, luxury concepts, studio photography and social media fashion content.",
-      "searchTerms": [
-        "fashion ai image prompts",
-        "fashion photo editing prompts",
-        "ai fashion photography prompts",
-        "fashion model ai prompt",
-        "outfit ai image prompt"
-      ],
-      "tags": [
-        "fashion",
-        "editorial",
-        "style",
-        "fashion-photography"
-      ],
-      "featured": false,
-      "displayOrder": 9,
-      "tools": [
-        "ChatGPT",
-        "Gemini",
-        "Nano Banana",
-        "Midjourney"
-      ],
-      "typeFilters": [
-        "all",
-        "girl",
-        "boy",
-        "couple",
-        "unisex"
-      ],
-      "toolFilters": [
-        "all",
-        "ChatGPT",
-        "Gemini",
-        "Nano Banana",
-        "Midjourney"
-      ],
-      "bestFor": [
-        "fashion portraits",
-        "outfit inspiration",
-        "editorial content"
-      ],
-      "faq": [
-        {
-          "question": "What are AI image prompts?",
-          "answer": "AI image prompts are ready-to-use instructions that describe the subject, pose, clothing, setting, lighting and visual style you want an AI image generator to create."
-        },
-        {
-          "question": "Which AI tools can I use with these prompts?",
-          "answer": "You can adapt the prompts for popular AI image generators such as ChatGPT, Gemini, Nano Banana and Midjourney, depending on the prompt and tool capabilities."
-        },
-        {
-          "question": "Can I use these prompts with my own photo?",
-          "answer": "Yes. For prompts designed for photo editing or identity preservation, upload your own image when the selected AI tool supports image input and follow the prompt's identity or face-lock instructions."
-        },
-        {
-          "question": "What can I create with Fashion AI image prompts?",
-          "answer": "Discover fashion AI image prompts for stylish portraits, editorial looks, street fashion, traditional outfits, luxury concepts, studio photography and social media fashion content."
-        }
-      ],
-      "categoryIntro": "Create stylish fashion editorials, portraits and outfit-focused AI photos.",
-      "seoContent": "Explore free Fashion AI image prompts and ready-to-use photo editing ideas for creative image generation and social media content. Discover fashion AI image prompts for stylish portraits, editorial looks, street fashion, traditional outfits, luxury concepts, studio photography and social media fashion content. Use these copy-ready prompts as a starting point and customize the subject, pose, outfit, setting, lighting, camera style and other details for your preferred AI image generator. This category includes prompt ideas related to fashion ai image prompts, fashion photo editing prompts, ai fashion photography prompts, fashion model ai prompt, outfit ai image prompt. Depending on the prompt, you can adapt the instructions for supported tools such as ChatGPT, Gemini, Nano Banana and Midjourney. For photo-editing prompts that use your own image, follow the identity-preservation instructions in the individual prompt and use image input when supported by your selected tool.",
-      "faqTitle": "Frequently Asked Questions About Fashion AI Image Prompts"
-    },
-    {
-      "id": "festival",
-      "name": "Festival",
-      "slug": "festival",
-      "title": "Festival AI Image Prompts",
-      "metaTitle": "Festival AI Image Prompts | Festival Photo Editing Prompts",
-      "description": "Explore festival AI image prompts for colorful celebrations, traditional outfits, cultural events, festive portraits, family moments and realistic social media photography.",
-      "shortDescription": "Create festive AI photos inspired by celebrations and cultural events.",
-      "seoDescription": "Explore festival AI image prompts for colorful celebrations, traditional outfits, cultural events, festive portraits, family moments and realistic social media photography.",
-      "searchTerms": [
-        "festival ai image prompts",
-        "festival photo editing prompts",
-        "festival ai photo prompt",
-        "indian festival ai prompts",
-        "festive portrait prompts"
-      ],
-      "tags": [
-        "festival",
-        "festive",
-        "cultural",
-        "celebration"
-      ],
-      "featured": false,
-      "displayOrder": 10,
-      "tools": [
-        "ChatGPT",
-        "Gemini",
-        "Nano Banana",
-        "Midjourney"
-      ],
-      "typeFilters": [
-        "all",
-        "girl",
-        "boy",
-        "couple",
-        "unisex"
-      ],
-      "toolFilters": [
-        "all",
-        "ChatGPT",
-        "Gemini",
-        "Nano Banana",
-        "Midjourney"
-      ],
-      "bestFor": [
-        "festival portraits",
-        "cultural content",
-        "festive social posts"
-      ],
-      "faq": [
-        {
-          "question": "What are AI image prompts?",
-          "answer": "AI image prompts are ready-to-use instructions that describe the subject, pose, clothing, setting, lighting and visual style you want an AI image generator to create."
-        },
-        {
-          "question": "Which AI tools can I use with these prompts?",
-          "answer": "You can adapt the prompts for popular AI image generators such as ChatGPT, Gemini, Nano Banana and Midjourney, depending on the prompt and tool capabilities."
-        },
-        {
-          "question": "Can I use these prompts with my own photo?",
-          "answer": "Yes. For prompts designed for photo editing or identity preservation, upload your own image when the selected AI tool supports image input and follow the prompt's identity or face-lock instructions."
-        },
-        {
-          "question": "What can I create with Festival AI image prompts?",
-          "answer": "Explore festival AI image prompts for colorful celebrations, traditional outfits, cultural events, festive portraits, family moments and realistic social media photography."
-        }
-      ],
-      "categoryIntro": "Create festive AI photos inspired by celebrations and cultural events.",
-      "seoContent": "Explore free Festival AI image prompts and ready-to-use photo editing ideas for creative image generation and social media content. Explore festival AI image prompts for colorful celebrations, traditional outfits, cultural events, festive portraits, family moments and realistic social media photography. Use these copy-ready prompts as a starting point and customize the subject, pose, outfit, setting, lighting, camera style and other details for your preferred AI image generator. This category includes prompt ideas related to festival ai image prompts, festival photo editing prompts, festival ai photo prompt, indian festival ai prompts, festive portrait prompts. Depending on the prompt, you can adapt the instructions for supported tools such as ChatGPT, Gemini, Nano Banana and Midjourney. For photo-editing prompts that use your own image, follow the identity-preservation instructions in the individual prompt and use image input when supported by your selected tool.",
-      "faqTitle": "Frequently Asked Questions About Festival AI Image Prompts"
-    },
-    {
-      "id": "friends",
-      "name": "Friends",
-      "slug": "friends",
-      "title": "Friends AI Image Prompts",
-      "metaTitle": "Friends AI Image Prompts | Friendship Photo Editing Prompts",
-      "description": "Create realistic AI photos with friends using prompts for group portraits, candid moments, travel memories, celebrations, street photography and fun social media content.",
-      "shortDescription": "Create fun, natural and realistic AI photos with friends.",
-      "seoDescription": "Create realistic AI photos with friends using prompts for group portraits, candid moments, travel memories, celebrations, street photography and fun social media content.",
-      "searchTerms": [
-        "friends ai image prompts",
-        "friendship photo editing prompts",
-        "friends group ai prompt",
-        "best friend ai photo prompt",
-        "friends group photo editing"
-      ],
-      "tags": [
-        "friends",
-        "friendship",
-        "group-photo",
-        "candid"
-      ],
-      "featured": false,
-      "displayOrder": 11,
-      "tools": [
-        "ChatGPT",
-        "Gemini",
-        "Nano Banana",
-        "Midjourney"
-      ],
-      "typeFilters": [
-        "all",
-        "girl",
-        "boy",
-        "couple",
-        "unisex"
-      ],
-      "toolFilters": [
-        "all",
-        "ChatGPT",
-        "Gemini",
-        "Nano Banana",
-        "Midjourney"
-      ],
-      "bestFor": [
-        "friend group photos",
-        "memories",
-        "social media posts"
-      ],
-      "faq": [
-        {
-          "question": "What are AI image prompts?",
-          "answer": "AI image prompts are ready-to-use instructions that describe the subject, pose, clothing, setting, lighting and visual style you want an AI image generator to create."
-        },
-        {
-          "question": "Which AI tools can I use with these prompts?",
-          "answer": "You can adapt the prompts for popular AI image generators such as ChatGPT, Gemini, Nano Banana and Midjourney, depending on the prompt and tool capabilities."
-        },
-        {
-          "question": "Can I use these prompts with my own photo?",
-          "answer": "Yes. For prompts designed for photo editing or identity preservation, upload your own image when the selected AI tool supports image input and follow the prompt's identity or face-lock instructions."
-        },
-        {
-          "question": "What can I create with Friends AI image prompts?",
-          "answer": "Create realistic AI photos with friends using prompts for group portraits, candid moments, travel memories, celebrations, street photography and fun social media content."
-        }
-      ],
-      "categoryIntro": "Create fun, natural and realistic AI photos with friends.",
-      "seoContent": "Explore free Friends AI image prompts and ready-to-use photo editing ideas for creative image generation and social media content. Create realistic AI photos with friends using prompts for group portraits, candid moments, travel memories, celebrations, street photography and fun social media content. Use these copy-ready prompts as a starting point and customize the subject, pose, outfit, setting, lighting, camera style and other details for your preferred AI image generator. This category includes prompt ideas related to friends ai image prompts, friendship photo editing prompts, friends group ai prompt, best friend ai photo prompt, friends group photo editing. Depending on the prompt, you can adapt the instructions for supported tools such as ChatGPT, Gemini, Nano Banana and Midjourney. For photo-editing prompts that use your own image, follow the identity-preservation instructions in the individual prompt and use image input when supported by your selected tool.",
-      "faqTitle": "Frequently Asked Questions About Friends AI Image Prompts"
-    },
-    {
-      "id": "lifestyle",
-      "name": "Lifestyle",
-      "slug": "lifestyle",
-      "title": "Lifestyle AI Image Prompts",
-      "metaTitle": "Lifestyle AI Image Prompts | Realistic Lifestyle Photo Prompts",
-      "description": "Explore lifestyle AI image prompts for everyday moments, coffee shops, travel, casual outfits, home scenes, street photography and natural candid portraits.",
-      "shortDescription": "Create natural AI photos inspired by everyday lifestyle moments.",
-      "seoDescription": "Explore lifestyle AI image prompts for everyday moments, coffee shops, travel, casual outfits, home scenes, street photography and natural candid portraits.",
-      "searchTerms": [
-        "lifestyle ai image prompts",
-        "lifestyle photo editing prompts",
-        "realistic lifestyle ai prompts",
-        "candid lifestyle photography ai",
-        "everyday ai photo prompts"
-      ],
-      "tags": [
-        "lifestyle",
-        "candid",
-        "everyday-photography",
-        "realistic"
-      ],
-      "featured": false,
-      "displayOrder": 12,
-      "tools": [
-        "ChatGPT",
-        "Gemini",
-        "Nano Banana",
-        "Midjourney"
-      ],
-      "typeFilters": [
-        "all",
-        "girl",
-        "boy",
-        "couple",
-        "unisex"
-      ],
-      "toolFilters": [
-        "all",
-        "ChatGPT",
-        "Gemini",
-        "Nano Banana",
-        "Midjourney"
-      ],
-      "bestFor": [
-        "everyday portraits",
-        "candid photography",
-        "social content"
-      ],
-      "faq": [
-        {
-          "question": "What are AI image prompts?",
-          "answer": "AI image prompts are ready-to-use instructions that describe the subject, pose, clothing, setting, lighting and visual style you want an AI image generator to create."
-        },
-        {
-          "question": "Which AI tools can I use with these prompts?",
-          "answer": "You can adapt the prompts for popular AI image generators such as ChatGPT, Gemini, Nano Banana and Midjourney, depending on the prompt and tool capabilities."
-        },
-        {
-          "question": "Can I use these prompts with my own photo?",
-          "answer": "Yes. For prompts designed for photo editing or identity preservation, upload your own image when the selected AI tool supports image input and follow the prompt's identity or face-lock instructions."
-        },
-        {
-          "question": "What can I create with Lifestyle AI image prompts?",
-          "answer": "Explore lifestyle AI image prompts for everyday moments, coffee shops, travel, casual outfits, home scenes, street photography and natural candid portraits."
-        }
-      ],
-      "categoryIntro": "Create natural AI photos inspired by everyday lifestyle moments.",
-      "seoContent": "Explore free Lifestyle AI image prompts and ready-to-use photo editing ideas for creative image generation and social media content. Explore lifestyle AI image prompts for everyday moments, coffee shops, travel, casual outfits, home scenes, street photography and natural candid portraits. Use these copy-ready prompts as a starting point and customize the subject, pose, outfit, setting, lighting, camera style and other details for your preferred AI image generator. This category includes prompt ideas related to lifestyle ai image prompts, lifestyle photo editing prompts, realistic lifestyle ai prompts, candid lifestyle photography ai, everyday ai photo prompts. Depending on the prompt, you can adapt the instructions for supported tools such as ChatGPT, Gemini, Nano Banana and Midjourney. For photo-editing prompts that use your own image, follow the identity-preservation instructions in the individual prompt and use image input when supported by your selected tool.",
-      "faqTitle": "Frequently Asked Questions About Lifestyle AI Image Prompts"
-    },
-    {
-      "id": "men",
-      "name": "Men",
-      "slug": "men",
-      "title": "AI Image Prompts for Men",
-      "metaTitle": "AI Image Prompts for Men | Male Portrait & Photo Editing Prompts",
-      "description": "Find AI image prompts for men featuring realistic portraits, fashion, traditional outfits, cinematic looks, street photography, travel scenes and confident social media photos.",
-      "shortDescription": "Create realistic male portraits, fashion looks and creative AI photos.",
-      "seoDescription": "Find AI image prompts for men featuring realistic portraits, fashion, traditional outfits, cinematic looks, street photography, travel scenes and confident social media photos.",
-      "searchTerms": [
-        "ai image prompts for men",
-        "men ai photo editing prompts",
-        "male portrait ai prompts",
-        "boy ai image prompts",
-        "men fashion ai prompt"
-      ],
-      "tags": [
-        "men",
-        "male-portrait",
-        "boy",
-        "mens-fashion"
-      ],
-      "featured": false,
-      "displayOrder": 13,
-      "tools": [
-        "ChatGPT",
-        "Gemini",
-        "Nano Banana",
-        "Midjourney"
-      ],
-      "typeFilters": [
-        "all",
-        "girl",
-        "boy",
-        "couple",
-        "unisex"
-      ],
-      "toolFilters": [
-        "all",
-        "ChatGPT",
-        "Gemini",
-        "Nano Banana",
-        "Midjourney"
-      ],
-      "bestFor": [
-        "male portraits",
-        "men's fashion",
-        "social media photos"
-      ],
-      "faq": [
-        {
-          "question": "What are AI image prompts?",
-          "answer": "AI image prompts are ready-to-use instructions that describe the subject, pose, clothing, setting, lighting and visual style you want an AI image generator to create."
-        },
-        {
-          "question": "Which AI tools can I use with these prompts?",
-          "answer": "You can adapt the prompts for popular AI image generators such as ChatGPT, Gemini, Nano Banana and Midjourney, depending on the prompt and tool capabilities."
-        },
-        {
-          "question": "Can I use these prompts with my own photo?",
-          "answer": "Yes. For prompts designed for photo editing or identity preservation, upload your own image when the selected AI tool supports image input and follow the prompt's identity or face-lock instructions."
-        },
-        {
-          "question": "What can I create with Men AI image prompts?",
-          "answer": "Find AI image prompts for men featuring realistic portraits, fashion, traditional outfits, cinematic looks, street photography, travel scenes and confident social media photos."
-        }
-      ],
-      "categoryIntro": "Create realistic male portraits, fashion looks and creative AI photos.",
-      "seoContent": "Explore free Men AI image prompts and ready-to-use photo editing ideas for creative image generation and social media content. Find AI image prompts for men featuring realistic portraits, fashion, traditional outfits, cinematic looks, street photography, travel scenes and confident social media photos. Use these copy-ready prompts as a starting point and customize the subject, pose, outfit, setting, lighting, camera style and other details for your preferred AI image generator. This category includes prompt ideas related to ai image prompts for men, men ai photo editing prompts, male portrait ai prompts, boy ai image prompts, men fashion ai prompt. Depending on the prompt, you can adapt the instructions for supported tools such as ChatGPT, Gemini, Nano Banana and Midjourney. For photo-editing prompts that use your own image, follow the identity-preservation instructions in the individual prompt and use image input when supported by your selected tool.",
-      "faqTitle": "Frequently Asked Questions About Men AI Image Prompts"
-    },
-    {
-      "id": "music",
-      "name": "Music",
-      "slug": "music",
-      "title": "Music AI Image Prompts",
-      "metaTitle": "Music AI Image Prompts | Music & Singer Photo Editing Prompts",
-      "description": "Explore music-inspired AI image prompts for singers, musicians, album-style portraits, stage photography, concert scenes, studio concepts and creative music social content.",
-      "shortDescription": "Create music, singer, stage and album-inspired AI images.",
-      "seoDescription": "Explore music-inspired AI image prompts for singers, musicians, album-style portraits, stage photography, concert scenes, studio concepts and creative music social content.",
-      "searchTerms": [
-        "music ai image prompts",
-        "singer ai photo prompts",
-        "musician ai image prompt",
-        "album cover ai prompt",
-        "concert ai photo prompt"
-      ],
-      "tags": [
-        "music",
-        "singer",
-        "musician",
-        "album-art",
-        "concert"
-      ],
-      "featured": false,
-      "displayOrder": 14,
-      "tools": [
-        "ChatGPT",
-        "Gemini",
-        "Nano Banana",
-        "Midjourney"
-      ],
-      "typeFilters": [
-        "all",
-        "girl",
-        "boy",
-        "couple",
-        "unisex"
-      ],
-      "toolFilters": [
-        "all",
-        "ChatGPT",
-        "Gemini",
-        "Nano Banana",
-        "Midjourney"
-      ],
-      "bestFor": [
-        "music creators",
-        "artist portraits",
-        "album concepts"
-      ],
-      "faq": [
-        {
-          "question": "What are AI image prompts?",
-          "answer": "AI image prompts are ready-to-use instructions that describe the subject, pose, clothing, setting, lighting and visual style you want an AI image generator to create."
-        },
-        {
-          "question": "Which AI tools can I use with these prompts?",
-          "answer": "You can adapt the prompts for popular AI image generators such as ChatGPT, Gemini, Nano Banana and Midjourney, depending on the prompt and tool capabilities."
-        },
-        {
-          "question": "Can I use these prompts with my own photo?",
-          "answer": "Yes. For prompts designed for photo editing or identity preservation, upload your own image when the selected AI tool supports image input and follow the prompt's identity or face-lock instructions."
-        },
-        {
-          "question": "What can I create with Music AI image prompts?",
-          "answer": "Explore music-inspired AI image prompts for singers, musicians, album-style portraits, stage photography, concert scenes, studio concepts and creative music social content."
-        }
-      ],
-      "categoryIntro": "Create music, singer, stage and album-inspired AI images.",
-      "seoContent": "Explore free Music AI image prompts and ready-to-use photo editing ideas for creative image generation and social media content. Explore music-inspired AI image prompts for singers, musicians, album-style portraits, stage photography, concert scenes, studio concepts and creative music social content. Use these copy-ready prompts as a starting point and customize the subject, pose, outfit, setting, lighting, camera style and other details for your preferred AI image generator. This category includes prompt ideas related to music ai image prompts, singer ai photo prompts, musician ai image prompt, album cover ai prompt, concert ai photo prompt. Depending on the prompt, you can adapt the instructions for supported tools such as ChatGPT, Gemini, Nano Banana and Midjourney. For photo-editing prompts that use your own image, follow the identity-preservation instructions in the individual prompt and use image input when supported by your selected tool.",
-      "faqTitle": "Frequently Asked Questions About Music AI Image Prompts"
+      "faqTitle": "Frequently Asked Questions About Trending AI Image Prompts",
+      "starRating": 5.0
     },
     {
       "id": "navratri",
@@ -1027,7 +174,7 @@
         "chatgpt-prompt"
       ],
       "featured": true,
-      "displayOrder": 15,
+      "displayOrder": 3,
       "tools": [
         "ChatGPT",
         "Gemini",
@@ -1074,7 +221,226 @@
       ],
       "categoryIntro": "Realistic Navratri AI photo editing prompts for girls, boys and couples.",
       "seoContent": "Explore free Navratri AI image prompts and ready-to-use photo editing ideas for creative image generation and social media content. Explore Navratri AI photo editing prompts for realistic Garba photos, Dandiya portraits, traditional outfits, festive selfies, boys in kediyu and viral romantic couple photos. Use prompts with Gemini, Nano Banana, ChatGPT and other AI image generators. Use these copy-ready prompts as a starting point and customize the subject, pose, outfit, setting, lighting, camera style and other details for your preferred AI image generator. This category includes prompt ideas related to navratri ai image prompts, navratri ai photo editing prompts, navratri prompts for gemini, navratri nano banana prompts, navratri chatgpt prompts. Depending on the prompt, you can adapt the instructions for supported tools such as ChatGPT, Gemini, Nano Banana and Midjourney. For photo-editing prompts that use your own image, follow the identity-preservation instructions in the individual prompt and use image input when supported by your selected tool.",
-      "faqTitle": "Frequently Asked Questions About Navratri AI Image Prompts"
+      "faqTitle": "Frequently Asked Questions About Navratri AI Image Prompts",
+      "starRating": 5.0
+    },
+    {
+      "id": "couple",
+      "name": "Couple",
+      "slug": "couple",
+      "title": "Couple AI Image Prompts",
+      "metaTitle": "Couple AI Image Prompts | Romantic Couple Photo Editing Prompts",
+      "description": "Explore romantic couple AI image prompts for realistic poses, natural eye contact, candid moments, hugs, hand holding, dates, weddings, festive photos and cinematic couple portraits.",
+      "shortDescription": "Create realistic romantic couple photos with ready-to-use AI prompts.",
+      "seoDescription": "Explore romantic couple AI image prompts for realistic poses, natural eye contact, candid moments, hugs, hand holding, dates, weddings, festive photos and cinematic couple portraits.",
+      "searchTerms": [
+        "couple ai image prompts",
+        "couple photo editing prompts",
+        "romantic couple ai prompts",
+        "couple prompts for Gemini",
+        "couple prompts for Nano Banana",
+        "viral couple ai photo prompts"
+      ],
+      "tags": [
+        "couple",
+        "romantic",
+        "couple-photo",
+        "gemini-prompt",
+        "nano-banana"
+      ],
+      "featured": true,
+      "displayOrder": 4,
+      "tools": [
+        "ChatGPT",
+        "Gemini",
+        "Nano Banana",
+        "Midjourney"
+      ],
+      "typeFilters": [
+        "all",
+        "girl",
+        "boy",
+        "couple",
+        "unisex"
+      ],
+      "toolFilters": [
+        "all",
+        "ChatGPT",
+        "Gemini",
+        "Nano Banana",
+        "Midjourney"
+      ],
+      "bestFor": [
+        "romantic couples",
+        "Instagram couple photos",
+        "pre-wedding concepts"
+      ],
+      "faq": [
+        {
+          "question": "What are AI image prompts?",
+          "answer": "AI image prompts are ready-to-use instructions that describe the subject, pose, clothing, setting, lighting and visual style you want an AI image generator to create."
+        },
+        {
+          "question": "Which AI tools can I use with these prompts?",
+          "answer": "You can adapt the prompts for popular AI image generators such as ChatGPT, Gemini, Nano Banana and Midjourney, depending on the prompt and tool capabilities."
+        },
+        {
+          "question": "Can I use these prompts with my own photo?",
+          "answer": "Yes. For prompts designed for photo editing or identity preservation, upload your own image when the selected AI tool supports image input and follow the prompt's identity or face-lock instructions."
+        },
+        {
+          "question": "What can I create with Couple AI image prompts?",
+          "answer": "Explore romantic couple AI image prompts for realistic poses, natural eye contact, candid moments, hugs, hand holding, dates, weddings, festive photos and cinematic couple portraits."
+        }
+      ],
+      "categoryIntro": "Create realistic romantic couple photos with ready-to-use AI prompts.",
+      "seoContent": "Explore free Couple AI image prompts and ready-to-use photo editing ideas for creative image generation and social media content. Explore romantic couple AI image prompts for realistic poses, natural eye contact, candid moments, hugs, hand holding, dates, weddings, festive photos and cinematic couple portraits. Use these copy-ready prompts as a starting point and customize the subject, pose, outfit, setting, lighting, camera style and other details for your preferred AI image generator. This category includes prompt ideas related to couple ai image prompts, couple photo editing prompts, romantic couple ai prompts, couple prompts for Gemini, couple prompts for Nano Banana. Depending on the prompt, you can adapt the instructions for supported tools such as ChatGPT, Gemini, Nano Banana and Midjourney. For photo-editing prompts that use your own image, follow the identity-preservation instructions in the individual prompt and use image input when supported by your selected tool.",
+      "faqTitle": "Frequently Asked Questions About Couple AI Image Prompts",
+      "starRating": 4.9
+    },
+    {
+      "id": "aesthetic",
+      "name": "Aesthetic",
+      "slug": "aesthetic",
+      "title": "Aesthetic AI Image Prompts",
+      "metaTitle": "Aesthetic AI Image Prompts | Realistic Aesthetic Photo Prompts",
+      "description": "Create beautiful aesthetic AI images with ready-to-use prompts for soft portraits, natural lighting, stylish outfits, dreamy backgrounds, editorial photography and modern social media aesthetics.",
+      "shortDescription": "Create stylish, dreamy and realistic aesthetic AI photos.",
+      "seoDescription": "Create beautiful aesthetic AI images with ready-to-use prompts for soft portraits, natural lighting, stylish outfits, dreamy backgrounds, editorial photography and modern social media aesthetics.",
+      "searchTerms": [
+        "aesthetic ai image prompts",
+        "aesthetic ai photo editing prompts",
+        "aesthetic girl prompts",
+        "aesthetic boy prompts",
+        "aesthetic couple prompts"
+      ],
+      "tags": [
+        "aesthetic",
+        "ai-photo-editing",
+        "realistic-aesthetic",
+        "social-media"
+      ],
+      "featured": true,
+      "displayOrder": 5,
+      "tools": [
+        "ChatGPT",
+        "Gemini",
+        "Nano Banana",
+        "Midjourney"
+      ],
+      "typeFilters": [
+        "all",
+        "girl",
+        "boy",
+        "couple",
+        "unisex"
+      ],
+      "toolFilters": [
+        "all",
+        "ChatGPT",
+        "Gemini",
+        "Nano Banana",
+        "Midjourney"
+      ],
+      "bestFor": [
+        "aesthetic portraits",
+        "Instagram content",
+        "editorial-style images"
+      ],
+      "faq": [
+        {
+          "question": "What are AI image prompts?",
+          "answer": "AI image prompts are ready-to-use instructions that describe the subject, pose, clothing, setting, lighting and visual style you want an AI image generator to create."
+        },
+        {
+          "question": "Which AI tools can I use with these prompts?",
+          "answer": "You can adapt the prompts for popular AI image generators such as ChatGPT, Gemini, Nano Banana and Midjourney, depending on the prompt and tool capabilities."
+        },
+        {
+          "question": "Can I use these prompts with my own photo?",
+          "answer": "Yes. For prompts designed for photo editing or identity preservation, upload your own image when the selected AI tool supports image input and follow the prompt's identity or face-lock instructions."
+        },
+        {
+          "question": "What can I create with Aesthetic AI image prompts?",
+          "answer": "Create beautiful aesthetic AI images with ready-to-use prompts for soft portraits, natural lighting, stylish outfits, dreamy backgrounds, editorial photography and modern social media aesthetics."
+        }
+      ],
+      "categoryIntro": "Create stylish, dreamy and realistic aesthetic AI photos.",
+      "seoContent": "Explore free Aesthetic AI image prompts and ready-to-use photo editing ideas for creative image generation and social media content. Create beautiful aesthetic AI images with ready-to-use prompts for soft portraits, natural lighting, stylish outfits, dreamy backgrounds, editorial photography and modern social media aesthetics. Use these copy-ready prompts as a starting point and customize the subject, pose, outfit, setting, lighting, camera style and other details for your preferred AI image generator. This category includes prompt ideas related to aesthetic ai image prompts, aesthetic ai photo editing prompts, aesthetic girl prompts, aesthetic boy prompts, aesthetic couple prompts. Depending on the prompt, you can adapt the instructions for supported tools such as ChatGPT, Gemini, Nano Banana and Midjourney. For photo-editing prompts that use your own image, follow the identity-preservation instructions in the individual prompt and use image input when supported by your selected tool.",
+      "faqTitle": "Frequently Asked Questions About Aesthetic AI Image Prompts",
+      "starRating": 4.8
+    },
+    {
+      "id": "fashion",
+      "name": "Fashion",
+      "slug": "fashion",
+      "title": "Fashion AI Image Prompts",
+      "metaTitle": "Fashion AI Image Prompts | AI Fashion Photo Editing Prompts",
+      "description": "Discover fashion AI image prompts for stylish portraits, editorial looks, street fashion, traditional outfits, luxury concepts, studio photography and social media fashion content.",
+      "shortDescription": "Create stylish fashion editorials, portraits and outfit-focused AI photos.",
+      "seoDescription": "Discover fashion AI image prompts for stylish portraits, editorial looks, street fashion, traditional outfits, luxury concepts, studio photography and social media fashion content.",
+      "searchTerms": [
+        "fashion ai image prompts",
+        "fashion photo editing prompts",
+        "ai fashion photography prompts",
+        "fashion model ai prompt",
+        "outfit ai image prompt"
+      ],
+      "tags": [
+        "fashion",
+        "editorial",
+        "style",
+        "fashion-photography"
+      ],
+      "featured": false,
+      "displayOrder": 6,
+      "tools": [
+        "ChatGPT",
+        "Gemini",
+        "Nano Banana",
+        "Midjourney"
+      ],
+      "typeFilters": [
+        "all",
+        "girl",
+        "boy",
+        "couple",
+        "unisex"
+      ],
+      "toolFilters": [
+        "all",
+        "ChatGPT",
+        "Gemini",
+        "Nano Banana",
+        "Midjourney"
+      ],
+      "bestFor": [
+        "fashion portraits",
+        "outfit inspiration",
+        "editorial content"
+      ],
+      "faq": [
+        {
+          "question": "What are AI image prompts?",
+          "answer": "AI image prompts are ready-to-use instructions that describe the subject, pose, clothing, setting, lighting and visual style you want an AI image generator to create."
+        },
+        {
+          "question": "Which AI tools can I use with these prompts?",
+          "answer": "You can adapt the prompts for popular AI image generators such as ChatGPT, Gemini, Nano Banana and Midjourney, depending on the prompt and tool capabilities."
+        },
+        {
+          "question": "Can I use these prompts with my own photo?",
+          "answer": "Yes. For prompts designed for photo editing or identity preservation, upload your own image when the selected AI tool supports image input and follow the prompt's identity or face-lock instructions."
+        },
+        {
+          "question": "What can I create with Fashion AI image prompts?",
+          "answer": "Discover fashion AI image prompts for stylish portraits, editorial looks, street fashion, traditional outfits, luxury concepts, studio photography and social media fashion content."
+        }
+      ],
+      "categoryIntro": "Create stylish fashion editorials, portraits and outfit-focused AI photos.",
+      "seoContent": "Explore free Fashion AI image prompts and ready-to-use photo editing ideas for creative image generation and social media content. Discover fashion AI image prompts for stylish portraits, editorial looks, street fashion, traditional outfits, luxury concepts, studio photography and social media fashion content. Use these copy-ready prompts as a starting point and customize the subject, pose, outfit, setting, lighting, camera style and other details for your preferred AI image generator. This category includes prompt ideas related to fashion ai image prompts, fashion photo editing prompts, ai fashion photography prompts, fashion model ai prompt, outfit ai image prompt. Depending on the prompt, you can adapt the instructions for supported tools such as ChatGPT, Gemini, Nano Banana and Midjourney. For photo-editing prompts that use your own image, follow the identity-preservation instructions in the individual prompt and use image input when supported by your selected tool.",
+      "faqTitle": "Frequently Asked Questions About Fashion AI Image Prompts",
+      "starRating": 4.8
     },
     {
       "id": "portrait",
@@ -1099,7 +465,7 @@
         "portrait-photography"
       ],
       "featured": false,
-      "displayOrder": 16,
+      "displayOrder": 7,
       "tools": [
         "ChatGPT",
         "Gemini",
@@ -1145,7 +511,152 @@
       ],
       "categoryIntro": "Create realistic portraits with detailed photography-focused AI prompts.",
       "seoContent": "Explore free Portrait AI image prompts and ready-to-use photo editing ideas for creative image generation and social media content. Discover realistic portrait AI image prompts for natural faces, studio portraits, outdoor photography, close-ups, professional headshots, editorial looks and creative social media images. Use these copy-ready prompts as a starting point and customize the subject, pose, outfit, setting, lighting, camera style and other details for your preferred AI image generator. This category includes prompt ideas related to portrait ai image prompts, portrait photo editing prompts, realistic portrait ai prompt, ai portrait photography prompt, face lock portrait prompt. Depending on the prompt, you can adapt the instructions for supported tools such as ChatGPT, Gemini, Nano Banana and Midjourney. For photo-editing prompts that use your own image, follow the identity-preservation instructions in the individual prompt and use image input when supported by your selected tool.",
-      "faqTitle": "Frequently Asked Questions About Portrait AI Image Prompts"
+      "faqTitle": "Frequently Asked Questions About Portrait AI Image Prompts",
+      "starRating": 4.8
+    },
+    {
+      "id": "cinematic",
+      "name": "Cinematic",
+      "slug": "cinematic",
+      "title": "Cinematic AI Image Prompts",
+      "metaTitle": "Cinematic AI Image Prompts | Cinematic Photo Editing Prompts",
+      "description": "Create cinematic AI images with dramatic lighting, film-inspired compositions, atmospheric environments, depth, realistic skin texture and professional photography aesthetics.",
+      "shortDescription": "Create dramatic, film-inspired and cinematic AI photographs.",
+      "seoDescription": "Create cinematic AI images with dramatic lighting, film-inspired compositions, atmospheric environments, depth, realistic skin texture and professional photography aesthetics.",
+      "searchTerms": [
+        "cinematic ai image prompts",
+        "cinematic photo editing prompts",
+        "cinematic portrait prompt",
+        "cinematic photography ai prompt",
+        "movie style ai image prompt"
+      ],
+      "tags": [
+        "cinematic",
+        "cinematic-photography",
+        "film-look",
+        "dramatic-lighting"
+      ],
+      "featured": false,
+      "displayOrder": 8,
+      "tools": [
+        "ChatGPT",
+        "Gemini",
+        "Nano Banana",
+        "Midjourney"
+      ],
+      "typeFilters": [
+        "all",
+        "girl",
+        "boy",
+        "couple",
+        "unisex"
+      ],
+      "toolFilters": [
+        "all",
+        "ChatGPT",
+        "Gemini",
+        "Nano Banana",
+        "Midjourney"
+      ],
+      "bestFor": [
+        "cinematic portraits",
+        "film-style photography",
+        "dramatic scenes"
+      ],
+      "faq": [
+        {
+          "question": "What are AI image prompts?",
+          "answer": "AI image prompts are ready-to-use instructions that describe the subject, pose, clothing, setting, lighting and visual style you want an AI image generator to create."
+        },
+        {
+          "question": "Which AI tools can I use with these prompts?",
+          "answer": "You can adapt the prompts for popular AI image generators such as ChatGPT, Gemini, Nano Banana and Midjourney, depending on the prompt and tool capabilities."
+        },
+        {
+          "question": "Can I use these prompts with my own photo?",
+          "answer": "Yes. For prompts designed for photo editing or identity preservation, upload your own image when the selected AI tool supports image input and follow the prompt's identity or face-lock instructions."
+        },
+        {
+          "question": "What can I create with Cinematic AI image prompts?",
+          "answer": "Create cinematic AI images with dramatic lighting, film-inspired compositions, atmospheric environments, depth, realistic skin texture and professional photography aesthetics."
+        }
+      ],
+      "categoryIntro": "Create dramatic, film-inspired and cinematic AI photographs.",
+      "seoContent": "Explore free Cinematic AI image prompts and ready-to-use photo editing ideas for creative image generation and social media content. Create cinematic AI images with dramatic lighting, film-inspired compositions, atmospheric environments, depth, realistic skin texture and professional photography aesthetics. Use these copy-ready prompts as a starting point and customize the subject, pose, outfit, setting, lighting, camera style and other details for your preferred AI image generator. This category includes prompt ideas related to cinematic ai image prompts, cinematic photo editing prompts, cinematic portrait prompt, cinematic photography ai prompt, movie style ai image prompt. Depending on the prompt, you can adapt the instructions for supported tools such as ChatGPT, Gemini, Nano Banana and Midjourney. For photo-editing prompts that use your own image, follow the identity-preservation instructions in the individual prompt and use image input when supported by your selected tool.",
+      "faqTitle": "Frequently Asked Questions About Cinematic AI Image Prompts",
+      "starRating": 4.7
+    },
+    {
+      "id": "festival",
+      "name": "Festival",
+      "slug": "festival",
+      "title": "Festival AI Image Prompts",
+      "metaTitle": "Festival AI Image Prompts | Festival Photo Editing Prompts",
+      "description": "Explore festival AI image prompts for colorful celebrations, traditional outfits, cultural events, festive portraits, family moments and realistic social media photography.",
+      "shortDescription": "Create festive AI photos inspired by celebrations and cultural events.",
+      "seoDescription": "Explore festival AI image prompts for colorful celebrations, traditional outfits, cultural events, festive portraits, family moments and realistic social media photography.",
+      "searchTerms": [
+        "festival ai image prompts",
+        "festival photo editing prompts",
+        "festival ai photo prompt",
+        "indian festival ai prompts",
+        "festive portrait prompts"
+      ],
+      "tags": [
+        "festival",
+        "festive",
+        "cultural",
+        "celebration"
+      ],
+      "featured": false,
+      "displayOrder": 9,
+      "tools": [
+        "ChatGPT",
+        "Gemini",
+        "Nano Banana",
+        "Midjourney"
+      ],
+      "typeFilters": [
+        "all",
+        "girl",
+        "boy",
+        "couple",
+        "unisex"
+      ],
+      "toolFilters": [
+        "all",
+        "ChatGPT",
+        "Gemini",
+        "Nano Banana",
+        "Midjourney"
+      ],
+      "bestFor": [
+        "festival portraits",
+        "cultural content",
+        "festive social posts"
+      ],
+      "faq": [
+        {
+          "question": "What are AI image prompts?",
+          "answer": "AI image prompts are ready-to-use instructions that describe the subject, pose, clothing, setting, lighting and visual style you want an AI image generator to create."
+        },
+        {
+          "question": "Which AI tools can I use with these prompts?",
+          "answer": "You can adapt the prompts for popular AI image generators such as ChatGPT, Gemini, Nano Banana and Midjourney, depending on the prompt and tool capabilities."
+        },
+        {
+          "question": "Can I use these prompts with my own photo?",
+          "answer": "Yes. For prompts designed for photo editing or identity preservation, upload your own image when the selected AI tool supports image input and follow the prompt's identity or face-lock instructions."
+        },
+        {
+          "question": "What can I create with Festival AI image prompts?",
+          "answer": "Explore festival AI image prompts for colorful celebrations, traditional outfits, cultural events, festive portraits, family moments and realistic social media photography."
+        }
+      ],
+      "categoryIntro": "Create festive AI photos inspired by celebrations and cultural events.",
+      "seoContent": "Explore free Festival AI image prompts and ready-to-use photo editing ideas for creative image generation and social media content. Explore festival AI image prompts for colorful celebrations, traditional outfits, cultural events, festive portraits, family moments and realistic social media photography. Use these copy-ready prompts as a starting point and customize the subject, pose, outfit, setting, lighting, camera style and other details for your preferred AI image generator. This category includes prompt ideas related to festival ai image prompts, festival photo editing prompts, festival ai photo prompt, indian festival ai prompts, festive portrait prompts. Depending on the prompt, you can adapt the instructions for supported tools such as ChatGPT, Gemini, Nano Banana and Midjourney. For photo-editing prompts that use your own image, follow the identity-preservation instructions in the individual prompt and use image input when supported by your selected tool.",
+      "faqTitle": "Frequently Asked Questions About Festival AI Image Prompts",
+      "starRating": 4.7
     },
     {
       "id": "selfie",
@@ -1171,7 +682,7 @@
         "social-media"
       ],
       "featured": false,
-      "displayOrder": 17,
+      "displayOrder": 10,
       "tools": [
         "ChatGPT",
         "Gemini",
@@ -1217,33 +728,33 @@
       ],
       "categoryIntro": "Create realistic AI selfies for social media, fashion and everyday moments.",
       "seoContent": "Explore free Selfie AI image prompts and ready-to-use photo editing ideas for creative image generation and social media content. Create realistic AI selfies with ready-to-use prompts for mirrors, phones, casual locations, travel, fashion, festive outfits and natural everyday photography while preserving recognizable facial details. Use these copy-ready prompts as a starting point and customize the subject, pose, outfit, setting, lighting, camera style and other details for your preferred AI image generator. This category includes prompt ideas related to selfie ai image prompts, selfie photo editing prompts, ai selfie prompt, realistic selfie ai prompt, gemini selfie prompt. Depending on the prompt, you can adapt the instructions for supported tools such as ChatGPT, Gemini, Nano Banana and Midjourney. For photo-editing prompts that use your own image, follow the identity-preservation instructions in the individual prompt and use image input when supported by your selected tool.",
-      "faqTitle": "Frequently Asked Questions About Selfie AI Image Prompts"
+      "faqTitle": "Frequently Asked Questions About Selfie AI Image Prompts",
+      "starRating": 4.7
     },
     {
-      "id": "traditional",
-      "name": "Traditional",
-      "slug": "traditional",
-      "title": "Traditional AI Image Prompts",
-      "metaTitle": "Traditional AI Image Prompts | Traditional Outfit Photo Editing",
-      "description": "Explore traditional AI image prompts for cultural outfits, sarees, lehengas, kurtas, ethnic fashion, festive portraits and realistic photography inspired by traditional styles.",
-      "shortDescription": "Create realistic traditional outfit and cultural AI photos.",
-      "seoDescription": "Explore traditional AI image prompts for cultural outfits, sarees, lehengas, kurtas, ethnic fashion, festive portraits and realistic photography inspired by traditional styles.",
+      "id": "lifestyle",
+      "name": "Lifestyle",
+      "slug": "lifestyle",
+      "title": "Lifestyle AI Image Prompts",
+      "metaTitle": "Lifestyle AI Image Prompts | Realistic Lifestyle Photo Prompts",
+      "description": "Explore lifestyle AI image prompts for everyday moments, coffee shops, travel, casual outfits, home scenes, street photography and natural candid portraits.",
+      "shortDescription": "Create natural AI photos inspired by everyday lifestyle moments.",
+      "seoDescription": "Explore lifestyle AI image prompts for everyday moments, coffee shops, travel, casual outfits, home scenes, street photography and natural candid portraits.",
       "searchTerms": [
-        "traditional ai image prompts",
-        "traditional outfit ai prompts",
-        "saree ai photo editing prompt",
-        "lehenga ai image prompt",
-        "ethnic fashion ai prompt"
+        "lifestyle ai image prompts",
+        "lifestyle photo editing prompts",
+        "realistic lifestyle ai prompts",
+        "candid lifestyle photography ai",
+        "everyday ai photo prompts"
       ],
       "tags": [
-        "traditional",
-        "ethnic",
-        "saree",
-        "lehenga",
-        "cultural"
+        "lifestyle",
+        "candid",
+        "everyday-photography",
+        "realistic"
       ],
       "featured": false,
-      "displayOrder": 18,
+      "displayOrder": 11,
       "tools": [
         "ChatGPT",
         "Gemini",
@@ -1265,9 +776,9 @@
         "Midjourney"
       ],
       "bestFor": [
-        "traditional portraits",
-        "ethnic fashion",
-        "cultural photography"
+        "everyday portraits",
+        "candid photography",
+        "social content"
       ],
       "faq": [
         {
@@ -1283,84 +794,14 @@
           "answer": "Yes. For prompts designed for photo editing or identity preservation, upload your own image when the selected AI tool supports image input and follow the prompt's identity or face-lock instructions."
         },
         {
-          "question": "What can I create with Traditional AI image prompts?",
-          "answer": "Explore traditional AI image prompts for cultural outfits, sarees, lehengas, kurtas, ethnic fashion, festive portraits and realistic photography inspired by traditional styles."
+          "question": "What can I create with Lifestyle AI image prompts?",
+          "answer": "Explore lifestyle AI image prompts for everyday moments, coffee shops, travel, casual outfits, home scenes, street photography and natural candid portraits."
         }
       ],
-      "categoryIntro": "Create realistic traditional outfit and cultural AI photos.",
-      "seoContent": "Explore free Traditional AI image prompts and ready-to-use photo editing ideas for creative image generation and social media content. Explore traditional AI image prompts for cultural outfits, sarees, lehengas, kurtas, ethnic fashion, festive portraits and realistic photography inspired by traditional styles. Use these copy-ready prompts as a starting point and customize the subject, pose, outfit, setting, lighting, camera style and other details for your preferred AI image generator. This category includes prompt ideas related to traditional ai image prompts, traditional outfit ai prompts, saree ai photo editing prompt, lehenga ai image prompt, ethnic fashion ai prompt. Depending on the prompt, you can adapt the instructions for supported tools such as ChatGPT, Gemini, Nano Banana and Midjourney. For photo-editing prompts that use your own image, follow the identity-preservation instructions in the individual prompt and use image input when supported by your selected tool.",
-      "faqTitle": "Frequently Asked Questions About Traditional AI Image Prompts"
-    },
-    {
-      "id": "travel",
-      "name": "Travel",
-      "slug": "travel",
-      "title": "Travel AI Image Prompts",
-      "metaTitle": "Travel AI Image Prompts | Travel Photo Editing Prompts",
-      "description": "Create realistic travel AI photos with prompts for destinations, scenic landscapes, street photography, vacation portraits, beach moments, mountains, city travel and cinematic journeys.",
-      "shortDescription": "Create realistic travel memories and destination-inspired AI photos.",
-      "seoDescription": "Create realistic travel AI photos with prompts for destinations, scenic landscapes, street photography, vacation portraits, beach moments, mountains, city travel and cinematic journeys.",
-      "searchTerms": [
-        "travel ai image prompts",
-        "travel photo editing prompts",
-        "vacation ai photo prompt",
-        "travel portrait ai prompt",
-        "travel photography ai prompt"
-      ],
-      "tags": [
-        "travel",
-        "vacation",
-        "destination",
-        "travel-photography"
-      ],
-      "featured": false,
-      "displayOrder": 19,
-      "tools": [
-        "ChatGPT",
-        "Gemini",
-        "Nano Banana",
-        "Midjourney"
-      ],
-      "typeFilters": [
-        "all",
-        "girl",
-        "boy",
-        "couple",
-        "unisex"
-      ],
-      "toolFilters": [
-        "all",
-        "ChatGPT",
-        "Gemini",
-        "Nano Banana",
-        "Midjourney"
-      ],
-      "bestFor": [
-        "travel portraits",
-        "vacation photos",
-        "destination content"
-      ],
-      "faq": [
-        {
-          "question": "What are AI image prompts?",
-          "answer": "AI image prompts are ready-to-use instructions that describe the subject, pose, clothing, setting, lighting and visual style you want an AI image generator to create."
-        },
-        {
-          "question": "Which AI tools can I use with these prompts?",
-          "answer": "You can adapt the prompts for popular AI image generators such as ChatGPT, Gemini, Nano Banana and Midjourney, depending on the prompt and tool capabilities."
-        },
-        {
-          "question": "Can I use these prompts with my own photo?",
-          "answer": "Yes. For prompts designed for photo editing or identity preservation, upload your own image when the selected AI tool supports image input and follow the prompt's identity or face-lock instructions."
-        },
-        {
-          "question": "What can I create with Travel AI image prompts?",
-          "answer": "Create realistic travel AI photos with prompts for destinations, scenic landscapes, street photography, vacation portraits, beach moments, mountains, city travel and cinematic journeys."
-        }
-      ],
-      "categoryIntro": "Create realistic travel memories and destination-inspired AI photos.",
-      "seoContent": "Explore free Travel AI image prompts and ready-to-use photo editing ideas for creative image generation and social media content. Create realistic travel AI photos with prompts for destinations, scenic landscapes, street photography, vacation portraits, beach moments, mountains, city travel and cinematic journeys. Use these copy-ready prompts as a starting point and customize the subject, pose, outfit, setting, lighting, camera style and other details for your preferred AI image generator. This category includes prompt ideas related to travel ai image prompts, travel photo editing prompts, vacation ai photo prompt, travel portrait ai prompt, travel photography ai prompt. Depending on the prompt, you can adapt the instructions for supported tools such as ChatGPT, Gemini, Nano Banana and Midjourney. For photo-editing prompts that use your own image, follow the identity-preservation instructions in the individual prompt and use image input when supported by your selected tool.",
-      "faqTitle": "Frequently Asked Questions About Travel AI Image Prompts"
+      "categoryIntro": "Create natural AI photos inspired by everyday lifestyle moments.",
+      "seoContent": "Explore free Lifestyle AI image prompts and ready-to-use photo editing ideas for creative image generation and social media content. Explore lifestyle AI image prompts for everyday moments, coffee shops, travel, casual outfits, home scenes, street photography and natural candid portraits. Use these copy-ready prompts as a starting point and customize the subject, pose, outfit, setting, lighting, camera style and other details for your preferred AI image generator. This category includes prompt ideas related to lifestyle ai image prompts, lifestyle photo editing prompts, realistic lifestyle ai prompts, candid lifestyle photography ai, everyday ai photo prompts. Depending on the prompt, you can adapt the instructions for supported tools such as ChatGPT, Gemini, Nano Banana and Midjourney. For photo-editing prompts that use your own image, follow the identity-preservation instructions in the individual prompt and use image input when supported by your selected tool.",
+      "faqTitle": "Frequently Asked Questions About Lifestyle AI Image Prompts",
+      "starRating": 4.6
     },
     {
       "id": "vintage",
@@ -1385,7 +826,7 @@
         "nostalgic"
       ],
       "featured": false,
-      "displayOrder": 20,
+      "displayOrder": 12,
       "tools": [
         "ChatGPT",
         "Gemini",
@@ -1431,7 +872,297 @@
       ],
       "categoryIntro": "Create nostalgic retro and vintage-style AI photographs.",
       "seoContent": "Explore free Vintage AI image prompts and ready-to-use photo editing ideas for creative image generation and social media content. Discover vintage AI image prompts for retro portraits, film photography, nostalgic colors, classic fashion, old-camera aesthetics, vintage streets and timeless cinematic scenes. Use these copy-ready prompts as a starting point and customize the subject, pose, outfit, setting, lighting, camera style and other details for your preferred AI image generator. This category includes prompt ideas related to vintage ai image prompts, retro ai photo editing prompts, vintage photography ai prompt, old film ai photo prompt, 90s vintage ai prompt. Depending on the prompt, you can adapt the instructions for supported tools such as ChatGPT, Gemini, Nano Banana and Midjourney. For photo-editing prompts that use your own image, follow the identity-preservation instructions in the individual prompt and use image input when supported by your selected tool.",
-      "faqTitle": "Frequently Asked Questions About Vintage AI Image Prompts"
+      "faqTitle": "Frequently Asked Questions About Vintage AI Image Prompts",
+      "starRating": 4.6
+    },
+    {
+      "id": "birthday",
+      "name": "Birthday",
+      "slug": "birthday",
+      "title": "Birthday AI Image Prompts",
+      "metaTitle": "Birthday AI Image Prompts | Birthday Photo Editing Prompts",
+      "description": "Create memorable birthday AI photos with prompts for birthday portraits, cake celebrations, party scenes, stylish outfits, balloons, candles and realistic social media photography.",
+      "shortDescription": "Create realistic and creative birthday celebration AI photos.",
+      "seoDescription": "Create memorable birthday AI photos with prompts for birthday portraits, cake celebrations, party scenes, stylish outfits, balloons, candles and realistic social media photography.",
+      "searchTerms": [
+        "birthday ai image prompts",
+        "birthday photo editing prompts",
+        "birthday girl ai prompt",
+        "birthday boy ai prompt",
+        "birthday couple ai prompt"
+      ],
+      "tags": [
+        "birthday",
+        "celebration",
+        "party",
+        "ai-photo-prompts"
+      ],
+      "featured": false,
+      "displayOrder": 13,
+      "tools": [
+        "ChatGPT",
+        "Gemini",
+        "Nano Banana",
+        "Midjourney"
+      ],
+      "typeFilters": [
+        "all",
+        "girl",
+        "boy",
+        "couple",
+        "unisex"
+      ],
+      "toolFilters": [
+        "all",
+        "ChatGPT",
+        "Gemini",
+        "Nano Banana",
+        "Midjourney"
+      ],
+      "bestFor": [
+        "birthday posts",
+        "party photos",
+        "birthday portraits"
+      ],
+      "faq": [
+        {
+          "question": "What are AI image prompts?",
+          "answer": "AI image prompts are ready-to-use instructions that describe the subject, pose, clothing, setting, lighting and visual style you want an AI image generator to create."
+        },
+        {
+          "question": "Which AI tools can I use with these prompts?",
+          "answer": "You can adapt the prompts for popular AI image generators such as ChatGPT, Gemini, Nano Banana and Midjourney, depending on the prompt and tool capabilities."
+        },
+        {
+          "question": "Can I use these prompts with my own photo?",
+          "answer": "Yes. For prompts designed for photo editing or identity preservation, upload your own image when the selected AI tool supports image input and follow the prompt's identity or face-lock instructions."
+        },
+        {
+          "question": "What can I create with Birthday AI image prompts?",
+          "answer": "Create memorable birthday AI photos with prompts for birthday portraits, cake celebrations, party scenes, stylish outfits, balloons, candles and realistic social media photography."
+        }
+      ],
+      "categoryIntro": "Create realistic and creative birthday celebration AI photos.",
+      "seoContent": "Explore free Birthday AI image prompts and ready-to-use photo editing ideas for creative image generation and social media content. Create memorable birthday AI photos with prompts for birthday portraits, cake celebrations, party scenes, stylish outfits, balloons, candles and realistic social media photography. Use these copy-ready prompts as a starting point and customize the subject, pose, outfit, setting, lighting, camera style and other details for your preferred AI image generator. This category includes prompt ideas related to birthday ai image prompts, birthday photo editing prompts, birthday girl ai prompt, birthday boy ai prompt, birthday couple ai prompt. Depending on the prompt, you can adapt the instructions for supported tools such as ChatGPT, Gemini, Nano Banana and Midjourney. For photo-editing prompts that use your own image, follow the identity-preservation instructions in the individual prompt and use image input when supported by your selected tool.",
+      "faqTitle": "Frequently Asked Questions About Birthday AI Image Prompts",
+      "starRating": 4.5
+    },
+    {
+      "id": "celebration",
+      "name": "Celebration",
+      "slug": "celebration",
+      "title": "Celebration AI Image Prompts",
+      "metaTitle": "Celebration AI Image Prompts | Festive AI Photo Prompts",
+      "description": "Find creative celebration AI image prompts for parties, special moments, festive gatherings, milestones and joyful social media photos with realistic photography styles.",
+      "shortDescription": "Create joyful AI images for celebrations, parties and special moments.",
+      "seoDescription": "Find creative celebration AI image prompts for parties, special moments, festive gatherings, milestones and joyful social media photos with realistic photography styles.",
+      "searchTerms": [
+        "celebration ai image prompts",
+        "celebration photo editing prompts",
+        "party ai photo prompts",
+        "festive ai prompts",
+        "special occasion ai prompts"
+      ],
+      "tags": [
+        "celebration",
+        "party",
+        "festive",
+        "special-occasion"
+      ],
+      "featured": false,
+      "displayOrder": 14,
+      "tools": [
+        "ChatGPT",
+        "Gemini",
+        "Nano Banana",
+        "Midjourney"
+      ],
+      "typeFilters": [
+        "all",
+        "girl",
+        "boy",
+        "couple",
+        "unisex"
+      ],
+      "toolFilters": [
+        "all",
+        "ChatGPT",
+        "Gemini",
+        "Nano Banana",
+        "Midjourney"
+      ],
+      "bestFor": [
+        "celebrations",
+        "party content",
+        "special occasions"
+      ],
+      "faq": [
+        {
+          "question": "What are AI image prompts?",
+          "answer": "AI image prompts are ready-to-use instructions that describe the subject, pose, clothing, setting, lighting and visual style you want an AI image generator to create."
+        },
+        {
+          "question": "Which AI tools can I use with these prompts?",
+          "answer": "You can adapt the prompts for popular AI image generators such as ChatGPT, Gemini, Nano Banana and Midjourney, depending on the prompt and tool capabilities."
+        },
+        {
+          "question": "Can I use these prompts with my own photo?",
+          "answer": "Yes. For prompts designed for photo editing or identity preservation, upload your own image when the selected AI tool supports image input and follow the prompt's identity or face-lock instructions."
+        },
+        {
+          "question": "What can I create with Celebration AI image prompts?",
+          "answer": "Find creative celebration AI image prompts for parties, special moments, festive gatherings, milestones and joyful social media photos with realistic photography styles."
+        }
+      ],
+      "categoryIntro": "Create joyful AI images for celebrations, parties and special moments.",
+      "seoContent": "Explore free Celebration AI image prompts and ready-to-use photo editing ideas for creative image generation and social media content. Find creative celebration AI image prompts for parties, special moments, festive gatherings, milestones and joyful social media photos with realistic photography styles. Use these copy-ready prompts as a starting point and customize the subject, pose, outfit, setting, lighting, camera style and other details for your preferred AI image generator. This category includes prompt ideas related to celebration ai image prompts, celebration photo editing prompts, party ai photo prompts, festive ai prompts, special occasion ai prompts. Depending on the prompt, you can adapt the instructions for supported tools such as ChatGPT, Gemini, Nano Banana and Midjourney. For photo-editing prompts that use your own image, follow the identity-preservation instructions in the individual prompt and use image input when supported by your selected tool.",
+      "faqTitle": "Frequently Asked Questions About Celebration AI Image Prompts",
+      "starRating": 4.5
+    },
+    {
+      "id": "travel",
+      "name": "Travel",
+      "slug": "travel",
+      "title": "Travel AI Image Prompts",
+      "metaTitle": "Travel AI Image Prompts | Travel Photo Editing Prompts",
+      "description": "Create realistic travel AI photos with prompts for destinations, scenic landscapes, street photography, vacation portraits, beach moments, mountains, city travel and cinematic journeys.",
+      "shortDescription": "Create realistic travel memories and destination-inspired AI photos.",
+      "seoDescription": "Create realistic travel AI photos with prompts for destinations, scenic landscapes, street photography, vacation portraits, beach moments, mountains, city travel and cinematic journeys.",
+      "searchTerms": [
+        "travel ai image prompts",
+        "travel photo editing prompts",
+        "vacation ai photo prompt",
+        "travel portrait ai prompt",
+        "travel photography ai prompt"
+      ],
+      "tags": [
+        "travel",
+        "vacation",
+        "destination",
+        "travel-photography"
+      ],
+      "featured": false,
+      "displayOrder": 15,
+      "tools": [
+        "ChatGPT",
+        "Gemini",
+        "Nano Banana",
+        "Midjourney"
+      ],
+      "typeFilters": [
+        "all",
+        "girl",
+        "boy",
+        "couple",
+        "unisex"
+      ],
+      "toolFilters": [
+        "all",
+        "ChatGPT",
+        "Gemini",
+        "Nano Banana",
+        "Midjourney"
+      ],
+      "bestFor": [
+        "travel portraits",
+        "vacation photos",
+        "destination content"
+      ],
+      "faq": [
+        {
+          "question": "What are AI image prompts?",
+          "answer": "AI image prompts are ready-to-use instructions that describe the subject, pose, clothing, setting, lighting and visual style you want an AI image generator to create."
+        },
+        {
+          "question": "Which AI tools can I use with these prompts?",
+          "answer": "You can adapt the prompts for popular AI image generators such as ChatGPT, Gemini, Nano Banana and Midjourney, depending on the prompt and tool capabilities."
+        },
+        {
+          "question": "Can I use these prompts with my own photo?",
+          "answer": "Yes. For prompts designed for photo editing or identity preservation, upload your own image when the selected AI tool supports image input and follow the prompt's identity or face-lock instructions."
+        },
+        {
+          "question": "What can I create with Travel AI image prompts?",
+          "answer": "Create realistic travel AI photos with prompts for destinations, scenic landscapes, street photography, vacation portraits, beach moments, mountains, city travel and cinematic journeys."
+        }
+      ],
+      "categoryIntro": "Create realistic travel memories and destination-inspired AI photos.",
+      "seoContent": "Explore free Travel AI image prompts and ready-to-use photo editing ideas for creative image generation and social media content. Create realistic travel AI photos with prompts for destinations, scenic landscapes, street photography, vacation portraits, beach moments, mountains, city travel and cinematic journeys. Use these copy-ready prompts as a starting point and customize the subject, pose, outfit, setting, lighting, camera style and other details for your preferred AI image generator. This category includes prompt ideas related to travel ai image prompts, travel photo editing prompts, vacation ai photo prompt, travel portrait ai prompt, travel photography ai prompt. Depending on the prompt, you can adapt the instructions for supported tools such as ChatGPT, Gemini, Nano Banana and Midjourney. For photo-editing prompts that use your own image, follow the identity-preservation instructions in the individual prompt and use image input when supported by your selected tool.",
+      "faqTitle": "Frequently Asked Questions About Travel AI Image Prompts",
+      "starRating": 4.5
+    },
+    {
+      "id": "traditional",
+      "name": "Traditional",
+      "slug": "traditional",
+      "title": "Traditional AI Image Prompts",
+      "metaTitle": "Traditional AI Image Prompts | Traditional Outfit Photo Editing",
+      "description": "Explore traditional AI image prompts for cultural outfits, sarees, lehengas, kurtas, ethnic fashion, festive portraits and realistic photography inspired by traditional styles.",
+      "shortDescription": "Create realistic traditional outfit and cultural AI photos.",
+      "seoDescription": "Explore traditional AI image prompts for cultural outfits, sarees, lehengas, kurtas, ethnic fashion, festive portraits and realistic photography inspired by traditional styles.",
+      "searchTerms": [
+        "traditional ai image prompts",
+        "traditional outfit ai prompts",
+        "saree ai photo editing prompt",
+        "lehenga ai image prompt",
+        "ethnic fashion ai prompt"
+      ],
+      "tags": [
+        "traditional",
+        "ethnic",
+        "saree",
+        "lehenga",
+        "cultural"
+      ],
+      "featured": false,
+      "displayOrder": 16,
+      "tools": [
+        "ChatGPT",
+        "Gemini",
+        "Nano Banana",
+        "Midjourney"
+      ],
+      "typeFilters": [
+        "all",
+        "girl",
+        "boy",
+        "couple",
+        "unisex"
+      ],
+      "toolFilters": [
+        "all",
+        "ChatGPT",
+        "Gemini",
+        "Nano Banana",
+        "Midjourney"
+      ],
+      "bestFor": [
+        "traditional portraits",
+        "ethnic fashion",
+        "cultural photography"
+      ],
+      "faq": [
+        {
+          "question": "What are AI image prompts?",
+          "answer": "AI image prompts are ready-to-use instructions that describe the subject, pose, clothing, setting, lighting and visual style you want an AI image generator to create."
+        },
+        {
+          "question": "Which AI tools can I use with these prompts?",
+          "answer": "You can adapt the prompts for popular AI image generators such as ChatGPT, Gemini, Nano Banana and Midjourney, depending on the prompt and tool capabilities."
+        },
+        {
+          "question": "Can I use these prompts with my own photo?",
+          "answer": "Yes. For prompts designed for photo editing or identity preservation, upload your own image when the selected AI tool supports image input and follow the prompt's identity or face-lock instructions."
+        },
+        {
+          "question": "What can I create with Traditional AI image prompts?",
+          "answer": "Explore traditional AI image prompts for cultural outfits, sarees, lehengas, kurtas, ethnic fashion, festive portraits and realistic photography inspired by traditional styles."
+        }
+      ],
+      "categoryIntro": "Create realistic traditional outfit and cultural AI photos.",
+      "seoContent": "Explore free Traditional AI image prompts and ready-to-use photo editing ideas for creative image generation and social media content. Explore traditional AI image prompts for cultural outfits, sarees, lehengas, kurtas, ethnic fashion, festive portraits and realistic photography inspired by traditional styles. Use these copy-ready prompts as a starting point and customize the subject, pose, outfit, setting, lighting, camera style and other details for your preferred AI image generator. This category includes prompt ideas related to traditional ai image prompts, traditional outfit ai prompts, saree ai photo editing prompt, lehenga ai image prompt, ethnic fashion ai prompt. Depending on the prompt, you can adapt the instructions for supported tools such as ChatGPT, Gemini, Nano Banana and Midjourney. For photo-editing prompts that use your own image, follow the identity-preservation instructions in the individual prompt and use image input when supported by your selected tool.",
+      "faqTitle": "Frequently Asked Questions About Traditional AI Image Prompts",
+      "starRating": 4.4
     },
     {
       "id": "wedding",
@@ -1458,7 +1189,7 @@
         "couple"
       ],
       "featured": false,
-      "displayOrder": 21,
+      "displayOrder": 17,
       "tools": [
         "ChatGPT",
         "Gemini",
@@ -1504,7 +1235,297 @@
       ],
       "categoryIntro": "Create romantic wedding, bridal, groom and pre-wedding AI photos.",
       "seoContent": "Explore free Wedding AI image prompts and ready-to-use photo editing ideas for creative image generation and social media content. Explore wedding AI image prompts for romantic couples, pre-wedding portraits, bridal looks, groom photography, traditional ceremonies, candid moments and cinematic wedding scenes. Use these copy-ready prompts as a starting point and customize the subject, pose, outfit, setting, lighting, camera style and other details for your preferred AI image generator. This category includes prompt ideas related to wedding ai image prompts, wedding photo editing prompts, pre wedding ai prompts, bride ai image prompt, groom ai image prompt. Depending on the prompt, you can adapt the instructions for supported tools such as ChatGPT, Gemini, Nano Banana and Midjourney. For photo-editing prompts that use your own image, follow the identity-preservation instructions in the individual prompt and use image input when supported by your selected tool.",
-      "faqTitle": "Frequently Asked Questions About Wedding AI Image Prompts"
+      "faqTitle": "Frequently Asked Questions About Wedding AI Image Prompts",
+      "starRating": 4.4
+    },
+    {
+      "id": "anime",
+      "name": "Anime",
+      "slug": "anime",
+      "title": "Anime AI Image Prompts",
+      "metaTitle": "Anime AI Image Prompts | Anime Photo Editing Prompts",
+      "description": "Explore anime AI image prompts for transforming creative ideas and photos into anime-inspired portraits, couples, characters, cinematic scenes and imaginative social content.",
+      "shortDescription": "Explore anime-inspired prompts for portraits, characters and creative scenes.",
+      "seoDescription": "Explore anime AI image prompts for transforming creative ideas and photos into anime-inspired portraits, couples, characters, cinematic scenes and imaginative social content.",
+      "searchTerms": [
+        "anime ai image prompts",
+        "anime photo editing prompts",
+        "anime girl ai prompt",
+        "anime boy ai prompt",
+        "anime couple prompt"
+      ],
+      "tags": [
+        "anime",
+        "anime-ai",
+        "character-prompts",
+        "creative-ai"
+      ],
+      "featured": false,
+      "displayOrder": 18,
+      "tools": [
+        "ChatGPT",
+        "Gemini",
+        "Nano Banana",
+        "Midjourney"
+      ],
+      "typeFilters": [
+        "all",
+        "girl",
+        "boy",
+        "couple",
+        "unisex"
+      ],
+      "toolFilters": [
+        "all",
+        "ChatGPT",
+        "Gemini",
+        "Nano Banana",
+        "Midjourney"
+      ],
+      "bestFor": [
+        "anime portraits",
+        "character concepts",
+        "creative edits"
+      ],
+      "faq": [
+        {
+          "question": "What are AI image prompts?",
+          "answer": "AI image prompts are ready-to-use instructions that describe the subject, pose, clothing, setting, lighting and visual style you want an AI image generator to create."
+        },
+        {
+          "question": "Which AI tools can I use with these prompts?",
+          "answer": "You can adapt the prompts for popular AI image generators such as ChatGPT, Gemini, Nano Banana and Midjourney, depending on the prompt and tool capabilities."
+        },
+        {
+          "question": "Can I use these prompts with my own photo?",
+          "answer": "Yes. For prompts designed for photo editing or identity preservation, upload your own image when the selected AI tool supports image input and follow the prompt's identity or face-lock instructions."
+        },
+        {
+          "question": "What can I create with Anime AI image prompts?",
+          "answer": "Explore anime AI image prompts for transforming creative ideas and photos into anime-inspired portraits, couples, characters, cinematic scenes and imaginative social content."
+        }
+      ],
+      "categoryIntro": "Explore anime-inspired prompts for portraits, characters and creative scenes.",
+      "seoContent": "Explore free Anime AI image prompts and ready-to-use photo editing ideas for creative image generation and social media content. Explore anime AI image prompts for transforming creative ideas and photos into anime-inspired portraits, couples, characters, cinematic scenes and imaginative social content. Use these copy-ready prompts as a starting point and customize the subject, pose, outfit, setting, lighting, camera style and other details for your preferred AI image generator. This category includes prompt ideas related to anime ai image prompts, anime photo editing prompts, anime girl ai prompt, anime boy ai prompt, anime couple prompt. Depending on the prompt, you can adapt the instructions for supported tools such as ChatGPT, Gemini, Nano Banana and Midjourney. For photo-editing prompts that use your own image, follow the identity-preservation instructions in the individual prompt and use image input when supported by your selected tool.",
+      "faqTitle": "Frequently Asked Questions About Anime AI Image Prompts",
+      "starRating": 4.3
+    },
+    {
+      "id": "friends",
+      "name": "Friends",
+      "slug": "friends",
+      "title": "Friends AI Image Prompts",
+      "metaTitle": "Friends AI Image Prompts | Friendship Photo Editing Prompts",
+      "description": "Create realistic AI photos with friends using prompts for group portraits, candid moments, travel memories, celebrations, street photography and fun social media content.",
+      "shortDescription": "Create fun, natural and realistic AI photos with friends.",
+      "seoDescription": "Create realistic AI photos with friends using prompts for group portraits, candid moments, travel memories, celebrations, street photography and fun social media content.",
+      "searchTerms": [
+        "friends ai image prompts",
+        "friendship photo editing prompts",
+        "friends group ai prompt",
+        "best friend ai photo prompt",
+        "friends group photo editing"
+      ],
+      "tags": [
+        "friends",
+        "friendship",
+        "group-photo",
+        "candid"
+      ],
+      "featured": false,
+      "displayOrder": 19,
+      "tools": [
+        "ChatGPT",
+        "Gemini",
+        "Nano Banana",
+        "Midjourney"
+      ],
+      "typeFilters": [
+        "all",
+        "girl",
+        "boy",
+        "couple",
+        "unisex"
+      ],
+      "toolFilters": [
+        "all",
+        "ChatGPT",
+        "Gemini",
+        "Nano Banana",
+        "Midjourney"
+      ],
+      "bestFor": [
+        "friend group photos",
+        "memories",
+        "social media posts"
+      ],
+      "faq": [
+        {
+          "question": "What are AI image prompts?",
+          "answer": "AI image prompts are ready-to-use instructions that describe the subject, pose, clothing, setting, lighting and visual style you want an AI image generator to create."
+        },
+        {
+          "question": "Which AI tools can I use with these prompts?",
+          "answer": "You can adapt the prompts for popular AI image generators such as ChatGPT, Gemini, Nano Banana and Midjourney, depending on the prompt and tool capabilities."
+        },
+        {
+          "question": "Can I use these prompts with my own photo?",
+          "answer": "Yes. For prompts designed for photo editing or identity preservation, upload your own image when the selected AI tool supports image input and follow the prompt's identity or face-lock instructions."
+        },
+        {
+          "question": "What can I create with Friends AI image prompts?",
+          "answer": "Create realistic AI photos with friends using prompts for group portraits, candid moments, travel memories, celebrations, street photography and fun social media content."
+        }
+      ],
+      "categoryIntro": "Create fun, natural and realistic AI photos with friends.",
+      "seoContent": "Explore free Friends AI image prompts and ready-to-use photo editing ideas for creative image generation and social media content. Create realistic AI photos with friends using prompts for group portraits, candid moments, travel memories, celebrations, street photography and fun social media content. Use these copy-ready prompts as a starting point and customize the subject, pose, outfit, setting, lighting, camera style and other details for your preferred AI image generator. This category includes prompt ideas related to friends ai image prompts, friendship photo editing prompts, friends group ai prompt, best friend ai photo prompt, friends group photo editing. Depending on the prompt, you can adapt the instructions for supported tools such as ChatGPT, Gemini, Nano Banana and Midjourney. For photo-editing prompts that use your own image, follow the identity-preservation instructions in the individual prompt and use image input when supported by your selected tool.",
+      "faqTitle": "Frequently Asked Questions About Friends AI Image Prompts",
+      "starRating": 4.3
+    },
+    {
+      "id": "men",
+      "name": "Men",
+      "slug": "men",
+      "title": "AI Image Prompts for Men",
+      "metaTitle": "AI Image Prompts for Men | Male Portrait & Photo Editing Prompts",
+      "description": "Find AI image prompts for men featuring realistic portraits, fashion, traditional outfits, cinematic looks, street photography, travel scenes and confident social media photos.",
+      "shortDescription": "Create realistic male portraits, fashion looks and creative AI photos.",
+      "seoDescription": "Find AI image prompts for men featuring realistic portraits, fashion, traditional outfits, cinematic looks, street photography, travel scenes and confident social media photos.",
+      "searchTerms": [
+        "ai image prompts for men",
+        "men ai photo editing prompts",
+        "male portrait ai prompts",
+        "boy ai image prompts",
+        "men fashion ai prompt"
+      ],
+      "tags": [
+        "men",
+        "male-portrait",
+        "boy",
+        "mens-fashion"
+      ],
+      "featured": false,
+      "displayOrder": 20,
+      "tools": [
+        "ChatGPT",
+        "Gemini",
+        "Nano Banana",
+        "Midjourney"
+      ],
+      "typeFilters": [
+        "all",
+        "girl",
+        "boy",
+        "couple",
+        "unisex"
+      ],
+      "toolFilters": [
+        "all",
+        "ChatGPT",
+        "Gemini",
+        "Nano Banana",
+        "Midjourney"
+      ],
+      "bestFor": [
+        "male portraits",
+        "men's fashion",
+        "social media photos"
+      ],
+      "faq": [
+        {
+          "question": "What are AI image prompts?",
+          "answer": "AI image prompts are ready-to-use instructions that describe the subject, pose, clothing, setting, lighting and visual style you want an AI image generator to create."
+        },
+        {
+          "question": "Which AI tools can I use with these prompts?",
+          "answer": "You can adapt the prompts for popular AI image generators such as ChatGPT, Gemini, Nano Banana and Midjourney, depending on the prompt and tool capabilities."
+        },
+        {
+          "question": "Can I use these prompts with my own photo?",
+          "answer": "Yes. For prompts designed for photo editing or identity preservation, upload your own image when the selected AI tool supports image input and follow the prompt's identity or face-lock instructions."
+        },
+        {
+          "question": "What can I create with Men AI image prompts?",
+          "answer": "Find AI image prompts for men featuring realistic portraits, fashion, traditional outfits, cinematic looks, street photography, travel scenes and confident social media photos."
+        }
+      ],
+      "categoryIntro": "Create realistic male portraits, fashion looks and creative AI photos.",
+      "seoContent": "Explore free Men AI image prompts and ready-to-use photo editing ideas for creative image generation and social media content. Find AI image prompts for men featuring realistic portraits, fashion, traditional outfits, cinematic looks, street photography, travel scenes and confident social media photos. Use these copy-ready prompts as a starting point and customize the subject, pose, outfit, setting, lighting, camera style and other details for your preferred AI image generator. This category includes prompt ideas related to ai image prompts for men, men ai photo editing prompts, male portrait ai prompts, boy ai image prompts, men fashion ai prompt. Depending on the prompt, you can adapt the instructions for supported tools such as ChatGPT, Gemini, Nano Banana and Midjourney. For photo-editing prompts that use your own image, follow the identity-preservation instructions in the individual prompt and use image input when supported by your selected tool.",
+      "faqTitle": "Frequently Asked Questions About Men AI Image Prompts",
+      "starRating": 4.2
+    },
+    {
+      "id": "music",
+      "name": "Music",
+      "slug": "music",
+      "title": "Music AI Image Prompts",
+      "metaTitle": "Music AI Image Prompts | Music & Singer Photo Editing Prompts",
+      "description": "Explore music-inspired AI image prompts for singers, musicians, album-style portraits, stage photography, concert scenes, studio concepts and creative music social content.",
+      "shortDescription": "Create music, singer, stage and album-inspired AI images.",
+      "seoDescription": "Explore music-inspired AI image prompts for singers, musicians, album-style portraits, stage photography, concert scenes, studio concepts and creative music social content.",
+      "searchTerms": [
+        "music ai image prompts",
+        "singer ai photo prompts",
+        "musician ai image prompt",
+        "album cover ai prompt",
+        "concert ai photo prompt"
+      ],
+      "tags": [
+        "music",
+        "singer",
+        "musician",
+        "album-art",
+        "concert"
+      ],
+      "featured": false,
+      "displayOrder": 21,
+      "tools": [
+        "ChatGPT",
+        "Gemini",
+        "Nano Banana",
+        "Midjourney"
+      ],
+      "typeFilters": [
+        "all",
+        "girl",
+        "boy",
+        "couple",
+        "unisex"
+      ],
+      "toolFilters": [
+        "all",
+        "ChatGPT",
+        "Gemini",
+        "Nano Banana",
+        "Midjourney"
+      ],
+      "bestFor": [
+        "music creators",
+        "artist portraits",
+        "album concepts"
+      ],
+      "faq": [
+        {
+          "question": "What are AI image prompts?",
+          "answer": "AI image prompts are ready-to-use instructions that describe the subject, pose, clothing, setting, lighting and visual style you want an AI image generator to create."
+        },
+        {
+          "question": "Which AI tools can I use with these prompts?",
+          "answer": "You can adapt the prompts for popular AI image generators such as ChatGPT, Gemini, Nano Banana and Midjourney, depending on the prompt and tool capabilities."
+        },
+        {
+          "question": "Can I use these prompts with my own photo?",
+          "answer": "Yes. For prompts designed for photo editing or identity preservation, upload your own image when the selected AI tool supports image input and follow the prompt's identity or face-lock instructions."
+        },
+        {
+          "question": "What can I create with Music AI image prompts?",
+          "answer": "Explore music-inspired AI image prompts for singers, musicians, album-style portraits, stage photography, concert scenes, studio concepts and creative music social content."
+        }
+      ],
+      "categoryIntro": "Create music, singer, stage and album-inspired AI images.",
+      "seoContent": "Explore free Music AI image prompts and ready-to-use photo editing ideas for creative image generation and social media content. Explore music-inspired AI image prompts for singers, musicians, album-style portraits, stage photography, concert scenes, studio concepts and creative music social content. Use these copy-ready prompts as a starting point and customize the subject, pose, outfit, setting, lighting, camera style and other details for your preferred AI image generator. This category includes prompt ideas related to music ai image prompts, singer ai photo prompts, musician ai image prompt, album cover ai prompt, concert ai photo prompt. Depending on the prompt, you can adapt the instructions for supported tools such as ChatGPT, Gemini, Nano Banana and Midjourney. For photo-editing prompts that use your own image, follow the identity-preservation instructions in the individual prompt and use image input when supported by your selected tool.",
+      "faqTitle": "Frequently Asked Questions About Music AI Image Prompts",
+      "starRating": 4.2
     },
     {
       "id": "women",
@@ -1575,7 +1596,8 @@
       ],
       "categoryIntro": "Create realistic female portraits, fashion looks and creative AI photos.",
       "seoContent": "Explore free Women AI image prompts and ready-to-use photo editing ideas for creative image generation and social media content. Find AI image prompts for women featuring realistic portraits, fashion, traditional outfits, selfies, lifestyle scenes, cinematic photography and creative social media content. Use these copy-ready prompts as a starting point and customize the subject, pose, outfit, setting, lighting, camera style and other details for your preferred AI image generator. This category includes prompt ideas related to ai image prompts for women, women ai photo editing prompts, female portrait ai prompts, girl ai image prompts, women fashion ai prompt. Depending on the prompt, you can adapt the instructions for supported tools such as ChatGPT, Gemini, Nano Banana and Midjourney. For photo-editing prompts that use your own image, follow the identity-preservation instructions in the individual prompt and use image input when supported by your selected tool.",
-      "faqTitle": "Frequently Asked Questions About Women AI Image Prompts"
+      "faqTitle": "Frequently Asked Questions About Women AI Image Prompts",
+      "starRating": 4.2
     }
   ]
 }
