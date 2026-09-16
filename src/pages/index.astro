@@ -3,6 +3,7 @@ import Layout from '../layouts/Layout.astro';
 import PromptCard from '../components/PromptCard.astro';
 import prompts from '../data/prompts.json';
 import blogs from '../data/blogs.json';
+import { isPublished } from '../lib/publication.js';
 
 const siteUrl = (Astro.site || 'https://www.createwithsoumay.store').toString().replace(/\/$/, '');
 
@@ -45,7 +46,7 @@ const latestPrompts = [...prompts]
     String(b.createdAt).localeCompare(String(a.createdAt))
   );
 
-const latestBlogs = blogs.slice(0, 3);
+const latestBlogs = blogs.filter((blog) => isPublished(blog.date)).slice(0, 3);
 
 const categoryDescriptions = {
   Couple: 'Romantic portraits, mirror selfies and cinematic couple concepts.',
@@ -276,7 +277,7 @@ const categoryDescriptions = {
           class="muted section-link"
           href="/prompts/"
         >
-          Full library →
+          Browse all prompt categories →
         </a>
 
       </div>
@@ -399,7 +400,7 @@ const categoryDescriptions = {
           class="muted section-link"
           href="/creator-hub/"
         >
-          Creator Hub →
+          Open Creator Hub →
         </a>
 
       </div>
@@ -438,7 +439,7 @@ const categoryDescriptions = {
 
         <a
           class="resource-card"
-          href="/creator-hub/#reels"
+          href="/creator-hub/#reel-ideas"
         >
 
           <span class="resource-icon">
@@ -635,7 +636,7 @@ const categoryDescriptions = {
           class="muted section-link"
           href="/blog/"
         >
-          Read all →
+          Browse all creator guides →
         </a>
 
       </div>
