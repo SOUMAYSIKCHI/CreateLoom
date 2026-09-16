@@ -2,13 +2,24 @@
 import Layout from '../../layouts/Layout.astro';
 import blogs from '../../data/blogs.json';
 
+const isPublished = (date) => {
+  if (!date) return false;
+
+  const publishDate = new Date(date);
+  if (Number.isNaN(publishDate.getTime())) return false;
+
+  return publishDate <= new Date();
+};
+
+const publishedBlogs = blogs.filter((blog) => isPublished(blog.date));
+
 const siteUrl = (Astro.site || 'https://www.createwithsoumay.store')
   .toString()
   .replace(/\/$/, '');
 
-const cats = [...new Set(blogs.map((b) => b.category))].sort();
+const cats = [...new Set(publishedBlogs.map((b) => b.category))].sort();
 
-const featured = blogs.slice(0, 3);
+const featured = publishedBlogs.slice(0, 3);
 
 const categoryDescriptions = {
   AI:
@@ -48,9 +59,9 @@ const blogCollectionSchema = {
   },
   mainEntity: {
     '@type': 'ItemList',
-    numberOfItems: blogs.length,
+    numberOfItems: publishedBlogs.length,
     itemListOrder: 'https://schema.org/ItemListOrderDescending',
-    itemListElement: blogs.map((blog, index) => ({
+    itemListElement: publishedBlogs.map((blog, index) => ({
       '@type': 'ListItem',
       position: index + 1,
       url: `${siteUrl}/blog/${blog.id}/`,
@@ -145,7 +156,7 @@ const breadcrumbSchema = {
       <div class="hero-stats">
 
         <div>
-          <strong>{blogs.length}+</strong>
+          <strong>{publishedBlogs.length}+</strong>
           <span>Guides</span>
         </div>
 
@@ -287,8 +298,8 @@ const breadcrumbSchema = {
             </span>
 
             <span class="topic-count">
-              {blogs.filter((b) => b.category === category).length}
-              {blogs.filter((b) => b.category === category).length === 1
+              {publishedBlogs.filter((b) => b.category === category).length}
+              {publishedBlogs.filter((b) => b.category === category).length === 1
                 ? ' article'
                 : ' articles'}
             </span>
@@ -341,7 +352,7 @@ const breadcrumbSchema = {
           id="blogCount"
           aria-live="polite"
         >
-          {blogs.length} articles
+          {publishedBlogs.length} articles
         </span>
 
       </div>
@@ -387,7 +398,7 @@ const breadcrumbSchema = {
         id="blogGrid"
       >
 
-        {blogs.map((blog) => (
+        {publishedBlogs.map((blog) => (
 
           <a
             class="card blog-card"
