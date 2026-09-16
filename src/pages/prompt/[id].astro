@@ -694,9 +694,20 @@ const breadcrumbSchema = {
       const button = document.querySelector('.fav-btn[data-fav]');
       if (!button) return;
 
-      const favorites = JSON.parse(
+      const currentFavorites = JSON.parse(
+        localStorage.getItem('createwithsoumay-favorites') || '[]'
+      );
+
+      const legacyFavorites = JSON.parse(
         localStorage.getItem('createloom-favorites') || '[]'
       );
+
+      const favorites = [
+        ...new Set([
+          ...(Array.isArray(currentFavorites) ? currentFavorites : []),
+          ...(Array.isArray(legacyFavorites) ? legacyFavorites : [])
+        ])
+      ];
 
       const saved = favorites.includes(button.dataset.fav);
       const icon = button.querySelector('[aria-hidden="true"]');
@@ -723,9 +734,15 @@ const breadcrumbSchema = {
     );
 
     window.addEventListener(
+      'createwithsoumay:favorites-changed',
+      syncDetailFavorite
+    );
+
+    window.addEventListener(
       'storage',
       (event) => {
         if (
+          event.key === 'createwithsoumay-favorites' ||
           event.key === 'createloom-favorites'
         ) {
           syncDetailFavorite();
