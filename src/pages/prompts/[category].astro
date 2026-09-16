@@ -2,81 +2,77 @@
 import Layout from '../../layouts/Layout.astro';
 import PromptCard from '../../components/PromptCard.astro';
 import prompts from '../../data/prompts.json';
+import categoriesData from '../../data/categories.json';
+
+const categories = categoriesData.categories || categoriesData;
 
 export function getStaticPaths() {
-  return [...new Set(prompts.map((p) => p.category))].map((category) => ({
-    params: {
-      category: category.toLowerCase()
-    },
-    props: {
-      category,
-      prompts: prompts.filter((p) => p.category === category)
-    }
-  }));
+  return categories
+    .filter((meta) => meta.slug !== 'all' && meta.slug !== 'trending')
+    .map((meta) => {
+      const category = prompts.find((p) => p.category === meta.name)?.category || meta.name;
+
+      return {
+        params: {
+          category: meta.slug
+        },
+        props: {
+          category,
+          categoryMeta: meta,
+          prompts: prompts.filter((p) => p.category === category)
+        }
+      };
+    })
+    .filter((entry) => entry.props.prompts.length > 0);
 }
 
-const { category, prompts: items } = Astro.props;
-
-const categoryDescriptions = {
-  Couple:
-    'Explore romantic couple photography prompts for mirror selfies, cinematic portraits, dates, sunsets and creative relationship photos.',
-
-  Vintage:
-    'Create nostalgic AI photos inspired by film cameras, Polaroids, retro aesthetics, 80s photography and early digital cameras.',
-
-  Cinematic:
-    'Discover cinematic AI image prompts featuring dramatic lighting, rainy streets, neon cities, atmospheric environments and movie-inspired compositions.',
-
-  Wedding:
-    'Find elegant wedding and traditional couple prompts for portraits, celebrations, ceremonies and timeless photography concepts.',
-
-  Travel:
-    'Create travel-inspired AI photos featuring airports, beaches, city streets, destinations and lifestyle photography.',
-
-  Aesthetic:
-    'Explore soft, cozy, luxury and lifestyle AI image prompts designed for polished aesthetic photography.',
-
-  Friends:
-    'Find AI prompts for best-friend selfies, group photos, college memories and natural lifestyle photography.',
-
-  Selfie:
-    'Discover AI selfie prompts for mirror selfies, car selfies, rainy streets and realistic social-media portraits.',
-
-  Fashion:
-    'Explore fashion photography prompts for streetwear, editorial portraits, luxury styling, mirror selfies and studio shoots.',
-
-  Portrait:
-    'Create professional, dramatic and realistic AI portraits with studio lighting, black-and-white photography and clean compositions.',
-
-  Anime:
-    'Explore anime and chibi prompts for transforming creative ideas into illustrated characters and expressive portraits.',
-
-  Festival:
-    'Create festive and traditional AI portraits inspired by cultural celebrations, traditional clothing and colorful environments.',
-
-  Celebration:
-    'Find birthday and celebration photography prompts for memorable portraits, couple photos and special occasions.'
-};
+const {
+  category,
+  categoryMeta,
+  prompts: items
+} = Astro.props;
 
 const description =
-  categoryDescriptions[category] ||
-  `Explore detailed ${category.toLowerCase()} AI image prompts on Create With Soumay.`;
+  categoryMeta?.seoDescription ||
+  categoryMeta?.description ||
+  categoryMeta?.shortDescription ||
+  `Explore free ${category} AI image prompts, photo editing prompts and ready-to-use ideas on Create With Soumay.`;
+
+const categorySeoContent =
+  categoryMeta?.seoContent ||
+  categoryMeta?.categoryIntro ||
+  description;
+
+const searchTerms = Array.isArray(categoryMeta?.searchTerms)
+  ? categoryMeta.searchTerms
+  : [];
 
 const related = prompts
   .filter((p) => p.category !== category)
   .filter((p) =>
-    p.tags.some((tag) =>
-      items.some((item) => item.tags.includes(tag))
+    p.tags?.some((tag) =>
+      items.some((item) => item.tags?.includes(tag))
     )
   )
   .slice(0, 3);
 
 const canonicalUrl = new URL(
-  `/prompts/${category.toLowerCase()}/`,
+  `/prompts/${categoryMeta?.slug || category.toLowerCase()}/`,
   Astro.site || Astro.url
 ).href;
 
-const pageTitle = `${category} AI Prompts — ${items.length}+ Ready-to-Use Prompts | Create With Soumay`;
+const pageTitle =
+  categoryMeta?.metaTitle ||
+  `${category} AI Image Prompts | Free ${category} Photo Editing Prompts | Create With Soumay`;
+
+const pageKeywords = searchTerms.length
+  ? searchTerms.join(', ')
+  : `${category.toLowerCase()} ai image prompts, ${category.toLowerCase()} ai photo editing prompts, ${category.toLowerCase()} prompts`;
+
+const isNavratri = categoryMeta?.slug === 'navratri';
+
+const typeFilters = ['All', 'Boy', 'Girl', 'Couple', 'Unisex'];
+const toolFilters = ['All', 'ChatGPT', 'Gemini', 'Nano Banana', 'Midjourney'];
 ---
 
 <Layout
@@ -143,25 +139,32 @@ const pageTitle = `${category} AI Prompts — ${items.length}+ Ready-to-Use Prom
             Ready-to-use {category.toLowerCase()} prompts
           </h2>
 
-          <p>
-            This collection brings together detailed AI image prompts
-            specifically focused on {category.toLowerCase()} photography
-            and visual concepts. Copy any prompt, customize the details
-            and use it as a starting point for your next generation.
+          <p class="category-seo-intro">
+            {categorySeoContent}
           </p>
 
           <p>
-            The prompts are designed to give an image generator clearer
-            direction around composition, subject, lighting, environment,
-            camera perspective and overall visual style.
+            Browse ready-to-use {category.toLowerCase()} AI image prompts for
+            realistic photo editing, portraits, social media content and
+            creative image generation. Copy a prompt, customize the subject,
+            pose, outfit, background, lighting and camera style, then adapt it
+            for your preferred AI image generator.
           </p>
 
           <p>
-            If you're creating content for Instagram, continue with the
+            These prompts are designed for supported image-generation workflows
+            with tools such as <strong>ChatGPT, Google Gemini, Nano Banana and
+            Midjourney</strong>. For photo-editing prompts, use your own image
+            when the selected tool supports image input and follow the identity
+            preservation instructions in the individual prompt.
+          </p>
+
+          <p>
+            Looking for more creator resources? Explore the
             <a href="/creator-hub/">Instagram Creator Hub</a> for Reel ideas
-            and growth resources, or use our
+            and growth resources, or use the
             <a href="/creator-tools/trending-hashtags/">trending Instagram hashtags</a>
-            tool to find curated hashtag sets by topic.
+            tool for social content.
           </p>
 
         </div>
@@ -188,6 +191,44 @@ const pageTitle = `${category} AI Prompts — ${items.length}+ Ready-to-Use Prom
 
     </div>
 
+  </section>
+
+
+  <!-- Prompt Filters -->
+  <section class="section category-filters-section">
+    <div class="container">
+      <div class="filters-card">
+        <div class="filter-group">
+          <div class="filter-label">Filter by Type</div>
+          <div class="filter-buttons" id="typeFilters" role="group" aria-label="Filter prompts by type">
+            {typeFilters.map((type) => (
+              <button
+                type="button"
+                class:list={{ active: type === 'All' }}
+                data-type={type.toLowerCase()}
+              >
+                {type}
+              </button>
+            ))}
+          </div>
+        </div>
+
+        <div class="filter-group">
+          <div class="filter-label">Filter by AI Tool</div>
+          <div class="filter-buttons" id="toolFilters" role="group" aria-label="Filter prompts by AI tool">
+            {toolFilters.map((tool) => (
+              <button
+                type="button"
+                class:list={{ active: tool === 'All' }}
+                data-tool={tool.toLowerCase()}
+              >
+                {tool}
+              </button>
+            ))}
+          </div>
+        </div>
+      </div>
+    </div>
   </section>
 
 
@@ -223,16 +264,62 @@ const pageTitle = `${category} AI Prompts — ${items.length}+ Ready-to-Use Prom
 
       </div>
 
-      <div class="grid">
+      <div class="grid prompt-category-grid" id="promptGrid">
 
         {items.map((p) => (
-          <PromptCard p={p} />
+          <div
+            class="prompt-filter-item"
+            data-type={(p.type || 'Unisex').toLowerCase()}
+            data-tools={(p.tools || []).map((tool) => tool.toLowerCase()).join('|')}
+            data-category={p.category.toLowerCase()}
+          >
+            <PromptCard p={p} />
+          </div>
         ))}
 
       </div>
 
+      <div class="filter-empty" id="filterEmpty" hidden>
+        <strong>No prompts match these filters.</strong>
+        <span>Try another type or AI tool.</span>
+      </div>
+
     </div>
 
+  </section>
+
+
+  <!-- Category SEO Content -->
+  <section class="section category-seo-section">
+    <div class="container narrow">
+      <div class="eyebrow">About {category} AI Prompts</div>
+
+      <h2>
+        {category} AI Image Prompts, Photo Editing Ideas &amp; Creative Concepts
+      </h2>
+
+      <p>
+        {categorySeoContent}
+      </p>
+
+      {isNavratri && (
+        <p>
+          Looking for <strong>Navratri AI image prompts</strong>, <strong>Navratri
+          photo editing prompts</strong>, <strong>Navratri prompts for Gemini</strong>,
+          <strong>Nano Banana Navratri prompts</strong>, <strong>Garba photo prompts</strong>
+          or <strong>Dandiya AI photo prompts</strong>? This collection brings
+          those festive visual ideas together in one place, including realistic
+          Garba-night portraits, traditional outfits, festive selfies, boys'
+          Navratri looks and romantic Navratri couple photos.
+        </p>
+      )}
+
+      <div class="keyword-pills" aria-label="{category} search topics">
+        {searchTerms.slice(0, 8).map((term) => (
+          <span>{term}</span>
+        ))}
+      </div>
+    </div>
   </section>
 
 
@@ -435,6 +522,7 @@ const pageTitle = `${category} AI Prompts — ${items.length}+ Ready-to-Use Prom
       name: pageTitle,
       description,
       url: canonicalUrl,
+      keywords: pageKeywords,
       isPartOf: {
         '@type': 'WebSite',
         name: 'Create With Soumay',
@@ -464,6 +552,7 @@ const pageTitle = `${category} AI Prompts — ${items.length}+ Ready-to-Use Prom
       name: pageTitle,
       description,
       url: canonicalUrl,
+      keywords: pageKeywords,
       isPartOf: {
         '@type': 'WebSite',
         name: 'Create With Soumay',
@@ -475,6 +564,25 @@ const pageTitle = `${category} AI Prompts — ${items.length}+ Ready-to-Use Prom
       }
     })}
   />
+
+
+  {categoryMeta?.faq?.length > 0 && (
+    <script
+      type="application/ld+json"
+      set:html={JSON.stringify({
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        mainEntity: categoryMeta.faq.map((faq) => ({
+          '@type': 'Question',
+          name: faq.question,
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: faq.answer
+          }
+        }))
+      })}
+    />
+  )}
 
   <script
     type="application/ld+json"
@@ -505,6 +613,60 @@ const pageTitle = `${category} AI Prompts — ${items.length}+ Ready-to-Use Prom
   />
 
 </Layout>
+
+<script is:inline>
+  const typeButtons = document.querySelectorAll('#typeFilters button');
+  const toolButtons = document.querySelectorAll('#toolFilters button');
+  const promptItems = document.querySelectorAll('.prompt-filter-item');
+  const filterEmpty = document.getElementById('filterEmpty');
+
+  let selectedType = 'all';
+  let selectedTool = 'all';
+
+  function applyFilters() {
+    let visible = 0;
+
+    promptItems.forEach((item) => {
+      const itemType = item.dataset.type || 'unisex';
+      const itemTools = (item.dataset.tools || '').split('|').filter(Boolean);
+
+      const typeMatch =
+        selectedType === 'all' ||
+        itemType === selectedType;
+
+      const toolMatch =
+        selectedTool === 'all' ||
+        itemTools.includes(selectedTool);
+
+      const show = typeMatch && toolMatch;
+
+      item.hidden = !show;
+      if (show) visible++;
+    });
+
+    if (filterEmpty) {
+      filterEmpty.hidden = visible !== 0;
+    }
+  }
+
+  typeButtons.forEach((button) => {
+    button.addEventListener('click', () => {
+      typeButtons.forEach((btn) => btn.classList.remove('active'));
+      button.classList.add('active');
+      selectedType = button.dataset.type || 'all';
+      applyFilters();
+    });
+  });
+
+  toolButtons.forEach((button) => {
+    button.addEventListener('click', () => {
+      toolButtons.forEach((btn) => btn.classList.remove('active'));
+      button.classList.add('active');
+      selectedTool = button.dataset.tool || 'all';
+      applyFilters();
+    });
+  });
+</script>
 
 
 <style>
@@ -575,6 +737,116 @@ const pageTitle = `${category} AI Prompts — ${items.length}+ Ready-to-Use Prom
 
   .overview-grid a:hover {
     text-decoration: underline;
+  }
+
+  .category-filters-section {
+    padding-top: 5px;
+    padding-bottom: 15px;
+  }
+
+  .filters-card {
+    padding: 20px;
+    border: 1px solid rgba(255,255,255,0.07);
+    border-radius: 18px;
+    background: rgba(255,255,255,0.02);
+  }
+
+  .filter-group + .filter-group {
+    margin-top: 18px;
+  }
+
+  .filter-label {
+    margin-bottom: 10px;
+    color: #a78bfa;
+    font-size: .72rem;
+    font-weight: 800;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+  }
+
+  .filter-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .filter-buttons button {
+    padding: 9px 14px;
+    border: 1px solid rgba(255,255,255,0.09);
+    border-radius: 10px;
+    background: rgba(255,255,255,0.02);
+    color: #d7d7df;
+    font: inherit;
+    font-size: .8rem;
+    cursor: pointer;
+    transition: .2s ease;
+  }
+
+  .filter-buttons button:hover,
+  .filter-buttons button.active {
+    border-color: rgba(139,92,246,0.6);
+    background: rgba(139,92,246,0.12);
+    color: #fff;
+  }
+
+  .prompt-category-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 18px;
+    align-items: stretch;
+  }
+
+  .prompt-filter-item {
+    min-width: 0;
+  }
+
+  .prompt-filter-item > * {
+    height: 100%;
+  }
+
+  .filter-empty {
+    display: grid;
+    justify-items: center;
+    gap: 7px;
+    padding: 45px 20px;
+    color: var(--muted, #a1a1aa);
+    text-align: center;
+  }
+
+  .filter-empty strong {
+    color: #fff;
+  }
+
+  .category-seo-section {
+    background: rgba(255,255,255,0.015);
+  }
+
+  .category-seo-section h2 {
+    margin: 8px 0 16px;
+  }
+
+  .category-seo-section p {
+    color: #c7c7cf;
+    line-height: 1.85;
+  }
+
+  .category-seo-intro {
+    font-size: 1rem;
+  }
+
+  .keyword-pills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 22px;
+  }
+
+  .keyword-pills span {
+    padding: 7px 10px;
+    border: 1px solid rgba(139,92,246,0.18);
+    border-radius: 999px;
+    background: rgba(139,92,246,0.06);
+    color: #bcb1df;
+    font-size: .72rem;
   }
 
   .category-tools-section {
@@ -779,7 +1051,26 @@ const pageTitle = `${category} AI Prompts — ${items.length}+ Ready-to-Use Prom
     text-decoration: none;
   }
 
+  @media (max-width: 900px) {
+    .prompt-category-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
+
   @media (max-width: 700px) {
+
+    .prompt-category-grid {
+      grid-template-columns: 1fr;
+      gap: 14px;
+    }
+
+    .filters-card {
+      padding: 16px;
+    }
+
+    .filter-buttons button {
+      flex: 1 1 auto;
+    }
 
     .category-tools-links {
       grid-template-columns: 1fr;
