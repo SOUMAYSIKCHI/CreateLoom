@@ -5,6 +5,7 @@ import prompts from '../../data/prompts.json';
 import blogs from '../../data/blogs.json';
 import trends from '../../data/trends.json';
 import guides from '../../data/ai-photo-guides.json';
+import { isPublished } from '../../lib/publication.js';
 
 export function getStaticPaths() {
   return prompts.map((p) => ({
@@ -27,8 +28,11 @@ const related = prompts
 const relatedBlogs = blogs
   .filter(
     (b) =>
-      b.category === p.category ||
-      b.tags.some((t) => p.tags.includes(t))
+      isPublished(b.date) &&
+      (
+        b.category === p.category ||
+        b.tags.some((t) => p.tags.includes(t))
+      )
   )
   .slice(0, 3);
 
