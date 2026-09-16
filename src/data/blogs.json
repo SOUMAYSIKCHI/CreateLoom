@@ -20,20 +20,20 @@
       "Composition matters just as much as facial accuracy. Decide whether you want a close-up, waist-up portrait, full-body photograph, mirror selfie or environmental shot. A close-up emphasizes expressions and faces, while a full-body composition gives the model more room to show clothing, location and body language. For Instagram, vertical 9:16 framing is often a practical choice when the final image is intended for a Reel or Story.",
       "Lighting should support the story of the image. Warm sunset light can create a nostalgic romantic feeling, soft window light can make a café scene intimate, while directional street lighting can produce a cinematic night portrait. Describe the direction and quality of light rather than simply writing “good lighting.” You can also mention realistic shadows, natural highlights and believable reflections when the scene contains glass, mirrors, water or polished surfaces.",
       "Wardrobe should be coordinated without making the couple look artificially identical. Instead of asking for matching outfits, describe complementary colors, fabrics and levels of formality. For example, one person can wear a neutral overshirt while the other wears a soft-toned dress. This creates visual harmony while preserving individual styling.",
-      "A useful workflow is to start with one of CreateLoom's detailed couple prompts, generate a first result, and then change only one major variable at a time. Change the location first, then lighting, then wardrobe or pose. If you change everything simultaneously, it becomes difficult to understand which instruction improved or damaged the result.",
+      "A useful workflow is to start with one of Create With Soumay's detailed couple prompts, generate a first result, and then change only one major variable at a time. Change the location first, then lighting, then wardrobe or pose. If you change everything simultaneously, it becomes difficult to understand which instruction improved or damaged the result.",
       "For romantic concepts, avoid forcing exaggerated expressions. Natural eye contact, a subtle smile, relaxed shoulders and believable hand placement generally create a more convincing photograph than overly dramatic poses. Include anatomy safeguards when necessary, especially for hands, fingers and overlapping arms.",
       "For cinematic results, think like a photographer rather than a keyword collector. Mention lens perspective, depth of field, framing, foreground and background separation when they matter. A 50mm-style portrait perspective produces a different visual feeling from a wide environmental shot. Likewise, a shallow depth of field can isolate the couple, while deeper focus can emphasize the location.",
       "When a prompt produces inconsistent results, simplify it. Remove instructions that compete with each other, keep the subject and composition clear, and put the most important constraints near the beginning. Strong prompts are not necessarily the longest prompts; they are the prompts where every major instruction has a purpose.",
-      "For Instagram content, couple prompts can also become repeatable Reel formats. You can show the two original photos, reveal the prompt, show the transformation and then direct viewers to the exact CreateLoom prompt page. This creates a useful journey from social content to a page where the visitor can copy and reuse the prompt.",
+      "For Instagram content, couple prompts can also become repeatable Reel formats. You can show the two original photos, reveal the prompt, show the transformation and then direct viewers to the exact Create With Soumay prompt page. This creates a useful journey from social content to a page where the visitor can copy and reuse the prompt.",
       "### A simple couple-prompt structure",
       "A reliable structure is: subjects → identity preservation → pose → clothing → environment → composition → camera perspective → lighting → mood → realism and anatomy safeguards → output requirements. You do not have to use every section every time. The structure simply prevents important visual information from being forgotten.",
       "### Common mistakes to avoid",
       "Avoid contradictory instructions such as asking for a close-up while also demanding a complete full-body composition. Avoid vague phrases that do not communicate a visible result. Do not overload the prompt with dozens of styles that fight each other. If the image model keeps changing a person's identity, strengthen the identity-preservation instruction instead of adding more aesthetic adjectives.",
       "### Best workflow for consistent results",
       "Choose the concept first, upload the appropriate reference images, use a detailed prompt, generate several variations, select the strongest composition, and then refine one variable at a time. Save the prompt version that produces the best result. Over time, this gives you a reusable prompt library rather than a collection of disconnected experiments.",
-      "CreateLoom's couple prompt collection is designed around this workflow. Start with a concept such as a mirror selfie, sunset portrait, rainy cinematic scene, café date or traditional couple portrait, then customize the details that make the image yours."
+      "Create With Soumay's couple prompt collection is designed around this workflow. Start with a concept such as a mirror selfie, sunset portrait, rainy cinematic scene, café date or traditional couple portrait, then customize the details that make the image yours."
     ],
-    "authorName": "CreateLoom Editorial Team"
+    "authorName": "Create With Soumay Editorial Team"
   },
   {
     "id": "ai-selfie-prompts",
@@ -65,9 +65,9 @@
       "### How to refine a selfie prompt",
       "Generate a first version and identify the single biggest problem. If the face is wrong, work on identity instructions. If the scene is wrong, simplify the environment. If the camera perspective is wrong, clarify the phone position and framing. Avoid changing every section at once because you lose the ability to diagnose what caused the improvement.",
       "### Selfie ideas that work well for Reels",
-      "You can build repeatable content around mirror selfies, car selfies, airport selfies, rainy street selfies, café selfies, old-camera selfies and fashion selfies. A strong Reel can show the original reference, reveal the prompt and finish with the generated result. The exact prompt can then live on a CreateLoom page for viewers who want to recreate the concept."
+      "You can build repeatable content around mirror selfies, car selfies, airport selfies, rainy street selfies, café selfies, old-camera selfies and fashion selfies. A strong Reel can show the original reference, reveal the prompt and finish with the generated result. The exact prompt can then live on a Create With Soumay page for viewers who want to recreate the concept."
     ],
-    "authorName": "CreateLoom Editorial Team"
+    "authorName": "Create With Soumay Editorial Team"
   },
   {
     "id": "instagram-reel-ideas",
@@ -85,7 +85,7 @@
     "excerpt": "Build repeatable AI-content Reel formats around prompt reveals, transformations, comparisons, tutorials and themed series instead of relying on random ideas.",
     "content": [
       "AI creators have an unusual advantage on Instagram: the content itself can demonstrate a transformation. Instead of simply showing a finished AI image, you can turn the process into the story of the Reel. The strongest formats make the viewer understand the result quickly and then give them a reason to stay for the reveal, prompt or comparison.",
-      "The first useful format is the prompt reveal. Open with the finished image or a compelling before-and-after, then show the prompt that created it. Keep the opening visually simple so the viewer immediately understands what changed. The exact prompt can then be linked to a dedicated CreateLoom page.",
+      "The first useful format is the prompt reveal. Open with the finished image or a compelling before-and-after, then show the prompt that created it. Keep the opening visually simple so the viewer immediately understands what changed. The exact prompt can then be linked to a dedicated Create With Soumay page.",
       "A second format is the before-and-after transformation. Start with the original reference photo, introduce the concept in one short line, and reveal the AI result. This works particularly well for couple photos, vintage transformations, cinematic portraits, anime versions and fashion concepts.",
       "A third format is the prompt comparison. Create two versions of the same concept and change one major instruction, such as lighting, camera perspective, location or wardrobe. Then explain what changed. This turns a simple image generation into educational content and gives viewers a reason to comment on which version they prefer.",
       "A fourth format is a themed series. Instead of making unrelated Reels, create a sequence such as “7 Couple AI Prompts,” “AI Selfie Ideas,” “Vintage Photo Week,” “Cinematic Portrait Series” or “AI Travel Photo Ideas.” Series create a recognizable content pattern and make it easier to plan future posts.",
@@ -98,12 +98,12 @@
       "### Use comments as content signals",
       "Pay attention to the questions people repeatedly ask. If viewers ask for the prompt, create a prompt-focused Reel. If they ask which tool you used, make a workflow explanation. If they ask for another style, turn that request into the next concept. This lets your audience help shape the content calendar.",
       "### Make the destination useful",
-      "If a Reel sends viewers to CreateLoom, the destination should immediately fulfill the promise made in the Reel. A visitor should be able to understand the prompt, copy it, share it and discover related prompts without hunting through the site. This creates a better experience than sending viewers to a generic homepage.",
+      "If a Reel sends viewers to Create With Soumay, the destination should immediately fulfill the promise made in the Reel. A visitor should be able to understand the prompt, copy it, share it and discover related prompts without hunting through the site. This creates a better experience than sending viewers to a generic homepage.",
       "### A simple weekly system",
       "A practical schedule could rotate between a transformation Reel, prompt reveal, comparison, tutorial, themed series entry and audience-requested concept. The exact posting frequency matters less than maintaining a repeatable format and reviewing what your audience actually responds to.",
       "The goal is not to manufacture viral posts every day. The goal is to build a recognizable content system where every good idea can generate multiple useful pieces of content and where the best-performing concepts can be improved rather than abandoned."
     ],
-    "authorName": "CreateLoom Editorial Team"
+    "authorName": "Create With Soumay Editorial Team"
   },
   {
     "id": "how-to-get-more-reel-views",
@@ -137,10 +137,10 @@
       "### Build repeatable formats",
       "A repeatable format reduces creative fatigue. For example, you might create a recurring “Prompt of the Day,” weekly couple prompt series, AI transformation series or prompt comparison format. Once a format works, keep the underlying structure while changing the topic.",
       "### Give viewers a reason to visit your profile",
-      "If the Reel demonstrates a useful prompt, the profile should make the next step obvious. CreateLoom can act as the detailed destination where viewers copy the exact prompt, explore related prompts and read supporting guides. The Reel earns attention while the website provides the deeper resource.",
+      "If the Reel demonstrates a useful prompt, the profile should make the next step obvious. Create With Soumay can act as the detailed destination where viewers copy the exact prompt, explore related prompts and read supporting guides. The Reel earns attention while the website provides the deeper resource.",
       "Growth is usually an iteration problem rather than a single-post problem. Publish useful concepts, measure what happens, identify the strongest patterns and improve the next version. Over time, this produces a much more reliable content strategy than chasing every viral trend."
     ],
-    "authorName": "CreateLoom Editorial Team"
+    "authorName": "Create With Soumay Editorial Team"
   },
   {
     "id": "how-to-get-brand-deals",
@@ -172,12 +172,12 @@
       "### Pricing your first collaboration",
       "There is no universal price that applies to every creator. Consider the deliverables, production effort, audience quality, expected usage, exclusivity and rights being requested. A simple content post and a campaign that gives a company permission to reuse your content commercially are not equivalent deals.",
       "### Make your website part of the pitch",
-      "A creator-owned website can strengthen your professional positioning. CreateLoom can demonstrate that your content is connected to a larger creator ecosystem rather than existing only inside an Instagram profile. Your Brands and Contact pages should make it easy for a potential partner to understand the collaboration options and contact you.",
+      "A creator-owned website can strengthen your professional positioning. Create With Soumay can demonstrate that your content is connected to a larger creator ecosystem rather than existing only inside an Instagram profile. Your Brands and Contact pages should make it easy for a potential partner to understand the collaboration options and contact you.",
       "### Follow up professionally",
       "If a brand does not respond, one polite follow-up after a reasonable interval is better than repeatedly messaging them. Keep records of who you contacted, when you contacted them and what you proposed. Treat outreach as a pipeline rather than an emotional judgment of your content.",
       "The first deal is often less about becoming famous and more about becoming easy to evaluate. Build a focused profile, publish evidence of your content quality, prepare a clear offer and contact brands whose products genuinely fit your audience."
     ],
-    "authorName": "CreateLoom Editorial Team"
+    "authorName": "Create With Soumay Editorial Team"
   },
   {
     "id": "how-to-write-ai-image-prompts",
@@ -215,9 +215,9 @@
       "Reference images can provide useful information about identity, clothing, pose or visual composition depending on the tool. Make the role of the reference clear in the prompt. If a reference is intended primarily for identity, say so. If it is intended for composition, specify that instead.",
       "### Build reusable prompt templates",
       "Once you find a structure that consistently works, turn it into a template with editable sections such as [SUBJECT], [OUTFIT], [LOCATION], [LIGHTING] and [MOOD]. This lets you create variations quickly without rewriting the entire prompt every time.",
-      "The best prompt-writing workflow is therefore simple: define the visual goal, describe the important physical details, preserve identity when needed, establish composition and lighting, generate a baseline, inspect the result and refine one variable at a time. CreateLoom's prompt library follows this practical approach so you can start from a structured prompt instead of a blank page."
+      "The best prompt-writing workflow is therefore simple: define the visual goal, describe the important physical details, preserve identity when needed, establish composition and lighting, generate a baseline, inspect the result and refine one variable at a time. Create With Soumay's prompt library follows this practical approach so you can start from a structured prompt instead of a blank page."
     ],
-    "authorName": "CreateLoom Editorial Team"
+    "authorName": "Create With Soumay Editorial Team"
   },
   {
     "id": "nano-banana-ai-photo-prompts-guide",
@@ -250,9 +250,9 @@
       "One underused feature of working with Nano Banana through Gemini is that you can keep the conversation going after the first result. Rather than rewriting the whole prompt because the lighting is slightly off, describe only the adjustment you want — “make the lighting warmer” or “move the light source to the left.” This mirrors how a real photo edit works and usually gets you to a usable result faster than regenerating from scratch each time.",
       "### Building a repeatable workflow for Instagram content",
       "Once a Nano Banana prompt produces a result you like, treat it as a template rather than a one-off. Swap the reference photo, keep the transformation instruction the same, and you have a repeatable format for a Reel series. This is exactly how most of the current viral trend formats spread — not because one image went viral, but because the underlying prompt structure was easy for anyone to reuse with their own photo.",
-      "CreateLoom's Nano Banana-compatible prompts are written with this structure in mind, so each one separates the transformation, the visual details and the identity instruction clearly — copy one, drop in your own reference photo, and adjust only the part that needs to change for your version of the concept."
+      "Create With Soumay's Nano Banana-compatible prompts are written with this structure in mind, so each one separates the transformation, the visual details and the identity instruction clearly — copy one, drop in your own reference photo, and adjust only the part that needs to change for your version of the concept."
     ],
-    "authorName": "CreateLoom Editorial Team"
+    "authorName": "Create With Soumay Editorial Team"
   },
   {
     "id": "trending-ai-photo-styles-instagram",
@@ -282,9 +282,9 @@
       "The difference between a convincing result and an obviously-AI one usually comes down to reference photo quality and how specific the prompt is about lighting and texture, not the concept itself. A blurry, badly-lit selfie will produce a mediocre figurine or saree portrait no matter how well-written the prompt is — the model can only work with what it's given.",
       "### Turning a trend into your own content instead of a copy",
       "The creators who get the most out of a trend adapt it rather than replicate it exactly. If a saree-portrait trend is spreading, a travel creator might apply it to a specific regional style tied to a place they're covering. If a polaroid trend is spreading, a comedy creator might apply it to an exaggerated, deliberately absurd pairing instead of a sentimental one. The format is the reusable part; the specific execution is where your own content stands out.",
-      "Because these trends move quickly, CreateLoom's trending prompt section is reviewed and updated as new patterns emerge, so the goal is to keep a current, honestly-labeled read on what's actually spreading — rather than treating any one style as permanent."
+      "Because these trends move quickly, Create With Soumay's trending prompt section is reviewed and updated as new patterns emerge, so the goal is to keep a current, honestly-labeled read on what's actually spreading — rather than treating any one style as permanent."
     ],
-    "authorName": "CreateLoom Editorial Team"
+    "authorName": "Create With Soumay Editorial Team"
   },
   {
     "id": "chatgpt-ai-photo-prompts-instagram",
@@ -313,9 +313,9 @@
       "Be specific about what should change and explicitly say what should stay the same in the same message — “change only the lighting to golden hour, keep the pose and outfit exactly as they are” works better than “make it more golden hour.” Vague follow-ups tend to produce broader, less predictable changes than the original prompt.",
       "### When to reach for ChatGPT versus another tool",
       "ChatGPT is a strong choice when a project involves several rounds of back-and-forth refinement, when text needs to render correctly inside the image, or when you're already mid-conversation about the concept and don't want to switch tools. For a single, carefully pre-planned identity-preserving portrait where you already know exactly what you want in one shot, a tool built specifically around photo editing can sometimes get there in fewer attempts.",
-      "CreateLoom's prompt library flags which tools each prompt was written for so you can pick based on how you actually want to work — one detailed attempt, or a conversation you refine as you go."
+      "Create With Soumay's prompt library flags which tools each prompt was written for so you can pick based on how you actually want to work — one detailed attempt, or a conversation you refine as you go."
     ],
-    "authorName": "CreateLoom Editorial Team"
+    "authorName": "Create With Soumay Editorial Team"
   },
   {
     "id": "how-to-make-ai-photos-look-real",
@@ -345,9 +345,9 @@
       "Resist the urge to add more realism keywords on top of each other — stacking “ultra-realistic, photorealistic, 8k, hyperrealistic” rarely helps and can push a result toward an over-processed look instead. Identify which single element looks wrong — skin, eyes, lighting, hands — and address that one thing specifically before touching anything else.",
       "### Realism isn't always the goal",
       "Not every concept should aim for photographic realism. A cartoon sticker, an anime portrait or a poster-style illustration is meant to look stylized, and pushing those toward photorealism usually makes the result worse, not better. Decide which category your concept belongs to before applying any of this — these fixes are for photo-style prompts specifically, not illustrated ones.",
-      "Every prompt in CreateLoom's photo-style categories is written with these specific details already built in, which is part of why identity and realism tend to hold up better than in a prompt assembled from a generic adjective list."
+      "Every prompt in Create With Soumay's photo-style categories is written with these specific details already built in, which is part of why identity and realism tend to hold up better than in a prompt assembled from a generic adjective list."
     ],
-    "authorName": "CreateLoom Editorial Team"
+    "authorName": "Create With Soumay Editorial Team"
   },
   {
     "id": "chatgpt-vs-gemini-2026",
@@ -378,7 +378,7 @@
       "### You don't have to pick permanently",
       "Most people who use AI tools daily eventually settle into using more than one — a primary assistant for everyday work, plus a second tool for the specific thing it happens to be better at. Treating this as a one-time decision adds pressure that isn't necessary; both tools are cheap enough, and different enough, that testing both for a real project is more useful than reading ten more comparison posts."
     ],
-    "authorName": "CreateLoom Editorial Team"
+    "authorName": "Create With Soumay Editorial Team"
   },
   {
     "id": "best-ai-image-generators-compared",
@@ -409,7 +409,7 @@
       "### A workflow that uses more than one",
       "Many creators now use Nano Banana for the core identity-preserving photo, then bring the result into a separate step for any illustrated or stylized overlay work Midjourney handles better. Treating these tools as a small toolkit rather than a single all-purpose choice usually produces better final results than forcing one tool to do a job it wasn't built for."
     ],
-    "authorName": "CreateLoom Editorial Team"
+    "authorName": "Create With Soumay Editorial Team"
   },
   {
     "id": "midjourney-v8-prompts-guide",
@@ -439,7 +439,7 @@
       "### Where Midjourney still fits best",
       "Even with these improvements, Midjourney remains strongest for artistic, illustrative, and stylized work rather than realistic identity-preserving photo edits from a personal reference photo — for that specific job, a tool built around photo editing, like Gemini's Nano Banana, is still the more reliable choice."
     ],
-    "authorName": "CreateLoom Editorial Team"
+    "authorName": "Create With Soumay Editorial Team"
   },
   {
     "id": "best-free-ai-tools-creators",
@@ -468,7 +468,7 @@
       "### Don't subscribe to everything at once",
       "The fastest way to overspend on AI tools is subscribing to several at once because each one does one thing slightly better. Upgrade the single tool you use most first, and only add a second paid subscription once you've genuinely outgrown the free tier of the first."
     ],
-    "authorName": "CreateLoom Editorial Team"
+    "authorName": "Create With Soumay Editorial Team"
   },
   {
     "id": "ai-subscription-costs-worth-it",
@@ -497,7 +497,7 @@
       "### When it's worth spending more",
       "If AI-generated content is a meaningful part of your income — sponsored posts, a content business, client work — the calculation shifts from personal convenience to business cost, and a heavier monthly spend across two or three specialized tools can make sense the same way any other business software cost would."
     ],
-    "authorName": "CreateLoom Editorial Team"
+    "authorName": "Create With Soumay Editorial Team"
   },
   {
     "id": "ai-baby-prediction-photo-prompts",
@@ -525,7 +525,7 @@
       "### A note on using this thoughtfully",
       "This format works best when both people in the reference photos have given their consent to be part of the image, and it's worth remembering the result is a lighthearted guess, not a genuine prediction — treating it that way in the caption keeps the content fun rather than something that reads as more literal than it is."
     ],
-    "authorName": "CreateLoom Editorial Team"
+    "authorName": "Create With Soumay Editorial Team"
   },
   {
     "id": "ai-pet-portrait-prompts",
@@ -555,7 +555,7 @@
       "### Where this content performs well",
       "Pet portrait prompts pair naturally with before-and-after Reels, since the contrast between an ordinary pet photo and a dramatic reimagined version is the entire appeal — showing both in sequence usually outperforms posting the result alone."
     ],
-    "authorName": "CreateLoom Editorial Team"
+    "authorName": "Create With Soumay Editorial Team"
   },
   {
     "id": "ai-3d-figurine-prompt-guide",
@@ -585,7 +585,7 @@
       "### Why this trend has lasted",
       "Because it works on pets, couples, kids and solo portraits equally well, and because the humor and novelty come from the format itself rather than a specific one-time joke, it's one of the more durable trend templates to build repeat content around rather than a single post."
     ],
-    "authorName": "CreateLoom Editorial Team"
+    "authorName": "Create With Soumay Editorial Team"
   },
   {
     "id": "ai-graduation-photo-prompts",
@@ -614,7 +614,7 @@
       "### Where this fits",
       "This is a strong evergreen category rather than a fast-moving trend — search interest for graduation-specific AI portraits spikes predictably around spring and winter graduation seasons, making it worth having ready ahead of those windows rather than writing it from scratch each year."
     ],
-    "authorName": "CreateLoom Editorial Team"
+    "authorName": "Create With Soumay Editorial Team"
   },
   {
     "id": "ai-gym-transformation-prompts",
@@ -642,7 +642,7 @@
       "### A better use for this format",
       "Use these prompts to improve the photography and mood of a real training photo, not to simulate progress that hasn't happened. If the goal is documenting an actual transformation over time, a real photo taken consistently under similar lighting will always be more meaningful and more honest than an AI-styled one."
     ],
-    "authorName": "CreateLoom Editorial Team"
+    "authorName": "Create With Soumay Editorial Team"
   },
   {
     "id": "instagram-algorithm-explained-2026",
@@ -671,7 +671,7 @@
       "### A practical takeaway",
       "Before publishing, ask honestly whether a piece of content is something someone would actually forward to a specific friend, not just double-tap while scrolling. That single question reflects the biggest change in how Instagram distributes content right now."
     ],
-    "authorName": "CreateLoom Editorial Team"
+    "authorName": "Create With Soumay Editorial Team"
   },
   {
     "id": "instagram-seo-guide",
@@ -699,7 +699,7 @@
       "### Why this compounds over time",
       "Unlike a single viral post, search-optimized content keeps getting discovered by new people searching that exact term long after the initial posting window, which makes it one of the more durable, low-effort improvements you can make to an existing content routine."
     ],
-    "authorName": "CreateLoom Editorial Team"
+    "authorName": "Create With Soumay Editorial Team"
   },
   {
     "id": "zero-to-10k-instagram-followers",
@@ -729,7 +729,7 @@
       "### A realistic mindset",
       "Ten thousand followers rarely comes from one viral post — it usually comes from finding one or two formats that reliably work for your specific niche and repeating them consistently while gradually refining based on what your actual audience responds to."
     ],
-    "authorName": "CreateLoom Editorial Team"
+    "authorName": "Create With Soumay Editorial Team"
   },
   {
     "id": "instagram-stories-engagement-tips",
@@ -757,7 +757,7 @@
       "### Why this matters for the algorithm specifically",
       "Direct interactions like sticker taps and Story replies are a strong relationship signal Instagram uses to decide whose content to keep showing a given viewer, which means an engaged Stories habit can quietly improve how often your main feed and Reel content reaches your existing followers, not just new ones."
     ],
-    "authorName": "CreateLoom Editorial Team"
+    "authorName": "Create With Soumay Editorial Team"
   },
   {
     "id": "how-to-price-sponsored-instagram-post",
@@ -787,7 +787,7 @@
       "### Getting it in writing",
       "Regardless of the number you land on, put the deliverable, timeline, usage rights and payment terms in a simple written agreement before starting the work — a short, clear document protects both sides and avoids disputes over what was actually promised."
     ],
-    "authorName": "CreateLoom Editorial Team"
+    "authorName": "Create With Soumay Editorial Team"
   },
   {
     "id": "claude-vs-gemini-writing-research",
@@ -815,7 +815,7 @@
       "### A practical way to test this yourself",
       "Take one real project — a document you're actually editing or a research task you actually need to do — and run it through both tools' free tiers before deciding. The difference in how each handles your specific kind of writing will tell you more than a general comparison ever could."
     ],
-    "authorName": "CreateLoom Editorial Team"
+    "authorName": "Create With Soumay Editorial Team"
   },
   {
     "id": "best-ai-video-generators-compared",
@@ -845,7 +845,7 @@
       "### A realistic expectation to set",
       "AI video generation in 2026 is genuinely useful for short clips, b-roll, and social content, but it's not yet at the point where it reliably replaces a full production workflow for longer or more complex video — treat it as a strong tool in the process rather than the entire process."
     ],
-    "authorName": "CreateLoom Editorial Team"
+    "authorName": "Create With Soumay Editorial Team"
   },
   {
     "id": "ai-wedding-photo-prompts",
@@ -874,7 +874,7 @@
       "### Where this fits in content planning",
       "Search interest in wedding-portrait AI prompts spikes predictably around wedding season, making this a good category to have ready ahead of peak months rather than writing from scratch when demand is already climbing."
     ],
-    "authorName": "CreateLoom Editorial Team"
+    "authorName": "Create With Soumay Editorial Team"
   },
   {
     "id": "ai-halloween-costume-prompts",
@@ -904,7 +904,7 @@
       "### Where this performs well",
       "Halloween costume prompts work especially well as a themed content series in the weeks leading up to the holiday, since the format naturally supports variety — a different costume concept per post using the same reference photo."
     ],
-    "authorName": "CreateLoom Editorial Team"
+    "authorName": "Create With Soumay Editorial Team"
   },
   {
     "id": "ai-real-estate-photo-prompts",
@@ -934,7 +934,7 @@
       "### Where this fits for agents",
       "Used within these limits, AI-assisted listing photos can meaningfully improve how quickly a well-presented but poorly-lit property gets buyer attention, without crossing into the kind of misleading edits that damage trust once a buyer sees the property in person."
     ],
-    "authorName": "CreateLoom Editorial Team"
+    "authorName": "Create With Soumay Editorial Team"
   },
   {
     "id": "instagram-threads-growth-guide",
@@ -961,7 +961,7 @@
       "### A simple way to use it alongside Instagram",
       "Use Threads to build the more personal, opinion-driven side of your presence — the commentary and personality that doesn't always fit into a polished Reel or feed post — while keeping your main visual content on Instagram's feed and Reels."
     ],
-    "authorName": "CreateLoom Editorial Team"
+    "authorName": "Create With Soumay Editorial Team"
   },
   {
     "id": "instagram-broadcast-channels-explained",
@@ -988,7 +988,7 @@
       "### Is it worth starting",
       "If you already have an engaged following that regularly comments or messages you, a Broadcast Channel is a low-effort way to formalize that direct connection. If your following is still small, it's worth prioritizing overall growth first — a channel is most valuable once there's an established, engaged audience to put into it."
     ],
-    "authorName": "CreateLoom Editorial Team"
+    "authorName": "Create With Soumay Editorial Team"
   },
   {
     "id": "how-to-find-your-content-niche",
@@ -1015,7 +1015,7 @@
       "### Signs your niche might be too broad",
       "If you struggle to describe your account in one sentence, if your audience seems to follow for wildly different reasons, or if a brand can't immediately tell what kind of collaboration would fit, the niche likely needs to be narrowed further."
     ],
-    "authorName": "CreateLoom Editorial Team"
+    "authorName": "Create With Soumay Editorial Team"
   },
   {
     "id": "content-calendar-without-burnout",
@@ -1042,7 +1042,7 @@
       "### Recognizing burnout before it stops you completely",
       "Dropping enthusiasm for a format you used to enjoy, dreading the act of opening your content tools, and feeling like every post is forced rather than genuine are all early signs worth addressing by adjusting frequency or format before they turn into a complete stop, rather than pushing through and posting on inertia alone."
     ],
-    "authorName": "CreateLoom Editorial Team"
+    "authorName": "Create With Soumay Editorial Team"
   },
   {
     "id": "ugc-creator-guide-getting-paid",
@@ -1071,7 +1071,7 @@
       "### A realistic growth path",
       "Many creators use UGC work as an early income source while simultaneously building a following, since the production and pitching skills involved directly transfer once follower-based sponsored deals also become available."
     ],
-    "authorName": "CreateLoom Editorial Team"
+    "authorName": "Create With Soumay Editorial Team"
   },
   {
     "id": "affiliate-marketing-for-creators",
@@ -1098,7 +1098,7 @@
       "### A realistic income expectation",
       "Affiliate income for most creators starts small and grows slowly as both audience size and trust compound over time — it's rarely a fast income source early on, but it can become one of the more stable, passive components of a wider income strategy once an audience is established."
     ],
-    "authorName": "CreateLoom Editorial Team"
+    "authorName": "Create With Soumay Editorial Team"
   },
   {
     "id": "ai-product-photography-prompts",
@@ -1126,7 +1126,7 @@
       "### A practical workflow for a small catalog",
       "Photograph each product once under reasonably even lighting, then apply the same background and lighting prompt consistently across the whole catalog, which keeps the store's visual presentation cohesive rather than looking like a mix of different photography styles."
     ],
-    "authorName": "CreateLoom Editorial Team"
+    "authorName": "Create With Soumay Editorial Team"
   },
   {
     "id": "best-time-to-post-instagram-2026",
@@ -1153,7 +1153,7 @@
       "### A reasonable way to prioritize your effort",
       "If you're choosing where to spend limited time improving your content strategy, put it into the hook and the actual value of the content first — timing optimization is a smaller, later-stage refinement, not a foundational growth lever."
     ],
-    "authorName": "CreateLoom Editorial Team"
+    "authorName": "Create With Soumay Editorial Team"
   },
   {
     "id": "repurpose-one-post-into-five",
@@ -1180,7 +1180,7 @@
       "### Why this compounds over time",
       "Beyond the immediate time savings, repurposing trains you to notice the different angles inside an idea automatically, which makes future content planning faster even when you're not deliberately repurposing a specific post."
     ],
-    "authorName": "CreateLoom Editorial Team"
+    "authorName": "Create With Soumay Editorial Team"
   },
   {
     "id": "red-flags-in-brand-deal-contracts",
@@ -1207,7 +1207,7 @@
       "### When to get outside help",
       "For a larger deal, or one with unusually complex terms, having a lawyer or a creator-focused contract review service look over the agreement before signing is a reasonable cost relative to the risk of an unfavorable long-term clause going unnoticed."
     ],
-    "authorName": "CreateLoom Editorial Team"
+    "authorName": "Create With Soumay Editorial Team"
   },
   {
     "id": "perplexity-vs-google-search",
@@ -1234,7 +1234,7 @@
       "### A practical habit",
       "Many people who've adopted Perplexity use it specifically for the research and \"explain this to me\" style queries, while keeping Google as the default for everyday navigational searches — treating the two as complementary rather than picking one exclusively."
     ],
-    "authorName": "CreateLoom Editorial Team"
+    "authorName": "Create With Soumay Editorial Team"
   },
   {
     "id": "midjourney-vs-stable-diffusion",
@@ -1261,7 +1261,7 @@
       "### A realistic assessment for most creators",
       "For the vast majority of Instagram and content-creation use cases, Midjourney's convenience outweighs Stable Diffusion's flexibility — the technical setup only pays off if you have a specific, recurring need for a custom-trained style that a general-purpose tool can't replicate."
     ],
-    "authorName": "CreateLoom Editorial Team"
+    "authorName": "Create With Soumay Editorial Team"
   },
   {
     "id": "adobe-firefly-review-2026",
@@ -1288,7 +1288,7 @@
       "### The practical takeaway",
       "Firefly's value is almost entirely about workflow integration rather than being the single best generator on the market — the decision comes down to whether you're already living inside Adobe's tools daily."
     ],
-    "authorName": "CreateLoom Editorial Team"
+    "authorName": "Create With Soumay Editorial Team"
   },
   {
     "id": "ai-christmas-card-prompts",
@@ -1316,7 +1316,7 @@
       "### Where this fits in a content calendar",
       "Search interest for holiday card AI prompts climbs sharply starting in early November, making it worth publishing this kind of content well ahead of the actual holiday season rather than during peak competition in mid-December."
     ],
-    "authorName": "CreateLoom Editorial Team"
+    "authorName": "Create With Soumay Editorial Team"
   },
   {
     "id": "ai-anime-avatar-prompts",
@@ -1344,7 +1344,7 @@
       "### Where this fits",
       "Anime avatars work well as a permanent profile picture change rather than just a single post, which gives this format a longer functional life than most single-post trends — many people keep an anime avatar as their profile photo for months after generating it."
     ],
-    "authorName": "CreateLoom Editorial Team"
+    "authorName": "Create With Soumay Editorial Team"
   },
   {
     "id": "ai-childhood-photo-recreation-prompts",
@@ -1372,7 +1372,7 @@
       "### Why this format resonates",
       "Unlike most AI photo trends, this one relies on genuine personal history rather than a purely aesthetic effect, which is part of why it tends to generate more comments and shares from people reacting to the specific nostalgia of the pairing rather than the technical quality of the image alone."
     ],
-    "authorName": "CreateLoom Editorial Team"
+    "authorName": "Create With Soumay Editorial Team"
   },
   {
     "id": "ai-maternity-photo-prompts",
@@ -1400,7 +1400,7 @@
       "### Including a partner or family",
       "For maternity photos including a partner or existing children, name each person's role and position explicitly, and describe the group's composition as a cohesive family moment rather than treating the pregnant subject and other family members as separate elements layered together."
     ],
-    "authorName": "CreateLoom Editorial Team"
+    "authorName": "Create With Soumay Editorial Team"
   },
   {
     "id": "instagram-collab-post-guide",
@@ -1427,7 +1427,7 @@
       "### A practical tip for using it well",
       "Since both accounts share full engagement metrics, it's worth choosing collaborators whose audience and content style genuinely overlap with yours — a mismatched Collab can perform worse for both accounts than either would have alone, since neither audience finds it as relevant as their usual expectations."
     ],
-    "authorName": "CreateLoom Editorial Team"
+    "authorName": "Create With Soumay Editorial Team"
   },
   {
     "id": "writing-instagram-bios-that-convert",
@@ -1454,7 +1454,7 @@
       "### Testing and iterating",
       "Since the bio is easy to change, it's worth treating it as testable rather than fixed — if profile visits aren't converting to follows at a reasonable rate, a clearer, more specific bio rewrite is one of the lowest-effort changes worth trying before assuming the problem is your content itself."
     ],
-    "authorName": "CreateLoom Editorial Team"
+    "authorName": "Create With Soumay Editorial Team"
   },
   {
     "id": "diversifying-creator-income",
@@ -1481,7 +1481,7 @@
       "### A realistic timeline",
       "Most creators build these additional streams gradually over months rather than launching them all simultaneously — picking one additional stream that fits naturally with existing content and building it consistently tends to work better than spreading thin across several new income types at once."
     ],
-    "authorName": "CreateLoom Editorial Team"
+    "authorName": "Create With Soumay Editorial Team"
   },
   {
     "id": "ai-tools-for-small-business",
@@ -1509,7 +1509,7 @@
       "### Measuring whether it's working",
       "Track actual time saved or output improved for each tool over a month before deciding to keep or cancel it — a tool that felt exciting on day one but isn't measurably saving time or improving output after a full month is a reasonable candidate to drop."
     ],
-    "authorName": "CreateLoom Editorial Team"
+    "authorName": "Create With Soumay Editorial Team"
   },
   {
     "id": "instagram-notes-feature-guide",
@@ -1536,7 +1536,7 @@
       "### A simple way to fit them in",
       "Treat Notes as a low-effort, high-frequency layer underneath your main content schedule rather than something to plan around — a quick thought posted in passing costs almost nothing and occasionally sparks a genuine DM conversation you wouldn't have had otherwise."
     ],
-    "authorName": "CreateLoom Editorial Team"
+    "authorName": "Create With Soumay Editorial Team"
   },
   {
     "id": "dealing-with-creator-burnout",
@@ -1563,7 +1563,7 @@
       "### When a full break makes sense",
       "If smaller adjustments aren't restoring any sense of enjoyment after a genuine attempt, a longer, planned break — communicated to your audience rather than a silent disappearance — is a reasonable choice, and most engaged audiences respond well to honesty about needing a pause rather than a sudden unexplained absence."
     ],
-    "authorName": "CreateLoom Editorial Team"
+    "authorName": "Create With Soumay Editorial Team"
   },
   {
     "id": "grok-image-generation-guide",
@@ -1590,7 +1590,7 @@
       "### A practical takeaway",
       "If your content lives primarily on X, Grok is worth testing directly in that environment rather than generating elsewhere and re-uploading — for Instagram-first creators, though, a tool built specifically around realistic photo editing is still the more reliable default."
     ],
-    "authorName": "CreateLoom Editorial Team"
+    "authorName": "Create With Soumay Editorial Team"
   },
   {
     "id": "dalle-vs-gpt-image",
@@ -1617,7 +1617,7 @@
       "### A practical takeaway",
       "If you dismissed ChatGPT's image generation based on an older experience with DALL-E, it's worth revisiting — particularly for any concept involving readable text inside the image, where the improvement is the most noticeable."
     ],
-    "authorName": "CreateLoom Editorial Team"
+    "authorName": "Create With Soumay Editorial Team"
   },
   {
     "id": "best-ai-writing-assistants-2026",
@@ -1643,7 +1643,7 @@
       "### Why using both isn't redundant",
       "A general assistant and a dedicated editing tool solve different problems — one helps you generate and structure ideas, the other catches surface-level errors and tone issues in a way that preserves your original voice rather than rewriting it."
     ],
-    "authorName": "CreateLoom Editorial Team"
+    "authorName": "Create With Soumay Editorial Team"
   },
   {
     "id": "ai-tools-for-students-2026",
@@ -1671,7 +1671,7 @@
       "### A reasonable personal rule",
       "If an AI tool did the actual thinking and you couldn't reproduce the reasoning yourself afterward, it was probably used as a shortcut rather than a study aid — a useful gut check for staying on the right side of that line."
     ],
-    "authorName": "CreateLoom Editorial Team"
+    "authorName": "Create With Soumay Editorial Team"
   },
   {
     "id": "free-vs-paid-ai-plans-breakdown",
@@ -1698,7 +1698,7 @@
       "### A simple decision rule",
       "If you're hitting free-tier limits regularly, or a specific advanced feature genuinely changes your output quality, paying makes sense. If you're comfortably within the free tier's limits and don't need the most advanced model version, there's no real reason to upgrade yet."
     ],
-    "authorName": "CreateLoom Editorial Team"
+    "authorName": "Create With Soumay Editorial Team"
   },
   {
     "id": "ai-birthday-photo-prompts",
@@ -1726,7 +1726,7 @@
       "### Where this fits",
       "Because birthdays are personal and recurring, this is a strong category for a repeatable Reel or Story format — offering to generate a birthday portrait for followers celebrating that week is a low-effort way to create genuinely personal content on a predictable schedule."
     ],
-    "authorName": "CreateLoom Editorial Team"
+    "authorName": "Create With Soumay Editorial Team"
   },
   {
     "id": "ai-travel-postcard-prompts",
@@ -1754,7 +1754,7 @@
       "### Where this fits",
       "This format works particularly well as a way to make an entire trip's worth of ordinary photos feel like a cohesive, designed set — applying the same style consistently across several photos from one trip creates a stronger visual series than a single standalone postcard image."
     ],
-    "authorName": "CreateLoom Editorial Team"
+    "authorName": "Create With Soumay Editorial Team"
   },
   {
     "id": "ai-logo-design-prompts",
@@ -1782,7 +1782,7 @@
       "### Where this fits well as a final solution",
       "For a personal brand, a side project, or a very early-stage business testing an idea before investing in professional branding, an AI-generated logo is often a perfectly reasonable long-term solution — the limitations matter more as a business scales and brand consistency becomes commercially important."
     ],
-    "authorName": "CreateLoom Editorial Team"
+    "authorName": "Create With Soumay Editorial Team"
   },
   {
     "id": "ai-wallpaper-lockscreen-prompts",
@@ -1810,7 +1810,7 @@
       "### Why this content saves and shares well",
       "Unlike most content, a wallpaper has an obvious, immediate personal use the moment someone sees it, which is part of why this category tends to generate an unusually high save rate relative to likes or comments."
     ],
-    "authorName": "CreateLoom Editorial Team"
+    "authorName": "Create With Soumay Editorial Team"
   },
   {
     "id": "ai-ghibli-style-prompts",
@@ -1838,7 +1838,7 @@
       "### Where this fits",
       "This style performs particularly well applied to travel and nature photography, where the illustrative treatment of landscapes and lighting tends to look more cohesive than it does applied to close-up portraits."
     ],
-    "authorName": "CreateLoom Editorial Team"
+    "authorName": "Create With Soumay Editorial Team"
   },
   {
     "id": "ai-linkedin-banner-prompts",
@@ -1866,7 +1866,7 @@
       "### Why this small effort matters",
       "A thoughtful, on-brand banner is a small but genuine signal of professionalism and attention to detail, and it costs a fraction of the effort of a full profile overhaul — often the single highest-leverage, lowest-effort improvement available on an otherwise complete LinkedIn profile."
     ],
-    "authorName": "CreateLoom Editorial Team"
+    "authorName": "Create With Soumay Editorial Team"
   },
   {
     "id": "ai-concert-festival-photo-prompts",
@@ -1894,7 +1894,7 @@
       "### Where this fits",
       "This is a strong category for rescuing an entire weekend's worth of otherwise unusable festival photos rather than a single standout image — applying a consistent enhancement prompt across several shots from the same event creates a cohesive recap post rather than one polished photo standing alone among poor-quality ones."
     ],
-    "authorName": "CreateLoom Editorial Team"
+    "authorName": "Create With Soumay Editorial Team"
   },
   {
     "id": "ai-car-motorcycle-photo-prompts",
@@ -1922,7 +1922,7 @@
       "### Where this fits",
       "This category performs especially well as a before-and-after format, since the contrast between an ordinary parking-lot phone photo and the enhanced, showroom-style result is the entire appeal — posting both together generally outperforms the enhanced photo alone."
     ],
-    "authorName": "CreateLoom Editorial Team"
+    "authorName": "Create With Soumay Editorial Team"
   },
   {
     "id": "ai-sibling-family-photo-prompts",
@@ -1950,7 +1950,7 @@
       "### Where this fits",
       "This is a strong category for holiday and milestone content specifically, since real coordinated family photoshoots are logistically difficult to arrange — an AI version solves a genuine practical problem rather than existing purely as a novelty."
     ],
-    "authorName": "CreateLoom Editorial Team"
+    "authorName": "Create With Soumay Editorial Team"
   },
   {
     "id": "ai-grandparent-portrait-prompts",
@@ -1978,7 +1978,7 @@
       "### Where this fits",
       "This category tends to be shared privately more than publicly — sent directly to a family member rather than posted for a broad audience — which is worth keeping in mind when framing this kind of content; it doesn't need to chase reach the way a trend-driven post does to still be genuinely valuable."
     ],
-    "authorName": "CreateLoom Editorial Team"
+    "authorName": "Create With Soumay Editorial Team"
   },
   {
     "id": "instagram-highlight-covers-guide",
@@ -2005,7 +2005,7 @@
       "### A small effort with outsized impact",
       "Because highlight covers are visible on every single profile visit rather than tied to one specific post, a one-time investment in a cohesive set continues paying off on every new visitor's first impression indefinitely, unlike most content which has a limited visibility window."
     ],
-    "authorName": "CreateLoom Editorial Team"
+    "authorName": "Create With Soumay Editorial Team"
   },
   {
     "id": "cross-platform-growth-strategy",
@@ -2032,7 +2032,7 @@
       "### A practical starting point",
       "For most creators just beginning to cross-post, exporting clean watermark-free versions and adjusting only the caption per platform captures most of the available benefit without requiring a fully separate content strategy for each platform."
     ],
-    "authorName": "CreateLoom Editorial Team"
+    "authorName": "Create With Soumay Editorial Team"
   },
   {
     "id": "personal-brand-vs-niche-brand",
@@ -2059,7 +2059,7 @@
       "### A hybrid approach that often works",
       "Many successful creators build a niche brand first to establish clear positioning and faster initial growth, then gradually broaden into more personal content once an engaged audience already trusts the niche expertise — starting niche and expanding tends to be easier than starting broad and narrowing."
     ],
-    "authorName": "CreateLoom Editorial Team"
+    "authorName": "Create With Soumay Editorial Team"
   },
   {
     "id": "when-to-hire-help-solo-creator",
@@ -2086,7 +2086,7 @@
       "### What to keep doing yourself, even after hiring",
       "Creative direction, the core content concept, and direct audience relationship-building (comments, DMs, community engagement) are generally worth keeping in your own hands even as other tasks get delegated, since these are usually the parts of the work your audience is actually following you for."
     ],
-    "authorName": "CreateLoom Editorial Team"
+    "authorName": "Create With Soumay Editorial Team"
   },
   {
     "id": "membership-subscription-models-creators",
@@ -2113,7 +2113,7 @@
       "### A realistic expectation",
       "Membership income for most creators starts small and grows slowly alongside genuine audience trust — it rarely becomes a primary income source overnight, but for an already-engaged audience, it can become one of the more stable, low-maintenance components of a diversified income strategy over time."
     ],
-    "authorName": "CreateLoom Editorial Team"
+    "authorName": "Create With Soumay Editorial Team"
   },
   {
     "id": "taxes-for-creators-basics",
@@ -2139,7 +2139,7 @@
       "### When to bring in professional help",
       "Once creator income becomes a meaningful, regular part of your finances rather than occasional small payments, a conversation with a local accountant familiar with self-employment or creator income is worth the cost — the specific rules and available deductions vary enough by location that general information only goes so far."
     ],
-    "authorName": "CreateLoom Editorial Team"
+    "authorName": "Create With Soumay Editorial Team"
   },
   {
     "id": "tiktok-shop-instagram-shop-creators",
@@ -2166,7 +2166,7 @@
       "### A reasonable way to evaluate it",
       "If your content already features specific products naturally — the tools you use, the equipment in a photo, an item you'd recommend regardless of commission — enabling shop tagging on that existing content captures additional income with essentially no change to what you were already making."
     ],
-    "authorName": "CreateLoom Editorial Team"
+    "authorName": "Create With Soumay Editorial Team"
   },
   {
     "id": "best-ai-caption-generators",
@@ -2193,7 +2193,7 @@
       "### A reasonable workflow",
       "Generate several quick variations, pick the strongest starting point, then spend a minute personalizing it with a specific detail or your own phrasing — this captures most of the speed benefit of AI generation while avoiding the generic, slightly-off feeling that comes from posting an unedited AI caption."
     ],
-    "authorName": "CreateLoom Editorial Team"
+    "authorName": "Create With Soumay Editorial Team"
   },
   {
     "id": "best-ai-video-editing-tools-2026",
@@ -2220,7 +2220,7 @@
       "### When manual editing still wins",
       "For anything with precise creative timing — a joke that depends on exact pause length, a reveal that needs a specific beat — manual editing still outperforms automated suggestions, which are better at removing dead time than at judging comedic or dramatic timing."
     ],
-    "authorName": "CreateLoom Editorial Team"
+    "authorName": "Create With Soumay Editorial Team"
   },
   {
     "id": "best-ai-note-taking-apps-2026",
@@ -2247,7 +2247,7 @@
       "### Choosing based on what you already use",
       "If you already work inside Notion, Google Workspace, or another connected ecosystem, that platform's built-in AI note features are usually the path of least friction — a standalone note app only makes sense if it offers something meaningfully better than what's already available where your other work lives."
     ],
-    "authorName": "CreateLoom Editorial Team"
+    "authorName": "Create With Soumay Editorial Team"
   },
   {
     "id": "instagram-dm-automation-tools",
@@ -2274,7 +2274,7 @@
       "### A reasonable balance",
       "Automate the predictable, repetitive requests so your actual time goes toward genuine conversations and comments — the goal is freeing up capacity for real interaction, not replacing it entirely."
     ],
-    "authorName": "CreateLoom Editorial Team"
+    "authorName": "Create With Soumay Editorial Team"
   },
   {
     "id": "instagram-analytics-explained",
@@ -2302,7 +2302,7 @@
       "### A practical habit",
       "After each post, look specifically at the save and share numbers relative to your account's typical range, and treat any post significantly above that range as worth studying for what made it work — that pattern-recognition habit is more useful than reviewing every metric equally."
     ],
-    "authorName": "CreateLoom Editorial Team"
+    "authorName": "Create With Soumay Editorial Team"
   },
   {
     "id": "building-email-list-as-creator",
@@ -2329,7 +2329,7 @@
       "### Why this matters even for small accounts",
       "Building an email list habit early, even with a small list, means you're not scrambling to build one from scratch if a platform disruption ever meaningfully affects your reach — it's a form of insurance that costs very little effort to start building gradually alongside your regular content."
     ],
-    "authorName": "CreateLoom Editorial Team"
+    "authorName": "Create With Soumay Editorial Team"
   },
   {
     "id": "micro-to-macro-influencer",
@@ -2356,7 +2356,7 @@
       "### A realistic mindset",
       "Growing from micro to macro is less a single milestone and more a gradual shift in how the business side of content creation operates — treating it as an evolving set of new logistics rather than just \"more of the same but bigger\" makes the transition considerably smoother."
     ],
-    "authorName": "CreateLoom Editorial Team"
+    "authorName": "Create With Soumay Editorial Team"
   },
   {
     "id": "how-to-get-blue-checkmark-instagram",
@@ -2383,7 +2383,7 @@
       "### Is it actually worth it for a creator",
       "The badge itself provides a modest trust signal to new visitors and can reduce impersonation risk, but it isn't a meaningful growth lever on its own — it's worth considering primarily for the account protection features bundled with Meta Verified rather than expecting the badge itself to noticeably boost reach or follower growth."
     ],
-    "authorName": "CreateLoom Editorial Team"
+    "authorName": "Create With Soumay Editorial Team"
   },
   {
     "id": "instagram-monetization-bonus-programs",
@@ -2410,7 +2410,7 @@
       "### A realistic way to treat this income",
       "Given how much program availability and terms can shift, it's worth treating any Instagram bonus income as a variable bonus on top of a more diversified income strategy, rather than building financial plans around it as a guaranteed, stable income source."
     ],
-    "authorName": "CreateLoom Editorial Team"
+    "authorName": "Create With Soumay Editorial Team"
   },
   {
     "id": "handling-brand-deal-negotiations",
@@ -2437,7 +2437,7 @@
       "### Keeping the relationship intact",
       "Negotiating firmly and negotiating politely aren't in tension — clear, professional communication about your rates and terms, without hostility, keeps the door open for future collaboration even if a specific negotiation doesn't land exactly where you hoped."
     ],
-    "authorName": "CreateLoom Editorial Team"
+    "authorName": "Create With Soumay Editorial Team"
   },
   {
     "id": "writing-media-kit-that-gets-responses",
@@ -2464,7 +2464,7 @@
       "### Keeping it current",
       "A media kit with outdated follower counts or old example content undermines the professionalism it's meant to convey — updating it every few months, or whenever a genuinely strong new piece of content is published, keeps it accurate and as compelling as possible for the next pitch."
     ],
-    "authorName": "CreateLoom Editorial Team"
+    "authorName": "Create With Soumay Editorial Team"
   },
   {
     "id": "ai-passport-id-photo-prompts",
@@ -2492,7 +2492,7 @@
       "### A practical use case",
       "This category is most genuinely useful for previewing how a photo will look before an official photo session, or for a personal-use \"professional-style\" ID photo for something like a work badge or online profile that doesn't require the strict legal accuracy of an actual passport or government ID."
     ],
-    "authorName": "CreateLoom Editorial Team"
+    "authorName": "Create With Soumay Editorial Team"
   },
   {
     "id": "ai-food-photography-prompts",
@@ -2520,7 +2520,7 @@
       "### A practical workflow for a menu",
       "Photograph each dish once under reasonably consistent lighting, then apply the same enhancement style prompt across the full menu, which keeps the visual presentation cohesive across all listings rather than a mix of different photography styles and quality levels."
     ],
-    "authorName": "CreateLoom Editorial Team"
+    "authorName": "Create With Soumay Editorial Team"
   },
   {
     "id": "ai-doodle-sketch-overlay-prompts",
@@ -2548,7 +2548,7 @@
       "### Where this fits",
       "This overlay style works particularly well on casual, everyday photos rather than formal portraits, and pairs naturally with a personal, diary-style caption, since the whole aesthetic is built around a lighthearted, personal scrapbook feeling rather than a polished, editorial one."
     ],
-    "authorName": "CreateLoom Editorial Team"
+    "authorName": "Create With Soumay Editorial Team"
   },
   {
     "id": "best-ai-background-remover-tools",
@@ -2575,7 +2575,7 @@
       "### A reasonable default",
       "For occasional, one-off background removal needs, a free tool is almost always sufficient — reserve a paid subscription for genuinely regular, higher-volume, or detail-critical use cases where the edge quality difference actually matters to the final result."
     ],
-    "authorName": "CreateLoom Editorial Team"
+    "authorName": "Create With Soumay Editorial Team"
   },
   {
     "id": "ai-thumbnail-generator-prompts",
@@ -2603,7 +2603,7 @@
       "### What actually drives clicks",
       "Clarity at a glance beats artistic complexity every time for this specific format — a thumbnail that requires a second look to understand what it's showing has already lost to a competing thumbnail that communicated its idea instantly."
     ],
-    "authorName": "CreateLoom Editorial Team"
+    "authorName": "Create With Soumay Editorial Team"
   },
   {
     "id": "best-ai-voice-tools-creators",
@@ -2630,7 +2630,7 @@
       "### A reasonable approach",
       "Start with standard text-to-speech for lower-stakes content, and consider voice cloning specifically once you have a consistent narration need across a real content series — at that point, the time savings usually justify the setup, provided you've reviewed the tool's actual protections around your voice data."
     ],
-    "authorName": "CreateLoom Editorial Team"
+    "authorName": "Create With Soumay Editorial Team"
   },
   {
     "id": "best-ai-tools-podcasters",
@@ -2657,7 +2657,7 @@
       "### A realistic expectation",
       "AI tools meaningfully reduce the time cost of podcast post-production, particularly for solo creators without a dedicated editor, but they work best as an assistant handling the repetitive first pass rather than a full replacement for a final human editorial review."
     ],
-    "authorName": "CreateLoom Editorial Team"
+    "authorName": "Create With Soumay Editorial Team"
   },
   {
     "id": "instagram-verified-vs-meta-verified",
@@ -2684,7 +2684,7 @@
       "### A grounded way to think about it",
       "Neither path is a meaningful growth lever on its own — the badge provides a modest trust signal and some protection against impersonation, but content quality and consistency remain far more important drivers of actual audience growth than verification status."
     ],
-    "authorName": "CreateLoom Editorial Team"
+    "authorName": "Create With Soumay Editorial Team"
   },
   {
     "id": "ai-collage-scrapbook-prompts",
@@ -2712,7 +2712,7 @@
       "### Where this fits",
       "This format works particularly well as a monthly or trip recap post, since it's specifically built to compile several individual moments into one cohesive piece rather than requiring a single standout photo the way most other formats do."
     ],
-    "authorName": "CreateLoom Editorial Team"
+    "authorName": "Create With Soumay Editorial Team"
   },
   {
     "id": "ai-moody-dark-aesthetic-prompts",
@@ -2740,7 +2740,7 @@
       "### Where this fits",
       "This aesthetic tends to work best for solo portraits with a serious or introspective mood, and less well for group photos or celebratory content, where the darker, more serious tone can feel mismatched with a lighter subject matter."
     ],
-    "authorName": "CreateLoom Editorial Team"
+    "authorName": "Create With Soumay Editorial Team"
   },
   {
     "id": "watermark-removal-legal-guide",
@@ -2767,7 +2767,7 @@
       "### A simple rule of thumb",
       "If you didn't create the original content and don't have clear licensed rights to modify it, removing a watermark doesn't change the underlying ownership of the image — it just removes the visible signal of whose it is, which doesn't resolve the actual rights issue and can create real legal exposure."
     ],
-    "authorName": "CreateLoom Editorial Team"
+    "authorName": "Create With Soumay Editorial Team"
   },
   {
     "id": "best-ai-photo-enhancer-apps",
@@ -2794,7 +2794,7 @@
       "### A practical two-step workflow",
       "For an old, low-quality photo you want to both restore and stylistically transform, it's often more reliable to run a basic enhancement pass first to improve resolution and clarity, then apply a creative transformation prompt to the improved version, rather than trying to accomplish both in a single step."
     ],
-    "authorName": "CreateLoom Editorial Team"
+    "authorName": "Create With Soumay Editorial Team"
   },
   {
     "id": "negotiating-usage-rights-exclusivity",
@@ -2821,7 +2821,7 @@
       "### Why this matters more as you grow",
       "As your audience and rates grow, these bundled terms become proportionally more valuable to brands and proportionally more important to negotiate explicitly — a term that seemed minor at a smaller scale can represent significant unpriced value once your content and reach are worth more."
     ],
-    "authorName": "CreateLoom Editorial Team"
+    "authorName": "Create With Soumay Editorial Team"
   },
   {
     "id": "instagram-close-friends-strategy",
@@ -2848,6 +2848,6 @@
       "### Why this is worth the small effort",
       "A small, genuinely engaged Close Friends audience often produces disproportionately strong interaction relative to its size, and the goodwill built through that closer access can pay off later if you eventually launch a paid membership tier or need a highly engaged group for a launch or announcement."
     ],
-    "authorName": "CreateLoom Editorial Team"
+    "authorName": "Create With Soumay Editorial Team"
   }
 ]
