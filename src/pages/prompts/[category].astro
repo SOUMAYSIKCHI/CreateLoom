@@ -136,35 +136,13 @@ const toolFilters = ['All', 'ChatGPT', 'Gemini', 'Nano Banana', 'Midjourney'];
           </div>
 
           <h2>
-            Ready-to-use {category.toLowerCase()} prompts
+            Ready-to-use {category} AI image prompts
           </h2>
 
-          <p class="category-seo-intro">
-            {categorySeoContent}
-          </p>
-
-          <p>
-            Browse ready-to-use {category.toLowerCase()} AI image prompts for
-            realistic photo editing, portraits, social media content and
-            creative image generation. Copy a prompt, customize the subject,
-            pose, outfit, background, lighting and camera style, then adapt it
-            for your preferred AI image generator.
-          </p>
-
-          <p>
-            These prompts are designed for supported image-generation workflows
-            with tools such as <strong>ChatGPT, Google Gemini, Nano Banana and
-            Midjourney</strong>. For photo-editing prompts, use your own image
-            when the selected tool supports image input and follow the identity
-            preservation instructions in the individual prompt.
-          </p>
-
-          <p>
-            Looking for more creator resources? Explore the
-            <a href="/creator-hub/">Instagram Creator Hub</a> for Reel ideas
-            and growth resources, or use the
-            <a href="/creator-tools/trending-hashtags/">trending Instagram hashtags</a>
-            tool for social content.
+          <p class="category-short-intro">
+            Explore free {category} AI image prompts and ready-to-use photo
+            editing ideas for realistic portraits, social media content and
+            creative image generation.
           </p>
 
         </div>
@@ -319,6 +297,68 @@ const toolFilters = ['All', 'ChatGPT', 'Gemini', 'Nano Banana', 'Midjourney'];
           <span>{term}</span>
         ))}
       </div>
+    </div>
+  </section>
+
+
+  <!-- SEO Content -->
+  <section class="section category-seo-section">
+    <div class="container narrow">
+
+      <div class="eyebrow">About {category} AI Prompts</div>
+
+      <h2>
+        {category} AI Image Prompts, Photo Editing Ideas &amp; Creative Concepts
+      </h2>
+
+      <p>
+        {categorySeoContent}
+      </p>
+
+      <p>
+        Browse ready-to-use {category.toLowerCase()} AI image prompts for
+        realistic photo editing, portraits, social media content and creative
+        image generation. Copy a prompt, customize the subject, pose, outfit,
+        background, lighting and camera style, then adapt it for your preferred
+        AI image generator.
+      </p>
+
+      <p>
+        These prompts are designed for supported image-generation workflows
+        with tools such as <strong>ChatGPT, Google Gemini, Nano Banana and
+        Midjourney</strong>. For photo-editing prompts, use your own image when
+        the selected tool supports image input and follow the identity
+        preservation instructions in the individual prompt.
+      </p>
+
+      {isNavratri && (
+        <p>
+          Looking for <strong>Navratri AI image prompts</strong>,
+          <strong>Navratri photo editing prompts</strong>,
+          <strong>Navratri prompts for Gemini</strong>,
+          <strong>Nano Banana Navratri prompts</strong>,
+          <strong>Garba photo prompts</strong> or
+          <strong>Dandiya AI photo prompts</strong>? This collection brings
+          those festive visual ideas together, including realistic Garba-night
+          portraits, traditional outfits, festive selfies, boys' Navratri
+          looks and romantic Navratri couple photos.
+        </p>
+      )}
+
+      <p>
+        Looking for more creator resources? Explore the
+        <a href="/creator-hub/">Instagram Creator Hub</a> for Reel ideas and
+        growth resources, or use the
+        <a href="/creator-tools/trending-hashtags/">trending Instagram hashtags</a>
+        tool for social content.
+      </p>
+
+      <div class="keyword-pills" aria-label="{category} search topics">
+        {searchTerms.slice(0, 8).map((term) => (
+          <span>{term}</span>
+        ))}
+      </div>
+
     </div>
   </section>
 
@@ -816,7 +856,13 @@ const toolFilters = ['All', 'ChatGPT', 'Gemini', 'Nano Banana', 'Midjourney'];
     color: #fff;
   }
 
-  .category-seo-section {
+  .category-short-intro {
+  max-width: 760px;
+  margin: 0;
+  line-height: 1.75;
+}
+
+.category-seo-section {
     background: rgba(255,255,255,0.015);
   }
 
