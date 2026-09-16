@@ -138,45 +138,7 @@ const cats = categoryItems.map((item) => item.category);
       <div class="section-heading">
         <div>
           <div class="eyebrow">Start here</div>
-          <h2>Featured AI Prompts</h2>
-          <p>
-            Popular concepts to help you get started quickly.
-          </p>
-        </div>
-
-        <a href="#browse-categories" class="text-link">
-          Browse categories →
-        </a>
-      </div>
-
-      <div class="featured-grid">
-
-        {featured.map((p) => (
-          <a
-            class="featured-card"
-            href={`/prompt/${p.id}/`}
-          >
-            <span>{p.category}</span>
-
-            <h3>{p.title}</h3>
-
-            <p>
-              {p.description || `A ready-to-use ${p.category.toLowerCase()} AI image prompt.`}
-            </p>
-
-            <strong>
-              View prompt →
-            </strong>
-          </a>
-        ))}
-
-      </div>
-
-    </div>
-  </section>
-
-
-  <!-- Browse All Categories -->
+          <h2>  <!-- Browse All Categories -->
   <section class="section category-preview-section" id="browse-categories">
     <div class="container">
 
@@ -321,7 +283,6 @@ const cats = categoryItems.map((item) => item.category);
   </section>
 
 
-
   <!-- SEO Content -->
   <section class="section seo-section">
 
@@ -406,7 +367,6 @@ const cats = categoryItems.map((item) => item.category);
     </div>
 
   </section>
-
 
 
   <!-- Prompt library structured data -->
