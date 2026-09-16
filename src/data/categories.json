@@ -408,8 +408,7 @@
         "cinematic"
       ],
       "h1": "Aesthetic AI Photo Prompts",
-      "indexable": false,
-      "noIndexReason": "Keep this category available for visitors, but do not index it until the collection has enough distinct prompts to support a useful standalone search result."
+      "indexable": true
     },
     {
       "id": "fashion",
@@ -1057,8 +1056,7 @@
         "portrait"
       ],
       "h1": "Birthday AI Photo Prompts",
-      "indexable": false,
-      "noIndexReason": "Keep this category available for visitors, but do not index it until the collection has enough distinct prompts to support a useful standalone search result."
+      "indexable": true
     },
     {
       "id": "celebration",
@@ -1302,8 +1300,7 @@
         "wedding"
       ],
       "h1": "Traditional Outfit AI Photo Prompts",
-      "indexable": false,
-      "noIndexReason": "Keep this category available for visitors, but do not index it until the collection has enough distinct prompts to support a useful standalone search result."
+      "indexable": true
     },
     {
       "id": "wedding",
@@ -1385,8 +1382,7 @@
         "portrait"
       ],
       "h1": "Wedding & Pre-Wedding AI Photo Prompts",
-      "indexable": false,
-      "noIndexReason": "Keep this category available for visitors, but do not index it until the collection has enough distinct prompts to support a useful standalone search result."
+      "indexable": true
     },
     {
       "id": "anime",
@@ -1467,8 +1463,7 @@
         "vintage"
       ],
       "h1": "Anime-Inspired AI Image Prompts",
-      "indexable": false,
-      "noIndexReason": "Keep this category available for visitors, but do not index it until the collection has enough distinct prompts to support a useful standalone search result."
+      "indexable": true
     },
     {
       "id": "friends",
@@ -1549,8 +1544,7 @@
         "travel"
       ],
       "h1": "Friends & Group AI Photo Prompts",
-      "indexable": false,
-      "noIndexReason": "Keep this category available for visitors, but do not index it until the collection has enough distinct prompts to support a useful standalone search result."
+      "indexable": true
     },
     {
       "id": "men",
@@ -1631,8 +1625,7 @@
         "traditional"
       ],
       "h1": "AI Photo Prompts for Men",
-      "indexable": false,
-      "noIndexReason": "Keep this category available for visitors, but do not index it until the collection has enough distinct prompts to support a useful standalone search result."
+      "indexable": true
     },
     {
       "id": "music",
@@ -1714,8 +1707,7 @@
         "men"
       ],
       "h1": "Music & Artist AI Photo Prompts",
-      "indexable": false,
-      "noIndexReason": "Keep this category available for visitors, but do not index it until the collection has enough distinct prompts to support a useful standalone search result."
+      "indexable": true
     },
     {
       "id": "women",
@@ -1796,8 +1788,7 @@
         "traditional"
       ],
       "h1": "AI Photo Prompts for Women",
-      "indexable": false,
-      "noIndexReason": "Keep this category available for visitors, but do not index it until the collection has enough distinct prompts to support a useful standalone search result."
+      "indexable": true
     }
   ]
 }
