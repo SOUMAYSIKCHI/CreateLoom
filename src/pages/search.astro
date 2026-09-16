@@ -2,14 +2,17 @@
 import Layout from '../layouts/Layout.astro';
 import prompts from '../data/prompts.json';
 import blogs from '../data/blogs.json';
+import { isPublished } from '../lib/publication.js';
+
+const publishedBlogs = blogs.filter((blog) => isPublished(blog.date));
 
 const searchData = {
   prompts,
-  blogs
+  blogs: publishedBlogs
 };
 
 const promptCategories = [...new Set(prompts.map((p) => p.category))].sort();
-const blogCategories = [...new Set(blogs.map((b) => b.category))].sort();
+const blogCategories = [...new Set(publishedBlogs.map((b) => b.category))].sort();
 ---
 
 <Layout
