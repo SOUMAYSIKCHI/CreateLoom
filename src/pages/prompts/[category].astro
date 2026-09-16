@@ -28,8 +28,6 @@ export function getStaticPaths() {
     .filter((entry) => entry.props.prompts.length > 0);
 }
 
-const categories = categoriesData.categories || categoriesData;
-
 const {
   category,
   categoryMeta,
