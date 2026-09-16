@@ -4,8 +4,9 @@ import PromptCard from '../../components/PromptCard.astro';
 import prompts from '../../data/prompts.json';
 import categoriesData from '../../data/categories.json';
 
+const categories = categoriesData.categories || categoriesData;
+
 export function getStaticPaths() {
-  const categories = categoriesData.categories || categoriesData;
 
   return categories
     .filter((meta) => meta.slug !== 'all' && meta.slug !== 'trending')
@@ -43,6 +44,25 @@ const categorySeoContent =
   categoryMeta?.categoryIntro ||
   description;
 
+const categoryIntro =
+  categoryMeta?.categoryIntro ||
+  description;
+
+const relatedCategories = (categoryMeta?.relatedCategories || [])
+  .map((slug) => categories.find((meta) => meta.slug === slug))
+  .filter((meta) => meta && meta.indexable !== false)
+  .slice(0, 4);
+
+const categoryH1 =
+  categoryMeta?.h1 ||
+  `${category} AI Prompts`;
+
+const seoHeading =
+  categoryMeta?.seoHeading ||
+  `${category} AI Image Prompts`;
+
+const isIndexable = categoryMeta?.indexable !== false;
+
 const searchTerms = Array.isArray(categoryMeta?.searchTerms)
   ? categoryMeta.searchTerms
   : [];
@@ -69,8 +89,6 @@ const pageKeywords = searchTerms.length
   ? searchTerms.join(', ')
   : `${category.toLowerCase()} ai image prompts, ${category.toLowerCase()} ai photo editing prompts, ${category.toLowerCase()} prompts`;
 
-const isNavratri = categoryMeta?.slug === 'navratri';
-
 const typeFilters = ['All', 'Boy', 'Girl', 'Couple', 'Unisex'];
 const toolFilters = ['All', 'ChatGPT', 'Gemini', 'Nano Banana', 'Midjourney'];
 ---
@@ -78,6 +96,7 @@ const toolFilters = ['All', 'ChatGPT', 'Gemini', 'Nano Banana', 'Midjourney'];
 <Layout
   title={pageTitle}
   description={description}
+  robots={isIndexable ? 'index, follow' : 'noindex, follow'}
   active="Prompts"
 >
 
@@ -99,8 +118,7 @@ const toolFilters = ['All', 'ChatGPT', 'Gemini', 'Nano Banana', 'Midjourney'];
       </div>
 
       <h1>
-        <span class="gradient-text">{category} </span>
-        AI Prompts
+        <span class="gradient-text">{categoryH1}</span>
       </h1>
 
       <p class="hero-description">
@@ -136,13 +154,11 @@ const toolFilters = ['All', 'ChatGPT', 'Gemini', 'Nano Banana', 'Midjourney'];
           </div>
 
           <h2>
-            Ready-to-use {category} AI image prompts
+            {categoryIntro}
           </h2>
 
           <p class="category-short-intro">
-            Explore free {category} AI image prompts and ready-to-use photo
-            editing ideas for realistic portraits, social media content and
-            creative image generation.
+            {categoryMeta?.shortDescription || description}
           </p>
 
         </div>
@@ -271,56 +287,39 @@ const toolFilters = ['All', 'ChatGPT', 'Gemini', 'Nano Banana', 'Midjourney'];
   <section class="section category-seo-section">
     <div class="container narrow">
 
-      <div class="eyebrow">About {category} AI Prompts</div>
+      <div class="eyebrow">About {category}</div>
 
       <h2>
-        {category} AI Image Prompts, Photo Editing Ideas &amp; Creative Concepts
+        {seoHeading}
       </h2>
 
-      <p>
+      <p class="category-seo-intro">
         {categorySeoContent}
       </p>
 
       <p>
-        Browse ready-to-use {category.toLowerCase()} AI image prompts for
-        realistic photo editing, portraits, social media content and creative
-        image generation. Copy a prompt, customize the subject, pose, outfit,
-        background, lighting and camera style, then adapt it for your preferred
-        AI image generator.
+        Need more ideas after this collection? Explore the related categories
+        below, or use the <a href="/prompts/">full AI prompt library</a> to
+        compare different visual styles.
       </p>
 
-      <p>
-        These prompts are designed for supported image-generation workflows
-        with tools such as <strong>ChatGPT, Google Gemini, Nano Banana and
-        Midjourney</strong>. For photo-editing prompts, use your own image when
-        the selected tool supports image input and follow the identity
-        preservation instructions in the individual prompt.
-      </p>
-
-      {isNavratri && (
-        <p>
-          Looking for <strong>Navratri AI image prompts</strong>,
-          <strong>Navratri photo editing prompts</strong>,
-          <strong>Navratri prompts for Gemini</strong>,
-          <strong>Nano Banana Navratri prompts</strong>,
-          <strong>Garba photo prompts</strong> or
-          <strong>Dandiya AI photo prompts</strong>? This collection brings
-          those festive visual ideas together, including realistic Garba-night
-          portraits, traditional outfits, festive selfies, boys' Navratri
-          looks and romantic Navratri couple photos.
-        </p>
+      {relatedCategories.length > 0 && (
+        <div class="related-category-links" aria-labelledby="related-categories-heading">
+          <div class="related-category-label" id="related-categories-heading">
+            Related prompt categories
+          </div>
+          <div class="related-category-list">
+            {relatedCategories.map((meta) => (
+              <a href={`/prompts/${meta.slug}/`}>
+                {meta.name}
+              </a>
+            ))}
+          </div>
+        </div>
       )}
 
-      <p>
-        Looking for more creator resources? Explore the
-        <a href="/creator-hub/">Instagram Creator Hub</a> for Reel ideas and
-        growth resources, or use the
-        <a href="/creator-tools/trending-hashtags/">trending Instagram hashtags</a>
-        tool for social content.
-      </p>
-
       <div class="keyword-pills" aria-label="{category} search topics">
-        {searchTerms.slice(0, 8).map((term) => (
+        {searchTerms.slice(0, 5).map((term) => (
           <span>{term}</span>
         ))}
       </div>
@@ -401,6 +400,28 @@ const toolFilters = ['All', 'ChatGPT', 'Gemini', 'Nano Banana', 'Midjourney'];
 
   </section>
 
+
+  <!-- Category FAQs -->
+  {Array.isArray(categoryMeta?.faq) && categoryMeta.faq.length > 0 && (
+    <section class="section category-faq-section">
+      <div class="container narrow">
+        <div class="eyebrow">Common questions</div>
+
+        <h2>
+          {categoryMeta?.faqTitle || `Questions about ${category} prompts`}
+        </h2>
+
+        <div class="faq-list">
+          {categoryMeta.faq.map((item) => (
+            <details class="faq-item">
+              <summary>{item.question}</summary>
+              <p>{item.answer}</p>
+            </details>
+          ))}
+        </div>
+      </div>
+    </section>
+  )}
 
   <!-- Related Prompts -->
   {related.length > 0 && (
@@ -783,6 +804,76 @@ const toolFilters = ['All', 'ChatGPT', 'Gemini', 'Nano Banana', 'Midjourney'];
 
   .category-seo-intro {
     font-size: 1rem;
+  }
+
+  .related-category-links {
+    margin-top: 28px;
+    padding-top: 22px;
+    border-top: 1px solid rgba(255,255,255,0.06);
+  }
+
+  .related-category-label {
+    margin-bottom: 11px;
+    color: #d7d7df;
+    font-size: .78rem;
+    font-weight: 800;
+  }
+
+  .related-category-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 9px;
+  }
+
+  .related-category-list a {
+    padding: 8px 12px;
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 999px;
+    color: #c4b5fd;
+    background: rgba(255,255,255,0.02);
+    font-size: .78rem;
+    font-weight: 700;
+    text-decoration: none;
+  }
+
+  .related-category-list a:hover {
+    border-color: rgba(139,92,246,0.4);
+    background: rgba(139,92,246,0.08);
+  }
+
+  .category-faq-section {
+    background: rgba(255,255,255,0.015);
+  }
+
+  .category-faq-section h2 {
+    margin: 8px 0 22px;
+  }
+
+  .faq-list {
+    display: grid;
+    gap: 10px;
+  }
+
+  .faq-item {
+    border: 1px solid rgba(255,255,255,0.07);
+    border-radius: 15px;
+    background: rgba(255,255,255,0.02);
+    overflow: hidden;
+  }
+
+  .faq-item summary {
+    padding: 17px 18px;
+    color: #fff;
+    font-weight: 750;
+    cursor: pointer;
+    list-style-position: inside;
+  }
+
+  .faq-item p {
+    margin: 0;
+    padding: 0 18px 18px;
+    color: #c7c7cf;
+    line-height: 1.75;
   }
 
   .keyword-pills {
