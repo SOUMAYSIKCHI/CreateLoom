@@ -181,9 +181,7 @@ const webPageSchema = {
   description: pageDescription,
   url: canonicalUrl.href,
   isPartOf: {
-    '@type': 'WebSite',
-    name: 'Create With Soumay',
-    url: `${siteUrl}/`
+    '@id': `${siteUrl}/#website`
   },
   about: {
     '@type': 'Thing',
@@ -256,36 +254,7 @@ const howToSchema = {
   ]
 };
 
-const breadcrumbSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'BreadcrumbList',
-  itemListElement: [
-    {
-      '@type': 'ListItem',
-      position: 1,
-      name: 'Home',
-      item: `${siteUrl}/`
-    },
-    {
-      '@type': 'ListItem',
-      position: 2,
-      name: 'AI Prompts',
-      item: `${siteUrl}/prompts/`
-    },
-    {
-      '@type': 'ListItem',
-      position: 3,
-      name: p.category,
-      item: `${siteUrl}/prompts/${p.category.toLowerCase()}/`
-    },
-    {
-      '@type': 'ListItem',
-      position: 4,
-      name: p.title,
-      item: canonicalUrl.href
-    }
-  ]
-};
+
 ---
 
 <Layout
@@ -299,11 +268,6 @@ const breadcrumbSchema = {
   <script
     type="application/ld+json"
     set:html={JSON.stringify(webPageSchema)}
-  />
-
-  <script
-    type="application/ld+json"
-    set:html={JSON.stringify(breadcrumbSchema)}
   />
 
   <script
@@ -1370,4 +1334,3 @@ const breadcrumbSchema = {
     }
   }
 </style>
-```
