@@ -51,7 +51,8 @@
       "Use a clear reference image when identity consistency matters.",
       "Describe any clothing, location or prop you want to change before generating.",
       "If your generator supports image references, keep the reference strength high enough to preserve recognizable features."
-    ]
+    ],
+    "preview": true
   },
   {
     "noId": 2,
@@ -105,7 +106,8 @@
       "Use a clear reference image when identity consistency matters.",
       "Describe any clothing, location or prop you want to change before generating.",
       "If your generator supports image references, keep the reference strength high enough to preserve recognizable features."
-    ]
+    ],
+    "preview": true
   },
   {
     "noId": 3,
@@ -160,7 +162,8 @@
       "Use a clear reference image when identity consistency matters.",
       "Describe any clothing, location or prop you want to change before generating.",
       "If your generator supports image references, keep the reference strength high enough to preserve recognizable features."
-    ]
+    ],
+    "preview": true
   },
   {
     "noId": 4,
@@ -214,7 +217,8 @@
       "Use a clear reference image when identity consistency matters.",
       "Describe any clothing, location or prop you want to change before generating.",
       "If your generator supports image references, keep the reference strength high enough to preserve recognizable features."
-    ]
+    ],
+    "preview": true
   },
   {
     "noId": 5,
@@ -270,7 +274,8 @@
     "trendStatus": "hot",
     "trendSource": "editorial",
     "createdAt": "2026-09-14",
-    "updatedAt": "2026-09-16"
+    "updatedAt": "2026-09-16",
+    "preview": true
   },
   {
     "noId": 6,
@@ -327,7 +332,8 @@
     "trendStatus": "current",
     "trendSource": "editorial",
     "createdAt": "2026-09-14",
-    "updatedAt": "2026-09-16"
+    "updatedAt": "2026-09-16",
+    "preview": true
   },
   {
     "noId": 7,
@@ -384,7 +390,8 @@
     "trendStatus": "current",
     "trendSource": "editorial",
     "createdAt": "2026-09-14",
-    "updatedAt": "2026-09-16"
+    "updatedAt": "2026-09-16",
+    "preview": true
   },
   {
     "noId": 8,
@@ -440,7 +447,8 @@
     "trendStatus": "rising",
     "trendSource": "editorial",
     "createdAt": "2026-09-14",
-    "updatedAt": "2026-09-16"
+    "updatedAt": "2026-09-16",
+    "preview": true
   },
   {
     "noId": 9,
@@ -495,7 +503,8 @@
     "trendStatus": "current",
     "trendSource": "editorial",
     "createdAt": "2026-09-14",
-    "updatedAt": "2026-09-16"
+    "updatedAt": "2026-09-16",
+    "preview": true
   },
   {
     "noId": 10,
@@ -551,7 +560,8 @@
     "trendStatus": "hot",
     "trendSource": "editorial",
     "createdAt": "2026-09-14",
-    "updatedAt": "2026-09-16"
+    "updatedAt": "2026-09-16",
+    "preview": true
   },
   {
     "noId": 11,
@@ -607,7 +617,8 @@
     "trendStatus": "seasonal",
     "trendSource": "editorial",
     "createdAt": "2026-09-14",
-    "updatedAt": "2026-09-16"
+    "updatedAt": "2026-09-16",
+    "preview": true
   },
   {
     "noId": 12,
@@ -663,7 +674,8 @@
     "trendStatus": "current",
     "trendSource": "editorial",
     "createdAt": "2026-09-14",
-    "updatedAt": "2026-09-16"
+    "updatedAt": "2026-09-16",
+    "preview": true
   },
   {
     "noId": 13,
@@ -719,7 +731,8 @@
     "trendStatus": "current",
     "trendSource": "editorial",
     "createdAt": "2026-09-14",
-    "updatedAt": "2026-09-16"
+    "updatedAt": "2026-09-16",
+    "preview": true
   },
   {
     "noId": 14,
@@ -774,7 +787,8 @@
     "trendStatus": "current",
     "trendSource": "editorial",
     "createdAt": "2026-09-14",
-    "updatedAt": "2026-09-16"
+    "updatedAt": "2026-09-16",
+    "preview": true
   },
   {
     "noId": 15,
@@ -829,7 +843,8 @@
     "trendStatus": "rising",
     "trendSource": "editorial",
     "createdAt": "2026-09-14",
-    "updatedAt": "2026-09-16"
+    "updatedAt": "2026-09-16",
+    "preview": true
   },
   {
     "noId": 16,
@@ -899,7 +914,8 @@
     "trendStatus": "hot",
     "trendSource": "editorial",
     "createdAt": "2026-09-14",
-    "updatedAt": "2026-09-16"
+    "updatedAt": "2026-09-16",
+    "preview": true
   },
   {
     "noId": 17,
@@ -955,7 +971,8 @@
     "trendStatus": "current",
     "trendSource": "editorial",
     "createdAt": "2026-09-14",
-    "updatedAt": "2026-09-16"
+    "updatedAt": "2026-09-16",
+    "preview": true
   },
   {
     "noId": 18,
@@ -1011,7 +1028,8 @@
     "trendStatus": "rising",
     "trendSource": "editorial",
     "createdAt": "2026-09-14",
-    "updatedAt": "2026-09-16"
+    "updatedAt": "2026-09-16",
+    "preview": true
   },
   {
     "noId": 19,
@@ -1067,7 +1085,8 @@
     "trendStatus": "rising",
     "trendSource": "editorial",
     "createdAt": "2026-09-14",
-    "updatedAt": "2026-09-16"
+    "updatedAt": "2026-09-16",
+    "preview": true
   },
   {
     "noId": 20,
@@ -1123,7 +1142,8 @@
     "trendStatus": "current",
     "trendSource": "editorial",
     "createdAt": "2026-09-14",
-    "updatedAt": "2026-09-16"
+    "updatedAt": "2026-09-16",
+    "preview": true
   },
   {
     "noId": 21,
@@ -1178,7 +1198,8 @@
     "trendStatus": "rising",
     "trendSource": "editorial",
     "createdAt": "2026-09-14",
-    "updatedAt": "2026-09-16"
+    "updatedAt": "2026-09-16",
+    "preview": true
   },
   {
     "noId": 22,
@@ -1234,7 +1255,8 @@
     "trendStatus": "seasonal",
     "trendSource": "editorial",
     "createdAt": "2026-09-14",
-    "updatedAt": "2026-09-16"
+    "updatedAt": "2026-09-16",
+    "preview": true
   },
   {
     "noId": 23,
@@ -1291,7 +1313,8 @@
     "trendStatus": "current",
     "trendSource": "editorial",
     "createdAt": "2026-09-14",
-    "updatedAt": "2026-09-16"
+    "updatedAt": "2026-09-16",
+    "preview": true
   },
   {
     "noId": 24,
@@ -1348,7 +1371,8 @@
     "trendStatus": "current",
     "trendSource": "editorial",
     "createdAt": "2026-09-14",
-    "updatedAt": "2026-09-16"
+    "updatedAt": "2026-09-16",
+    "preview": true
   },
   {
     "noId": 25,
@@ -1405,7 +1429,8 @@
     "trendStatus": "current",
     "trendSource": "editorial",
     "createdAt": "2026-09-14",
-    "updatedAt": "2026-09-16"
+    "updatedAt": "2026-09-16",
+    "preview": true
   },
   {
     "noId": 26,
@@ -1462,7 +1487,8 @@
     "trendStatus": "current",
     "trendSource": "editorial",
     "createdAt": "2026-09-14",
-    "updatedAt": "2026-09-16"
+    "updatedAt": "2026-09-16",
+    "preview": true
   },
   {
     "noId": 27,
@@ -1519,7 +1545,8 @@
     "trendStatus": "current",
     "trendSource": "editorial",
     "createdAt": "2026-09-14",
-    "updatedAt": "2026-09-16"
+    "updatedAt": "2026-09-16",
+    "preview": true
   },
   {
     "noId": 28,
@@ -1576,7 +1603,8 @@
     "trendStatus": "current",
     "trendSource": "editorial",
     "createdAt": "2026-09-14",
-    "updatedAt": "2026-09-16"
+    "updatedAt": "2026-09-16",
+    "preview": true
   },
   {
     "noId": 29,
@@ -1633,7 +1661,8 @@
     "trendStatus": "current",
     "trendSource": "editorial",
     "createdAt": "2026-09-14",
-    "updatedAt": "2026-09-16"
+    "updatedAt": "2026-09-16",
+    "preview": true
   },
   {
     "noId": 30,
@@ -1690,7 +1719,8 @@
     "trendStatus": "current",
     "trendSource": "editorial",
     "createdAt": "2026-09-14",
-    "updatedAt": "2026-09-16"
+    "updatedAt": "2026-09-16",
+    "preview": true
   },
   {
     "noId": 31,
@@ -1747,7 +1777,8 @@
     "trendStatus": "current",
     "trendSource": "editorial",
     "createdAt": "2026-09-14",
-    "updatedAt": "2026-09-16"
+    "updatedAt": "2026-09-16",
+    "preview": false
   },
   {
     "noId": 32,
@@ -1804,7 +1835,8 @@
     "trendStatus": "current",
     "trendSource": "editorial",
     "createdAt": "2026-09-14",
-    "updatedAt": "2026-09-16"
+    "updatedAt": "2026-09-16",
+    "preview": true
   },
   {
     "noId": 33,
@@ -1861,7 +1893,8 @@
     "trendStatus": "current",
     "trendSource": "editorial",
     "createdAt": "2026-09-14",
-    "updatedAt": "2026-09-16"
+    "updatedAt": "2026-09-16",
+    "preview": true
   },
   {
     "noId": 34,
@@ -1918,7 +1951,8 @@
     "trendStatus": "current",
     "trendSource": "editorial",
     "createdAt": "2026-09-14",
-    "updatedAt": "2026-09-16"
+    "updatedAt": "2026-09-16",
+    "preview": true
   },
   {
     "noId": 35,
@@ -1975,7 +2009,8 @@
     "trendStatus": "current",
     "trendSource": "editorial",
     "createdAt": "2026-09-14",
-    "updatedAt": "2026-09-16"
+    "updatedAt": "2026-09-16",
+    "preview": true
   },
   {
     "noId": 36,
@@ -2032,7 +2067,8 @@
     "trendStatus": "current",
     "trendSource": "editorial",
     "createdAt": "2026-09-14",
-    "updatedAt": "2026-09-16"
+    "updatedAt": "2026-09-16",
+    "preview": true
   },
   {
     "noId": 37,
@@ -2089,7 +2125,8 @@
     "trendStatus": "current",
     "trendSource": "editorial",
     "createdAt": "2026-09-14",
-    "updatedAt": "2026-09-16"
+    "updatedAt": "2026-09-16",
+    "preview": true
   },
   {
     "noId": 38,
@@ -2146,7 +2183,8 @@
     "trendStatus": "current",
     "trendSource": "editorial",
     "createdAt": "2026-09-14",
-    "updatedAt": "2026-09-16"
+    "updatedAt": "2026-09-16",
+    "preview": true
   },
   {
     "noId": 39,
@@ -2200,7 +2238,8 @@
     "trendStatus": "current",
     "trendSource": "editorial",
     "createdAt": "2026-09-14",
-    "updatedAt": "2026-09-16"
+    "updatedAt": "2026-09-16",
+    "preview": true
   },
   {
     "noId": 40,
@@ -2254,7 +2293,8 @@
     "trendStatus": "current",
     "trendSource": "editorial",
     "createdAt": "2026-09-14",
-    "updatedAt": "2026-09-16"
+    "updatedAt": "2026-09-16",
+    "preview": false
   },
   {
     "noId": 41,
@@ -2308,7 +2348,8 @@
     "trendStatus": "current",
     "trendSource": "editorial",
     "createdAt": "2026-09-14",
-    "updatedAt": "2026-09-16"
+    "updatedAt": "2026-09-16",
+    "preview": true
   },
   {
     "noId": 42,
@@ -2362,7 +2403,8 @@
     "trendStatus": "current",
     "trendSource": "editorial",
     "createdAt": "2026-09-14",
-    "updatedAt": "2026-09-16"
+    "updatedAt": "2026-09-16",
+    "preview": true
   },
   {
     "noId": 43,
@@ -2416,7 +2458,8 @@
     "trendStatus": "current",
     "trendSource": "editorial",
     "createdAt": "2026-09-14",
-    "updatedAt": "2026-09-16"
+    "updatedAt": "2026-09-16",
+    "preview": false
   },
   {
     "noId": 44,
@@ -2470,7 +2513,8 @@
     "trendStatus": "current",
     "trendSource": "editorial",
     "createdAt": "2026-09-14",
-    "updatedAt": "2026-09-16"
+    "updatedAt": "2026-09-16",
+    "preview": true
   },
   {
     "noId": 45,
@@ -2524,7 +2568,8 @@
     "trendStatus": "current",
     "trendSource": "editorial",
     "createdAt": "2026-09-14",
-    "updatedAt": "2026-09-16"
+    "updatedAt": "2026-09-16",
+    "preview": true
   },
   {
     "noId": 46,
@@ -2578,7 +2623,8 @@
     "trendStatus": "current",
     "trendSource": "editorial",
     "createdAt": "2026-09-14",
-    "updatedAt": "2026-09-16"
+    "updatedAt": "2026-09-16",
+    "preview": true
   },
   {
     "noId": 47,
@@ -2632,7 +2678,8 @@
     "trendStatus": "current",
     "trendSource": "editorial",
     "createdAt": "2026-09-14",
-    "updatedAt": "2026-09-16"
+    "updatedAt": "2026-09-16",
+    "preview": false
   },
   {
     "noId": 48,
@@ -2686,7 +2733,8 @@
     "trendStatus": "current",
     "trendSource": "editorial",
     "createdAt": "2026-09-14",
-    "updatedAt": "2026-09-16"
+    "updatedAt": "2026-09-16",
+    "preview": false
   },
   {
     "noId": 49,
@@ -2740,7 +2788,8 @@
     "trendStatus": "current",
     "trendSource": "editorial",
     "createdAt": "2026-09-14",
-    "updatedAt": "2026-09-16"
+    "updatedAt": "2026-09-16",
+    "preview": false
   },
   {
     "noId": 50,
@@ -2794,7 +2843,8 @@
     "trendStatus": "current",
     "trendSource": "editorial",
     "createdAt": "2026-09-14",
-    "updatedAt": "2026-09-16"
+    "updatedAt": "2026-09-16",
+    "preview": true
   },
   {
     "noId": 51,
@@ -2848,7 +2898,8 @@
     "trendStatus": "current",
     "trendSource": "editorial",
     "createdAt": "2026-09-14",
-    "updatedAt": "2026-09-16"
+    "updatedAt": "2026-09-16",
+    "preview": true
   },
   {
     "noId": 52,
@@ -2902,7 +2953,8 @@
     "trendStatus": "current",
     "trendSource": "editorial",
     "createdAt": "2026-09-14",
-    "updatedAt": "2026-09-16"
+    "updatedAt": "2026-09-16",
+    "preview": false
   },
   {
     "noId": 53,
@@ -2956,7 +3008,8 @@
     "trendStatus": "current",
     "trendSource": "editorial",
     "createdAt": "2026-09-14",
-    "updatedAt": "2026-09-16"
+    "updatedAt": "2026-09-16",
+    "preview": false
   },
   {
     "noId": 54,
@@ -3010,7 +3063,8 @@
     "trendStatus": "current",
     "trendSource": "editorial",
     "createdAt": "2026-09-14",
-    "updatedAt": "2026-09-16"
+    "updatedAt": "2026-09-16",
+    "preview": false
   },
   {
     "noId": 55,
@@ -3064,7 +3118,8 @@
     "trendStatus": "current",
     "trendSource": "editorial",
     "createdAt": "2026-09-14",
-    "updatedAt": "2026-09-16"
+    "updatedAt": "2026-09-16",
+    "preview": false
   },
   {
     "noId": 56,
@@ -3118,7 +3173,8 @@
     "trendStatus": "current",
     "trendSource": "editorial",
     "createdAt": "2026-09-14",
-    "updatedAt": "2026-09-16"
+    "updatedAt": "2026-09-16",
+    "preview": false
   },
   {
     "noId": 57,
@@ -3175,7 +3231,8 @@
     "trendStatus": "current",
     "trendSource": "editorial",
     "createdAt": "2026-09-15",
-    "updatedAt": "2026-09-16"
+    "updatedAt": "2026-09-16",
+    "preview": false
   },
   {
     "noId": 58,
@@ -3232,7 +3289,8 @@
     "trendStatus": "current",
     "trendSource": "editorial",
     "createdAt": "2026-09-15",
-    "updatedAt": "2026-09-16"
+    "updatedAt": "2026-09-16",
+    "preview": true
   },
   {
     "noId": 59,
@@ -3289,7 +3347,8 @@
     "trendStatus": "current",
     "trendSource": "editorial",
     "createdAt": "2026-09-15",
-    "updatedAt": "2026-09-16"
+    "updatedAt": "2026-09-16",
+    "preview": true
   },
   {
     "noId": 60,
@@ -3346,7 +3405,8 @@
     "trendStatus": "current",
     "trendSource": "editorial",
     "createdAt": "2026-09-15",
-    "updatedAt": "2026-09-16"
+    "updatedAt": "2026-09-16",
+    "preview": true
   },
   {
     "noId": 61,
@@ -3403,7 +3463,8 @@
     "trendStatus": "current",
     "trendSource": "editorial",
     "createdAt": "2026-09-15",
-    "updatedAt": "2026-09-16"
+    "updatedAt": "2026-09-16",
+    "preview": true
   },
   {
     "noId": 62,
@@ -3460,7 +3521,8 @@
     "trendStatus": "current",
     "trendSource": "editorial",
     "createdAt": "2026-09-15",
-    "updatedAt": "2026-09-16"
+    "updatedAt": "2026-09-16",
+    "preview": true
   },
   {
     "noId": 63,
@@ -3517,7 +3579,8 @@
     "trendStatus": "current",
     "trendSource": "editorial",
     "createdAt": "2026-09-15",
-    "updatedAt": "2026-09-16"
+    "updatedAt": "2026-09-16",
+    "preview": true
   },
   {
     "noId": 64,
@@ -3574,7 +3637,8 @@
     "trendStatus": "current",
     "trendSource": "editorial",
     "createdAt": "2026-09-15",
-    "updatedAt": "2026-09-16"
+    "updatedAt": "2026-09-16",
+    "preview": true
   },
   {
     "noId": 65,
@@ -3631,7 +3695,8 @@
     "trendStatus": "current",
     "trendSource": "editorial",
     "createdAt": "2026-09-15",
-    "updatedAt": "2026-09-16"
+    "updatedAt": "2026-09-16",
+    "preview": true
   },
   {
     "noId": 66,
@@ -3688,7 +3753,8 @@
     "trendStatus": "current",
     "trendSource": "editorial",
     "createdAt": "2026-09-15",
-    "updatedAt": "2026-09-16"
+    "updatedAt": "2026-09-16",
+    "preview": false
   },
   {
     "noId": 67,
@@ -3745,7 +3811,8 @@
     "trendStatus": "current",
     "trendSource": "editorial",
     "createdAt": "2026-09-15",
-    "updatedAt": "2026-09-16"
+    "updatedAt": "2026-09-16",
+    "preview": true
   },
   {
     "noId": 68,
@@ -3801,7 +3868,8 @@
     "trendStatus": "current",
     "trendSource": "editorial",
     "createdAt": "2026-09-15",
-    "updatedAt": "2026-09-16"
+    "updatedAt": "2026-09-16",
+    "preview": false
   },
   {
     "noId": 69,
@@ -3858,7 +3926,8 @@
     "trendStatus": "current",
     "trendSource": "editorial",
     "createdAt": "2026-09-15",
-    "updatedAt": "2026-09-16"
+    "updatedAt": "2026-09-16",
+    "preview": false
   },
   {
     "noId": 70,
@@ -3915,7 +3984,8 @@
     "trendStatus": "current",
     "trendSource": "editorial",
     "createdAt": "2026-09-15",
-    "updatedAt": "2026-09-16"
+    "updatedAt": "2026-09-16",
+    "preview": false
   },
   {
     "noId": 71,
@@ -3971,7 +4041,8 @@
     "trendStatus": "current",
     "trendSource": "editorial",
     "createdAt": "2026-09-15",
-    "updatedAt": "2026-09-16"
+    "updatedAt": "2026-09-16",
+    "preview": false
   },
   {
     "noId": 72,
@@ -4027,7 +4098,8 @@
     "trendStatus": "current",
     "trendSource": "editorial",
     "createdAt": "2026-09-15",
-    "updatedAt": "2026-09-16"
+    "updatedAt": "2026-09-16",
+    "preview": true
   },
   {
     "noId": 73,
@@ -4083,7 +4155,8 @@
     "trendStatus": "current",
     "trendSource": "editorial",
     "createdAt": "2026-09-15",
-    "updatedAt": "2026-09-16"
+    "updatedAt": "2026-09-16",
+    "preview": true
   },
   {
     "noId": 74,
@@ -4139,7 +4212,8 @@
     "trendStatus": "current",
     "trendSource": "editorial",
     "createdAt": "2026-09-15",
-    "updatedAt": "2026-09-16"
+    "updatedAt": "2026-09-16",
+    "preview": true
   },
   {
     "noId": 75,
@@ -4195,7 +4269,8 @@
     "trendStatus": "current",
     "trendSource": "editorial",
     "createdAt": "2026-09-15",
-    "updatedAt": "2026-09-16"
+    "updatedAt": "2026-09-16",
+    "preview": false
   },
   {
     "noId": 76,
@@ -4251,7 +4326,8 @@
     "trendStatus": "current",
     "trendSource": "editorial",
     "createdAt": "2026-09-15",
-    "updatedAt": "2026-09-16"
+    "updatedAt": "2026-09-16",
+    "preview": true
   },
   {
     "noId": 77,
@@ -4307,7 +4383,8 @@
     "trendStatus": "current",
     "trendSource": "editorial",
     "createdAt": "2026-09-15",
-    "updatedAt": "2026-09-16"
+    "updatedAt": "2026-09-16",
+    "preview": true
   },
   {
     "noId": 78,
@@ -4363,7 +4440,8 @@
     "trendStatus": "current",
     "trendSource": "editorial",
     "createdAt": "2026-09-15",
-    "updatedAt": "2026-09-16"
+    "updatedAt": "2026-09-16",
+    "preview": false
   },
   {
     "noId": 79,
@@ -4419,7 +4497,8 @@
     "trendStatus": "current",
     "trendSource": "editorial",
     "createdAt": "2026-09-15",
-    "updatedAt": "2026-09-16"
+    "updatedAt": "2026-09-16",
+    "preview": false
   },
   {
     "noId": 80,
@@ -4475,7 +4554,8 @@
     "trendStatus": "current",
     "trendSource": "editorial",
     "createdAt": "2026-09-15",
-    "updatedAt": "2026-09-16"
+    "updatedAt": "2026-09-16",
+    "preview": true
   },
   {
     "noId": 81,
@@ -4530,7 +4610,8 @@
     "trendStatus": "current",
     "trendSource": "editorial",
     "createdAt": "2026-09-15",
-    "updatedAt": "2026-09-16"
+    "updatedAt": "2026-09-16",
+    "preview": false
   },
   {
     "noId": 82,
@@ -4585,7 +4666,8 @@
     "trendStatus": "current",
     "trendSource": "editorial",
     "createdAt": "2026-09-15",
-    "updatedAt": "2026-09-16"
+    "updatedAt": "2026-09-16",
+    "preview": false
   },
   {
     "noId": 83,
@@ -4640,7 +4722,8 @@
     "trendStatus": "current",
     "trendSource": "editorial",
     "createdAt": "2026-09-15",
-    "updatedAt": "2026-09-16"
+    "updatedAt": "2026-09-16",
+    "preview": false
   },
   {
     "noId": 84,
@@ -4696,7 +4779,8 @@
     "trendStatus": "current",
     "trendSource": "editorial",
     "createdAt": "2026-09-15",
-    "updatedAt": "2026-09-16"
+    "updatedAt": "2026-09-16",
+    "preview": false
   },
   {
     "noId": 85,
@@ -4751,7 +4835,8 @@
     "trendStatus": "current",
     "trendSource": "editorial",
     "createdAt": "2026-09-15",
-    "updatedAt": "2026-09-16"
+    "updatedAt": "2026-09-16",
+    "preview": false
   },
   {
     "noId": 86,
@@ -4807,7 +4892,8 @@
     "trendStatus": "current",
     "trendSource": "editorial",
     "createdAt": "2026-09-15",
-    "updatedAt": "2026-09-16"
+    "updatedAt": "2026-09-16",
+    "preview": true
   },
   {
     "noId": 87,
@@ -4862,7 +4948,8 @@
     "trendStatus": "current",
     "trendSource": "editorial",
     "createdAt": "2026-09-15",
-    "updatedAt": "2026-09-16"
+    "updatedAt": "2026-09-16",
+    "preview": false
   },
   {
     "noId": 88,
@@ -4917,7 +5004,8 @@
     "trendStatus": "current",
     "trendSource": "editorial",
     "createdAt": "2026-09-15",
-    "updatedAt": "2026-09-16"
+    "updatedAt": "2026-09-16",
+    "preview": false
   },
   {
     "noId": 89,
@@ -4973,7 +5061,8 @@
     "trendStatus": "current",
     "trendSource": "editorial",
     "createdAt": "2026-09-15",
-    "updatedAt": "2026-09-16"
+    "updatedAt": "2026-09-16",
+    "preview": true
   },
   {
     "noId": 90,
@@ -5028,7 +5117,8 @@
     "trendStatus": "current",
     "trendSource": "editorial",
     "createdAt": "2026-09-15",
-    "updatedAt": "2026-09-16"
+    "updatedAt": "2026-09-16",
+    "preview": false
   },
   {
     "noId": 91,
@@ -5083,7 +5173,8 @@
     "trendStatus": "current",
     "trendSource": "editorial",
     "createdAt": "2026-09-15",
-    "updatedAt": "2026-09-16"
+    "updatedAt": "2026-09-16",
+    "preview": false
   },
   {
     "noId": 92,
@@ -5139,7 +5230,8 @@
     "trendStatus": "current",
     "trendSource": "editorial",
     "createdAt": "2026-09-15",
-    "updatedAt": "2026-09-16"
+    "updatedAt": "2026-09-16",
+    "preview": false
   },
   {
     "noId": 93,
@@ -5194,7 +5286,8 @@
     "trendStatus": "current",
     "trendSource": "editorial",
     "createdAt": "2026-09-15",
-    "updatedAt": "2026-09-16"
+    "updatedAt": "2026-09-16",
+    "preview": false
   },
   {
     "noId": 94,
@@ -5249,7 +5342,8 @@
     "trendStatus": "current",
     "trendSource": "editorial",
     "createdAt": "2026-09-15",
-    "updatedAt": "2026-09-16"
+    "updatedAt": "2026-09-16",
+    "preview": false
   },
   {
     "noId": 95,
@@ -5304,7 +5398,8 @@
     "trendStatus": "current",
     "trendSource": "editorial",
     "createdAt": "2026-09-15",
-    "updatedAt": "2026-09-16"
+    "updatedAt": "2026-09-16",
+    "preview": false
   },
   {
     "noId": 96,
@@ -5360,7 +5455,8 @@
     "trendStatus": "current",
     "trendSource": "editorial",
     "createdAt": "2026-09-15",
-    "updatedAt": "2026-09-16"
+    "updatedAt": "2026-09-16",
+    "preview": false
   },
   {
     "noId": 97,
@@ -5415,7 +5511,8 @@
     "trendStatus": "current",
     "trendSource": "editorial",
     "createdAt": "2026-09-15",
-    "updatedAt": "2026-09-16"
+    "updatedAt": "2026-09-16",
+    "preview": false
   },
   {
     "noId": 98,
@@ -5471,7 +5568,8 @@
     "trendStatus": "current",
     "trendSource": "editorial",
     "createdAt": "2026-09-15",
-    "updatedAt": "2026-09-16"
+    "updatedAt": "2026-09-16",
+    "preview": false
   },
   {
     "noId": 99,
@@ -5527,7 +5625,8 @@
     "trendStatus": "current",
     "trendSource": "editorial",
     "createdAt": "2026-09-15",
-    "updatedAt": "2026-09-16"
+    "updatedAt": "2026-09-16",
+    "preview": false
   },
   {
     "noId": 100,
@@ -5583,7 +5682,8 @@
     "trendStatus": "current",
     "trendSource": "editorial",
     "createdAt": "2026-09-15",
-    "updatedAt": "2026-09-16"
+    "updatedAt": "2026-09-16",
+    "preview": false
   },
   {
     "noId": 101,
@@ -5641,7 +5741,8 @@
       "Use a clear, high-resolution photo when identity consistency matters.",
       "Keep the uploaded person's natural face, body proportions and hairstyle unchanged for a more realistic result.",
       "Use the prompt with an image-reference capable generator such as ChatGPT, Gemini or Nano Banana."
-    ]
+    ],
+    "preview": true
   },
   {
     "noId": 102,
@@ -5699,7 +5800,8 @@
       "Use a clear, high-resolution photo when identity consistency matters.",
       "Keep the uploaded person's natural face, body proportions and hairstyle unchanged for a more realistic result.",
       "Use the prompt with an image-reference capable generator such as ChatGPT, Gemini or Nano Banana."
-    ]
+    ],
+    "preview": true
   },
   {
     "noId": 103,
@@ -5756,7 +5858,8 @@
       "Use a clear, high-resolution photo when identity consistency matters.",
       "Keep the uploaded person's natural face, body proportions and hairstyle unchanged for a more realistic result.",
       "Use the prompt with an image-reference capable generator such as ChatGPT, Gemini or Nano Banana."
-    ]
+    ],
+    "preview": true
   },
   {
     "noId": 104,
@@ -5813,7 +5916,8 @@
       "Use a clear, high-resolution photo when identity consistency matters.",
       "Keep the uploaded person's natural face, body proportions and hairstyle unchanged for a more realistic result.",
       "Use the prompt with an image-reference capable generator such as ChatGPT, Gemini or Nano Banana."
-    ]
+    ],
+    "preview": true
   },
   {
     "noId": 105,
@@ -5870,7 +5974,8 @@
       "Use a clear, high-resolution photo when identity consistency matters.",
       "Keep the uploaded person's natural face, body proportions and hairstyle unchanged for a more realistic result.",
       "Use the prompt with an image-reference capable generator such as ChatGPT, Gemini or Nano Banana."
-    ]
+    ],
+    "preview": true
   },
   {
     "noId": 106,
@@ -5927,7 +6032,8 @@
       "Use a clear, high-resolution photo when identity consistency matters.",
       "Keep the uploaded person's natural face, body proportions and hairstyle unchanged for a more realistic result.",
       "Use the prompt with an image-reference capable generator such as ChatGPT, Gemini or Nano Banana."
-    ]
+    ],
+    "preview": false
   },
   {
     "noId": 107,
@@ -5984,7 +6090,8 @@
       "Use a clear, high-resolution photo when identity consistency matters.",
       "Keep the uploaded person's natural face, body proportions and hairstyle unchanged for a more realistic result.",
       "Use the prompt with an image-reference capable generator such as ChatGPT, Gemini or Nano Banana."
-    ]
+    ],
+    "preview": false
   },
   {
     "noId": 108,
@@ -6041,7 +6148,8 @@
       "Use a clear, high-resolution photo when identity consistency matters.",
       "Keep the uploaded person's natural face, body proportions and hairstyle unchanged for a more realistic result.",
       "Use the prompt with an image-reference capable generator such as ChatGPT, Gemini or Nano Banana."
-    ]
+    ],
+    "preview": false
   },
   {
     "noId": 109,
@@ -6098,7 +6206,8 @@
       "Use a clear, high-resolution photo when identity consistency matters.",
       "Keep the uploaded person's natural face, body proportions and hairstyle unchanged for a more realistic result.",
       "Use the prompt with an image-reference capable generator such as ChatGPT, Gemini or Nano Banana."
-    ]
+    ],
+    "preview": false
   },
   {
     "noId": 110,
@@ -6155,7 +6264,8 @@
       "Use a clear, high-resolution photo when identity consistency matters.",
       "Keep the uploaded person's natural face, body proportions and hairstyle unchanged for a more realistic result.",
       "Use the prompt with an image-reference capable generator such as ChatGPT, Gemini or Nano Banana."
-    ]
+    ],
+    "preview": false
   },
   {
     "noId": 111,
@@ -6212,7 +6322,8 @@
       "Use a clear, high-resolution photo when identity consistency matters.",
       "Keep the uploaded person's natural face, body proportions and hairstyle unchanged for a more realistic result.",
       "Use the prompt with an image-reference capable generator such as ChatGPT, Gemini or Nano Banana."
-    ]
+    ],
+    "preview": false
   },
   {
     "noId": 112,
@@ -6269,7 +6380,8 @@
       "Use a clear, high-resolution photo when identity consistency matters.",
       "Keep the uploaded person's natural face, body proportions and hairstyle unchanged for a more realistic result.",
       "Use the prompt with an image-reference capable generator such as ChatGPT, Gemini or Nano Banana."
-    ]
+    ],
+    "preview": false
   },
   {
     "noId": 113,
@@ -6326,7 +6438,8 @@
       "Use a clear, high-resolution photo when identity consistency matters.",
       "Keep the uploaded person's natural face, body proportions and hairstyle unchanged for a more realistic result.",
       "Use the prompt with an image-reference capable generator such as ChatGPT, Gemini or Nano Banana."
-    ]
+    ],
+    "preview": false
   },
   {
     "noId": 114,
@@ -6383,7 +6496,8 @@
       "Use a clear, high-resolution photo when identity consistency matters.",
       "Keep the uploaded person's natural face, body proportions and hairstyle unchanged for a more realistic result.",
       "Use the prompt with an image-reference capable generator such as ChatGPT, Gemini or Nano Banana."
-    ]
+    ],
+    "preview": false
   },
   {
     "noId": 115,
@@ -6440,7 +6554,8 @@
       "Use a clear, high-resolution photo when identity consistency matters.",
       "Keep the uploaded person's natural face, body proportions and hairstyle unchanged for a more realistic result.",
       "Use the prompt with an image-reference capable generator such as ChatGPT, Gemini or Nano Banana."
-    ]
+    ],
+    "preview": false
   },
   {
     "noId": 116,
@@ -6497,7 +6612,8 @@
       "Use a clear, high-resolution photo when identity consistency matters.",
       "Keep the uploaded person's natural face, body proportions and hairstyle unchanged for a more realistic result.",
       "Use the prompt with an image-reference capable generator such as ChatGPT, Gemini or Nano Banana."
-    ]
+    ],
+    "preview": false
   },
   {
     "noId": 117,
@@ -6554,7 +6670,8 @@
       "Use a clear, high-resolution photo when identity consistency matters.",
       "Keep the uploaded person's natural face, body proportions and hairstyle unchanged for a more realistic result.",
       "Use the prompt with an image-reference capable generator such as ChatGPT, Gemini or Nano Banana."
-    ]
+    ],
+    "preview": false
   },
   {
     "noId": 118,
@@ -6611,7 +6728,8 @@
       "Use a clear, high-resolution photo when identity consistency matters.",
       "Keep the uploaded person's natural face, body proportions and hairstyle unchanged for a more realistic result.",
       "Use the prompt with an image-reference capable generator such as ChatGPT, Gemini or Nano Banana."
-    ]
+    ],
+    "preview": false
   },
   {
     "noId": 119,
@@ -6668,7 +6786,8 @@
       "Use a clear, high-resolution photo when identity consistency matters.",
       "Keep the uploaded person's natural face, body proportions and hairstyle unchanged for a more realistic result.",
       "Use the prompt with an image-reference capable generator such as ChatGPT, Gemini or Nano Banana."
-    ]
+    ],
+    "preview": false
   },
   {
     "noId": 120,
@@ -6725,7 +6844,8 @@
       "Use a clear, high-resolution photo when identity consistency matters.",
       "Keep the uploaded person's natural face, body proportions and hairstyle unchanged for a more realistic result.",
       "Use the prompt with an image-reference capable generator such as ChatGPT, Gemini or Nano Banana."
-    ]
+    ],
+    "preview": false
   },
   {
     "noId": 121,
@@ -6782,7 +6902,8 @@
       "Use a clear, high-resolution photo when identity consistency matters.",
       "Keep the uploaded person's natural face, body proportions and hairstyle unchanged for a more realistic result.",
       "Use the prompt with an image-reference capable generator such as ChatGPT, Gemini or Nano Banana."
-    ]
+    ],
+    "preview": false
   },
   {
     "noId": 122,
@@ -6839,7 +6960,8 @@
       "Use a clear, high-resolution photo when identity consistency matters.",
       "Keep the uploaded person's natural face, body proportions and hairstyle unchanged for a more realistic result.",
       "Use the prompt with an image-reference capable generator such as ChatGPT, Gemini or Nano Banana."
-    ]
+    ],
+    "preview": false
   },
   {
     "noId": 123,
@@ -6896,7 +7018,8 @@
       "Use a clear, high-resolution photo when identity consistency matters.",
       "Keep the uploaded person's natural face, body proportions and hairstyle unchanged for a more realistic result.",
       "Use the prompt with an image-reference capable generator such as ChatGPT, Gemini or Nano Banana."
-    ]
+    ],
+    "preview": false
   },
   {
     "noId": 124,
@@ -6953,7 +7076,8 @@
       "Use a clear, high-resolution photo when identity consistency matters.",
       "Keep the uploaded person's natural face, body proportions and hairstyle unchanged for a more realistic result.",
       "Use the prompt with an image-reference capable generator such as ChatGPT, Gemini or Nano Banana."
-    ]
+    ],
+    "preview": false
   },
   {
     "noId": 125,
@@ -7010,7 +7134,8 @@
       "Use a clear, high-resolution photo when identity consistency matters.",
       "Keep the uploaded person's natural face, body proportions and hairstyle unchanged for a more realistic result.",
       "Use the prompt with an image-reference capable generator such as ChatGPT, Gemini or Nano Banana."
-    ]
+    ],
+    "preview": false
   },
   {
     "noId": 126,
@@ -7067,7 +7192,8 @@
       "Use a clear, high-resolution photo when identity consistency matters.",
       "Keep the uploaded person's natural face, body proportions and hairstyle unchanged for a more realistic result.",
       "Use the prompt with an image-reference capable generator such as ChatGPT, Gemini or Nano Banana."
-    ]
+    ],
+    "preview": false
   },
   {
     "noId": 127,
@@ -7124,7 +7250,8 @@
       "Use a clear, high-resolution photo when identity consistency matters.",
       "Keep the uploaded person's natural face, body proportions and hairstyle unchanged for a more realistic result.",
       "Use the prompt with an image-reference capable generator such as ChatGPT, Gemini or Nano Banana."
-    ]
+    ],
+    "preview": false
   },
   {
     "noId": 128,
@@ -7181,7 +7308,8 @@
       "Use a clear, high-resolution photo when identity consistency matters.",
       "Keep the uploaded person's natural face, body proportions and hairstyle unchanged for a more realistic result.",
       "Use the prompt with an image-reference capable generator such as ChatGPT, Gemini or Nano Banana."
-    ]
+    ],
+    "preview": false
   },
   {
     "noId": 129,
@@ -7238,7 +7366,8 @@
       "Use a clear, high-resolution photo when identity consistency matters.",
       "Keep the uploaded person's natural face, body proportions and hairstyle unchanged for a more realistic result.",
       "Use the prompt with an image-reference capable generator such as ChatGPT, Gemini or Nano Banana."
-    ]
+    ],
+    "preview": false
   },
   {
     "noId": 130,
@@ -7295,7 +7424,8 @@
       "Use a clear, high-resolution photo when identity consistency matters.",
       "Keep the uploaded person's natural face, body proportions and hairstyle unchanged for a more realistic result.",
       "Use the prompt with an image-reference capable generator such as ChatGPT, Gemini or Nano Banana."
-    ]
+    ],
+    "preview": false
   },
   {
     "noId": 131,
@@ -7352,7 +7482,8 @@
       "Use a clear, high-resolution photo when identity consistency matters.",
       "Keep the uploaded person's natural face, body proportions and hairstyle unchanged for a more realistic result.",
       "Use the prompt with an image-reference capable generator such as ChatGPT, Gemini or Nano Banana."
-    ]
+    ],
+    "preview": false
   },
   {
     "noId": 132,
@@ -7409,7 +7540,8 @@
       "Use a clear, high-resolution photo when identity consistency matters.",
       "Keep the uploaded person's natural face, body proportions and hairstyle unchanged for a more realistic result.",
       "Use the prompt with an image-reference capable generator such as ChatGPT, Gemini or Nano Banana."
-    ]
+    ],
+    "preview": false
   },
   {
     "noId": 133,
@@ -7466,7 +7598,8 @@
       "Use a clear, high-resolution photo when identity consistency matters.",
       "Keep the uploaded person's natural face, body proportions and hairstyle unchanged for a more realistic result.",
       "Use the prompt with an image-reference capable generator such as ChatGPT, Gemini or Nano Banana."
-    ]
+    ],
+    "preview": false
   },
   {
     "noId": 134,
@@ -7523,7 +7656,8 @@
       "Use a clear, high-resolution photo when identity consistency matters.",
       "Keep the uploaded person's natural face, body proportions and hairstyle unchanged for a more realistic result.",
       "Use the prompt with an image-reference capable generator such as ChatGPT, Gemini or Nano Banana."
-    ]
+    ],
+    "preview": false
   },
   {
     "noId": 135,
@@ -7580,7 +7714,8 @@
       "Use a clear, high-resolution photo when identity consistency matters.",
       "Keep the uploaded person's natural face, body proportions and hairstyle unchanged for a more realistic result.",
       "Use the prompt with an image-reference capable generator such as ChatGPT, Gemini or Nano Banana."
-    ]
+    ],
+    "preview": false
   },
   {
     "noId": 136,
@@ -7637,7 +7772,8 @@
       "Use a clear, high-resolution photo when identity consistency matters.",
       "Keep the uploaded person's natural face, body proportions and hairstyle unchanged for a more realistic result.",
       "Use the prompt with an image-reference capable generator such as ChatGPT, Gemini or Nano Banana."
-    ]
+    ],
+    "preview": false
   },
   {
     "noId": 137,
@@ -7694,7 +7830,8 @@
       "Use a clear, high-resolution photo when identity consistency matters.",
       "Keep the uploaded person's natural face, body proportions and hairstyle unchanged for a more realistic result.",
       "Use the prompt with an image-reference capable generator such as ChatGPT, Gemini or Nano Banana."
-    ]
+    ],
+    "preview": false
   },
   {
     "noId": 138,
@@ -7751,7 +7888,8 @@
       "Use a clear, high-resolution photo when identity consistency matters.",
       "Keep the uploaded person's natural face, body proportions and hairstyle unchanged for a more realistic result.",
       "Use the prompt with an image-reference capable generator such as ChatGPT, Gemini or Nano Banana."
-    ]
+    ],
+    "preview": false
   },
   {
     "noId": 139,
@@ -7808,7 +7946,8 @@
       "Use a clear, high-resolution photo when identity consistency matters.",
       "Keep the uploaded person's natural face, body proportions and hairstyle unchanged for a more realistic result.",
       "Use the prompt with an image-reference capable generator such as ChatGPT, Gemini or Nano Banana."
-    ]
+    ],
+    "preview": false
   },
   {
     "noId": 140,
@@ -7865,7 +8004,8 @@
       "Use a clear, high-resolution photo when identity consistency matters.",
       "Keep the uploaded person's natural face, body proportions and hairstyle unchanged for a more realistic result.",
       "Use the prompt with an image-reference capable generator such as ChatGPT, Gemini or Nano Banana."
-    ]
+    ],
+    "preview": false
   },
   {
     "noId": 141,
@@ -7922,7 +8062,8 @@
       "Use a clear, high-resolution photo when identity consistency matters.",
       "Keep the uploaded person's natural face, body proportions and hairstyle unchanged for a more realistic result.",
       "Use the prompt with an image-reference capable generator such as ChatGPT, Gemini or Nano Banana."
-    ]
+    ],
+    "preview": false
   },
   {
     "noId": 142,
@@ -7979,7 +8120,7 @@
       "Use a clear, high-resolution photo when identity consistency matters.",
       "Keep the uploaded person's natural face, body proportions and hairstyle unchanged for a more realistic result.",
       "Use the prompt with an image-reference capable generator such as ChatGPT, Gemini or Nano Banana."
-    ]
+    ],
+    "preview": false
   }
-
 ]
