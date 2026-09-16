@@ -2,6 +2,7 @@
 import Layout from '../../layouts/Layout.astro';
 import PromptCard from '../../components/PromptCard.astro';
 import prompts from '../../data/prompts.json';
+import categories from '../../data/categories.json';
 
 const cats = [...new Set(prompts.map((p) => p.category))].sort();
 
@@ -34,25 +35,31 @@ const trendingPrompts = prompts
 
 const featured = sortedPrompts.slice(0, 6);
 
-const categoryDescriptions = {
-  Couple: 'Romantic couple photos, mirror selfies, dates and cinematic relationship portraits.',
-  Vintage: 'Retro, film, Polaroid and nostalgic photography prompts.',
-  Cinematic: 'Moody cinematic portraits, rain scenes, neon lighting and dramatic compositions.',
-  Wedding: 'Wedding, traditional and elegant couple portrait prompts.',
-  Travel: 'Travel photography concepts including beaches, airports, streets and destinations.',
-  Aesthetic: 'Soft, cozy, luxury and lifestyle-inspired aesthetic prompts.',
-  Friends: 'Selfies, group photos and lifestyle concepts for friends.',
-  Selfie: 'Mirror selfies, car selfies and realistic social-media portrait concepts.',
-  Fashion: 'Streetwear, editorial, luxury and fashion photography prompts.',
-  Portrait: 'Professional, dramatic, studio and clean portrait prompts.',
-  Anime: 'Anime, chibi and illustrated character concepts.',
-  Festival: 'Festive, traditional and celebration-focused portrait ideas.',
-  Celebration: 'Birthday and special-event photography concepts.'
-};
+// Category metadata comes from categories.json.
+// Keep the page content in one source of truth so category descriptions
+// stay synchronized with each /prompts/[category]/ page.
+const categoryMeta = new Map(
+  categories.map((category) => [category.slug, category])
+);
+
+const getCategoryMeta = (category) =>
+  categoryMeta.get(String(category).toLowerCase());
+
+const categoryItems = cats
+  .map((category) => ({
+    category,
+    meta: getCategoryMeta(category),
+    count: prompts.filter((p) => p.category === category).length
+  }))
+  .sort(
+    (a, b) =>
+      Number(b.meta?.starRating ?? 0) - Number(a.meta?.starRating ?? 0) ||
+      String(a.category).localeCompare(String(b.category))
+  );
 ---
 
 <Layout
-  title="Free AI Image Prompts | 40+ Ready-to-Use Prompts | Create With Soumay"
+  title="Free AI Image Prompts | Copy-Paste Prompts for ChatGPT, Gemini & More | Create With Soumay"
   description="Explore free AI image prompts for couples, selfies, portraits, fashion, vintage photography, anime, travel and more. Search, filter and copy ready-to-use prompts for ChatGPT, Gemini, Nano Banana and Midjourney."
   active="Prompts"
 >
@@ -274,7 +281,7 @@ const categoryDescriptions = {
         </div>
 
         <div>
-          <strong>{cats.length}</strong>
+          <strong>{categoryItems.length}</strong>
           <span>Categories</span>
         </div>
 
@@ -332,56 +339,102 @@ const categoryDescriptions = {
   </section>
 
 
-  <!-- Categories -->
-  <section class="section category-section">
-
+  <!-- Browse All Categories -->
+  <section class="section category-preview-section" id="browse-categories">
     <div class="container">
 
       <div class="section-heading">
         <div>
-          <div class="eyebrow">Explore by style</div>
-          <h2>Prompt Categories</h2>
+          <div class="eyebrow">Browse by category</div>
+          <h2>Explore AI Image Prompts by Category</h2>
           <p>
-            Find prompts based on the type of image you want to create.
+            Discover free, ready-to-use AI image prompts organized by style,
+            occasion and creative use case. Each category links directly to
+            its complete prompt collection.
           </p>
         </div>
       </div>
 
-      <div class="category-grid">
-
-        {cats.map((category) => (
+      <!-- Crawlable category navigation -->
+      <nav class="category-nav" aria-label="AI image prompt categories">
+        {categoryItems.map(({ category, meta }) => (
           <a
-            class="category-card"
-            href={`/prompts/${category.toLowerCase()}/`}
+            href={`/prompts/${meta?.slug || category.toLowerCase()}/`}
+            title={meta?.title || `${category} AI image prompts`}
           >
-
-            <span class="category-name">
-              {category}
-            </span>
-
-            <span class="category-count">
-              {prompts.filter((p) => p.category === category).length}
-              prompts
-            </span>
-
-            <p>
-              {categoryDescriptions[category] ||
-                `Explore ${category.toLowerCase()} AI image prompts.`}
-            </p>
-
-            <span class="category-arrow">
-              Explore →
-            </span>
-
+            {category}
           </a>
         ))}
+      </nav>
 
+      <div class="category-preview-list">
+        {categoryItems.map(({ category, meta, count }) => {
+          const categoryPrompts = prompts
+            .filter(
+              (p) =>
+                p.category === category &&
+                p.preview === true
+            )
+            .slice(0, 5);
+
+          return (
+            <section
+              class="category-preview"
+              id={`category-${meta?.slug || category.toLowerCase()}`}
+              aria-labelledby={`heading-${meta?.slug || category.toLowerCase()}`}
+            >
+              <div class="category-preview-heading">
+                <div>
+                  <div class="eyebrow">
+                    {count} {count === 1 ? 'prompt' : 'prompts'}
+                    {meta?.starRating ? ` · ${meta.starRating.toFixed(1)} ★` : ''}
+                  </div>
+
+                  <h3 id={`heading-${meta?.slug || category.toLowerCase()}`}>
+                    <a
+                      href={`/prompts/${meta?.slug || category.toLowerCase()}/`}
+                    >
+                      {meta?.title || `${category} AI Image Prompts`}
+                    </a>
+                  </h3>
+
+                  <p>
+                    {meta?.shortDescription ||
+                      meta?.description ||
+                      `Explore ${category.toLowerCase()} AI image prompts.`}
+                  </p>
+                </div>
+
+                <a
+                  class="category-view-more"
+                  href={`/prompts/${meta?.slug || category.toLowerCase()}/`}
+                  aria-label={`View all ${category} AI image prompts`}
+                >
+                  View More →
+                </a>
+              </div>
+
+              {categoryPrompts.length > 0 ? (
+                <div class="grid category-prompt-grid">
+                  {categoryPrompts.map((p) => (
+                    <PromptCard p={p} />
+                  ))}
+                </div>
+              ) : (
+                <p class="category-empty">
+                  More {category.toLowerCase()} AI image prompts are coming soon.
+                  <a href={`/prompts/${meta?.slug || category.toLowerCase()}/`}>
+                    Explore the category →
+                  </a>
+                </p>
+              )}
+            </section>
+          );
+        })}
       </div>
 
     </div>
-
   </section>
-
 
   <!-- CREATOR TOOLS -->
 
@@ -737,7 +790,7 @@ const categoryDescriptions = {
     set:html={JSON.stringify({
       '@context': 'https://schema.org',
       '@type': 'CollectionPage',
-      name: 'Free AI Image Prompts | 40+ Ready-to-Use Prompts',
+      name: 'Free AI Image Prompts | Copy-Paste Prompt Library',
       description:
         "Explore free AI image prompts for couples, selfies, portraits, fashion, vintage photography, anime, travel and more. Search, filter and copy ready-to-use prompts for ChatGPT, Gemini, Nano Banana and Midjourney.",
       url: 'https://www.createwithsoumay.store/prompts/',
@@ -910,60 +963,109 @@ const categoryDescriptions = {
     font-size: 0.82rem;
   }
 
-  .category-section {
+  .category-preview-section {
     background: rgba(255,255,255,0.015);
   }
 
-  .category-grid {
-    display: grid;
-    grid-template-columns: repeat(4, minmax(0, 1fr));
-    gap: 12px;
-  }
-
-  .category-card {
-    display: block;
-    padding: 18px;
+  .category-nav {
+    display: flex;
+    gap: 9px;
+    flex-wrap: wrap;
+    margin: 0 0 42px;
+    padding: 15px;
     border: 1px solid rgba(255,255,255,0.07);
-    border-radius: 15px;
-    color: inherit;
-    text-decoration: none;
+    border-radius: 17px;
     background: rgba(255,255,255,0.02);
-    transition:
-      transform 0.2s ease,
-      border-color 0.2s ease,
-      background 0.2s ease;
   }
 
-  .category-card:hover {
-    transform: translateY(-2px);
-    border-color: rgba(139,92,246,0.35);
-    background: rgba(139,92,246,0.05);
-  }
-
-  .category-name {
-    display: block;
-    color: #fff;
-    font-weight: 800;
-  }
-
-  .category-count {
-    display: block;
-    margin-top: 3px;
-    color: #a78bfa;
-    font-size: 0.72rem;
-  }
-
-  .category-card p {
-    margin: 11px 0;
-    color: var(--muted, #a1a1aa);
-    font-size: 0.78rem;
-    line-height: 1.55;
-  }
-
-  .category-arrow {
-    color: #c4b5fd;
-    font-size: 0.78rem;
+  .category-nav a {
+    display: inline-flex;
+    align-items: center;
+    min-height: 34px;
+    padding: 7px 12px;
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 999px;
+    color: #d4d4d8;
+    text-decoration: none;
+    font-size: .76rem;
     font-weight: 700;
+    transition: border-color .2s ease, background .2s ease, color .2s ease;
+  }
+
+  .category-nav a:hover {
+    border-color: rgba(139,92,246,.4);
+    background: rgba(139,92,246,.08);
+    color: #c4b5fd;
+  }
+
+  .category-preview-list {
+    display: grid;
+    gap: 58px;
+  }
+
+  .category-preview {
+    scroll-margin-top: 90px;
+  }
+
+  .category-preview-heading {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 22px;
+    margin-bottom: 20px;
+  }
+
+  .category-preview-heading h3 {
+    margin: 7px 0 6px;
+    font-size: clamp(1.25rem, 2vw, 1.65rem);
+    line-height: 1.3;
+  }
+
+  .category-preview-heading h3 a {
+    color: #fff;
+    text-decoration: none;
+  }
+
+  .category-preview-heading h3 a:hover {
+    color: #c4b5fd;
+  }
+
+  .category-preview-heading p {
+    max-width: 760px;
+    margin: 0;
+    color: var(--muted, #a1a1aa);
+    line-height: 1.65;
+  }
+
+  .category-view-more {
+    flex: 0 0 auto;
+    color: #c4b5fd;
+    text-decoration: none;
+    font-size: .82rem;
+    font-weight: 800;
+    white-space: nowrap;
+  }
+
+  .category-view-more:hover {
+    text-decoration: underline;
+  }
+
+  .category-prompt-grid {
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: 13px;
+  }
+
+  .category-empty {
+    padding: 22px;
+    border: 1px solid rgba(255,255,255,.07);
+    border-radius: 15px;
+    color: var(--muted, #a1a1aa);
+  }
+
+  .category-empty a {
+    color: #c4b5fd;
+    font-weight: 700;
+    text-decoration: none;
   }
 
   .toolbar {
@@ -1127,8 +1229,8 @@ const categoryDescriptions = {
       grid-template-columns: repeat(2, 1fr);
     }
 
-    .category-grid {
-      grid-template-columns: repeat(2, 1fr);
+    .category-prompt-grid {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
     }
 
   }
@@ -1149,8 +1251,13 @@ const categoryDescriptions = {
     }
 
     .featured-grid,
-    .category-grid {
+    .category-prompt-grid {
       grid-template-columns: 1fr;
+    }
+
+    .category-preview-heading {
+      align-items: flex-start;
+      flex-direction: column;
     }
 
     .featured-card {
