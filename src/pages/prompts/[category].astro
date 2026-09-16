@@ -7,6 +7,7 @@ import categoriesData from '../../data/categories.json';
 const categories = categoriesData.categories || categoriesData;
 
 export function getStaticPaths() {
+  const categories = categoriesData.categories || categoriesData;
 
   return categories
     .filter((meta) => meta.slug !== 'all' && meta.slug !== 'trending')
@@ -26,6 +27,8 @@ export function getStaticPaths() {
     })
     .filter((entry) => entry.props.prompts.length > 0);
 }
+
+const categories = categoriesData.categories || categoriesData;
 
 const {
   category,
