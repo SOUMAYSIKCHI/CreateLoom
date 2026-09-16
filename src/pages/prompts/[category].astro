@@ -4,8 +4,6 @@ import PromptCard from '../../components/PromptCard.astro';
 import prompts from '../../data/prompts.json';
 import categoriesData from '../../data/categories.json';
 
-const categories = categoriesData.categories || categoriesData;
-
 export function getStaticPaths() {
   const categories = categoriesData.categories || categoriesData;
 
@@ -27,6 +25,8 @@ export function getStaticPaths() {
     })
     .filter((entry) => entry.props.prompts.length > 0);
 }
+
+const categories = categoriesData.categories || categoriesData;
 
 const {
   category,
@@ -51,7 +51,7 @@ const categoryIntro =
 
 const relatedCategories = (categoryMeta?.relatedCategories || [])
   .map((slug) => categories.find((meta) => meta.slug === slug))
-  .filter((meta) => meta && meta.indexable !== false)
+  .filter(Boolean)
   .slice(0, 4);
 
 const categoryH1 =
@@ -68,14 +68,22 @@ const searchTerms = Array.isArray(categoryMeta?.searchTerms)
   ? categoryMeta.searchTerms
   : [];
 
+const categoryTags = new Set(
+  items.flatMap((item) => Array.isArray(item.tags) ? item.tags : [])
+);
+
 const related = prompts
   .filter((p) => p.category !== category)
-  .filter((p) =>
-    p.tags?.some((tag) =>
-      items.some((item) => item.tags?.includes(tag))
-    )
-  )
-  .slice(0, 3);
+  .map((p) => ({
+    prompt: p,
+    score: Array.isArray(p.tags)
+      ? p.tags.filter((tag) => categoryTags.has(tag)).length
+      : 0
+  }))
+  .filter((entry) => entry.score > 0)
+  .sort((a, b) => b.score - a.score)
+  .slice(0, 3)
+  .map((entry) => entry.prompt);
 
 const canonicalUrl = new URL(
   `/prompts/${categoryMeta?.slug || category.toLowerCase()}/`,
@@ -90,8 +98,13 @@ const pageKeywords = searchTerms.length
   ? searchTerms.join(', ')
   : `${category.toLowerCase()} ai image prompts, ${category.toLowerCase()} ai photo editing prompts, ${category.toLowerCase()} prompts`;
 
-const typeFilters = ['All', 'Boy', 'Girl', 'Couple', 'Unisex'];
-const toolFilters = ['All', 'ChatGPT', 'Gemini', 'Nano Banana', 'Midjourney'];
+const typeFilters = Array.isArray(categoryMeta?.typeFilters) && categoryMeta.typeFilters.length
+  ? categoryMeta.typeFilters
+  : ['All', 'Boy', 'Girl', 'Couple', 'Unisex'];
+
+const toolFilters = Array.isArray(categoryMeta?.toolFilters) && categoryMeta.toolFilters.length
+  ? categoryMeta.toolFilters
+  : ['All', 'ChatGPT', 'Gemini', 'Nano Banana', 'Midjourney'];
 ---
 
 <Layout
@@ -132,7 +145,7 @@ const toolFilters = ['All', 'ChatGPT', 'Gemini', 'Nano Banana', 'Midjourney'];
         </a>
 
         <a class="secondary" href="#prompts">
-          Browse {items.length} Prompts ↓
+          Browse {items.length} {items.length === 1 ? 'Prompt' : 'Prompts'} ↓
         </a>
       </div>
 
@@ -155,10 +168,14 @@ const toolFilters = ['All', 'ChatGPT', 'Gemini', 'Nano Banana', 'Midjourney'];
           </div>
 
           <h2>
-            {categoryIntro}
+            Explore {category} AI Photo Prompts
           </h2>
 
           <p class="category-short-intro">
+            {categoryIntro}
+          </p>
+
+          <p>
             {categoryMeta?.shortDescription || description}
           </p>
 
@@ -248,13 +265,13 @@ const toolFilters = ['All', 'ChatGPT', 'Gemini', 'Nano Banana', 'Midjourney'];
           </h2>
 
           <p>
-            Copy, customize and use any prompt below.
+            Browse the available prompts, open any one for the full instructions, then copy and customize it for your image.
           </p>
 
         </div>
 
         <span class="results-note">
-          {items.length} prompts
+          {items.length} {items.length === 1 ? 'prompt' : 'prompts'}
         </span>
 
       </div>
@@ -319,11 +336,12 @@ const toolFilters = ['All', 'ChatGPT', 'Gemini', 'Nano Banana', 'Midjourney'];
         </div>
       )}
 
-      <div class="keyword-pills" aria-label="{category} search topics">
-        {searchTerms.slice(0, 5).map((term) => (
-          <span>{term}</span>
-        ))}
-      </div>
+      {searchTerms.length > 0 && (
+        <p class="category-search-topics">
+          <strong>Popular topics:</strong>{' '}
+          {searchTerms.slice(0, 4).join(' · ')}
+        </p>
+      )}
 
     </div>
   </section>
