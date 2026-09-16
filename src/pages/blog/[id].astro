@@ -3,11 +3,22 @@ import Layout from '../../layouts/Layout.astro';
 import blogs from '../../data/blogs.json';
 import prompts from '../../data/prompts.json';
 
+const isPublished = (date) => {
+  if (!date) return false;
+
+  const publishDate = new Date(date);
+  if (Number.isNaN(publishDate.getTime())) return false;
+
+  return publishDate <= new Date();
+};
+
 export function getStaticPaths() {
-  return blogs.map((b) => ({
-    params: { id: b.id },
-    props: { b }
-  }));
+  return blogs
+    .filter((b) => isPublished(b.date))
+    .map((b) => ({
+      params: { id: b.id },
+      props: { b }
+    }));
 }
 
 const { b } = Astro.props;
@@ -22,6 +33,7 @@ const relatedBlogs = blogs
   .filter(
     (x) =>
       x.id !== b.id &&
+      isPublished(x.date) &&
       (
         x.category === b.category ||
         x.tags.some((tag) => b.tags.includes(tag))
