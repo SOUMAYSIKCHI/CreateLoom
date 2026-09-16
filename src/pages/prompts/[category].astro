@@ -566,6 +566,7 @@ const toolFilters = Array.isArray(categoryMeta?.toolFilters) && categoryMeta.too
       '@context': 'https://schema.org',
       '@type': 'CollectionPage',
       name: pageTitle,
+      headline: categoryH1,
       description,
       url: canonicalUrl,
       keywords: pageKeywords,
@@ -587,6 +588,24 @@ const toolFilters = Array.isArray(categoryMeta?.toolFilters) && categoryMeta.too
       }
     })}
   />
+
+  {Array.isArray(categoryMeta?.faq) && categoryMeta.faq.length > 0 && (
+    <script
+      type="application/ld+json"
+      set:html={JSON.stringify({
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        mainEntity: categoryMeta.faq.map((item) => ({
+          '@type': 'Question',
+          name: item.question,
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: item.answer
+          }
+        }))
+      })}
+    />
+  )}
 
 </Layout>
 
@@ -893,22 +912,6 @@ const toolFilters = Array.isArray(categoryMeta?.toolFilters) && categoryMeta.too
     padding: 0 18px 18px;
     color: #c7c7cf;
     line-height: 1.75;
-  }
-
-  .keyword-pills {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px;
-    margin-top: 22px;
-  }
-
-  .keyword-pills span {
-    padding: 7px 10px;
-    border: 1px solid rgba(139,92,246,0.18);
-    border-radius: 999px;
-    background: rgba(139,92,246,0.06);
-    color: #bcb1df;
-    font-size: .72rem;
   }
 
   .category-tools-section {
