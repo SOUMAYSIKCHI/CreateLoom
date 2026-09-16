@@ -4,9 +4,9 @@ import PromptCard from '../../components/PromptCard.astro';
 import prompts from '../../data/prompts.json';
 import categoriesData from '../../data/categories.json';
 
-const categories = categoriesData.categories || categoriesData;
-
 export function getStaticPaths() {
+  const categories = categoriesData.categories || categoriesData;
+
   return categories
     .filter((meta) => meta.slug !== 'all' && meta.slug !== 'trending')
     .map((meta) => {
