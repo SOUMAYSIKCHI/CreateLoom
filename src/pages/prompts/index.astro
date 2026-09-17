@@ -78,7 +78,7 @@ const filterCategories = [
 
 // Main library order: noId ascending.
 const promptLibrary = [...prompts].sort(
-  (a, b) => Number(a.noId || 0) - Number(b.noId || 0)
+  (a, b) => Number(b.noId || 0) - Number(a.noId || 0)
 );
 ---
 
