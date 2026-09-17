@@ -8,9 +8,15 @@ export function getStaticPaths() {
   const categories = categoriesData.categories || categoriesData;
 
   return categories
-    .filter((meta) => meta.slug !== 'all' && meta.slug !== 'trending')
+    .filter((meta) => meta.slug !== 'all')
     .map((meta) => {
-      const category = prompts.find((p) => p.category === meta.name)?.category || meta.name;
+      const isTrending = meta.slug === 'trending';
+      const category = isTrending
+        ? 'Trending'
+        : (prompts.find((p) => p.category === meta.name)?.category || meta.name);
+      const categoryPrompts = isTrending
+        ? prompts.filter((p) => p.trending === true)
+        : prompts.filter((p) => p.category === category);
 
       return {
         params: {
@@ -19,7 +25,7 @@ export function getStaticPaths() {
         props: {
           category,
           categoryMeta: meta,
-          prompts: prompts.filter((p) => p.category === category)
+          prompts: categoryPrompts
         }
       };
     })
