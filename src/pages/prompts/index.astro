@@ -99,8 +99,18 @@ const filterCategories = ['All', ...categoryItems.map((item) => item.category)];
               prompt, then open its dedicated page for the complete instructions.
             </p>
           </div>
-          <div class="results-note" id="promptResultsNote" aria-live="polite">
-            Showing {Math.min(10, prompts.length)} of {prompts.length} prompts
+          <div class="prompt-library-heading-actions">
+            <div class="results-note" id="promptResultsNote" aria-live="polite">
+              Showing {Math.min(10, prompts.length)} of {prompts.length} prompts
+            </div>
+            <a
+              id="categoryViewMore"
+              class="category-view-more-link"
+              href="#"
+              hidden
+            >
+              View more prompts →
+            </a>
           </div>
         </div>
 
@@ -113,6 +123,12 @@ const filterCategories = ['All', ...categoryItems.map((item) => item.category)];
                   type="button"
                   class:list={{ 'active-filter': category === 'All' }}
                   data-category-filter={category}
+                  data-category-slug={
+                    category === 'All'
+                      ? ''
+                      : categories.find((item) => item.name === category)?.slug ||
+                        category.toLowerCase().replace(/[^a-z0-9]+/g, '-')
+                  }
                   aria-pressed={category === 'All' ? 'true' : 'false'}
                 >
                   {category}
@@ -220,6 +236,7 @@ const filterCategories = ['All', ...categoryItems.map((item) => item.category)];
       const loadMoreButton = document.getElementById('loadMorePrompts');
       const emptyState = document.getElementById('promptLibraryEmpty');
       const resultsNote = document.getElementById('promptResultsNote');
+      const categoryViewMore = document.getElementById('categoryViewMore');
       const searchForm = document.getElementById('promptSearchForm');
       const searchInput = document.getElementById('promptSearch');
       const categoryButtons = document.querySelectorAll('[data-category-filter]');
@@ -229,69 +246,115 @@ const filterCategories = ['All', ...categoryItems.map((item) => item.category)];
 
       const pageSize = 10;
       let allPrompts = [];
-      let currentPage = Math.max(1, Number(new URLSearchParams(location.search).get('page')) || 1);
+      let visibleCount = pageSize;
       let selectedCategory = 'All';
       let selectedType = 'All';
       let searchTerm = '';
+      let loading = true;
 
       const normalize = (value) => String(value || '').trim().toLowerCase();
-      const escapeHtml = (value) => String(value || '').replace(/[&<>'"]/g, (char) => ({
-        '&': '&amp;', '<': '&lt;', '>': '&gt;', "'": '&#39;', '"': '&quot;'
-      })[char]);
+
+      const escapeHtml = (value) =>
+        String(value ?? '').replace(/[&<>'"]/g, (char) => ({
+          '&': '&amp;',
+          '<': '&lt;',
+          '>': '&gt;',
+          "'": '&#39;',
+          '"': '&quot;'
+        })[char]);
 
       const excerpt = (prompt) => {
-        const text = prompt.description || `A ready-to-use ${prompt.category || ''} AI image prompt.`;
+        const text =
+          prompt.description ||
+          `A ready-to-use ${prompt.category || ''} AI image prompt.`;
         return text.length > 155 ? `${text.slice(0, 155).trim()}…` : text;
       };
 
-      const cardMarkup = (prompt) => `
-        <div class="prompt-library-item" data-prompt-id="${escapeHtml(prompt.id)}">
-          <article class="card prompt-card prompt-card-compact">
-            <a class="prompt-card-image-link" href="/prompt/${encodeURIComponent(prompt.id)}/" aria-label="View ${escapeHtml(prompt.title)}">
-              <div class="prompt-card-image-wrap">
-                <img class="prompt-card-image" src="${escapeHtml(prompt.image || '/images/prompts/createloom.png')}" alt="Example result for ${escapeHtml(prompt.title)} AI image prompt" width="400" height="533" loading="lazy" decoding="async">
-              </div>
-            </a>
-            <div class="prompt-meta">
-              <a class="category-link" href="/prompts/${encodeURIComponent(String(prompt.category || '').toLowerCase())}/" aria-label="Browse ${escapeHtml(prompt.category)} AI prompts">${escapeHtml(prompt.category)}</a>
-            </div>
-            <a class="prompt-card-main" href="/prompt/${encodeURIComponent(prompt.id)}/" aria-label="Open ${escapeHtml(prompt.title)}">
-              <div class="title-row"><h3>${escapeHtml(prompt.title)}</h3><span class="open-arrow" aria-hidden="true">↗</span></div>
-              <p class="prompt-preview compact-preview">${escapeHtml(excerpt(prompt))}</p>
-            </a>
-          </article>
-        </div>`;
-
       const matches = (prompt) => {
-        const categoryMatch = selectedCategory === 'All' || normalize(prompt.category) === normalize(selectedCategory);
-        const typeMatch = selectedType === 'All' || normalize(prompt.type || 'Unisex') === normalize(selectedType);
-        const haystack = [prompt.title, prompt.category, prompt.description, ...(prompt.tags || []), ...(prompt.searchTerms || [])].join(' ');
-        const searchMatch = !searchTerm || normalize(haystack).includes(normalize(searchTerm));
+        const categoryMatch =
+          selectedCategory === 'All' ||
+          (selectedCategory === 'Trending'
+            ? prompt.trending === true
+            : normalize(prompt.category) === normalize(selectedCategory));
+
+        const typeMatch =
+          selectedType === 'All' ||
+          normalize(prompt.type || 'Unisex') === normalize(selectedType);
+
+        const haystack = [
+          prompt.title,
+          prompt.category,
+          prompt.type,
+          prompt.description,
+          ...(prompt.tags || []),
+          ...(prompt.searchTerms || [])
+        ].join(' ');
+
+        const searchMatch =
+          !searchTerm || normalize(haystack).includes(normalize(searchTerm));
+
         return categoryMatch && typeMatch && searchMatch;
       };
 
-      const updateUrl = (page) => {
-        const url = new URL(location.href);
-        if (page <= 1) url.searchParams.delete('page');
-        else url.searchParams.set('page', String(page));
-        history.replaceState({}, '', `${url.pathname}${url.search}${url.hash}`);
-      };
+      const cardMarkup = (prompt) => `
+        <div class="prompt-library-item">
+          <article class="card prompt-card">
+            <a
+              class="prompt-card-image-link"
+              href="/prompt/${encodeURIComponent(prompt.id || '')}/"
+              aria-label="View ${escapeHtml(prompt.title)} result preview"
+            >
+              <div class="prompt-card-image-wrap">
+                <img
+                  class="prompt-card-image"
+                  src="${escapeHtml(prompt.image || '/images/prompts/createloom.png')}"
+                  alt="Example result for ${escapeHtml(prompt.title)} AI image prompt"
+                  width="1080"
+                  height="1920"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+            </a>
 
-      const render = () => {
-        const filtered = allPrompts.filter(matches);
-        const end = currentPage * pageSize;
-        const visible = filtered.slice(0, end);
+            <div class="prompt-meta compact-meta">
+              <div class="meta-left">
+                <a
+                  class="category-link"
+                  href="/prompts/${encodeURIComponent(String(prompt.category || '').toLowerCase().replace(/[^a-z0-9]+/g, '-'))}/"
+                  aria-label="Browse ${escapeHtml(prompt.category)} AI prompts"
+                >
+                  ${escapeHtml(prompt.category)}
+                </a>
+                <span class="type-badge" aria-label="Prompt type: ${escapeHtml(prompt.type || 'Unisex')}">
+                  ${escapeHtml(prompt.type || 'Unisex')}
+                </span>
+              </div>
+            </div>
 
-        grid.innerHTML = visible.map(cardMarkup).join('');
-        loadMoreButton.hidden = visible.length >= filtered.length;
-        emptyState.hidden = filtered.length !== 0;
+            <a
+              class="prompt-card-main compact-main"
+              href="/prompt/${encodeURIComponent(prompt.id || '')}/"
+              aria-label="Open ${escapeHtml(prompt.title)}"
+            >
+              <div class="title-row">
+                <h3>${escapeHtml(prompt.title)}</h3>
+                <span class="open-arrow" aria-hidden="true">↗</span>
+              </div>
+              <p class="prompt-preview">${escapeHtml(excerpt(prompt))}</p>
+            </a>
 
-        if (resultsNote) {
-          resultsNote.textContent = filtered.length
-            ? `Showing ${visible.length} of ${filtered.length} prompts`
-            : '0 prompts found';
-        }
-      };
+            <div class="card-actions compact-actions">
+              <a
+                class="small-btn open-btn"
+                href="/prompt/${encodeURIComponent(prompt.id || '')}/"
+                aria-label="Open ${escapeHtml(prompt.title)}"
+              >
+                Open <span aria-hidden="true">↗</span>
+              </a>
+            </div>
+          </article>
+        </div>`;
 
       const updateButtons = (buttons, selected, key) => {
         buttons.forEach((button) => {
@@ -301,50 +364,105 @@ const filterCategories = ['All', ...categoryItems.map((item) => item.category)];
         });
       };
 
-      categoryButtons.forEach((button) => button.addEventListener('click', () => {
-        selectedCategory = button.dataset.categoryFilter || 'All';
-        currentPage = 1;
-        updateButtons(categoryButtons, selectedCategory, 'categoryFilter');
-        updateUrl(1);
-        render();
-      }));
+      const render = () => {
+        const filtered = allPrompts.filter(matches);
+        const visible = filtered.slice(0, visibleCount);
 
-      typeButtons.forEach((button) => button.addEventListener('click', () => {
-        selectedType = button.dataset.typeFilter || 'All';
-        currentPage = 1;
-        updateButtons(typeButtons, selectedType, 'typeFilter');
-        updateUrl(1);
-        render();
-      }));
+        grid.innerHTML = visible.map(cardMarkup).join('');
+
+        if (resultsNote) {
+          resultsNote.textContent = filtered.length
+            ? `Showing ${visible.length} of ${filtered.length} prompts`
+            : '0 prompts found';
+        }
+
+        if (emptyState) {
+          emptyState.hidden = filtered.length !== 0;
+        }
+
+        loadMoreButton.hidden = loading || visible.length >= filtered.length;
+        loadMoreButton.disabled = loading;
+        loadMoreButton.textContent = loading ? 'Loading…' : 'Load More';
+
+        if (categoryViewMore) {
+          const selectedButton = Array.from(categoryButtons).find(
+            (button) => button.dataset.categoryFilter === selectedCategory
+          );
+          const slug = selectedButton?.dataset.categorySlug || '';
+
+          if (selectedCategory !== 'All' && slug) {
+            categoryViewMore.href = `/prompts/${slug}/`;
+            categoryViewMore.textContent =
+              `View all ${selectedCategory} prompts →`;
+            categoryViewMore.hidden = false;
+          } else {
+            categoryViewMore.hidden = true;
+          }
+        }
+      };
+
+      categoryButtons.forEach((button) => {
+        button.addEventListener('click', () => {
+          selectedCategory = button.dataset.categoryFilter || 'All';
+          visibleCount = pageSize;
+          updateButtons(categoryButtons, selectedCategory, 'categoryFilter');
+          render();
+        });
+      });
+
+      typeButtons.forEach((button) => {
+        button.addEventListener('click', () => {
+          selectedType = button.dataset.typeFilter || 'All';
+          visibleCount = pageSize;
+          updateButtons(typeButtons, selectedType, 'typeFilter');
+          render();
+        });
+      });
 
       searchForm?.addEventListener('submit', (event) => {
         event.preventDefault();
-        searchTerm = searchInput?.value || '';
-        currentPage = 1;
-        updateUrl(1);
+        searchTerm = searchInput?.value.trim() || '';
+        visibleCount = pageSize;
         render();
       });
 
       loadMoreButton.addEventListener('click', () => {
-        currentPage += 1;
-        updateUrl(currentPage);
+        visibleCount += pageSize;
         render();
       });
 
-      fetch('/data/prompts.json')
-        .then((response) => {
-          if (!response.ok) throw new Error(`Prompt data request failed: ${response.status}`);
-          return response.json();
-        })
-        .then((data) => {
-          allPrompts = (Array.isArray(data) ? data : data.prompts || [])
-            .sort((a, b) => Number(b.noId || 0) - Number(a.noId || 0));
+      const loadPromptData = async () => {
+        try {
+          const response = await fetch('/api/prompts.json', {
+            headers: { Accept: 'application/json' }
+          });
+
+          if (!response.ok) {
+            throw new Error(`Prompt API returned ${response.status}`);
+          }
+
+          const data = await response.json();
+          allPrompts = Array.isArray(data.prompts)
+            ? data.prompts
+            : Array.isArray(data)
+              ? data
+              : [];
+
+          allPrompts.sort(
+            (a, b) => Number(b.noId || 0) - Number(a.noId || 0)
+          );
+        } catch (error) {
+          console.error('Unable to load prompts:', error);
+          allPrompts = [];
+        } finally {
+          loading = false;
+          visibleCount = pageSize;
           render();
-        })
-        .catch((error) => {
-          console.error('Unable to load prompt library:', error);
-          loadMoreButton.hidden = true;
-        });
+        }
+      };
+
+      render();
+      loadPromptData();
     })();
   </script>
 
@@ -405,6 +523,9 @@ const filterCategories = ['All', ...categoryItems.map((item) => item.category)];
   .prompt-library-heading { display: flex; align-items: flex-end; justify-content: space-between; gap: 20px; margin-bottom: 24px; }
   .prompt-library-heading h2 { margin: 7px 0 5px; }
   .prompt-library-heading p { max-width: 760px; margin: 0; color: var(--muted, #a1a1aa); line-height: 1.6; }
+  .prompt-library-heading-actions { display: flex; align-items: center; justify-content: flex-end; gap: 14px; flex-wrap: wrap; }
+  .category-view-more-link { color: #c4b5fd; text-decoration: none; font-size: .78rem; font-weight: 800; white-space: nowrap; }
+  .category-view-more-link:hover { text-decoration: underline; }
   .prompt-library-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; align-items: stretch; }
   .prompt-library-actions { display: flex; justify-content: center; margin-top: 28px; }
   .load-more-button { min-height: 42px; padding: 10px 20px; border: 1px solid rgba(255,255,255,.1); border-radius: 999px; background: rgba(255,255,255,.03); color: #fff; font: inherit; font-size: .82rem; font-weight: 800; cursor: pointer; transition: border-color .2s ease, background .2s ease, transform .2s ease; }
@@ -420,7 +541,7 @@ const filterCategories = ['All', ...categoryItems.map((item) => item.category)];
   .filters button:focus-visible, .load-more-button:focus-visible { outline: 2px solid #a78bfa; outline-offset: 2px; }
 
   @media (max-width: 900px) { .prompt-library-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
-  @media (max-width: 640px) { .prompt-library-grid { grid-template-columns: 1fr; } .section-heading, .prompt-library-heading { align-items: flex-start; flex-direction: column; } }
+  @media (max-width: 640px) { .prompt-library-grid { grid-template-columns: 1fr; } .section-heading, .prompt-library-heading { align-items: flex-start; flex-direction: column; } .prompt-library-heading-actions { justify-content: flex-start; } }
 </style>
 
 <style is:global>
