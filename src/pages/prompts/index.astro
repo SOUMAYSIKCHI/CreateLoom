@@ -241,6 +241,7 @@ const promptLibrary = [...prompts]
         <div
           class="grid prompt-library-grid"
           id="promptLibraryGrid"
+          data-total={prompts.length}
           aria-live="polite"
         >
           {promptLibrary.map((p, index) => (
@@ -412,6 +413,7 @@ const promptLibrary = [...prompts]
 
 
   <!-- Prompt library structured data -->
+  <!-- Prompt library client-side pagination -->
   <script>
     (() => {
       const grid = document.getElementById('promptLibraryGrid');
@@ -420,37 +422,69 @@ const promptLibrary = [...prompts]
       const resultsNote = document.getElementById('promptResultsNote');
       const categoryButtons = document.querySelectorAll('[data-category-filter]');
       const typeButtons = document.querySelectorAll('[data-type-filter]');
+      const searchInput = document.getElementById('promptSearch');
 
       if (!grid || !loadMoreButton) return;
 
-      const items = Array.from(
-        grid.querySelectorAll('.prompt-library-item')
-      );
       const pageSize = 12;
-      let visibleCount = pageSize;
+      let page = 1;
+      let total = Number(grid.dataset.total || '0');
       let selectedCategory = 'All';
       let selectedType = 'All';
+      let searchQuery = '';
+      let loading = false;
 
       const normalize = (value) =>
         String(value || '').trim().toLowerCase();
 
-      const matchesFilters = (item) => {
-        const category = item.dataset.promptCategory || '';
-        const type = item.dataset.promptType || '';
-        const trending = item.dataset.promptTrending === 'true';
+      const buildCard = (p) => {
+        const article = document.createElement('article');
+        article.className = 'card prompt-card compact-client-card';
 
-        const categoryMatches =
-          selectedCategory === 'All' ||
-          (selectedCategory === 'Trending'
-            ? trending
-            : normalize(category) === normalize(selectedCategory));
+        const image = p.image || '/images/prompts/createloom.png';
+        const type = p.type || 'Unisex';
+        const description =
+          p.description ||
+          `A ready-to-use ${String(p.category || 'creative').toLowerCase()} AI image prompt for creative image generation.`;
 
-        const typeMatches =
-          selectedType === 'All' ||
-          normalize(type) === normalize(selectedType);
+        article.innerHTML = `
+          <div class="prompt-image-wrap">
+            <img
+              src="${escapeHtml(image)}"
+              alt="${escapeHtml(p.title || 'AI image prompt')}"
+              width="1080"
+              height="1920"
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+          <div class="compact-client-main">
+            <div class="prompt-meta compact-client-meta">
+              <span class="prompt-category">${escapeHtml(p.category || 'AI Prompt')}</span>
+              <span class="prompt-type">${escapeHtml(type)}</span>
+              ${p.trending === true ? '<span class="trend-badge">Trending</span>' : ''}
+            </div>
+            <h3 class="prompt-title">${escapeHtml(p.title || 'AI Image Prompt')}</h3>
+            <p class="prompt-preview">${escapeHtml(description)}</p>
+            <div class="prompt-actions compact-client-actions">
+              <a class="small-btn open-btn" href="${escapeHtml(p.url || '#')}">Open</a>
+            </div>
+          </div>
+        `;
 
-        return categoryMatches && typeMatches;
+        return article;
       };
+
+      const escapeHtml = (value) =>
+        String(value ?? '')
+          .replace(/&/g, '&amp;')
+          .replace(/</g, '&lt;')
+          .replace(/>/g, '&gt;')
+          .replace(/"/g, '&quot;')
+          .replace(/'/g, '&#039;');
+
+      const getItems = () =>
+        Array.from(grid.querySelectorAll('.prompt-library-item'));
 
       const updateButtons = (buttons, selected, attribute) => {
         buttons.forEach((button) => {
@@ -460,61 +494,122 @@ const promptLibrary = [...prompts]
         });
       };
 
-      const render = () => {
-        const matchingItems = items.filter(matchesFilters);
-
-        items.forEach((item) => {
-          item.hidden = true;
-        });
-
-        matchingItems.slice(0, visibleCount).forEach((item) => {
-          item.hidden = false;
-        });
-
-        const shownCount = Math.min(visibleCount, matchingItems.length);
+      const updateState = () => {
+        const shown = getItems().length;
+        total = Number(grid.dataset.total || total || shown);
 
         if (resultsNote) {
           resultsNote.textContent =
-            matchingItems.length === 0
+            total === 0
               ? '0 prompts found'
-              : `Showing ${shownCount} of ${matchingItems.length} prompts`;
+              : `Showing ${shown} of ${total} prompts`;
         }
 
         if (emptyState) {
-          emptyState.hidden = matchingItems.length !== 0;
+          emptyState.hidden = shown !== 0;
         }
 
-        loadMoreButton.hidden = shownCount >= matchingItems.length;
+        loadMoreButton.hidden = shown >= total;
+        loadMoreButton.disabled = loading;
+        loadMoreButton.textContent = loading ? 'Loading…' : 'Load More';
+      };
+
+      const fetchPrompts = async (nextPage, replace = false) => {
+        if (loading) return;
+
+        loading = true;
+        updateState();
+
+        const params = new URLSearchParams({
+          page: String(nextPage),
+          limit: String(pageSize)
+        });
+
+        if (selectedCategory !== 'All') {
+          params.set('category', selectedCategory);
+        }
+
+        if (selectedType !== 'All') {
+          params.set('type', selectedType);
+        }
+
+        if (searchQuery) {
+          params.set('q', searchQuery);
+        }
+
+        try {
+          const response = await fetch(`/api/prompts.json?${params.toString()}`, {
+            headers: { Accept: 'application/json' }
+          });
+
+          if (!response.ok) {
+            throw new Error(`Prompt API returned ${response.status}`);
+          }
+
+          const data = await response.json();
+          total = Number(data.total || 0);
+          grid.dataset.total = String(total);
+
+          if (replace) {
+            grid.innerHTML = '';
+          }
+
+          (data.prompts || []).forEach((p) => {
+            const wrapper = document.createElement('div');
+            wrapper.className = 'prompt-library-item';
+            wrapper.dataset.promptCategory = p.category || '';
+            wrapper.dataset.promptType = p.type || '';
+            wrapper.dataset.promptTrending = p.trending === true ? 'true' : 'false';
+            wrapper.dataset.promptNoid = String(p.noId ?? '');
+            wrapper.appendChild(buildCard(p));
+            grid.appendChild(wrapper);
+          });
+
+          page = nextPage;
+        } catch (error) {
+          console.error('Unable to load prompts:', error);
+        } finally {
+          loading = false;
+          updateState();
+        }
+      };
+
+      const applyFilters = () => {
+        page = 0;
+        fetchPrompts(1, true);
       };
 
       categoryButtons.forEach((button) => {
         button.addEventListener('click', () => {
           selectedCategory = button.dataset.categoryFilter || 'All';
-          visibleCount = pageSize;
-          updateButtons(
-            categoryButtons,
-            selectedCategory,
-            'categoryFilter'
-          );
-          render();
+          updateButtons(categoryButtons, selectedCategory, 'categoryFilter');
+          applyFilters();
         });
       });
 
       typeButtons.forEach((button) => {
         button.addEventListener('click', () => {
           selectedType = button.dataset.typeFilter || 'All';
-          visibleCount = pageSize;
           updateButtons(typeButtons, selectedType, 'typeFilter');
-          render();
+          applyFilters();
         });
       });
 
+      const searchForm = document.getElementById('promptSearchForm');
+      if (searchForm) {
+        searchForm.addEventListener('submit', (event) => {
+          event.preventDefault();
+          searchQuery = searchInput ? searchInput.value.trim() : '';
+          applyFilters();
+        });
+      }
+
       loadMoreButton.addEventListener('click', () => {
-        visibleCount += pageSize;
-        render();
+        fetchPrompts(page + 1);
       });
 
-      render();
+      grid.dataset.total = String(total);
+      updateState();
     })();
   </script>
 
@@ -834,6 +929,31 @@ const promptLibrary = [...prompts]
   .prompt-library-item[hidden] {
     display: none !important;
   }
+
+
+  .compact-client-card {
+    height: 100%;
+  }
+
+  .compact-client-main {
+    margin-top: 10px;
+  }
+
+  .compact-client-meta {
+    margin-top: 0;
+  }
+
+  .compact-client-actions {
+    display: grid;
+    grid-template-columns: 1fr;
+    margin-top: 14px;
+    padding-top: 12px;
+  }
+
+  .compact-client-actions .open-btn {
+    width: 100%;
+  }
+
 
   .prompt-library-actions {
     display: flex;
