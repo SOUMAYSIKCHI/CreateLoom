@@ -1,0 +1,202 @@
+---
+import Layout from '../../layouts/Layout.astro';
+
+const tools = [
+  {
+    icon: '#',
+    title: 'Trending Hashtags',
+    category: 'Instagram',
+    description:
+      'Find curated hashtag sets by topic and quickly copy relevant hashtags for your next Instagram post or Reel.',
+    link: '/creator-tools/trending-hashtags/'
+  }
+];
+---
+
+<Layout
+  title="Creator Tools — Free Instagram Tools for Creators | Create With Soumay"
+  description="Free creator tools from Create With Soumay. Explore Instagram tools designed to help creators find hashtags and build better content."
+  active="Creator Hub"
+>
+  <section class="hero tools-hero">
+    <div class="container">
+      <div class="eyebrow">Creator tools · Free resources</div>
+
+      <h1>
+        Tools built for
+        <span class="gradient-text">creators.</span>
+      </h1>
+
+      <p class="hero-copy">
+        Simple, practical tools to help you create, publish and grow your
+        content faster.
+      </p>
+    </div>
+  </section>
+
+  <section class="section tools-section">
+    <div class="container">
+      <div class="section-heading">
+        <div>
+          <div class="eyebrow">Creator toolkit</div>
+          <h2>Explore creator tools.</h2>
+        </div>
+        <p class="section-copy">
+          Start with a tool below and come back as more creator resources are added.
+        </p>
+      </div>
+
+      <div class="tools-grid">
+        {tools.map((tool) => (
+          <a class="tool-card" href={tool.link}>
+            <div class="tool-icon" aria-hidden="true">{tool.icon}</div>
+            <div class="tool-content">
+              <span class="tool-category">{tool.category}</span>
+              <h3>{tool.title}</h3>
+              <p>{tool.description}</p>
+              <span class="tool-link">Open tool <span aria-hidden="true">→</span></span>
+            </div>
+          </a>
+        ))}
+
+        <div class="tool-card coming-soon" aria-label="More creator tools coming soon">
+          <div class="tool-icon" aria-hidden="true">✦</div>
+          <div class="tool-content">
+            <span class="tool-category">Coming soon</span>
+            <h3>More tools on the way</h3>
+            <p>
+              New creator-focused utilities will be added here to make your
+              content workflow faster and easier.
+            </p>
+            <span class="tool-link">Stay tuned <span aria-hidden="true">→</span></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  .tools-hero {
+    padding-bottom: 72px;
+  }
+
+  .hero-copy {
+    max-width: 680px;
+  }
+
+  .tools-section {
+    padding-top: 24px;
+    padding-bottom: 96px;
+  }
+
+  .section-heading {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 32px;
+    margin-bottom: 32px;
+  }
+
+  .section-heading h2 {
+    margin-bottom: 0;
+  }
+
+  .section-copy {
+    max-width: 430px;
+    margin: 0;
+    opacity: 0.72;
+    line-height: 1.7;
+  }
+
+  .tools-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+  }
+
+  .tool-card {
+    display: flex;
+    gap: 22px;
+    min-height: 220px;
+    padding: 28px;
+    border: 1px solid rgba(127, 127, 127, 0.18);
+    border-radius: 24px;
+    background: rgba(127, 127, 127, 0.045);
+    color: inherit;
+    text-decoration: none;
+    transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+  }
+
+  a.tool-card:hover {
+    transform: translateY(-4px);
+    border-color: rgba(127, 127, 127, 0.4);
+    box-shadow: 0 18px 45px rgba(0, 0, 0, 0.08);
+  }
+
+  .tool-icon {
+    flex: 0 0 58px;
+    width: 58px;
+    height: 58px;
+    display: grid;
+    place-items: center;
+    border-radius: 17px;
+    background: rgba(127, 127, 127, 0.1);
+    font-size: 27px;
+    font-weight: 800;
+  }
+
+  .tool-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .tool-category {
+    margin-bottom: 8px;
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    opacity: 0.58;
+  }
+
+  .tool-content h3 {
+    margin: 0 0 10px;
+    font-size: 1.35rem;
+  }
+
+  .tool-content p {
+    margin: 0;
+    line-height: 1.65;
+    opacity: 0.72;
+  }
+
+  .tool-link {
+    margin-top: auto;
+    padding-top: 20px;
+    font-weight: 700;
+  }
+
+  .coming-soon {
+    opacity: 0.72;
+  }
+
+  @media (max-width: 760px) {
+    .section-heading {
+      display: block;
+    }
+
+    .section-copy {
+      margin-top: 14px;
+    }
+
+    .tools-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .tool-card {
+      min-height: 0;
+    }
+  }
+</style>
