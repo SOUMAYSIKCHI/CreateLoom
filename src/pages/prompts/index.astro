@@ -77,9 +77,9 @@ const filterCategories = [
 ];
 
 // Main library order: noId ascending.
-const promptLibrary = [...prompts].sort(
-  (a, b) => Number(b.noId || 0) - Number(a.noId || 0)
-);
+const promptLibrary = [...prompts]
+  .sort((a, b) => Number(b.noId || 0) - Number(a.noId || 0))
+  .slice(0, 12);
 ---
 
 <Layout
@@ -188,7 +188,7 @@ const promptLibrary = [...prompts].sort(
           </div>
 
           <div class="results-note" id="promptResultsNote" aria-live="polite">
-            Showing 10 of {prompts.length} prompts
+            Showing 12 of {prompts.length} prompts
           </div>
         </div>
 
@@ -250,7 +250,7 @@ const promptLibrary = [...prompts].sort(
               data-prompt-type={p.type || ''}
               data-prompt-trending={p.trending === true ? 'true' : 'false'}
               data-prompt-noid={String(p.noId ?? '')}
-              hidden={index >= 10}
+              hidden={index >= 12}
             >
               <PromptCard p={p} />
             </div>
@@ -273,71 +273,6 @@ const promptLibrary = [...prompts].sort(
 
       </div>
 
-      <div class="category-preview-list">
-        {categoryItems.map(({ category, meta, count }) => {
-          const categoryPrompts = prompts
-            .filter(
-              (p) =>
-                p.category === category &&
-                p.preview === true
-            )
-            .slice(0, 5);
-
-          return (
-            <section
-              class="category-preview"
-              id={`category-${meta?.slug || category.toLowerCase()}`}
-              aria-labelledby={`heading-${meta?.slug || category.toLowerCase()}`}
-            >
-              <div class="category-preview-heading">
-                <div>
-                  <div class="eyebrow">
-                    {count} {count === 1 ? 'prompt' : 'prompts'}
-                    {meta?.starRating ? ` · ${meta.starRating.toFixed(1)} ★` : ''}
-                  </div>
-
-                  <h3 id={`heading-${meta?.slug || category.toLowerCase()}`}>
-                    <a
-                      href={`/prompts/${meta?.slug || category.toLowerCase()}/`}
-                    >
-                      {meta?.title || `${category} AI Image Prompts`}
-                    </a>
-                  </h3>
-
-                  <p>
-                    {meta?.shortDescription ||
-                      meta?.description ||
-                      `Explore ${category.toLowerCase()} AI image prompts.`}
-                  </p>
-                </div>
-
-                <a
-                  class="category-view-more"
-                  href={`/prompts/${meta?.slug || category.toLowerCase()}/`}
-                  aria-label={`View all ${category} AI image prompts`}
-                >
-                  View More →
-                </a>
-              </div>
-
-              {categoryPrompts.length > 0 ? (
-                <div class="grid category-prompt-grid">
-                  {categoryPrompts.map((p) => (
-                    <PromptCard p={p} />
-                  ))}
-                </div>
-              ) : (
-                <p class="category-empty">
-                  More {category.toLowerCase()} AI image prompts are coming soon.
-                  <a href={`/prompts/${meta?.slug || category.toLowerCase()}/`}>
-                    Explore the category →
-                  </a>
-                </p>
-              )}
-            </section>
-          );
-        })}
-      </div>
 
     </div>
   </section>
@@ -491,7 +426,7 @@ const promptLibrary = [...prompts].sort(
       const items = Array.from(
         grid.querySelectorAll('.prompt-library-item')
       );
-      const pageSize = 10;
+      const pageSize = 12;
       let visibleCount = pageSize;
       let selectedCategory = 'All';
       let selectedType = 'All';
