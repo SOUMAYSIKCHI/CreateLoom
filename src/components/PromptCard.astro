@@ -1,5 +1,5 @@
 ---
-const { p } = Astro.props;
+const { p, compact = false } = Astro.props;
 
 const bestFor =
   p.bestFor ||
@@ -73,6 +73,58 @@ const trendClass =
     </div>
   </a>
 
+  {compact ? (
+    <div class="prompt-meta compact-meta">
+      <div class="meta-left">
+        <a
+          class="category-link"
+          href={`/prompts/${p.category.toLowerCase()}/`}
+          aria-label={`Browse ${p.category} AI prompts`}
+        >
+          {p.category}
+        </a>
+
+        {p.type && (
+          <span class="type-badge" aria-label={`Prompt type: ${p.type}`}>
+            {p.type}
+          </span>
+        )}
+      </div>
+
+      {showTrending && (
+        <span class:list={['trend-badge', trendClass]}>
+          {trendLabel}
+        </span>
+      )}
+    </div>
+
+    <a
+      class="prompt-card-main compact-main"
+      href={`/prompt/${p.id}/`}
+      aria-label={`Open ${p.title}`}
+    >
+      <div class="title-row">
+        <h3>{p.title}</h3>
+        <span class="open-arrow" aria-hidden="true">↗</span>
+      </div>
+
+      <p class="prompt-preview">
+        {description}
+      </p>
+    </a>
+
+    <div class="card-actions compact-actions">
+      <a
+        class="small-btn open-btn"
+        href={`/prompt/${p.id}/`}
+        aria-label={`Open ${p.title}`}
+      >
+        Open
+        <span aria-hidden="true">↗</span>
+      </a>
+    </div>
+  ) : (
+  <>
   <!-- Card metadata -->
   <div class="prompt-meta">
     <div class="meta-left">
@@ -188,6 +240,8 @@ const trendClass =
       <span aria-hidden="true">↗</span>
     </a>
   </div>
+  </>
+  )}
 </article>
 
 <style>
@@ -580,6 +634,24 @@ const trendClass =
     outline: 2px solid #a78bfa;
     outline-offset: 3px;
     border-radius: 8px;
+  }
+
+  .compact-main {
+    margin-top: 10px;
+  }
+
+  .compact-meta {
+    margin-top: 0;
+  }
+
+  .compact-actions {
+    grid-template-columns: 1fr;
+    margin-top: 14px;
+    padding-top: 12px;
+  }
+
+  .compact-actions .open-btn {
+    width: 100%;
   }
 
   @media (max-width: 650px) {
