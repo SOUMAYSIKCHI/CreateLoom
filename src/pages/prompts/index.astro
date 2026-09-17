@@ -241,7 +241,6 @@ const promptLibrary = [...prompts]
         <div
           class="grid prompt-library-grid"
           id="promptLibraryGrid"
-          data-total={prompts.length}
           aria-live="polite"
         >
           {promptLibrary.map((p, index) => (
@@ -414,6 +413,7 @@ const promptLibrary = [...prompts]
 
   <!-- Prompt library structured data -->
   <!-- Prompt library client-side pagination -->
+  <!-- Prompt library client-side pagination -->
   <script>
     (() => {
       const grid = document.getElementById('promptLibraryGrid');
@@ -422,58 +422,21 @@ const promptLibrary = [...prompts]
       const resultsNote = document.getElementById('promptResultsNote');
       const categoryButtons = document.querySelectorAll('[data-category-filter]');
       const typeButtons = document.querySelectorAll('[data-type-filter]');
+      const searchForm = document.getElementById('promptSearchForm');
       const searchInput = document.getElementById('promptSearch');
 
       if (!grid || !loadMoreButton) return;
 
       const pageSize = 12;
-      let page = 1;
-      let total = Number(grid.dataset.total || '0');
+      let allPrompts = [];
+      let visibleCount = pageSize;
       let selectedCategory = 'All';
       let selectedType = 'All';
       let searchQuery = '';
-      let loading = false;
+      let loading = true;
 
       const normalize = (value) =>
         String(value || '').trim().toLowerCase();
-
-      const buildCard = (p) => {
-        const article = document.createElement('article');
-        article.className = 'card prompt-card compact-client-card';
-
-        const image = p.image || '/images/prompts/createloom.png';
-        const type = p.type || 'Unisex';
-        const description =
-          p.description ||
-          `A ready-to-use ${String(p.category || 'creative').toLowerCase()} AI image prompt for creative image generation.`;
-
-        article.innerHTML = `
-          <div class="prompt-image-wrap">
-            <img
-              src="${escapeHtml(image)}"
-              alt="${escapeHtml(p.title || 'AI image prompt')}"
-              width="1080"
-              height="1920"
-              loading="lazy"
-              decoding="async"
-            />
-          </div>
-          <div class="compact-client-main">
-            <div class="prompt-meta compact-client-meta">
-              <span class="prompt-category">${escapeHtml(p.category || 'AI Prompt')}</span>
-              <span class="prompt-type">${escapeHtml(type)}</span>
-              ${p.trending === true ? '<span class="trend-badge">Trending</span>' : ''}
-            </div>
-            <h3 class="prompt-title">${escapeHtml(p.title || 'AI Image Prompt')}</h3>
-            <p class="prompt-preview">${escapeHtml(description)}</p>
-            <div class="prompt-actions compact-client-actions">
-              <a class="small-btn open-btn" href="${escapeHtml(p.url || '#')}">Open</a>
-            </div>
-          </div>
-        `;
-
-        return article;
-      };
 
       const escapeHtml = (value) =>
         String(value ?? '')
@@ -483,8 +446,166 @@ const promptLibrary = [...prompts]
           .replace(/"/g, '&quot;')
           .replace(/'/g, '&#039;');
 
-      const getItems = () =>
-        Array.from(grid.querySelectorAll('.prompt-library-item'));
+      const getFilteredPrompts = () => {
+        const query = normalize(searchQuery);
+
+        return allPrompts.filter((p) => {
+          const categoryMatches =
+            selectedCategory === 'All' ||
+            (selectedCategory === 'Trending'
+              ? p.trending === true
+              : normalize(p.category) === normalize(selectedCategory));
+
+          const typeMatches =
+            selectedType === 'All' ||
+            normalize(p.type || 'Unisex') === normalize(selectedType);
+
+          const searchMatches =
+            !query ||
+            [
+              p.title,
+              p.category,
+              p.type,
+              p.description
+            ]
+              .filter(Boolean)
+              .join(' ')
+              .toLowerCase()
+              .includes(query);
+
+          return categoryMatches && typeMatches && searchMatches;
+        });
+      };
+
+      const trendLabel = (p) => {
+        if (p.trendStatus === 'hot') return '🔥 Hot';
+        if (p.trendStatus === 'rising') return '📈 Rising';
+        if (p.trendStatus === 'seasonal') return 'Seasonal';
+        if (p.trendStatus === 'evergreen') return 'Evergreen';
+        return 'Trending';
+      };
+
+      const trendClass = (p) => {
+        if (p.trendStatus === 'hot') return 'trend-hot';
+        if (p.trendStatus === 'rising') return 'trend-rising';
+        if (p.trendStatus === 'seasonal') return 'trend-seasonal';
+        if (p.trendStatus === 'evergreen') return 'trend-evergreen';
+        return 'trend-current';
+      };
+
+      const buildCard = (p) => {
+        const id = p.id || '';
+        const title = p.title || 'AI Image Prompt';
+        const category = p.category || 'AI Prompt';
+        const type = p.type || 'Unisex';
+        const image = p.image || '/images/prompts/createloom.png';
+        const description =
+          p.description ||
+          `A ready-to-use ${category.toLowerCase()} AI image prompt for creative image generation.`;
+
+        const article = document.createElement('article');
+        article.className = 'card prompt-card';
+
+        article.innerHTML = `
+          <a
+            class="prompt-card-image-link"
+            href="/prompt/${encodeURIComponent(id)}/"
+            aria-label="View ${escapeHtml(title)} result preview"
+          >
+            <div class="prompt-card-image-wrap">
+              <img
+                class="prompt-card-image"
+                src="${escapeHtml(image)}"
+                alt="Example result for ${escapeHtml(title)} AI image prompt"
+                width="1080"
+                height="1920"
+                loading="lazy"
+                decoding="async"
+              />
+            </div>
+          </a>
+
+          <div class="prompt-meta compact-meta">
+            <div class="meta-left">
+              <a
+                class="category-link"
+                href="/prompts/${encodeURIComponent(category.toLowerCase())}/"
+                aria-label="Browse ${escapeHtml(category)} AI prompts"
+              >
+                ${escapeHtml(category)}
+              </a>
+              <span class="type-badge" aria-label="Prompt type: ${escapeHtml(type)}">
+                ${escapeHtml(type)}
+              </span>
+            </div>
+
+            ${
+              p.trending === true
+                ? `<span class="trend-badge ${trendClass(p)}">${trendLabel(p)}</span>`
+                : ''
+            }
+          </div>
+
+          <a
+            class="prompt-card-main compact-main"
+            href="/prompt/${encodeURIComponent(id)}/"
+            aria-label="Open ${escapeHtml(title)}"
+          >
+            <div class="title-row">
+              <h3>${escapeHtml(title)}</h3>
+              <span class="open-arrow" aria-hidden="true">↗</span>
+            </div>
+
+            <p class="prompt-preview">${escapeHtml(description)}</p>
+          </a>
+
+          <div class="card-actions compact-actions">
+            <a
+              class="small-btn open-btn"
+              href="/prompt/${encodeURIComponent(id)}/"
+              aria-label="Open ${escapeHtml(title)}"
+            >
+              Open
+              <span aria-hidden="true">↗</span>
+            </a>
+          </div>
+        `;
+
+        return article;
+      };
+
+      const render = () => {
+        const filtered = getFilteredPrompts();
+        const visible = filtered.slice(0, visibleCount);
+
+        grid.innerHTML = '';
+
+        visible.forEach((p) => {
+          const wrapper = document.createElement('div');
+          wrapper.className = 'prompt-library-item';
+          wrapper.dataset.promptCategory = p.category || '';
+          wrapper.dataset.promptType = p.type || '';
+          wrapper.dataset.promptTrending = p.trending === true ? 'true' : 'false';
+          wrapper.dataset.promptNoid = String(p.noId ?? '');
+          wrapper.appendChild(buildCard(p));
+          grid.appendChild(wrapper);
+        });
+
+        if (resultsNote) {
+          resultsNote.textContent =
+            filtered.length === 0
+              ? '0 prompts found'
+              : `Showing ${visible.length} of ${filtered.length} prompts`;
+        }
+
+        if (emptyState) {
+          emptyState.hidden = filtered.length !== 0;
+        }
+
+        loadMoreButton.hidden = visible.length >= filtered.length;
+        loadMoreButton.disabled = loading;
+        loadMoreButton.textContent = loading ? 'Loading…' : 'Load More';
+      };
 
       const updateButtons = (buttons, selected, attribute) => {
         buttons.forEach((button) => {
@@ -494,51 +615,9 @@ const promptLibrary = [...prompts]
         });
       };
 
-      const updateState = () => {
-        const shown = getItems().length;
-        total = Number(grid.dataset.total || total || shown);
-
-        if (resultsNote) {
-          resultsNote.textContent =
-            total === 0
-              ? '0 prompts found'
-              : `Showing ${shown} of ${total} prompts`;
-        }
-
-        if (emptyState) {
-          emptyState.hidden = shown !== 0;
-        }
-
-        loadMoreButton.hidden = shown >= total;
-        loadMoreButton.disabled = loading;
-        loadMoreButton.textContent = loading ? 'Loading…' : 'Load More';
-      };
-
-      const fetchPrompts = async (nextPage, replace = false) => {
-        if (loading) return;
-
-        loading = true;
-        updateState();
-
-        const params = new URLSearchParams({
-          page: String(nextPage),
-          limit: String(pageSize)
-        });
-
-        if (selectedCategory !== 'All') {
-          params.set('category', selectedCategory);
-        }
-
-        if (selectedType !== 'All') {
-          params.set('type', selectedType);
-        }
-
-        if (searchQuery) {
-          params.set('q', searchQuery);
-        }
-
+      const loadPromptData = async () => {
         try {
-          const response = await fetch(`/api/prompts.json?${params.toString()}`, {
+          const response = await fetch('/api/prompts.json', {
             headers: { Accept: 'application/json' }
           });
 
@@ -547,69 +626,53 @@ const promptLibrary = [...prompts]
           }
 
           const data = await response.json();
-          total = Number(data.total || 0);
-          grid.dataset.total = String(total);
-
-          if (replace) {
-            grid.innerHTML = '';
-          }
-
-          (data.prompts || []).forEach((p) => {
-            const wrapper = document.createElement('div');
-            wrapper.className = 'prompt-library-item';
-            wrapper.dataset.promptCategory = p.category || '';
-            wrapper.dataset.promptType = p.type || '';
-            wrapper.dataset.promptTrending = p.trending === true ? 'true' : 'false';
-            wrapper.dataset.promptNoid = String(p.noId ?? '');
-            wrapper.appendChild(buildCard(p));
-            grid.appendChild(wrapper);
-          });
-
-          page = nextPage;
+          allPrompts = Array.isArray(data.prompts) ? data.prompts : [];
         } catch (error) {
           console.error('Unable to load prompts:', error);
+          allPrompts = [];
         } finally {
           loading = false;
-          updateState();
+          visibleCount = pageSize;
+          render();
         }
-      };
-
-      const applyFilters = () => {
-        page = 0;
-        fetchPrompts(1, true);
       };
 
       categoryButtons.forEach((button) => {
         button.addEventListener('click', () => {
           selectedCategory = button.dataset.categoryFilter || 'All';
+          visibleCount = pageSize;
           updateButtons(categoryButtons, selectedCategory, 'categoryFilter');
-          applyFilters();
+          render();
         });
       });
 
       typeButtons.forEach((button) => {
         button.addEventListener('click', () => {
           selectedType = button.dataset.typeFilter || 'All';
+          visibleCount = pageSize;
           updateButtons(typeButtons, selectedType, 'typeFilter');
-          applyFilters();
+          render();
         });
       });
 
-      const searchForm = document.getElementById('promptSearchForm');
       if (searchForm) {
         searchForm.addEventListener('submit', (event) => {
           event.preventDefault();
           searchQuery = searchInput ? searchInput.value.trim() : '';
-          applyFilters();
+          visibleCount = pageSize;
+          render();
         });
       }
 
       loadMoreButton.addEventListener('click', () => {
-        fetchPrompts(page + 1);
+        visibleCount += pageSize;
+        render();
       });
 
-      grid.dataset.total = String(total);
-      updateState();
+      // The server-rendered 12 cards remain visible immediately.
+      // After the reduced listing dataset arrives, the client takes over.
+      render();
+      loadPromptData();
     })();
   </script>
 
@@ -929,6 +992,23 @@ const promptLibrary = [...prompts]
   .prompt-library-item[hidden] {
     display: none !important;
   }
+
+
+  /* Keep dynamically loaded cards identical to the compact server-rendered cards. */
+  .prompt-library-grid .prompt-card {
+    min-width: 0;
+  }
+
+  .prompt-library-grid .prompt-card-image-wrap {
+    width: 100%;
+    aspect-ratio: 9 / 12;
+  }
+
+  .prompt-library-grid .compact-actions {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
 
 
   .compact-client-card {
