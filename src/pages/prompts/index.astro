@@ -79,7 +79,7 @@ const filterCategories = [
 // Main library order: noId ascending.
 const promptLibrary = [...prompts]
   .sort((a, b) => Number(b.noId || 0) - Number(a.noId || 0))
-  .slice(0, 12);
+  .slice(0, 10);
 ---
 
 <Layout
@@ -187,8 +187,18 @@ const promptLibrary = [...prompts]
             </p>
           </div>
 
-          <div class="results-note" id="promptResultsNote" aria-live="polite">
-            Showing 12 of {prompts.length} prompts
+          <div class="prompt-library-heading-actions">
+            <div class="results-note" id="promptResultsNote" aria-live="polite">
+              Showing 10 of {prompts.length} prompts
+            </div>
+            <a
+              id="categoryViewMore"
+              class="category-view-more-link"
+              href="#"
+              hidden
+            >
+              View more prompts →
+            </a>
           </div>
         </div>
 
@@ -207,6 +217,16 @@ const promptLibrary = [...prompts]
                   type="button"
                   class:list={{ 'active-filter': category === 'All' }}
                   data-category-filter={category}
+                  data-category-slug={
+                    category === 'All'
+                      ? ''
+                      : category === 'Trending'
+                        ? 'trending'
+                        : (
+                            categories.find((item) => item.name === category)?.slug ||
+                            category.toLowerCase().replace(/[^a-z0-9]+/g, '-')
+                          )
+                  }
                   aria-pressed={category === 'All' ? 'true' : 'false'}
                 >
                   {category}
@@ -250,7 +270,7 @@ const promptLibrary = [...prompts]
               data-prompt-type={p.type || ''}
               data-prompt-trending={p.trending === true ? 'true' : 'false'}
               data-prompt-noid={String(p.noId ?? '')}
-              hidden={index >= 12}
+              hidden={index >= 10}
             >
               <PromptCard p={p} compact />
             </div>
@@ -414,12 +434,14 @@ const promptLibrary = [...prompts]
   <!-- Prompt library structured data -->
   <!-- Prompt library client-side pagination -->
   <!-- Prompt library client-side pagination -->
+  <!-- Prompt library client-side filtering and pagination -->
   <script>
     (() => {
       const grid = document.getElementById('promptLibraryGrid');
       const loadMoreButton = document.getElementById('loadMorePrompts');
       const emptyState = document.getElementById('promptLibraryEmpty');
       const resultsNote = document.getElementById('promptResultsNote');
+      const categoryViewMore = document.getElementById('categoryViewMore');
       const categoryButtons = document.querySelectorAll('[data-category-filter]');
       const typeButtons = document.querySelectorAll('[data-type-filter]');
       const searchForm = document.getElementById('promptSearchForm');
@@ -427,7 +449,7 @@ const promptLibrary = [...prompts]
 
       if (!grid || !loadMoreButton) return;
 
-      const pageSize = 12;
+      const pageSize = 10;
       let allPrompts = [];
       let visibleCount = pageSize;
       let selectedCategory = 'All';
@@ -529,7 +551,7 @@ const promptLibrary = [...prompts]
             <div class="meta-left">
               <a
                 class="category-link"
-                href="/prompts/${encodeURIComponent(category.toLowerCase())}/"
+                href="/prompts/${encodeURIComponent(category.toLowerCase().replace(/[^a-z0-9]+/g, '-'))}/"
                 aria-label="Browse ${escapeHtml(category)} AI prompts"
               >
                 ${escapeHtml(category)}
@@ -605,6 +627,24 @@ const promptLibrary = [...prompts]
         loadMoreButton.hidden = visible.length >= filtered.length;
         loadMoreButton.disabled = loading;
         loadMoreButton.textContent = loading ? 'Loading…' : 'Load More';
+
+        if (categoryViewMore) {
+          const selectedButton = Array.from(categoryButtons).find(
+            (button) =>
+              button.dataset.categoryFilter === selectedCategory
+          );
+
+          const slug = selectedButton?.dataset.categorySlug || '';
+
+          if (selectedCategory !== 'All' && slug) {
+            categoryViewMore.href = `/prompts/${slug}/`;
+            categoryViewMore.textContent =
+              `View all ${selectedCategory} prompts →`;
+            categoryViewMore.hidden = false;
+          } else {
+            categoryViewMore.hidden = true;
+          }
+        }
       };
 
       const updateButtons = (buttons, selected, attribute) => {
@@ -669,8 +709,6 @@ const promptLibrary = [...prompts]
         render();
       });
 
-      // The server-rendered 12 cards remain visible immediately.
-      // After the reduced listing dataset arrives, the client takes over.
       render();
       loadPromptData();
     })();
@@ -994,6 +1032,240 @@ const promptLibrary = [...prompts]
   }
 
 
+  /* Dynamic prompt cards: mirror PromptCard.astro compact styles. */
+  .prompt-library-grid .prompt-card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    overflow: hidden;
+    height: 100%;
+    padding: 20px;
+    border: 1px solid rgba(255,255,255,.075);
+    border-radius: 18px;
+    background: linear-gradient(145deg, rgba(255,255,255,.035), rgba(255,255,255,.018));
+    transition: transform .22s ease, border-color .22s ease, box-shadow .22s ease;
+  }
+
+  .prompt-library-grid .prompt-card:hover {
+    transform: translateY(-3px);
+    border-color: rgba(139,92,246,.32);
+    box-shadow: 0 14px 40px rgba(0,0,0,.18);
+  }
+
+  .prompt-library-grid .prompt-card-image-link {
+    display: block;
+    margin: -20px -20px 18px;
+    color: inherit;
+    text-decoration: none;
+  }
+
+  .prompt-library-grid .prompt-card-image-wrap {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 9 / 12;
+    overflow: hidden;
+    background: #0d0c13;
+    border-bottom: 1px solid rgba(255,255,255,.075);
+  }
+
+  .prompt-library-grid .prompt-card-image-wrap::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background: linear-gradient(180deg, rgba(0,0,0,0) 68%, rgba(0,0,0,.2));
+  }
+
+  .prompt-library-grid .prompt-card-image {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    transition: transform .35s ease;
+  }
+
+  .prompt-library-grid .prompt-card:hover .prompt-card-image {
+    transform: scale(1.025);
+  }
+
+  .prompt-library-grid .prompt-meta {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+    min-width: 0;
+    padding-right: 0;
+  }
+
+  .prompt-library-grid .meta-left {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 7px;
+    min-width: 0;
+  }
+
+  .prompt-library-grid .category-link {
+    display: inline-flex;
+    align-items: center;
+    width: fit-content;
+    color: #a78bfa;
+    text-decoration: none;
+    font-size: .69rem;
+    font-weight: 850;
+    letter-spacing: .09em;
+    text-transform: uppercase;
+  }
+
+  .prompt-library-grid .type-badge,
+  .prompt-library-grid .trend-badge {
+    display: inline-flex;
+    align-items: center;
+    white-space: nowrap;
+  }
+
+  .prompt-library-grid .type-badge {
+    padding: 4px 7px;
+    border: 1px solid rgba(255,255,255,.07);
+    border-radius: 999px;
+    background: rgba(255,255,255,.025);
+    color: #aaaab3;
+    font-size: .64rem;
+    font-weight: 700;
+  }
+
+  .prompt-library-grid .trend-badge {
+    flex: 0 0 auto;
+    padding: 4px 7px;
+    border-radius: 999px;
+    font-size: .64rem;
+    font-weight: 800;
+  }
+
+  .prompt-library-grid .trend-current {
+    border: 1px solid rgba(139,92,246,.25);
+    background: rgba(139,92,246,.08);
+    color: #c4b5fd;
+  }
+
+  .prompt-library-grid .trend-hot {
+    border: 1px solid rgba(251,146,60,.24);
+    background: rgba(251,146,60,.08);
+    color: #fdba74;
+  }
+
+  .prompt-library-grid .trend-rising {
+    border: 1px solid rgba(139,92,246,.22);
+    background: rgba(139,92,246,.07);
+    color: #c4b5fd;
+  }
+
+  .prompt-library-grid .trend-seasonal,
+  .prompt-library-grid .trend-evergreen {
+    border: 1px solid rgba(255,255,255,.06);
+    background: rgba(255,255,255,.025);
+    color: #9999a3;
+  }
+
+  .prompt-library-grid .prompt-card-main {
+    display: block;
+    flex: 1;
+    min-width: 0;
+    margin-top: 10px;
+    color: inherit;
+    text-decoration: none;
+  }
+
+  .prompt-library-grid .title-row {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .prompt-library-grid .prompt-card h3 {
+    flex: 1;
+    margin: 0 0 9px;
+    color: #fff;
+    font-size: 1.08rem;
+    line-height: 1.38;
+    letter-spacing: -.012em;
+  }
+
+  .prompt-library-grid .open-arrow {
+    margin-top: 2px;
+    color: #71717a;
+    font-size: .9rem;
+    opacity: 0;
+  }
+
+  .prompt-library-grid .prompt-card:hover .open-arrow {
+    opacity: 1;
+    color: #a78bfa;
+  }
+
+  .prompt-library-grid .prompt-preview {
+    margin: 0;
+    color: var(--muted, #a1a1aa);
+    font-size: .87rem;
+    line-height: 1.68;
+  }
+
+  .prompt-library-grid .card-actions {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 7px;
+    margin-top: 14px;
+    padding-top: 12px;
+    border-top: 1px solid rgba(255,255,255,.055);
+  }
+
+  .prompt-library-grid .small-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    min-height: 34px;
+    padding: 7px 10px;
+    border: 1px solid rgba(255,255,255,.075);
+    border-radius: 9px;
+    background: rgba(255,255,255,.022);
+    color: #bdbdc6;
+    font: inherit;
+    font-size: .72rem;
+    font-weight: 700;
+    text-decoration: none;
+    white-space: nowrap;
+  }
+
+  .prompt-library-grid .open-btn {
+    border-color: rgba(139,92,246,.22);
+    color: #c4b5fd;
+    width: 100%;
+  }
+
+  .prompt-library-heading-actions {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    flex-wrap: wrap;
+  }
+
+  .category-view-more-link {
+    color: #c4b5fd;
+    font-size: .82rem;
+    font-weight: 800;
+    text-decoration: none;
+    white-space: nowrap;
+  }
+
+  .category-view-more-link:hover {
+    text-decoration: underline;
+  }
+
+
+
   /* Keep dynamically loaded cards identical to the compact server-rendered cards. */
   .prompt-library-grid .prompt-card {
     min-width: 0;
@@ -1315,6 +1587,14 @@ const promptLibrary = [...prompts]
 
     .category-preview {
       padding-top: 8px;
+    }
+
+    .prompt-library-grid .prompt-card {
+      padding: 18px;
+    }
+
+    .prompt-library-grid .prompt-card-image-link {
+      margin: -18px -18px 18px;
     }
 
     .featured-card {
