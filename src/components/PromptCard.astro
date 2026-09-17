@@ -44,15 +44,17 @@ const trendClass =
   data-title={p.title}
   data-category={p.category}
   data-type={p.type || 'Unisex'}
-  data-tools={tools.join(' ')}
   data-trending={String(p.trending === true)}
-  data-trend-status={trendStatus}
-  data-tags={Array.isArray(p.tags) ? p.tags.join(' ') : ''}
-  data-search-terms={Array.isArray(p.searchTerms) ? p.searchTerms.join(' ') : ''}
-  data-prompt={p.prompt}
-  data-description={description}
   data-prompt-id={p.id}
-  data-created-at={p.createdAt || ''}
+  {...(!compact && {
+    'data-tools': tools.join(' '),
+    'data-trend-status': trendStatus,
+    'data-tags': Array.isArray(p.tags) ? p.tags.join(' ') : '',
+    'data-search-terms': Array.isArray(p.searchTerms) ? p.searchTerms.join(' ') : '',
+    'data-prompt': p.prompt,
+    'data-description': description,
+    'data-created-at': p.createdAt || ''
+  })}
 >
   <!-- Visual result preview -->
   <a
