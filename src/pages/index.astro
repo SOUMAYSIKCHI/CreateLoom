@@ -107,6 +107,13 @@ const categoryDescriptions = {
 
       </form>
 
+      <div class="hero-popular" aria-label="Popular prompt categories">
+        <a href="/prompts/couple/">Couple</a>
+        <a href="/prompts/navratri/">Navratri</a>
+        <a href="/prompts/saree/">Saree</a>
+        <a href="/prompts/festival/">Festival</a>
+      </div>
+
       <div class="hero-actions">
 
         <a
@@ -572,6 +579,33 @@ const categoryDescriptions = {
     margin: 28px auto 0;
   }
 
+
+  .hero-popular {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 14px auto 0;
+  }
+
+  .hero-popular a {
+    display: inline-flex;
+    align-items: center;
+    padding: 7px 12px;
+    border: 1px solid rgba(139,92,246,0.2);
+    border-radius: 999px;
+    background: rgba(255,255,255,0.025);
+    color: #a78bfa;
+    font-size: 0.76rem;
+    font-weight: 700;
+    text-decoration: none;
+    transition: background 0.2s ease, border-color 0.2s ease;
+  }
+
+  .hero-popular a:hover {
+    background: rgba(139,92,246,0.08);
+    border-color: rgba(139,92,246,0.38);
+  }
 
   .hero-actions {
     display: flex;
