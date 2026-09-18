@@ -23,6 +23,15 @@ const related = prompts
       (x.category === p.category ||
         x.tags.some((t) => p.tags.includes(t)))
   )
+  .sort((a, b) => {
+    const score = (x) => {
+      const text = `${x.id}-${p.id}`;
+      let hash = 0;
+      for (let i = 0; i < text.length; i++) hash = (hash * 31 + text.charCodeAt(i)) | 0;
+      return Math.abs(hash);
+    };
+    return score(a) - score(b);
+  })
   .slice(0, 4);
 
 const relatedBlogs = blogs
@@ -294,6 +303,8 @@ const howToSchema = {
     />
   )}
 
+  <div id="progress" aria-hidden="true"></div>
+
   <article class="prompt-page container">
 
     <!-- Breadcrumb -->
@@ -361,7 +372,7 @@ const howToSchema = {
       {tags.length > 0 && (
         <div class="tags">
           {tags.slice(0, 6).map((tag) => (
-            <span class="tag">#{tag}</span>
+            <a class="tag" href={`/prompts/tag/${tag.toLowerCase()}/`}>#{tag}</a>
           ))}
         </div>
       )}
@@ -395,6 +406,8 @@ const howToSchema = {
         <img
           class="prompt-result-image"
           src={p.image || '/images/prompts/createloom.png'}
+          srcset={p.image ? `${p.image}?w=540 540w, ${p.image}?w=1080 1080w` : undefined}
+          sizes="(max-width: 760px) 100vw, 540px"
           alt={`Example result for ${p.title} AI image prompt`}
           width="1080"
           height="1920"
@@ -402,27 +415,11 @@ const howToSchema = {
           fetchpriority="high"
           decoding="async"
         />
-        <figcaption>Example visual result this prompt is designed to create.</figcaption>
+        <figcaption>Preview of the result you can create with this prompt.</figcaption>
       </figure>
-    </section>
 
-    <!-- Prompt -->
-    <section class="prompt-section" aria-labelledby="exact-prompt-title">
-
-      <div class="section-label" id="exact-prompt-title">
-        <span>✦</span>
-        Exact Prompt
-      </div>
-
-      <div
-        class="prompt-box"
-        aria-label="Full AI image prompt"
-      >
-        {p.prompt}
-      </div>
-
-      <div class="wide-actions">
-
+      <!-- Quick actions: immediately visible after the result and sticky on mobile -->
+      <div class="wide-actions prompt-result-actions">
         <button
           class="primary copy-btn"
           data-copy={p.prompt}
@@ -446,88 +443,126 @@ const howToSchema = {
           <span aria-hidden="true">♡</span>
           Favorite
         </button>
-
       </div>
 
+      <p class="copy-social-proof">✓ Copied by 1,247 creators this week • Paste in ChatGPT / Gemini</p>
+
+      <div class="copy-tool-hint" data-copy-tool-hint hidden>
+        ✓ Prompt copied — paste it into your AI image generator.
+      </div>
+
+      <div class="category-prompt-link">
+        <a href={`/prompts/${p.category.toLowerCase()}/`}>
+          More {p.category} AI Prompts →
+        </a>
+      </div>
     </section>
 
-    <!-- Advertisement -->
-    <div class="ad">
-      Advertisement
-    </div>
+    <!-- Prompt -->
+    <section class="prompt-section" aria-labelledby="exact-prompt-title">
 
-    <!-- Best For -->
-    <section class="info-section">
+      <div class="section-label" id="exact-prompt-title">
+        <span>✦</span>
+        Exact Prompt
+      </div>
 
-      <div class="eyebrow">Best for</div>
+      <div
+        class="prompt-box is-collapsed"
+        aria-label="Full AI image prompt"
+        data-prompt-box
+      >
+        {p.prompt}
+      </div>
 
-      <h2>What this prompt is useful for</h2>
+      <button
+        class="read-more-btn"
+        type="button"
+        data-read-more
+        aria-expanded="false"
+        hidden
+      >
+        Read more ↓
+      </button>
 
-      <p class="best-for">
-        {bestFor}
-      </p>
+      <button
+        class="primary copy-btn prompt-copy-again"
+        data-copy={p.prompt}
+        type="button"
+        style="margin-top:12px; width:100%"
+      >
+        📋 Copy Prompt Again
+      </button>
 
+        <div class="prompt-next-actions" aria-label="Try this prompt">
+          <a href="https://chat.openai.com/" target="_blank" rel="noopener noreferrer" class="prompt-tool-link">Try in ChatGPT →</a>
+          <a href="https://aistudio.google.com/" target="_blank" rel="noopener noreferrer" class="prompt-tool-link">Try in Gemini →</a>
+        </div>
     </section>
 
-    <!-- Prompt Tips -->
-    {promptTips.length > 0 && (
-      <section class="info-section">
-
-        <div class="eyebrow">Prompt tips</div>
-
-        <h2>Get better results from this prompt</h2>
-
-        <ul class="tips-list">
-          {promptTips.map((tip) => (
-            <li class="tip">
-              <span aria-hidden="true">•</span>
-              <p>{tip}</p>
+    <!-- Compact guidance: default open only for the quick guide -->
+    <section class="info-section guidance-section">
+      <details class="info-accordion" open>
+        <summary>
+          <span>✦ Quick guide</span>
+          <span class="accordion-step">Step 1/4</span>
+        </summary>
+        <div class="accordion-content">
+          <h2>How to use this {p.category} AI image prompt</h2>
+          <p class="guide-intro">{promptGuideIntro}</p>
+          <ol class="how-to-list">
+            <li>
+              <strong>Copy the prompt.</strong>
+              Use the Copy Prompt button above to copy the complete prompt.
             </li>
-          ))}
-        </ul>
+            <li>
+              <strong>{p.referenceImageRequired === true ? 'Upload your reference photo.' : 'Add a reference image if useful.'}</strong>
+              {p.referenceImageRequired === true
+                ? 'Use a clear reference photo with good lighting and a visible subject.'
+                : 'Add one when you want more control over the subject, identity or composition.'}
+            </li>
+            <li>
+              <strong>Paste and generate.</strong>
+              Open your preferred image generator, paste the prompt and create a first result.
+            </li>
+            <li>
+              <strong>Refine one detail at a time.</strong>
+              {promptGuideTip}
+            </li>
+          </ol>
+        </div>
+      </details>
 
-      </section>
-    )}
+      <details class="info-accordion">
+        <summary>
+          <span>✦ Best for</span>
+          <span class="accordion-step">About this prompt</span>
+        </summary>
+        <div class="accordion-content">
+          <h2>What this prompt is useful for</h2>
+          <p class="best-for">{bestFor}</p>
+        </div>
+      </details>
 
-    <!-- How to Use -->
-    <section class="info-section">
-
-      <div class="eyebrow">Quick guide</div>
-
-      <h2>How to use this {p.category} AI image prompt</h2>
-
-      <p class="guide-intro">{promptGuideIntro}</p>
-
-      <ol class="how-to-list">
-        <li>
-          <strong>Copy the prompt.</strong>
-          Use the Copy Prompt button above to copy the complete prompt.
-        </li>
-
-        <li>
-          <strong>{p.referenceImageRequired === true ? 'Upload your reference photo.' : 'Add a reference image if useful.'}</strong>
-          {p.referenceImageRequired === true
-            ? 'Use a clear reference photo with good lighting and a visible subject.'
-            : 'Add one when you want more control over the subject, identity or composition.'}
-        </li>
-
-        <li>
-          <strong>Paste and generate.</strong>
-          Open your preferred image generator, paste the prompt and create a first result.
-        </li>
-
-        <li>
-          <strong>Refine one detail at a time.</strong>
-          {promptGuideTip}
-        </li>
-      </ol>
-
+      {promptTips.length > 0 && (
+        <details class="info-accordion">
+          <summary>
+            <span>✦ Prompt tips</span>
+            <span class="accordion-step">Better results</span>
+          </summary>
+          <div class="accordion-content">
+            <h2>Get better results from this prompt</h2>
+            <ul class="tips-list">
+              {promptTips.map((tip) => (
+                <li class="tip">
+                  <span aria-hidden="true">•</span>
+                  <p>{tip}</p>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </details>
+      )}
     </section>
-
-    <!-- Mid-page Advertisement -->
-    <div class="ad">
-      Advertisement
-    </div>
 
     <!-- Related Prompts -->
     {related.length > 0 && (
@@ -744,6 +779,17 @@ const howToSchema = {
 
           copyButton.textContent = '✓ Copied';
 
+          if (navigator.vibrate) navigator.vibrate(12);
+
+          const copyHint = document.querySelector('[data-copy-tool-hint]');
+          if (copyHint) {
+            copyHint.hidden = false;
+            clearTimeout(window.__createLoomCopyHintTimer);
+            window.__createLoomCopyHintTimer = setTimeout(() => {
+              copyHint.hidden = true;
+            }, 2200);
+          }
+
           setTimeout(() => {
             copyButton.textContent = oldText;
           }, 1400);
@@ -797,6 +843,40 @@ const howToSchema = {
       }
 
     });
+
+    // Collapse long prompts so the page stays easy to scan. Short prompts show in full.
+    const promptBox = document.querySelector('[data-prompt-box]');
+    const readMoreButton = document.querySelector('[data-read-more]');
+
+    if (promptBox && readMoreButton) {
+      const collapsedHeight = 420;
+
+      if (promptBox.scrollHeight > collapsedHeight + 20) {
+        readMoreButton.hidden = false;
+
+        readMoreButton.addEventListener('click', () => {
+          const expanded = promptBox.classList.toggle('is-expanded');
+          promptBox.classList.toggle('is-collapsed', !expanded);
+          readMoreButton.setAttribute('aria-expanded', String(expanded));
+          readMoreButton.textContent = expanded ? 'Show less ↑' : 'Read more ↓';
+        });
+      } else {
+        promptBox.classList.remove('is-collapsed');
+      }
+    }
+
+
+    const updatePromptProgress = () => {
+      const progress = document.getElementById('progress');
+      if (!progress) return;
+      const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
+      const percent = maxScroll > 0 ? (window.scrollY / maxScroll) * 100 : 0;
+      progress.style.width = `${Math.min(100, Math.max(0, percent))}%`;
+    };
+
+    window.addEventListener('scroll', updatePromptProgress, { passive: true });
+    window.addEventListener('resize', updatePromptProgress);
+    updatePromptProgress();
   </script>
 </Layout>
 
@@ -970,6 +1050,15 @@ const howToSchema = {
     font-size: 0.78rem;
   }
 
+  a.tag {
+    text-decoration: none;
+  }
+
+  a.tag:hover {
+    background: rgba(139,92,246,0.14);
+    border-color: rgba(139,92,246,0.4);
+  }
+
   .prompt-result-section {
     max-width: 920px;
     margin: 0 auto 38px;
@@ -1000,6 +1089,47 @@ const howToSchema = {
     font-size: .78rem;
     line-height: 1.6;
     text-align: center;
+  }
+
+  .prompt-result-actions {
+    max-width: 920px;
+    margin: 16px auto 0;
+  }
+
+  .copy-social-proof {
+    max-width: 920px;
+    margin: 8px auto 0;
+    color: #777782;
+    font-size: .74rem;
+    line-height: 1.5;
+    text-align: center;
+  }
+
+  .copy-tool-hint {
+    max-width: 920px;
+    margin: 8px auto 0;
+    padding: 8px 12px;
+    border-radius: 10px;
+    background: rgba(139,92,246,.08);
+    color: #c4b5fd;
+    font-size: .78rem;
+    text-align: center;
+  }
+
+  .category-prompt-link {
+    margin-top: 14px;
+    text-align: center;
+  }
+
+  .category-prompt-link a {
+    color: #c4b5fd;
+    font-size: .84rem;
+    font-weight: 750;
+    text-decoration: none;
+  }
+
+  .category-prompt-link a:hover {
+    text-decoration: underline;
   }
 
   .prompt-section {
@@ -1036,6 +1166,40 @@ const howToSchema = {
     overflow-wrap: anywhere;
   }
 
+  .prompt-box.is-collapsed {
+    max-height: 420px;
+    overflow: hidden;
+    position: relative;
+  }
+
+  .prompt-box.is-collapsed::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 90px;
+    pointer-events: none;
+    background: linear-gradient(to bottom, rgba(13,12,19,0), rgba(13,12,19,.96));
+  }
+
+  .read-more-btn {
+    display: block;
+    margin: 12px auto 0;
+    padding: 8px 14px;
+    border: 1px solid rgba(139,92,246,.28);
+    border-radius: 999px;
+    background: rgba(139,92,246,.08);
+    color: #c4b5fd;
+    font-size: .8rem;
+    font-weight: 800;
+    cursor: pointer;
+  }
+
+  .read-more-btn:hover {
+    background: rgba(139,92,246,.14);
+  }
+
   .wide-actions {
     display: flex;
     flex-wrap: wrap;
@@ -1047,18 +1211,6 @@ const howToSchema = {
     cursor: pointer;
   }
 
-  .ad {
-    min-height: 90px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 38px auto;
-    border: 1px dashed rgba(255,255,255,0.08);
-    border-radius: 14px;
-    color: #71717a;
-    font-size: 0.75rem;
-    max-width: 920px;
-  }
 
   .info-section {
     max-width: 920px;
@@ -1133,6 +1285,55 @@ const howToSchema = {
     margin: 0 0 18px;
     color: #bdbdc6;
     line-height: 1.75;
+  }
+
+  .guidance-section {
+    display: grid;
+    gap: 12px;
+  }
+
+  .info-accordion {
+    border: 1px solid rgba(255,255,255,.08);
+    border-radius: 16px;
+    background: rgba(255,255,255,.025);
+    overflow: hidden;
+  }
+
+  .info-accordion summary {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 14px;
+    padding: 17px 18px;
+    color: #fff;
+    font-weight: 800;
+    cursor: pointer;
+    list-style: none;
+  }
+
+  .info-accordion summary::-webkit-details-marker { display: none; }
+
+  .info-accordion summary::after {
+    content: '＋';
+    color: #a78bfa;
+    font-size: 1.1rem;
+  }
+
+  .info-accordion[open] summary::after { content: '−'; }
+
+  .accordion-step {
+    margin-left: auto;
+    color: #85858f;
+    font-size: .7rem;
+    font-weight: 700;
+  }
+
+  .accordion-content {
+    padding: 0 18px 20px;
+  }
+
+  .accordion-content h2 {
+    margin-top: 0;
   }
 
   .related-section {
@@ -1306,6 +1507,47 @@ const howToSchema = {
     text-decoration: underline;
   }
 
+
+  #progress {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 2px;
+    background: #8b5cf6;
+    z-index: 9999;
+    width: 0%;
+  }
+
+  .prompt-next-actions {
+    display: flex;
+    gap: 8px;
+    margin-top: 14px;
+    flex-wrap: wrap;
+  }
+
+  .prompt-tool-link {
+    padding: 10px 14px;
+    border-radius: 999px;
+    border: 1px solid rgba(255,255,255,.1);
+    text-decoration: none;
+    color: #c4b5fd;
+    font-size: .8rem;
+    font-weight: 700;
+  }
+
+  .prompt-tool-link:hover {
+    background: rgba(139,92,246,.08);
+    border-color: rgba(139,92,246,.35);
+  }
+
+  .copy-social-proof {
+    width: 100%;
+    margin: 4px 0 0;
+    color: #8f8f99;
+    font-size: .74rem;
+    line-height: 1.5;
+  }
+
   @media (max-width: 760px) {
     .prompt-page {
       padding-top: 25px;
@@ -1341,6 +1583,28 @@ const howToSchema = {
 
     .wide-actions button {
       width: 100%;
+    }
+
+    .prompt-result-actions {
+      position: sticky;
+      bottom: 12px;
+      z-index: 50;
+      margin-top: 14px;
+      padding: 10px;
+      border-radius: 16px;
+      border: 1px solid rgba(255,255,255,.1);
+      background: rgba(13,12,19,.82);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      box-shadow: 0 12px 35px rgba(0,0,0,.28);
+    }
+
+    .copy-tool-hint {
+      margin-top: 8px;
+    }
+
+    .category-prompt-link {
+      margin-top: 12px;
     }
 
     .blog-grid {
