@@ -370,9 +370,17 @@ const howToSchema = {
       </div>
 
       {tags.length > 0 && (
-        <div class="tags">
-          {tags.slice(0, 6).map((tag) => (
-            <a class="tag" href={`/prompts/tag/${tag.toLowerCase()}/`}>#{tag}</a>
+        <div class="tags" data-tags>
+          {tags.slice(0, 3).map((tag) => (
+            <span class="tag">#{tag}</span>
+          ))}
+          {tags.length > 3 && (
+            <button class="tag tag-more" data-tags-more type="button">
+              +{tags.length - 3} more
+            </button>
+          )}
+          {tags.slice(3, 6).map((tag) => (
+            <span class="tag tag-hidden" hidden>#{tag}</span>
           ))}
         </div>
       )}
@@ -844,27 +852,40 @@ const howToSchema = {
 
     });
 
-    // Collapse long prompts so the page stays easy to scan. Short prompts show in full.
+    // Show the prompt at roughly 50% initially, then reveal the full prompt on demand.
     const promptBox = document.querySelector('[data-prompt-box]');
     const readMoreButton = document.querySelector('[data-read-more]');
 
     if (promptBox && readMoreButton) {
-      const collapsedHeight = 420;
+      const fullHeight = promptBox.scrollHeight;
+      const collapsedHeight = Math.max(140, Math.ceil(fullHeight * 0.5));
 
-      // Only collapse genuinely long prompts; short prompts stay fully visible.
-      if (promptBox.scrollHeight > collapsedHeight + 20) {
+      if (fullHeight > collapsedHeight + 20) {
+        promptBox.classList.add('is-collapsed');
+        promptBox.style.maxHeight = `${collapsedHeight}px`;
         readMoreButton.hidden = false;
 
         readMoreButton.addEventListener('click', () => {
           const expanded = promptBox.classList.toggle('is-expanded');
           promptBox.classList.toggle('is-collapsed', !expanded);
+          promptBox.style.maxHeight = expanded ? `${fullHeight}px` : `${collapsedHeight}px`;
           readMoreButton.setAttribute('aria-expanded', String(expanded));
           readMoreButton.textContent = expanded ? 'Show less ↑' : 'Read more ↓';
         });
       } else {
         promptBox.classList.remove('is-collapsed');
+        promptBox.style.maxHeight = 'none';
+        readMoreButton.hidden = true;
       }
     }
+
+    // Reveal the remaining tags without making any tag clickable.
+    document.querySelector('[data-tags-more]')?.addEventListener('click', (e) => {
+      document.querySelectorAll('.tag-hidden').forEach((el) => {
+        el.hidden = false;
+      });
+      e.currentTarget.remove();
+    });
 
 
     const updatePromptProgress = () => {
@@ -1039,26 +1060,40 @@ const howToSchema = {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 8px;
-    margin-top: 20px;
+    gap: 6px;
+    max-width: 680px;
+    margin: 20px auto 0;
+  }
+
+  .tag-hidden[hidden] {
+    display: none !important;
   }
 
   .tag {
-    padding: 6px 10px;
+    display: inline-flex;
+    align-items: center;
+    max-width: 220px;
+    padding: 5px 8px;
     border: 1px solid rgba(139, 92, 246, 0.25);
     border-radius: 999px;
     background: rgba(139, 92, 246, 0.08);
     color: #c4b5fd;
-    font-size: 0.78rem;
+    font-size: 0.74rem;
+    line-height: 1.25;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
 
-  a.tag {
-    text-decoration: none;
+  .tag-more {
+    cursor: pointer;
+    background: rgba(255,255,255,0.06);
+    color: #a1a1aa;
+    font: inherit;
   }
 
-  a.tag:hover {
-    background: rgba(139,92,246,0.14);
-    border-color: rgba(139,92,246,0.4);
+  .tag-more:hover {
+    background: rgba(255,255,255,0.1);
   }
 
   .prompt-result-section {
@@ -1169,7 +1204,6 @@ const howToSchema = {
   }
 
   .prompt-box.is-collapsed {
-    max-height: 420px;
     overflow: hidden;
     position: relative;
   }
@@ -1565,15 +1599,17 @@ const howToSchema = {
     }
 
     .tags {
-      gap: 5px;
+      gap: 4px;
       margin-top: 14px;
       padding: 0 4px;
+      max-width: 100%;
     }
 
     .tag {
-      padding: 4px 7px;
-      font-size: 0.66rem;
-      line-height: 1.25;
+      max-width: 170px;
+      padding: 3px 6px;
+      font-size: 0.62rem;
+      line-height: 1.2;
     }
 
     .prompt-box {
