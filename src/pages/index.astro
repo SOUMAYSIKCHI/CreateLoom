@@ -9,6 +9,11 @@ const siteUrl = (Astro.site || 'https://www.createwithsoumay.store').toString().
 
 const categories = [...new Set(prompts.map((p) => p.category))].sort();
 
+const categoryCounts = {};
+prompts.forEach((p) => {
+  categoryCounts[p.category] = (categoryCounts[p.category] || 0) + 1;
+});
+
 const trendPriority = {
   hot: 0,
   current: 1,
@@ -31,14 +36,6 @@ const trendingPrompts = prompts
       String(a.createdAt || '')
     );
   });
-
-const trendingPreviewIds = new Set(
-  trendingPrompts.slice(0, 6).map((p) => p.id)
-);
-
-const featuredPrompts = prompts
-  .filter((p) => !trendingPreviewIds.has(p.id))
-  .slice(0, 6);
 
 const latestPrompts = [...prompts]
   .filter((p) => p.createdAt)
@@ -204,49 +201,6 @@ const categoryDescriptions = {
   )}
 
 
-  <!-- FEATURED PROMPTS -->
-
-  <section class="section">
-
-    <div class="container">
-
-      <div class="section-head">
-
-        <div>
-          <div class="eyebrow">
-            Start creating
-          </div>
-
-          <h2>
-            Featured AI Prompts
-          </h2>
-
-          <p class="section-subtitle">
-            Detailed starting points for your next AI image.
-          </p>
-        </div>
-
-        <a
-          class="muted section-link"
-          href="/prompts/"
-        >
-          View all →
-        </a>
-
-      </div>
-
-      <div class="grid">
-
-        {featuredPrompts.slice(0, 3).map((p) => (
-          <PromptCard p={p} />
-        ))}
-
-      </div>
-
-    </div>
-
-  </section>
-
 
   <!-- CATEGORY EXPLORER -->
 
@@ -299,9 +253,7 @@ const categoryDescriptions = {
               </strong>
 
               <span>
-                {prompts.filter(
-                  (p) => p.category === category
-                ).length}
+                {categoryCounts[category]}
               </span>
 
             </div>
@@ -495,333 +447,12 @@ const categoryDescriptions = {
         </a>
 
 
-        <a
-          class="resource-card"
-          href="/creator-hub/#brand-deals"
-        >
-
-          <span class="resource-icon">
-            🤝
-          </span>
-
-          <div class="eyebrow">
-            Business
-          </div>
-
-          <h3>
-            Brand Deals
-          </h3>
-
-          <p>
-            Learn how to position your profile and approach
-            potential brand partners.
-          </p>
-
-          <strong>
-            Explore resources →
-          </strong>
-
-        </a>
-
-
-        <a
-          class="resource-card"
-          href="/creator-hub/#captions"
-        >
-
-          <span class="resource-icon">
-            ✍️
-          </span>
-
-          <div class="eyebrow">
-            Writing
-          </div>
-
-          <h3>
-            Hooks & Captions
-          </h3>
-
-          <p>
-            Ideas for making your content clearer, stronger
-            and easier to package.
-          </p>
-
-          <strong>
-            Get ideas →
-          </strong>
-
-        </a>
-
       </div>
 
     </div>
 
   </section>
 
-
-  <!-- RELATED CREATOR TOOLS -->
-
-  <section class="section related-tools-section">
-
-    <div class="container">
-
-      <div class="section-head">
-
-        <div>
-          <div class="eyebrow">
-            More creator tools
-          </div>
-
-          <h2>
-            Tools & Resources for Instagram Creators
-          </h2>
-
-          <p class="section-subtitle">
-            Continue from prompts into hashtag research, creator guides and content resources.
-          </p>
-        </div>
-
-        <a
-          class="muted section-link"
-          href="/creator-hub/"
-        >
-          Open Creator Hub →
-        </a>
-
-      </div>
-
-      <div class="related-tools-links">
-        <a href="/creator-tools/trending-hashtags/">
-          Trending Instagram Hashtags
-        </a>
-        <a href="/creator-hub/">
-          Instagram Creator Hub
-        </a>
-        <a href="/blog/">
-          Creator Guides
-        </a>
-        <a href="/prompts/">
-          AI Prompt Library
-        </a>
-      </div>
-
-    </div>
-
-  </section>
-
-
-  <!-- BLOG -->
-
-  <section class="section">
-
-    <div class="container">
-
-      <div class="section-head">
-
-        <div>
-          <div class="eyebrow">
-            Learn something useful
-          </div>
-
-          <h2>
-            Creator Guides
-          </h2>
-
-          <p class="section-subtitle">
-            Practical articles about AI, Instagram and creator growth.
-          </p>
-        </div>
-
-        <a
-          class="muted section-link"
-          href="/blog/"
-        >
-          Browse all creator guides →
-        </a>
-
-      </div>
-
-
-      <div class="article-grid">
-
-        {latestBlogs.map((blog) => (
-
-          <a
-            class="article-card"
-            href={`/blog/${blog.id}/`}
-          >
-
-            <div class="article-card-top">
-
-              <span class="eyebrow">
-                {blog.category}
-              </span>
-
-              <span>
-                ↗
-              </span>
-
-            </div>
-
-            <h3>
-              {blog.title}
-            </h3>
-
-            <p>
-              {blog.excerpt}
-            </p>
-
-            <div class="article-meta">
-              {blog.readTime} · {blog.date}
-            </div>
-
-            <strong>
-              Read guide →
-            </strong>
-
-          </a>
-
-        ))}
-
-      </div>
-
-    </div>
-
-  </section>
-
-
-  <!-- WHY CREATELOOM -->
-
-  <section class="section about-section">
-
-    <div class="container">
-
-      <div class="about-grid">
-
-        <div>
-
-          <div class="eyebrow">
-            Why Create With Soumay
-          </div>
-
-          <h2>
-            A practical home for AI creation and creator resources.
-          </h2>
-
-        </div>
-
-        <div>
-
-          <p>
-            Create With Soumay brings ready-to-use AI image prompts together
-            with practical resources for creators. Instead of searching
-            through scattered examples, you can find a prompt, copy it,
-            customize it and move directly into your creative workflow.
-          </p>
-
-          <p>
-            The library covers concepts such as couples, selfies,
-            portraits, fashion, vintage photography, anime, travel
-            and more. The Creator Hub and blog provide additional
-            resources for content ideas, Instagram strategy and
-            creator growth.
-          </p>
-
-          <a
-            href="/about/"
-            class="text-link"
-          >
-            Learn more about Create With Soumay →
-          </a>
-
-        </div>
-
-      </div>
-
-    </div>
-
-  </section>
-
-
-  <!-- FAQ -->
-
-  <section class="section">
-
-    <div class="container faq-container">
-
-      <div class="section-head">
-
-        <div>
-          <div class="eyebrow">
-            Quick answers
-          </div>
-
-          <h2>
-            Frequently Asked Questions
-          </h2>
-        </div>
-
-      </div>
-
-
-      <div class="faq">
-
-        <details>
-          <summary>
-            What is Create With Soumay?
-          </summary>
-
-          <p>
-            Create With Soumay is a creator-focused library of AI image
-            prompts, practical guides and resources for Instagram
-            and visual content creation.
-          </p>
-        </details>
-
-
-        <details>
-          <summary>
-            Can I copy the AI prompts?
-          </summary>
-
-          <p>
-            Yes. Individual prompt pages include a copy button so
-            you can quickly copy the complete prompt and customize
-            it for your preferred AI image generator.
-          </p>
-        </details>
-
-
-        <details>
-          <summary>
-            Can I share a specific prompt?
-          </summary>
-
-          <p>
-            Yes. Every prompt has its own URL, making it easy to
-            share a specific prompt with someone through a message,
-            social post or Instagram workflow.
-          </p>
-        </details>
-
-
-        <details>
-          <summary>
-            Are Create With Soumay prompts free?
-          </summary>
-
-          <p>
-            Create With Soumay provides free prompt resources. The AI
-            generation service you choose may have its own plans,
-            limits or pricing.
-          </p>
-        </details>
-
-      </div>
-
-    </div>
-
-  </section>
 
 
   <!-- FINAL CTA -->
@@ -905,47 +536,7 @@ const categoryDescriptions = {
     })}
   />
 
-  <script
-    type="application/ld+json"
-    set:html={JSON.stringify({
-      '@context': 'https://schema.org',
-      '@type': 'FAQPage',
-      mainEntity: [
-        {
-          '@type': 'Question',
-          name: 'What is Create With Soumay?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Create With Soumay is a creator-focused library of AI image prompts, practical guides and resources for Instagram and visual content creation.'
-          }
-        },
-        {
-          '@type': 'Question',
-          name: 'Can I copy the AI prompts?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Yes. Individual prompt pages include a copy button so you can quickly copy the complete prompt and customize it for your preferred AI image generator.'
-          }
-        },
-        {
-          '@type': 'Question',
-          name: 'Can I share a specific prompt?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Yes. Every prompt has its own URL, making it easy to share a specific prompt through a message, social post or Instagram workflow.'
-          }
-        },
-        {
-          '@type': 'Question',
-          name: 'Are Create With Soumay prompts free?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Create With Soumay provides free prompt resources. The AI generation service you choose may have its own plans, limits or pricing.'
-          }
-        }
-      ]
-    })}
-  />
+
 
 </Layout>
 
@@ -958,6 +549,14 @@ const categoryDescriptions = {
     padding-bottom: 65px;
   }
 
+
+  .homepage-hero h1 {
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: clamp(2.1rem, 4vw, 3.15rem);
+    line-height: 1.12;
+  }
 
   .hero-lede {
     max-width: 720px;
@@ -1197,175 +796,6 @@ const categoryDescriptions = {
   }
 
 
-  /* Related creator tools */
-
-  .related-tools-section {
-    background: rgba(255,255,255,0.015);
-  }
-
-  .related-tools-links {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-  }
-
-  .related-tools-links a {
-    display: inline-flex;
-    align-items: center;
-    min-height: 42px;
-    padding: 10px 14px;
-    border: 1px solid rgba(255,255,255,0.07);
-    border-radius: 12px;
-    background: rgba(255,255,255,0.02);
-    color: #c4b5fd;
-    text-decoration: none;
-    font-size: 0.82rem;
-    font-weight: 700;
-  }
-
-  .related-tools-links a:hover {
-    border-color: rgba(139,92,246,0.35);
-    background: rgba(139,92,246,0.05);
-  }
-
-
-  /* Articles */
-
-  .article-grid {
-    display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 15px;
-  }
-
-
-  .article-card {
-    display: flex;
-    flex-direction: column;
-    min-height: 270px;
-    padding: 22px;
-    border: 1px solid rgba(255,255,255,0.08);
-    border-radius: 17px;
-    background: rgba(255,255,255,0.025);
-    color: inherit;
-    text-decoration: none;
-    transition:
-      transform 0.2s ease,
-      border-color 0.2s ease;
-  }
-
-
-  .article-card:hover {
-    transform: translateY(-3px);
-    border-color: rgba(139,92,246,0.38);
-  }
-
-
-  .article-card-top {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    color: #a78bfa;
-  }
-
-
-  .article-card h3 {
-    margin: 16px 0 10px;
-    line-height: 1.4;
-  }
-
-
-  .article-card p {
-    margin: 0;
-    color: var(--muted, #a1a1aa);
-    line-height: 1.7;
-    font-size: 0.88rem;
-  }
-
-
-  .article-meta {
-    margin-top: auto;
-    padding-top: 20px;
-    color: rgba(255,255,255,0.4);
-    font-size: 0.73rem;
-  }
-
-
-  .article-card > strong {
-    margin-top: 10px;
-    color: #c4b5fd;
-    font-size: 0.8rem;
-  }
-
-
-  /* About */
-
-  .about-section {
-    background: rgba(255,255,255,0.015);
-  }
-
-
-  .about-grid {
-    display: grid;
-    grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr);
-    gap: 70px;
-    align-items: start;
-  }
-
-
-  .about-grid h2 {
-    margin: 8px 0 0;
-    line-height: 1.25;
-  }
-
-
-  .about-grid p {
-    margin: 0 0 18px;
-    color: #c7c7cf;
-    line-height: 1.85;
-  }
-
-
-  .text-link {
-    color: #c4b5fd;
-    font-weight: 700;
-    text-decoration: none;
-  }
-
-
-  /* FAQ */
-
-  .faq-container {
-    max-width: 900px;
-  }
-
-
-  .faq {
-    display: grid;
-    gap: 10px;
-  }
-
-
-  .faq details {
-    padding: 18px 20px;
-    border: 1px solid rgba(255,255,255,0.07);
-    border-radius: 14px;
-    background: rgba(255,255,255,0.02);
-  }
-
-
-  .faq summary {
-    color: #fff;
-    cursor: pointer;
-    font-weight: 700;
-  }
-
-
-  .faq p {
-    margin: 13px 0 0;
-    color: var(--muted, #a1a1aa);
-    line-height: 1.7;
-  }
-
 
   /* CTA */
 
@@ -1449,16 +879,14 @@ const categoryDescriptions = {
   }
 
 
+  @media (max-width: 700px) {
+    .homepage-hero h1 {
+      font-size: 2rem;
+      line-height: 1.15;
+    }
+  }
+
   @media (max-width: 500px) {
-
-    .related-tools-links {
-      display: grid;
-      grid-template-columns: 1fr;
-    }
-
-    .related-tools-links a {
-      width: 100%;
-    }
 
     .resource-grid {
       grid-template-columns: 1fr;
